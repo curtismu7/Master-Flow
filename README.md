@@ -5,7 +5,7 @@
 
 
 
-
+*** Short directions, please see Installation Instructions for complete document ***
 This is PingOne Master flow.  These are all the pieces that need to be installed for a complete demo.
 
 * You need Feature Flag for Davinci named:
