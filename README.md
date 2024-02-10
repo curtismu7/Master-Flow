@@ -61,12 +61,12 @@ You will need to gather the following:
   DV variable: gv-p1AgreementId
   
 * If you have a custom domain 
-  Origin
-    DV variable: origin
-  relyingParty
-    DV variable: relyingParty
-  gv-companyLogo
-    Needs to be set to your Logo URL
-  gv-companyName
-    Needs to be set to your Company Name
+  * Origin
+     DV variable: origin
+  * relyingParty
+     DV variable: relyingParty
+  * gv-companyLogo
+     Needs to be set to your Logo URL
+  * gv-companyName
+     Needs to be set to your Company Name
 
