@@ -1,0 +1,47 @@
+
+This is PingOne Master flow.  These are all the pieces that need to be installed for a complete demo.
+
+* You need Feature Flag for Davinci named:
+  *  dv-10022-import-flow
+  *  This fixes an issue with import on large flows.  Do not try to install without it.
+* * Davinci Export (19 flows total in JSON)
+
+* Email Templates 
+
+    Device Pairing
+      Device Pairing
+      OTP
+    PingOne Verify Email Address and Phone Number Verification
+      PingOne Verify Email Address and Phone Number Verification
+    Email Address Verification (Admin)
+      Email Address Verification (Admin)
+    Email Address Verification (User)
+      Email Address Verification (User)
+      OTP
+    General
+      General (not used)
+      MagicLink
+      OTP
+      Forgot Username
+    PingOne Verify ID Verification
+      PingOne Verify ID Verification
+    New Device Paired
+      New Device Paired
+    Password Recovery
+      Password Recovery
+    Strong Authentication
+      Strong Authentication
+    Transaction
+      Transaction
+    Verification Code
+      Verification Code
+* Custom PingOne Attribute
+  Dob type=STRING
+
+* Need to pull the Password Policy 
+    This is stored a JSON attribute pulled from PingOne
+    Needs to be stored in Company Variable “gv-p1PasswordPolicy”
+* Chrome extension for Branding
+    https://library.pingidentity.com
+    Sign in
+    Search on “davinci Design Studio” its version 1.0 (old is 1.2)
