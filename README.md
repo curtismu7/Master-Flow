@@ -45,3 +45,28 @@ This is PingOne Master flow.  These are all the pieces that need to be installed
     https://library.pingidentity.com
     Sign in
     Search on “davinci Design Studio” its version 1.0 (old is 1.2)
+
+* You will need the following products in your PingOne environment to take advantage of all the features:
+  PingOne Davinci
+  PingOne Protect
+  PingOne Verify
+  PingOne MFA
+* Other things:
+You will need to gather the following:
+ * PopulationId 
+    DV variable: populationId
+* EnvironmentId
+   DV variable: 
+* AgreementId
+  DV variable: gv-p1AgreementId
+  
+* If you have a custom domain 
+  Origin
+    DV variable: origin
+  relyingParty
+    DV variable: relyingParty
+  gv-companyLogo
+    Needs to be set to your Logo URL
+  gv-companyName
+    Needs to be set to your Company Name
+
