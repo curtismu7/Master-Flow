@@ -11,31 +11,31 @@ This is PingOne Master flow.  These are all the pieces that need to be installed
     * Device Pairing
        Device Pairing
        OTP
-    * PingOne Verify Email Address and Phone Number Verification
+    * PingOne Verify Email Address and Phone Number Verification -
        PingOne Verify Email Address and Phone Number Verification
-    * Email Address Verification (Admin)
+    * Email Address Verification (Admin) -
        Email Address Verification (Admin)
-    * Email Address Verification (User)
+    * Email Address Verification (User) -
        Email Address Verification (User)
        OTP
-    * General
+    * General -
       General (not used)
       MagicLink
       OTP
       Forgot Username
-    * PingOne Verify ID Verification
+    * PingOne Verify ID Verification -
        PingOne Verify ID Verification
-    * New Device Paired
+    * New Device Paired -
        New Device Paired
-    * Password Recovery
+    * Password Recovery -
        Password Recovery
-    * Strong Authentication
+    * Strong Authentication -
        Strong Authentication
-    * Transaction
+    * Transaction -
        Transaction
-    * Verification Code
+    * Verification Code -
        Verification Code
-* Custom PingOne Attribute
+* Custom PingOne Attribute -
   Dob type=STRING
 
 * Need to pull the Password Policy 
