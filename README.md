@@ -17,8 +17,8 @@
 * Email Templates 
 
     * Device Pairing
-       Device Pairing
-       OTP
+       -Device Pairing
+       -OTP
     * PingOne Verify Email Address and Phone Number Verification -
        PingOne Verify Email Address and Phone Number Verification
     * Email Address Verification (Admin) -
