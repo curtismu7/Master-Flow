@@ -38,8 +38,6 @@
        - Password Recovery
     * Strong Authentication 
        - Strong Authentication
-    * Transaction 
-       - Transaction
     * Verification Code 
        - Verification Code
 * Custom PingOne Attribute 
