@@ -27,10 +27,10 @@
        Email Address Verification (User)
        OTP
     * General -
-      General (not used)
-      MagicLink
-      OTP
-      Forgot Username
+      -General (not used) -
+      -MagicLink
+     - OTP
+      -Forgot Username
     * PingOne Verify ID Verification -
        PingOne Verify ID Verification
     * New Device Paired -
