@@ -21,30 +21,30 @@
        -OTP
     * PingOne Verify Email Address and Phone Number Verification -
        PingOne Verify Email Address and Phone Number Verification
-    * Email Address Verification (Admin) -
-       Email Address Verification (Admin)
-    * Email Address Verification (User) -
-       Email Address Verification (User)
+    * Email Address Verification (Admin) 
+       - Email Address Verification (Admin)
+    * Email Address Verification (User) 
+       - Email Address Verification (User)
        OTP
     * General -
       - General (not used)
       - MagicLink
       - OTP
       - Forgot Username
-    * PingOne Verify ID Verification -
-       PingOne Verify ID Verification
-    * New Device Paired -
-       New Device Paired
-    * Password Recovery -
-       Password Recovery
-    * Strong Authentication -
-       Strong Authentication
-    * Transaction -
-       Transaction
-    * Verification Code -
-       Verification Code
-* Custom PingOne Attribute -
-  Dob type=STRING
+
+    * New Device Paired 
+       - New Device Paired
+    * Password Recovery 
+       - Password Recovery
+    * Strong Authentication 
+       - Strong Authentication
+    * Transaction 
+       - Transaction
+    * Verification Code 
+       - Verification Code
+* Custom PingOne Attribute 
+  - dob type=STRING
+  - securityQA type=JSON
 
 * Need to pull the Password Policy 
     This is stored a JSON attribute pulled from PingOne
