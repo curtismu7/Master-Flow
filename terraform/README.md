@@ -28,6 +28,7 @@ unzip ./master-flow.zip && rm ./master-flow.zip
 Update the `terraform.tfvars` file for your environment. For the default experience, you will not need to modify anything below the DaVinci header.
 
 The following variables must be set for your environment:
+
 admin_client_id      - The client id from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
 admin_client_secret  - The client secret from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
 admin_environment_id - The environment ID of the Administrators environment. \
