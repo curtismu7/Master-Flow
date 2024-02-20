@@ -1,13 +1,13 @@
-variable "client_id" {
+variable "admin_client_id" {
     description = "Client Id"
     type = string
 }
-variable "client_secret" {
+variable "admin_client_secret" {
     description = "Client Secret"
     type = string
     sensitive = true
 }
-variable "environment_id" {
+variable "admin_environment_id" {
     description = "Environment Id"
     type = string
 }
@@ -15,6 +15,12 @@ variable "region" {
     description = "Region"
     type = string
     default = "NorthAmerica"
+}
+
+variable "admin_user_id" {
+  type        = string
+  description = "P1 Administrator to assign Roles to"
+  sensitive   = true
 }
 
 variable "dv_admin_username" {
@@ -132,13 +138,13 @@ variable "davinci_variable_gv-mfa-on_value" {
 
 /*variable "davinci_variable_gv-p1AgreementId_value" {
   description = "Value for davinci_variable_gv-p1AgreementId_value variable"
-}*/
+}
 
 variable "davinci_variable_gv-p1PasswordPolicy_value" {
   description = "Value for davinci_variable_gv-p1PasswordPolicy_value variable"
 }
 
-/*variable "davinci_variable_gv-p1PopulationId_value" {
+variable "davinci_variable_gv-p1PopulationId_value" {
   description = "Value for davinci_variable_gv-p1PopulationId_value variable"
 }*/
 
