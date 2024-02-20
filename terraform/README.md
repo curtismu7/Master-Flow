@@ -28,15 +28,15 @@ unzip ./master-flow.zip && rm ./master-flow.zip
 Update the `terraform.tfvars` file for your environment. For the default experience, you will not need to modify anything below the DaVinci header.
 
 The following variables must be set for your environment:
-admin_client_id      - The client id from the worker app in your Administrators environment created in [Prerequisites](#prerequisites).
-admin_client_secret  - The client secret from the worker app in your Administrators environment created in [Prerequisites](#prerequisites).
-admin_environment_id - The environment ID of the Administrators environment.
-region               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica`
-license_name         - Likely `INTERNAL`
-admin_user_id        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user.
-dv_admin_username    - The username of your admin account within the Administrators environment.
-dv_admin_password    - The password of your admin account within the Administrators environment.
-organization_id      - The id of your PingOne organization
+admin_client_id      - The client id from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
+admin_client_secret  - The client secret from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
+admin_environment_id - The environment ID of the Administrators environment. \
+region               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica` \
+license_name         - Likely `INTERNAL` \
+admin_user_id        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user. \
+dv_admin_username    - The username of your admin account within the Administrators environment. \
+dv_admin_password    - The password of your admin account within the Administrators environment. \
+organization_id      - The id of your PingOne organization. \
 
 <details>
 <summary>Additional variables</summary>
