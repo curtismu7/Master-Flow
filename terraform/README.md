@@ -97,7 +97,7 @@ organization_id      - The id of your PingOne organization
 | davinci_variable_gv-githubLogin_value | STRING | Default: |
 | davinci_connection_PingOne_region | STRING | Default: |
 
-</default>
+</details>
 
 ### Apply the Terraform Configuration
 
