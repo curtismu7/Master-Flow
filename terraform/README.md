@@ -10,7 +10,7 @@
 ### Prerequisites
 
 Within the Administrators environment of your PingOne organization, create a new Worker application. Name it as you see fit and optionally upload an icon. Enable your Worker application. Navigate to the Roles tab and select the permissions required to create and manage environments and their configurations, as shown in the below screenshot.
-![pingone-console-application-roles](https://gist.github.com/assets/117233001/bd7ac7d7-bd73-4ae2-be3c-715d7cfeb932)
+<img src="https://github.com/kylemoorehead-pingidentity/MasterFlow/blob/master/terraform/images/pingone-console-application-roles.png?raw=true" width="auto">
 
 ### Install Terraform
 
