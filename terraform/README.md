@@ -40,6 +40,7 @@ organization_id      - The id of your PingOne organization
 
 <details>
 <summary>Additional variables</summary>
+
 | Variable Name | Type | Description |
 | --- | --- | --- |
 | admin_client_id | STRING | Required: **TRUE** Default: |
