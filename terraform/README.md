@@ -1,32 +1,61 @@
 # PingOne Master Flow - Terraform Configuration
 
 ## Table of Contents
+- [Prerequisites](#prerequisites)
 - [Install Terraform](#install-terraform)
 - [Update the TFVars File](#update-the-tfvars-file)
+- [Download and Extract the Lastest Release from Github](#download-and-extract-the-latest-release-from-github)
+- [Apply the Terraform Configuration](#apply-the-terraform-configuration)
+
+### Prerequisites
+
+Within the Administrators environment of your PingOne organization, create a new Worker application. Name it as you see fit and optionally upload an icon. Enable your Worker application. Navigate to the Roles tab and select the permissions required to create and manage environments and their configurations, as shown in the below screenshot.
+![pingone-console-application-roles](https://gist.github.com/assets/117233001/bd7ac7d7-bd73-4ae2-be3c-715d7cfeb932)
 
 ### Install Terraform
 
 [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) from the linked documentation. Recommendation: Use Homebrew for macOS and Chocolatey for Windows.
 
+### Download and extract the latest release from Github
+
+```bash
+mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
+curl -L https://github.com/kylemoorehead-pingidentity/Master-Flow/releases/download/v0.0.2-alpha/release-20240220-103917.zip > master-flow.zip
+unzip ./master-flow.zip && rm ./master-flow.zip
+```
+
 ### Update the TFVars File
 Update the `terraform.tfvars` file for your environment. For the default experience, you will not need to modify anything below the DaVinci header.
 
+The following variables must be set for your environment:
+admin_client_id      - The client id from the worker app in your Administrators environment created in [Prerequisites](#prerequisites).
+admin_client_secret  - The client secret from the worker app in your Administrators environment created in [Prerequisites](#prerequisites).
+admin_environment_id - The environment ID of the Administrators environment.
+region               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica`
+license_name         - Likely `INTERNAL`
+admin_user_id        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user.
+dv_admin_username    - The username of your admin account within the Administrators environment.
+dv_admin_password    - The password of your admin account within the Administrators environment.
+organization_id      - The id of your PingOne organization
+
+<details>
+<summary>Additional variables</summary>
 | Variable Name | Type | Description |
 | --- | --- | --- |
-| client_id | STRING | Default: |
-| client_secret | STRING | Default: |
-| environment_id | STRING | Default: |
-| region | STRING | Default: |
-| license_name | STRING | Default: |
-| dv_admin_username | STRING | Default: |
-| dv_admin_password | STRING | Default: |
-| organization_id | STRING | Default: |
+| admin_client_id | STRING | Required: **TRUE** Default: |
+| admin_client_secret | STRING | Required: **TRUE** Default: |
+| admin_environment_id | STRING | Required: **TRUE** Default: |
+| region | STRING | Required: **TRUE** Default: |
+| license_name | STRING | Required: **TRUE** Default: |
+| admin_user_id | STRING | Required: **TRUE** Default: |
+| dv_admin_username | STRING | Required: **TRUE** Default: |
+| dv_admin_password | STRING | Required: **TRUE** Default: |
+| organization_id | STRING | Required: **TRUE** Default: |
 | pingone_agreement_localization_revision_master_flow_agreement_en_now_text | STRING | Default: |
 | davinci_variable_origin_value | STRING | Default: |
 | davinci_variable_gv-deviceManagement_value | STRING | Default: |
 | davinci_variable_gv-azureLogin_value | STRING | Default: |
 | davinci_variable_gv-mfa-on_value | STRING | Default: |
-|  // davinci_variable_gv-p1AgreementId_value | STRING | Default: |
 | davinci_variable_gv-runPasswordExpire_value | STRING | Default: |
 | davinci_variable_gv-webAuthnSupport_value | STRING | Default: |
 | davinci_variable_gv-forgotPasswordDisplay_value | STRING | Default: |
@@ -37,7 +66,6 @@ Update the `terraform.tfvars` file for your environment. For the default experie
 | davinci_variable_gv-allowPasswordless_value | STRING | Default: |
 | davinci_variable_maxMessage_value | STRING | Default: |
 | davinci_variable_gv-forcePasswordless_value | STRING | Default: |
-|  // davinci_variable_populationId_value | STRING | Default: |
 | davinci_variable_disableReg_value | STRING | Default: |
 | davinci_variable_mobile_value | STRING | Default: |
 | davinci_variable_gv-p1PasswordPolicy_value | STRING | Default: |
@@ -48,12 +76,10 @@ Update the `terraform.tfvars` file for your environment. For the default experie
 | davinci_variable_gv-inlineMFAOn_value | STRING | Default: |
 | davinci_variable_gv-companyName_value | STRING | Default: |
 | davinci_variable_stopSign_value | STRING | Default: |
-|  // davinci_variable_testDeviceID_value | STRING | Default: |
 | davinci_variable_rpid_value | STRING | Default: |
 | davinci_variable_gv-runMFAforForgot_value | STRING | Default: |
 | davinci_variable_gv-passwordlessAllowedTypes_value | STRING | Default: |
 | davinci_variable_relyingParty_value | STRING | Default: |
-|  //davinci_variable_gv-p1PopulationId_value | STRING | Default: |
 | davinci_variable_availableQuestions_2_value | STRING | Default: |
 | davinci_variable_gv-runProtect_value | STRING | Default: |
 | davinci_variable_gv-runMFAforSocial_value | STRING | Default: |
@@ -70,3 +96,23 @@ Update the `terraform.tfvars` file for your environment. For the default experie
 | davinci_variable_gv-companyLogo_value | STRING | Default: |
 | davinci_variable_gv-githubLogin_value | STRING | Default: |
 | davinci_connection_PingOne_region | STRING | Default: |
+
+</default>
+
+### Apply the Terraform Configuration
+
+In the same directory as before, initialize your Terraform provider.
+```bash
+terraform init
+```
+
+Plan your Terraform deployment. This should provide you with a message about how many resources this configuration will create on your behalf. 
+```bash
+terraform plan
+```
+
+Apply your Terraform configuration, deploying all of the resources specified in your configuration.
+```bash
+terraform apply --auto-approve
+```
+NOTE: If you get any errors while deploying, run the same command again and it should deploy anything that failed the first time. I am currently working through dependency mappings with this configuration as sometimes things are deployed in the incorrect order.
