@@ -11,3 +11,4 @@ Initial pass at documentation
 - Document all variables included in `terraform.tfvars`
 - Break main.tf into more manageable, logical files (? - Could potentially cause confusion for folks less familiar with TF)
 - Update configuration for v1.0 release of Master Flows
+- Add ability to create and manage users with the configuration
