@@ -14,3 +14,4 @@ Initial pass at documentation
 - Add ability to create and manage users with the configuration
 - Research CJ's python script to handle changes required for Widget flows - can this be integrated into the publishing pipeline to make both use-cases available without additional work/effort?
 - Social Login providers - https://pingidentity.atlassian.net/wiki/spaces/ASA/pages/407765131/Set+Up+Social+Logins+for+PingOne
+- Enumerate values for parameters where it makes sense to do so
