@@ -43,14 +43,60 @@ variable "organization_id" {
   description = "Your P1 Organization ID"
 }
 
+variable "google_client_id" {
+  type        = string
+  description = "The Client ID from your Google OAuth application"
+  default     = "This must be set in the Terraform config"
+}
+
+variable "google_client_secret" {
+  type        = string
+  description = "The Client Secret from your Google OAuth application"
+  default     = "This must be set in the Terraform config"
+}
+
+#############
+#  PingOne  #
+#############
+
+variable "environment_name" {
+  type        = string
+  description = "Name of the PingOne Environment"
+}
+
+variable "environment_description" {
+  type        = string
+  description = "Description of the PingOne Environment"
+}
+
+variable "environment_type" {
+  type        = string
+  description = "Type of the PingOne Environment. Allowed values: \"SANDBOX\", \"PRODUCTION\""
+
+  validation {
+    condition     = contains(["SANDBOX", "PRODUCTION"], var.environment_type)
+    error_message = "Must be either \"SANDBOX\" or \"PRODUCTION\"."
+  }
+}
+
 variable "pingone_agreement_localization_revision_master_flow_agreement_en_now_text" {
   type        = string
   description = "Agreement Text"
 }
 
-##########################################
-#  DaVinci - Generated with Terraformer  #
-##########################################
+#############
+#  DaVinci  #
+#############
+
+variable "deployment_type" {
+  type        = string
+  description = "Type of deployment. Allowed values: \"WIDGET\", \"REDIRECT\""
+
+  validation {
+    condition     = contains(["WIDGET", "REDIRECT"], var.deployment_type)
+    error_message = "Must be either \"WIDGET\" or \"REDIRECT\"."
+  }
+}
 
 variable "davinci_connection_PingOne_region" {
   description = "Value for davinci_connection_PingOne_region variable"
@@ -78,6 +124,22 @@ variable "davinci_variable_forgotUsername_value" {
 
 variable "davinci_variable_gv-QA-On_value" {
   description = "Value for davinci_variable_gv-QA-On_value variable"
+}
+
+variable "davinci_variable_gv-protectAfterSocial" {
+  description = "Value for davinci_variable_gv-protectAfterSocial variable"
+}
+
+variable "davinci_variable_gv-autoEnrollEmail" {
+  description = "Value for davinci_variable_gv-autoEnrollEmail variable"
+}
+
+variable "davinci_variable_gv-registerAnotherDevice" {
+  description = "Value for davinci_variable_gv-registerAnotherDevice variable"
+}
+
+variable "davinci_variable_gv-verifyUserRegistration" {
+  description = "Value for davinci_variable_gv-verifyUserRegistration variable"
 }
 
 variable "davinci_variable_gv-allowPasswordless_value" {

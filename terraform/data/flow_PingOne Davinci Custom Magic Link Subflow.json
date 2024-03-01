@@ -4,10 +4,10 @@
   "currentVersion": 1,
   "publishedVersion": 1,
   "name": "PingOne Davinci Custom Magic Link Subflow",
-  "description": "Imported on Tue Feb 13 2024 20:54:55 GMT+0000 (Coordinated Universal Time)",
-  "createdDate": 1707857724248,
-  "updatedDate": 1707857724366,
-  "deployedDate": 1707857724366,
+  "description": "Imported on Fri Mar 01 2024 21:47:11 GMT+0000 (Coordinated Universal Time)",
+  "createdDate": 1709329654636,
+  "updatedDate": 1709329654767,
+  "deployedDate": 1709329654767,
   "enabledGraphData": {
     "boxSelectionEnabled": true,
     "data": {},
@@ -876,7 +876,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "\u003cdiv\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n  \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n    \u003cdiv class=\"card shadow mb-5\"\u003e\n      \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n        \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n\n        {{#if title}}\n        \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n        {{/if}}\n\n        {{#if textOne}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n        {{/if}}\n\n        {{#if textTwo}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n        {{/if}}\n\n        \u003c!-- \u003ch3 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eAuthenticate by clicking on a link that will be sent to\n          your email address.\u003c/h3\u003e --\u003e\n        \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n        \u003c/p\u003e\n\n        \u003cform class=\"form\" id=\"userSigOnForm\" data-id=\"userSigOnForm\"\u003e\n          \u003cdiv class=\"d-flex flex-column mt-5\"\u003e\n            \u003cbutton id=\"submit\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"otp-form\" data-skbuttonvalue=\"SUBMIT\"\u003e\n                            {{buttonLabel}}\n                        \u003c/button\u003e\n            {{#if canChangeDevice}}\n            \u003cbutton id=\"cancel\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"otp-form\" data-skbuttonvalue=\"CHANGE\"\u003e\n                            {{buttonLabel2}}\n                        \u003c/button\u003e\n            {{/if}}\n          \u003c/div\u003e\n        \u003c/form\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n  \u003cdiv\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n    \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n      \u003cdiv class=\"card shadow mb-5\"\u003e\n        \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n          \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n        {{#if title}}\n          \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n          {{/if}}\n          {{#if textOne}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n          {{/if}}\n          {{#if textTwo}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n          {{/if}}\n          \u003c!-- \u003ch3 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eAuthenticate by clicking on a link that will be sent to\n          your email address.\u003c/h3\u003e --\u003e\n          \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n          \u003c/p\u003e\n          \u003cform class=\"form\" id=\"userSigOnForm\" data-id=\"userSigOnForm\"\u003e\n            \u003cdiv class=\"d-flex flex-column mt-5\"\u003e\n              \u003cbutton id=\"submit\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"otp-form\" data-skbuttonvalue=\"SUBMIT\"\u003e\n                            {{buttonLabel}}\n                        \u003c/button\u003e\n              {{#if canChangeDevice}}\n              \u003cbutton id=\"cancel\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"otp-form\" data-skbuttonvalue=\"CHANGE\"\u003e\n                            {{buttonLabel2}}\n                        \u003c/button\u003e\n              {{/if}}\n            \u003c/div\u003e\n          \u003c/form\u003e\n        \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
               },
               "customScript": {
                 "value": ""
@@ -1040,7 +1040,7 @@
           "classes": "",
           "data": {
             "capabilityName": "updateChallenge",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "id": "ebtd5fr0tn",
             "idUnique": "h3up2ysshz",
@@ -1275,7 +1275,7 @@
           "classes": "",
           "data": {
             "capabilityName": "getChallenge",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "id": "z80t8d8glj",
             "label": "Challenge [2023-02-06]",
@@ -1395,7 +1395,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"challenge\",\n        \"data\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"tooltip\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"children\": [\n          {\n            \"text\": \"challenge\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "customHTML": {
-                "value": "\u003cdiv\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n  \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n    \u003cdiv class=\"card shadow mb-5\"\u003e\n      \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n        \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n\n               {{#if title}}\n        \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n        {{/if}}\n\n        {{#if textOne}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n        {{/if}}\n\n        {{#if textTwo}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n        {{/if}}\n\n        \u003c!-- \u003ch1 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eA verification link is being sent to your email\n                    address.\u003c/h1\u003e --\u003e\n        \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n        \u003c/p\u003e\n\n        \u003cdiv class=\"align-self-center\"\u003e\n          [[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMzAwMCIgcG9sbFJldHJpZXM9IjM1IiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJ0cnVlIg==###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjMwMDAiLCJwb2xsUmV0cmllcyI6IjM1IiwicG9sbENoYWxsZW5nZVN0YXR1cyI6InRydWUifSwiY29tcG9uZW50UHJvcHMiOnsiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MifSwicG9sbEludGVydmFsIjp7Im5hbWUiOiJwb2xsSW50ZXJ2YWwiLCJkaXNwbGF5TmFtZSI6IlBvbGwgSW50ZXJ2YWwiLCJ2YWx1ZSI6MjAwMH0sInBvbGxSZXRyaWVzIjp7Im5hbWUiOiJwb2xsUmV0cmllcyIsImRpc3BsYXlOYW1lIjoiUG9sbCBSZXRyaWVzIiwidmFsdWUiOjYwfSwicG9sbENoYWxsZW5nZVN0YXR1cyI6eyJuYW1lIjoicG9sbENoYWxsZW5nZVN0YXR1cyIsImRpc3BsYXlOYW1lIjoiUG9sbCBDaGFsbGVuZ2UgU3RhdHVzIiwidHlwZSI6InNlbGVjdCIsInZhbHVlIjoidHJ1ZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfX19]]]\n        \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n  \u003cdiv\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n    \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n      \u003cdiv class=\"card shadow mb-5\"\u003e\n        \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n          \u003cimg class=\"copanyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n\n         {{#if title}}\n          \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n          {{/if}}\n\n          {{#if textOne}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n          {{/if}}\n\n          {{#if textTwo}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n          {{/if}}\n          \u003c!-- \u003ch1 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eA verification link is being sent to your email\n                    address.\u003c/h1\u003e --\u003e\n          \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n          \u003c/p\u003e\n          \u003cdiv class=\"align-self-center\"\u003e\n            [[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMzAwMCIgcG9sbFJldHJpZXM9IjM1IiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJ0cnVlIg==###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjMwMDAiLCJwb2xsUmV0cmllcyI6IjM1IiwicG9sbENoYWxsZW5nZVN0YXR1cyI6InRydWUifSwiY29tcG9uZW50UHJvcHMiOnsiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MifSwicG9sbEludGVydmFsIjp7Im5hbWUiOiJwb2xsSW50ZXJ2YWwiLCJkaXNwbGF5TmFtZSI6IlBvbGwgSW50ZXJ2YWwiLCJ2YWx1ZSI6MjAwMH0sInBvbGxSZXRyaWVzIjp7Im5hbWUiOiJwb2xsUmV0cmllcyIsImRpc3BsYXlOYW1lIjoiUG9sbCBSZXRyaWVzIiwidmFsdWUiOjYwfSwicG9sbENoYWxsZW5nZVN0YXR1cyI6eyJuYW1lIjoicG9sbENoYWxsZW5nZVN0YXR1cyIsImRpc3BsYXlOYW1lIjoiUG9sbCBDaGFsbGVuZ2UgU3RhdHVzIiwidHlwZSI6InNlbGVjdCIsInZhbHVlIjoidHJ1ZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfX19]]]\n          \u003c/div\u003e\n        \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
               },
               "formFieldsList": {
                 "value": [
@@ -1931,7 +1931,7 @@
           "classes": "",
           "data": {
             "capabilityName": "getChallenge",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "id": "exmvyabfps",
             "idUnique": "zvgsr1ecqm",
@@ -2058,7 +2058,7 @@
           "classes": "",
           "data": {
             "capabilityName": "updateChallenge",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "id": "si1p71skgq",
             "idUnique": "ibtwx34cbw",
@@ -2594,7 +2594,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "\u003cdiv class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n   \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n        \u003cdiv class=\"card shadow mb-5\"\u003e\n            \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                \u003cp class=\"text-center\"\u003e{{subtitle}}\u003c/p\u003e\n                \u003cp class=\"text-muted text-center\" id=\"timerMsg\"\u003e\u003c/p\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n    \u003cdiv\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n        \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n            \u003cdiv class=\"card shadow mb-5\"\u003e\n                \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                    \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                    \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                    \u003cp class=\"text-center\"\u003e{{subtitle}}\u003c/p\u003e\n                    \u003cp class=\"text-muted text-center\" id=\"timerMsg\"\u003e\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
               },
               "customScript": {
                 "value": "const WINDOW_CLOSE_DURATION = 10;\n\nfunction autoCloseWindow(count) {\n\n  let label = document.getElementById(\"timerMsg\");\n  label.innerHTML = `This window will attempt to close in \u003cbr/\u003e\u003cstrong\u003e${count}\u003c/strong\u003e seconds.`\n\n  const countdown = setInterval(function () {\n    count--;\n\n    const secondsText = count === 1 ? \"second\" : \"seconds\";\n    label.innerHTML = `This window will attempt to close in \u003cbr/\u003e\u003cstrong\u003e${count}\u003c/strong\u003e ${secondsText}.`;\n\n    if (count \u003c= 0) {\n      clearInterval(countdown);\n      window.close();\n      // Msg in the event the window cannot be closed programmatically \n      label.innerHTML = `You may now safely close this window.`;\n    }\n  }, 500);\n}\n\nfunction start() {\n  // Close window in 10 seconds\n  autoCloseWindow(WINDOW_CLOSE_DURATION);\n}\n\nif (document.readyState === \"loading\") {\n  // Loading hasn't finished yet\n  document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n  // `DOMContentLoaded` has already fired\n  start();\n}\n\n"
@@ -2615,7 +2615,7 @@
                 "value": "Closes window after X seconds"
               },
               "nodeTitle": {
-                "value": "Auto Close Window"
+                "value": "Magic Link Success Auto Close Window"
               },
               "outputSchema": {
                 "value": {}
@@ -2694,8 +2694,8 @@
           "locked": false,
           "pannable": false,
           "position": {
-            "x": 982.9403110582557,
-            "y": 214
+            "x": 133.84196810143433,
+            "y": 214.14714896229495
           },
           "removed": false,
           "selectable": true,
@@ -3204,23 +3204,24 @@
     "css": "body, .page {\n  background-color: #ededed !important;\n}\n\n.buttonLink {\n  background: none !important;\n  border: none;\n  cursor: pointer;\n  color: #2996cc;\n  font-size: 15px;\n}\n.companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    height: 65px;\n    width: fit-content;\n}\n",
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.6/icons.css"
+      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.10/icons.css"
     ],
     "debugMode": true,
     "flowHttpTimeoutInSeconds": 45,
     "flowTimeoutInSeconds": 12000,
     "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
+    "intermediateLoadingScreenHTML": "\u003cdiv class=\"end-user-nano\"\u003e\n    \u003cdiv\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n        \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n            \u003cdiv class=\"card shadow mb-5\"\u003e\n                \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                    \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"\ncompanyName {{global.variables.companyName}}\n✕\" /\u003e\n                    \u003ch1 class=\"text-center mb-4\"\u003e\ntitle {{title}}\n✕\u003c/h1\u003e\n                    \u003cp class=\"text-center\"\u003e\nsubtitle {{subtitle}}\n✕\u003c/p\u003e\n                    \u003cp class=\"text-muted text-center\" id=\"timerMsg\"\u003e\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e",
     "jsLinks": [],
     "logLevel": 2,
     "scrubSensitiveInfo": false,
     "useBetaAlgorithm": true,
     "useCustomCSS": true,
-    "useCustomScript": false
+    "useCustomScript": false,
+    "useIntermediateLoadingScreen": true
   },
   "trigger": {},
-  "flowId": "f2d3f4e015247c846d3b100b3d78a3b7",
-  "companyId": "ee75a03f-c0dc-40e5-9c93-85568107fc13",
+  "flowId": "028d73edef9e9b35385df0886e9b6738",
+  "companyId": "586df9f8-f4f8-4ac0-97ab-50fcea486b1c",
   "graphData": {
     "elements": {
       "nodes": [
@@ -3303,7 +3304,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "\u003cdiv\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n  \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n    \u003cdiv class=\"card shadow mb-5\"\u003e\n      \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n        \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n\n        {{#if title}}\n        \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n        {{/if}}\n\n        {{#if textOne}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n        {{/if}}\n\n        {{#if textTwo}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n        {{/if}}\n\n        \u003c!-- \u003ch3 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eAuthenticate by clicking on a link that will be sent to\n          your email address.\u003c/h3\u003e --\u003e\n        \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n        \u003c/p\u003e\n\n        \u003cform class=\"form\" id=\"userSigOnForm\" data-id=\"userSigOnForm\"\u003e\n          \u003cdiv class=\"d-flex flex-column mt-5\"\u003e\n            \u003cbutton id=\"submit\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"otp-form\" data-skbuttonvalue=\"SUBMIT\"\u003e\n                            {{buttonLabel}}\n                        \u003c/button\u003e\n            {{#if canChangeDevice}}\n            \u003cbutton id=\"cancel\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"otp-form\" data-skbuttonvalue=\"CHANGE\"\u003e\n                            {{buttonLabel2}}\n                        \u003c/button\u003e\n            {{/if}}\n          \u003c/div\u003e\n        \u003c/form\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n  \u003cdiv\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n    \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n      \u003cdiv class=\"card shadow mb-5\"\u003e\n        \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n          \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n        {{#if title}}\n          \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n          {{/if}}\n          {{#if textOne}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n          {{/if}}\n          {{#if textTwo}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n          {{/if}}\n          \u003c!-- \u003ch3 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eAuthenticate by clicking on a link that will be sent to\n          your email address.\u003c/h3\u003e --\u003e\n          \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n          \u003c/p\u003e\n          \u003cform class=\"form\" id=\"userSigOnForm\" data-id=\"userSigOnForm\"\u003e\n            \u003cdiv class=\"d-flex flex-column mt-5\"\u003e\n              \u003cbutton id=\"submit\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"otp-form\" data-skbuttonvalue=\"SUBMIT\"\u003e\n                            {{buttonLabel}}\n                        \u003c/button\u003e\n              {{#if canChangeDevice}}\n              \u003cbutton id=\"cancel\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"otp-form\" data-skbuttonvalue=\"CHANGE\"\u003e\n                            {{buttonLabel2}}\n                        \u003c/button\u003e\n              {{/if}}\n            \u003c/div\u003e\n          \u003c/form\u003e\n        \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
               },
               "customScript": {
                 "value": ""
@@ -3464,7 +3465,7 @@
           "data": {
             "id": "ebtd5fr0tn",
             "nodeType": "CONNECTION",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "name": "Challenge",
             "label": "Challenge",
@@ -3694,7 +3695,7 @@
           "data": {
             "id": "z80t8d8glj",
             "nodeType": "CONNECTION",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "name": "Challenge",
             "label": "Challenge [2023-02-06]",
@@ -3814,7 +3815,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"challenge\",\n        \"data\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"tooltip\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"children\": [\n          {\n            \"text\": \"challenge\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "customHTML": {
-                "value": "\u003cdiv\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n  \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n    \u003cdiv class=\"card shadow mb-5\"\u003e\n      \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n        \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n\n               {{#if title}}\n        \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n        {{/if}}\n\n        {{#if textOne}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n        {{/if}}\n\n        {{#if textTwo}}\n        \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n        {{/if}}\n\n        \u003c!-- \u003ch1 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eA verification link is being sent to your email\n                    address.\u003c/h1\u003e --\u003e\n        \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n        \u003c/p\u003e\n\n        \u003cdiv class=\"align-self-center\"\u003e\n          [[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMzAwMCIgcG9sbFJldHJpZXM9IjM1IiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJ0cnVlIg==###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjMwMDAiLCJwb2xsUmV0cmllcyI6IjM1IiwicG9sbENoYWxsZW5nZVN0YXR1cyI6InRydWUifSwiY29tcG9uZW50UHJvcHMiOnsiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MifSwicG9sbEludGVydmFsIjp7Im5hbWUiOiJwb2xsSW50ZXJ2YWwiLCJkaXNwbGF5TmFtZSI6IlBvbGwgSW50ZXJ2YWwiLCJ2YWx1ZSI6MjAwMH0sInBvbGxSZXRyaWVzIjp7Im5hbWUiOiJwb2xsUmV0cmllcyIsImRpc3BsYXlOYW1lIjoiUG9sbCBSZXRyaWVzIiwidmFsdWUiOjYwfSwicG9sbENoYWxsZW5nZVN0YXR1cyI6eyJuYW1lIjoicG9sbENoYWxsZW5nZVN0YXR1cyIsImRpc3BsYXlOYW1lIjoiUG9sbCBDaGFsbGVuZ2UgU3RhdHVzIiwidHlwZSI6InNlbGVjdCIsInZhbHVlIjoidHJ1ZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfX19]]]\n        \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n  \u003cdiv\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n    \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n      \u003cdiv class=\"card shadow mb-5\"\u003e\n        \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n          \u003cimg class=\"copanyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n\n         {{#if title}}\n          \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n          {{/if}}\n\n          {{#if textOne}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textOne}}\u003c/p\u003e\n          {{/if}}\n\n          {{#if textTwo}}\n          \u003cp class=\"text-muted text-center\"\u003e{{textTwo}}\u003c/p\u003e\n          {{/if}}\n          \u003c!-- \u003ch1 id=\"header\" class=\"dialog-header text-center mb-4\"\u003eA verification link is being sent to your email\n                    address.\u003c/h1\u003e --\u003e\n          \u003cp id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"\u003e\n          \u003c/p\u003e\n          \u003cdiv class=\"align-self-center\"\u003e\n            [[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMzAwMCIgcG9sbFJldHJpZXM9IjM1IiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJ0cnVlIg==###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjMwMDAiLCJwb2xsUmV0cmllcyI6IjM1IiwicG9sbENoYWxsZW5nZVN0YXR1cyI6InRydWUifSwiY29tcG9uZW50UHJvcHMiOnsiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MifSwicG9sbEludGVydmFsIjp7Im5hbWUiOiJwb2xsSW50ZXJ2YWwiLCJkaXNwbGF5TmFtZSI6IlBvbGwgSW50ZXJ2YWwiLCJ2YWx1ZSI6MjAwMH0sInBvbGxSZXRyaWVzIjp7Im5hbWUiOiJwb2xsUmV0cmllcyIsImRpc3BsYXlOYW1lIjoiUG9sbCBSZXRyaWVzIiwidmFsdWUiOjYwfSwicG9sbENoYWxsZW5nZVN0YXR1cyI6eyJuYW1lIjoicG9sbENoYWxsZW5nZVN0YXR1cyIsImRpc3BsYXlOYW1lIjoiUG9sbCBDaGFsbGVuZ2UgU3RhdHVzIiwidHlwZSI6InNlbGVjdCIsInZhbHVlIjoidHJ1ZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfX19]]]\n          \u003c/div\u003e\n        \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
               },
               "formFieldsList": {
                 "value": [
@@ -4343,7 +4344,7 @@
           "data": {
             "id": "exmvyabfps",
             "nodeType": "CONNECTION",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "name": "Challenge",
             "label": "Challenge [2023-02-06]",
@@ -4469,7 +4470,7 @@
           "data": {
             "id": "si1p71skgq",
             "nodeType": "CONNECTION",
-            "connectionId": "d98e203d1a0f9100a09914f4d293c0e3",
+            "connectionId": "ab88f770160e71a48643c8eb70556802",
             "connectorId": "challengeConnector",
             "name": "Challenge",
             "label": "Challenge",
@@ -4996,7 +4997,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "\u003cdiv class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n   \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n        \u003cdiv class=\"card shadow mb-5\"\u003e\n            \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                \u003cp class=\"text-center\"\u003e{{subtitle}}\u003c/p\u003e\n                \u003cp class=\"text-muted text-center\" id=\"timerMsg\"\u003e\u003c/p\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n    \u003cdiv\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n        \u003cdiv style=\"max-width: 400px; min-width: 400px; width: 100%\"\u003e\n            \u003cdiv class=\"card shadow mb-5\"\u003e\n                \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                    \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                    \u003ch1 class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                    \u003cp class=\"text-center\"\u003e{{subtitle}}\u003c/p\u003e\n                    \u003cp class=\"text-muted text-center\" id=\"timerMsg\"\u003e\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
               },
               "customScript": {
                 "value": "const WINDOW_CLOSE_DURATION = 10;\n\nfunction autoCloseWindow(count) {\n\n  let label = document.getElementById(\"timerMsg\");\n  label.innerHTML = `This window will attempt to close in \u003cbr/\u003e\u003cstrong\u003e${count}\u003c/strong\u003e seconds.`\n\n  const countdown = setInterval(function () {\n    count--;\n\n    const secondsText = count === 1 ? \"second\" : \"seconds\";\n    label.innerHTML = `This window will attempt to close in \u003cbr/\u003e\u003cstrong\u003e${count}\u003c/strong\u003e ${secondsText}.`;\n\n    if (count \u003c= 0) {\n      clearInterval(countdown);\n      window.close();\n      // Msg in the event the window cannot be closed programmatically \n      label.innerHTML = `You may now safely close this window.`;\n    }\n  }, 500);\n}\n\nfunction start() {\n  // Close window in 10 seconds\n  autoCloseWindow(WINDOW_CLOSE_DURATION);\n}\n\nif (document.readyState === \"loading\") {\n  // Loading hasn't finished yet\n  document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n  // `DOMContentLoaded` has already fired\n  start();\n}\n\n"
@@ -5017,7 +5018,7 @@
                 "value": "Closes window after X seconds"
               },
               "nodeTitle": {
-                "value": "Auto Close Window"
+                "value": "Magic Link Success Auto Close Window"
               },
               "outputSchema": {
                 "value": {}
@@ -5090,8 +5091,8 @@
             }
           },
           "position": {
-            "x": 982.9403110582557,
-            "y": 214
+            "x": 133.84196810143433,
+            "y": 214.14714896229495
           },
           "group": "nodes",
           "removed": false,
@@ -6278,5 +6279,5 @@
     "variablesConnector",
     "errorConnector"
   ],
-  "savedDate": 1707857723151
+  "savedDate": 1709329654096
 }

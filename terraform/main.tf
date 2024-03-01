@@ -27,9 +27,9 @@ provider "davinci" {
 }
 
 resource "pingone_environment" "master_flow_environment" {         
-  name        = "PingOne Master Flow"
-  description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
-  type        = "SANDBOX"
+  name        = var.environment_name
+  description = var.environment_description
+  type        = var.environment_type
   license_id  = data.pingone_licenses.internal_license.ids[0]
   service {
     type = "SSO"
@@ -84,7 +84,8 @@ resource "pingone_population" "app" {
   description = "Population containing App Users"
 }
 
-resource "time_sleep" "wait_10_seconds" {
+/*
+resource "time_sleep" "wait_20_seconds" {
   depends_on = [
     davinci_connection.Annotation,
     davinci_connection.Challenge,
@@ -103,7 +104,19 @@ resource "time_sleep" "wait_10_seconds" {
     davinci_connection.User-Policy,
     davinci_connection.Variables,
   ]
-  create_duration = "10s"
+  
+  create_duration = local.deployment_type
+}
+*/
+
+############
+#  Locals  #
+############
+
+locals {
+  widget   = var.deployment_type == "WIDGET" ? "20s" : ""
+  redirect = var.deployment_type == "REDIRECT" ? "120s" : ""
+  deployment_type = coalesce(local.widget, local.redirect)
 }
 
 ##################
@@ -132,6 +145,24 @@ data "pingone_population" "default_population" {
 data "pingone_password_policy" "standard_password_policy" {
   environment_id = pingone_environment.master_flow_environment.id
   name = "Standard"
+}
+
+############################
+#  Social Login Providers  #
+############################
+
+resource "pingone_identity_provider" "google" {
+  count = var.davinci_variable_gv-googleLogin_value == "true" ? 1 : 0
+  environment_id = pingone_environment.master_flow_environment.id
+
+  name    = "Google"
+  enabled = true
+
+  google {
+    client_id     = var.google_client_id
+    client_secret = var.google_client_secret
+  }
+  registration_population_id = data.pingone_population.default_population.id
 }
 
 #######################
@@ -256,8 +287,51 @@ resource "pingone_application_flow_policy_assignment" "oidc_app" {
   priority = 1
 }
 
+resource "pingone_system_application" "pingone_portal" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  type    = "PING_ONE_PORTAL"
+  enabled = true
+}
+
+resource "pingone_system_application" "pingone_self_service" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  type    = "PING_ONE_SELF_SERVICE"
+  enabled = true
+
+  apply_default_theme         = true
+  enable_default_theme_footer = true
+}
+
+resource "pingone_application_flow_policy_assignment" "my_account" {
+  environment_id = pingone_environment.master_flow_environment.id
+  application_id = pingone_system_application.pingone_self_service.id
+
+  flow_policy_id = davinci_application_flow_policy.PingOne-SSO-Flow-Policy.id
+
+  priority = 1
+}
+
+resource "pingone_application_flow_policy_assignment" "my_apps" {
+  environment_id = pingone_environment.master_flow_environment.id
+  application_id = pingone_system_application.pingone_portal.id
+
+  flow_policy_id = davinci_application_flow_policy.PingOne-SSO-Flow-Policy.id
+
+  priority = 1
+}
+
+#############
+#  Outputs  #
+#############
+
 output "initiate_flow_uri" {
-  value = "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/as/authorize?response_type=code&client_id=${pingone_application.oidc_app.oidc_options[0].client_id}&redirect_uri=https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/openid_connect&scope=openid"
+  value = "https://apps.pingone.com/${pingone_environment.master_flow_environment.id}/myaccount/"
+}
+
+output "google_callback_url" {
+  value = var.davinci_variable_gv-googleLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/google" : "N/A"
 }
 
 ############################
@@ -295,7 +369,7 @@ resource "pingone_notification_template_content" "email_verification_user" {
   variant        = "Email Verification User - Master Flow"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\" style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"text-align: center;\">                    <div style=\"padding-bottom: 20px;\"><img                        src=\"https://cdn.glitch.global/f3c6cad2-28d5-40dc-bf7f-37a8538c380f/ping-iitem.png?v=1681386291441\" alt=\"Ping Identity\"                        style=\"width: 92px;\"></div>                  </div>                  <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                    <div style=\"color: rgb(0, 0, 0); text-align: center;\">                      <h1 style=\"margin: 1rem 0\">Verification code</h1>                      <h2 style=\"padding-bottom: 16px;text-transform:capitalize\"> $${user.username}</h2>                      <p style=\"padding-bottom: 16px\">Please use the verification code below to verify your account.</p>                      <p style=\"padding-bottom: 16px\"> Your Code: <strong style=\"font-size: 130%\">$${code}</strong></p>                      <p style=\"padding-bottom: 16px\">If you didn’t request this, you can ignore this email.</p>                      <p style=\"padding-bottom: 16px\">Thank You,<br>The Ping team</p>                    </div>                    <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                      <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                    </div>                  </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body>"
+    body          = "<body style=\"font-family: Helvetica, arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\"            style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                    <div style=\"text-align: center;\">                      <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\" alt=\"\" style=\"width: 92px;\"></div>                    </div>                    <div style=\"color: rgb(0, 0, 0); text-align: center;\">                      <h1 style=\"margin: 1rem 0\">Hello $${user.name.given}</h1>                      <h1 style=\"margin: 1rem 0\">Verification code</h1>                      <p style=\"padding-bottom: 16px\">Please use the verification code below to verify your account.</p>                      <p style=\"padding-bottom: 16px\"><strong style=\"font-size: 130%\">OTP code: $${code}</strong></p>                      <p style=\"padding-bottom: 16px\">if you didn’t request this, you can ignore this email.</p>                      <p style=\"padding-bottom: 16px\">thanks,<br>                        the ping team</p>                    </div>                  </div>                  <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                    <p style=\"padding-bottom: 16px\">Copyright ping identity 2024</p>                  </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body></html>"
     subject       = "Email Verification (User)"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -552,7 +626,7 @@ resource "davinci_application_flow_policy" "PingOne-SSO-Flow-Policy" {
   name           = "PingOne SSO Connection"
   status         = "enabled"
   policy_flow {
-    flow_id    = davinci_flow.PingOne-Session-Main-Flow.id
+    flow_id    = davinci_flow.PingOne-SSO-Authentication-MASTER.id
     version_id = -1
     weight     = 100
   }
@@ -574,70 +648,42 @@ resource "davinci_connection" "Annotation" {
   connector_id   = "annotationConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Annotation"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Challenge" {
   connector_id   = "challengeConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Challenge"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Error-Message" {
   connector_id   = "errorConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Error Message"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Flow-Connector" {
   connector_id   = "flowConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Flow Connector"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Functions" {
   connector_id   = "functionsConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Functions"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Http" {
   connector_id   = "httpConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Http"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Node" {
   connector_id   = "nodeConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Node"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "PingOne" {
@@ -664,20 +710,12 @@ resource "davinci_connection" "PingOne" {
     name  = "region"
     value = var.davinci_connection_PingOne_region
   }
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "PingOne-Authentication" {
   connector_id   = "pingOneAuthenticationConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "PingOne Authentication"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "PingOne-MFA" {
@@ -704,10 +742,6 @@ resource "davinci_connection" "PingOne-MFA" {
     name  = "region"
     value = var.davinci_connection_PingOne_region
   }
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "PingOne-Notifications" {
@@ -734,10 +768,6 @@ resource "davinci_connection" "PingOne-Notifications" {
     name  = "region"
     value = var.davinci_connection_PingOne_region
   }
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "PingOne-Protect" {
@@ -764,50 +794,30 @@ resource "davinci_connection" "PingOne-Protect" {
     name  = "region"
     value = var.davinci_connection_PingOne_region
   }
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "PingOne-Verify" {
   connector_id   = "pingOneVerifyConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "PingOne Verify"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Token-Management" {
   connector_id   = "skOpenIdConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Token Management"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "User-Policy" {
   connector_id   = "userPolicyConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "User Policy"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 resource "davinci_connection" "Variables" {
   connector_id   = "variablesConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "Variables"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
 }
 
 ###################
@@ -850,8 +860,7 @@ resource "davinci_flow" "PingOne-Custom-Security-Question-and-Answer-Registratio
   flow_json      = "${file("${path.module}/data/flow_PingOne Custom Security Question and Answer Registration subflow.json")}"
   
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -916,9 +925,7 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-registration-subflow"
   flow_json      = "${file("${path.module}/data/flow_PingOne Davinci Custom Magic Link registration subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
-  ]
+    data.davinci_connections.read_all  ]
 }
 
 resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-Subflow" {
@@ -972,8 +979,7 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-Subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne Davinci Custom Magic Link Subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1038,8 +1044,7 @@ resource "davinci_flow" "PingOne-MFA-Authentication-subflow" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1094,8 +1099,7 @@ resource "davinci_flow" "PingOne-MFA-Device-Management-Subflow" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1155,8 +1159,7 @@ resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 #  subflow_link {
 #    id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
@@ -1196,6 +1199,11 @@ resource "davinci_flow" "PingOne-Protect-subflow" {
   }
 
   connection_link {
+    id   = davinci_connection.PingOne.id
+    name = "PingOne"
+  }
+
+  connection_link {
     id   = davinci_connection.PingOne-Protect.id
     name = "PingOne Protect"
   }
@@ -1220,8 +1228,7 @@ resource "davinci_flow" "PingOne-Protect-subflow" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1266,8 +1273,7 @@ resource "davinci_flow" "PingOne-SSO-Account-Verification-subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne SSO Account Verification subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1372,8 +1378,7 @@ resource "davinci_flow" "PingOne-SSO-Authentication-MASTER" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1413,8 +1418,7 @@ resource "davinci_flow" "PingOne-SSO-Change-Password-subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne SSO Change Password subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1459,8 +1463,7 @@ resource "davinci_flow" "PingOne-SSO-Consent-subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne SSO Consent subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1520,8 +1523,7 @@ resource "davinci_flow" "PingOne-SSO-Forgot-Password-subflow" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1566,8 +1568,7 @@ resource "davinci_flow" "PingOne-SSO-Forgot-Username-subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne SSO Forgot Username subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1602,8 +1603,7 @@ resource "davinci_flow" "PingOne-SSO-Password-Expiration-subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne SSO Password Expiration subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1638,8 +1638,7 @@ resource "davinci_flow" "PingOne-SSO-Progressive-Profiling-subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne SSO Progressive Profiling subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1689,8 +1688,7 @@ resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow"
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1731,6 +1729,11 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
   }
 
   connection_link {
+    id   = davinci_connection.PingOne-MFA.id
+    name = "PingOne MFA"
+  }
+
+  connection_link {
     id   = davinci_connection.Variables.id
     name = "Variables"
   }
@@ -1742,6 +1745,11 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
   subflow_link {
     id   = davinci_flow.PingOne-Custom-Security-Question-and-Answer-Registration-subflow.id
     name = "PingOne Custom Security Question and Answer Registration subflow"
+  }
+
+  subflow_link {
+    id   = davinci_flow.PingOne-Protect-subflow.id
+    name = "PingOne Protect subflow"
   }
 
   subflow_link {
@@ -1765,8 +1773,7 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1796,8 +1803,7 @@ resource "davinci_flow" "PingOne-Security-Question-and-Answer-Validation-subflow
   flow_json      = "${file("${path.module}/data/flow_PingOne Security Question and Answer Validation subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1832,8 +1838,7 @@ resource "davinci_flow" "PingOne-Session-Main-Flow" {
   }
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1873,8 +1878,7 @@ resource "davinci_flow" "PingOne-Sign-On-with-Registration-Password-Reset-and-Re
   flow_json      = "${file("${path.module}/data/flow_PingOne Sign On with Registration, Password Reset and Recovery.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -1909,8 +1913,7 @@ resource "davinci_flow" "PingOne-Verify-subflow" {
   flow_json      = "${file("${path.module}/data/flow_PingOne Verify subflow.json")}"
 
   depends_on = [
-    data.davinci_connections.read_all,
-    time_sleep.wait_10_seconds
+    data.davinci_connections.read_all
   ]
 }
 
@@ -2322,6 +2325,23 @@ resource "davinci_variable" "gv-googleLogin" {
   name           = "gv-googleLogin"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-googleLogin_value}"
+
+  depends_on = [
+    data.davinci_connections.read_all
+  ]
+}
+
+resource "davinci_variable" "gv-googleExternalIdpId" {
+
+  context        = "company"
+  description    = "The ID of the Google External IDP"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-googleExternalIdpId"
+  type           = "boolean"
+  value          = var.davinci_variable_gv-googleLogin_value == "true" ? "${pingone_identity_provider.google[0].id}" : "N/A"
 
   depends_on = [
     data.davinci_connections.read_all
