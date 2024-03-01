@@ -4,10 +4,10 @@
   "currentVersion": 1,
   "publishedVersion": 1,
   "name": "PingOne Verify subflow",
-  "description": "Imported on Tue Feb 13 2024 20:54:55 GMT+0000 (Coordinated Universal Time)",
-  "createdDate": 1707857720784,
-  "updatedDate": 1707857720931,
-  "deployedDate": 1707857720931,
+  "description": "Imported on Fri Mar 01 2024 21:47:06 GMT+0000 (Coordinated Universal Time)",
+  "createdDate": 1709329634225,
+  "updatedDate": 1709329634409,
+  "deployedDate": 1709329634409,
   "enabledGraphData": {
     "boxSelectionEnabled": true,
     "data": {},
@@ -641,7 +641,7 @@
           "classes": "",
           "data": {
             "capabilityName": "createVerifyTransaction",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "id": "d4lz7ki5k6",
             "label": "PingOne Verify Test 6",
@@ -674,7 +674,7 @@
           "classes": "",
           "data": {
             "capabilityName": "readVerifyTransaction",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "id": "4li2m2xj45",
             "label": "PingOne Verify Test 6",
@@ -728,7 +728,7 @@
           "classes": "",
           "data": {
             "capabilityName": "readGovernmentID",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "id": "j3acsbmwkq",
             "idUnique": "nkbh0b54v1",
@@ -784,7 +784,7 @@
           "classes": "",
           "data": {
             "capabilityName": "readMetaData",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "id": "tbjy857dxq",
             "idUnique": "eq8n1mdvbb",
@@ -979,7 +979,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "\u003cdiv\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n    \u003cdiv class=\"mh-100\" style=\"max-width: 400px; width: 100%\"\u003e\n        \u003cdiv class=\"card shadow mb-5\"\u003e\n            \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                \u003ch1 id=\"header\" class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                \u003cp class=\"text-muted text-center\"\u003e\n                    Scan this QR Code with your mobile phone and follow the instructions.\n                \u003c/p\u003e\n                \u003cdiv class=\"row p-2 row justify-content-center\"\u003e\n                    \u003cimg alt=\"Verify QR Code\" class=\"w-50 mx-auto my-2 p-4 border border-gray border-2\" src=\"{{qrUrl}}\" /\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\"d-flex flex-row align-items-center my-4\"\u003e\n                    \u003chr class=\"flex-grow-1\" /\u003e\n                    \u003cspan class=\"fs-5 fw-bold px-3\"\u003eOR\u003c/span\u003e\n                    \u003chr class=\"flex-grow-1\" /\u003e\n                \u003c/div\u003e\n                \u003ca href=\"{{webVerificationUrl}}\u0026dt=1\" class=\"btn btn-outline-primary\" target=\"_blank\"\u003eVerify with Your\n                    Browser\u003c/a\u003e\n                \u003cdiv class=\"text-center mt-5\"\u003e\n                    \u003cp class=\"mb-2 fw-bold\"\u003eVerification Code\u003c/p\u003e\n                    \u003cp class=\"fs-1 mb-3\"\u003e{{webVerificationCode}}\u003c/p\u003e\n                    \u003cp class=\"text-muted\"\u003eCheck that your phone shows the same verification code.\u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv data-skcomponent=\"skerror\" class=\"text-center sk-alert sk-alert-danger text-danger\"\n                    data-skvisibility=\"\"\u003e\u003c/div\u003e\n\n                \u003cdiv class=\"text-center\"\u003e\n                    \u003cspan\u003e[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMjAwMCIgcG9sbFJldHJpZXM9IjkwIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6MjAwMCwicG9sbFJldHJpZXMiOiI5MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJmYWxzZSJ9LCJjb21wb25lbnRQcm9wcyI6eyJjbGFzcyI6eyJuYW1lIjoiY2xhc3MiLCJkaXNwbGF5TmFtZSI6IkNTUyBDbGFzcyJ9LCJwb2xsSW50ZXJ2YWwiOnsibmFtZSI6InBvbGxJbnRlcnZhbCIsImRpc3BsYXlOYW1lIjoiUG9sbCBJbnRlcnZhbCIsInZhbHVlIjoyMDAwfSwicG9sbFJldHJpZXMiOnsibmFtZSI6InBvbGxSZXRyaWVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIFJldHJpZXMiLCJ2YWx1ZSI6NjB9LCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjp7Im5hbWUiOiJwb2xsQ2hhbGxlbmdlU3RhdHVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIENoYWxsZW5nZSBTdGF0dXMiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwib3B0aW9ucyI6W3sibmFtZSI6IlRydWUiLCJ2YWx1ZSI6InRydWUifSx7Im5hbWUiOiJGYWxzZSIsInZhbHVlIjoiZmFsc2UifV19fX0=]]]\u003c/span\u003e\n                    \u003cp class=\"text-muted mt-2 fs-5\"\u003e\n                        {{pollingMessage}}\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cform id=\"cancelForm\" data-id=\"cancelForm\"\u003e\n                    {{#if buttonLabel}}\n                    \u003cdiv class=\"d-flex flex-column\"\u003e\n                        \u003cbutton type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"cancelFOrm\"\n                    data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\"\u003e\n                    {{buttonLabel}}\n                    \u003c/button\u003e\n                        {{/if}}\n                    \u003c/div\u003e\n                \u003c/form\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n    \u003cdiv\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n        \u003cdiv class=\"mh-100\" style=\"max-width: 400px; width: 100%\"\u003e\n            \u003cdiv class=\"card shadow mb-5\"\u003e\n                \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                    \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                    \u003ch1 id=\"header\" class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                    \u003cp class=\"text-muted text-center\"\u003e\n                        Scan this QR Code with your mobile phone and follow the instructions.\n                    \u003c/p\u003e\n                    \u003cdiv class=\"row p-2 row justify-content-center\"\u003e\n                        \u003cimg alt=\"Verify QR Code\" class=\"w-50 mx-auto my-2 p-4 border border-gray border-2\" src=\"{{qrUrl}}\" /\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\"d-flex flex-row align-items-center my-4\"\u003e\n                        \u003chr class=\"flex-grow-1\" /\u003e\n                        \u003cspan class=\"fs-5 fw-bold px-3\"\u003eOR\u003c/span\u003e\n                        \u003chr class=\"flex-grow-1\" /\u003e\n                    \u003c/div\u003e\n                    \u003ca href=\"{{webVerificationUrl}}\u0026dt=1\" class=\"btn btn-outline-primary\" target=\"_blank\"\u003eVerify with\n                        Your\n                        Browser\u003c/a\u003e\n                    \u003cdiv class=\"text-center mt-5\"\u003e\n                        \u003cp class=\"mb-2 fw-bold\"\u003eVerification Code\u003c/p\u003e\n                        \u003cp class=\"fs-1 mb-3\"\u003e{{webVerificationCode}}\u003c/p\u003e\n                        \u003cp class=\"text-muted\"\u003eCheck that your phone shows the same verification code.\u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv data-skcomponent=\"skerror\" class=\"text-center sk-alert sk-alert-danger text-danger\"\n                        data-skvisibility=\"\"\u003e\u003c/div\u003e\n\n                    \u003cdiv class=\"text-center\"\u003e\n                        \u003cspan\u003e[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMjAwMCIgcG9sbFJldHJpZXM9IjkwIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6MjAwMCwicG9sbFJldHJpZXMiOiI5MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJmYWxzZSJ9LCJjb21wb25lbnRQcm9wcyI6eyJjbGFzcyI6eyJuYW1lIjoiY2xhc3MiLCJkaXNwbGF5TmFtZSI6IkNTUyBDbGFzcyJ9LCJwb2xsSW50ZXJ2YWwiOnsibmFtZSI6InBvbGxJbnRlcnZhbCIsImRpc3BsYXlOYW1lIjoiUG9sbCBJbnRlcnZhbCIsInZhbHVlIjoyMDAwfSwicG9sbFJldHJpZXMiOnsibmFtZSI6InBvbGxSZXRyaWVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIFJldHJpZXMiLCJ2YWx1ZSI6NjB9LCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjp7Im5hbWUiOiJwb2xsQ2hhbGxlbmdlU3RhdHVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIENoYWxsZW5nZSBTdGF0dXMiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwib3B0aW9ucyI6W3sibmFtZSI6IlRydWUiLCJ2YWx1ZSI6InRydWUifSx7Im5hbWUiOiJGYWxzZSIsInZhbHVlIjoiZmFsc2UifV19fX0=]]]\u003c/span\u003e\n                        \u003cp class=\"text-muted mt-2 fs-5\"\u003e\n                            {{pollingMessage}}\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cform id=\"cancelForm\" data-id=\"cancelForm\"\u003e\n                        {{#if buttonLabel}}\n                        \u003cdiv class=\"d-flex flex-column\"\u003e\n                            \u003cbutton type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"cancelFOrm\"\n                    data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\"\u003e\n                    {{buttonLabel}}\n                    \u003c/button\u003e\n                            {{/if}}\n                        \u003c/div\u003e\n                    \u003c/form\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
               },
               "customScript": {
                 "value": ""
@@ -1809,8 +1809,8 @@
     "useCustomCSS": true
   },
   "trigger": {},
-  "flowId": "68f53a08f1d0779128ffba0651d97ff0",
-  "companyId": "ee75a03f-c0dc-40e5-9c93-85568107fc13",
+  "flowId": "6deb3519ce90e2b1933cb7ffe06a20ee",
+  "companyId": "586df9f8-f4f8-4ac0-97ab-50fcea486b1c",
   "graphData": {
     "elements": {
       "nodes": [
@@ -1942,7 +1942,7 @@
           "data": {
             "id": "d4lz7ki5k6",
             "nodeType": "CONNECTION",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "name": "PingOne Verify",
             "label": "PingOne Verify Test 6",
@@ -1975,7 +1975,7 @@
           "data": {
             "id": "4li2m2xj45",
             "nodeType": "CONNECTION",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "name": "PingOne Verify",
             "label": "PingOne Verify Test 6",
@@ -2030,7 +2030,7 @@
           "data": {
             "id": "j3acsbmwkq",
             "nodeType": "CONNECTION",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "name": "PingOne Verify",
             "label": "PingOne Verify Test 6",
@@ -2085,7 +2085,7 @@
           "data": {
             "id": "tbjy857dxq",
             "nodeType": "CONNECTION",
-            "connectionId": "c135c65b5fbedcb9ae14616a434fc872",
+            "connectionId": "3a8d03d22e1970b849c59a7ec1d4ef7f",
             "connectorId": "pingOneVerifyConnector",
             "name": "PingOne Verify",
             "label": "PingOne Verify Test 6",
@@ -2278,7 +2278,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "\u003cdiv\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n    \u003cdiv class=\"mh-100\" style=\"max-width: 400px; width: 100%\"\u003e\n        \u003cdiv class=\"card shadow mb-5\"\u003e\n            \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                \u003ch1 id=\"header\" class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                \u003cp class=\"text-muted text-center\"\u003e\n                    Scan this QR Code with your mobile phone and follow the instructions.\n                \u003c/p\u003e\n                \u003cdiv class=\"row p-2 row justify-content-center\"\u003e\n                    \u003cimg alt=\"Verify QR Code\" class=\"w-50 mx-auto my-2 p-4 border border-gray border-2\" src=\"{{qrUrl}}\" /\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\"d-flex flex-row align-items-center my-4\"\u003e\n                    \u003chr class=\"flex-grow-1\" /\u003e\n                    \u003cspan class=\"fs-5 fw-bold px-3\"\u003eOR\u003c/span\u003e\n                    \u003chr class=\"flex-grow-1\" /\u003e\n                \u003c/div\u003e\n                \u003ca href=\"{{webVerificationUrl}}\u0026dt=1\" class=\"btn btn-outline-primary\" target=\"_blank\"\u003eVerify with Your\n                    Browser\u003c/a\u003e\n                \u003cdiv class=\"text-center mt-5\"\u003e\n                    \u003cp class=\"mb-2 fw-bold\"\u003eVerification Code\u003c/p\u003e\n                    \u003cp class=\"fs-1 mb-3\"\u003e{{webVerificationCode}}\u003c/p\u003e\n                    \u003cp class=\"text-muted\"\u003eCheck that your phone shows the same verification code.\u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv data-skcomponent=\"skerror\" class=\"text-center sk-alert sk-alert-danger text-danger\"\n                    data-skvisibility=\"\"\u003e\u003c/div\u003e\n\n                \u003cdiv class=\"text-center\"\u003e\n                    \u003cspan\u003e[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMjAwMCIgcG9sbFJldHJpZXM9IjkwIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6MjAwMCwicG9sbFJldHJpZXMiOiI5MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJmYWxzZSJ9LCJjb21wb25lbnRQcm9wcyI6eyJjbGFzcyI6eyJuYW1lIjoiY2xhc3MiLCJkaXNwbGF5TmFtZSI6IkNTUyBDbGFzcyJ9LCJwb2xsSW50ZXJ2YWwiOnsibmFtZSI6InBvbGxJbnRlcnZhbCIsImRpc3BsYXlOYW1lIjoiUG9sbCBJbnRlcnZhbCIsInZhbHVlIjoyMDAwfSwicG9sbFJldHJpZXMiOnsibmFtZSI6InBvbGxSZXRyaWVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIFJldHJpZXMiLCJ2YWx1ZSI6NjB9LCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjp7Im5hbWUiOiJwb2xsQ2hhbGxlbmdlU3RhdHVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIENoYWxsZW5nZSBTdGF0dXMiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwib3B0aW9ucyI6W3sibmFtZSI6IlRydWUiLCJ2YWx1ZSI6InRydWUifSx7Im5hbWUiOiJGYWxzZSIsInZhbHVlIjoiZmFsc2UifV19fX0=]]]\u003c/span\u003e\n                    \u003cp class=\"text-muted mt-2 fs-5\"\u003e\n                        {{pollingMessage}}\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cform id=\"cancelForm\" data-id=\"cancelForm\"\u003e\n                    {{#if buttonLabel}}\n                    \u003cdiv class=\"d-flex flex-column\"\u003e\n                        \u003cbutton type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"cancelFOrm\"\n                    data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\"\u003e\n                    {{buttonLabel}}\n                    \u003c/button\u003e\n                        {{/if}}\n                    \u003c/div\u003e\n                \u003c/form\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
+                "value": "\u003cdiv class=\"end-user-nano\"\u003e\n    \u003cdiv\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\"\u003e\n        \u003cdiv class=\"mh-100\" style=\"max-width: 400px; width: 100%\"\u003e\n            \u003cdiv class=\"card shadow mb-5\"\u003e\n                \u003cdiv class=\"card-body p-5 d-flex flex-column\"\u003e\n                    \u003cimg class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" /\u003e\n                    \u003ch1 id=\"header\" class=\"text-center mb-4\"\u003e{{title}}\u003c/h1\u003e\n                    \u003cp class=\"text-muted text-center\"\u003e\n                        Scan this QR Code with your mobile phone and follow the instructions.\n                    \u003c/p\u003e\n                    \u003cdiv class=\"row p-2 row justify-content-center\"\u003e\n                        \u003cimg alt=\"Verify QR Code\" class=\"w-50 mx-auto my-2 p-4 border border-gray border-2\" src=\"{{qrUrl}}\" /\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\"d-flex flex-row align-items-center my-4\"\u003e\n                        \u003chr class=\"flex-grow-1\" /\u003e\n                        \u003cspan class=\"fs-5 fw-bold px-3\"\u003eOR\u003c/span\u003e\n                        \u003chr class=\"flex-grow-1\" /\u003e\n                    \u003c/div\u003e\n                    \u003ca href=\"{{webVerificationUrl}}\u0026dt=1\" class=\"btn btn-outline-primary\" target=\"_blank\"\u003eVerify with\n                        Your\n                        Browser\u003c/a\u003e\n                    \u003cdiv class=\"text-center mt-5\"\u003e\n                        \u003cp class=\"mb-2 fw-bold\"\u003eVerification Code\u003c/p\u003e\n                        \u003cp class=\"fs-1 mb-3\"\u003e{{webVerificationCode}}\u003c/p\u003e\n                        \u003cp class=\"text-muted\"\u003eCheck that your phone shows the same verification code.\u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv data-skcomponent=\"skerror\" class=\"text-center sk-alert sk-alert-danger text-danger\"\n                        data-skvisibility=\"\"\u003e\u003c/div\u003e\n\n                    \u003cdiv class=\"text-center\"\u003e\n                        \u003cspan\u003e[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMjAwMCIgcG9sbFJldHJpZXM9IjkwIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6MjAwMCwicG9sbFJldHJpZXMiOiI5MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJmYWxzZSJ9LCJjb21wb25lbnRQcm9wcyI6eyJjbGFzcyI6eyJuYW1lIjoiY2xhc3MiLCJkaXNwbGF5TmFtZSI6IkNTUyBDbGFzcyJ9LCJwb2xsSW50ZXJ2YWwiOnsibmFtZSI6InBvbGxJbnRlcnZhbCIsImRpc3BsYXlOYW1lIjoiUG9sbCBJbnRlcnZhbCIsInZhbHVlIjoyMDAwfSwicG9sbFJldHJpZXMiOnsibmFtZSI6InBvbGxSZXRyaWVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIFJldHJpZXMiLCJ2YWx1ZSI6NjB9LCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjp7Im5hbWUiOiJwb2xsQ2hhbGxlbmdlU3RhdHVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIENoYWxsZW5nZSBTdGF0dXMiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwib3B0aW9ucyI6W3sibmFtZSI6IlRydWUiLCJ2YWx1ZSI6InRydWUifSx7Im5hbWUiOiJGYWxzZSIsInZhbHVlIjoiZmFsc2UifV19fX0=]]]\u003c/span\u003e\n                        \u003cp class=\"text-muted mt-2 fs-5\"\u003e\n                            {{pollingMessage}}\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cform id=\"cancelForm\" data-id=\"cancelForm\"\u003e\n                        {{#if buttonLabel}}\n                        \u003cdiv class=\"d-flex flex-column\"\u003e\n                            \u003cbutton type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"cancelFOrm\"\n                    data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\"\u003e\n                    {{buttonLabel}}\n                    \u003c/button\u003e\n                            {{/if}}\n                        \u003c/div\u003e\n                    \u003c/form\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e"
               },
               "customScript": {
                 "value": ""
@@ -3519,5 +3519,5 @@
     "variablesConnector",
     "annotationConnector"
   ],
-  "savedDate": 1707857720106
+  "savedDate": 1709329633656
 }
