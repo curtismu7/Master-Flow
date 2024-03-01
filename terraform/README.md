@@ -12,7 +12,6 @@
 Within the Administrators environment of your PingOne organization, create a new Worker application. Name it as you see fit and optionally upload an icon. Enable your Worker application. Navigate to the Roles tab and select the permissions required to create and manage environments and their configurations, as shown in the below screenshot. \
 <img src="https://github.com/kylemoorehead-pingidentity/Master-Flow/blob/main/terraform/images/pingone-console-application-roles.png?raw=true" width="250">
 
-https://github.com/kylemoorehead-pingidentity/Master-Flow/blob/main/terraform/images/pingone-console-application-roles.png
 ### Install Terraform
 
 [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) from the linked documentation. Recommendation: Use Homebrew for macOS and Chocolatey for Windows.
@@ -21,7 +20,7 @@ https://github.com/kylemoorehead-pingidentity/Master-Flow/blob/main/terraform/im
 
 ```bash
 mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/kylemoorehead-pingidentity/Master-Flow/releases/download/v0.0.2-alpha/release-20240220-103917.zip > master-flow.zip
+curl -L https://github.com/kylemoorehead-pingidentity/Master-Flow/releases/download/v0.0.3-alpha/release-20240220-103917.zip > master-flow.zip
 unzip ./master-flow.zip && rm ./master-flow.zip
 ```
 
@@ -118,4 +117,9 @@ Apply your Terraform configuration, deploying all of the resources specified in 
 ```bash
 terraform apply --auto-approve
 ```
-NOTE: If you get any errors while deploying, run the same command again and it should deploy anything that failed the first time. I am currently working through dependency mappings with this configuration as sometimes things are deployed in the incorrect order.
+NOTE: If you get any errors while deploying, run the same command again and it should deploy anything that failed the first time. If that does not work, run the `destroy` command below and re-run the `apply` command. We are currently working to make it more reliable.
+
+Destroy your environment when you are done with it.
+```bash
+terraform destroy --auto-approve
+```
