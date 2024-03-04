@@ -106,22 +106,6 @@ variable "davinci_variable_availableQuestions_2_value" {
   description = "Value for davinci_variable_availableQuestions_2_value variable"
 }
 
-variable "davinci_variable_cancelReturn_value" {
-  description = "Value for davinci_variable_cancelReturn_value variable"
-}
-
-variable "davinci_variable_disableButton_value" {
-  description = "Value for davinci_variable_disableButton_value variable"
-}
-
-variable "davinci_variable_disableReg_value" {
-  description = "Value for davinci_variable_disableReg_value variable"
-}
-
-variable "davinci_variable_forgotUsername_value" {
-  description = "Value for davinci_variable_forgotUsername_value variable"
-}
-
 variable "davinci_variable_gv-QA-On_value" {
   description = "Value for davinci_variable_gv-QA-On_value variable"
 }
@@ -254,32 +238,12 @@ variable "davinci_variable_gv-webAuthnSupport_value" {
   description = "Value for davinci_variable_gv-webAuthnSupport_value variable"
 }
 
-variable "davinci_variable_maxMessage_value" {
-  description = "Value for davinci_variable_maxMessage_value variable"
-}
-
-variable "davinci_variable_mobile_value" {
-  description = "Value for davinci_variable_mobile_value variable"
-}
-
-variable "davinci_variable_mustAuthN_value" {
-  description = "Value for davinci_variable_mustAuthN_value variable"
-}
-
 variable "davinci_variable_origin_2_value" {
   description = "Value for davinci_variable_origin_2_value variable"
 }
 
 variable "davinci_variable_origin_value" {
   description = "Value for davinci_variable_origin_value variable"
-}
-
-/*variable "davinci_variable_populationId_value" {
-  description = "Value for davinci_variable_populationId_value variable"
-}*/
-
-variable "davinci_variable_regAuthN_value" {
-  description = "Value for davinci_variable_regAuthN_value variable"
 }
 
 variable "davinci_variable_relyingParty_value" {
@@ -296,12 +260,4 @@ variable "davinci_variable_showRegButton_value" {
 
 variable "davinci_variable_stopSign_value" {
   description = "Value for davinci_variable_stopSign_value variable"
-}
-
-variable "davinci_variable_testDeviceID_value" {
-  description = "Value for davinci_variable_testDeviceID_value variable"
-}
-
-variable "davinci_variable_userAuthenticated_value" {
-  description = "Value for davinci_variable_userAuthenticated_value variable"
 }
