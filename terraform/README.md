@@ -19,8 +19,8 @@ Within the Administrators environment of your PingOne organization, create a new
 ### Download and extract the latest release from Github
 
 ```bash
-mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/kylemoorehead-pingidentity/Master-Flow/releases/download/v0.0.3-alpha/release-20240220-103917.zip > master-flow.zip
+touch ~/Terraform/ && mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
+curl -L https://github.com/kylemoorehead-pingidentity/Master-Flow/releases/download/v0.0.3-alpha/release.zip > master-flow.zip
 unzip ./master-flow.zip && rm ./master-flow.zip
 ```
 
