@@ -2021,21 +2021,6 @@ resource "davinci_variable" "canChangeDevice" {
   ]
 }
 
-resource "davinci_variable" "cancelReturn" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "cancelReturn"
-  type           = "boolean"
-  value          = "${var.davinci_variable_cancelReturn_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
 resource "davinci_variable" "companyName" {
   context        = "flowInstance"
   environment_id = pingone_environment.master_flow_environment.id
@@ -2058,51 +2043,6 @@ resource "davinci_variable" "deviceCount" {
   mutable        = "true"
   name           = "deviceCount"
   type           = "number"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "disableButton" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "disableButton"
-  type           = "boolean"
-  value          = "${var.davinci_variable_disableButton_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "disableReg" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "disableReg"
-  type           = "boolean"
-  value          = "${var.davinci_variable_disableReg_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "forgotUsername" {
-  context        = "company"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "false"
-  name           = "forgotUsername"
-  type           = "boolean"
-  value          = "${var.davinci_variable_forgotUsername_value}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -2340,7 +2280,7 @@ resource "davinci_variable" "gv-googleExternalIdpId" {
   min            = "0"
   mutable        = "true"
   name           = "gv-googleExternalIdpId"
-  type           = "boolean"
+  type           = "string"
   value          = var.davinci_variable_gv-googleLogin_value == "true" ? "${pingone_identity_provider.google[0].id}" : "N/A"
 
   depends_on = [
@@ -2396,6 +2336,7 @@ resource "davinci_variable" "gv-p1AgreementId" {
   ]
 }
 
+#data.pingone_password_policy.standard_password_policy
 resource "davinci_variable" "gv-p1PasswordPolicy" {
   context        = "company"
   description    = "Password Policy, pulled from PingOne"
@@ -2405,7 +2346,27 @@ resource "davinci_variable" "gv-p1PasswordPolicy" {
   mutable        = "true"
   name           = "gv-p1PasswordPolicy"
   type           = "object"
-  value          = jsonencode(data.pingone_password_policy.standard_password_policy)
+  value          = replace(replace(replace(jsonencode({
+                      "id": data.pingone_password_policy.standard_password_policy.id,
+                      "environment": { "id": data.pingone_password_policy.standard_password_policy.environment_id },
+                      "name": data.pingone_password_policy.standard_password_policy.name,
+                      "description": data.pingone_password_policy.standard_password_policy.description,
+                      "excludesProfileData": data.pingone_password_policy.standard_password_policy.exclude_profile_data,
+                      "notSimilarToCurrent": data.pingone_password_policy.standard_password_policy.not_similar_to_current,
+                      "excludesCommonlyUsed": data.pingone_password_policy.standard_password_policy.exclude_commonly_used_passwords,
+                      "maxAgeDays": 22,
+                      "history": { "count": data.pingone_password_policy.standard_password_policy.password_history[0].prior_password_count, "retentionDays": data.pingone_password_policy.standard_password_policy.password_history[0].retention_days },
+                      "lockout": { "failureCount": data.pingone_password_policy.standard_password_policy.account_lockout[0].fail_count, "durationSeconds": data.pingone_password_policy.standard_password_policy.account_lockout[0].duration_seconds },
+                      "length": { "min": data.pingone_password_policy.standard_password_policy.password_length[0].min, "max": data.pingone_password_policy.standard_password_policy.password_length[0].max },
+                      "minCharacters": {
+                        "~!@#$%^&*()-_=+[]{}|;:,.<>/?": data.pingone_password_policy.standard_password_policy.min_characters[0].special_characters,
+                        "0123456789": data.pingone_password_policy.standard_password_policy.min_characters[0].numeric,
+                        "ABCDEFGHIJKLMNOPQRSTUVWXYZ": data.pingone_password_policy.standard_password_policy.min_characters[0].alphabetical_uppercase,
+                        "abcdefghijklmnopqrstuvwxyz": data.pingone_password_policy.standard_password_policy.min_characters[0].alphabetical_lowercase
+                      },
+                      "populationCount": data.pingone_password_policy.standard_password_policy.population_count,
+                      "default": true
+                    }), "\\u0026", "&"), "\\u003c", "<"), "\\u003e", ">")
 
   depends_on = [
     data.davinci_connections.read_all
@@ -2603,51 +2564,6 @@ resource "davinci_variable" "gv-webAuthnSupport" {
   ]
 }
 
-resource "davinci_variable" "maxMessage" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "maxMessage"
-  type           = "string"
-  value          = "${var.davinci_variable_maxMessage_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "mobile" {
-  context        = "company"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "mobile"
-  type           = "boolean"
-  value          = "${var.davinci_variable_mobile_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "mustAuthN" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "mustAuthN"
-  type           = "boolean"
-  value          = "${var.davinci_variable_mustAuthN_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
 resource "davinci_variable" "origin" {
   context        = "company"
   environment_id = pingone_environment.master_flow_environment.id
@@ -2807,21 +2723,6 @@ resource "davinci_variable" "publicKeyCredentialRequestOptions" {
   ]
 }
 
-resource "davinci_variable" "regAuthN" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "regAuthN"
-  type           = "boolean"
-  value          = "${var.davinci_variable_regAuthN_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
 resource "davinci_variable" "relyingParty" {
   context        = "company"
   environment_id = pingone_environment.master_flow_environment.id
@@ -2947,50 +2848,6 @@ resource "davinci_variable" "stopSign" {
   name           = "stopSign"
   type           = "string"
   value          = "${var.davinci_variable_stopSign_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "testDeviceID" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "testDeviceID"
-  type           = "string"
-  value          = "${var.davinci_variable_testDeviceID_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "userAuthenticated" {
-  context        = "company"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "userAuthenticated"
-  type           = "string"
-  value          = "${var.davinci_variable_userAuthenticated_value}"
-
-  depends_on = [
-    data.davinci_connections.read_all
-  ]
-}
-
-resource "davinci_variable" "userAuthenticated_2" {
-  context        = "flowInstance"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "userAuthenticated"
-  type           = "string"
 
   depends_on = [
     data.davinci_connections.read_all
