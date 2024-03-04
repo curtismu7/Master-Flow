@@ -35,3 +35,7 @@ jobs:
         filename: 'tf-release.zip'
         exclusions: '*.git* *.DS_* /images/* TODO.md .editorconfig'
         directory: 'terraform'
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: /terraform/tf-release.zip
