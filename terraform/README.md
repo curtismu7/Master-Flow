@@ -123,3 +123,7 @@ Destroy your environment when you are done with it.
 ```bash
 terraform destroy --auto-approve
 ```
+
+## Getting Updates
+
+TODO: Include documentation about how to get updates from Github & discussion on clobbering any changes they have made.
