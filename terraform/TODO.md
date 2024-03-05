@@ -17,5 +17,6 @@ Initial pass at documentation
 - Enumerate values for parameters where it makes sense to do so
 
 
-Mar 5
-Migrate Notification templates from `main.tf` to data folder to match flow JSON
+Mar 5 \
+- Migrate Notification templates from `main.tf` to data folder to match flow JSON
+- Merge fork into Curtis' repo
