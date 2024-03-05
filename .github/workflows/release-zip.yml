@@ -30,6 +30,5 @@ jobs:
           RELEASE_TITLE="${{ github.event.inputs.version }}"
           gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R kylemoorehead-pingidentity/Master-Flow
           gh release upload $RELEASE ./terraform/tf-release.zip -R kylemoorehead-pingidentity/Master-Flow
-      
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
