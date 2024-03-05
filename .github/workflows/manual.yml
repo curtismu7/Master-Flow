@@ -27,13 +27,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
+      - name: Archive Release
+        uses: thedoctor0/zip-release@0.7.5
+        with:
+          type: 'zip'
+          filename: 'tf-release.zip'
+          exclusions: '*.git* *.DS_* /images/* TODO.md .editorconfig'
+          directory: 'terraform'
       - run: |
           RELEASE="${{ github.event.inputs.version }}"
           RELEASE_TITLE="${{ github.event.inputs.version }}"
-          cd ./terraform
-          zip -r ./releases/tf-release.zip ./data ./main.tf ./README.md ./terraform.tfvars ./variables.tf
           gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R kylemoorehead-pingidentity/Master-Flow
-          gh release upload $RELEASE ./releases/tf-release.zip -R kylemoorehead-pingidentity/Master-Flow
+          gh release upload $RELEASE ./tf-release.zip -R kylemoorehead-pingidentity/Master-Flow
       
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
