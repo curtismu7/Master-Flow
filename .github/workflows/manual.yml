@@ -30,6 +30,7 @@ jobs:
       - run: |
           RELEASE="${{ github.event.inputs.version }}"
           RELEASE_TITLE="${{ github.event.inputs.version }}"
+          cd ./terraform
           zip -r ./releases/tf-release.zip ./data ./main.tf ./README.md ./terraform.tfvars ./variables.tf
           gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R kylemoorehead-pingidentity/Master-Flow
           gh release upload $RELEASE ./releases/tf-release.zip -R kylemoorehead-pingidentity/Master-Flow
