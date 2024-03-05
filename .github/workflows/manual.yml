@@ -36,6 +36,7 @@ jobs:
           exclusions: '*.git* *.DS_* /images/* TODO.md .editorconfig'
           directory: 'terraform'
       - run: |
+          ls
           RELEASE="${{ github.event.inputs.version }}"
           RELEASE_TITLE="${{ github.event.inputs.version }}"
           gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R kylemoorehead-pingidentity/Master-Flow
