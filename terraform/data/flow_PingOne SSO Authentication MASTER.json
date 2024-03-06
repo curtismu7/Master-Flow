@@ -5,9 +5,9 @@
   "publishedVersion": 1,
   "name": "PingOne SSO Authentication MASTER",
   "description": "Master PingOne Authentication Starting flow",
-  "createdDate": 1709329666777,
-  "updatedDate": 1709329667115,
-  "deployedDate": 1709329667101,
+  "createdDate": 1709741871716,
+  "updatedDate": 1709741872128,
+  "deployedDate": 1709741872128,
   "enabledGraphData": {
     "boxSelectionEnabled": true,
     "data": {},
@@ -3536,7 +3536,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Forgot Password subflow",
-                  "value": "7d337433c2f56bae4ae9238bcc77b182"
+                  "value": "1818bf12500dc888d018396a14898b25"
                 }
               },
               "subFlowVersionId": {
@@ -3582,7 +3582,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO User Registration subflow",
-                  "value": "943ce760159efdff7c69625c47e82df8"
+                  "value": "ee80547f1aa66a774c23ae57d9a01385"
                 }
               },
               "subFlowVersionId": {
@@ -4207,7 +4207,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Forgot Username subflow",
-                  "value": "ebebb28cf6cf9370607f79123bcfc8b5"
+                  "value": "9940ade3edfbca10528a086d4a3c007f"
                 }
               },
               "subFlowVersionId": {
@@ -4386,7 +4386,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
-                "value": "PingOne Protect Create Risk evaluation subflow"
+                "value": "PingOne Protect subflow"
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -4403,7 +4403,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Protect subflow",
-                  "value": "20ed625295bdce54ea0c8868bc13ae57"
+                  "value": "fd7d28232e08673bf57b07c65ed4809c"
                 }
               },
               "subFlowVersionId": {
@@ -4712,7 +4712,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
-                  "value": "ea3999780e114e92d6e99c9e26b16f85"
+                  "value": "ad47e355867b82155a8a501916b2c638"
                 }
               },
               "subFlowVersionId": {
@@ -4807,7 +4807,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Password Expiration subflow",
-                  "value": "d168c0dfd904a510bde03bfa5272e900"
+                  "value": "8c9e3be24721e1b6ebaa55e6d6805862"
                 }
               },
               "subFlowVersionId": {
@@ -5430,7 +5430,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Social External IdP authentication subflow",
-                  "value": "e23eee0867018922c4e7d5f3b623bb4d"
+                  "value": "14e76160c87ea3ec14ff31abd99f6d70"
                 }
               },
               "subFlowVersionId": {
@@ -5732,7 +5732,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Change Password subflow",
-                  "value": "98b8d4124de932d5e8b525276e7ad924"
+                  "value": "420aedc7aa0bc9114e01b2b048f84bf3"
                 }
               },
               "subFlowVersionId": {
@@ -5963,7 +5963,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Change Password subflow",
-                  "value": "98b8d4124de932d5e8b525276e7ad924"
+                  "value": "420aedc7aa0bc9114e01b2b048f84bf3"
                 }
               },
               "subFlowVersionId": {
@@ -6246,7 +6246,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"EXISTING\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
-                "value": "PingOne SSO Account Verification"
+                "value": "PingOne SSO Account Verification subflow"
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.a0u100wzvz.payload.output.matchedUser.id}}\",\n        \"tooltip\": \"{{local.a0u100wzvz.payload.output.matchedUser.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -6254,7 +6254,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Account Verification subflow",
-                  "value": "637c75ecfae2708db8d7fff4c29557d9"
+                  "value": "1b7e525a95540f6f67329976f84b2a50"
                 }
               },
               "subFlowVersionId": {
@@ -7150,7 +7150,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Progressive Profiling subflow",
-                  "value": "1e3e670d6b426d8401f2b2b6a5615296"
+                  "value": "e5297fbd18aa768b4b9393f1ceca6d2d"
                 }
               },
               "subFlowVersionId": {
@@ -7568,7 +7568,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO User Registration subflow",
-                  "value": "943ce760159efdff7c69625c47e82df8"
+                  "value": "ee80547f1aa66a774c23ae57d9a01385"
                 }
               },
               "subFlowVersionId": {
@@ -8131,7 +8131,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Forgot Username subflow",
-                  "value": "ebebb28cf6cf9370607f79123bcfc8b5"
+                  "value": "9940ade3edfbca10528a086d4a3c007f"
                 }
               },
               "subFlowVersionId": {
@@ -8340,7 +8340,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Social External IdP authentication subflow",
-                  "value": "e23eee0867018922c4e7d5f3b623bb4d"
+                  "value": "14e76160c87ea3ec14ff31abd99f6d70"
                 }
               },
               "subFlowVersionId": {
@@ -10918,7 +10918,7 @@
   },
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "css": ".companyLogo {\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}\n\n  .stopSign {\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/Stop_sign.png?v=1703159103390\");\n    width: 165px;\n    height: 165px;\n}\n\n\n ",
+    "css": ".companyLogo {\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}\n\n  .stopSign {\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/Stop_sign.png?v=1703159103390\");\n    width: 165px;\n    height: 165px;\n}\n\n\n  :root {\n    /********************************************************\n    * COMPANY LOGO\n    *********************************************************/\n    --company-logo-img-url: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/UniversityofPennsylvania_FullLogo_RGB-4_0.png?v=1709310707174\");\n    --company-logo-max-height: 65px;\n\n    /********************************************************\n    * PAGE BACKGROUND \n    *********************************************************/\n    --background-image-url: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/UPenn-campus-1.webp?v=1709310028694\");\n\n    /********************************************************\n    * CARD BODY\n    *********************************************************/\n    --card-background-color: rgb(255, 255, 255);\n    --card-shadow-color: rgba(0, 25, 91, .35);\n\n    /********************************************************\n    * BODY\n    *********************************************************/\n    --body-font-family: Helvetica;\n    --body-font-size: 0.935rem;\n\n    /********************************************************\n    * TEXT FONT COLORS\n    *********************************************************/\n\n    /*  PRIMARY FONT COLOR (RGB) */\n    --text-color-primary: 62, 69, 77;\n\n    /* HEADING FONT COLR (RBG) */\n    --heading-text-color: 62, 69, 77;\n    \n    /*  MUTED TEXT ALPHA  */\n    --text-color-muted-apha: 0.75;\n\n    /*  ERROR FONT COLOR  */\n    --text-color-error: rgb(155, 0, 0);\n\n    /********************************************************\n    * BUTTON ATTRIBUTES\n    *********************************************************/\n\n    /*  BUTTON FONT COLOR  */\n    --button-primary-text-color: rgb(255, 255, 255);\n\n    /*  BUTTON BACKGROUND COLOR (RGB)  */\n    --button-primary-background-color: 0, 25, 91;\n    \n    /* LINK BUTTON FONT COLOR (RGB)  */\n    --link-button-primary-color: 0, 25, 91;\n\n    /* BUTTON BORDER RADIUS */\n    --button-primary-border-radius: 0px;\n\n    /*  BUTTON HOVER ALPHA  */\n    --button-hover-alpha: 0.70;\n\n    /*  BUTTON ACTIVE ALPHA  */\n    --button-active-alpha: 0.80;\n\n    /*  BUTTON DISABLED ALPHA  */\n    --button-disabled-alpha: 0.65;\n\n    /********************************************************\n     * FORM CONTROLS\n     *********************************************************/\n    --form-control-border-radius: 0px;\n    --card-body-border-radius: 2px;\n    --focus-highlight-color: 0, 25, 91;\n\n    /********************************************************\n    * ACTIVITY INDICATOR \u0026 BUTTON SPINNER COLOR\n    *********************************************************/\n\n    --activity-indicator-color: rgb(0, 25, 91);\n\n    --polling-indicator-color: rgb(0, 25, 91);\n\n    /********************************************************\n    * APPLYING TEXT COLOR - DO NOT CHANGE\n    *********************************************************/\n    /* H1,H2, H3, Body text color */\n    --bs-body-color: rgb(var(--text-color-main)) !important;\n    --bs-danger-rgb: var(--text-color-error);\n  }\n\n  .bg-light\u003ediv{left: 270px;position:fixed;}\n  \n/********************************************************\n* CLASSES BELOW ARE DERIVED FROM VALUES ABOVE\n* DO NOT CHANGE UNLESS YOU HAVE CSS 'SKILLZ' :)\n*********************************************************/\n\n/*  COMPANY LOGO  */\n.card-body.p-5.d-flex.flex-column \u003e img:first-child,\n.companyLogo {\n  content: var(--company-logo-img-url) !important;\n  height: var(--company-logo-max-height) !important;\n  width: auto !important;\n}\n\n/*  BACKGROUND IMAGE  */\ndiv.bg-light {\n  background-image:       var(--background-image-url);\n  background-size:        cover;\n  background-repeat:      no-repeat;\n}\n\n/*  HEADING TEXT  */\nh1, h2, h3, h4 {\n  color: rgb(var(--heading-text-color)) !important;\n}\n\n/*  BODY FONT \u0026 COLOR  */\n.card-body {\n  /*  font family */\n  font-family: var(--body-font-family) !important;\n  /*  font size */\n  font-size: var(--body-font-size) !important;\n  /*  font color */\n  color: rgb(var(--text-color-primary)) !important;\n  /*  background color */\n  background-color: var(--card-background-color) !important;\n}\n\n/*  MUTED PARAGRAPH  */\np.text-muted {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  ERROR MESSAGE PARAGRAPH  */\n.card .text-danger {\n  color: var(--text-color-error) !important;\n}\n\n/*  FORM CONTROL FONT COLOR  */\n.form-control,\n.form-control:focus {\n  color: var(--text-color-primary) !important;\n  border-radius: var(--form-control-border-radius) !important;\n}\n\n/*  FORM CONTROL PLACEHOLDER FONT COLOR  */\n.form-floating input+label {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  FORM CONTROL HIGHLIGHT  */\n.form-control:focus {\n  border-color: rgba(var(--focus-highlight-color), .5) !important;\n  box-shadow: 0 0 0 0.25rem rgba(var(--focus-highlight-color), 0.25) !important;\n}\n\n/*  PRIMARY BUTTON  */\n.btn-primary {\n  /*  font color  */\n  --bs-btn-color: var(--button-primary-text-color) !important;\n  /*  font color when hovering  */\n  --bs-btn-hover-color: var(--button-primary-text-color) !important;\n  /*  border color  */\n  --bs-btn-border-color: var(--button-primary-background-color) !important;\n  /*  background color  */\n  --bs-btn-bg: rgb(var(--button-primary-background-color)) !important;\n  /*  background color when hovering  */\n  --bs-btn-hover-bg: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  /*  background color when active  */\n  --bs-btn-active-bg: rgba(var(--button-primary-background-color), var(--button-active-alpha)) !important;\n  /*  background color when disabled  */\n  --bs-btn-disabled-bg: rgba(var(--button-primary-background-color), var(--button-disabled-alpha)) !important;\n  background-color: rgb(var(--button-primary-background-color)) !important;\n  border-color: rgb(var(--button-primary-background-color)) !important;\n  color: var(--button-primary-text-color) !important;\n  border-radius: var(--button-primary-border-radius);\n}\n\n\n.btn-primary:hover {\n  background-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  border-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  color: var(--button-primary-text-color) !important;\n}\n\n/*  LINK BUTTON  */\n.btn-link {\n  /*  button font color  */\n  --bs-btn-color: rgb(var(--link-button-primary-color)) !important;\n  /*  button font color when active  */\n  --bs-btn-active-color: rgba(var(--link-button-primary-color), var(--button-active-alpha)) !important;\n  /*  button font color when hovering  */\n  --bs-btn-hover-color: rgba(var(--link-button-primary-color), var(--button-hover-alpha)) !important;\n  /*  button font color when disabled  */\n  --bs-btn-disabled-color: rgba(var(--link-button-primary-color), var(--button-disabled-alpha)) !important;\n  color: rgb(var(--link-button-primary-color)) !important;\n}\n\n/*  POLLING INDICATORS  */\n.css-11k6vsm,\n.css-17zi2ag,\n.css-139roxj {\n  /* width: 20px; */\n  /* height: 20px; */\n  /* animation-duration: 0.75s; */\n  /*  circle background color  */\n  background-color: var(--polling-indicator-color) !important;\n}\n\n/*  BUTTON ACTIVITY INDICATOR  */\n.css-sw2ho0 {\n  /*  spinning circle color  */\n  --primary-color: var(--activity-indicator-color) !important;\n}\n\n.card-body.p-5.d-flex.flex-column {\n  border-radius: var(--card-body-border-radius);\n}\n\n.card.shadow.mb-5 {\n  border-radius: var(--card-body-border-radius);\n  box-shadow: 1px 1px 3px 1px var(--card-shadow-color) !important;\n}\n\n\n ",
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
       "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css",
@@ -10950,8 +10950,8 @@
   "trigger": {
     "type": "AUTHENTICATION"
   },
-  "flowId": "c8876c2e38897d487c2deffebe9e4410",
-  "companyId": "586df9f8-f4f8-4ac0-97ab-50fcea486b1c",
+  "flowId": "4019428f94ba435ac7d2428d5f65eb62",
+  "companyId": "adcbefe1-9c41-49e2-a437-e6c541a4a80e",
   "graphData": {
     "elements": {
       "nodes": [
@@ -11105,7 +11105,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Forgot Password subflow",
-                  "value": "7d337433c2f56bae4ae9238bcc77b182"
+                  "value": "1818bf12500dc888d018396a14898b25"
                 }
               },
               "subFlowVersionId": {
@@ -11150,7 +11150,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO User Registration subflow",
-                  "value": "943ce760159efdff7c69625c47e82df8"
+                  "value": "ee80547f1aa66a774c23ae57d9a01385"
                 }
               },
               "subFlowVersionId": {
@@ -11767,7 +11767,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Forgot Username subflow",
-                  "value": "ebebb28cf6cf9370607f79123bcfc8b5"
+                  "value": "9940ade3edfbca10528a086d4a3c007f"
                 }
               },
               "subFlowVersionId": {
@@ -11945,7 +11945,7 @@
             "type": "trigger",
             "properties": {
               "nodeTitle": {
-                "value": "PingOne Protect Create Risk evaluation subflow"
+                "value": "PingOne Protect subflow"
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -11962,7 +11962,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Protect subflow",
-                  "value": "20ed625295bdce54ea0c8868bc13ae57"
+                  "value": "fd7d28232e08673bf57b07c65ed4809c"
                 }
               },
               "subFlowVersionId": {
@@ -12268,7 +12268,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
-                  "value": "ea3999780e114e92d6e99c9e26b16f85"
+                  "value": "ad47e355867b82155a8a501916b2c638"
                 }
               },
               "subFlowVersionId": {
@@ -12362,7 +12362,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Password Expiration subflow",
-                  "value": "d168c0dfd904a510bde03bfa5272e900"
+                  "value": "8c9e3be24721e1b6ebaa55e6d6805862"
                 }
               },
               "subFlowVersionId": {
@@ -12980,7 +12980,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Social External IdP authentication subflow",
-                  "value": "e23eee0867018922c4e7d5f3b623bb4d"
+                  "value": "14e76160c87ea3ec14ff31abd99f6d70"
                 }
               },
               "subFlowVersionId": {
@@ -13286,7 +13286,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Change Password subflow",
-                  "value": "98b8d4124de932d5e8b525276e7ad924"
+                  "value": "420aedc7aa0bc9114e01b2b048f84bf3"
                 }
               },
               "subFlowVersionId": {
@@ -13518,7 +13518,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Change Password subflow",
-                  "value": "98b8d4124de932d5e8b525276e7ad924"
+                  "value": "420aedc7aa0bc9114e01b2b048f84bf3"
                 }
               },
               "subFlowVersionId": {
@@ -13800,7 +13800,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"EXISTING\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
-                "value": "PingOne SSO Account Verification"
+                "value": "PingOne SSO Account Verification subflow"
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.a0u100wzvz.payload.output.matchedUser.id}}\",\n        \"tooltip\": \"{{local.a0u100wzvz.payload.output.matchedUser.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -13808,7 +13808,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Account Verification subflow",
-                  "value": "637c75ecfae2708db8d7fff4c29557d9"
+                  "value": "1b7e525a95540f6f67329976f84b2a50"
                 }
               },
               "subFlowVersionId": {
@@ -14701,7 +14701,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Progressive Profiling subflow",
-                  "value": "1e3e670d6b426d8401f2b2b6a5615296"
+                  "value": "e5297fbd18aa768b4b9393f1ceca6d2d"
                 }
               },
               "subFlowVersionId": {
@@ -15113,7 +15113,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO User Registration subflow",
-                  "value": "943ce760159efdff7c69625c47e82df8"
+                  "value": "ee80547f1aa66a774c23ae57d9a01385"
                 }
               },
               "subFlowVersionId": {
@@ -15672,7 +15672,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Forgot Username subflow",
-                  "value": "ebebb28cf6cf9370607f79123bcfc8b5"
+                  "value": "9940ade3edfbca10528a086d4a3c007f"
                 }
               },
               "subFlowVersionId": {
@@ -15879,7 +15879,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Social External IdP authentication subflow",
-                  "value": "e23eee0867018922c4e7d5f3b623bb4d"
+                  "value": "14e76160c87ea3ec14ff31abd99f6d70"
                 }
               },
               "subFlowVersionId": {
@@ -21395,5 +21395,5 @@
     "httpConnector",
     "pingOneAuthenticationConnector"
   ],
-  "savedDate": 1709329663625
+  "savedDate": 1709741866224
 }
