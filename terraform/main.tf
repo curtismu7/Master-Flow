@@ -480,6 +480,29 @@ resource "pingone_notification_template_content" "general_otp" {
   }
 }
 
+resource "pingone_notification_template_content" "pairing_otp" {
+  environment_id = pingone_environment.master_flow_environment.id
+  template_name  = "device_pairing"
+  locale         = "en"
+
+  email {
+    body          = "${file("${path.module}/data/notification_templates/Pairing OTP.html")}"
+    subject       = "Device Pairing OTP"
+    content_type  = "text/html"
+    character_set = "UTF-8"
+
+    from {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+    
+    reply_to {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+  }
+}
+
 resource "pingone_notification_template_content" "strong_authentication" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "strong_authentication"
@@ -1795,7 +1818,7 @@ resource "davinci_flow" "PingOne-Security-Question-and-Answer-Validation-subflow
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Security Question and Answer Validation subflow.json")}
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Security Question and Answer Validation subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1871,6 +1894,7 @@ resource "davinci_flow" "PingOne-Sign-On-with-Registration-Password-Reset-and-Re
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
   flow_json      = "${file("${path.module}/data/flows/flow_PingOne Sign On with Registration, Password Reset and Recovery.json")}"
+
   depends_on = [
     data.davinci_connections.read_all
   ]
