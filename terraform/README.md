@@ -20,7 +20,7 @@ Within the Administrators environment of your PingOne organization, create a new
 
 ```bash
 touch ~/Terraform/ && mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/kylemoorehead-pingidentity/Master-Flow/releases/download/v0.0.4-alpha/tf-release.zip > tf-release.zip
+curl -L https://github.com/kylemoorehead-pingidentity/Master-Flow/releases/download/0.1.1/tf-release.zip > tf-release.zip
 unzip ./tf-release.zip && rm ./tf-release.zip
 ```
 
