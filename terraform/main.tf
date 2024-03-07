@@ -342,10 +342,10 @@ resource "pingone_notification_template_content" "device_pairing" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "device_pairing"
   locale         = "en"
-  variant        = "Device Pairing OTP - Master Flow"
+  variant        = "OTP"
 
   email {
-    body          = "<!-- Device Pairing OTP 1 --><body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\" style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                    <div style=\"text-align: center;\">                      <div style=\"padding-bottom: 20px;\"><img                          src=\"$${companyLogo}\" alt=\"\"                          style=\"width: 92px;\"></div>                    </div>                    <div style=\"color: rgb(0, 0, 0); text-align: center;\">                      <h1 style=\"margin: 1rem 0\">Verification code</h1>                     <h2 style=\"padding-bottom: 16px;text-transform:capitalize\">Username $${user.username}</h2>                      <p style=\"padding-bottom: 16px\">Please use the verification code below to verify your account.</p>                     <strong> <p style=\"padding-bottom: 16px;  font-size: 130%\">$${otp}</strong></p>                      <p style=\"padding-bottom: 16px\">If you didn’t request this, you can ignore this email.</p>                      <p style=\"padding-bottom: 16px\">Thank you,<br>The Ping team</p>                    </div>                    <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                      <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                    </div>                  </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body></html>"
+    body          = "${file("${path.module}/data/notification_templates/devicePairing OTP.html")}"
     subject       = "Device Pairing OTP"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -366,10 +366,9 @@ resource "pingone_notification_template_content" "email_verification_user" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "email_verification_user"
   locale         = "en"
-  variant        = "Email Verification User - Master Flow"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\"            style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                    <div style=\"text-align: center;\">                      <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\" alt=\"\" style=\"width: 92px;\"></div>                    </div>                    <div style=\"color: rgb(0, 0, 0); text-align: center;\">                      <h1 style=\"margin: 1rem 0\">Hello $${user.name.given}</h1>                      <h1 style=\"margin: 1rem 0\">Verification code</h1>                      <p style=\"padding-bottom: 16px\">Please use the verification code below to verify your account.</p>                      <p style=\"padding-bottom: 16px\"><strong style=\"font-size: 130%\">OTP code: $${code}</strong></p>                      <p style=\"padding-bottom: 16px\">if you didn’t request this, you can ignore this email.</p>                      <p style=\"padding-bottom: 16px\">thanks,<br>                        the ping team</p>                    </div>                  </div>                  <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                    <p style=\"padding-bottom: 16px\">Copyright ping identity 2024</p>                  </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body></html>"
+    body          = "${file("${path.module}/data/notification_templates/Email Address Verification (User) - OTP.html")}"
     subject       = "Email Verification (User)"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -390,10 +389,10 @@ resource "pingone_notification_template_content" "magic_link" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "general"
   locale         = "en"
-  variant        = "Magic Link - Master Flow"
+  variant        = "MagicLink"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">    <table role=\"presentation\"        style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">        <tbody>            <tr>                <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">                    <table role=\"presentation\"                        style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">                        <tbody>                            <tr>                                <td style=\"padding: 40px 0px 0px;\">                                    <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                                        <div style=\"text-align: center;\">                                            <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\"                                                    alt=\"Ping Identity\" style=\"width: 92px;\"></div>                                        </div>                                        <div style=\"color: rgb(0, 0, 0); text-align: center;\">                                            <strong>                                                <h1 style=\"padding-bottom: 16px\">Magic link confirmation email</h1>                                            </strong>                                            <h2 style=\"margin: 1rem 0\">Hello $${firstName}</h2>                                            <p style=\"padding-bottom: 16px\">                                            <p style=\"padding-bottom: 16px\">Please click the link below to validate your                                                account:</p>                                            <!-- <p style=\"padding-bottom: 16px\"> $${magicLink}</p> -->                                            <p href=\"$${magicLink}\">Please click Magic Link here</p>                                            <p style=\"padding-bottom: 16px\">If you didn’t request this, you can ignore                                                this email.</p>                                            <p style=\"padding-bottom: 16px\">Thank You,<br>The Ping team</p>                                        </div>                                        <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                                            <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                                        </div>                                    </div>                                </td>                            </tr>                        </tbody>                    </table>                </td>            </tr>        </tbody>    </table></body>"
+    body          = "${file("${path.module}/data/notification_templates/magiclink.html")}"
     subject       = "Magic Link"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -414,10 +413,9 @@ resource "pingone_notification_template_content" "new_device_paired" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "new_device_paired"
   locale         = "en"
-  variant        = "New Device Paired - Master Flow"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\"            style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                    <div style=\"text-align: center;\">                      <!-- <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\" alt=\"\"                          style=\"width: 92px;\"></div>                    </div> -->                    <div style=\"color: rgb(0, 0, 0); text-align: center;\">                      <h1 style=\"margin: 1rem 0\">Device Type - $${device.type}</h1>                      <p style=\"padding-bottom: 16px\">The following device was successfully added to your account and                        can be used to authenticate.</p>                      <h2 style=\"padding-bottom: 16px\">Device Name: $${device.name}</h2>                      <p style=\"padding-bottom: 16px\">If you didn’t request this, you can ignore this email.</p>                      <p style=\"padding-bottom: 16px\">Thank you,<br>                        The Ping team</p>                    </div>                    <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                      <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                    </div>                  </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body>"
+    body          = "${file("${path.module}/data/notification_templates/newDevicePaired.html")}"
     subject       = "New Device Paired"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -438,10 +436,10 @@ resource "pingone_notification_template_content" "forgot_username" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "general"
   locale         = "en"
-  variant        = "Forgot Username - Master Flow"
+  variant        = "Forgot Username"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">    <table role=\"presentation\"        style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">        <tbody>            <tr>                <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">                    <table role=\"presentation\"                        style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">                        <tbody>                            <tr>                                <td style=\"padding: 40px 0px 0px;\">                                    <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                                        <div style=\"text-align: center;\">                                            <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\"                                                    alt=\"ping identity\" style=\"width: 92px;\"></div>                                        </div>                                        <div style=\"color: rgb(0, 0, 0); text-align: center;\">                                            <h1 style=\"margin: 1rem 0\">Hello $${firstName} $${lastName}</h1>                                            <p style=\"padding-bottom: 16px\"></p>                                            <p style=\"padding-bottom: 16px\"><strong style=\"font-size: 130%\">Your                                                    username is $${username}</strong></p>                                            <p style=\"padding-bottom: 16px\">if you didn’t request this, you can ignore                                                this email.</p>                                            <p style=\"padding-bottom: 16px\">Thank you,<br>                                                The Ping team</p>                                        </div>                                        <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                                            <p style=\"padding-bottom: 16px\">Copyright ping identity 2024</p>                                        </div>                                    </div>                                </td>                            </tr>                        </tbody>                    </table>                </td>            </tr>        </tbody>    </table></body></html>"
+    body          = "${file("${path.module}/data/notification_templates/forgotusername.html")}"
     subject       = "Forgot Username"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -462,10 +460,10 @@ resource "pingone_notification_template_content" "general_otp" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "general"
   locale         = "en"
-  variant        = "General OTP - Master Flow"
+  variant        = "OTP"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\"            style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"text-align: center;\">                    <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                      <div style=\"padding-bottom: 20px;\"><img src=\"{compnayLogo}\" alt=\"Ping Identity\"                          style=\"width: 92px;\"></div>                      <div style=\"color: rgb(0, 0, 0); text-align: center;\">                        <h1 style=\"margin: 1rem 0\">Verification code</h1>                        <h2 style=\"padding-bottom: 16px;text-transform:capitalize\"> $${user.username}</h2>                        <p style=\"padding-bottom: 16px\">Please use the verification code below to verify your account.                        </p>                        <strong>                          <p style=\"padding-bottom: 16px;  font-size: 130%\">$${otp}                        </strong></p>                        <p style=\"padding-bottom: 16px\">If you didn’t request this, you can ignore this email.</p>                        <p style=\"padding-bottom: 16px\">Thank you,<br>The Ping team</p>                      </div>                      <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                        <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                      </div>                    </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body>"
+    body          = "${file("${path.module}/data/notification_templates/general-otp.html")}"
     subject       = "General OTP"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -486,10 +484,10 @@ resource "pingone_notification_template_content" "pairing_otp" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "device_pairing"
   locale         = "en"
-  variant        = "Pairing OTP - Master Flow"
+  variant        = "OTP"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\"            style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"text-align: center;\">                    <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                      <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\" alt=\"Ping Identity\"                          style=\"width: 92px;\"></div>                    </div>                    <div style=\"color: rgb(0, 0, 0); text-align: center;\">                      <h1 style=\"margin: 1rem 0\">Verification code</h1>                      <h2 style=\"padding-bottom: 16px;text-transform:capitalize\"> Username $${user.username}</h2>                      <p style=\"padding-bottom: 16px\">Please use the verification code below to verify your account.</p>                      <strong>                        <p style=\"padding-bottom: 16px;  font-size: 130%\">$${otp}                      </strong></p>                      <p style=\"padding-bottom: 16px\">If you didn’t request this, you can ignore this email.</p>                      <p style=\"padding-bottom: 16px\">Thank you,<br>The Ping team</p>                    </div>                    <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                      <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                    </div>                  </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body></html>"
+    body          = "${file("${path.module}/data/notification_templates/Pairing OTP.html")}"
     subject       = "Device Pairing OTP"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -510,10 +508,9 @@ resource "pingone_notification_template_content" "strong_authentication" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "strong_authentication"
   locale         = "en"
-  variant        = "Strong Authentication - Master Flow"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">    <table role=\"presentation\"        style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">        <tbody>            <tr>                <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">                    <table role=\"presentation\"                        style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">                        <tbody>                            <tr>                                <td style=\"padding: 40px 0px 0px;\">                                    <div style=\"text-align: center;\">                                        <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                                            <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\"                                                    alt=\"Ping Identity\" style=\"width: 92px;\"></div>                                                                              <div style=\"color: rgb(0, 0, 0); text-align: center;\">                                            <h1 style=\"margin: 1rem 0\">Verification code</h1>                                            <p style=\"padding-bottom: 16px\"> Hello $${user.username}</p>                                            <p style=\"padding-bottom: 16px\">Please use the verification code below to                                                verify your account.</p>                                            <p style=\"padding-bottom: 16px\"><strong                                                    style=\"font-size: 130%\">$${otp}</strong></p>                                            <p style=\"padding-bottom: 16px\">If you didn’t request this, you can ignore                                                this email.</p>                                            <p style=\"padding-bottom: 16px\">Thank you,<br>The Ping team</p>                                        </div>                                        <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                                            <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                                        </div>                                    </div>                                </td>                            </tr>                        </tbody>                    </table>                </td>            </tr>        </tbody>    </table></body></html>"
+    body          = "${file("${path.module}/data/notification_templates/strongAuthentication.html")}"
     subject       = "Strong Authentication"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -534,10 +531,32 @@ resource "pingone_notification_template_content" "verification_code" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "verification_code_template"
   locale         = "en"
-  variant        = "Verification Code - Master Flow"
 
   email {
-    body          = "<body style=\"font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: #ffffff;\">  <table role=\"presentation\"    style=\"width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: rgb(154, 152, 152);\">    <tbody>      <tr>        <td align=\"center\" style=\"padding: 1rem 2rem; vertical-align: top; width: 100%;\">          <table role=\"presentation\"            style=\"max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px; text-align: left;\">            <tbody>              <tr>                <td style=\"padding: 40px 0px 0px;\">                  <div style=\"padding: 20px; background-color: rgb(255, 255, 255);\">                    <div style=\"text-align: center;\">                      <div style=\"padding-bottom: 20px;\"><img src=\"$${companyLogo}\" alt=\"\"                          style=\"width: 92px;\"></div>                    </div>                    <div style=\"color: rgb(0, 0, 0); text-align: center;\">                      <h1 style=\"margin: 1rem 0\">Verification code</h1>                      <h2 style=\"padding-bottom: 20px\">Username $${user.username}</h2>                      <p style=\"padding-bottom: 20px\">Please use the verification code below to verify your account.</p>                      <p style=\"padding-bottom: 20px\"><strong style=\"font-size: 130%\">$${code.value}</strong></p>                      <p style=\"padding-bottom: 20px\">If you didn’t request this, you can ignore this email.</p>                      <p style=\"padding-bottom: 12px\">Thank you,<br>                        The Ping team</p>                    </div>                    <div style=\"padding-top: 20px; color: rgb(153, 153, 153); text-align: center;\">                      <p style=\"padding-bottom: 16px\">Copyright Ping Identity 2024</p>                    </div>                  </div>                </td>              </tr>            </tbody>          </table>        </td>      </tr>    </tbody>  </table></body> "
+    body          = "${file("${path.module}/data/notification_templates/verification code.html")}"
+    subject       = "Verification Code"
+    content_type  = "text/html"
+    character_set = "UTF-8"
+
+    from {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+    
+    reply_to {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+  }
+}
+
+resource "pingone_notification_template_content" "password_recovery" {
+  environment_id = pingone_environment.master_flow_environment.id
+  template_name  = "recovery_code_template"
+  locale         = "en"
+
+  email {
+    body          = "${file("${path.module}/data/notification_templates/Password Recovery.html")}"
     subject       = "Verification Code"
     content_type  = "text/html"
     character_set = "UTF-8"
@@ -857,7 +876,7 @@ resource "davinci_flow" "PingOne-Custom-Security-Question-and-Answer-Registratio
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Custom Security Question and Answer Registration subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Custom Security Question and Answer Registration subflow.json")}"
   
   depends_on = [
     data.davinci_connections.read_all
@@ -922,7 +941,7 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-registration-subflow"
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Davinci Custom Magic Link registration subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Davinci Custom Magic Link registration subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all  ]
@@ -976,7 +995,7 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-Subflow" {
   
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Davinci Custom Magic Link Subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Davinci Custom Magic Link Subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1026,7 +1045,7 @@ resource "davinci_flow" "PingOne-MFA-Authentication-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne MFA Authentication subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne MFA Authentication subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-Davinci-Custom-Magic-Link-Subflow.id
@@ -1091,7 +1110,7 @@ resource "davinci_flow" "PingOne-MFA-Device-Management-Subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne MFA Device Management Subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne MFA Device Management Subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-MFA-Device-Registration-subflow.id
@@ -1151,7 +1170,7 @@ resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne MFA Device Registration subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne MFA Device Registration subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.id
@@ -1215,7 +1234,7 @@ resource "davinci_flow" "PingOne-Protect-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Protect subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Protect subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
@@ -1270,7 +1289,7 @@ resource "davinci_flow" "PingOne-SSO-Account-Verification-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Account Verification subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Account Verification subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1325,7 +1344,7 @@ resource "davinci_flow" "PingOne-SSO-Authentication-MASTER" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Authentication MASTER.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Authentication MASTER.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
@@ -1415,7 +1434,7 @@ resource "davinci_flow" "PingOne-SSO-Change-Password-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Change Password subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Change Password subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1460,7 +1479,7 @@ resource "davinci_flow" "PingOne-SSO-Consent-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Consent subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Consent subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1510,7 +1529,7 @@ resource "davinci_flow" "PingOne-SSO-Forgot-Password-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Forgot Password subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Forgot Password subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
@@ -1565,7 +1584,7 @@ resource "davinci_flow" "PingOne-SSO-Forgot-Username-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Forgot Username subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Forgot Username subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1600,7 +1619,7 @@ resource "davinci_flow" "PingOne-SSO-Password-Expiration-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Password Expiration subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Password Expiration subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1635,7 +1654,7 @@ resource "davinci_flow" "PingOne-SSO-Progressive-Profiling-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Progressive Profiling subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Progressive Profiling subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1680,7 +1699,7 @@ resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow"
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO Social External IdP authentication subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Social External IdP authentication subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
@@ -1740,7 +1759,7 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne SSO User Registration subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO User Registration subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-Custom-Security-Question-and-Answer-Registration-subflow.id
@@ -1800,7 +1819,7 @@ resource "davinci_flow" "PingOne-Security-Question-and-Answer-Validation-subflow
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Security Question and Answer Validation subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Security Question and Answer Validation subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1830,7 +1849,7 @@ resource "davinci_flow" "PingOne-Session-Main-Flow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Session Main Flow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Session Main Flow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-Sign-On-with-Registration-Password-Reset-and-Recovery.id
@@ -1875,7 +1894,7 @@ resource "davinci_flow" "PingOne-Sign-On-with-Registration-Password-Reset-and-Re
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Sign On with Registration, Password Reset and Recovery.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Sign On with Registration, Password Reset and Recovery.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -1910,7 +1929,7 @@ resource "davinci_flow" "PingOne-Verify-subflow" {
 
   deploy         = "true"
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flow_PingOne Verify subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Verify subflow.json")}"
 
   depends_on = [
     data.davinci_connections.read_all
@@ -2336,7 +2355,6 @@ resource "davinci_variable" "gv-p1AgreementId" {
   ]
 }
 
-#data.pingone_password_policy.standard_password_policy
 resource "davinci_variable" "gv-p1PasswordPolicy" {
   context        = "company"
   description    = "Password Policy, pulled from PingOne"
