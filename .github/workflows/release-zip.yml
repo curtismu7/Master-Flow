@@ -33,7 +33,7 @@ jobs:
       - run: |
           RELEASE="${{ steps.version.outputs.version }}"
           RELEASE_TITLE="${{ steps.version.outputs.version }}"
-          gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R curtismu7/Master-Flow/Master-Flow
+          gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R curtismu7/Master-Flow
           gh release upload $RELEASE ./terraform/tf-release.zip -R curtismu7/Master-Flow
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
