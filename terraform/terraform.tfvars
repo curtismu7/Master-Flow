@@ -1,12 +1,12 @@
-admin_environment_id      = ""
-admin_client_id           = ""
-admin_client_secret       = ""
+admin_environment_id      = "875e9c7d-a69d-4402-861b-1cc4ca24e7e9"
+admin_client_id           = "281bb27a-2c37-43d4-ab3e-2b2829a3295f"
+admin_client_secret       = "5j.LkqOVACaxl9KTU610nlF1eOdE~wMxJ74.3TTXVTXYEaGZko5G9SpgilXh33lD"
 region                    = "NorthAmerica"
 license_name              = "INTERNAL"
-admin_user_id             = ""
-dv_admin_username         = ""
-dv_admin_password         = ""
-organization_id           = ""
+admin_user_id             = "0af3abf8-51c7-4f4a-9232-265faef8795a"
+dv_admin_username         = "kylemoorehead@pingidentity.com"
+dv_admin_password         = "Temporary098@"
+organization_id           = "953388fc-2a02-447e-b0df-fcfa5842dfbe"
 
 #############
 #  PingOne  #
@@ -20,9 +20,9 @@ pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "<h1
 ###################
 #  External IDPs  #
 ###################
-davinci_variable_gv-googleLogin_value = "false"
-google_client_id=""
-google_client_secret=""
+davinci_variable_gv-googleLogin_value = "true"
+google_client_id="820425897162-lt76vhbtfc5cilmpun6e64334f4kckl7.apps.googleusercontent.com"
+google_client_secret="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"
 
 # TODO: Implement additional external IDPs
 davinci_variable_gv-facebookLogin_value = "false"
@@ -39,7 +39,7 @@ davinci_variable_gv-deviceManagement_value = "false"
 davinci_variable_gv-mfa-on_value = "false"
 davinci_variable_gv-runPasswordExpire_value = "false"
 davinci_variable_gv-webAuthnSupport_value = "cross-platform"
-davinci_variable_gv-forgotPasswordDisplay_value = "false"
+davinci_variable_gv-forgotPasswordDisplay_value = "true"
 davinci_variable_gv-standardForgotPassword_value = "false"
 davinci_variable_gv-protectAfterSocial = "false"
 davinci_variable_gv-autoEnrollEmail = "false"
