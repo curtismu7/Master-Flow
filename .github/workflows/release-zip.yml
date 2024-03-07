@@ -31,7 +31,6 @@ jobs:
           exclusions: '*.git* *.DS_* /images/* TODO.md .editorconfig'
           directory: 'terraform'
       - run: |
-          ls
           RELEASE="${{ steps.version.outputs.version }}"
           RELEASE_TITLE="${{ steps.version.outputs.version }}"
           gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R curtismu7/Master-Flow/Master-Flow
