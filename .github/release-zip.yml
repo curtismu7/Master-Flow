@@ -1,0 +1,45 @@
+name: Create Release Zip
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      UpdateType:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Update Type | Allowed values: major, minor, patch'
+        # Default value if no value is explicitly provided
+        default: 'patch'
+        # Input has to be provided for the workflow to run
+        required: true
+        # The data type of the input
+        type: string
+jobs:      
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Get next version
+        uses: reecetech/version-increment@2023.9.3
+        id: version
+        with:
+          scheme: semver
+          increment: ${{ github.event.inputs.UpdateType }}
+      - name: Zip Directory
+        uses: thedoctor0/zip-release@0.7.5
+        with:
+          type: 'zip'
+          filename: 'tf-release.zip'
+          exclusions: '*.git* *.DS_* /images/* TODO.md .editorconfig'
+          directory: 'terraform'
+      - run: |
+          ls
+          RELEASE="${{ steps.version.outputs.version }}"
+          RELEASE_TITLE="${{ steps.version.outputs.version }}"
+          gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R kylemoorehead-pingidentity/Master-Flow
+          gh release upload $RELEASE ./terraform/tf-release.zip -R kylemoorehead-pingidentity/Master-Flow
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          sed -i -E "s/\/download\/(.*?)\/tf-release.zip/\/download\/${{ steps.version.outputs.version }}\/tf-release.zip/" ./terraform/README.md
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Automated with Github Actions (Create Release Zip)
