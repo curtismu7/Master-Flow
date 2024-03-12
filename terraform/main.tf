@@ -84,40 +84,11 @@ resource "pingone_population" "app" {
   description = "Population containing App Users"
 }
 
-/*
-resource "time_sleep" "wait_20_seconds" {
-  depends_on = [
-    davinci_connection.Annotation,
-    davinci_connection.Challenge,
-    davinci_connection.Error-Message,
-    davinci_connection.Flow-Connector,
-    davinci_connection.Functions,
-    davinci_connection.Http,
-    davinci_connection.Node,
-    davinci_connection.PingOne,
-    davinci_connection.PingOne-Authentication,
-    davinci_connection.PingOne-MFA,
-    davinci_connection.PingOne-Notifications,
-    davinci_connection.PingOne-Protect,
-    davinci_connection.PingOne-Verify,
-    davinci_connection.Token-Management,
-    davinci_connection.User-Policy,
-    davinci_connection.Variables,
-  ]
-  
-  create_duration = local.deployment_type
-}
-*/
-
 ############
 #  Locals  #
 ############
 
-locals {
-  widget   = var.deployment_type == "WIDGET" ? "20s" : ""
-  redirect = var.deployment_type == "REDIRECT" ? "120s" : ""
-  deployment_type = coalesce(local.widget, local.redirect)
-}
+# Not needed currently
 
 ##################
 #  Data Sources  #
@@ -147,6 +118,45 @@ data "pingone_password_policy" "standard_password_policy" {
   name = "Standard"
 }
 
+#############
+#  Outputs  #
+#############
+
+output "environment_name" {
+  value = pingone_environment.master_flow_environment.name
+}
+
+output "initiate_flow_uri" {
+  value = "https://apps.pingone.com/${pingone_environment.master_flow_environment.id}/myaccount/"
+}
+
+output "google_callback_url" {
+  value = var.davinci_variable_gv-googleLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/google" : "N/A"
+}
+
+output "facebook_callback_url" {
+  value = var.davinci_variable_gv-facebookLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/facebook" : "N/A"
+}
+
+###################
+#  PingOne Users  #
+###################
+
+resource "pingone_user" "master_flow_user" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  population_id = data.pingone_population.default_population.id
+
+  username = var.master_flow_user_email
+  email    = var.master_flow_user_email
+  name = {
+    given   = var.master_flow_user_given_name
+    family  = var.master_flow_user_family_name
+  }
+  mfa_enabled = true
+
+}
+
 ############################
 #  Social Login Providers  #
 ############################
@@ -161,6 +171,20 @@ resource "pingone_identity_provider" "google" {
   google {
     client_id     = var.google_client_id
     client_secret = var.google_client_secret
+  }
+  registration_population_id = data.pingone_population.default_population.id
+}
+
+resource "pingone_identity_provider" "facebook" {
+  count = var.davinci_variable_gv-facebookLogin_value == "true" ? 1 : 0
+  environment_id = pingone_environment.master_flow_environment.id
+
+  name    = "Facebook"
+  enabled = true
+
+  facebook {
+    app_id     = var.facebook_app_id
+    app_secret = var.facebook_app_secret
   }
   registration_population_id = data.pingone_population.default_population.id
 }
@@ -320,18 +344,6 @@ resource "pingone_application_flow_policy_assignment" "my_apps" {
   flow_policy_id = davinci_application_flow_policy.PingOne-SSO-Flow-Policy.id
 
   priority = 1
-}
-
-#############
-#  Outputs  #
-#############
-
-output "initiate_flow_uri" {
-  value = "https://apps.pingone.com/${pingone_environment.master_flow_environment.id}/myaccount/"
-}
-
-output "google_callback_url" {
-  value = var.davinci_variable_gv-googleLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/google" : "N/A"
 }
 
 ############################
@@ -2186,6 +2198,23 @@ resource "davinci_variable" "gv-facebookLogin" {
   ]
 }
 
+resource "davinci_variable" "gv-facebookExternalIdpId" {
+
+  context        = "company"
+  description    = "The ID of the Facebook External IDP"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-facebookExternalIdpId"
+  type           = "string"
+  value          = var.davinci_variable_gv-facebookLogin_value == "true" ? "${pingone_identity_provider.facebook[0].id}" : "N/A"
+
+  depends_on = [
+    data.davinci_connections.read_all
+  ]
+}
+
 resource "davinci_variable" "gv-forcePasswordless" {
   context        = "company"
   description    = "This will only allow you to login with Passwordless"
@@ -2547,9 +2576,9 @@ resource "davinci_variable" "gv-isDeviceManagement" {
   description    = "Turns on the new device management page, allowing dev management in the middle of the flow"
   environment_id = pingone_environment.master_flow_environment.id
   mutable        = "true"
-  name           = "gv-standardForgotPassword"
+  name           = "gv-isDeviceManagement"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-standardForgotPassword_value}"
+  value          = "${var.davinci_variable_gv-isDeviceManagement}"
 
   depends_on = [
     data.davinci_connections.read_all
