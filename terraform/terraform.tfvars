@@ -12,10 +12,15 @@ organization_id           = ""
 #  PingOne  #
 #############
 
-environment_name = "PingOne Master Flow 1.0"
+environment_name = "PingOne Master Flow - Local Workspace"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "<h1>END-USER LICENSE AGREEMENT</h1><p>GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action.</p>"
+
+master_flow_user_email        = "master.flow@mailinator.com"
+master_flow_user_password     = "2FederateM0re!"
+master_flow_user_given_name   = "Master"
+master_flow_user_family_name  = "Flow"
 
 ###################
 #  External IDPs  #
@@ -24,8 +29,11 @@ davinci_variable_gv-googleLogin_value = "false"
 google_client_id=""
 google_client_secret=""
 
-# TODO: Implement additional external IDPs
 davinci_variable_gv-facebookLogin_value = "false"
+facebook_app_id=""
+facebook_app_secret=""
+
+# TODO: Implement additional external IDPs
 davinci_variable_gv-azureLogin_value = "false"
 davinci_variable_gv-githubLogin_value = "false"
 
