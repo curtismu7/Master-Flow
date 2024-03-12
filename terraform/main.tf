@@ -2542,6 +2542,20 @@ resource "davinci_variable" "gv-standardForgotPassword" {
   ]
 }
 
+resource "davinci_variable" "gv-isDeviceManagement" {
+  context        = "company"
+  description    = "Turns on the new device management page, allowing dev management in the middle of the flow"
+  environment_id = pingone_environment.master_flow_environment.id
+  mutable        = "true"
+  name           = "gv-standardForgotPassword"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-standardForgotPassword_value}"
+
+  depends_on = [
+    data.davinci_connections.read_all
+  ]
+}
+
 resource "davinci_variable" "gv-webAuthnSupport" {
   context        = "company"
   description    = "Set webauthn to \"platform\" or \"cross-platform\""
