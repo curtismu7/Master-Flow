@@ -126,8 +126,8 @@ variable "davinci_variable_gv-verifyUserRegistration" {
   description = "Value for davinci_variable_gv-verifyUserRegistration variable"
 }
 
-variable "davinci_variable_gv-gv-isDeviceManagement" {
-  description = "Value for davinci_variable_gv-gv-isDeviceManagement variable"
+variable "davinci_variable_gv-isDeviceManagement" {
+  description = "Value for davinci_variable_gv-isDeviceManagement variable"
 }
 
 variable "davinci_variable_gv-allowPasswordless_value" {
