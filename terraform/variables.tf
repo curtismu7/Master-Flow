@@ -55,6 +55,18 @@ variable "google_client_secret" {
   default     = "This must be set in the Terraform config"
 }
 
+variable "facebook_app_id" {
+  type        = string
+  description = "The Client ID from your Google OAuth application"
+  default     = "This must be set in the Terraform config"
+}
+
+variable "facebook_app_secret" {
+  type        = string
+  description = "The Client Secret from your Google OAuth application"
+  default     = "This must be set in the Terraform config"
+}
+
 #############
 #  PingOne  #
 #############
@@ -82,6 +94,26 @@ variable "environment_type" {
 variable "pingone_agreement_localization_revision_master_flow_agreement_en_now_text" {
   type        = string
   description = "Agreement Text"
+}
+
+variable "master_flow_user_email" {
+  type        = string
+  description = "Sample user email"
+}
+
+variable "master_flow_user_password" {
+  type        = string
+  description = "Sample user password"
+}
+
+variable "master_flow_user_given_name" {
+  type        = string
+  description = "Sample user first name"
+}
+
+variable "master_flow_user_family_name" {
+  type        = string
+  description = "Sample user last name"
 }
 
 #############
