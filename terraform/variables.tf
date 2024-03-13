@@ -101,9 +101,19 @@ variable "master_flow_user_email" {
   description = "Sample user email"
 }
 
+variable "master_flow_user_username" {
+  type        = string
+  description = "Sample user username"
+}
+
 variable "master_flow_user_password" {
   type        = string
   description = "Sample user password"
+}
+
+variable "master_flow_user_password_force_change" {
+  type        = bool
+  description = "Whether the sample user must change their password on next login"
 }
 
 variable "master_flow_user_given_name" {
@@ -115,6 +125,108 @@ variable "master_flow_user_family_name" {
   type        = string
   description = "Sample user last name"
 }
+
+variable "master_flow_user_middle_name" {
+  type        = string
+  description = "Sample user middle name"
+}
+
+variable "master_flow_user_formatted_name" {
+  type        = string
+  description = "Sample user formatted name"
+}
+
+variable "master_flow_user_honorific_prefix" {
+  type        = string
+  description = "Sample user honorific prefix"
+}
+
+variable "master_flow_user_honorific_suffix" {
+  type        = string
+  description = "Sample user honorific suffix"
+}
+
+variable "master_flow_user_title" {
+  type        = string
+  description = "Sample user title"
+}
+
+variable "master_flow_user_nickname" {
+  type        = string
+  description = "Sample user nickname"
+}
+
+variable "master_flow_user_street_address" {
+  type        = string
+  description = "Sample user street address"
+}
+
+variable "master_flow_user_address_locality" {
+  type        = string
+  description = "Sample user address locality"
+}
+
+variable "master_flow_user_address_region" {
+  type        = string
+  description = "Sample user address region"
+}
+
+variable "master_flow_user_address_postal_code" {
+  type        = string
+  description = "Sample user address postal code"
+}
+
+variable "master_flow_user_address_country_code" {
+  type        = string
+  description = "Sample user address country code"
+}
+
+variable "master_flow_user_locale" {
+  type        = string
+  description = "Sample user locale"
+}
+
+variable "master_flow_user_preferred_language" {
+  type        = string
+  description = "Sample user preferred language"
+}
+
+variable "master_flow_user_mfa_enabled" {
+  type        = bool
+  description = "Whether the sample user has MFA enabled"
+}
+
+variable "master_flow_user_mobile_phone" {
+  type        = string
+  description = "Sample user mobile phone number"
+}
+
+variable "master_flow_user_primary_phone" {
+  type        = string
+  description = "Sample user primary phone number"
+}
+
+variable "master_flow_user_timezone" {
+  type        = string
+  description = "Sample user timezone"
+}
+
+variable "master_flow_user_type" {
+  type        = string
+  description = "Sample user type"
+}
+
+variable "master_flow_user_lifecycle_status" {
+  type        = string
+  description = "Sample user lifecycle status"
+}
+
+variable "master_flow_user_lifecycle_suppress_verification_code" {
+  type        = string
+  description = "Whether the sample user should be sent a verification code via email immediately"
+}
+
+
 
 #############
 #  DaVinci  #
@@ -144,6 +256,22 @@ variable "davinci_variable_gv-QA-On_value" {
 
 variable "davinci_variable_gv-protectAfterSocial" {
   description = "Value for davinci_variable_gv-protectAfterSocial variable"
+}
+
+variable "davinci_variable_gv-fakeLevel" {
+  description = "Value for davinci_variable_gv-fakeLevel variable"
+}
+
+variable "davinci_variable_gv-riskScreenDisplay" {
+  description = "Value for davinci_variable_gv-riskScreenDisplay variable"
+}
+
+variable "davinci_variable_gv-runVerifyUserRegistration" {
+  description = "Value for davinci_variable_gv-runVerifyUserRegistration variable"
+}
+
+variable "davinci_variable_gv-mfaOnHighRisk" {
+  description = "Value for davinci_variable_gv-mfaOnHighRisk variable"
 }
 
 variable "davinci_variable_gv-autoEnrollEmail" {
