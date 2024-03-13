@@ -12,15 +12,15 @@
     "httpConnector",
     "pingOneAuthenticationConnector"
   ],
-  "createdDate": 1709987059986,
-  "currentVersion": 494,
+  "createdDate": 1710298413979,
+  "currentVersion": 498,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1709987152575,
+  "deployedDate": 1710298418103,
   "description": "Master PingOne Authentication Starting flow",
   "flowStatus": "enabled",
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Authentication MASTER",
-  "publishedVersion": 494,
+  "publishedVersion": 498,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -37,7 +37,7 @@
     "sensitiveInfoFields": [],
     "useBetaAlgorithm": true,
     "pingOneFlow": true,
-    "css": ".companyLogo {\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}\n\n  .stopSign {\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/Stop_sign.png?v=1703159103390\");\n    width: 165px;\n    height: 165px;\n}\n\n\n  ",
+    "css": ".companyLogo {\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}\n\n  .stopSign {\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/Stop_sign.png?v=1703159103390\");\n    width: 165px;\n    height: 165px;\n}\n\n\n  :root {\n    /********************************************************\n    * COMPANY LOGO\n    *********************************************************/\n    --company-logo-img-url: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/UniversityofPennsylvania_FullLogo_RGB-4_0.png?v=1709310707174\");\n    --company-logo-max-height: 65px;\n\n    /********************************************************\n    * PAGE BACKGROUND \n    *********************************************************/\n    --background-image-url: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/UPenn-campus-1.webp?v=1709310028694\");\n\n    /********************************************************\n    * CARD BODY\n    *********************************************************/\n    --card-background-color: rgb(255, 255, 255);\n    --card-shadow-color: rgba(0, 25, 91, .35);\n\n    /********************************************************\n    * BODY\n    *********************************************************/\n    --body-font-family: Helvetica;\n    --body-font-size: 0.935rem;\n\n    /********************************************************\n    * TEXT FONT COLORS\n    *********************************************************/\n\n    /*  PRIMARY FONT COLOR (RGB) */\n    --text-color-primary: 62, 69, 77;\n\n    /* HEADING FONT COLR (RBG) */\n    --heading-text-color: 62, 69, 77;\n    \n    /*  MUTED TEXT ALPHA  */\n    --text-color-muted-apha: 0.75;\n\n    /*  ERROR FONT COLOR  */\n    --text-color-error: rgb(155, 0, 0);\n\n    /********************************************************\n    * BUTTON ATTRIBUTES\n    *********************************************************/\n\n    /*  BUTTON FONT COLOR  */\n    --button-primary-text-color: rgb(255, 255, 255);\n\n    /*  BUTTON BACKGROUND COLOR (RGB)  */\n    --button-primary-background-color: 0, 25, 91;\n    \n    /* LINK BUTTON FONT COLOR (RGB)  */\n    --link-button-primary-color: 0, 25, 91;\n\n    /* BUTTON BORDER RADIUS */\n    --button-primary-border-radius: 0px;\n\n    /*  BUTTON HOVER ALPHA  */\n    --button-hover-alpha: 0.70;\n\n    /*  BUTTON ACTIVE ALPHA  */\n    --button-active-alpha: 0.80;\n\n    /*  BUTTON DISABLED ALPHA  */\n    --button-disabled-alpha: 0.65;\n\n    /********************************************************\n     * FORM CONTROLS\n     *********************************************************/\n    --form-control-border-radius: 0px;\n    --card-body-border-radius: 2px;\n    --focus-highlight-color: 0, 25, 91;\n\n    /********************************************************\n    * ACTIVITY INDICATOR & BUTTON SPINNER COLOR\n    *********************************************************/\n\n    --activity-indicator-color: rgb(0, 25, 91);\n\n    --polling-indicator-color: rgb(0, 25, 91);\n\n    /********************************************************\n    * APPLYING TEXT COLOR - DO NOT CHANGE\n    *********************************************************/\n    /* H1,H2, H3, Body text color */\n    --bs-body-color: rgb(var(--text-color-main)) !important;\n    --bs-danger-rgb: var(--text-color-error);\n  }\n\n  .bg-light>div{left: 270px;position:fixed;}\n  \n/********************************************************\n* CLASSES BELOW ARE DERIVED FROM VALUES ABOVE\n* DO NOT CHANGE UNLESS YOU HAVE CSS 'SKILLZ' :)\n*********************************************************/\n\n/*  COMPANY LOGO  */\n.card-body.p-5.d-flex.flex-column > img:first-child,\n.companyLogo {\n  content: var(--company-logo-img-url) !important;\n  height: var(--company-logo-max-height) !important;\n  width: auto !important;\n}\n\n/*  BACKGROUND IMAGE  */\ndiv.bg-light {\n  background-image:       var(--background-image-url);\n  background-size:        cover;\n  background-repeat:      no-repeat;\n}\n\n/*  HEADING TEXT  */\nh1, h2, h3, h4 {\n  color: rgb(var(--heading-text-color)) !important;\n}\n\n/*  BODY FONT & COLOR  */\n.card-body {\n  /*  font family */\n  font-family: var(--body-font-family) !important;\n  /*  font size */\n  font-size: var(--body-font-size) !important;\n  /*  font color */\n  color: rgb(var(--text-color-primary)) !important;\n  /*  background color */\n  background-color: var(--card-background-color) !important;\n}\n\n/*  MUTED PARAGRAPH  */\np.text-muted {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  ERROR MESSAGE PARAGRAPH  */\n.card .text-danger {\n  color: var(--text-color-error) !important;\n}\n\n/*  FORM CONTROL FONT COLOR  */\n.form-control,\n.form-control:focus {\n  color: var(--text-color-primary) !important;\n  border-radius: var(--form-control-border-radius) !important;\n}\n\n/*  FORM CONTROL PLACEHOLDER FONT COLOR  */\n.form-floating input+label {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  FORM CONTROL HIGHLIGHT  */\n.form-control:focus {\n  border-color: rgba(var(--focus-highlight-color), .5) !important;\n  box-shadow: 0 0 0 0.25rem rgba(var(--focus-highlight-color), 0.25) !important;\n}\n\n/*  PRIMARY BUTTON  */\n.btn-primary {\n  /*  font color  */\n  --bs-btn-color: var(--button-primary-text-color) !important;\n  /*  font color when hovering  */\n  --bs-btn-hover-color: var(--button-primary-text-color) !important;\n  /*  border color  */\n  --bs-btn-border-color: var(--button-primary-background-color) !important;\n  /*  background color  */\n  --bs-btn-bg: rgb(var(--button-primary-background-color)) !important;\n  /*  background color when hovering  */\n  --bs-btn-hover-bg: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  /*  background color when active  */\n  --bs-btn-active-bg: rgba(var(--button-primary-background-color), var(--button-active-alpha)) !important;\n  /*  background color when disabled  */\n  --bs-btn-disabled-bg: rgba(var(--button-primary-background-color), var(--button-disabled-alpha)) !important;\n  background-color: rgb(var(--button-primary-background-color)) !important;\n  border-color: rgb(var(--button-primary-background-color)) !important;\n  color: var(--button-primary-text-color) !important;\n  border-radius: var(--button-primary-border-radius);\n}\n\n\n.btn-primary:hover {\n  background-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  border-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  color: var(--button-primary-text-color) !important;\n}\n\n/*  LINK BUTTON  */\n.btn-link {\n  /*  button font color  */\n  --bs-btn-color: rgb(var(--link-button-primary-color)) !important;\n  /*  button font color when active  */\n  --bs-btn-active-color: rgba(var(--link-button-primary-color), var(--button-active-alpha)) !important;\n  /*  button font color when hovering  */\n  --bs-btn-hover-color: rgba(var(--link-button-primary-color), var(--button-hover-alpha)) !important;\n  /*  button font color when disabled  */\n  --bs-btn-disabled-color: rgba(var(--link-button-primary-color), var(--button-disabled-alpha)) !important;\n  color: rgb(var(--link-button-primary-color)) !important;\n}\n\n/*  POLLING INDICATORS  */\n.css-11k6vsm,\n.css-17zi2ag,\n.css-139roxj {\n  /* width: 20px; */\n  /* height: 20px; */\n  /* animation-duration: 0.75s; */\n  /*  circle background color  */\n  background-color: var(--polling-indicator-color) !important;\n}\n\n/*  BUTTON ACTIVITY INDICATOR  */\n.css-sw2ho0 {\n  /*  spinning circle color  */\n  --primary-color: var(--activity-indicator-color) !important;\n}\n\n.card-body.p-5.d-flex.flex-column {\n  border-radius: var(--card-body-border-radius);\n}\n\n.card.shadow.mb-5 {\n  border-radius: var(--card-body-border-radius);\n  box-shadow: 1px 1px 3px 1px var(--card-shadow-color) !important;\n}\n\n\n \n",
     "useCustomScript": true,
     "jsLinks": [
       {
@@ -56,9 +56,9 @@
   "trigger": {
     "type": "AUTHENTICATION"
   },
-  "updatedDate": 1709987152584,
+  "updatedDate": 1710298418111,
   "flowId": "8a2f4d50efc9f32cde8c6cbef6b008d8",
-  "versionId": 494,
+  "versionId": 498,
   "graphData": {
     "elements": {
       "nodes": [
@@ -1077,7 +1077,7 @@
                 "value": "PingOne Protect subflow"
               },
               "riskfpPayload": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"riskfp\",\n        \"data\": \"{{local.j7ppj61fe3.payload.output.riskfp}}\",\n        \"tooltip\": \"{{local.j7ppj61fe3.payload.output.riskfp}}\",\n        \"children\": [\n          {\n            \"text\": \"riskfp\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"riskfp\",\n        \"data\": \"{{local.xpdik8xk08.payload.output.riskfp}}\",\n        \"tooltip\": \"{{local.xpdik8xk08.payload.output.riskfp}}\",\n        \"children\": [\n          {\n            \"text\": \"riskfp\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"riskfp\",\n        \"data\": \"{{local.xpdik8xk08.payload.output.riskfp}}\",\n        \"tooltip\": \"{{local.xpdik8xk08.payload.output.riskfp}}\",\n        \"children\": [\n          {\n            \"text\": \"riskfp\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"riskfp\",\n        \"data\": \"{{local.wzzj7jakza.payload.output.riskfp}}\",\n        \"tooltip\": \"{{local.wzzj7jakza.payload.output.riskfp}}\",\n        \"children\": [\n          {\n            \"text\": \"riskfp\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -10914,7 +10914,7 @@
     }
   },
   "flowColor": "#CACED3",
-  "savedDate": 1709987050716,
+  "savedDate": 1710298405263,
   "variables": [
     {
       "context": "flowInstance",
@@ -11064,7 +11064,7 @@
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1707748376753,
+      "updatedDate": 1710189971760,
       "visibility": "private",
       "name": "gv-forgotUsernameDisplay##SK##company",
       "companyId": "6b95bf3d-386f-4d1a-9fe4-e6689d924567"
@@ -11098,7 +11098,7 @@
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1708716587760,
+      "updatedDate": 1710188119314,
       "visibility": "private",
       "name": "gv-googleLogin##SK##company",
       "companyId": "6b95bf3d-386f-4d1a-9fe4-e6689d924567"
@@ -11133,7 +11133,7 @@
         "value": "349b564a-991f-4c7b-b6b3-8f03cd52b044"
       },
       "type": "property",
-      "updatedDate": 1708448852724,
+      "updatedDate": 1710275545743,
       "visibility": "private",
       "name": "gv-p1PopulationId##SK##company",
       "companyId": "6b95bf3d-386f-4d1a-9fe4-e6689d924567"
@@ -11144,13 +11144,13 @@
       "fields": {
         "type": "boolean",
         "displayName": "Turn on Progressive profiling",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1707490402146,
+      "updatedDate": 1710172207378,
       "visibility": "private",
       "name": "gv-progressiveProfiling##SK##company",
       "companyId": "6b95bf3d-386f-4d1a-9fe4-e6689d924567"
@@ -11161,13 +11161,13 @@
       "fields": {
         "type": "boolean",
         "displayName": "Determines if we should run Password Expiration flow ",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1707657233351,
+      "updatedDate": 1710190030458,
       "visibility": "private",
       "name": "gv-runPasswordExpire##SK##company",
       "companyId": "6b95bf3d-386f-4d1a-9fe4-e6689d924567"
