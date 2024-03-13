@@ -12,10 +12,10 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1710172180424,
-  "currentVersion": 2,
+  "createdDate": 1710299825661,
+  "currentVersion": 4,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1710251657231,
+  "deployedDate": 1710299834600,
   "description": "Imported on Wed Jan 17 2024 17:18:59 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -79,7 +79,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 2,
+  "publishedVersion": 4,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -100,9 +100,9 @@
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1710251657239,
+  "updatedDate": 1710299834613,
   "flowId": "7579d938ce6f882409314aec1b170a3f",
-  "versionId": 2,
+  "versionId": 4,
   "graphData": {
     "elements": {
       "nodes": [
@@ -9181,7 +9181,7 @@
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
               "customHTML": {
-                "value": "<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                <h1 class=\"text-center mb-4\">{{title}}</h1>\n                {{/if}}\n\n                <div class=\"mx-auto mt-3 mb-4\">\n                    <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                        <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                        <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                    </svg>\n                </div>\n                <p class=\"text-muted text-center\">New {{type}} device created</p>\n\n                {{#if textOne}}\n                <p class=\"text-muted text-center\">{{textOne}}</p>\n                {{/if}}\n\n                {{#if textTwo}}\n                <p class=\"text-muted text-center\">{{textTwo}}</p>\n                {{/if}}\n\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                <div>\n                    <div class=\"d-flex flex-column\">\n                        <button class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\"\n                            data-skbuttonvalue=\"ANOTHER\"\n                            id=\"another\">Add another device</button>\n                    </div>\n                    <div class=\"d-flex flex-column\">\n                        <div>\n                            <div class=\"d-flex flex-column\">\n                                <button class=\"btn btn-link\"data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\"\n                            data-skbuttonvalue=\"LOGIN\"\n                            id=\"login\">Finish</button>\n                            </div>\n                        </div>\n                    </div>\n\n                </div>\n            </div>\n        </div>\n    </div>"
+                "value": "<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                <h1 class=\"text-center mb-4\">{{title}}</h1>\n                {{/if}}\n\n                <div class=\"mx-auto mt-3 mb-4\">\n                    <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                        <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                        <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                    </svg>\n                </div>\n                <p class=\"text-muted text-center\">New {{type}} device created</p>\n\n                {{#if textOne}}\n                <p class=\"text-muted text-center\">{{textOne}}</p>\n                {{/if}}\n\n                {{#if textTwo}}\n                <p class=\"text-muted text-center\">{{textTwo}}</p>\n                {{/if}}\n\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                <div>\n                    <div class=\"d-flex flex-column\">\n                        <button class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\"\n                            data-skbuttonvalue=\"ANOTHER\"\n                            id=\"another\">Add another device</button>\n                    </div>\n                    <div class=\"d-flex flex-column\">\n                        <div>\n                            <div class=\"d-flex flex-column\">\n                                <button class=\"btn btn-link\"data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\"\n                            data-skbuttonvalue=\"FINISH\"\n                            id=\"login\">Finish</button>\n                            </div>\n                        </div>\n                    </div>\n\n                </div>\n            </div>\n        </div>\n    </div>"
               },
               "customScript": {},
               "formFieldsList": {
@@ -15893,7 +15893,7 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1710172174910,
+  "savedDate": 1710299822263,
   "variables": [
     {
       "context": "flowInstance",
