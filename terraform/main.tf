@@ -750,6 +750,25 @@ resource "pingone_schema_attribute" "security_qa_attribute" {
   ]
 }
 
+resource "pingone_schema_attribute" "security_qa_registered_attribute" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  name         = "SecurityQARegistered"
+  display_name = "SecurityQARegistered"
+
+  type        = "STRING"
+  unique      = false
+  multivalued = false
+
+  lifecycle {
+    prevent_destroy = false
+  }
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
 #########################
 #  DaVinci Application  #
 #########################
