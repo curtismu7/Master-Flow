@@ -1,0 +1,1553 @@
+{
+  "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18",
+  "authTokenExpireIds": [],
+  "connectorIds": [
+    "httpConnector",
+    "functionsConnector",
+    "pingOneSSOConnector",
+    "errorConnector",
+    "annotationConnector"
+  ],
+  "createdDate": 1711108375063,
+  "currentVersion": 7,
+  "customerId": "38f1e64332a64e2263c5953d52e846fb",
+  "deployedDate": 1711108384407,
+  "description": "Imported on Wed Jan 17 2024 17:18:45 GMT+0000 (Coordinated Universal Time)",
+  "flowStatus": "enabled",
+  "inputSchemaCompiled": {
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "p1UserId": {
+          "description": "",
+          "isExpanded": true,
+          "preferredDataType": "string",
+          "type": "string",
+          "name": "p1UserId"
+        },
+        "matchedUserObject": {
+          "description": "",
+          "isExpanded": true,
+          "preferredDataType": "object",
+          "type": "object",
+          "name": "matchedUserObject"
+        },
+        "username": {
+          "description": "Username from PingOne SSO",
+          "isExpanded": true,
+          "preferredDataType": "string",
+          "type": "string",
+          "name": "username"
+        }
+      },
+      "additionalProperties": false,
+      "required": []
+    }
+  },
+  "isInputSchemaSaved": true,
+  "isOutputSchemaSaved": false,
+  "name": "PingOne SSO Progressive Profiling subflow",
+  "publishedVersion": 7,
+  "settings": {
+    "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+    "intermediateLoadingScreenCSS": "",
+    "intermediateLoadingScreenHTML": "",
+    "cssLinks": [
+      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css"
+    ],
+    "logLevel": 3,
+    "useCustomCSS": true
+  },
+  "timeouts": "null",
+  "trigger": {},
+  "updatedDate": 1711108384407,
+  "flowId": "469b5d714ce9beae23c57c7a5d5ba99d",
+  "versionId": 7,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "1ohcgdfjo7",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http (Use this for form + custom messages)",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "buttonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              },
+              "cancelButtonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Skip\"\n      }\n    ]\n  }\n]"
+              },
+              "customCSS": {},
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\">\n    <div style=\"max-width: 400px; width: 400%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column\">\n          <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n        {{#if title}}\n          <h1 class=\"text-center mb-4\">{{title}}</h1>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          {{#if textTwo}}\n          <p class=\"text-muted text-center\">{{textTwo}}</p>\n          {{/if}}\n\n          <!-- Generic Error Message -->\n          <p id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi \" data-skcomponent=\"skerror\"></p>\n\n          <!-- Form Validation Error Message -->\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"givenName\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"middleInitial\" data-skcomponent=\"skerrormessage\">\n          </p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"familyName\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phoneCode\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phone\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"dob\" data-skcomponent=\"skerrormessage\"></p>\n\n          <form id=\"profileForm\" data-id=\"profileForm\" class=\"form\">\n            <div class=\"mb-4 p-0\">\n              <div style=\"display:flex\">\n                {{#unless hasGivenName}}\n                <div class=\"mb-4 form-floating\" style=\"flex:4\">\n                  <input id=\"givenName\" data-id=\"givenName\" class=\"form-control\" type=\"text\" name=\"givenName\"\n              placeholder=\"First Name\" autocomplete=\"off\" />\n                  <label id=\"givenNameLabel\" data-id=\"givenNameLabel\" class=\"form-label\" for=\"givenName\">First Name</label>\n                </div>\n                {{/unless}}\n              </div>\n              {{#unless hasFamilyName}}\n              <div class=\"mb-4 form-floating\">\n                <input id=\"familyName\" data-id=\"familyName\" class=\"form-control\" type=\"text\" placeholder=\"Last Name\"\n              autocomplete=\"off\" name=\"familyName\" />\n                <label id=\"familyNameLabel\" data-id=\"familyNameLabel\" class=\"form-label\" for=\"familyName\">Last Name</label>\n              </div>\n              {{/unless}}\n              {{#unless hasPrimaryPhone}}\n              <div style=\"display:flex\">\n                <div class=\"mb-4 form-floating\" style=\"flex: 1\">\n                  <input id=\"phoneCode\" data-id=\"phoneCode\" class=\"form-control\" type=\"text\" placeholder=\"Code\"\n              autocomplete=\"off\" name=\"phoneCode\" />\n                  <label id=\"phoneCodeLabel\" data-id=\"phoneCodeLabel\" class=\"form-label\" for=\"phoneCode\">Code</label>\n                </div>\n                <div class=\"mb-4 form-floating ms-3\" style=\"flex: 4\">\n                  <input id=\"phone\" data-id=\"phone\" class=\"form-control\" type=\"text\" placeholder=\"Phone Number\"\n              autocomplete=\"off\" name=\"phone\" />\n                  <label id=\"phoneLabel\" data-id=\"phoneLabel\" class=\"form-label\" for=\"phone\">Phone Number</label>\n                </div>\n              </div>\n              {{/unless}}\n              {{#unless hasDob}}\n              <div class=\"mb-4 form-floating\">\n                <input id=\"dob\" data-id=\"dob\" class=\"form-control\" type=\"date\" placeholder=\"Birthdate\"\n              autocomplete=\"off\" name=\"dob\" />\n                <label id=\"dobLabel\" data-id=\"dobLabel\" class=\"form-label\" for=\"dob\">Birthdate</label>\n              </div>\n              {{/unless}}\n            </div>\n            {{#if buttonLabel}}\n            <div class=\"d-flex flex-column\">\n              <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\"\n              data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"profileForm\"\n              data-skbuttonvalue=\"SUBMIT\">\n              {{buttonLabel}}\n            </button>\n            </div>\n            {{/if}}\n            {{#if cancelButtonLabel}}\n            <div class=\"d-flex flex-column\">\n              <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                  data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\">\n                  {{cancelButtonLabel}}\n              </button>\n            </div>\n            {{/if}}\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+              },
+              "customScript": {
+                "value": "const setFieldFocus = (id) => {\r\n    const element = document.getElementById(id);\r\n    if (element) {\r\n        element.focus();\r\n    }\r\n}\r\nconst start = () => {\r\n    setFieldFocus(\"givenName\")\r\n}\r\n\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}"
+              },
+              "formFieldsList": {
+                "value": [
+                  {
+                    "displayName": "Given Name",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "givenName",
+                    "value": ""
+                  },
+                  {
+                    "displayName": "Middle Initial",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "middleInitial",
+                    "value": ""
+                  },
+                  {
+                    "displayName": "Family Name",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "familyName",
+                    "value": ""
+                  },
+                  {
+                    "displayName": "Phone Code",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "phoneCode",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"+1\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "displayName": "phone",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "phone",
+                    "value": ""
+                  },
+                  {
+                    "displayName": "Date of Birth",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "dob",
+                    "value": ""
+                  },
+                  {
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "buttonValue"
+                  }
+                ]
+              },
+              "hasDob": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasDob\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasDob}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasDob}}\",\n        \"children\": [\n          {\n            \"text\": \"hasDob\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "hasFamilyName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasFamilyName\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasFamilyName}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasFamilyName}}\",\n        \"children\": [\n          {\n            \"text\": \"hasFamilyName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "hasGivenName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasGivenName\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasGivenName}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasGivenName}}\",\n        \"children\": [\n          {\n            \"text\": \"hasGivenName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "hasMiddleName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasMiddleName\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasMiddleName}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasMiddleName}}\",\n        \"children\": [\n          {\n            \"text\": \"hasMiddleName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "hasPrimaryPhone": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasPrimaryPhone\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"children\": [\n          {\n            \"text\": \"hasPrimaryPhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"cancelButtonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Cancel Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"cancelButtonLabel\"\n        },\n        \"hasPrimaryPhone\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasPrimaryPhone\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasPrimaryPhone\"\n        },\n        \"hasFamilyName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasFamilyName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasFamilyName\"\n        },\n        \"hasGivenName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasGivenName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasGivenName\"\n        },\n        \"hasDob\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasDob\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasDob\"\n        }\n    }\n}"
+              },
+              "nodeDescription": {
+                "value": "Name, phone, dob"
+              },
+              "nodeTitle": {
+                "value": "User Details Form"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please update your profile information.\"\n      }\n    ]\n  }\n]"
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"User Details\"\n      }\n    ]\n  }\n]"
+              },
+              "validationRules": {
+                "value": []
+              }
+            }
+          },
+          "position": {
+            "x": 1140,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4fkmxgeymw",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsMultipleB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "Check which button was clicked"
+              },
+              "nodeTitle": {
+                "value": "User Details Form Button Action"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"submit\"\n      }\n    ]\n  }\n]"
+              },
+              "rightValueMultiple": {
+                "value": [
+                  {
+                    "id": "js0k5824y5",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"SUBMIT\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "id": "qtli5t2v0s",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 1440,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "h587i6xj7d",
+            "nodeType": "EVAL",
+            "properties": {}
+          },
+          "position": {
+            "x": 1260,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "cbi02bqueo",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createErrorResponse",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "key": 0.0932499621179339,
+                    "label": "cancelReturn (boolean - flowInstance)",
+                    "name": "cancelReturn",
+                    "type": "boolean",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Return to authentication"
+              }
+            }
+          },
+          "position": {
+            "x": 1770,
+            "y": 690
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ox6ma86kdd",
+            "nodeType": "EVAL",
+            "properties": {
+              "cbi02bqueo": {
+                "value": "allTriggersTrue"
+              }
+            }
+          },
+          "position": {
+            "x": 1590,
+            "y": 690
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "kwpyaae519",
+            "nodeType": "CONNECTION",
+            "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
+            "connectorId": "pingOneSSOConnector",
+            "name": "PingOne",
+            "label": "PingOne",
+            "status": "configured",
+            "capabilityName": "updateUser",
+            "type": "action",
+            "properties": {
+              "additionalUserProperties": {
+                "value": [
+                  {
+                    "name": "dob",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"dob\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.dob}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.dob}}\",\n        \"children\": [\n          {\n            \"text\": \"dob\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "name",
+                    "preferredDataType": "object",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{ \\\"middle\\\" : \\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"middleInitial\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.middleInitial}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.middleInitial}}\",\n        \"children\": [\n          {\n            \"text\": \"middleInitial\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\\\"}\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "family": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"familyName\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.familyName}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.familyName}}\",\n        \"children\": [\n          {\n            \"text\": \"familyName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "given": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"givenName\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.givenName}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.givenName}}\",\n        \"children\": [\n          {\n            \"text\": \"givenName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "identifier": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "primaryPhone": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"phoneCode\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.phoneCode}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.phoneCode}}\",\n        \"children\": [\n          {\n            \"text\": \"phoneCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"phone\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"children\": [\n          {\n            \"text\": \"phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "username": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.parameters.username}}\",\n        \"tooltip\": \"{{global.parameters.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 1770,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "3ee83zk75y",
+            "nodeType": "EVAL",
+            "label": "Evaluator",
+            "properties": {
+              "1enfsjxk26": {
+                "value": "anyTriggersFalse"
+              },
+              "ehfaskhvxq": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 1920,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "1bl9rp6dau",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createSuccessResponse",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              },
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "key": 0.6422169511089648,
+                    "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "id",
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Success"
+              }
+            }
+          },
+          "position": {
+            "x": 2100,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "vsubgtuwhp",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "customFunction",
+            "type": "trigger",
+            "properties": {
+              "code": {
+                "value": "// check for blank fields in PingOne\n// If country code is left (+1) then phone will return true, even though you did not actually enter a phone number\nmodule.exports = a = async ({params}) => {\n\n\tlet jsonObject = params.matchedUserObject;\n\t// Initialize variables to hold the boolean values\n    let hasDob = jsonObject.hasOwnProperty('dob');\n    let hasGivenName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('given');\n    let hasFamilyName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('family');\n    let hasPrimaryPhone = jsonObject.hasOwnProperty('primaryPhone');\n\n     // Check if all properties are true\n    let allTrue = hasDob && hasGivenName && hasMiddleName && hasFamilyName && hasPrimaryPhone;\n\n    // Explicitly set the return statement\n    return {\n        hasDob: hasDob,\n        hasGivenName: hasGivenName,\n        hasFamilyName: hasFamilyName,\n        hasPrimaryPhone: hasPrimaryPhone,\n        allTrue: allTrue\n    };\n}"
+              },
+              "nodeDescription": {
+                "value": " If country code is left (+1) then phone will return true, even though you did not actually enter a phone number.  This uses primary phone, not Mobile."
+              },
+              "nodeTitle": {
+                "value": "Check for user attributes that are blank"
+              },
+              "outputSchema": {
+                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"hasDob\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasGivenName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasFamilyName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasPrimaryPhone\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"allTrue\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t}\n\t\t}\n\t}\n}"
+              },
+              "variableInputList": {
+                "value": [
+                  {
+                    "name": "matchedUserObject",
+                    "preferredDataType": "object",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"matchedUserObject\",\n        \"data\": \"{{global.parameters.matchedUserObject}}\",\n        \"tooltip\": \"{{global.parameters.matchedUserObject}}\",\n        \"children\": [\n          {\n            \"text\": \"matchedUserObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 480,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ox4aeyqpvy",
+            "nodeType": "EVAL",
+            "label": "Evaluator",
+            "properties": {}
+          },
+          "position": {
+            "x": 600,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "sapftogoql",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"allTrue\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.allTrue}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.allTrue}}\",\n        \"children\": [\n          {\n            \"text\": \"allTrue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "Getting return value from function"
+              },
+              "nodeTitle": {
+                "value": "Are all fields blank?"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "type": {
+                "value": "boolean"
+              }
+            }
+          },
+          "position": {
+            "x": 780,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "yynulv8yeb",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createSuccessResponse",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              },
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "key": 0.36941178144495623,
+                    "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "p1UserId",
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Success fields already filled in"
+              }
+            }
+          },
+          "position": {
+            "x": 1140,
+            "y": 720
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "g3fjjwek2w",
+            "nodeType": "EVAL",
+            "properties": {
+              "1ohcgdfjo7": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 930,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "86prlikz2u",
+            "nodeType": "CONNECTION",
+            "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
+            "connectorId": "errorConnector",
+            "name": "Error Message",
+            "label": "Error Customize",
+            "status": "configured",
+            "capabilityName": "customErrorMessage",
+            "type": "action",
+            "properties": {
+              "errorCode": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
+              },
+              "errorDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"An unexpected password state was received\"\n      }\n    ]\n  }\n]"
+              },
+              "errorMessage": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"An unexpected error has occurred\"\n      }\n    ]\n  }\n]"
+              },
+              "errorReason": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Received an unexpected password state value from PingOne\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "Received an unexpected value for the password status"
+              },
+              "nodeTitle": {
+                "value": "Received an unexpected value"
+              }
+            }
+          },
+          "position": {
+            "x": 1740,
+            "y": 810
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xno164x8z3",
+            "nodeType": "EVAL",
+            "properties": {}
+          },
+          "position": {
+            "x": 1590,
+            "y": 810
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hj5dxeadr3",
+            "nodeType": "ANNOTATION",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "annotation": {
+                "value": "PingOne SSO progressive profiling"
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "backgroundColor": {
+                "value": "#4462edff"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontSize": {
+                "value": 16
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 1800
+              }
+            }
+          },
+          "position": {
+            "x": 431,
+            "y": 214
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "fel55dj3x1",
+            "nodeType": "ANNOTATION",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "annotation": {
+                "value": "Check for blank fields on PingOne user"
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "backgroundColor": {
+                "value": "#5D00D6ff"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 500
+              }
+            }
+          },
+          "position": {
+            "x": 420,
+            "y": 390
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9vzel3wm4x",
+            "nodeType": "ANNOTATION",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "annotation": {
+                "value": "Update user at PingOne SSO"
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "backgroundColor": {
+                "value": "#5D00D6ff"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 500
+              }
+            }
+          },
+          "position": {
+            "x": 1560,
+            "y": 390
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "u51gyogc86",
+            "nodeType": "ANNOTATION",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "annotation": {
+                "value": "Input Schema: p1UserId, matchedUserObject"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "backgroundColor": {
+                "value": "#f7f7adff"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              },
+              "strokeEnabled": {
+                "value": false
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "width": {
+                "value": 400
+              }
+            }
+          },
+          "position": {
+            "x": 330,
+            "y": 450
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "8oyztdnwu5",
+            "nodeType": "EVAL",
+            "label": "Evaluator",
+            "properties": {}
+          },
+          "position": {
+            "x": 1590,
+            "y": 600
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9k1qkstwp8",
+            "nodeType": "ANNOTATION",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "annotation": {
+                "value": "check result of JS"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "width": {
+                "value": 240
+              }
+            }
+          },
+          "position": {
+            "x": 780,
+            "y": 480
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ufrs9wfta3",
+            "nodeType": "ANNOTATION",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "annotation": {
+                "value": "Update PingOne SSO user"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "width": {
+                "value": 240
+              }
+            }
+          },
+          "position": {
+            "x": 1620,
+            "y": 480
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "1enfsjxk26",
+            "nodeType": "CONNECTION",
+            "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
+            "connectorId": "errorConnector",
+            "name": "Error Message",
+            "label": "Error Customize",
+            "status": "configured",
+            "capabilityName": "customErrorMessage",
+            "type": "action",
+            "properties": {
+              "errorCode": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" Invalid username and/or password\"\n      }\n    ]\n  }\n]"
+              },
+              "errorDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Failed to udpate pingone user\"\n      }\n    ]\n  }\n]"
+              },
+              "errorMessage": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne SSO user update failed\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "Failed to validate the submitted password"
+              },
+              "nodeTitle": {
+                "value": "PingOne SSO user update failed"
+              }
+            }
+          },
+          "position": {
+            "x": 2100,
+            "y": 720
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "m0q1qd57ia",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "customHTML": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div style=\\\"display: none\\\">\\n\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"data\": \"[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMTAiIHBvbGxSZXRyaWVzPSIxIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjEwIiwicG9sbFJldHJpZXMiOiIxIiwicG9sbENoYWxsZW5nZVN0YXR1cyI6ImZhbHNlIn0sImNvbXBvbmVudFByb3BzIjp7ImNsYXNzIjp7Im5hbWUiOiJjbGFzcyIsImRpc3BsYXlOYW1lIjoiQ1NTIENsYXNzIn0sInBvbGxJbnRlcnZhbCI6eyJuYW1lIjoicG9sbEludGVydmFsIiwiZGlzcGxheU5hbWUiOiJQb2xsIEludGVydmFsIiwidmFsdWUiOjIwMDB9LCJwb2xsUmV0cmllcyI6eyJuYW1lIjoicG9sbFJldHJpZXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgUmV0cmllcyIsInZhbHVlIjo2MH0sInBvbGxDaGFsbGVuZ2VTdGF0dXMiOnsibmFtZSI6InBvbGxDaGFsbGVuZ2VTdGF0dXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgQ2hhbGxlbmdlIFN0YXR1cyIsInR5cGUiOiJzZWxlY3QiLCJ2YWx1ZSI6InRydWUiLCJvcHRpb25zIjpbeyJuYW1lIjoiVHJ1ZSIsInZhbHVlIjoidHJ1ZSJ9LHsibmFtZSI6IkZhbHNlIiwidmFsdWUiOiJmYWxzZSJ9XX19fQ==]]]\",\n        \"src\": \"auth.svg\",\n        \"url\": \"skpolling\",\n        \"children\": [\n          {\n            \"text\": \"skpolling\"\n          }\n        ],\n        \"component\": \"skpolling\",\n        \"options\": {\n          \"class\": \"\",\n          \"pollInterval\": \"10\",\n          \"pollRetries\": \"1\",\n          \"pollChallengeStatus\": \"false\"\n        },\n        \"componentProps\": {\n          \"class\": {\n            \"name\": \"class\",\n            \"displayName\": \"CSS Class\"\n          },\n          \"pollInterval\": {\n            \"name\": \"pollInterval\",\n            \"displayName\": \"Poll Interval\",\n            \"value\": 2000\n          },\n          \"pollRetries\": {\n            \"name\": \"pollRetries\",\n            \"displayName\": \"Poll Retries\",\n            \"value\": 60\n          },\n          \"pollChallengeStatus\": {\n            \"name\": \"pollChallengeStatus\",\n            \"displayName\": \"Poll Challenge Status\",\n            \"type\": \"select\",\n            \"value\": \"true\",\n            \"options\": [\n              {\n                \"name\": \"True\",\n                \"value\": \"true\"\n              },\n              {\n                \"name\": \"False\",\n                \"value\": \"false\"\n              }\n            ]\n          }\n        },\n        \"tooltip\": \"{{component.skpolling}}\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n</div>\"\n      }\n    ]\n  }\n]"
+              },
+              "customCSS": {},
+              "customScript": {},
+              "nodeTitle": {
+                "value": "NOP UI Page"
+              },
+              "formFieldsList": {
+                "value": []
+              }
+            },
+            "idUnique": "3wi21s8m6z"
+          },
+          "position": {
+            "x": 180,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0l2wixhsne",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 330,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
+        {
+          "data": {
+            "id": "eb1bysmec8",
+            "source": "3ee83zk75y",
+            "target": "1enfsjxk26"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "yopd2fxcn7",
+            "source": "g3fjjwek2w",
+            "target": "yynulv8yeb"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5t56vr7ku2",
+            "source": "8oyztdnwu5",
+            "target": "kwpyaae519"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "e6u3besr3u",
+            "source": "4fkmxgeymw",
+            "target": "8oyztdnwu5",
+            "multiValueSourceId": "js0k5824y5"
+          },
+          "position": {
+            "x": 64,
+            "y": 52
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "vrryn89iue",
+            "source": "g3fjjwek2w",
+            "target": "1ohcgdfjo7"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "cb778ngjuz",
+            "source": "3ee83zk75y",
+            "target": "1bl9rp6dau"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "a1r7ex5r90",
+            "source": "1ohcgdfjo7",
+            "target": "h587i6xj7d"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4h680lyaqn",
+            "source": "h587i6xj7d",
+            "target": "4fkmxgeymw"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ffexmouk4s",
+            "source": "4fkmxgeymw",
+            "target": "ox6ma86kdd",
+            "multiValueSourceId": "qtli5t2v0s"
+          },
+          "position": {
+            "x": 64,
+            "y": 92
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lab7ec0p9k",
+            "source": "ox6ma86kdd",
+            "target": "cbi02bqueo"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "jdt1j91a62",
+            "source": "4fkmxgeymw",
+            "target": "xno164x8z3",
+            "multiValueSourceId": "-1"
+          },
+          "position": {
+            "x": 64,
+            "y": 132
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "x0lix0cvjn",
+            "source": "xno164x8z3",
+            "target": "86prlikz2u"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "av5x1q89nj",
+            "source": "kwpyaae519",
+            "target": "3ee83zk75y"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "k6uguflx2b",
+            "source": "vsubgtuwhp",
+            "target": "ox4aeyqpvy"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ky6dxolslm",
+            "source": "ox4aeyqpvy",
+            "target": "sapftogoql"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "iselnofa4",
+            "source": "sapftogoql",
+            "target": "g3fjjwek2w"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "224y1c27ra",
+            "source": "m0q1qd57ia",
+            "target": "0l2wixhsne"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "afw73til0k",
+            "source": "0l2wixhsne",
+            "target": "vsubgtuwhp"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "inputSchema": [
+    {
+      "description": "",
+      "isExpanded": true,
+      "preferredControlType": "textField",
+      "preferredDataType": "string",
+      "propertyName": "p1UserId"
+    },
+    {
+      "description": "",
+      "isExpanded": true,
+      "preferredControlType": "textField",
+      "preferredDataType": "object",
+      "propertyName": "matchedUserObject"
+    },
+    {
+      "description": "Username from PingOne SSO",
+      "isExpanded": true,
+      "preferredControlType": "textField",
+      "preferredDataType": "string",
+      "propertyName": "username"
+    }
+  ],
+  "flowColor": "#ff661c",
+  "savedDate": 1711108374433,
+  "variables": [
+    {
+      "context": "flowInstance",
+      "createdDate": 1711103267292,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "fields": {
+        "type": "string",
+        "displayName": null,
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "companyName##SK##flowInstance",
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+    }
+  ],
+  "connections": []
+}
