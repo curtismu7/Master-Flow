@@ -1,5 +1,5 @@
 {
-  "companyId": "6b95bf3d-386f-4d1a-9fe4-e6689d924567",
+  "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
@@ -8,10 +8,10 @@
     "errorConnector",
     "annotationConnector"
   ],
-  "createdDate": 1710077464194,
-  "currentVersion": 14,
+  "createdDate": 1711108375063,
+  "currentVersion": 7,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1710077466892,
+  "deployedDate": 1711108384407,
   "description": "Imported on Wed Jan 17 2024 17:18:45 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -20,22 +20,22 @@
       "properties": {
         "p1UserId": {
           "description": "",
-          "preferredDataType": "string",
           "isExpanded": true,
+          "preferredDataType": "string",
           "type": "string",
           "name": "p1UserId"
         },
         "matchedUserObject": {
           "description": "",
-          "preferredDataType": "object",
           "isExpanded": true,
+          "preferredDataType": "object",
           "type": "object",
           "name": "matchedUserObject"
         },
         "username": {
           "description": "Username from PingOne SSO",
-          "preferredDataType": "string",
           "isExpanded": true,
+          "preferredDataType": "string",
           "type": "string",
           "name": "username"
         }
@@ -47,21 +47,22 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Progressive Profiling subflow",
-  "publishedVersion": 14,
+  "publishedVersion": 7,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
-    "useCustomCSS": true,
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css"
     ],
-    "logLevel": 1
+    "logLevel": 3,
+    "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1710077466893,
-  "flowId": "d928327ff3abf1db228e40d07f9df54b",
-  "versionId": 14,
+  "trigger": {},
+  "updatedDate": 1711108384407,
+  "flowId": "469b5d714ce9beae23c57c7a5d5ba99d",
+  "versionId": 7,
   "graphData": {
     "elements": {
       "nodes": [
@@ -77,58 +78,68 @@
             "capabilityName": "customHTMLTemplate",
             "type": "trigger",
             "properties": {
-              "nodeTitle": {
-                "value": "User Details Form"
+              "buttonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              },
+              "cancelButtonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Skip\"\n      }\n    ]\n  }\n]"
+              },
+              "customCSS": {},
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\">\n    <div style=\"max-width: 400px; width: 400%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column\">\n          <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n        {{#if title}}\n          <h1 class=\"text-center mb-4\">{{title}}</h1>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          {{#if textTwo}}\n          <p class=\"text-muted text-center\">{{textTwo}}</p>\n          {{/if}}\n\n          <!-- Generic Error Message -->\n          <p id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi \" data-skcomponent=\"skerror\"></p>\n\n          <!-- Form Validation Error Message -->\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"givenName\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"middleInitial\" data-skcomponent=\"skerrormessage\">\n          </p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"familyName\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phoneCode\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phone\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"dob\" data-skcomponent=\"skerrormessage\"></p>\n\n          <form id=\"profileForm\" data-id=\"profileForm\" class=\"form\">\n            <div class=\"mb-4 p-0\">\n              <div style=\"display:flex\">\n                {{#unless hasGivenName}}\n                <div class=\"mb-4 form-floating\" style=\"flex:4\">\n                  <input id=\"givenName\" data-id=\"givenName\" class=\"form-control\" type=\"text\" name=\"givenName\"\n              placeholder=\"First Name\" autocomplete=\"off\" />\n                  <label id=\"givenNameLabel\" data-id=\"givenNameLabel\" class=\"form-label\" for=\"givenName\">First Name</label>\n                </div>\n                {{/unless}}\n              </div>\n              {{#unless hasFamilyName}}\n              <div class=\"mb-4 form-floating\">\n                <input id=\"familyName\" data-id=\"familyName\" class=\"form-control\" type=\"text\" placeholder=\"Last Name\"\n              autocomplete=\"off\" name=\"familyName\" />\n                <label id=\"familyNameLabel\" data-id=\"familyNameLabel\" class=\"form-label\" for=\"familyName\">Last Name</label>\n              </div>\n              {{/unless}}\n              {{#unless hasPrimaryPhone}}\n              <div style=\"display:flex\">\n                <div class=\"mb-4 form-floating\" style=\"flex: 1\">\n                  <input id=\"phoneCode\" data-id=\"phoneCode\" class=\"form-control\" type=\"text\" placeholder=\"Code\"\n              autocomplete=\"off\" name=\"phoneCode\" />\n                  <label id=\"phoneCodeLabel\" data-id=\"phoneCodeLabel\" class=\"form-label\" for=\"phoneCode\">Code</label>\n                </div>\n                <div class=\"mb-4 form-floating ms-3\" style=\"flex: 4\">\n                  <input id=\"phone\" data-id=\"phone\" class=\"form-control\" type=\"text\" placeholder=\"Phone Number\"\n              autocomplete=\"off\" name=\"phone\" />\n                  <label id=\"phoneLabel\" data-id=\"phoneLabel\" class=\"form-label\" for=\"phone\">Phone Number</label>\n                </div>\n              </div>\n              {{/unless}}\n              {{#unless hasDob}}\n              <div class=\"mb-4 form-floating\">\n                <input id=\"dob\" data-id=\"dob\" class=\"form-control\" type=\"date\" placeholder=\"Birthdate\"\n              autocomplete=\"off\" name=\"dob\" />\n                <label id=\"dobLabel\" data-id=\"dobLabel\" class=\"form-label\" for=\"dob\">Birthdate</label>\n              </div>\n              {{/unless}}\n            </div>\n            {{#if buttonLabel}}\n            <div class=\"d-flex flex-column\">\n              <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\"\n              data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"profileForm\"\n              data-skbuttonvalue=\"SUBMIT\">\n              {{buttonLabel}}\n            </button>\n            </div>\n            {{/if}}\n            {{#if cancelButtonLabel}}\n            <div class=\"d-flex flex-column\">\n              <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                  data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\">\n                  {{cancelButtonLabel}}\n              </button>\n            </div>\n            {{/if}}\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+              },
+              "customScript": {
+                "value": "const setFieldFocus = (id) => {\r\n    const element = document.getElementById(id);\r\n    if (element) {\r\n        element.focus();\r\n    }\r\n}\r\nconst start = () => {\r\n    setFieldFocus(\"givenName\")\r\n}\r\n\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}"
               },
               "formFieldsList": {
                 "value": [
                   {
+                    "displayName": "Given Name",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
                     "propertyName": "givenName",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": false,
-                    "displayName": "Given Name"
+                    "value": ""
                   },
                   {
+                    "displayName": "Middle Initial",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
                     "propertyName": "middleInitial",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": false,
-                    "displayName": "Middle Initial"
+                    "value": ""
                   },
                   {
+                    "displayName": "Family Name",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
                     "propertyName": "familyName",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": false,
-                    "displayName": "Family Name"
+                    "value": ""
                   },
                   {
+                    "displayName": "Phone Code",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
                     "propertyName": "phoneCode",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"+1\"\n      }\n    ]\n  }\n]",
-                    "hashedVisibility": false,
-                    "displayName": "Phone Code"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"+1\"\n      }\n    ]\n  }\n]"
                   },
                   {
+                    "displayName": "phone",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
                     "propertyName": "phone",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": false,
-                    "displayName": "phone"
+                    "value": ""
                   },
                   {
-                    "propertyName": "dob",
+                    "displayName": "Date of Birth",
+                    "hashedVisibility": false,
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": false,
-                    "displayName": "Date of Birth"
+                    "propertyName": "dob",
+                    "value": ""
                   },
                   {
                     "preferredControlType": "textField",
@@ -137,55 +148,44 @@
                   }
                 ]
               },
-              "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\">\n    <div style=\"max-width: 400px; width: 400%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column\">\n          <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n        {{#if title}}\n          <h1 class=\"text-center mb-4\">{{title}}</h1>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          {{#if textTwo}}\n          <p class=\"text-muted text-center\">{{textTwo}}</p>\n          {{/if}}\n\n          <!-- Generic Error Message -->\n          <p id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi \" data-skcomponent=\"skerror\"></p>\n\n          <!-- Form Validation Error Message -->\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"givenName\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"middleInitial\" data-skcomponent=\"skerrormessage\">\n          </p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"familyName\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phoneCode\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phone\" data-skcomponent=\"skerrormessage\"></p>\n          <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"dob\" data-skcomponent=\"skerrormessage\"></p>\n\n          <form id=\"profileForm\" data-id=\"profileForm\" class=\"form\">\n            <div class=\"mb-4 p-0\">\n              <div style=\"display:flex\">\n                {{#unless hasGivenName}}\n                <div class=\"mb-4 form-floating\" style=\"flex:4\">\n                  <input id=\"givenName\" data-id=\"givenName\" class=\"form-control\" type=\"text\" name=\"givenName\"\n              placeholder=\"First Name\" autocomplete=\"off\" />\n                  <label id=\"givenNameLabel\" data-id=\"givenNameLabel\" class=\"form-label\" for=\"givenName\">First Name</label>\n                </div>\n                {{/unless}}\n              </div>\n              {{#unless hasFamilyName}}\n              <div class=\"mb-4 form-floating\">\n                <input id=\"familyName\" data-id=\"familyName\" class=\"form-control\" type=\"text\" placeholder=\"Last Name\"\n              autocomplete=\"off\" name=\"familyName\" />\n                <label id=\"familyNameLabel\" data-id=\"familyNameLabel\" class=\"form-label\" for=\"familyName\">Last Name</label>\n              </div>\n              {{/unless}}\n              {{#unless hasPrimaryPhone}}\n              <div style=\"display:flex\">\n                <div class=\"mb-4 form-floating\" style=\"flex: 1\">\n                  <input id=\"phoneCode\" data-id=\"phoneCode\" class=\"form-control\" type=\"text\" placeholder=\"Code\"\n              autocomplete=\"off\" name=\"phoneCode\" />\n                  <label id=\"phoneCodeLabel\" data-id=\"phoneCodeLabel\" class=\"form-label\" for=\"phoneCode\">Code</label>\n                </div>\n                <div class=\"mb-4 form-floating ms-3\" style=\"flex: 4\">\n                  <input id=\"phone\" data-id=\"phone\" class=\"form-control\" type=\"text\" placeholder=\"Phone Number\"\n              autocomplete=\"off\" name=\"phone\" />\n                  <label id=\"phoneLabel\" data-id=\"phoneLabel\" class=\"form-label\" for=\"phone\">Phone Number</label>\n                </div>\n              </div>\n              {{/unless}}\n              {{#unless hasDob}}\n              <div class=\"mb-4 form-floating\">\n                <input id=\"dob\" data-id=\"dob\" class=\"form-control\" type=\"date\" placeholder=\"Birthdate\"\n              autocomplete=\"off\" name=\"dob\" />\n                <label id=\"dobLabel\" data-id=\"dobLabel\" class=\"form-label\" for=\"dob\">Birthdate</label>\n              </div>\n              {{/unless}}\n            </div>\n            {{#if buttonLabel}}\n            <div class=\"d-flex flex-column\">\n              <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\"\n              data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"profileForm\"\n              data-skbuttonvalue=\"SUBMIT\">\n              {{buttonLabel}}\n            </button>\n            </div>\n            {{/if}}\n            {{#if cancelButtonLabel}}\n            <div class=\"d-flex flex-column\">\n              <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                  data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\">\n                  {{cancelButtonLabel}}\n              </button>\n            </div>\n            {{/if}}\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
-              },
-              "customCSS": {},
-              "customScript": {
-                "value": "const setFieldFocus = (id) => {\r\n    const element = document.getElementById(id);\r\n    if (element) {\r\n        element.focus();\r\n    }\r\n}\r\nconst start = () => {\r\n    setFieldFocus(\"givenName\")\r\n}\r\n\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}"
-              },
-              "validationRules": {
-                "value": []
-              },
-              "nodeDescription": {
-                "value": "Name, phone, dob"
-              },
-              "inputSchema": {
-                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"cancelButtonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Cancel Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"cancelButtonLabel\"\n        },\n        \"hasPrimaryPhone\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasPrimaryPhone\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasPrimaryPhone\"\n        },\n        \"hasFamilyName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasFamilyName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasFamilyName\"\n        },\n        \"hasGivenName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasGivenName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasGivenName\"\n        },\n        \"hasDob\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasDob\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasDob\"\n        }\n    }\n}"
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"User Details\"\n      }\n    ]\n  }\n]"
-              },
-              "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please update your profile information.\"\n      }\n    ]\n  }\n]"
-              },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
-              "cancelButtonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Skip\"\n      }\n    ]\n  }\n]"
-              },
-              "hasPrimaryPhone": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasPrimaryPhone\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"children\": [\n          {\n            \"text\": \"hasPrimaryPhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "hasDob": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasDob\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasDob}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasDob}}\",\n        \"children\": [\n          {\n            \"text\": \"hasDob\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "hasFamilyName": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasFamilyName\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasFamilyName}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasFamilyName}}\",\n        \"children\": [\n          {\n            \"text\": \"hasFamilyName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "hasMiddleName": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasMiddleName\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasMiddleName}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasMiddleName}}\",\n        \"children\": [\n          {\n            \"text\": \"hasMiddleName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "hasGivenName": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasGivenName\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasGivenName}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasGivenName}}\",\n        \"children\": [\n          {\n            \"text\": \"hasGivenName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "hasDob": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasDob\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasDob}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasDob}}\",\n        \"children\": [\n          {\n            \"text\": \"hasDob\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "hasMiddleName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasMiddleName\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasMiddleName}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasMiddleName}}\",\n        \"children\": [\n          {\n            \"text\": \"hasMiddleName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "hasPrimaryPhone": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasPrimaryPhone\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"children\": [\n          {\n            \"text\": \"hasPrimaryPhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"cancelButtonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Cancel Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"cancelButtonLabel\"\n        },\n        \"hasPrimaryPhone\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasPrimaryPhone\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasPrimaryPhone\"\n        },\n        \"hasFamilyName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasFamilyName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasFamilyName\"\n        },\n        \"hasGivenName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasGivenName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasGivenName\"\n        },\n        \"hasDob\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasDob\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasDob\"\n        }\n    }\n}"
+              },
+              "nodeDescription": {
+                "value": "Name, phone, dob"
+              },
+              "nodeTitle": {
+                "value": "User Details Form"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please update your profile information.\"\n      }\n    ]\n  }\n]"
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"User Details\"\n      }\n    ]\n  }\n]"
+              },
+              "validationRules": {
+                "value": []
               }
-            },
-            "idUnique": "26h9g91wqe"
+            }
           },
           "position": {
-            "x": 1024,
-            "y": 574
+            "x": 1140,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -211,34 +211,32 @@
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"submit\"\n      }\n    ]\n  }\n]"
+              "nodeDescription": {
+                "value": "Check which button was clicked"
               },
               "nodeTitle": {
                 "value": "User Details Form Button Action"
               },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"submit\"\n      }\n    ]\n  }\n]"
+              },
               "rightValueMultiple": {
                 "value": [
                   {
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"SUBMIT\"\n      }\n    ]\n  }\n]",
-                    "id": "js0k5824y5"
+                    "id": "js0k5824y5",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"SUBMIT\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]",
-                    "id": "qtli5t2v0s"
+                    "id": "qtli5t2v0s",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeDescription": {
-                "value": "Check which button was clicked"
               }
-            },
-            "isDisabled": false,
-            "idUnique": "k7b2vqp99u"
+            }
           },
           "position": {
-            "x": 1324,
-            "y": 574
+            "x": 1440,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -252,11 +250,12 @@
         {
           "data": {
             "id": "h587i6xj7d",
-            "nodeType": "EVAL"
+            "nodeType": "EVAL",
+            "properties": {}
           },
           "position": {
-            "x": 1144,
-            "y": 574
+            "x": 1260,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -279,28 +278,28 @@
             "capabilityName": "createErrorResponse",
             "type": "action",
             "properties": {
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
               "claimsNameValuePairs": {
                 "value": [
                   {
-                    "name": "cancelReturn",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]",
                     "key": 0.0932499621179339,
                     "label": "cancelReturn (boolean - flowInstance)",
-                    "type": "boolean"
+                    "name": "cancelReturn",
+                    "type": "boolean",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               },
               "nodeTitle": {
                 "value": "Return to authentication"
-              },
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
               }
             }
           },
           "position": {
-            "x": 1654,
-            "y": 694
+            "x": 1770,
+            "y": 690
           },
           "group": "nodes",
           "removed": false,
@@ -322,8 +321,8 @@
             }
           },
           "position": {
-            "x": 1474,
-            "y": 694
+            "x": 1590,
+            "y": 690
           },
           "group": "nodes",
           "removed": false,
@@ -360,17 +359,17 @@
                   }
                 ]
               },
+              "family": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"familyName\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.familyName}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.familyName}}\",\n        \"children\": [\n          {\n            \"text\": \"familyName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "given": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"givenName\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.givenName}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.givenName}}\",\n        \"children\": [\n          {\n            \"text\": \"givenName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "identifier": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "primaryPhone": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"phoneCode\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.phoneCode}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.phoneCode}}\",\n        \"children\": [\n          {\n            \"text\": \"phoneCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"phone\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"children\": [\n          {\n            \"text\": \"phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "given": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"givenName\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.givenName}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.givenName}}\",\n        \"children\": [\n          {\n            \"text\": \"givenName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "family": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"familyName\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.familyName}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.familyName}}\",\n        \"children\": [\n          {\n            \"text\": \"familyName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.parameters.username}}\",\n        \"tooltip\": \"{{global.parameters.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -378,8 +377,8 @@
             }
           },
           "position": {
-            "x": 1654,
-            "y": 574
+            "x": 1770,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -396,17 +395,17 @@
             "nodeType": "EVAL",
             "label": "Evaluator",
             "properties": {
-              "ehfaskhvxq": {
+              "1enfsjxk26": {
                 "value": "anyTriggersFalse"
               },
-              "1enfsjxk26": {
+              "ehfaskhvxq": {
                 "value": "anyTriggersFalse"
               }
             }
           },
           "position": {
-            "x": 1804,
-            "y": 574
+            "x": 1920,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -429,29 +428,29 @@
             "capabilityName": "createSuccessResponse",
             "type": "action",
             "properties": {
-              "nodeTitle": {
-                "value": "Success"
-              },
               "backgroundColor": {
                 "value": "#9dc967ff"
               },
               "claimsNameValuePairs": {
                 "value": [
                   {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.6422169511089648,
                     "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "id",
                     "type": "string",
-                    "nameDefault": "id"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "nodeTitle": {
+                "value": "Success"
               }
             }
           },
           "position": {
-            "x": 1954,
-            "y": 574
+            "x": 2100,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -474,6 +473,18 @@
             "capabilityName": "customFunction",
             "type": "trigger",
             "properties": {
+              "code": {
+                "value": "// check for blank fields in PingOne\n// If country code is left (+1) then phone will return true, even though you did not actually enter a phone number\nmodule.exports = a = async ({params}) => {\n\n\tlet jsonObject = params.matchedUserObject;\n\t// Initialize variables to hold the boolean values\n    let hasDob = jsonObject.hasOwnProperty('dob');\n    let hasGivenName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('given');\n    let hasFamilyName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('family');\n    let hasPrimaryPhone = jsonObject.hasOwnProperty('primaryPhone');\n\n     // Check if all properties are true\n    let allTrue = hasDob && hasGivenName && hasMiddleName && hasFamilyName && hasPrimaryPhone;\n\n    // Explicitly set the return statement\n    return {\n        hasDob: hasDob,\n        hasGivenName: hasGivenName,\n        hasFamilyName: hasFamilyName,\n        hasPrimaryPhone: hasPrimaryPhone,\n        allTrue: allTrue\n    };\n}"
+              },
+              "nodeDescription": {
+                "value": " If country code is left (+1) then phone will return true, even though you did not actually enter a phone number.  This uses primary phone, not Mobile."
+              },
+              "nodeTitle": {
+                "value": "Check for user attributes that are blank"
+              },
+              "outputSchema": {
+                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"hasDob\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasGivenName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasFamilyName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasPrimaryPhone\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"allTrue\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t}\n\t\t}\n\t}\n}"
+              },
               "variableInputList": {
                 "value": [
                   {
@@ -482,24 +493,12 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"matchedUserObject\",\n        \"data\": \"{{global.parameters.matchedUserObject}}\",\n        \"tooltip\": \"{{global.parameters.matchedUserObject}}\",\n        \"children\": [\n          {\n            \"text\": \"matchedUserObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "code": {
-                "value": "// check for blank fields in PingOne\n// If country code is left (+1) then phone will return true, even though you did not actually enter a phone number\nmodule.exports = a = async ({params}) => {\n\n\tlet jsonObject = params.matchedUserObject;\n\t// Initialize variables to hold the boolean values\n    let hasDob = jsonObject.hasOwnProperty('dob');\n    let hasGivenName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('given');\n    let hasFamilyName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('family');\n    let hasPrimaryPhone = jsonObject.hasOwnProperty('primaryPhone');\n\n     // Check if all properties are true\n    let allTrue = hasDob && hasGivenName && hasMiddleName && hasFamilyName && hasPrimaryPhone;\n\n    // Explicitly set the return statement\n    return {\n        hasDob: hasDob,\n        hasGivenName: hasGivenName,\n        hasFamilyName: hasFamilyName,\n        hasPrimaryPhone: hasPrimaryPhone,\n        allTrue: allTrue\n    };\n}"
-              },
-              "outputSchema": {
-                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"hasDob\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasGivenName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasFamilyName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasPrimaryPhone\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"allTrue\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t}\n\t\t}\n\t}\n}"
-              },
-              "nodeTitle": {
-                "value": "Check for user attributes that are blank"
-              },
-              "nodeDescription": {
-                "value": " If country code is left (+1) then phone will return true, even though you did not actually enter a phone number.  This uses primary phone, not Mobile."
               }
             }
           },
           "position": {
-            "x": 394,
-            "y": 574
+            "x": 480,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -514,11 +513,12 @@
           "data": {
             "id": "ox4aeyqpvy",
             "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "properties": {}
           },
           "position": {
-            "x": 514,
-            "y": 574
+            "x": 600,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -541,26 +541,26 @@
             "capabilityName": "AEqualsB",
             "type": "trigger",
             "properties": {
-              "type": {
-                "value": "boolean"
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"allTrue\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.allTrue}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.allTrue}}\",\n        \"children\": [\n          {\n            \"text\": \"allTrue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "Getting return value from function"
               },
               "nodeTitle": {
                 "value": "Are all fields blank?"
               },
-              "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"allTrue\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.allTrue}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.allTrue}}\",\n        \"children\": [\n          {\n            \"text\": \"allTrue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
-              "nodeDescription": {
-                "value": "Getting return value from function"
+              "type": {
+                "value": "boolean"
               }
             }
           },
           "position": {
-            "x": 694,
-            "y": 574
+            "x": 780,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -583,30 +583,29 @@
             "capabilityName": "createSuccessResponse",
             "type": "action",
             "properties": {
-              "nodeTitle": {
-                "value": "Success fields already filled in"
-              },
               "backgroundColor": {
                 "value": "#9dc967ff"
               },
               "claimsNameValuePairs": {
                 "value": [
                   {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.36941178144495623,
                     "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "p1UserId",
                     "type": "string",
-                    "nameDefault": "p1UserId"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "nodeTitle": {
+                "value": "Success fields already filled in"
               }
-            },
-            "idUnique": "b1ol4zfkxm"
+            }
           },
           "position": {
-            "x": 1024,
-            "y": 724
+            "x": 1140,
+            "y": 720
           },
           "group": "nodes",
           "removed": false,
@@ -628,8 +627,8 @@
             }
           },
           "position": {
-            "x": 814,
-            "y": 574
+            "x": 930,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -652,30 +651,29 @@
             "capabilityName": "customErrorMessage",
             "type": "action",
             "properties": {
-              "errorMessage": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"An unexpected error has occurred\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeTitle": {
-                "value": "Received an unexpected value"
+              "errorCode": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
               },
               "errorDescription": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"An unexpected password state was received\"\n      }\n    ]\n  }\n]"
               },
-              "errorCode": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
+              "errorMessage": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"An unexpected error has occurred\"\n      }\n    ]\n  }\n]"
               },
               "errorReason": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Received an unexpected password state value from PingOne\"\n      }\n    ]\n  }\n]"
               },
               "nodeDescription": {
                 "value": "Received an unexpected value for the password status"
+              },
+              "nodeTitle": {
+                "value": "Received an unexpected value"
               }
-            },
-            "idUnique": "2md6xh3o4n"
+            }
           },
           "position": {
-            "x": 1624,
-            "y": 814
+            "x": 1740,
+            "y": 810
           },
           "group": "nodes",
           "removed": false,
@@ -689,11 +687,12 @@
         {
           "data": {
             "id": "xno164x8z3",
-            "nodeType": "EVAL"
+            "nodeType": "EVAL",
+            "properties": {}
           },
           "position": {
-            "x": 1474,
-            "y": 814
+            "x": 1590,
+            "y": 810
           },
           "group": "nodes",
           "removed": false,
@@ -708,41 +707,41 @@
           "data": {
             "id": "hj5dxeadr3",
             "nodeType": "ANNOTATION",
-            "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
             "capabilityName": "updateAnnotationProperties",
             "type": "action",
             "properties": {
-              "backgroundColor": {
-                "value": "#4462edff"
+              "annotation": {
+                "value": "PingOne SSO progressive profiling"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
               },
-              "annotation": {
-                "value": "PingOne SSO progressive profiling"
+              "backgroundColor": {
+                "value": "#4462edff"
               },
-              "width": {
-                "value": 1800
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "fontSize": {
-                "value": 16
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 16
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 1800
               }
-            },
-            "status": "configured"
+            }
           },
           "position": {
-            "x": 304,
+            "x": 431,
             "y": 214
           },
           "group": "nodes",
@@ -758,42 +757,42 @@
           "data": {
             "id": "fel55dj3x1",
             "nodeType": "ANNOTATION",
-            "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
             "capabilityName": "updateAnnotationProperties",
             "type": "action",
             "properties": {
-              "backgroundColor": {
-                "value": "#5D00D6ff"
+              "annotation": {
+                "value": "Check for blank fields on PingOne user"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
               },
-              "annotation": {
-                "value": "Check for blank fields on PingOne user"
+              "backgroundColor": {
+                "value": "#5D00D6ff"
               },
-              "width": {
-                "value": 500
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 500
               }
-            },
-            "status": "configured"
+            }
           },
           "position": {
-            "x": 304,
-            "y": 394
+            "x": 420,
+            "y": 390
           },
           "group": "nodes",
           "removed": false,
@@ -808,43 +807,42 @@
           "data": {
             "id": "9vzel3wm4x",
             "nodeType": "ANNOTATION",
-            "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
             "capabilityName": "updateAnnotationProperties",
             "type": "action",
             "properties": {
-              "backgroundColor": {
-                "value": "#5D00D6ff"
+              "annotation": {
+                "value": "Update user at PingOne SSO"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
               },
-              "annotation": {
-                "value": "Update user at PingOne SSO"
+              "backgroundColor": {
+                "value": "#5D00D6ff"
               },
-              "width": {
-                "value": 500
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 500
               }
-            },
-            "status": "configured",
-            "idUnique": "se6gos6y4w"
+            }
           },
           "position": {
-            "x": 1444,
-            "y": 394
+            "x": 1560,
+            "y": 390
           },
           "group": "nodes",
           "removed": false,
@@ -859,32 +857,33 @@
           "data": {
             "id": "u51gyogc86",
             "nodeType": "ANNOTATION",
-            "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
             "capabilityName": "updateAnnotationProperties",
             "type": "action",
             "properties": {
-              "backgroundColor": {
-                "value": "#f7f7adff"
+              "annotation": {
+                "value": "Input Schema: p1UserId, matchedUserObject"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Input Schema: p1UserId, matchedUserObject"
+              "backgroundColor": {
+                "value": "#f7f7adff"
               },
-              "width": {
-                "value": 400
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": false
@@ -892,16 +891,14 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 400
               }
-            },
-            "status": "configured",
-            "idUnique": "d2mbrib33f"
+            }
           },
           "position": {
-            "x": 214,
-            "y": 454
+            "x": 330,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -916,10 +913,11 @@
           "data": {
             "id": "8oyztdnwu5",
             "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "properties": {}
           },
           "position": {
-            "x": 1470,
+            "x": 1590,
             "y": 600
           },
           "group": "nodes",
@@ -935,32 +933,33 @@
           "data": {
             "id": "9k1qkstwp8",
             "nodeType": "ANNOTATION",
-            "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
             "capabilityName": "updateAnnotationProperties",
             "type": "action",
             "properties": {
-              "backgroundColor": {
-                "value": "#f2f3f4ff"
+              "annotation": {
+                "value": "check result of JS"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "check result of JS"
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
               },
-              "width": {
-                "value": 240
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": true
@@ -968,14 +967,13 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 240
               }
-            },
-            "status": "configured"
+            }
           },
           "position": {
-            "x": 660,
+            "x": 780,
             "y": 480
           },
           "group": "nodes",
@@ -991,32 +989,33 @@
           "data": {
             "id": "ufrs9wfta3",
             "nodeType": "ANNOTATION",
-            "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "name": "Annotation",
+            "status": "configured",
             "capabilityName": "updateAnnotationProperties",
             "type": "action",
             "properties": {
-              "backgroundColor": {
-                "value": "#f2f3f4ff"
+              "annotation": {
+                "value": "Update PingOne SSO user"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Update PingOne SSO user"
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
               },
-              "width": {
-                "value": 240
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": true
@@ -1024,15 +1023,13 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 240
               }
-            },
-            "status": "configured",
-            "idUnique": "9r73v7lmig"
+            }
           },
           "position": {
-            "x": 1500,
+            "x": 1620,
             "y": 480
           },
           "group": "nodes",
@@ -1056,27 +1053,83 @@
             "capabilityName": "customErrorMessage",
             "type": "action",
             "properties": {
-              "errorMessage": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne SSO user update failed\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeTitle": {
-                "value": "PingOne SSO user update failed"
+              "errorCode": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" Invalid username and/or password\"\n      }\n    ]\n  }\n]"
               },
               "errorDescription": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Failed to udpate pingone user\"\n      }\n    ]\n  }\n]"
               },
-              "errorCode": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" Invalid username and/or password\"\n      }\n    ]\n  }\n]"
+              "errorMessage": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne SSO user update failed\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeDescription": {
                 "value": "Failed to validate the submitted password"
+              },
+              "nodeTitle": {
+                "value": "PingOne SSO user update failed"
               }
-            },
-            "idUnique": "egdq283aqc"
+            }
           },
           "position": {
-            "x": 1980,
+            "x": 2100,
             "y": 720
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "m0q1qd57ia",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "customHTML": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div style=\\\"display: none\\\">\\n\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"data\": \"[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMTAiIHBvbGxSZXRyaWVzPSIxIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjEwIiwicG9sbFJldHJpZXMiOiIxIiwicG9sbENoYWxsZW5nZVN0YXR1cyI6ImZhbHNlIn0sImNvbXBvbmVudFByb3BzIjp7ImNsYXNzIjp7Im5hbWUiOiJjbGFzcyIsImRpc3BsYXlOYW1lIjoiQ1NTIENsYXNzIn0sInBvbGxJbnRlcnZhbCI6eyJuYW1lIjoicG9sbEludGVydmFsIiwiZGlzcGxheU5hbWUiOiJQb2xsIEludGVydmFsIiwidmFsdWUiOjIwMDB9LCJwb2xsUmV0cmllcyI6eyJuYW1lIjoicG9sbFJldHJpZXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgUmV0cmllcyIsInZhbHVlIjo2MH0sInBvbGxDaGFsbGVuZ2VTdGF0dXMiOnsibmFtZSI6InBvbGxDaGFsbGVuZ2VTdGF0dXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgQ2hhbGxlbmdlIFN0YXR1cyIsInR5cGUiOiJzZWxlY3QiLCJ2YWx1ZSI6InRydWUiLCJvcHRpb25zIjpbeyJuYW1lIjoiVHJ1ZSIsInZhbHVlIjoidHJ1ZSJ9LHsibmFtZSI6IkZhbHNlIiwidmFsdWUiOiJmYWxzZSJ9XX19fQ==]]]\",\n        \"src\": \"auth.svg\",\n        \"url\": \"skpolling\",\n        \"children\": [\n          {\n            \"text\": \"skpolling\"\n          }\n        ],\n        \"component\": \"skpolling\",\n        \"options\": {\n          \"class\": \"\",\n          \"pollInterval\": \"10\",\n          \"pollRetries\": \"1\",\n          \"pollChallengeStatus\": \"false\"\n        },\n        \"componentProps\": {\n          \"class\": {\n            \"name\": \"class\",\n            \"displayName\": \"CSS Class\"\n          },\n          \"pollInterval\": {\n            \"name\": \"pollInterval\",\n            \"displayName\": \"Poll Interval\",\n            \"value\": 2000\n          },\n          \"pollRetries\": {\n            \"name\": \"pollRetries\",\n            \"displayName\": \"Poll Retries\",\n            \"value\": 60\n          },\n          \"pollChallengeStatus\": {\n            \"name\": \"pollChallengeStatus\",\n            \"displayName\": \"Poll Challenge Status\",\n            \"type\": \"select\",\n            \"value\": \"true\",\n            \"options\": [\n              {\n                \"name\": \"True\",\n                \"value\": \"true\"\n              },\n              {\n                \"name\": \"False\",\n                \"value\": \"false\"\n              }\n            ]\n          }\n        },\n        \"tooltip\": \"{{component.skpolling}}\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n</div>\"\n      }\n    ]\n  }\n]"
+              },
+              "customCSS": {},
+              "customScript": {},
+              "nodeTitle": {
+                "value": "NOP UI Page"
+              },
+              "formFieldsList": {
+                "value": []
+              }
+            },
+            "idUnique": "3wi21s8m6z"
+          },
+          "position": {
+            "x": 180,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0l2wixhsne",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 330,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -1395,6 +1448,44 @@
           "grabbable": true,
           "pannable": true,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "224y1c27ra",
+            "source": "m0q1qd57ia",
+            "target": "0l2wixhsne"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "afw73til0k",
+            "source": "0l2wixhsne",
+            "target": "vsubgtuwhp"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
         }
       ]
     },
@@ -1417,36 +1508,37 @@
   },
   "inputSchema": [
     {
-      "propertyName": "p1UserId",
       "description": "",
-      "preferredDataType": "string",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "string",
+      "propertyName": "p1UserId"
     },
     {
-      "propertyName": "matchedUserObject",
       "description": "",
+      "isExpanded": true,
+      "preferredControlType": "textField",
       "preferredDataType": "object",
-      "preferredControlType": "textField",
-      "isExpanded": true
+      "propertyName": "matchedUserObject"
     },
     {
-      "propertyName": "username",
       "description": "Username from PingOne SSO",
-      "preferredDataType": "string",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "string",
+      "propertyName": "username"
     }
   ],
-  "flowColor": "#E3F0FF",
-  "savedDate": 1710077463585,
+  "flowColor": "#ff661c",
+  "savedDate": 1711108374433,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1705511925047,
+      "createdDate": 1711103267292,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": "",
+        "displayName": null,
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -1454,7 +1546,7 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "6b95bf3d-386f-4d1a-9fe4-e6689d924567"
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     }
   ],
   "connections": []
