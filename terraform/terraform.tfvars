@@ -1,18 +1,18 @@
-admin_environment_id      = "875e9c7d-a69d-4402-861b-1cc4ca24e7e9"
-admin_client_id           = "281bb27a-2c37-43d4-ab3e-2b2829a3295f"
-admin_client_secret       = "5j.LkqOVACaxl9KTU610nlF1eOdE~wMxJ74.3TTXVTXYEaGZko5G9SpgilXh33lD"
+admin_environment_id      = ""
+admin_client_id           = ""
+admin_client_secret       = ""
 region                    = "NorthAmerica"
 license_name              = "INTERNAL"
-admin_user_id             = "0af3abf8-51c7-4f4a-9232-265faef8795a"
-dv_admin_username         = "kylemoorehead@pingidentity.com"
-dv_admin_password         = "Temporary098@"
-organization_id           = "953388fc-2a02-447e-b0df-fcfa5842dfbe"
+admin_user_id             = ""
+dv_admin_username         = ""
+dv_admin_password         = ""
+organization_id           = ""
 
 #############
 #  PingOne  #
 #############
 
-environment_name = "PingOne Master Flow - Modules"
+environment_name = "PingOne Master Flow 1.1"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "<h1>END-USER LICENSE AGREEMENT</h1><p>GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action.</p>"
