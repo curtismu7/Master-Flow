@@ -206,3 +206,22 @@ variable "davinci_variable_showRegButton_value" {
 variable "davinci_variable_stopSign_value" {
   description = "Value for davinci_variable_stopSign_value variable"
 }
+
+variable "davinci_variable_gv-captchaThreshold" {
+  description = "Value for davinci_variable_gv-captchaThreshold variable"
+}
+variable "davinci_variable_gv-reCaptcha" {
+  description = "Value for davinci_variable_gv-reCaptcha variable"
+}
+variable "davinci_variable_gv-captchaV3SiteKey" {
+  description = "Value for davinci_variable_gv-captchaV3SiteKey variable"
+}
+variable "davinci_variable_gv-autoEnrollEmailMFA" {
+  description = "Value for davinci_variable_gv-autoEnrollEmailMFA variable"
+}
+variable "davinci_variable_gv-agreement" {
+  description = "Value for davinci_variable_gv-agreement variable"
+}
+variable "pingone_verify_policy_default_id" {
+  description = "Value for pingone_verify_policy_default_id variable"
+}

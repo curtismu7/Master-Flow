@@ -79,7 +79,7 @@ resource "davinci_connection" "Http" {
 resource "davinci_connection" "Node" {
   connector_id   = "nodeConnector"
   environment_id = var.pingone_environment_master_flow_environment_id
-  name           = "Node"
+  name           = "Teleport"
 }
 
 resource "davinci_connection" "PingOne" {
@@ -137,6 +137,27 @@ resource "davinci_connection" "PingOne-MFA" {
   property {
     name  = "region"
     value = var.davinci_connection_PingOne_region
+  }
+}
+
+resource "davinci_connection" "PingOne-Authorize" {
+  connector_id   = "pingOneAuthorizeConnector"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  name           = "PingOne Authorize"
+
+  property {
+    name  = "clientId"
+    value = var.pingone_application_dv_worker_app_oidc_options_client_id
+  }
+
+  property {
+    name  = "clientSecret"
+    value = var.pingone_application_dv_worker_app_oidc_options_client_secret
+  }
+
+  property {
+    name  = "endpointURL"
+    value = ""
   }
 }
 
@@ -383,8 +404,6 @@ resource "davinci_variable" "gv-mfaOnHighRisk" {
   name           = "gv-mfaOnHighRisk"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-mfaOnHighRisk}"
-
-
 }
 
 resource "davinci_variable" "gv-riskScreenDisplay" {
@@ -1117,4 +1136,71 @@ resource "davinci_variable" "stopSign" {
   value          = "${var.davinci_variable_stopSign_value}"
 
 
+}
+
+resource "davinci_variable" "gv-captchaThreshold" {
+  context        = "company"
+  description    = "reCAPTCHA v3 Threshold"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-captchaThreshold"
+  type           = "string"
+  value          = "${var.davinci_variable_gv-captchaThreshold}"
+}
+resource "davinci_variable" "gv-reCaptcha" {
+  context        = "company"
+  description    = "Determines whether reCAPTCHA is enabled"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-reCaptcha"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-reCaptcha}"
+}
+resource "davinci_variable" "gv-captchaV3SiteKey" {
+  context        = "company"
+  description    = "reCAPTCHA v3 Site Key"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-captchaV3SiteKey"
+  type           = "string"
+  value          = "${var.davinci_variable_gv-captchaV3SiteKey}"
+}
+resource "davinci_variable" "gv-autoEnrollEmailMFA" {
+  context        = "company"
+  description    = "Determins whether email should be auto enrolled in MFA"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-autoEnrollEmailMFA"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-autoEnrollEmailMFA}"
+}
+resource "davinci_variable" "gv-agreement" {
+  context        = "company"
+  description    = ""
+  environment_id = var.pingone_environment_master_flow_environment_id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-agreement"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-agreement}"
+}
+resource "davinci_variable" "gv-verifyPolicyId" {
+  context        = "company"
+  description    = "PingOne Verify Policy ID"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-verifyPolicyId"
+  type           = "boolean"
+  value          = var.pingone_verify_policy_default_id
 }

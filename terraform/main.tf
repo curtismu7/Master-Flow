@@ -14,8 +14,6 @@ provider "pingone" {
   client_secret  = var.admin_client_secret
   environment_id = var.admin_environment_id
   region         = var.region
-
-  force_delete_production_type = false
 }
 
 provider "davinci" {
@@ -89,6 +87,7 @@ module "davinci" {
   pingone_password_policy_standard_password_policy             = jsonencode(data.pingone_password_policy.standard_password_policy)
   pingone_population_default_population_id                     = data.pingone_population.default_population.id
   pingone_agreement_master_flow_agreement_id                   = pingone_agreement.master_flow_agreement.id
+  pingone_verify_policy_default_id                             = data.pingone_verify_policy.default_policy.id
 
   # TFVars
   dv_admin_username                                  = var.dv_admin_username
@@ -138,7 +137,11 @@ module "davinci" {
   davinci_variable_rpid_value                        = var.davinci_variable_rpid_value
   davinci_variable_showRegButton_value               = var.davinci_variable_showRegButton_value
   davinci_variable_stopSign_value                    = var.davinci_variable_stopSign_value
-
+  davinci_variable_gv-captchaThreshold               = var.davinci_variable_gv-captchaThreshold
+  davinci_variable_gv-reCaptcha                      = var.davinci_variable_gv-reCaptcha
+  davinci_variable_gv-captchaV3SiteKey               = var.davinci_variable_gv-captchaV3SiteKey
+  davinci_variable_gv-autoEnrollEmailMFA             = var.davinci_variable_gv-autoEnrollEmailMFA
+  davinci_variable_gv-agreement                      = var.davinci_variable_gv-agreement
 }
 
 module "davinci_flows" {
@@ -158,12 +161,12 @@ module "davinci_flows" {
   davinci_connection_Variables_id                = module.davinci.davinci_connection_Variables_id
   davinci_connection_PingOne_id                  = module.davinci.davinci_connection_PingOne_id
   davinci_connection_PingOne-MFA_id              = module.davinci.davinci_connection_PingOne-MFA_id
+  davinci_connection_PingOne-Authorize_id        = module.davinci.davinci_connection_PingOne-Authorize_id
   davinci_connection_PingOne-Notifications_id    = module.davinci.davinci_connection_PingOne-Notifications_id
   davinci_connection_PingOne-Verify_id           = module.davinci.davinci_connection_PingOne-Verify_id
   davinci_connection_PingOne-Protect_id          = module.davinci.davinci_connection_PingOne-Protect_id
   davinci_connection_PingOne-Authentication_id   = module.davinci.davinci_connection_PingOne-Authentication_id
   davinci_connections_read_connections           = module.davinci.davinci_connections_read_connections
-
   # TFVars
   dv_admin_username                                  = var.dv_admin_username
   dv_admin_password                                  = var.dv_admin_password
@@ -209,6 +212,11 @@ data "pingone_role" "identity_data_admin" {
 
 data "pingone_role" "client_application_developer" {
   name = "Client Application Developer"
+}
+
+data "pingone_verify_policy" "default_policy" {
+  environment_id = pingone_environment.master_flow_environment.id
+  default        = true
 }
 
 #############

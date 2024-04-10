@@ -55,6 +55,10 @@ variable "davinci_connection_PingOne-MFA_id" {
     
 }
 
+variable "davinci_connection_PingOne-Authorize_id" {
+    
+}
+
 variable "davinci_connection_PingOne-Notifications_id" {
     
 }

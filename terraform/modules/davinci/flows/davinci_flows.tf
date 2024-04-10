@@ -131,7 +131,7 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-registration-subflow"
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -196,7 +196,7 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-Subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -246,7 +246,7 @@ resource "davinci_flow" "PingOne-MFA-Authentication-subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -311,7 +311,7 @@ resource "davinci_flow" "PingOne-MFA-Device-Management-Subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -430,7 +430,7 @@ resource "davinci_flow" "PingOne-Protect-subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -490,7 +490,7 @@ resource "davinci_flow" "PingOne-SSO-Account-Verification-subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -568,6 +568,11 @@ resource "davinci_flow" "PingOne-SSO-Authentication-MASTER" {
   }
 
   subflow_link {
+    id   = davinci_flow.PingOne-SSO-User-Registration-subflow.id
+    name = "PingOne SSO User Registration subflow"
+  }
+
+  subflow_link {
     id   = davinci_flow.PingOne-Protect-subflow.id
     name = "PingOne Protect subflow"
   }
@@ -608,8 +613,13 @@ resource "davinci_flow" "PingOne-SSO-Authentication-MASTER" {
   }
 
   subflow_link {
-    id   = davinci_flow.PingOne-SSO-User-Registration-subflow.id
-    name = "PingOne SSO User Registration subflow"
+    id   = davinci_flow.PingOne-Authorize-subflow.id
+    name = "PingOne Authorize Flow"
+  }
+
+    subflow_link {
+    id   = davinci_flow.PingOne-reCAPTCHA-v3-subflow.id
+    name = "PingOne reCAPTCHA v3 Sign On Example"
   }
 
   depends_on = [
@@ -685,7 +695,7 @@ resource "davinci_flow" "PingOne-SSO-Consent-subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -735,7 +745,7 @@ resource "davinci_flow" "PingOne-SSO-Forgot-Password-subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -910,7 +920,7 @@ resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow"
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -970,7 +980,7 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -1032,6 +1042,7 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
   ]
 }
 
+
 resource "davinci_flow" "PingOne-Security-Question-and-Answer-Validation-subflow" {
   connection_link {
     id   = var.davinci_connection_Annotation_id
@@ -1062,6 +1073,7 @@ resource "davinci_flow" "PingOne-Security-Question-and-Answer-Validation-subflow
   ]
 }
 
+/*
 resource "davinci_flow" "PingOne-Session-Main-Flow" {
   connection_link {
     id   = var.davinci_connection_Annotation_id
@@ -1075,7 +1087,7 @@ resource "davinci_flow" "PingOne-Session-Main-Flow" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -1086,16 +1098,18 @@ resource "davinci_flow" "PingOne-Session-Main-Flow" {
   deploy         = "true"
   environment_id = var.pingone_environment_master_flow_environment_id
   flow_json      = "${file("${path.module}/data/flows/flow_PingOne Session Main Flow.json")}"
-
+/*
   subflow_link {
     id   = davinci_flow.PingOne-Sign-On-with-Registration-Password-Reset-and-Recovery.id
     name = "PingOne Sign On with Registration, Password Reset and Recovery"
   }
-
+* /
   depends_on = [
     var.davinci_connections_read_connections
   ]
 }
+
+
 
 resource "davinci_flow" "PingOne-Sign-On-with-Registration-Password-Reset-and-Recovery" {
   connection_link {
@@ -1120,7 +1134,7 @@ resource "davinci_flow" "PingOne-Sign-On-with-Registration-Password-Reset-and-Re
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {
@@ -1135,7 +1149,7 @@ resource "davinci_flow" "PingOne-Sign-On-with-Registration-Password-Reset-and-Re
   depends_on = [
     var.davinci_connections_read_connections
   ]
-}
+}*/
 
 resource "davinci_flow" "PingOne-Verify-subflow" {
   connection_link {
@@ -1154,8 +1168,103 @@ resource "davinci_flow" "PingOne-Verify-subflow" {
   }
 
   connection_link {
+    id   = var.davinci_connection_Node_id
+    name = "Teleport"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_PingOne_id
+    name = "PingOne"
+  }
+
+  connection_link {
     id   = var.davinci_connection_PingOne-Verify_id
     name = "PingOne Verify"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Variables_id
+    name = "Variables"
+  }
+
+  deploy         = "true"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Verify subflow.json")}"
+
+  depends_on = [
+    var.davinci_connections_read_connections
+  ]
+}
+
+resource "davinci_flow" "PingOne-reCAPTCHA-v3-subflow" {
+  connection_link {
+    id   = var.davinci_connection_Annotation_id
+    name = "Annotation"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Functions_id
+    name = "Functions"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Http_id
+    name = "Http"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Variables_id
+    name = "Variables"
+  }
+
+  deploy         = "true"
+  environment_id = var.pingone_environment_master_flow_environment_id
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne reCAPTCHA v3  subflow.json")}"
+
+  depends_on = [
+    var.davinci_connections_read_connections
+  ]
+}
+
+resource "davinci_flow" "PingOne-Authorize-subflow" {
+  connection_link {
+    id   = var.davinci_connection_Annotation_id
+    name = "Annotation"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Functions_id
+    name = "Functions"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Http_id
+    name = "Http"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_PingOne-MFA_id
+    name = "PingOne MFA"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_PingOne-Authorize_id
+    name = "PingOne Authorize"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Functions_id
+    name = "Functions"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Error-Message_id
+    name = "Error Message"
+  }
+
+  connection_link {
+    id   = var.davinci_connection_Flow-Connector_id
+    name = "Flow Connector"
   }
 
   connection_link {
@@ -1190,7 +1299,7 @@ resource "davinci_flow" "PingOne-Auto-enroll-user-in-email" {
 
   connection_link {
     id   = var.davinci_connection_Node_id
-    name = "Node"
+    name = "Teleport"
   }
 
   connection_link {

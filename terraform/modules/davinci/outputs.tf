@@ -29,12 +29,15 @@ output "davinci_connection_PingOne_id" {
 output "davinci_connection_PingOne-MFA_id" {
     value = davinci_connection.PingOne-MFA.id
 }
+output "davinci_connection_PingOne-Authorize_id" {
+    value = davinci_connection.PingOne-Authorize.id
+}
 output "davinci_connection_PingOne-Notifications_id" {
     value = davinci_connection.PingOne-Notifications.id
 }
 
 output "davinci_connection_PingOne-Verify_id" {
-    value = davinci_connection.PingOne-Notifications.id
+    value = davinci_connection.PingOne-Verify.id
 }
 
 output "davinci_connection_PingOne-Protect_id" {

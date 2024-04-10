@@ -12,10 +12,10 @@
     "pingOneAuthenticationConnector",
     "httpConnector"
   ],
-  "createdDate": 1711385743383,
-  "currentVersion": 87,
+  "createdDate": 1712687978066,
+  "currentVersion": 150,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1711396586503,
+  "deployedDate": 1712687980057,
   "description": "Master PingOne Authentication Starting flow",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -29,7 +29,7 @@
   "isInputSchemaSaved": false,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Authentication MASTER",
-  "publishedVersion": 87,
+  "publishedVersion": 150,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -62,21 +62,22 @@
         "type": ""
       }
     ],
-    "logLevel": 3,
+    "logLevel": 1,
     "pingOneFlow": true,
     "scrubSensitiveInfo": false,
     "sensitiveInfoFields": [],
     "useBetaAlgorithm": true,
     "useCustomCSS": true,
-    "useCustomScript": true
+    "useCustomScript": true,
+    "flowTimeoutInSeconds": 4000
   },
   "timeouts": "null",
   "trigger": {
     "type": "AUTHENTICATION"
   },
-  "updatedDate": 1711396586515,
+  "updatedDate": 1712687980062,
   "flowId": "895b9ed2808cbcb36ad8789bc6579ef3",
-  "versionId": 87,
+  "versionId": 150,
   "graphData": {
     "elements": {
       "nodes": [
@@ -274,8 +275,8 @@
               },
               "subFlowId": {
                 "value": {
-                  "label": "PingOne SSO User Registration subflow",
-                  "value": "cbf38f8b255125cc7d82137a6c21b121"
+                  "label": " PingOne SSO User Registration subflow - With Magic Link",
+                  "value": "997164e38f8aeef0d9933aba811983a3"
                 }
               },
               "subFlowVersionId": {
@@ -329,8 +330,8 @@
             }
           },
           "position": {
-            "x": 1768.9216888201852,
-            "y": 2929.488881940299
+            "x": 1789.04967788588,
+            "y": 2927.535836540531
           },
           "group": "nodes",
           "removed": false,
@@ -951,7 +952,7 @@
             "type": "trigger",
             "properties": {
               "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"status\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"status\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"status\"\n\t\t},\n\t\t\"allowMFAReg\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"allowMFAReg\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"allowMFAReg\"\n\t\t},\n\t\t\"passwordlessAuth\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"passwordlessAuth\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"passwordlessAuth\"\n\t\t},\n\t\t\"rememberMe\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"rememberMe\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"rememberMe\"\n\t\t}\n\t}\n}"
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"status\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"status\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"status\"\n\t\t},\n\t\t\"allowMFAReg\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"allowMFAReg\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"allowMFAReg\"\n\t\t},\n\t\t\"passwordlessAuth\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"passwordlessAuth\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"passwordlessAuth\"\n\t\t},\n\t\t\"rememberMe\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"rememberMe\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"rememberMe\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t}\n\t}\n}"
               },
               "nodeTitle": {
                 "value": "Continue Auth"
@@ -1053,7 +1054,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"userid\",\n        \"data\": \"{{local.yz3ummxcjc.payload.output.userid}}\",\n        \"tooltip\": \"{{local.yz3ummxcjc.payload.output.userid}}\",\n        \"children\": [\n          {\n            \"text\": \"userid\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "username": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.wzzj7jakza.payload.output.username}}\",\n        \"tooltip\": \"{{local.wzzj7jakza.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.l1889w71hu.payload.output.username}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             }
           },
@@ -2489,6 +2490,9 @@
               },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"ACCOUNT_OK\"\n      }\n    ]\n  }\n]"
+              },
+              "caseSensitive": {
+                "value": false
               }
             }
           },
@@ -2522,7 +2526,7 @@
             }
           },
           "position": {
-            "x": 900,
+            "x": 870,
             "y": 3270
           },
           "group": "nodes",
@@ -2658,6 +2662,9 @@
               },
               "status": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"status\",\n        \"data\": \"{{local.a0u100wzvz.payload.output.matchedUser.lifecycle.status}}\",\n        \"tooltip\": \"{{local.a0u100wzvz.payload.output.matchedUser.lifecycle.status}}\",\n        \"children\": [\n          {\n            \"text\": \"status\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "username": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.a0u100wzvz.payload.output.matchedUser.username}}\",\n        \"tooltip\": \"{{local.a0u100wzvz.payload.output.matchedUser.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             }
           },
@@ -3649,19 +3656,25 @@
             "type": "trigger",
             "properties": {
               "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-progressiveProfiling\",\n        \"data\": \"{{global.company.variables.gv-progressiveProfiling}}\",\n        \"tooltip\": \"{{global.company.variables.gv-progressiveProfiling}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-progressiveProfiling\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-progressiveProfilingAuthentication\",\n        \"data\": \"{{global.company.variables.gv-progressiveProfilingAuthentication}}\",\n        \"tooltip\": \"{{global.company.variables.gv-progressiveProfilingAuthentication}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-progressiveProfilingAuthentication\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
                 "value": "gv-progressiveProfiling on?"
               },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "caseSensitive": {
+                "value": false
+              },
+              "type": {
+                "value": "boolean"
               }
             }
           },
           "position": {
-            "x": 960,
-            "y": 3870
+            "x": 600,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -3674,7 +3687,7 @@
         },
         {
           "data": {
-            "id": "pzwwntj7cu",
+            "id": "ka50g2qyfq",
             "nodeType": "EVAL",
             "properties": {
               "mz3xqikx95": {
@@ -3683,8 +3696,8 @@
             }
           },
           "position": {
-            "x": 1140,
-            "y": 3870
+            "x": 750,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -3751,8 +3764,8 @@
             }
           },
           "position": {
-            "x": 1530,
-            "y": 3870
+            "x": 1500,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -3793,8 +3806,8 @@
             }
           },
           "position": {
-            "x": 1350,
-            "y": 3960
+            "x": 900,
+            "y": 4020
           },
           "group": "nodes",
           "removed": false,
@@ -3826,8 +3839,8 @@
             }
           },
           "position": {
-            "x": 360,
-            "y": 3870
+            "x": 300,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -4106,7 +4119,7 @@
                 "value": "[[[skcomponent###c2tjb21wb25lbnQgInNrcmlzayIgIGVudmlyb25tZW50SWQ9IiIgY29sbGVjdEJlaGF2aW9yYWxEYXRhPSJ0cnVlIiBwcm9wZXJ0eW5hbWU9InJpc2tmcCI=###eyJuYW1lIjoic2tyaXNrIiwib3B0aW9ucyI6eyJlbnZpcm9ubWVudElkIjoiIiwiY29sbGVjdEJlaGF2aW9yYWxEYXRhIjoidHJ1ZSIsInByb3BlcnR5bmFtZSI6InJpc2tmcCJ9LCJjb21wb25lbnRQcm9wcyI6eyJlbnZpcm9ubWVudElkIjp7Im5hbWUiOiJlbnZpcm9ubWVudElkIiwiZGlzcGxheU5hbWUiOiJFbnZpcm9ubWVudCBJRCJ9LCJjb2xsZWN0QmVoYXZpb3JhbERhdGEiOnsibmFtZSI6ImNvbGxlY3RCZWhhdmlvcmFsRGF0YSIsImRpc3BsYXlOYW1lIjoiQ29sbGVjdCBiZWhhdmlvcmFsIGRhdGEiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwiaW5mbyI6IkJlaGF2aW9yYWwgZGF0YSBpcyB1c2VkIHRvIGRldGVjdCBIdW1hbi9Ob24gSHVtYW4gdXNlcnMuIEl0IGlzIHJlY29tbWVuZGVkIHRvIHNldCB0aGUgc2FtZSB2YWx1ZSB0aHJvdWdob3V0IHRoZSBmbG93LiIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfSwicHJvcGVydHluYW1lIjp7Im5hbWUiOiJwcm9wZXJ0eW5hbWUiLCJkaXNwbGF5TmFtZSI6IlJpc2sgUHJvcGVydHkgTmFtZSIsInZhbHVlIjoicmlza2ZwIiwiaW5mbyI6Ik5hbWUgZm9yIHJlZmVyZW5jaW5nIHRoaXMgcmlzayBjb21wb25lbnQifX19]]]\n<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"login-container\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                    <h1 class=\"text-center text-dark  mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    {{#if textOne}}\n                    <h2 class=\"text-center mb-4\">{{textOne}}</h2>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <h3 class=\"text-dark text-center mb-4\">{{textTwo}}</h3>\n                    {{/if}}\n                    <p class=\"text-danger mdi \" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                    <div class=\"container-fluid\">\n                        <div class=\"d-flex flex-column\" style=\"margin-top:-15px\">\n                            <button data-id=\"button\" type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnRegister\"\n                                data-skbuttonvalue=\"REGISTER\">\n                                No account? Register now!\n                        </button>\n                        </div>\n                        <form class=\"row\" id=\"usernamePasswordForm\" data-id=\"usernamePasswordForm\">\n                            <div style=\"flex: 6\">\n                                <div class=\"mb-4 form-floating\">\n                                    <input class=\"form-control\" type=\"text\" id=\"username\" name=\"username\" placeholder=\"username\"\n                            autocomplete=\"off\" value=\"\" data-id=\"username-input\" />\n                                    <label class=\"form-label\" for=\"username\">Username</label>\n                                </div>\n                                <div class=\"mb-4 form-check\">\n                                    <input\n                            class=\"form-check-input\"\n                            type=\"checkbox\"\n                            name=\"rememberMe\"\n                            autocomplete=\"off\"\n                            data-id=\"rememberMe-input\"\n                            id=\"rememberMe\" />\n                                    <label class=\"form-check-label\" for=\"rememberMe\">Remember Me?</label>\n                                </div>\n                                {{#if buttonLabel}}\n                                <div class=\"d-flex flex-column\">\n                                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3 disabled\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnSignIn\"\n                            data-skbuttonvalue=\"SIGNON\">\n                            {{buttonLabel}}\n                        </button>\n                                </div>\n                                {{/if}}\n\n\n                                <div class=\"d-flex flex-column\">\n                                    {{#if forgotUsername}}\n                                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnForgotUsername\"\n                                data-skbuttonvalue=\"FORGOTUSERNAME\" style=\"margin-top:-5px\">\n                                Forgot Your Username?\n                            </button>\n                                </div>\n                            </div>\n                    </div>\n                    {{/if}}\n                    {{#if mobile}}\n                    <div style=\"flex: 4; border-left:1px solid; border-color:grey\">\n                        {{/if}}\n                        {{#if googleLogin}}\n                        <div class=\"d-flex flex-column\">\n                            <button data-id=\"button\" type=\"submit\" class=\"btn btn-outline-primary mb-3\"\n                            data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                             data-skbuttonvalue=\"GOOGLE\">\n                            <svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\"\n                                xmlns=\"http://www.w3.org/2000/svg\">\n                                <g clip-path=\"url(#clip0_1122_1133)\">\n                                    <path d=\"M20.3052 10.4902C20.3052 9.8104 20.2501 9.12696 20.1325 8.45821H10.7002V12.309H16.1016C15.8775 13.551 15.1573 14.6496 14.1027 15.3478V17.8464H17.3252C19.2176 16.1047 20.3052 13.5326 20.3052 10.4902Z\"\n                                        fill=\"#4285F4\" />\n                                    <path d=\"M10.6999 20.2605C13.397 20.2605 15.6714 19.375 17.3286 17.8464L14.1061 15.3478C13.2096 15.9577 12.0521 16.3031 10.7036 16.3031C8.09474 16.3031 5.88272 14.5431 5.08904 12.1767H1.76367V14.7525C3.46127 18.1293 6.91892 20.2605 10.6999 20.2605Z\"\n                                        fill=\"#34A853\" />\n                                    <path d=\"M5.08564 12.1767C4.66676 10.9348 4.66676 9.58993 5.08564 8.34796V5.77218H1.76395C0.345611 8.59783 0.345611 11.9269 1.76395 14.7525L5.08564 12.1767Z\"\n                                        fill=\"#FBBC04\" />\n                                    <path d=\"M10.6999 4.21788C12.1256 4.19583 13.5035 4.7323 14.536 5.71705L17.3911 2.86201C15.5833 1.16441 13.1838 0.231105 10.6999 0.260501C6.91892 0.260501 3.46126 2.39168 1.76367 5.77217L5.08537 8.34795C5.87537 5.97794 8.09106 4.21788 10.6999 4.21788Z\"\n                                        fill=\"#EA4335\" />\n                                </g>\n                                <defs>\n                                    <clipPath id=\"clip0_1122_1133\">\n                                        <rect width=\"20\" height=\"20\" fill=\"white\" transform=\"translate(0.5 0.259827)\" />\n                                    </clipPath>\n                                </defs>\n                            </svg>\n                           Sign in with Google\n                        </button>\n                            {{/if}}\n                            {{#if facebookLogin}}\n                            <button data-id=\"button\" type=\"submit\" class=\"btn btn-outline-primary mb-3\"\n                                data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                                data-skbuttonvalue=\"FACEBOOK\" id=\"btnFacebook\">\n                                <svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\">\n                                    <rect x=\"35.5\" y=\"10.3\" width=\"52.8\" height=\"89.7\" style=\"fill: rgb(255, 255, 255);\"></rect>\n                                    <path d=\"M94.5,0h-89C2.5,0,0,2.5,0,5.5v89c0,3,2.5,5.5,5.5,5.5h47.9V61.3h-13V46.2h13V35.1c0-12.9,7.9-19.9,19.4-19.9 c5.5,0,10.3,0.4,11.6,0.6v13.5l-8,0c-6.3,0-7.5,3-7.5,7.3v9.6h14.9L82,61.3H69V100h25.5c3,0,5.5-2.5,5.5-5.5v-89 C100,2.5,97.5,0,94.5,0z\" style=\"fill: rgb(24, 119, 242);\"></path>\n                                </svg>\n                            Sign in with Facebook\n                        </button>\n                            {{/if}}\n                            {{#if microsoftLogin}}\n                            <button data-id=\"submit-button\" type=\"submit\" class=\"btn btn-outline-primary mb-3\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"AZURE\" id=\"btnAzure\">\n                                <svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\">\n                                    <rect width=\"47.37\" height=\"47.37\" style=\"fill: rgb(242, 80, 34);\"></rect>\n                                    <rect y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(0, 164, 239);\"></rect>\n                                    <rect x=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(127, 186, 0);\"></rect>\n                                    <rect x=\"52.63\" y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(255, 185, 0);\"></rect>\n                                </svg>\n                            Sign in with Microsoft\n                        </button>\n                            {{/if}}\n                            {{#if githubLogin}}\n                            <button data-id=\"submit-button\" type=\"submit\" class=\"btn btn-outline-primary mb-3\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"GITHUB\" id=\"btnGithub\">\n                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"22\" viewBox=\"0 0 24 24\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"/></svg>\n                            Sign in with Github\n                        </button>\n                            {{/if}}\n                        </div>\n                    </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n</div>"
               },
               "customScript": {
-                "value": "const focusOnFirstInputElement = () => {\n    document.getElementById(\"username\").focus();\n};\n// stop the browser back button\nwindow.history.pushState(null, null, window.location.href);\nwindow.onpopstate = function () {\nwindow.history.go(1);\n};\n\n// Get references to the input fields and the submit button\nconst usernameInput = document.getElementById('username');\nconst submitBtn = document.getElementById('btnSignIn');\n\n// Function to check the input values and remove disabled if both are not empty\nfunction checkInputs() {\n  if (usernameInput.value) {\n    // If both fields have values, remove the disabled class from the submit button\n    submitBtn.classList.remove('disabled'); \n  } else {\n    // Optional: Add the class back if either field is empty \n    if (!submitBtn.classList.contains('disabled')) {\n      submitBtn.classList.add('disabled'); \n    }\n  }\n}\n\nusernameInput.addEventListener('input', checkInputs);\n\n"
+                "value": "const focusOnFirstInputElement = () => {\n  document.getElementById(\"username\").focus();\n\n};\n// stop the browser back button\nwindow.history.pushState(null, null, window.location.href);\nwindow.onpopstate = function () {\n  window.history.go(1);\n};\n// Get references to the input fields and the submit button\nconst usernameInput = document.getElementById('username');\nconst submitBtn = document.getElementById('btnSignIn');\n\n//Shade username as red\ndocument.getElementById('username').addEventListener('focus', function () {\n  $('#username').css('border', '1px solid red');\n  checkInputs();\n});\n//Focus on username\nfocusOnFirstInputElement()\n\n\n\n\n\n// Function to check the input values and remove disabled if both are not empty\nfunction checkInputs() {\n    if (usernameInput.value) {\n      // If  fields have values, remove the disabled class from the submit button, and clear red shading\n      submitBtn.classList.remove('disabled');\n\n      $('#username').css('border', '1px solid #8b9197');\n    } else {\n      // Optional: Add the class back if either field is empty, and add red shading\n      if (!submitBtn.classList.contains('disabled')) {\n        submitBtn.classList.add('disabled');\n  \n        $('#username').css('border', '1px solid red');\n      }\n    }\n  }\n\nusernameInput.addEventListener('input', checkInputs);\n\n"
               },
               "facebookLogin": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-facebookLogin\",\n        \"data\": \"{{global.company.variables.gv-facebookLogin}}\",\n        \"tooltip\": \"{{global.company.variables.gv-facebookLogin}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-facebookLogin\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -5204,8 +5217,8 @@
             }
           },
           "position": {
-            "x": 2830.726786884936,
-            "y": 898.6724244885211
+            "x": 2820,
+            "y": 960
           },
           "group": "nodes",
           "removed": false,
@@ -5689,13 +5702,16 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"status\",\n        \"data\": \"{{local.4mdojx42x7.payload.output.matchedUser.lifecycle.status}}\",\n        \"tooltip\": \"{{local.4mdojx42x7.payload.output.matchedUser.lifecycle.status}}\",\n        \"children\": [\n          {\n            \"text\": \"status\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "username": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.xpdik8xk08.payload.output.username}}\",\n        \"tooltip\": \"{{local.xpdik8xk08.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.wzzj7jakza.payload.output.username}}\",\n        \"tooltip\": \"{{local.wzzj7jakza.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Continue Auth"
               }
             }
           },
           "position": {
-            "x": 2623.302574788113,
-            "y": 2007.6295215215152
+            "x": 2670,
+            "y": 2010
           },
           "group": "nodes",
           "removed": false,
@@ -5729,8 +5745,8 @@
             }
           },
           "position": {
-            "x": 2355.6186385852443,
-            "y": 2007.6295215215152
+            "x": 2400,
+            "y": 2010
           },
           "group": "nodes",
           "removed": false,
@@ -5752,8 +5768,8 @@
             }
           },
           "position": {
-            "x": 2462.692213066392,
-            "y": 2007.6295215215152
+            "x": 2520,
+            "y": 2010
           },
           "group": "nodes",
           "removed": false,
@@ -5782,8 +5798,8 @@
             }
           },
           "position": {
-            "x": 2650.0709684084,
-            "y": 2114.7030960026627
+            "x": 2700,
+            "y": 2100
           },
           "group": "nodes",
           "removed": false,
@@ -7050,10 +7066,10 @@
                 "value": ".login-container {\n  width: 500px;\n\n  @media screen and (max-width: 768px) {\n    width: 500px;\n  }\n\n  @media screen and (max-width: 540px) {\n    width: 360px;\n  }\n}\n\n.btn-outline {\n  border: 1px solid;\n}\n\n/* .hr-text {\n  width: 100%;\n  text-align: center;\n  margin: 10px 0 20px; \n  position: relative;\n}\n\n.hr-text::before {\n  content: \"\";\n  display: block;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n  position: absolute;\n  left: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n.hr-text span {\n  display: inline-block;\n  padding: 0 10px;\n  position: relative;\n  top: -0.5em;\n  background: transparent;\n  z-index: 1;\n} */\n\n.hr-text {\n  display: flex;\n  align-items: center;\n  text-align: center;\n  margin-bottom: 2%;\n}\n\n.hr-text::before,\n.hr-text::after {\n  content: '';\n  flex: 1;\n  border-bottom: 1px solid #000; /* You can change the color as needed */\n}\n\n.hr-text span {\n  margin: 0 10px; /* Adjust the spacing around the text as needed */\n}"
               },
               "customHTML": {
-                "value": "[[[skcomponent###c2tjb21wb25lbnQgInNrcmlzayIgIGVudmlyb25tZW50SWQ9IiIgY29sbGVjdEJlaGF2aW9yYWxEYXRhPSJ0cnVlIiBwcm9wZXJ0eW5hbWU9InJpc2tmcCI=###eyJuYW1lIjoic2tyaXNrIiwib3B0aW9ucyI6eyJlbnZpcm9ubWVudElkIjoiIiwiY29sbGVjdEJlaGF2aW9yYWxEYXRhIjoidHJ1ZSIsInByb3BlcnR5bmFtZSI6InJpc2tmcCJ9LCJjb21wb25lbnRQcm9wcyI6eyJlbnZpcm9ubWVudElkIjp7Im5hbWUiOiJlbnZpcm9ubWVudElkIiwiZGlzcGxheU5hbWUiOiJFbnZpcm9ubWVudCBJRCJ9LCJjb2xsZWN0QmVoYXZpb3JhbERhdGEiOnsibmFtZSI6ImNvbGxlY3RCZWhhdmlvcmFsRGF0YSIsImRpc3BsYXlOYW1lIjoiQ29sbGVjdCBiZWhhdmlvcmFsIGRhdGEiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwiaW5mbyI6IkJlaGF2aW9yYWwgZGF0YSBpcyB1c2VkIHRvIGRldGVjdCBIdW1hbi9Ob24gSHVtYW4gdXNlcnMuIEl0IGlzIHJlY29tbWVuZGVkIHRvIHNldCB0aGUgc2FtZSB2YWx1ZSB0aHJvdWdob3V0IHRoZSBmbG93LiIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfSwicHJvcGVydHluYW1lIjp7Im5hbWUiOiJwcm9wZXJ0eW5hbWUiLCJkaXNwbGF5TmFtZSI6IlJpc2sgUHJvcGVydHkgTmFtZSIsInZhbHVlIjoicmlza2ZwIiwiaW5mbyI6Ik5hbWUgZm9yIHJlZmVyZW5jaW5nIHRoaXMgcmlzayBjb21wb25lbnQifX19]]]\n<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"login-container\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    {{#if textOne}}\n                    <h2 class=\" text-center mb-4\">{{textOne}}</h2>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <h3 class=\"text-muted text-center mb-4\">{{textTwo}}</h3>\n                    {{/if}}\n                    <p class=\"text-danger mdi \" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                    <div class=\"container-fluid\">\n                        <div class=\"d-flex flex-column\" style=\"margin-top:-15px\">\n                            <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnRegister\"\n                                data-skbuttonvalue=\"REGISTER\">\n                                No account? Register now!\n                        </button>\n                        </div>\n                        <form class=\"row\" id=\"usernamePasswordForm\" data-id=\"usernamePasswordForm\">\n                            <div style=\"flex: 6\">\n                                <div class=\"mb-4 form-floating\">\n                                    <input class=\"form-control\" type=\"text\" id=\"username\" name=\"username\" placeholder=\"username\"\n                            autocomplete=\"off\" value=\"\" data-id=\"username-input\" />\n                                    <label class=\"form-label\" for=\"username\">Username</label>\n                                </div>\n                                <div id=\"passwordContainer\" class=\"mb-4 form-floating\">\n                                    <input class=\"form-control\" type=\"password\" id=\"password\" name=\"password\" placeholder=\"Password\"\n                            autocomplete=\"off\" value=\"\" data-id=\"password-input\" />\n                                    <label class=\"form-label\" for=\"password\">Password</label>\n                                </div>\n                                <div class=\"d-flex flex-column\">\n                                    <div class=\"mb-4 form-check\">\n                                        <input\n                            class=\"form-check-input\"\n                            type=\"checkbox\"\n                            name=\"rememberMe\"\n                            autocomplete=\"off\"\n                            data-id=\"rememberMe-input\"\n                            id=\"rememberMe\" />\n\n                                        <label class=\"form-check-label\" for=\"rememberMe\">Remember Me?</label>\n                                    </div>\n                                    <p class=\"text-danger mdi \" data-id=\"passwordFeedback\" id=\"passwordFeedback\"\n                                        style=\"display:none;\">Warning Caps Lock is On</p>\n\n                                    {{#if buttonLabel}}\n                                    <div id='passwordSignIn' class=\"d-flex flex-column\">\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-primary mb-3 disabled\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnSignIn\"\n                                    data-skbuttonvalue=\"SIGNON\">\n                                    {{buttonLabel}}\n                                    </button>\n                                        <button  style='display:none;' data-id=\"submit-button\" type=\"button\" class=\"btn btn-primary mb-3 disabled\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\"  data-skbuttonvalue=\"PASSWORDLESS\" id=\"btnPasswordless\" data-skform=\"usernamePasswordForm\">\n                                    <i class=\"mdi mdi-fingerprint text-dark fs-2\" aria-hidden=\"true\"></i>\n                                    {{buttonLabel}}\n                                    </button>\n                                    </div>\n                                    {{/if}}\n                                    <div class=\"d-flex flex-column\">\n                                        {{#if forgotUsername}}\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnForgotUsername\"\n                                    data-skbuttonvalue=\"FORGOTUSERNAME\" style=\"margin-top:-5px\">\n                                    Forgot Your Username?\n                                   </button>\n                                        {{/if}}\n                                        {{#if forgotPassword}}\n\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnForgotPassword\"\n                                    data-skbuttonvalue=\"FORGOTPASSWORD\">\n                                    Forgot your Password?\n                                   </button>\n                                        {{/if}}\n\n                                        {{#if reCaptcha\n}}\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"reCaptcha\"\n                                    data-skbuttonvalue=\"reCaptcha\">\n                                    reCAPTCHA V3\n                                   </button>\n                                        {{/if}}\n\n                                    </div>\n                                    <!-- <div class=\"hr-text\" /> -->\n\n\n                                    {{#if mobile}}\n                                    <div style=\"flex: 4; border-left:1px solid; border-color:grey\">\n                                        {{/if}}\n                                        <div class=\"d-flex flex-column\">\n                                            {{#if allowPasswordless}}\n                                            <button  data-id=\"submit-button\" type=\"button\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                        id=\"btnTogglePasswordless\">\n                                        <i id='toggleIcon' class=\"mdi mdi-fingerprint text-dark fs-2\" aria-hidden=\"true\"></i>\n                                        <span id='toggleText' class=\"btn-link\">Sign in with Passwordless</span>\n                                        </button>\n                                            {{/if}}\n\n                                            <div id=\"authButtonsContainer\"\n                                                style=\"display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;\">\n                                                <!-- Buttons will be inserted here -->\n                                            </div>\n                                        </div>\n                                        <div class=\"d-flex flex-column\">\n                                            {{#if googleLogin}}\n                                            <button id='btngoogleSubmit' style='display:none' data-id=\"button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                        data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                                        data-skbuttonvalue=\"GOOGLE\">\n                                        </button>\n                                            {{/if}}\n                                            {{#if facebookLogin}}\n                                            <button data-id=\"button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                        data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                                        data-skbuttonvalue=\"FACEBOOK\" id=\"btnfacebookSubmit\" style='display:none'>\n                                        </button>\n                                            {{/if}}\n                                            {{#if microsoftLogin}}\n                                            <button data-id=\"submit-button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\" data-skcomponent=\"skbutton\"\n                                        data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"AZURE\" id=\"btnazureSubmit\" style='display:none'>\n                                        </button>\n                                            {{/if}}\n                                            {{#if githubLogin}}\n                                            <button data-id=\"submit-button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\" data-skcomponent=\"skbutton\"\n                                        data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"GITHUB\" id=\"btngithubSubmit\" style='display:none'>\n                                        </button>\n                                            {{/if}}\n\n                                        </div>\n                                    </div>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "[[[skcomponent###c2tjb21wb25lbnQgInNrcmlzayIgIGVudmlyb25tZW50SWQ9IiIgY29sbGVjdEJlaGF2aW9yYWxEYXRhPSJ0cnVlIiBwcm9wZXJ0eW5hbWU9InJpc2tmcCI=###eyJuYW1lIjoic2tyaXNrIiwib3B0aW9ucyI6eyJlbnZpcm9ubWVudElkIjoiIiwiY29sbGVjdEJlaGF2aW9yYWxEYXRhIjoidHJ1ZSIsInByb3BlcnR5bmFtZSI6InJpc2tmcCJ9LCJjb21wb25lbnRQcm9wcyI6eyJlbnZpcm9ubWVudElkIjp7Im5hbWUiOiJlbnZpcm9ubWVudElkIiwiZGlzcGxheU5hbWUiOiJFbnZpcm9ubWVudCBJRCJ9LCJjb2xsZWN0QmVoYXZpb3JhbERhdGEiOnsibmFtZSI6ImNvbGxlY3RCZWhhdmlvcmFsRGF0YSIsImRpc3BsYXlOYW1lIjoiQ29sbGVjdCBiZWhhdmlvcmFsIGRhdGEiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwiaW5mbyI6IkJlaGF2aW9yYWwgZGF0YSBpcyB1c2VkIHRvIGRldGVjdCBIdW1hbi9Ob24gSHVtYW4gdXNlcnMuIEl0IGlzIHJlY29tbWVuZGVkIHRvIHNldCB0aGUgc2FtZSB2YWx1ZSB0aHJvdWdob3V0IHRoZSBmbG93LiIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfSwicHJvcGVydHluYW1lIjp7Im5hbWUiOiJwcm9wZXJ0eW5hbWUiLCJkaXNwbGF5TmFtZSI6IlJpc2sgUHJvcGVydHkgTmFtZSIsInZhbHVlIjoicmlza2ZwIiwiaW5mbyI6Ik5hbWUgZm9yIHJlZmVyZW5jaW5nIHRoaXMgcmlzayBjb21wb25lbnQifX19]]]\n<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"login-container\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    {{#if textOne}}\n                    <h2 class=\" text-center mb-4\">{{textOne}}</h2>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <h3 class=\"text-muted text-center mb-4\">{{textTwo}}</h3>\n                    {{/if}}\n                    <p class=\"text-danger mdi \" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                    <div class=\"container-fluid\">\n                        <div class=\"d-flex flex-column\" style=\"margin-top:-15px\">\n                            <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnRegister\"\n                                data-skbuttonvalue=\"REGISTER\">\n                                No account? Register now!\n                        </button>\n                        </div>\n                        <form class=\"row\" id=\"usernamePasswordForm\" data-id=\"usernamePasswordForm\">\n                            <div style=\"flex: 6\">\n                                <div class=\"mb-4 form-floating\">\n                                    <input class=\"form-control\" type=\"text\" id=\"username\" name=\"username\" placeholder=\"username\"\n                            autocomplete=\"off\" value=\"\" data-id=\"username-input\" />\n                                    <label class=\"form-label\" for=\"username\">Username</label>\n                                </div>\n                                <div id=\"passwordContainer\" class=\"mb-4 form-floating\">\n                                    <input class=\"form-control\" type=\"password\" id=\"password\" name=\"password\" placeholder=\"Password\"\n                            autocomplete=\"off\" value=\"\" data-id=\"password-input\" />\n                                    <label class=\"form-label\" for=\"password\">Password</label>\n                                </div>\n                                <div class=\"d-flex flex-column\">\n                                    <div class=\"mb-4 form-check\">\n                                        <input\n                            class=\"form-check-input\"\n                            type=\"checkbox\"\n                            name=\"rememberMe\"\n                            autocomplete=\"off\"\n                            data-id=\"rememberMe-input\"\n                            id=\"rememberMe\" />\n\n                                        <label class=\"form-check-label\" for=\"rememberMe\">Remember Me?</label>\n                                    </div>\n                                    <p class=\"text-danger mdi \" data-id=\"passwordFeedback\" id=\"passwordFeedback\"\n                                        style=\"display:none;\">Warning Caps Lock is On</p>\n\n                                    {{#if buttonLabel}}\n                                    <div id='passwordSignIn' class=\"d-flex flex-column\">\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-primary mb-3 disabled\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnSignIn\"\n                                    data-skbuttonvalue=\"SIGNON\">\n                                    {{buttonLabel}}\n                                    </button>\n                                        <button  style='display:none;' data-id=\"submit-button\" type=\"button\" class=\"btn btn-primary mb-3 disabled\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\"  data-skbuttonvalue=\"PASSWORDLESS\" id=\"btnPasswordless\" data-skform=\"usernamePasswordForm\">\n                                    <i class=\"mdi mdi-fingerprint text-dark fs-2\" aria-hidden=\"true\"></i>\n                                    {{buttonLabel}}\n                                    </button>\n                                    </div>\n                                    {{/if}}\n                                    <div class=\"d-flex flex-column\">\n                                        {{#if forgotUsername}}\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnForgotUsername\"\n                                    data-skbuttonvalue=\"FORGOTUSERNAME\" style=\"margin-top:-5px\">\n                                    Forgot Username?\n                                   </button>\n                                        {{/if}}\n                                        {{#if forgotPassword}}\n\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnForgotPassword\"\n                                    data-skbuttonvalue=\"FORGOTPASSWORD\">\n                                    Forgot Password?\n                                   </button>\n                                        {{/if}}\n\n                                        {{#if reCaptcha\n}}\n                                        <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"reCaptcha\"\n                                    data-skbuttonvalue=\"reCaptcha\">\n                                    reCAPTCHA V3\n                                   </button>\n                                        {{/if}}\n\n                                    </div>\n                                    <!-- <div class=\"hr-text\" /> -->\n\n\n                                    {{#if mobile}}\n                                    <div style=\"flex: 4; border-left:1px solid; border-color:grey\">\n                                        {{/if}}\n                                        <div class=\"d-flex flex-column\">\n                                            {{#if allowPasswordless}}\n                                            <button  data-id=\"submit-button\" type=\"button\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                        id=\"btnTogglePasswordless\">\n                                        <i id='toggleIcon' class=\"mdi mdi-fingerprint text-dark fs-2\" aria-hidden=\"true\"></i>\n                                        <span id='toggleText' class=\"btn-link\">Sign in with Passwordless</span>\n                                        </button>\n                                            {{/if}}\n\n                                            <div id=\"authButtonsContainer\">\n                                                <!-- Buttons will be inserted here -->\n                                            </div>\n                                        </div>\n                                        <div class=\"d-flex flex-column\">\n                                            {{#if googleLogin}}\n                                            <button id='btngoogleSubmit' style='display:none' data-id=\"button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                        data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                                        data-skbuttonvalue=\"GOOGLE\">\n                                        </button>\n                                            {{/if}}\n                                            {{#if facebookLogin}}\n                                            <button data-id=\"button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                        data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                                        data-skbuttonvalue=\"FACEBOOK\" id=\"btnfacebookSubmit\" style='display:none'>\n                                        </button>\n                                            {{/if}}\n                                            {{#if microsoftLogin}}\n                                            <button data-id=\"submit-button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\" data-skcomponent=\"skbutton\"\n                                        data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"AZURE\" id=\"btnazureSubmit\" style='display:none'>\n                                        </button>\n                                            {{/if}}\n                                            {{#if githubLogin}}\n                                            <button data-id=\"submit-button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\" data-skcomponent=\"skbutton\"\n                                        data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"GITHUB\" id=\"btngithubSubmit\" style='display:none'>\n                                        </button>\n                                            {{/if}}\n\n                                        </div>\n                                    </div>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {
-                "value": "const focusOnFirstInputElement = () => {\n  document.getElementById(\"username\").focus();\n};\n\n\n//Stop the back button\n\nwindow.history.pushState(null, null, window.location.href);\nwindow.onpopstate = function () {\nwindow.history.go(1);\n};\n\n// Get references to the input fields and the submit button\nconst usernameInput = document.getElementById('username');\nconst passwordInput = document.getElementById('password');\nconst submitBtn = document.getElementById('btnSignIn');\nlet authMethod = 'password';\nconst togglePasswordless = document.getElementById('btnTogglePasswordless');\nconst passwordlessSubmit = document.getElementById('btnPasswordless');\nconst passwordElement = document.getElementById('passwordContainer');\nconst toggleIcon = document.getElementById('toggleIcon');\nconst toggleText = document.getElementById('toggleText');\n// Check if regular SIgn in form.\nif (togglePasswordless){\ntogglePasswordless.addEventListener('click', function () {\n  if (authMethod === 'password') {\n    passwordElement.style.display = 'none';\n    passwordlessSubmit.style.display = 'block';\n    submitBtn.style.display = 'none';\n    toggleText.textContent = 'Sign in With Password';\n    toggleIcon.style.display = 'none';\n    authMethod = 'passwordless';\n    console.log(authMethod);\n  } else {\n    passwordElement.style.display = 'block';\n    passwordlessSubmit.style.display = 'none';\n    submitBtn.style.display = 'block';\n    authMethod = 'password';\n    toggleText.textContent = 'Sign in With Passwordless';\n    toggleIcon.style.display = 'inline';\n  }\n});\n}\n\nif (authMethod === 'password') {\n  // Add event listeners for input events on both fields\n  usernameInput.addEventListener('input', checkInputsPassword);\n  passwordInput.addEventListener('input', checkInputsPassword);\n} else if (authMethod === 'passwordless'); {\n  usernameInput.addEventListener('input', checkInputsPasswordless);\n}\n\n\nfunction checkInputsPassword() {\n  if (usernameInput.value && passwordInput.value) {\n    // If both fields have values, remove the disabled class from the submit button\n    submitBtn.classList.remove('disabled');\n  } else {\n    // Optional: Add the class back if either field is empty \n    if (!submitBtn.classList.contains('disabled')) {\n      submitBtn.classList.add('disabled');\n    }\n  }\n}\n\n\nfunction checkInputsPasswordless() {\n  if (usernameInput.value) {\n    // If both fields have values, remove the disabled class from the submit button\n    btnPasswordless.classList.remove('disabled');\n  } else {\n    // Optional: Add the class back if either field is empty \n    if (!btnPasswordless.classList.contains('disabled')) {\n      btnPasswordless.classList.add('disabled');\n    }\n  }\n}\n\n// Control Enter Button Functionality\n\n    var form = document.getElementById('usernamePasswordForm'); \n    var pwdSubmitBtn = document.getElementById('btnSignIn');\n    var passwordlessSubmitBtn = document.getElementById('btnPasswordless');\n    console.log('adding enter event listener');\n\n    form.addEventListener('keydown', function(event) {\n      console.log(authMethod);\n        if (event.key === \"Enter\") {\n          event.preventDefault(); // Prevent the default action\n          if (authMethod === 'password') {\n            pwdSubmitBtn.click(); // Trigger the button click\n        } else if (authMethod === 'passwordless') {\n            passwordlessSubmitBtn.click();\n        } else {\n          console.log('shouldnt be here');        }\n        }\n    });\n\n\n\n\n// Get the input field\nvar input = document.getElementById(\"password\");\n\n// Get the warning text\nvar text = document.getElementById(\"passwordFeedback\");\n\n// When the user presses any key on the keyboard, run the function\ninput.addEventListener(\"keyup\", function (event) {\n\n  // If \"caps lock\" is pressed, display the warning text\n  if (event.getModifierState(\"CapsLock\")) {\n    text.style.display = \"block\";\n  } else {\n    text.style.display = \"none\"\n  }\n});\n\n// Define which login options are enabled\nconst loginOptions = {\n  google: { enabled: {{global.company.variables.gv-googleLogin}}, backgroundColor: '#F2F2F2', color: '#1F1F1F' },\n  facebook: { enabled: {{global.company.variables.gv-facebookLogin}}, backgroundColor: '#1877F2', color: '#FFFFFF' },\n  azure: { enabled: {{global.company.variables.gv-azureLogin}}, backgroundColor: '#2F2F2F', color: '#FFFFFF' },\n  github: { enabled: {{global.company.variables.gv-githubLogin}}, backgroundColor: '#FFFFFF', color: '#2F2F2F' },\n};\n\n// Function to create a button element with color, unique ID, and setup to click another button on click\nfunction createButton(loginType, svgContent, backgroundColor, color) {\n  const button = document.createElement('button');\n  button.setAttribute('type', 'button');\n  button.classList.add('btn', 'mb-3');\n  // Create a unique ID for each button based on the loginType\n  button.id = `btn${loginType}`;\n  button.dataset.id = \"button\";\n  button.innerHTML = svgContent;\n  button.style.backgroundColor = backgroundColor;\n  button.style.color = color;\n\n  if (loginType === 'google') {\n    button.style.border = 'none';\n  } else {\n    button.style.border = '1px solid';\n  }\n\n  // Add click event listener to the button\n  button.addEventListener('click', function() {\n    // Log to console which button was clicked (for demonstration)\n    console.log(`${loginType} button clicked`);\n    // Target the \"submit\" button related to this button\n    const submitButtonId = `${button.id}Submit`;\n    const submitButton = document.getElementById(submitButtonId);\n    if (submitButton) {\n      submitButton.click(); // Programmatically click the submit button\n    } else {\n      console.log('Submit button not found:', submitButtonId);\n    }\n  });\n\n  return button;\n}\n\n// SVG content for each button\nconst svgs = {\n  google: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_1122_1133)\"><path d=\"M20.3052 10.4902C20.3052 9.8104 20.2501 9.12696 20.1325 8.45821H10.7002V12.309H16.1016C15.8775 13.551 15.1573 14.6496 14.1027 15.3478V17.8464H17.3252C19.2176 16.1047 20.3052 13.5326 20.3052 10.4902Z\" fill=\"#4285F4\" /><path d=\"M10.6999 20.2605C13.397 20.2605 15.6714 19.375 17.3286 17.8464L14.1061 15.3478C13.2096 15.9577 12.0521 16.3031 10.7036 16.3031C8.09474 16.3031 5.88272 14.5431 5.08904 12.1767H1.76367V14.7525C3.46127 18.1293 6.91892 20.2605 10.6999 20.2605Z\" fill=\"#34A853\" /><path d=\"M5.08564 12.1767C4.66676 10.9348 4.66676 9.58993 5.08564 8.34796V5.77218H1.76395C0.345611 8.59783 0.345611 11.9269 1.76395 14.7525L5.08564 12.1767Z\" fill=\"#FBBC04\" /><path d=\"M10.6999 4.21788C12.1256 4.19583 13.5035 4.7323 14.536 5.71705L17.3911 2.86201C15.5833 1.16441 13.1838 0.231105 10.6999 0.260501C6.91892 0.260501 3.46126 2.39168 1.76367 5.77217L5.08537 8.34795C5.87537 5.97794 8.09106 4.21788 10.6999 4.21788Z\" fill=\"#EA4335\" /></g><defs><clipPath id=\"clip0_1122_1133\"><rect width=\"20\" height=\"20\" fill=\"white\" transform=\"translate(0.5 0.259827)\" /></clipPath></defs></svg> Sign in with Google`,\n  facebook: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect x=\"35.5\" y=\"10.3\" width=\"52.8\" height=\"89.7\" style=\"fill: rgb(255, 255, 255);\"></rect><path d=\"M94.5,0h-89C2.5,0,0,2.5,0,5.5v89c0,3,2.5,5.5,5.5,5.5h47.9V61.3h-13V46.2h13V35.1c0-12.9,7.9-19.9,19.4-19.9 c5.5,0,10.3,0.4,11.6,0.6v13.5l-8,0c-6.3,0-7.5,3-7.5,7.3v9.6h14.9L82,61.3H69V100h25.5c3,0,5.5-2.5,5.5-5.5v-89 C100,2.5,97.5,0,94.5,0z\" style=\"fill: rgb(24, 119, 242);\"></path></svg> Sign in with Facebook`,\n  azure: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect width=\"47.37\" height=\"47.37\" style=\"fill: rgb(242, 80, 34);\"></rect><rect y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(0, 164, 239);\"></rect><rect x=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(127, 186, 0);\"></rect><rect x=\"52.63\" y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(255, 185, 0);\"></rect></svg> Sign in with Microsoft`,\n  github: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\"><rect width=\"16\" height=\"16\" fill=\"#FFFFFF\"></rect><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.976 0A7.977 7.977 0 0 0 0 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 0 1 .832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0 0 16 7.976C15.951 3.572 12.38 0 7.976 0z\"/></svg> Sign in with Github`,\n};\n\n\n// Container where buttons will be added\nconst container = document.getElementById('authButtonsContainer');\n\n// Check if any login options are enabled\nconst anyLoginEnabled = Object.values(loginOptions).some(option => option.enabled);\n\nif (anyLoginEnabled) {\n  // Create an hr element\n  const hrTextDiv = document.createElement('div');\n  hrTextDiv.className = 'hr-text';\n  hrTextDiv.innerHTML = '<span>Or Sign In With</span>';\n\n  // Insert the hr element above the container\n  container.parentNode.insertBefore(hrTextDiv, container);\n}\n\n// Iterate through the login options and create buttons for the enabled ones\nObject.keys(loginOptions).forEach(key => {\n  if (loginOptions[key].enabled) { // Check if the login option is enabled\n    const option = loginOptions[key];\n    const button = createButton(key, svgs[key], option.backgroundColor, option.color);\n    container.appendChild(button);\n  }\n});\n\nfunction makePasswordToggle(id) {\n  var container = document.getElementById(id);\n  var password = container.getElementsByTagName(\"input\")[0];\n  var toggler = document.createElement(\"button\");\n  toggler.setAttribute(\"type\", \"button\");\n  toggler.setAttribute(\"aria-label\", \"Show/Hide Password\");\n  toggler.className = \"btn mdi mdi-eye-off-outline position-absolute end-0 top-50 translate-middle-y\";\n  container.appendChild(toggler);\n\n  function showHidePassword() {\n    if (password.type == \"password\") {\n      password.setAttribute(\"type\", \"text\");\n      toggler.classList.add(\"mdi-eye-outline\");\n      toggler.classList.remove(\"mdi-eye-off-outline\");\n    } else {\n      toggler.classList.add(\"mdi-eye-off-outline\");\n      toggler.classList.remove(\"mdi-eye-outline\");\n      password.setAttribute(\"type\", \"password\");\n    }\n    password.focus();\n  };\n\n  toggler.addEventListener(\"click\", showHidePassword);\n}\n\nfunction start() {\n  makePasswordToggle(\"passwordContainer\");\n  focusOnFirstInputElement();\n}\n\nif (document.readyState === \"loading\") {\n  // Loading hasn't finished yet\n  document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n  // `DOMContentLoaded` has already fired\n  start();\n}"
+                "value": "const focusOnFirstInputElement = () => {\n  document.getElementById(\"username\").focus();\n};\n\n\n//Stop the back button\n\nwindow.history.pushState(null, null, window.location.href);\nwindow.onpopstate = function () {\n  window.history.go(1);\n};\n\n//Shade username as red\ndocument.getElementById('username').addEventListener('focus', function () {\n  $('#username').css('border', '1px solid red');\n  checkInputsPasswordless();\n});\n//Shade password as red\ndocument.getElementById('password').addEventListener('focus', function () {\n  $('#password').css('border', '1px solid red');\n  checkInputsPasswordless();\n});\n// Get references to the input fields and the submit button\nconst usernameInput = document.getElementById('username');\nconst passwordInput = document.getElementById('password');\nconst submitBtn = document.getElementById('btnSignIn');\nlet authMethod = 'password';\nconst togglePasswordless = document.getElementById('btnTogglePasswordless');\nconst passwordlessSubmit = document.getElementById('btnPasswordless');\nconst passwordElement = document.getElementById('passwordContainer');\nconst toggleIcon = document.getElementById('toggleIcon');\nconst toggleText = document.getElementById('toggleText');\n// Check if regular SIgn in form.\nif (togglePasswordless) {\n  togglePasswordless.addEventListener('click', function () {\n    if (authMethod === 'password') {\n      passwordElement.style.display = 'none';\n      passwordlessSubmit.style.display = 'block';\n      submitBtn.style.display = 'none';\n      toggleText.textContent = 'Sign in With Password';\n      toggleIcon.style.display = 'none';\n      authMethod = 'passwordless';\n      checkInputsPassword();\n    } else {\n      passwordElement.style.display = 'block';\n      passwordlessSubmit.style.display = 'none';\n      submitBtn.style.display = 'block';\n      authMethod = 'password';\n      toggleText.textContent = 'Sign in With Passwordless';\n      toggleIcon.style.display = 'inline';\n      checkInputsPasswordless();\n    }\n  });\n}\n\nif (authMethod === 'password') {\n  // Add event listeners for input events on both fields\n  usernameInput.addEventListener('input', checkInputsPassword);\n  passwordInput.addEventListener('input', checkInputsPassword);\n} else if (authMethod === 'passwordless'); {\n  usernameInput.addEventListener('input', checkInputsPasswordless);\n}\n\n\nfunction checkInputsPassword() {\n  if (usernameInput.value && passwordInput.value) {\n    // If both fields have values, remove the disabled class from the submit button\n    submitBtn.classList.remove('disabled');\n    $('#username').css('border', '1px solid #8b9197');\n        $('#password').css('border', '1px solid #8b9197');\n  } else {\n    // Optional: Add the class back if either field is empty \n    if (!submitBtn.classList.contains('disabled')) {\n      submitBtn.classList.add('disabled');\n      $('#username').css('border', '1px solid red');\n      $('#password').css('border', '1px solid red');\n    }\n  }\n}\n\n\nfunction checkInputsPasswordless() {\n  if (usernameInput.value) {\n    // If both fields have values, remove the disabled class from the submit button\n    btnPasswordless.classList.remove('disabled');\n    $('#username').css('border', '1px solid #8b9197');\n\n  } else {\n    // Optional: Add the class back if either field is empty \n    if (!btnPasswordless.classList.contains('disabled')) {\n      btnPasswordless.classList.add('disabled');\n      $('#username').css('border', '1px solid red');\n\n    }\n  }\n}\n\n// Control Enter Button Functionality\n\nvar form = document.getElementById('usernamePasswordForm');\nvar pwdSubmitBtn = document.getElementById('btnSignIn');\nvar passwordlessSubmitBtn = document.getElementById('btnPasswordless');\n\nform.addEventListener('keydown', function (event) {\n  // console.log(authMethod);\n  if (event.key === \"Enter\") {\n    event.preventDefault(); // Prevent the default action\n    if (authMethod === 'password') {\n      pwdSubmitBtn.click(); // Trigger the button click\n    } else if (authMethod === 'passwordless') {\n      passwordlessSubmitBtn.click();\n    } else {\n      console.log('shouldnt be here');\n    }\n  }\n});\n\n\n\n\n// Get the input field\nvar input = document.getElementById(\"password\");\n\n// Get the warning text\nvar text = document.getElementById(\"passwordFeedback\");\n\n// When the user presses any key on the keyboard, run the function\ninput.addEventListener(\"keyup\", function (event) {\n\n  // If \"caps lock\" is pressed, display the warning text\n  if (event.getModifierState(\"CapsLock\")) {\n    text.style.display = \"block\";\n  } else {\n    text.style.display = \"none\"\n  }\n});\n\n// Define which login options are enabled\nconst loginOptions = {\n google: { enabled: {{ global.company.variables.gv-googleLogin}}, backgroundColor: '#F2F2F2', color: '#1F1F1F' },\nfacebook: { enabled: {{ global.company.variables.gv-facebookLogin }}, backgroundColor: '#1877F2', color: '#FFFFFF' },\nazure: { enabled: {{ global.company.variables.gv-azureLogin }}, backgroundColor: '#2F2F2F', color: '#FFFFFF' },\ngithub: { enabled: {{ global.company.variables.gv-githubLogin }}, backgroundColor: '#FFFFFF', color: '#2F2F2F' },\n};\n\n// Function to create a button element with color, unique ID, and setup to click another button on click\nfunction createButton(loginType, svgContent, backgroundColor, color) {\n  const button = document.createElement('button');\n  button.setAttribute('type', 'button');\n  button.classList.add('btn', 'mb-3');\n  // Create a unique ID for each button based on the loginType\n  button.id = `btn${loginType}`;\n  button.dataset.id = \"button\";\n  button.innerHTML = svgContent;\n  button.style.backgroundColor = backgroundColor;\n  button.style.color = color;\n\n  if (loginType === 'google') {\n    button.style.border = 'none';\n  } else {\n    button.style.border = '1px solid';\n  }\n\n  // Add click event listener to the button\n  button.addEventListener('click', function () {\n    // Log to console which button was clicked (for demonstration)\n    // console.log(`${loginType} button clicked`);\n    // Target the \"submit\" button related to this button\n    const submitButtonId = `${button.id}Submit`;\n    const submitButton = document.getElementById(submitButtonId);\n    if (submitButton) {\n      submitButton.click(); // Programmatically click the submit button\n    } else {\n      console.log('Submit button not found:', submitButtonId);\n    }\n  });\n\n  return button;\n}\n\n// SVG content for each button\nconst svgs = {\n  google: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_1122_1133)\"><path d=\"M20.3052 10.4902C20.3052 9.8104 20.2501 9.12696 20.1325 8.45821H10.7002V12.309H16.1016C15.8775 13.551 15.1573 14.6496 14.1027 15.3478V17.8464H17.3252C19.2176 16.1047 20.3052 13.5326 20.3052 10.4902Z\" fill=\"#4285F4\" /><path d=\"M10.6999 20.2605C13.397 20.2605 15.6714 19.375 17.3286 17.8464L14.1061 15.3478C13.2096 15.9577 12.0521 16.3031 10.7036 16.3031C8.09474 16.3031 5.88272 14.5431 5.08904 12.1767H1.76367V14.7525C3.46127 18.1293 6.91892 20.2605 10.6999 20.2605Z\" fill=\"#34A853\" /><path d=\"M5.08564 12.1767C4.66676 10.9348 4.66676 9.58993 5.08564 8.34796V5.77218H1.76395C0.345611 8.59783 0.345611 11.9269 1.76395 14.7525L5.08564 12.1767Z\" fill=\"#FBBC04\" /><path d=\"M10.6999 4.21788C12.1256 4.19583 13.5035 4.7323 14.536 5.71705L17.3911 2.86201C15.5833 1.16441 13.1838 0.231105 10.6999 0.260501C6.91892 0.260501 3.46126 2.39168 1.76367 5.77217L5.08537 8.34795C5.87537 5.97794 8.09106 4.21788 10.6999 4.21788Z\" fill=\"#EA4335\" /></g><defs><clipPath id=\"clip0_1122_1133\"><rect width=\"20\" height=\"20\" fill=\"white\" transform=\"translate(0.5 0.259827)\" /></clipPath></defs></svg> Sign in with Google`,\n  facebook: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect x=\"35.5\" y=\"10.3\" width=\"52.8\" height=\"89.7\" style=\"fill: rgb(255, 255, 255);\"></rect><path d=\"M94.5,0h-89C2.5,0,0,2.5,0,5.5v89c0,3,2.5,5.5,5.5,5.5h47.9V61.3h-13V46.2h13V35.1c0-12.9,7.9-19.9,19.4-19.9 c5.5,0,10.3,0.4,11.6,0.6v13.5l-8,0c-6.3,0-7.5,3-7.5,7.3v9.6h14.9L82,61.3H69V100h25.5c3,0,5.5-2.5,5.5-5.5v-89 C100,2.5,97.5,0,94.5,0z\" style=\"fill: rgb(24, 119, 242);\"></path></svg> Sign in with Facebook`,\n  azure: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect width=\"47.37\" height=\"47.37\" style=\"fill: rgb(242, 80, 34);\"></rect><rect y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(0, 164, 239);\"></rect><rect x=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(127, 186, 0);\"></rect><rect x=\"52.63\" y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(255, 185, 0);\"></rect></svg> Sign in with Microsoft`,\n  github: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\"><rect width=\"16\" height=\"16\" fill=\"#FFFFFF\"></rect><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.976 0A7.977 7.977 0 0 0 0 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 0 1 .832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0 0 16 7.976C15.951 3.572 12.38 0 7.976 0z\"/></svg> Sign in with Github`,\n};\n\n\n// Container where buttons will be added\nconst container = document.getElementById('authButtonsContainer');\n\n// Check if any login options are enabled\nconst anyLoginEnabled = Object.values(loginOptions).some(option => option.enabled);\n\nif (anyLoginEnabled) {\n  // Create an hr element\n  const hrTextDiv = document.createElement('div');\n  hrTextDiv.className = 'hr-text';\n  hrTextDiv.innerHTML = '<span>Or Sign In With</span>';\n\n  // Insert the hr element above the container\n  container.parentNode.insertBefore(hrTextDiv, container);\n}\nlet numOfSocials = 0\n// Iterate through the login options and create buttons for the enabled ones\nObject.keys(loginOptions).forEach(key => {\n  if (loginOptions[key].enabled) { // Check if the login option is enabled\n    const option = loginOptions[key];\n    const button = createButton(key, svgs[key], option.backgroundColor, option.color);\n    container.appendChild(button);\n    numOfSocials++;\n  }\n});\n\ncontainer.style = numOfSocials < 2 ? \"display: grid; grid-template-columns: repeat(1,1fr); gap: 10px;\" : \"display: grid; grid-template-columns: repeat(2,1fr); gap: 10px;\"\n\nfunction makePasswordToggle(id) {\n  var container = document.getElementById(id);\n  var password = container.getElementsByTagName(\"input\")[0];\n  var toggler = document.createElement(\"button\");\n  toggler.setAttribute(\"type\", \"button\");\n  toggler.setAttribute(\"aria-label\", \"Show/Hide Password\");\n  toggler.className = \"btn mdi mdi-eye-off-outline position-absolute end-0 top-50 translate-middle-y\";\n  container.appendChild(toggler);\n\n  function showHidePassword() {\n    if (password.type == \"password\") {\n      password.setAttribute(\"type\", \"text\");\n      toggler.classList.add(\"mdi-eye-outline\");\n      toggler.classList.remove(\"mdi-eye-off-outline\");\n    } else {\n      toggler.classList.add(\"mdi-eye-off-outline\");\n      toggler.classList.remove(\"mdi-eye-outline\");\n      password.setAttribute(\"type\", \"password\");\n    }\n    password.focus();\n  };\n\n  toggler.addEventListener(\"click\", showHidePassword);\n}\n\nfunction start() {\n  makePasswordToggle(\"passwordContainer\");\n  focusOnFirstInputElement();\n}\n\nif (document.readyState === \"loading\") {\n  // Loading hasn't finished yet\n  document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n  // `DOMContentLoaded` has already fired\n  start();\n}"
               },
               "facebookLogin": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-facebookLogin\",\n        \"data\": \"{{global.company.variables.gv-facebookLogin}}\",\n        \"tooltip\": \"{{global.company.variables.gv-facebookLogin}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-facebookLogin\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -7072,7 +7088,7 @@
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "username",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"curtis\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "preferredControlType": "textField",
@@ -7085,7 +7101,7 @@
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "password",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Sluggers7&\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "hashedVisibility": false,
@@ -7133,9 +7149,6 @@
               },
               "validationRules": {
                 "value": []
-              },
-              "reCaptcha": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne reCAPTCHA v3\"\n      }\n    ]\n  }\n]"
               }
             }
           },
@@ -7294,26 +7307,7 @@
           },
           "position": {
             "x": 1350,
-            "y": 3870
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "g6g8vinfe7",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
-          },
-          "position": {
-            "x": 468.5,
-            "y": 3868.25
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -7347,8 +7341,8 @@
             }
           },
           "position": {
-            "x": 630,
-            "y": 3870
+            "x": 900,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -7370,8 +7364,8 @@
             }
           },
           "position": {
-            "x": 795,
-            "y": 3870
+            "x": 1050,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -7816,8 +7810,8 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1883.4608444100927,
-            "y": 2928.9944409701493
+            "x": 1924.583744392386,
+            "y": 2927.535836540531
           },
           "group": "nodes",
           "removed": false,
@@ -7846,8 +7840,8 @@
             }
           },
           "position": {
-            "x": 2040,
-            "y": 2940
+            "x": 2087.2246242001934,
+            "y": 2927.535836540531
           },
           "group": "nodes",
           "removed": false,
@@ -7893,7 +7887,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-PingOneAuthorize\",\n        \"data\": \"{{global.company.variables.gv-PingOneAuthorize}}\",\n        \"tooltip\": \"{{global.company.variables.gv-PingOneAuthorize}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-PingOneAuthorize\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"not part of TF\"\n      }\n    ]\n  }\n]"
               },
               "caseSensitive": {
                 "value": false
@@ -8267,8 +8261,8 @@
             "idUnique": "9va93fobpi"
           },
           "position": {
-            "x": 930,
-            "y": 4020
+            "x": 1200,
+            "y": 4050
           },
           "group": "nodes",
           "removed": false,
@@ -8286,8 +8280,8 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1080,
-            "y": 4020
+            "x": 1350,
+            "y": 4050
           },
           "group": "nodes",
           "removed": false,
@@ -8316,8 +8310,8 @@
             }
           },
           "position": {
-            "x": 1230,
-            "y": 4020
+            "x": 1500,
+            "y": 4050
           },
           "group": "nodes",
           "removed": false,
@@ -8575,103 +8569,6 @@
         },
         {
           "data": {
-            "id": "ab3bcfl2bw",
-            "nodeType": "CONNECTION",
-            "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
-            "connectorId": "flowConnector",
-            "name": "Flow Connector",
-            "label": "Flow Connector",
-            "status": "configured",
-            "capabilityName": "startUiSubFlow",
-            "type": "trigger",
-            "properties": {
-              "subFlowId": {
-                "value": {
-                  "label": "PingOne reCAPTCHA v3 Sign On Example",
-                  "value": "cf93627a9eecea11e7ac9111c652a14e"
-                }
-              },
-              "subFlowVersionId": {
-                "value": -1
-              },
-              "nodeTitle": {
-                "value": "PingOne reCAPTCHA v3"
-              }
-            }
-          },
-          "position": {
-            "x": 1350,
-            "y": 1770
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "6dm70ojfjr",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
-            "properties": {
-              "nodeInstanceId": {
-                "value": "darra3zbp8"
-              },
-              "password": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"password\",\n        \"data\": \"{{local.cq77vwelou.payload.output.password}}\",\n        \"tooltip\": \"{{local.cq77vwelou.payload.output.password}}\",\n        \"children\": [\n          {\n            \"text\": \"password\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "rememberMe": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"rememberMe\",\n        \"data\": \"{{local.cq77vwelou.payload.output.rememberMe}}\",\n        \"tooltip\": \"{{local.cq77vwelou.payload.output.rememberMe}}\",\n        \"children\": [\n          {\n            \"text\": \"rememberMe\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "username": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.cq77vwelou.payload.output.username}}\",\n        \"tooltip\": \"{{local.cq77vwelou.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "idUnique": "vajhcnoi6v"
-          },
-          "position": {
-            "x": 1620,
-            "y": 1770
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "48lwjjjupy",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1470,
-            "y": 1770
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
             "id": "0uf94bodce",
             "nodeType": "CONNECTION",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
@@ -8684,7 +8581,7 @@
             "properties": {
               "subFlowId": {
                 "value": {
-                  "label": "PingOne reCAPTCHA v3 Sign On Example",
+                  "label": "PingOne reCAPTCHA v3 subflow ",
                   "value": "cf93627a9eecea11e7ac9111c652a14e"
                 }
               },
@@ -8693,6 +8590,9 @@
               },
               "nodeTitle": {
                 "value": "PingOne reCAPTCHA v3"
+              },
+              "p1userId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.mdxud0j297.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.mdxud0j297.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             }
           },
@@ -8784,7 +8684,7 @@
             "type": "action",
             "properties": {
               "annotation": {
-                "value": "PingOne Authorize"
+                "value": "PingOne reCaptcha"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
@@ -8856,6 +8756,9 @@
             "properties": {
               "nodeTitle": {
                 "value": "reCaptcha"
+              },
+              "inputSchema": {
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t}\n\t}\n}"
               }
             }
           },
@@ -8900,209 +8803,12 @@
         },
         {
           "data": {
-            "id": "w818upqo4i",
-            "nodeType": "CONNECTION",
-            "connectionId": "de650ca45593b82c49064ead10b9fe17",
-            "connectorId": "functionsConnector",
-            "name": "Functions",
-            "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
-            "properties": {
-              "nodeTitle": {
-                "value": "Run reCaptcha?"
-              },
-              "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-reCaptcha\",\n        \"data\": \"{{global.company.variables.gv-reCaptcha}}\",\n        \"tooltip\": \"{{global.company.variables.gv-reCaptcha}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-reCaptcha\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
-              },
-              "caseSensitive": {
-                "value": false
-              },
-              "type": {
-                "value": "boolean"
-              }
-            }
+            "id": "zp9rcionow",
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1050,
-            "y": 3210
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "zw40iewzy1",
-            "nodeType": "EVAL",
-            "label": "Evaluator",
-            "properties": {
-              "hx6nyyvymx": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 1200,
-            "y": 3210
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "e4zjb4eb94",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
-            "properties": {
-              "nodeInstanceId": {
-                "value": "mdxud0j297"
-              }
-            }
-          },
-          "position": {
-            "x": 1350,
-            "y": 3150
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "o4zxpd87mu",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
-          },
-          "position": {
-            "x": 1464,
-            "y": 3148.25
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "w4j7ktkfsz",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
-            "properties": {
-              "authenticationMethods": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1AuthenticationMethods\",\n        \"data\": \"{{global.variables.p1AuthenticationMethods}}\",\n        \"tooltip\": \"{{global.variables.p1AuthenticationMethods}}\",\n        \"children\": [\n          {\n            \"text\": \"p1AuthenticationMethods\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeInstanceId": {
-                "value": "fvgmcd485b"
-              },
-              "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "rememberMe": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"rememberMe\",\n        \"data\": \"{{local.l1889w71hu.payload.output.rememberMe}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.rememberMe}}\",\n        \"children\": [\n          {\n            \"text\": \"rememberMe\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "idUnique": "m4dbouf3jm"
-          },
-          "position": {
-            "x": 1620,
-            "y": 3150
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "5g1lsbtzd2",
-            "nodeType": "ANNOTATION",
-            "connectionId": "921bfae85c38ed45045e07be703d86b8",
-            "connectorId": "annotationConnector",
-            "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
-            "properties": {
-              "annotation": {
-                "value": " Company Variable = gv-recaptchaV3"
-              },
-              "annotationTextColor": {
-                "value": "#000000ff"
-              },
-              "backgroundColor": {
-                "value": "#f7f7adff"
-              },
-              "cornerRadius": {
-                "value": 8
-              },
-              "fontFamily": {
-                "value": "sans-serif"
-              },
-              "fontSize": {
-                "value": 14
-              },
-              "strokeColor": {
-                "value": "#181818ff"
-              },
-              "strokeEnabled": {
-                "value": false
-              },
-              "strokeWidth": {
-                "value": 1
-              },
-              "width": {
-                "value": 340
-              }
-            },
-            "idUnique": "awnmryowy1"
-          },
-          "position": {
-            "x": 870,
-            "y": 3120
+            "x": 420,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -9117,9 +8823,9 @@
       "edges": [
         {
           "data": {
-            "id": "amfnn6tn7e",
-            "source": "zw40iewzy1",
-            "target": "hx6nyyvymx"
+            "id": "bg4xp6k4ip",
+            "source": "61bph7klyk",
+            "target": "60n37htg0c"
           },
           "position": {
             "x": 0,
@@ -9136,9 +8842,199 @@
         },
         {
           "data": {
-            "id": "x4cftgch9e",
-            "source": "48lwjjjupy",
-            "target": "6dm70ojfjr"
+            "id": "ahq0bhhwyn",
+            "source": "0uf94bodce",
+            "target": "3ybkm77y6t"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "rytg1tn0uc",
+            "source": "lpjejz17ak",
+            "target": "myqrmzmnas"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xve0iphyfr",
+            "source": "q8nl14telv",
+            "target": "tw4qqpq2r0"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zbughycx5z",
+            "source": "9azinxdhjg",
+            "target": "pqsmodp38s"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "wknssmthla",
+            "source": "myqrmzmnas",
+            "target": "9azinxdhjg"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "qndgfovlsj",
+            "source": "rw9q7azv76",
+            "target": "4y4mxhn587"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "212rsvy1mo",
+            "source": "tw4qqpq2r0",
+            "target": "rw9q7azv76"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "knaxc8e6a6",
+            "source": "57kb3u8w4m",
+            "target": "0uf94bodce"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zv03r39bbu",
+            "source": "mdxud0j297",
+            "target": "57kb3u8w4m"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5l1lf1qikp",
+            "source": "2e2n9lvfel",
+            "target": "ndmy7x0ebt"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mulxw34fdz",
+            "source": "3ybkm77y6t",
+            "target": "y2ccfhpubl"
           },
           "position": {
             "x": 0,
@@ -9328,9 +9224,9 @@
         },
         {
           "data": {
-            "id": "sjywq0v4od",
-            "source": "fvgmcd485b",
-            "target": "g6g8vinfe7"
+            "id": "9ozdkiaugc",
+            "source": "6hhgv6xodn",
+            "target": "lpjejz17ak"
           },
           "position": {
             "x": 0,
@@ -9995,9 +9891,9 @@
         },
         {
           "data": {
-            "id": "kzb4ai2ox2",
-            "source": "g6g8vinfe7",
-            "target": "7htsthue0z"
+            "id": "jxbu1hdk71",
+            "source": "tcwa5mafjm",
+            "target": "hx6nyyvymx"
           },
           "position": {
             "x": 0,
@@ -10052,9 +9948,9 @@
         },
         {
           "data": {
-            "id": "unijhdsifo",
-            "source": "q8nl14telv",
-            "target": "ix9t1qppo3"
+            "id": "fvxswzkc36",
+            "source": "zaj9dmtpcb",
+            "target": "wvzmpbzpdz"
           },
           "position": {
             "x": 0,
@@ -12353,9 +12249,9 @@
         },
         {
           "data": {
-            "id": "ne62l8nbsf",
-            "source": "pzwwntj7cu",
-            "target": "tmcna5rpyy"
+            "id": "q2e03masqe",
+            "source": "ka50g2qyfq",
+            "target": "7htsthue0z"
           },
           "position": {
             "x": 0,
@@ -12372,28 +12268,28 @@
         },
         {
           "data": {
-            "id": "kfiuhj7qth",
-            "source": "pzwwntj7cu",
-            "target": "mz3xqikx95"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "5ygz6ayo0t",
+            "id": "2029gjjj5l",
             "source": "ix9t1qppo3",
-            "target": "pzwwntj7cu"
+            "target": "ka50g2qyfq"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "isny5xsvpq",
+            "source": "zaj9dmtpcb",
+            "target": "bprgvfu9nt"
           },
           "position": {
             "x": 0,
@@ -12735,9 +12631,9 @@
         },
         {
           "data": {
-            "id": "isny5xsvpq",
-            "source": "zaj9dmtpcb",
-            "target": "bprgvfu9nt"
+            "id": "1yz3rysv4a",
+            "source": "fvgmcd485b",
+            "target": "zp9rcionow"
           },
           "position": {
             "x": 0,
@@ -12754,9 +12650,9 @@
         },
         {
           "data": {
-            "id": "fvxswzkc36",
-            "source": "zaj9dmtpcb",
-            "target": "wvzmpbzpdz"
+            "id": "lseno7b8rq",
+            "source": "zp9rcionow",
+            "target": "ix9t1qppo3"
           },
           "position": {
             "x": 0,
@@ -12773,9 +12669,9 @@
         },
         {
           "data": {
-            "id": "bg4xp6k4ip",
-            "source": "61bph7klyk",
-            "target": "60n37htg0c"
+            "id": "ambj5lxucm",
+            "source": "ka50g2qyfq",
+            "target": "mz3xqikx95"
           },
           "position": {
             "x": 0,
@@ -12792,332 +12688,9 @@
         },
         {
           "data": {
-            "id": "9ozdkiaugc",
-            "source": "6hhgv6xodn",
-            "target": "lpjejz17ak"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "wknssmthla",
-            "source": "myqrmzmnas",
-            "target": "9azinxdhjg"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "zbughycx5z",
-            "source": "9azinxdhjg",
-            "target": "pqsmodp38s"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "5l1lf1qikp",
-            "source": "2e2n9lvfel",
-            "target": "ndmy7x0ebt"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "xve0iphyfr",
+            "id": "4kz5pfzx13",
             "source": "q8nl14telv",
-            "target": "tw4qqpq2r0"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "212rsvy1mo",
-            "source": "tw4qqpq2r0",
-            "target": "rw9q7azv76"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "qndgfovlsj",
-            "source": "rw9q7azv76",
-            "target": "4y4mxhn587"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "rytg1tn0uc",
-            "source": "lpjejz17ak",
-            "target": "myqrmzmnas"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "dgbhledbbw",
-            "source": "ab3bcfl2bw",
-            "target": "48lwjjjupy"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "mulxw34fdz",
-            "source": "3ybkm77y6t",
-            "target": "y2ccfhpubl"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ahq0bhhwyn",
-            "source": "0uf94bodce",
-            "target": "3ybkm77y6t"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "knaxc8e6a6",
-            "source": "57kb3u8w4m",
-            "target": "0uf94bodce"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "zv03r39bbu",
-            "source": "mdxud0j297",
-            "target": "57kb3u8w4m"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "rnfpt56cpp",
-            "source": "tcwa5mafjm",
-            "target": "w818upqo4i"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "gl2gc5k2tn",
-            "source": "w818upqo4i",
-            "target": "zw40iewzy1"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "2bttusa335",
-            "source": "zw40iewzy1",
-            "target": "e4zjb4eb94"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "jszn04yxq2",
-            "source": "e4zjb4eb94",
-            "target": "o4zxpd87mu"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "flsfau0ye4",
-            "source": "o4zxpd87mu",
-            "target": "w4j7ktkfsz"
+            "target": "tmcna5rpyy"
           },
           "position": {
             "x": 0,
@@ -13153,7 +12726,7 @@
   },
   "inputSchema": [],
   "flowColor": "#CACED3",
-  "savedDate": 1711385739483,
+  "savedDate": 1712687973500,
   "variables": [
     {
       "context": "flowInstance",
@@ -13242,12 +12815,13 @@
       "fields": {
         "type": "boolean",
         "displayName": "Determine if Microsoft Azure is available",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1712326358399,
       "visibility": "private",
       "name": "gv-azureLogin##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
@@ -13276,12 +12850,13 @@
       "fields": {
         "type": "boolean",
         "displayName": "Determine if Facebook is available",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1712179029303,
       "visibility": "private",
       "name": "gv-facebookLogin##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
@@ -13299,7 +12874,7 @@
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1711122892381,
+      "updatedDate": 1712344941676,
       "visibility": "private",
       "name": "gv-forcePasswordless##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
@@ -13343,12 +12918,13 @@
       "fields": {
         "type": "boolean",
         "displayName": "Determine if Github is available",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1712326350435,
       "visibility": "private",
       "name": "gv-githubLogin##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
@@ -13406,38 +12982,19 @@
     },
     {
       "context": "company",
-      "createdDate": 1711103264189,
+      "createdDate": 1712414389300,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "Turn on Progressive profiling",
-        "value": "false",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "updatedDate": 1711131613382,
-      "visibility": "private",
-      "name": "gv-progressiveProfiling##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
-      "context": "company",
-      "createdDate": 1711385714953,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "boolean",
-        "displayName": "Turns on reCaptchaV3.  Assumes you are not doing Risk/Protect",
+        "displayName": "",
         "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1711385794302,
       "visibility": "private",
-      "name": "gv-reCaptcha##SK##company",
+      "name": "gv-progressiveProfilingAuthentication##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
@@ -13463,13 +13020,14 @@
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "Run PingOne Protect subflow",
+        "displayName": "Run PingOne Protect subflow (Risk)",
         "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1711719865258,
       "visibility": "private",
       "name": "gv-runProtect##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"

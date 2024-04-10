@@ -7,7 +7,6 @@ admin_user_id             = ""
 dv_admin_username         = ""
 dv_admin_password         = ""
 organization_id           = ""
-
 #############
 #  PingOne  #
 #############
@@ -103,3 +102,8 @@ davinci_variable_gv-forgotUsernameDisplay_value = "false"
 davinci_variable_origin_2_value = "https://auth.pingone.com"
 davinci_variable_gv-companyLogo_value = "https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png"
 davinci_connection_PingOne_region = "NA"
+davinci_variable_gv-captchaThreshold  = "0.7"
+davinci_variable_gv-reCaptcha         = "false"
+davinci_variable_gv-captchaV3SiteKey  = "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr"
+davinci_variable_gv-autoEnrollEmailMFA = "false"
+davinci_variable_gv-agreement = "true"
