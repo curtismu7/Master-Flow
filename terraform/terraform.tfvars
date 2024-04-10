@@ -7,12 +7,11 @@ admin_user_id             = ""
 dv_admin_username         = ""
 dv_admin_password         = ""
 organization_id           = ""
-
 #############
 #  PingOne  #
 #############
 
-environment_name = "PingOne Master Flow 1.0"
+environment_name = "PingOne Master Flow 1.1"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "<h1>END-USER LICENSE AGREEMENT</h1><p>GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action.</p>"
@@ -103,3 +102,8 @@ davinci_variable_gv-forgotUsernameDisplay_value = "false"
 davinci_variable_origin_2_value = "https://auth.pingone.com"
 davinci_variable_gv-companyLogo_value = "https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png"
 davinci_connection_PingOne_region = "NA"
+davinci_variable_gv-captchaThreshold  = "0.7"
+davinci_variable_gv-reCaptcha         = "false"
+davinci_variable_gv-captchaV3SiteKey  = "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr"
+davinci_variable_gv-autoEnrollEmailMFA = "false"
+davinci_variable_gv-agreement = "true"
