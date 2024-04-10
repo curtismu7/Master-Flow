@@ -5,6 +5,7 @@ terraform {
     }
     davinci = {
       source = "pingidentity/davinci"
+      version = "~> 0.2.1"
     }
   }
 }
