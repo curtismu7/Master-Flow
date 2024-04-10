@@ -1,5 +1,5 @@
 {
-  "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162",
+  "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18",
   "authTokenExpireIds": [],
   "connectorIds": [
     "functionsConnector",
@@ -12,10 +12,10 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1710364608433,
-  "currentVersion": 10,
+  "createdDate": 1711135767125,
+  "currentVersion": 4,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1710364649659,
+  "deployedDate": 1711135771143,
   "description": "Imported on Fri Mar 01 2024 21:47:09 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -65,11 +65,9 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 10,
+  "publishedVersion": 4,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
     "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    height: 65px;\n    width: fit-content;\n}\n",
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
@@ -77,15 +75,17 @@
     ],
     "customFaviconLink": " https://console.pingone.com/davinci/favicon-davinci.png",
     "customTitle": "PingOne Protect",
-    "logLevel": 3,
+    "intermediateLoadingScreenCSS": "",
+    "intermediateLoadingScreenHTML": "",
+    "logLevel": 2,
     "pingOneFlow": false,
     "useCustomCSS": true
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1710364649661,
-  "flowId": "3f86ec91279ed95d63b7ad7b639e6b67",
-  "versionId": 10,
+  "updatedDate": 1711135771146,
+  "flowId": "2572ed744b282b38cd33051133f29a50",
+  "versionId": 4,
   "graphData": {
     "elements": {
       "nodes": [
@@ -144,7 +144,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "startNode",
@@ -1168,7 +1168,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
-                  "value": "1692c9fd38ae5a6301e25b4d20f17a53"
+                  "value": "49a3fbbfac4050f9c558aaae75bd2a36"
                 }
               },
               "subFlowVersionId": {
@@ -1233,7 +1233,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "startNode",
@@ -1495,7 +1495,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Verify subflow",
-                  "value": "626bac895fe49f0d7e19b6a29289e385"
+                  "value": "07e397931703b2dcd18a2e929dee0170"
                 }
               },
               "subFlowVersionId": {
@@ -1634,7 +1634,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "goToNode",
@@ -1971,8 +1971,8 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Node",
+            "name": "Teleport",
+            "label": "Teleport",
             "status": "configured",
             "capabilityName": "goToNode",
             "type": "action",
@@ -2122,7 +2122,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "goToNode",
@@ -2178,8 +2178,8 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Node",
+            "name": "Teleport",
+            "label": "Teleport",
             "status": "configured",
             "capabilityName": "goToNode",
             "type": "action",
@@ -2255,7 +2255,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "startNode",
@@ -2354,7 +2354,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column\">\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n        {{#if title}}\n          <h1 class=\"text-center mb-4\">{{title}}</h1>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          {{#if textTwo}}\n          <p class=\"text-muted text-center\">{{textTwo}}</p>\n          {{/if}}\n\n          {{#if buttonLabel}}\n          <div class=\"d-flex flex-column\">\n            <button data-id=\"next-button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n             data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"NEXT\" id=\"btnNext\">\n                {{buttonLabel}}\n            </button>\n          </div>\n          {{/if}}\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column\">\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n        {{#if title}}\n          <h1 class=\"text-center mb-4\">{{title}}</h1>\n          {{/if}}\n\n          <div class=\"mx-auto mt-3 mb-4\">\n            <svg class=\"xmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n              <circle class=\"xmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n              <path class=\"xmarkX\" fill=\"none\" d=\"M16,16 L36,36 M36,16 L16,36\" />\n            </svg>\n          </div>\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          {{#if textTwo}}\n          <p class=\"text-muted text-center\">{{textTwo}}</p>\n          {{/if}}\n\n          {{#if buttonLabel}}\n          <div class=\"d-flex flex-column\">\n            <button data-id=\"next-button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n             data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"NEXT\" id=\"btnNext\">\n                {{buttonLabel}}\n            </button>\n          </div>\n          {{/if}}\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
               },
               "customScript": {
                 "value": ""
@@ -2890,7 +2890,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "startNode",
@@ -3110,7 +3110,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "returnBackToCallingNode",
@@ -3136,7 +3136,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "returnBackToCallingNode",
@@ -3181,7 +3181,7 @@
             "nodeType": "CONNECTION",
             "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
             "connectorId": "nodeConnector",
-            "name": "Node",
+            "name": "Teleport",
             "label": "Teleport",
             "status": "configured",
             "capabilityName": "goToNode",
@@ -5009,11 +5009,26 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1710364608204,
+  "savedDate": 1711135764952,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1710361496994,
+      "createdDate": 1711379812348,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "companyLogo##SK##flowInstance",
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1711103267292,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -5025,28 +5040,29 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
       "context": "company",
-      "createdDate": 1710361705319,
+      "createdDate": 1711103266035,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
         "displayName": "This tells the flow to use the gv-riskLevel for its score.",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1711106759069,
       "visibility": "private",
       "name": "gv-fakeLevel##SK##company",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
       "context": "company",
-      "createdDate": 1710361494386,
+      "createdDate": 1711103266810,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
@@ -5057,32 +5073,30 @@
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1710363942549,
       "visibility": "private",
       "name": "gv-mfa-on##SK##company",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
       "context": "company",
-      "createdDate": 1710361705112,
+      "createdDate": 1711103264896,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
         "displayName": "This shows both Password and passwordless button for sign in",
-        "value": "true",
+        "value": "false",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1710363173320,
       "visibility": "private",
       "name": "gv-mfaOnHighRisk##SK##company",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
       "context": "company",
-      "createdDate": 1710361488977,
+      "createdDate": 1711103267074,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -5093,60 +5107,46 @@
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1711280609966,
       "visibility": "private",
       "name": "gv-riskLevel##SK##company",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
       "context": "company",
-      "createdDate": 1710361705160,
+      "createdDate": 1711103265355,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
         "displayName": "This shows both Password and passwordless button for sign in",
-        "value": "true",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "updatedDate": 1710363166520,
-      "visibility": "private",
-      "name": "gv-riskScreenDisplay##SK##company",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
-    },
-    {
-      "context": "company",
-      "createdDate": 1710361496245,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "boolean",
-        "displayName": "If you want to run Verify when user is High Risk",
         "value": "false",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1711131596073,
       "visibility": "private",
-      "name": "gv-runVerifyforHighRisk##SK##company",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
+      "name": "gv-riskScreenDisplay##SK##company",
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
-      "context": "flowInstance",
-      "createdDate": 1710364430198,
+      "context": "company",
+      "createdDate": 1711103267325,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
-        "type": "string",
-        "displayName": "",
+        "type": "boolean",
+        "displayName": "If you want to run Verify when user is High Risk",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1711135569616,
       "visibility": "private",
-      "name": "riskLevel##SK##flowInstance",
-      "companyId": "9650364b-2570-4bae-b6d2-8fbf339fd162"
+      "name": "gv-runVerifyforHighRisk##SK##company",
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     }
   ],
   "connections": []
