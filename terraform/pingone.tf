@@ -103,11 +103,11 @@ output "initiate_flow_uri" {
 }
 
 output "google_callback_url" {
-  value = var.davinci_variable_gv-googleLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/google" : "N/A"
+  value = var.davinci_variable_gv-googleLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/google" : null
 }
 
 output "facebook_callback_url" {
-  value = var.davinci_variable_gv-facebookLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/facebook" : "N/A"
+  value = var.davinci_variable_gv-facebookLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/facebook" : null
 }
 
 output "facile_decoder_url" {
