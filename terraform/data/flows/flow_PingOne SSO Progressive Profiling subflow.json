@@ -8,10 +8,10 @@
     "errorConnector",
     "annotationConnector"
   ],
-  "createdDate": 1711108375063,
-  "currentVersion": 7,
+  "createdDate": 1713204056787,
+  "currentVersion": 16,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1711108384407,
+  "deployedDate": 1713204059718,
   "description": "Imported on Wed Jan 17 2024 17:18:45 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -47,7 +47,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Progressive Profiling subflow",
-  "publishedVersion": 7,
+  "publishedVersion": 16,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -60,9 +60,9 @@
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1711108384407,
+  "updatedDate": 1713204059718,
   "flowId": "469b5d714ce9beae23c57c7a5d5ba99d",
-  "versionId": 7,
+  "versionId": 16,
   "graphData": {
     "elements": {
       "nodes": [
@@ -184,7 +184,7 @@
             }
           },
           "position": {
-            "x": 1140,
+            "x": 1237,
             "y": 570
           },
           "group": "nodes",
@@ -235,7 +235,7 @@
             }
           },
           "position": {
-            "x": 1440,
+            "x": 1537,
             "y": 570
           },
           "group": "nodes",
@@ -254,7 +254,7 @@
             "properties": {}
           },
           "position": {
-            "x": 1260,
+            "x": 1357,
             "y": 570
           },
           "group": "nodes",
@@ -298,7 +298,7 @@
             }
           },
           "position": {
-            "x": 1770,
+            "x": 1867,
             "y": 690
           },
           "group": "nodes",
@@ -321,7 +321,7 @@
             }
           },
           "position": {
-            "x": 1590,
+            "x": 1687,
             "y": 690
           },
           "group": "nodes",
@@ -369,7 +369,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "primaryPhone": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"phoneCode\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.phoneCode}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.phoneCode}}\",\n        \"children\": [\n          {\n            \"text\": \"phoneCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"phone\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"children\": [\n          {\n            \"text\": \"phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"phone\",\n        \"data\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"tooltip\": \"{{local.1ohcgdfjo7.payload.output.phone}}\",\n        \"children\": [\n          {\n            \"text\": \"phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.parameters.username}}\",\n        \"tooltip\": \"{{global.parameters.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -377,7 +377,7 @@
             }
           },
           "position": {
-            "x": 1770,
+            "x": 1867,
             "y": 570
           },
           "group": "nodes",
@@ -404,7 +404,7 @@
             }
           },
           "position": {
-            "x": 1920,
+            "x": 2017,
             "y": 570
           },
           "group": "nodes",
@@ -449,7 +449,7 @@
             }
           },
           "position": {
-            "x": 2100,
+            "x": 2197,
             "y": 570
           },
           "group": "nodes",
@@ -474,7 +474,7 @@
             "type": "trigger",
             "properties": {
               "code": {
-                "value": "// check for blank fields in PingOne\n// If country code is left (+1) then phone will return true, even though you did not actually enter a phone number\nmodule.exports = a = async ({params}) => {\n\n\tlet jsonObject = params.matchedUserObject;\n\t// Initialize variables to hold the boolean values\n    let hasDob = jsonObject.hasOwnProperty('dob');\n    let hasGivenName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('given');\n    let hasFamilyName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('family');\n    let hasPrimaryPhone = jsonObject.hasOwnProperty('primaryPhone');\n\n     // Check if all properties are true\n    let allTrue = hasDob && hasGivenName && hasMiddleName && hasFamilyName && hasPrimaryPhone;\n\n    // Explicitly set the return statement\n    return {\n        hasDob: hasDob,\n        hasGivenName: hasGivenName,\n        hasFamilyName: hasFamilyName,\n        hasPrimaryPhone: hasPrimaryPhone,\n        allTrue: allTrue\n    };\n}"
+                "value": "// check for blank fields in PingOne\n// If country code is left (+1) then phone will return true, even though you did not actually enter a phone number\nmodule.exports = a = async ({params}) => {\n\n\tlet jsonObject = params.matchedUserObject;\n\t// Initialize variables to hold the boolean values\n    let hasDob = jsonObject.hasOwnProperty('dob');\n    let hasGivenName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('given');\n    let hasFamilyName = jsonObject.hasOwnProperty('name') && jsonObject.name.hasOwnProperty('family');\n    let hasPrimaryPhone = jsonObject.hasOwnProperty('primaryPhone');\n    \n    // let matchedUserObject = params.matchedUserObject\n\t// let hasDob = !!matchedUserObject[\"dob\"]\n\t// let hasGivenName = !!matchedUserObject[\"name\"][\"given\"]\n\t// let hasFamilyName = !!matchedUserObject[\"name\"][\"family\"]\n\t// let hasPrimaryPhone = !!matchedUserObject[\"primaryPhone\"]\n\t// let allTrue = !!hasDob && !!hasGivenName && !!hasFamilyName && !!hasPrimaryPhone\n\t// return { allTrue, matchedUserObject, hasDob, hasGivenName, hasFamilyName, hasPrimaryPhone }\n\n     // Check if all properties are true\n    let allTrue = hasDob && hasGivenName && hasFamilyName && hasPrimaryPhone;\n\n    // Explicitly set the return statement\n    return {\n        hasDob: hasDob,\n        hasGivenName: hasGivenName,\n        hasFamilyName: hasFamilyName,\n        hasPrimaryPhone: hasPrimaryPhone,\n        allTrue: allTrue\n    };\n }"
               },
               "nodeDescription": {
                 "value": " If country code is left (+1) then phone will return true, even though you did not actually enter a phone number.  This uses primary phone, not Mobile."
@@ -483,7 +483,7 @@
                 "value": "Check for user attributes that are blank"
               },
               "outputSchema": {
-                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"hasDob\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasGivenName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasFamilyName\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"hasPrimaryPhone\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"allTrue\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t}\n\t\t}\n\t}\n}"
+                "value": "\n{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"allTrue\": {\n\t\t\t\t\"type\": \"boolean\"\n\t\t\t},\n\t\t\t\"matchedUserObject\": {\n\t\t\t\t\"type\": \"object\"\n\t\t\t},\n\t\t\t\"hasDob\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t},\n\t\t\t\"hasGivenName\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t},\n\t\t\t\"hasFamilyName\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t},\n\t\t\t\"hasPrimaryPhone\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t}\n\t}\n}"
               },
               "variableInputList": {
                 "value": [
@@ -497,7 +497,7 @@
             }
           },
           "position": {
-            "x": 480,
+            "x": 577,
             "y": 570
           },
           "group": "nodes",
@@ -517,7 +517,7 @@
             "properties": {}
           },
           "position": {
-            "x": 600,
+            "x": 697,
             "y": 570
           },
           "group": "nodes",
@@ -559,7 +559,7 @@
             }
           },
           "position": {
-            "x": 780,
+            "x": 877,
             "y": 570
           },
           "group": "nodes",
@@ -604,7 +604,7 @@
             }
           },
           "position": {
-            "x": 1140,
+            "x": 1237,
             "y": 720
           },
           "group": "nodes",
@@ -627,7 +627,7 @@
             }
           },
           "position": {
-            "x": 930,
+            "x": 1027,
             "y": 570
           },
           "group": "nodes",
@@ -672,7 +672,7 @@
             }
           },
           "position": {
-            "x": 1740,
+            "x": 1837,
             "y": 810
           },
           "group": "nodes",
@@ -691,7 +691,7 @@
             "properties": {}
           },
           "position": {
-            "x": 1590,
+            "x": 1687,
             "y": 810
           },
           "group": "nodes",
@@ -741,7 +741,7 @@
             }
           },
           "position": {
-            "x": 431,
+            "x": 528,
             "y": 214
           },
           "group": "nodes",
@@ -791,7 +791,7 @@
             }
           },
           "position": {
-            "x": 420,
+            "x": 517,
             "y": 390
           },
           "group": "nodes",
@@ -841,7 +841,7 @@
             }
           },
           "position": {
-            "x": 1560,
+            "x": 1657,
             "y": 390
           },
           "group": "nodes",
@@ -897,7 +897,7 @@
             }
           },
           "position": {
-            "x": 330,
+            "x": 427,
             "y": 450
           },
           "group": "nodes",
@@ -917,7 +917,7 @@
             "properties": {}
           },
           "position": {
-            "x": 1590,
+            "x": 1687,
             "y": 600
           },
           "group": "nodes",
@@ -973,7 +973,7 @@
             }
           },
           "position": {
-            "x": 780,
+            "x": 877,
             "y": 480
           },
           "group": "nodes",
@@ -1029,7 +1029,7 @@
             }
           },
           "position": {
-            "x": 1620,
+            "x": 1717,
             "y": 480
           },
           "group": "nodes",
@@ -1071,7 +1071,7 @@
             }
           },
           "position": {
-            "x": 2100,
+            "x": 2197,
             "y": 720
           },
           "group": "nodes",
@@ -1110,7 +1110,7 @@
             "idUnique": "3wi21s8m6z"
           },
           "position": {
-            "x": 180,
+            "x": 277,
             "y": 570
           },
           "group": "nodes",
@@ -1128,8 +1128,68 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 330,
+            "x": 427,
             "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "61dnw00747",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#50e3c2ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Removed country code, so phone does not think updated"
+              },
+              "width": {
+                "value": 240
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              }
+            },
+            "status": "configured",
+            "idUnique": "lb31g4gkg6"
+          },
+          "position": {
+            "x": 1710,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -1530,7 +1590,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1711108374433,
+  "savedDate": 1713204056650,
   "variables": [
     {
       "context": "flowInstance",
