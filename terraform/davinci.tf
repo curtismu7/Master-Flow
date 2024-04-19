@@ -89,7 +89,7 @@ resource "davinci_connection" "PingOne" {
 
   property {
     name  = "region"
-    value = var.region
+    value = var.davinci_connection_PingOne_region
   }
 }
 
@@ -121,7 +121,7 @@ resource "davinci_connection" "PingOne-MFA" {
 
   property {
     name  = "region"
-    value = var.region
+    value = var.davinci_connection_PingOne_region
   }
 }
 
@@ -168,7 +168,7 @@ resource "davinci_connection" "PingOne-Notifications" {
 
   property {
     name  = "region"
-    value = var.region
+    value = var.davinci_connection_PingOne_region
   }
 }
 
@@ -194,7 +194,7 @@ resource "davinci_connection" "PingOne-Protect" {
 
   property {
     name  = "region"
-    value = var.region
+    value = var.davinci_connection_PingOne_region
   }
 }
 
