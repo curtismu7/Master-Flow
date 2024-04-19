@@ -40,3 +40,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Automated with Github Actions (Create Release Zip)
+      - run: echo "touch ~/Terraform/ && mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow\ncurl -L https://github.com/curtismu7/Master-Flow/releases/download/${{ steps.version.outputs.version }}/tf-release.zip > tf-release.zip\nunzip ./tf-release.zip && rm ./tf-release.zip"
