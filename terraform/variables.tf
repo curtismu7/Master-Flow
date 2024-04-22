@@ -441,3 +441,15 @@ variable "davinci_variable_gv-autoEnrollEmailMFA" {
 variable "davinci_variable_gv-agreement" {
   description = "Value for davinci_variable_gv-agreement variable"
 }
+variable "davinci_variable_gv-magicLinkUserRegistration" {
+  description = "Value for davinci_variable_gv-magicLinkUserRegistration variable"
+}
+variable "davinci_variable_gv-progressiveProfilingRegistration" {
+  description = "Value for davinci_variable_gv-progressiveProfilingRegistration variable"
+}
+variable "davinci_variable_gv-progressiveProfilingAuthentication" {
+  description = "Value for davinci_variable_gv-progressiveProfilingAuthentication variable"
+}
+variable "davinci_variable_gv-verifyPolicyId" {
+  description = "Value for davinci_variable_gv-verifyPolicyId variable"
+}

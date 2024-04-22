@@ -230,6 +230,7 @@ resource "davinci_connection" "Variables" {
 
 resource "davinci_variable" "CodeSentMsg" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -242,6 +243,7 @@ resource "davinci_variable" "CodeSentMsg" {
 
 resource "davinci_variable" "IsActionReg" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -254,6 +256,7 @@ resource "davinci_variable" "IsActionReg" {
 
 resource "davinci_variable" "adminMessage" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -266,6 +269,7 @@ resource "davinci_variable" "adminMessage" {
 
 resource "davinci_variable" "availableQuestions" {
   context        = "flowInstance"
+  description    = "Available questions in JSON format for Q&A"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -275,7 +279,7 @@ resource "davinci_variable" "availableQuestions" {
 
 
 }
-
+/*
 resource "davinci_variable" "availableQuestions_2" {
   context        = "company"
   environment_id = pingone_environment.master_flow_environment.id
@@ -289,9 +293,10 @@ resource "davinci_variable" "availableQuestions_2" {
 
 
 }
-
+*/
 resource "davinci_variable" "buttonValueDeviceId" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -304,6 +309,7 @@ resource "davinci_variable" "buttonValueDeviceId" {
 
 resource "davinci_variable" "canChangeDevice" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -316,6 +322,7 @@ resource "davinci_variable" "canChangeDevice" {
 
 resource "davinci_variable" "companyName" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -328,6 +335,7 @@ resource "davinci_variable" "companyName" {
 
 resource "davinci_variable" "deviceCount" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -340,6 +348,7 @@ resource "davinci_variable" "deviceCount" {
 
 resource "davinci_variable" "gotoLogin" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -381,7 +390,7 @@ resource "davinci_variable" "gv-allowPasswordless" {
 
 resource "davinci_variable" "gv-mfaOnHighRisk" {
   context        = "company"
-  description    = "This shows both Password and passwordless button for sign in"
+  description    = "MFA is run when PingOne Risk on High"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -393,7 +402,7 @@ resource "davinci_variable" "gv-mfaOnHighRisk" {
 
 resource "davinci_variable" "gv-riskScreenDisplay" {
   context        = "company"
-  description    = "This shows both Password and passwordless button for sign in"
+  description    = "This shows a screen the scores returned by PingOne risk during authentication"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -407,7 +416,7 @@ resource "davinci_variable" "gv-riskScreenDisplay" {
 
 resource "davinci_variable" "gv-fakeLevel" {
   context        = "company"
-  description    = "This tells the flow to use the gv-riskLevel for its score."
+  description    = "This tells the flow to use the gv-riskLevel variable for its score."
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -422,7 +431,7 @@ resource "davinci_variable" "gv-fakeLevel" {
 
 resource "davinci_variable" "gv-runVerifyUserRegistration" {
   context        = "company"
-  description    = "This shows both Password and passwordless button for sign in"
+  description    = "This allows you to run PingOne verify during the registration process"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -492,7 +501,7 @@ resource "davinci_variable" "gv-consent" {
 
 resource "davinci_variable" "gv-deviceManagement" {
   context        = "company"
-  description    = "Determine if device management  is available"
+  description    = "This adds a device management page to the flow, allowing you to delete/rename/set default for MFA devices"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -549,7 +558,7 @@ resource "davinci_variable" "gv-forcePasswordless" {
 
 resource "davinci_variable" "gv-forgotPasswordDisplay" {
   context        = "company"
-  description    = "determines if to show Forgot Password on sign in window"
+  description    = "Determines if to show Forgot Password on sign in window"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -563,7 +572,7 @@ resource "davinci_variable" "gv-forgotPasswordDisplay" {
 
 resource "davinci_variable" "gv-forgotUsernameDisplay" {
   context        = "company"
-  description    = "determines if to show forgot username on sign in window"
+  description    = "Determines if to show forgot username on sign in window"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -620,7 +629,7 @@ resource "davinci_variable" "gv-googleExternalIdpId" {
 
 resource "davinci_variable" "gv-inlineMFAOn" {
   context        = "company"
-  description    = "Determines if to run MFA inline"
+  description    = "Determines if to run MFA for inline registration"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -634,7 +643,7 @@ resource "davinci_variable" "gv-inlineMFAOn" {
 
 resource "davinci_variable" "gv-mfa-on" {
   context        = "company"
-  description    = "Turn on and off MFA"
+  description    = "Turn on and off MFA, This is required for all P1MFA options"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -694,6 +703,7 @@ resource "davinci_variable" "gv-p1PasswordPolicy" {
 
 resource "davinci_variable" "gv-p1PopulationId" {
   context        = "company"
+  description    = "Population ID from PingOne"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -719,19 +729,7 @@ resource "davinci_variable" "gv-passwordlessAllowedTypes" {
 
 }
 
-resource "davinci_variable" "gv-progressiveProfiling" {
-  context        = "company"
-  description    = "Turn on Progressive profiling"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "gv-progressiveProfiling"
-  type           = "boolean"
-  value          = "${var.davinci_variable_gv-progressiveProfiling_value}"
 
-
-}
 
 resource "davinci_variable" "gv-riskLevel" {
   context        = "company"
@@ -819,7 +817,7 @@ resource "davinci_variable" "gv-runProtect" {
 
 resource "davinci_variable" "gv-runVerifyforHighRisk" {
   context        = "company"
-  description    = "If you want to run Verify when user is High Risk"
+  description    = "If you want to run Verify when user is a High Risk"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -833,7 +831,7 @@ resource "davinci_variable" "gv-runVerifyforHighRisk" {
 
 resource "davinci_variable" "gv-standardForgotPassword" {
   context        = "company"
-  description    = "turn on Standard forgot password - Just MFA"
+  description    = "Turns on Standard forgot password - Just MFA"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -873,6 +871,7 @@ resource "davinci_variable" "gv-webAuthnSupport" {
 
 resource "davinci_variable" "origin" {
   context        = "company"
+  description    = "FIDO2 origin"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -884,6 +883,7 @@ resource "davinci_variable" "origin" {
 
 }
 
+/*
 resource "davinci_variable" "origin_2" {
   context        = "flowInstance"
   description    = "FIDO2 origin"
@@ -897,9 +897,11 @@ resource "davinci_variable" "origin_2" {
 
 
 }
+*/
 
 resource "davinci_variable" "p1AgreementId" {
   context        = "flowInstance"
+  description    = "PingOne Agreement ID"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -912,6 +914,7 @@ resource "davinci_variable" "p1AgreementId" {
 
 resource "davinci_variable" "p1AuthMethods" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -924,6 +927,7 @@ resource "davinci_variable" "p1AuthMethods" {
 
 resource "davinci_variable" "p1AuthenticationMethods" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -961,6 +965,7 @@ resource "davinci_variable" "p1DeviceId" {
 
 resource "davinci_variable" "p1UserId" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -973,6 +978,7 @@ resource "davinci_variable" "p1UserId" {
 
 resource "davinci_variable" "populationId" {
   context        = "flowInstance"
+  description    = "PingOne Population Id"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -986,6 +992,7 @@ resource "davinci_variable" "populationId" {
 
 resource "davinci_variable" "preppedDevices" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -998,6 +1005,7 @@ resource "davinci_variable" "preppedDevices" {
 
 resource "davinci_variable" "publicKeyCredentialRequestOptions" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1010,6 +1018,7 @@ resource "davinci_variable" "publicKeyCredentialRequestOptions" {
 
 resource "davinci_variable" "relyingParty" {
   context        = "company"
+  description    = "Relying Party for FIDO2"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1023,6 +1032,7 @@ resource "davinci_variable" "relyingParty" {
 
 resource "davinci_variable" "relyingParty_2" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1035,6 +1045,7 @@ resource "davinci_variable" "relyingParty_2" {
 
 resource "davinci_variable" "rpid" {
   context        = "company"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1061,6 +1072,7 @@ resource "davinci_variable" "rpid_2" {
 
 resource "davinci_variable" "selectedDeviceId" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1073,6 +1085,7 @@ resource "davinci_variable" "selectedDeviceId" {
 
 resource "davinci_variable" "showCodeSentMsg" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1085,6 +1098,7 @@ resource "davinci_variable" "showCodeSentMsg" {
 
 resource "davinci_variable" "showRegButton" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1098,6 +1112,7 @@ resource "davinci_variable" "showRegButton" {
 
 resource "davinci_variable" "showSettings" {
   context        = "flowInstance"
+  description    = "Internal variable"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1110,6 +1125,7 @@ resource "davinci_variable" "showSettings" {
 
 resource "davinci_variable" "stopSign" {
   context        = "flowInstance"
+  description    = "Stop sign Image"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1167,7 +1183,7 @@ resource "davinci_variable" "gv-autoEnrollEmailMFA" {
 }
 resource "davinci_variable" "gv-agreement" {
   context        = "company"
-  description    = ""
+  description    = "Consent (agreement in PingOne)"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1186,6 +1202,48 @@ resource "davinci_variable" "gv-verifyPolicyId" {
   name           = "gv-verifyPolicyId"
   type           = "boolean"
   value          = data.pingone_verify_policy.default_policy.id
+}
+
+resource "davinci_variable" "gv-progressiveProfilingAuthentication" {
+  context        = "company"
+  description    = "Turns on progressive profile during Authentication"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-progressiveProfilingAuthentication"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-progressiveProfilingAuthentication_value}"
+
+
+}
+
+resource "davinci_variable" "gv-progressiveProfilingRegistration" {
+  context        = "company"
+  description    = "Turns on progressive profile during Registration"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-progressiveProfilingRegistration"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-progressiveProfilingRegistration_value}"
+
+
+}
+
+resource "davinci_variable" "gv-magicLinkUserRegistration" {
+  context        = "company"
+  description    = "Use Magic link to confirm user during registration instead of PingOne OTP"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-gv-magicLinkUserRegistration"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-gv-magicLinkUserRegistration_value}"
+
+
 }
 
 #########################
