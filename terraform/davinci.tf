@@ -1239,12 +1239,41 @@ resource "davinci_variable" "gv-magicLinkUserRegistration" {
   max            = "2000"
   min            = "0"
   mutable        = "true"
-  name           = "gv-gv-magicLinkUserRegistration"
+  name           = "gv-magicLinkUserRegistration"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-gv-magicLinkUserRegistration_value}"
+  value          = "${var.davinci_variable_gv-magicLinkUserRegistration_value}"
 
 
 }
+
+resource "davinci_variable" "gv-notificationPolicyId" {
+  context        = "company"
+  description    = "Use Magic link to confirm user during registration instead of PingOne OTP"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-notificationPolicyId"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-notificationPolicyId_value}"
+
+
+}
+
+resource "davinci_variable" "gv-pingOneAuthorize" {
+  context        = "company"
+  description    = "Use Magic link to confirm user during registration instead of PingOne OTP"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-notificationPolicyId"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-pingOneAuthorize_value}"
+
+
+}
+
 
 #########################
 #  DaVinci Application  #

@@ -453,3 +453,13 @@ variable "davinci_variable_gv-progressiveProfilingAuthentication" {
 variable "davinci_variable_gv-verifyPolicyId" {
   description = "Value for davinci_variable_gv-verifyPolicyId variable"
 }
+variable "davinci_variable_gv-verifyPolicyId" {
+  description = "Value for davinci_variable_gv-verifyPolicyId variable"
+}
+variable "davinci_variable_gv-notificationPolicyId" {
+  description = "Value for davinci_variable_gv-notificationPolicyId variable"
+}
+variable "davinci_variable_gv-pingOneAuthorize" {
+  description = "Value for davinci_variable_gv-pingOneAuthorize variable"
+}
+

@@ -48,12 +48,12 @@ master_flow_user_lifecycle_suppress_verification_code = true
 #  External IDPs  #
 ###################
 davinci_variable_gv-googleLogin_value = "true"
-google_client_id="id"
-google_client_secret="secret"
+google_client_id=""
+google_client_secret=""
 
 davinci_variable_gv-facebookLogin_value = "true"
-facebook_app_id="id"
-facebook_app_secret="secret"
+facebook_app_id=""
+facebook_app_secret=""
 
 # TODO: Implement additional external IDPs
 davinci_variable_gv-azureLogin_value = "false"
@@ -111,3 +111,4 @@ davinci_variable_gv-agreement = "true"
 davinci_variable_gv-verifyPolicyId = ""
 davinci_variable_gv-progressiveProfilingAuthentication = "true"
 davinci_variable_gv-progressiveProfilingRegistration = "true"
+davinci_variable_gv-pingOneAuthorize = "false"
