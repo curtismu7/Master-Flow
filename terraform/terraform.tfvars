@@ -1,12 +1,12 @@
-admin_environment_id      = "9e2f2f0c-f9fa-46da-b6f0-7eda4d3ccca2"
-admin_client_id           = "a64e0021-1b2c-4a68-a818-fbce306a6e2e"
-admin_client_secret       = "_VbBL3w.f.QxeIDK.AJRgPhwWqRrYyMxrXmpL52w5CvYBFvKm3-F7VrgIF~Lavh8"
+admin_environment_id      = ""
+admin_client_id           = ""
+admin_client_secret       = ""
 region                    = "NorthAmerica"
 license_name              = "INTERNAL"
-admin_user_id             = "e2cd745d-40de-47bf-b4f3-eac10aa85192"
-dv_admin_username         = "cmuir@pingidentity.com"
-dv_admin_password         = "fja0EUF5mwu2mjp*kjw"
-organization_id           = "97ba44f2-f7ee-4144-aa95-9e636b57c096"
+admin_user_id             = ""
+dv_admin_username         = ""
+dv_admin_password         = ""
+organization_id           = ""
 #############
 #  PingOne  #
 #############
