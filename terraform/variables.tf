@@ -246,12 +246,12 @@ variable "davinci_connection_PingOne_region" {
   description = "Value for davinci_connection_PingOne_region variable"
 }
 
-variable "davinci_variable_availableQuestions_2_value" {
-  description = "Value for davinci_variable_availableQuestions_2_value variable"
+variable "davinci_variable_availableQuestions_2" {
+  description = "Value for davinci_variable_availableQuestions_2 variable"
 }
 
-variable "davinci_variable_gv-QA-On_value" {
-  description = "Value for davinci_variable_gv-QA-On_value variable"
+variable "davinci_variable_gv-QA-On" {
+  description = "Value for davinci_variable_gv-QA-On variable"
 }
 
 variable "davinci_variable_gv-protectAfterSocial" {
@@ -290,140 +290,140 @@ variable "davinci_variable_gv-isDeviceManagement" {
   description = "Value for davinci_variable_gv-isDeviceManagement variable"
 }
 
-variable "davinci_variable_gv-allowPasswordless_value" {
-  description = "Value for davinci_variable_gv-allowPasswordless_value variable"
+variable "davinci_variable_gv-allowPasswordless" {
+  description = "Value for davinci_variable_gv-allowPasswordless variable"
 }
 
-variable "davinci_variable_gv-azureLogin_value" {
-  description = "Value for davinci_variable_gv-azureLogin_value variable"
+variable "davinci_variable_gv-azureLogin" {
+  description = "Value for davinci_variable_gv-azureLogin variable"
 }
 
-variable "davinci_variable_gv-companyLogo_value" {
-  description = "Value for davinci_variable_gv-companyLogo_value variable"
+variable "davinci_variable_gv-companyLogo" {
+  description = "Value for davinci_variable_gv-companyLogo variable"
 }
 
-variable "davinci_variable_gv-companyName_value" {
-  description = "Value for davinci_variable_gv-companyName_value variable"
+variable "davinci_variable_gv-companyName" {
+  description = "Value for davinci_variable_gv-companyName variable"
 }
 
-variable "davinci_variable_gv-consent_value" {
-  description = "Value for davinci_variable_gv-consent_value variable"
+variable "davinci_variable_gv-consent" {
+  description = "Value for davinci_variable_gv-consent variable"
 }
 
-variable "davinci_variable_gv-deviceManagement_value" {
-  description = "Value for davinci_variable_gv-deviceManagement_value variable"
+variable "davinci_variable_gv-deviceManagement" {
+  description = "Value for davinci_variable_gv-deviceManagement variable"
 }
 
-variable "davinci_variable_gv-facebookLogin_value" {
-  description = "Value for davinci_variable_gv-facebookLogin_value variable"
+variable "davinci_variable_gv-facebookLogin" {
+  description = "Value for davinci_variable_gv-facebookLogin variable"
 }
 
-variable "davinci_variable_gv-forcePasswordless_value" {
-  description = "Value for davinci_variable_gv-forcePasswordless_value variable"
+variable "davinci_variable_gv-forcePasswordless" {
+  description = "Value for davinci_variable_gv-forcePasswordless variable"
 }
 
-variable "davinci_variable_gv-forgotPasswordDisplay_value" {
-  description = "Value for davinci_variable_gv-forgotPasswordDisplay_value variable"
+variable "davinci_variable_gv-forgotPasswordDisplay" {
+  description = "Value for davinci_variable_gv-forgotPasswordDisplay variable"
 }
 
-variable "davinci_variable_gv-forgotUsernameDisplay_value" {
-  description = "Value for davinci_variable_gv-forgotUsernameDisplay_value variable"
+variable "davinci_variable_gv-forgotUsernameDisplay" {
+  description = "Value for davinci_variable_gv-forgotUsernameDisplay variable"
 }
 
-variable "davinci_variable_gv-githubLogin_value" {
-  description = "Value for davinci_variable_gv-githubLogin_value variable"
+variable "davinci_variable_gv-githubLogin" {
+  description = "Value for davinci_variable_gv-githubLogin variable"
 }
 
-variable "davinci_variable_gv-googleLogin_value" {
-  description = "Value for davinci_variable_gv-googleLogin_value variable"
+variable "davinci_variable_gv-googleLogin" {
+  description = "Value for davinci_variable_gv-googleLogin variable"
 }
 
-variable "davinci_variable_gv-inlineMFAOn_value" {
-  description = "Value for davinci_variable_gv-inlineMFAOn_value variable"
+variable "davinci_variable_gv-inlineMFAOn" {
+  description = "Value for davinci_variable_gv-inlineMFAOn variable"
 }
 
-variable "davinci_variable_gv-mfa-on_value" {
-  description = "Value for davinci_variable_gv-mfa-on_value variable"
+variable "davinci_variable_gv-mfa-on" {
+  description = "Value for davinci_variable_gv-mfa-on variable"
 }
 
-/*variable "davinci_variable_gv-p1AgreementId_value" {
-  description = "Value for davinci_variable_gv-p1AgreementId_value variable"
+/*variable "davinci_variable_gv-p1AgreementId" {
+  description = "Value for davinci_variable_gv-p1AgreementId variable"
 }
 
-variable "davinci_variable_gv-p1PasswordPolicy_value" {
-  description = "Value for davinci_variable_gv-p1PasswordPolicy_value variable"
+variable "davinci_variable_gv-p1PasswordPolicy" {
+  description = "Value for davinci_variable_gv-p1PasswordPolicy variable"
 }
 
-variable "davinci_variable_gv-p1PopulationId_value" {
-  description = "Value for davinci_variable_gv-p1PopulationId_value variable"
+variable "davinci_variable_gv-p1PopulationId" {
+  description = "Value for davinci_variable_gv-p1PopulationId variable"
 }*/
 
-variable "davinci_variable_gv-passwordlessAllowedTypes_value" {
-  description = "Value for davinci_variable_gv-passwordlessAllowedTypes_value variable"
+variable "davinci_variable_gv-passwordlessAllowedTypes" {
+  description = "Value for davinci_variable_gv-passwordlessAllowedTypes variable"
 }
 
-variable "davinci_variable_gv-progressiveProfiling_value" {
-  description = "Value for davinci_variable_gv-progressiveProfiling_value variable"
+variable "davinci_variable_gv-progressiveProfiling" {
+  description = "Value for davinci_variable_gv-progressiveProfiling variable"
 }
 
-variable "davinci_variable_gv-riskLevel_value" {
-  description = "Value for davinci_variable_gv-riskLevel_value variable"
+variable "davinci_variable_gv-riskLevel" {
+  description = "Value for davinci_variable_gv-riskLevel variable"
 }
 
-variable "davinci_variable_gv-runMFAforForgot_value" {
-  description = "Value for davinci_variable_gv-runMFAforForgot_value variable"
+variable "davinci_variable_gv-runMFAforForgot" {
+  description = "Value for davinci_variable_gv-runMFAforForgot variable"
 }
 
-variable "davinci_variable_gv-runMFAforLogin_value" {
-  description = "Value for davinci_variable_gv-runMFAforLogin_value variable"
+variable "davinci_variable_gv-runMFAforLogin" {
+  description = "Value for davinci_variable_gv-runMFAforLogin variable"
 }
 
-variable "davinci_variable_gv-runMFAforSocial_value" {
-  description = "Value for davinci_variable_gv-runMFAforSocial_value variable"
+variable "davinci_variable_gv-runMFAforSocial" {
+  description = "Value for davinci_variable_gv-runMFAforSocial variable"
 }
 
-variable "davinci_variable_gv-runPasswordExpire_value" {
-  description = "Value for davinci_variable_gv-runPasswordExpire_value variable"
+variable "davinci_variable_gv-runPasswordExpire" {
+  description = "Value for davinci_variable_gv-runPasswordExpire variable"
 }
 
-variable "davinci_variable_gv-runProtect_value" {
-  description = "Value for davinci_variable_gv-runProtect_value variable"
+variable "davinci_variable_gv-runProtect" {
+  description = "Value for davinci_variable_gv-runProtect variable"
 }
 
-variable "davinci_variable_gv-runVerifyforHighRisk_value" {
-  description = "Value for davinci_variable_gv-runVerifyforHighRisk_value variable"
+variable "davinci_variable_gv-runVerifyforHighRisk" {
+  description = "Value for davinci_variable_gv-runVerifyforHighRisk variable"
 }
 
-variable "davinci_variable_gv-standardForgotPassword_value" {
-  description = "Value for davinci_variable_gv-standardForgotPassword_value variable"
+variable "davinci_variable_gv-standardForgotPassword" {
+  description = "Value for davinci_variable_gv-standardForgotPassword variable"
 }
 
-variable "davinci_variable_gv-webAuthnSupport_value" {
-  description = "Value for davinci_variable_gv-webAuthnSupport_value variable"
+variable "davinci_variable_gv-webAuthnSupport" {
+  description = "Value for davinci_variable_gv-webAuthnSupport variable"
 }
 
-variable "davinci_variable_origin_2_value" {
-  description = "Value for davinci_variable_origin_2_value variable"
+variable "davinci_variable_origin_2" {
+  description = "Value for davinci_variable_origin_2 variable"
 }
 
-variable "davinci_variable_origin_value" {
-  description = "Value for davinci_variable_origin_value variable"
+variable "davinci_variable_origin" {
+  description = "Value for davinci_variable_origin variable"
 }
 
-variable "davinci_variable_relyingParty_value" {
-  description = "Value for davinci_variable_relyingParty_value variable"
+variable "davinci_variable_relyingParty" {
+  description = "Value for davinci_variable_relyingParty variable"
 }
 
-variable "davinci_variable_rpid_value" {
-  description = "Value for davinci_variable_rpid_value variable"
+variable "davinci_variable_rpid" {
+  description = "Value for davinci_variable_rpid variable"
 }
 
-variable "davinci_variable_showRegButton_value" {
-  description = "Value for davinci_variable_showRegButton_value variable"
+variable "davinci_variable_showRegButton" {
+  description = "Value for davinci_variable_showRegButton variable"
 }
 
-variable "davinci_variable_stopSign_value" {
-  description = "Value for davinci_variable_stopSign_value variable"
+variable "davinci_variable_stopSign" {
+  description = "Value for davinci_variable_stopSign variable"
 }
 
 variable "davinci_variable_gv-captchaThreshold" {
@@ -449,15 +449,6 @@ variable "davinci_variable_gv-progressiveProfilingRegistration" {
 }
 variable "davinci_variable_gv-progressiveProfilingAuthentication" {
   description = "Value for davinci_variable_gv-progressiveProfilingAuthentication variable"
-}
-variable "davinci_variable_gv-verifyPolicyId" {
-  description = "Value for davinci_variable_gv-verifyPolicyId variable"
-}
-variable "davinci_variable_gv-verifyPolicyId" {
-  description = "Value for davinci_variable_gv-verifyPolicyId variable"
-}
-variable "davinci_variable_gv-notificationPolicyId" {
-  description = "Value for davinci_variable_gv-notificationPolicyId variable"
 }
 variable "davinci_variable_gv-pingOneAuthorize" {
   description = "Value for davinci_variable_gv-pingOneAuthorize variable"
