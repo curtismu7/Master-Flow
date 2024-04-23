@@ -288,7 +288,7 @@ resource "davinci_variable" "availableQuestions_2" {
   mutable        = "true"
   name           = "availableQuestions"
   type           = "object"
-  value          = "${var.davinci_variable_availableQuestions_2_value}"
+  value          = "${var.davinci_variable_availableQuestions_2}"
 
 
 
@@ -368,7 +368,7 @@ resource "davinci_variable" "gv-QA-On" {
   mutable        = "true"
   name           = "gv-QA-On"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-QA-On_value}"
+  value          = "${var.davinci_variable_gv-QA-On}"
 
 
 }
@@ -382,7 +382,7 @@ resource "davinci_variable" "gv-allowPasswordless" {
   mutable        = "true"
   name           = "gv-allowPasswordless"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-allowPasswordless_value}"
+  value          = "${var.davinci_variable_gv-allowPasswordless}"
 
 
 }
@@ -452,7 +452,7 @@ resource "davinci_variable" "gv-azureLogin" {
   mutable        = "true"
   name           = "gv-azureLogin"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-azureLogin_value}"
+  value          = "${var.davinci_variable_gv-azureLogin}"
 
 
 }
@@ -466,7 +466,7 @@ resource "davinci_variable" "gv-companyLogo" {
   mutable        = "true"
   name           = "gv-companyLogo"
   type           = "string"
-  value          = "${var.davinci_variable_gv-companyLogo_value}"
+  value          = "${var.davinci_variable_gv-companyLogo}"
 
 
 }
@@ -480,7 +480,7 @@ resource "davinci_variable" "gv-companyName" {
   mutable        = "true"
   name           = "gv-companyName"
   type           = "string"
-  value          = "${var.davinci_variable_gv-companyName_value}"
+  value          = "${var.davinci_variable_gv-companyName}"
 
 
 }
@@ -494,7 +494,7 @@ resource "davinci_variable" "gv-consent" {
   mutable        = "true"
   name           = "gv-consent"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-consent_value}"
+  value          = "${var.davinci_variable_gv-consent}"
 
 
 }
@@ -508,7 +508,7 @@ resource "davinci_variable" "gv-deviceManagement" {
   mutable        = "true"
   name           = "gv-deviceManagement"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-deviceManagement_value}"
+  value          = "${var.davinci_variable_gv-deviceManagement}"
 
 
 }
@@ -522,7 +522,7 @@ resource "davinci_variable" "gv-facebookLogin" {
   mutable        = "true"
   name           = "gv-facebookLogin"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-facebookLogin_value}"
+  value          = "${var.davinci_variable_gv-facebookLogin}"
 
 
 }
@@ -537,7 +537,7 @@ resource "davinci_variable" "gv-facebookExternalIdpId" {
   mutable        = "true"
   name           = "gv-facebookExternalIdpId"
   type           = "string"
-  value          = var.davinci_variable_gv-facebookLogin_value == "true" ? "${pingone_identity_provider.facebook[0].id}" : "N/A"
+  value          = var.davinci_variable_gv-facebookLogin == "true" ? "${pingone_identity_provider.facebook[0].id}" : "N/A"
 
 
 }
@@ -551,7 +551,7 @@ resource "davinci_variable" "gv-forcePasswordless" {
   mutable        = "true"
   name           = "gv-forcePasswordless"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-forcePasswordless_value}"
+  value          = "${var.davinci_variable_gv-forcePasswordless}"
 
 
 }
@@ -565,7 +565,7 @@ resource "davinci_variable" "gv-forgotPasswordDisplay" {
   mutable        = "false"
   name           = "gv-forgotPasswordDisplay"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-forgotPasswordDisplay_value}"
+  value          = "${var.davinci_variable_gv-forgotPasswordDisplay}"
 
 
 }
@@ -579,7 +579,7 @@ resource "davinci_variable" "gv-forgotUsernameDisplay" {
   mutable        = "false"
   name           = "gv-forgotUsernameDisplay"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-forgotUsernameDisplay_value}"
+  value          = "${var.davinci_variable_gv-forgotUsernameDisplay}"
 
 
 }
@@ -593,7 +593,7 @@ resource "davinci_variable" "gv-githubLogin" {
   mutable        = "true"
   name           = "gv-githubLogin"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-githubLogin_value}"
+  value          = "${var.davinci_variable_gv-githubLogin}"
 
 
 }
@@ -607,7 +607,7 @@ resource "davinci_variable" "gv-googleLogin" {
   mutable        = "true"
   name           = "gv-googleLogin"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-googleLogin_value}"
+  value          = "${var.davinci_variable_gv-googleLogin}"
 
 
 }
@@ -622,7 +622,7 @@ resource "davinci_variable" "gv-googleExternalIdpId" {
   mutable        = "true"
   name           = "gv-googleExternalIdpId"
   type           = "string"
-  value          = var.davinci_variable_gv-googleLogin_value == "true" ? "${pingone_identity_provider.google[0].id}" : "N/A"
+  value          = var.davinci_variable_gv-googleLogin == "true" ? "${pingone_identity_provider.google[0].id}" : "N/A"
 
 
 }
@@ -636,7 +636,7 @@ resource "davinci_variable" "gv-inlineMFAOn" {
   mutable        = "true"
   name           = "gv-inlineMFAOn"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-inlineMFAOn_value}"
+  value          = "${var.davinci_variable_gv-inlineMFAOn}"
 
 
 }
@@ -650,7 +650,7 @@ resource "davinci_variable" "gv-mfa-on" {
   mutable        = "true"
   name           = "gv-mfa-on"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-mfa-on_value}"
+  value          = "${var.davinci_variable_gv-mfa-on}"
 
 
 }
@@ -724,7 +724,7 @@ resource "davinci_variable" "gv-passwordlessAllowedTypes" {
   mutable        = "true"
   name           = "gv-passwordlessAllowedTypes"
   type           = "object"
-  value          = "${var.davinci_variable_gv-passwordlessAllowedTypes_value}"
+  value          = "${var.davinci_variable_gv-passwordlessAllowedTypes}"
 
 
 }
@@ -740,7 +740,7 @@ resource "davinci_variable" "gv-riskLevel" {
   mutable        = "true"
   name           = "gv-riskLevel"
   type           = "string"
-  value          = "${var.davinci_variable_gv-riskLevel_value}"
+  value          = "${var.davinci_variable_gv-riskLevel}"
 
 
 }
@@ -754,7 +754,7 @@ resource "davinci_variable" "gv-runMFAforForgot" {
   mutable        = "true"
   name           = "gv-runMFAforForgot"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-runMFAforForgot_value}"
+  value          = "${var.davinci_variable_gv-runMFAforForgot}"
 
 
 }
@@ -768,7 +768,7 @@ resource "davinci_variable" "gv-runMFAforLogin" {
   mutable        = "true"
   name           = "gv-runMFAforLogin"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-runMFAforLogin_value}"
+  value          = "${var.davinci_variable_gv-runMFAforLogin}"
 
 
 }
@@ -782,7 +782,7 @@ resource "davinci_variable" "gv-runMFAforSocial" {
   mutable        = "false"
   name           = "gv-runMFAforSocial"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-runMFAforSocial_value}"
+  value          = "${var.davinci_variable_gv-runMFAforSocial}"
 
 
 }
@@ -796,7 +796,7 @@ resource "davinci_variable" "gv-runPasswordExpire" {
   mutable        = "true"
   name           = "gv-runPasswordExpire"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-runPasswordExpire_value}"
+  value          = "${var.davinci_variable_gv-runPasswordExpire}"
 
 
 }
@@ -810,7 +810,7 @@ resource "davinci_variable" "gv-runProtect" {
   mutable        = "true"
   name           = "gv-runProtect"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-runProtect_value}"
+  value          = "${var.davinci_variable_gv-runProtect}"
 
 
 }
@@ -824,7 +824,7 @@ resource "davinci_variable" "gv-runVerifyforHighRisk" {
   mutable        = "true"
   name           = "gv-runVerifyforHighRisk"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-runVerifyforHighRisk_value}"
+  value          = "${var.davinci_variable_gv-runVerifyforHighRisk}"
 
 
 }
@@ -838,7 +838,7 @@ resource "davinci_variable" "gv-standardForgotPassword" {
   mutable        = "true"
   name           = "gv-standardForgotPassword"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-standardForgotPassword_value}"
+  value          = "${var.davinci_variable_gv-standardForgotPassword}"
 
 
 }
@@ -864,7 +864,7 @@ resource "davinci_variable" "gv-webAuthnSupport" {
   mutable        = "true"
   name           = "gv-webAuthnSupport"
   type           = "string"
-  value          = "${var.davinci_variable_gv-webAuthnSupport_value}"
+  value          = "${var.davinci_variable_gv-webAuthnSupport}"
 
 
 }
@@ -878,7 +878,7 @@ resource "davinci_variable" "origin" {
   mutable        = "true"
   name           = "origin"
   type           = "string"
-  value          = "${var.davinci_variable_origin_value}"
+  value          = "${var.davinci_variable_origin}"
 
 
 }
@@ -893,7 +893,7 @@ resource "davinci_variable" "origin_2" {
   mutable        = "true"
   name           = "origin"
   type           = "string"
-  value          = "${var.davinci_variable_origin_2_value}"
+  value          = "${var.davinci_variable_origin_2}"
 
 
 }
@@ -1025,7 +1025,7 @@ resource "davinci_variable" "relyingParty" {
   mutable        = "true"
   name           = "relyingParty"
   type           = "string"
-  value          = "${var.davinci_variable_relyingParty_value}"
+  value          = "${var.davinci_variable_relyingParty}"
 
 
 }
@@ -1052,7 +1052,7 @@ resource "davinci_variable" "rpid" {
   mutable        = "true"
   name           = "rpid"
   type           = "string"
-  value          = "${var.davinci_variable_rpid_value}"
+  value          = "${var.davinci_variable_rpid}"
 
 
 }
@@ -1105,7 +1105,7 @@ resource "davinci_variable" "showRegButton" {
   mutable        = "true"
   name           = "showRegButton"
   type           = "boolean"
-  value          = "${var.davinci_variable_showRegButton_value}"
+  value          = "${var.davinci_variable_showRegButton}"
 
 
 }
@@ -1132,7 +1132,7 @@ resource "davinci_variable" "stopSign" {
   mutable        = "true"
   name           = "stopSign"
   type           = "string"
-  value          = "${var.davinci_variable_stopSign_value}"
+  value          = "${var.davinci_variable_stopSign}"
 
 
 }
@@ -1213,7 +1213,7 @@ resource "davinci_variable" "gv-progressiveProfilingAuthentication" {
   mutable        = "true"
   name           = "gv-progressiveProfilingAuthentication"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-progressiveProfilingAuthentication_value}"
+  value          = "${var.davinci_variable_gv-progressiveProfilingAuthentication}"
 
 
 }
@@ -1227,7 +1227,7 @@ resource "davinci_variable" "gv-progressiveProfilingRegistration" {
   mutable        = "true"
   name           = "gv-progressiveProfilingRegistration"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-progressiveProfilingRegistration_value}"
+  value          = "${var.davinci_variable_gv-progressiveProfilingRegistration}"
 
 
 }
@@ -1241,21 +1241,21 @@ resource "davinci_variable" "gv-magicLinkUserRegistration" {
   mutable        = "true"
   name           = "gv-magicLinkUserRegistration"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-magicLinkUserRegistration_value}"
+  value          = "${var.davinci_variable_gv-magicLinkUserRegistration}"
 
 
 }
 
 resource "davinci_variable" "gv-notificationPolicyId" {
   context        = "company"
-  description    = "Use Magic link to confirm user during registration instead of PingOne OTP"
+  description    = "PingOne Notification Policy Id"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
   mutable        = "true"
   name           = "gv-notificationPolicyId"
-  type           = "boolean"
-  value          = "${var.davinci_variable_gv-notificationPolicyId_value}"
+  type           = "string"
+  value          = pingone_notification_policy.master_flow_notification_policy.id
 
 
 }
@@ -1267,12 +1267,14 @@ resource "davinci_variable" "gv-pingOneAuthorize" {
   max            = "2000"
   min            = "0"
   mutable        = "true"
-  name           = "gv-notificationPolicyId"
+  name           = "gv-pingOneAuthorize"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-pingOneAuthorize_value}"
+  value          = "${var.davinci_variable_gv-pingOneAuthorize}"
 
 
 }
+
+
 
 
 #########################

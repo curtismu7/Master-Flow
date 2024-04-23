@@ -103,11 +103,11 @@ output "initiate_flow_uri" {
 }
 
 output "google_callback_url" {
-  value = var.davinci_variable_gv-googleLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/google" : null
+  value = var.davinci_variable_gv-googleLogin == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/google" : null
 }
 
 output "facebook_callback_url" {
-  value = var.davinci_variable_gv-facebookLogin_value == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/facebook" : null
+  value = var.davinci_variable_gv-facebookLogin == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/facebook" : null
 }
 
 output "facile_decoder_url" {
@@ -127,7 +127,7 @@ resource "pingone_user" "master_flow_user" {
   username = var.master_flow_user_email
   password = {
     force_change  = var.master_flow_user_password_force_change == "" ? null : var.master_flow_user_password_force_change
-    initial_value = var.master_flow_user_password == "" ? null : var.master_flow_user_password
+    initial = var.master_flow_user_password == "" ? null : var.master_flow_user_password
   }
   name = {
     given            = var.master_flow_user_given_name == "" ? null : var.master_flow_user_given_name
@@ -164,7 +164,7 @@ resource "pingone_user" "master_flow_user" {
 ############################
 
 resource "pingone_identity_provider" "google" {
-  count = var.davinci_variable_gv-googleLogin_value == "true" ? 1 : 0
+  count = var.davinci_variable_gv-googleLogin == "true" ? 1 : 0
   environment_id = pingone_environment.master_flow_environment.id
 
   name    = "Google"
@@ -182,7 +182,7 @@ resource "pingone_identity_provider" "google" {
 }
 
 resource "pingone_identity_provider" "facebook" {
-  count = var.davinci_variable_gv-facebookLogin_value == "true" ? 1 : 0
+  count = var.davinci_variable_gv-facebookLogin == "true" ? 1 : 0
   environment_id = pingone_environment.master_flow_environment.id
 
   name    = "Facebook"
@@ -720,3 +720,14 @@ resource "pingone_schema_attribute" "security_qa_attribute" {
     pingone_webhook.master_flow_webhook
   ]
 }
+
+#################################
+#  PingOne Notification Policy  #
+#################################
+
+resource "pingone_notification_policy" "master_flow_notification_policy" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  name = "Master Flow Notification Policy"
+}
+
