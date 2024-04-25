@@ -7,15 +7,18 @@ admin_user_id             = ""
 dv_admin_username         = ""
 dv_admin_password         = ""
 organization_id           = ""
+
 #############
-#  PingOne  #
+#  PingOne #
 #############
 
+# Change the name as needed for your P1 environment #
 environment_name = "PingOne Master Flow - 1.1 beta"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "<h1>END-USER LICENSE AGREEMENT</h1><p>GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action.</p>"
 
+# This creates a new user in P1, change as needed #
 master_flow_user_email                  = "master.flow@mailinator.com"
 master_flow_user_username               = "master.flow@mailinator.com"
 master_flow_user_password               = "2FederateM0re!"
@@ -46,13 +49,16 @@ master_flow_user_lifecycle_suppress_verification_code = true
 ###################
 #  External IDPs  #
 ###################
-davinci_variable_gv-googleLogin = "false"
-google_client_id=""
-google_client_secret=""
 
-davinci_variable_gv-facebookLogin = "false"
-facebook_app_id=""
-facebook_app_secret=""
+#  You must put a value in client_id and client_secret if you set to "true"  #
+#  The redirect URI will be generated and shown in terminal for you to configure the ext IDP  #
+davinci_variable_gv-googleLogin = "true"
+google_client_id="123"
+google_client_secret="123"
+
+davinci_variable_gv-facebookLogin = "true"
+facebook_app_id="123"
+facebook_app_secret="123"
 
 # TODO: Implement additional external IDPs
 davinci_variable_gv-azureLogin = "false"
@@ -61,6 +67,10 @@ davinci_variable_gv-githubLogin = "false"
 #############
 #  DaVinci  #
 #############
+
+
+#  We have chosen some default behavior, please adjust as needed.   #
+#  Link to documentation for variables: https://docs.google.com/document/d/19I_y2JPejllTn5xrugpn_CH2h_ig6X2bHt2XuQf2oO4/edit?usp=sharing   #
 
 deployment_type = "REDIRECT"
 davinci_variable_origin = "https://auth.pingone.com"
