@@ -1257,7 +1257,6 @@ resource "davinci_variable" "gv-notificationPolicyId" {
   type           = "string"
   value          = pingone_notification_policy.master_flow_notification_policy.id
 
-
 }
 
 resource "davinci_variable" "gv-pingOneAuthorize" {
@@ -1271,6 +1270,17 @@ resource "davinci_variable" "gv-pingOneAuthorize" {
   type           = "boolean"
   value          = "${var.davinci_variable_gv-pingOneAuthorize}"
 
+}
+resource "davinci_variable" "gv-FIDO2-deviceNickName" {
+  context        = "company"
+  description    = "Sets the name of the FIDO2 device"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-FIDO2-deviceNickName"
+  type           = "boolean"
+  value          = "${var.davinci_variable_gv-FIDO2-deviceNickName}"
 
 }
 

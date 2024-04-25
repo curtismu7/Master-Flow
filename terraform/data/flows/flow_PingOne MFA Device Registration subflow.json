@@ -12,10 +12,10 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1713811071077,
-  "currentVersion": 50,
+  "createdDate": 1714052300527,
+  "currentVersion": 54,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1713811098246,
+  "deployedDate": 1714052303097,
   "description": "Imported on Wed Jan 17 2024 17:18:59 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -79,7 +79,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 50,
+  "publishedVersion": 54,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -100,9 +100,9 @@
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1713811098256,
+  "updatedDate": 1714052303114,
   "flowId": "c27a63e07297a1815df9e85ea86de0f9",
-  "versionId": 50,
+  "versionId": 54,
   "graphData": {
     "elements": {
       "nodes": [
@@ -1168,7 +1168,7 @@
                 "value": "FIDO2"
               },
               "nickname": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Passkey/FIDO2\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-FIDO2-deviceNickName\",\n        \"data\": \"{{global.company.variables.gv-FIDO2-deviceNickName}}\",\n        \"tooltip\": \"{{global.company.variables.gv-FIDO2-deviceNickName}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-FIDO2-deviceNickName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
                 "value": "Create FIDO2 Method"
@@ -7734,7 +7734,7 @@
             "type": "trigger",
             "properties": {
               "code": {
-                "value": "/*\n Update the devices array to include a new properties \n used when rendering device list.\n*/\n\n/*\n* deviceTypes\n* title: Display type for the device\n* icon: Icon used on forms\n* description: Brief overview of device type\n* maxDevices: Number of devices a user can have of that type (-1 = unlimited, or up to policy max)\n*/\nlet deviceTypes = {\n\tSMS: { title: \"Text Message\", icon: \"mdi-comment-text-outline\", description: \"Receive a text message with a passcode to authenticate.\", maxDevices: 1 },\n\tVOICE: { title: \"Voice\", icon: \"mdi-face-agent\", description: \"Receive a phone call with a passcode to authenticate.\", maxDevices: 1 },\n\tEMAIL: { title: \"Email\", icon: \"mdi-email-outline\", description: \"Receive an email with a passcode to authenticate.\", maxDevices: 1 },\n\tTOTP: { title: \"Authenticator App\", icon: \"mdi-cellphone-key\", description: \"Use an authenticator app to authenticate.\", maxDevices: 1 },\n\tFIDO2: { title: \"Passkey\", icon: \"mdi-fingerprint\", description: \"Authenticate using the biometrics built into your device.\", maxDevices: 1 },\n\tPLATFORM: { title: \"Biometrics\", icon: \"mdi-fingerprint\", description: \"Authenticate using the biometrics built into your device.\", maxDevices: 1 },\n\tMOBILE: { title: \"Mobile\", icon: \"mdi-account-key-outline\", description: \"Receive a push notification to authenticate.\", maxDevices: 1 },\n\tSECURITY_KEY: { title: \"Security Key\", icon: \"mdi-fingerprint\", description: \"Use a sercurity key to authenticate\", maxDevices: 1 },\n\tMAGIC: { title: \"Magic Link\", icon: \"mdi-auto-fix\", description: \"Use magic link to authenticate\", maxDevices: 1 }\n}\n\n// Device types that require masking\nconst SMS = \"SMS\";\nconst VOICE = \"VOICE\";\nconst EMAIL = \"EMAIL\";\n\n// const allowNewIfBlocked = true\n\n// Main entry point\nmodule.exports = a = async ({ params }) => {\n\tlet forcePasswordless = params.forcePasswordless;\n\tlet allowedtypes = params.allowedtypes;\n\tif (!forcePasswordless){\n\tallowedtypes.push(\"MAGIC\");\n\t}\n\tconst webAuthnSupport = params.webAuthnSupport;\n\tconst existingDevices = params.existingDevices;\n\n\t// If devices is not passed, head to error branch in flow\n\tif (!allowedtypes || allowedtypes.length === 0) {\n\t\treturn false;\n\t}\n\n\tlet devices = []\n\n\tfor (const t of allowedtypes) {\n\t\tlet d = {};\n\t\td.displayType = deviceTypes[t].title || `Unknown Device Type: ${t}`;\n\t\td.displayIcon = deviceTypes[t].icon;\n\t\td.description = deviceTypes[t].description;\n\t\td.type = t;\n\n\t\tdevices.push(d);\n\t}\n\t// Adding magic link to devices\n\t// let m = {};\n\t// m.displayType = deviceTypes[\"MAGIC\"].title;\n\t// m.displayIcon = deviceTypes[\"MAGIC\"].icon;\n\t// m.description = deviceTypes[\"MAGIC\"].description;\n\t// m.type = \"MAGIC\";\n\t// devices.push(m);\n\n\n\t// Filter webAuthnSupport devices\n\tdevices = filterWebAuthnSupportedDevices(webAuthnSupport, devices);\n\n\t// Iterate over existing devices to determine which device types have\n\t// been maxed out\n\tfor (const d of existingDevices) {\n    // Check if device is of type EMAIL and has a nickname \"Magic Link\", then treat it as MAGIC\n    if (d.type === 'EMAIL' && d.nickname === \"Magic Link\") {\n        const maxDevicesMagic = deviceTypes['MAGIC']?.maxDevices;\n        if (maxDevicesMagic !== undefined && maxDevicesMagic > 0 && d.lock?.status !== \"LOCKED\" && d.block?.status !== \"BLOCKED\") {\n            deviceTypes['MAGIC'].maxDevices--;\n        }\n    } else {\n        // For all other devices, process normally based on their type\n        const maxDevices = deviceTypes[d.type]?.maxDevices;\n        if (maxDevices !== undefined && maxDevices > 0 && d.lock?.status !== \"LOCKED\" && d.block?.status !== \"BLOCKED\") {\n            deviceTypes[d.type].maxDevices--;\n        }\n    }\n}\n\n\t// Filter devices based on number allowed for type\n\tdevices = devices.filter((d) =>\n\t\tdeviceTypes[d.type]?.maxDevices === -1 ||\n\t\tdeviceTypes[d.type]?.maxDevices > 0\n\t);\n\n\t// No devices\n\tif (devices.length === 0) {\n\t\treturn false;\n\t}\n\n\t// Sort the devices based on type\n\tdevices.sort((a, b) => a.displayType.localeCompare(b.displayType));\n\n\treturn { 'devices': devices }\n}\n\n// Filter webAuthnSupport devices\nconst filterWebAuthnSupportedDevices = (webAuthnSupport, devices) => {\n\t// Filter out devices if not supported by the running browser\n\tif (webAuthnSupport === \"NONE\") {\n\t\tdevices = devices.filter(\n\t\t\t(d) =>\n\t\t\t\td.type !== \"SECURITY_KEY\" &&\n\t\t\t\td.type !== \"PLATFORM\" &&\n\t\t\t\td.type !== \"TOTP\" &&\n\t\t\t\td.type !== \"OTP\"\n\t\t);\n\t} else if (webAuthnSupport === \"SECURITY_KEY_ONLY\") {\n\t\tdevices = devices.filter((d) => d.type !== \"PLATFORM\");\n\t}\n\treturn devices;\n};"
+                "value": "/*\n Update the devices array to include a new properties \n used when rendering device list.\n*/\n\n/*\n* deviceTypes\n* title: Display type for the device\n* icon: Icon used on forms\n* description: Brief overview of device type\n* maxDevices: Number of devices a user can have of that type (-1 = unlimited, or up to policy max)\n*/\nlet deviceTypes = {\n\tSMS: { title: \"Text Message\", icon: \"mdi-comment-text-outline\", description: \"Receive a text message with a passcode to authenticate.\", maxDevices: 1 },\n\tVOICE: { title: \"Voice\", icon: \"mdi-face-agent\", description: \"Receive a phone call with a passcode to authenticate.\", maxDevices: 1 },\n\tEMAIL: { title: \"Email\", icon: \"mdi-email-outline\", description: \"Receive an email with a passcode to authenticate.\", maxDevices: 1 },\n\tTOTP: { title: \"Authenticator App\", icon: \"mdi-cellphone-key\", description: \"Use an authenticator app to authenticate.\", maxDevices: 1 },\n\tFIDO2: { title: \"Passkey/FIDO2\", icon: \"mdi-fingerprint\", description: \"Authenticate using the biometrics built into your device.\", maxDevices: 1 },\n\tPLATFORM: { title: \"Biometrics\", icon: \"mdi-fingerprint\", description: \"Authenticate using the biometrics built into your device.\", maxDevices: 1 },\n\tMOBILE: { title: \"Mobile\", icon: \"mdi-account-key-outline\", description: \"Receive a push notification to authenticate.\", maxDevices: 1 },\n\tSECURITY_KEY: { title: \"Security Key\", icon: \"mdi-fingerprint\", description: \"Use a sercurity key to authenticate\", maxDevices: 1 },\n\tMAGIC: { title: \"Magic Link\", icon: \"mdi-auto-fix\", description: \"Use magic link to authenticate\", maxDevices: 1 }\n}\n\n// Device types that require masking\nconst SMS = \"SMS\";\nconst VOICE = \"VOICE\";\nconst EMAIL = \"EMAIL\";\n\n// const allowNewIfBlocked = true\n\n// Main entry point\nmodule.exports = a = async ({ params }) => {\n\tlet forcePasswordless = params.forcePasswordless;\n\tlet allowedtypes = params.allowedtypes;\n\tif (!forcePasswordless){\n\tallowedtypes.push(\"MAGIC\");\n\t}\n\tconst webAuthnSupport = params.webAuthnSupport;\n\tconst existingDevices = params.existingDevices;\n\n\t// If devices is not passed, head to error branch in flow\n\tif (!allowedtypes || allowedtypes.length === 0) {\n\t\treturn false;\n\t}\n\n\tlet devices = []\n\n\tfor (const t of allowedtypes) {\n\t\tlet d = {};\n\t\td.displayType = deviceTypes[t].title || `Unknown Device Type: ${t}`;\n\t\td.displayIcon = deviceTypes[t].icon;\n\t\td.description = deviceTypes[t].description;\n\t\td.type = t;\n\n\t\tdevices.push(d);\n\t}\n\t// Adding magic link to devices\n\t// let m = {};\n\t// m.displayType = deviceTypes[\"MAGIC\"].title;\n\t// m.displayIcon = deviceTypes[\"MAGIC\"].icon;\n\t// m.description = deviceTypes[\"MAGIC\"].description;\n\t// m.type = \"MAGIC\";\n\t// devices.push(m);\n\n\n\t// Filter webAuthnSupport devices\n\tdevices = filterWebAuthnSupportedDevices(webAuthnSupport, devices);\n\n\t// Iterate over existing devices to determine which device types have\n\t// been maxed out\n\tfor (const d of existingDevices) {\n    // Check if device is of type EMAIL and has a nickname \"Magic Link\", then treat it as MAGIC\n    if (d.type === 'EMAIL' && d.nickname === \"Magic Link\") {\n        const maxDevicesMagic = deviceTypes['MAGIC']?.maxDevices;\n        if (maxDevicesMagic !== undefined && maxDevicesMagic > 0 && d.lock?.status !== \"LOCKED\" && d.block?.status !== \"BLOCKED\") {\n            deviceTypes['MAGIC'].maxDevices--;\n        }\n    } else {\n        // For all other devices, process normally based on their type\n        const maxDevices = deviceTypes[d.type]?.maxDevices;\n        if (maxDevices !== undefined && maxDevices > 0 && d.lock?.status !== \"LOCKED\" && d.block?.status !== \"BLOCKED\") {\n            deviceTypes[d.type].maxDevices--;\n        }\n    }\n}\n\n\t// Filter devices based on number allowed for type\n\tdevices = devices.filter((d) =>\n\t\tdeviceTypes[d.type]?.maxDevices === -1 ||\n\t\tdeviceTypes[d.type]?.maxDevices > 0\n\t);\n\n\t// No devices\n\tif (devices.length === 0) {\n\t\treturn false;\n\t}\n\n\t// Sort the devices based on type\n\tdevices.sort((a, b) => a.displayType.localeCompare(b.displayType));\n\n\treturn { 'devices': devices }\n}\n\n// Filter webAuthnSupport devices\nconst filterWebAuthnSupportedDevices = (webAuthnSupport, devices) => {\n\t// Filter out devices if not supported by the running browser\n\tif (webAuthnSupport === \"NONE\") {\n\t\tdevices = devices.filter(\n\t\t\t(d) =>\n\t\t\t\td.type !== \"SECURITY_KEY\" &&\n\t\t\t\td.type !== \"PLATFORM\" &&\n\t\t\t\td.type !== \"TOTP\" &&\n\t\t\t\td.type !== \"OTP\"\n\t\t);\n\t} else if (webAuthnSupport === \"SECURITY_KEY_ONLY\") {\n\t\tdevices = devices.filter((d) => d.type !== \"PLATFORM\");\n\t}\n\treturn devices;\n};"
               },
               "nodeDescription": {
                 "value": "Prepare the available devices for display"
@@ -7755,7 +7755,7 @@
                   {
                     "name": "webAuthnSupport",
                     "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"webAuthnSupport\",\n        \"data\": \"{{local.0eeftqg6d9.payload.output.webAuthnSupport}}\",\n        \"tooltip\": \"{{local.0eeftqg6d9.payload.output.webAuthnSupport}}\",\n        \"children\": [\n          {\n            \"text\": \"webAuthnSupport\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-webAuthnSupport\",\n        \"data\": \"{{global.company.variables.gv-webAuthnSupport}}\",\n        \"tooltip\": \"{{global.company.variables.gv-webAuthnSupport}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-webAuthnSupport\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "name": "existingDevices",
@@ -16156,7 +16156,7 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1713811070210,
+  "savedDate": 1714052299578,
   "variables": [
     {
       "context": "flowInstance",
@@ -16204,6 +16204,22 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+    },
+    {
+      "context": "company",
+      "createdDate": 1714051653061,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "fields": {
+        "type": "string",
+        "displayName": "Passkey/FIDO2",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "gv-FIDO2-deviceNickName##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
@@ -16292,6 +16308,23 @@
       "updatedDate": 1712323538892,
       "visibility": "private",
       "name": "gv-passwordlessAllowedTypes##SK##company",
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+    },
+    {
+      "context": "company",
+      "createdDate": 1711103268368,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "fields": {
+        "type": "string",
+        "displayName": "Set webauthn to \"platform\" or \"cross-platform\"",
+        "value": "cross-platform",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "gv-webAuthnSupport##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
