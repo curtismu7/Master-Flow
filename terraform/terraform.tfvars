@@ -14,6 +14,7 @@ dv_admin_password         = ""
 #############
 
 # Change the name as needed for your P1 environment #
+
 environment_name = "PingOne Master Flow - 1.1 beta"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
