@@ -110,7 +110,7 @@ output "facebook_callback_url" {
   value = var.davinci_variable_gv-facebookLogin == "true" ? "https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/facebook" : null
 }
 
-output "facile_decoder_url" {
+output "webhook_decoder_url" {
   value = "https://decoder.pingidentity.cloud/webhooks/${pingone_environment.master_flow_environment.id}"
 }
 
@@ -127,7 +127,7 @@ resource "pingone_user" "master_flow_user" {
   username = var.master_flow_user_email
   password = {
     force_change  = var.master_flow_user_password_force_change == "" ? null : var.master_flow_user_password_force_change
-    initial = var.master_flow_user_password == "" ? null : var.master_flow_user_password
+    initial_value = var.master_flow_user_password == "" ? null : var.master_flow_user_password
   }
   name = {
     given            = var.master_flow_user_given_name == "" ? null : var.master_flow_user_given_name
@@ -171,8 +171,8 @@ resource "pingone_identity_provider" "google" {
   enabled = true
 
   google {
-    client_id     = var.google_client_id
-    client_secret = var.google_client_secret
+    client_id     = var.google_client_id == "" ? "client-id" : var.google_client_id
+    client_secret = var.google_client_secret == "" ? "client-secret" : var.google_client_secret
   }
   registration_population_id = data.pingone_population.default_population.id
   
@@ -189,8 +189,8 @@ resource "pingone_identity_provider" "facebook" {
   enabled = true
 
   facebook {
-    app_id     = var.facebook_app_id
-    app_secret = var.facebook_app_secret
+    app_id     = var.facebook_app_id == "" ? "app-id" : var.facebook_app_id
+    app_secret = var.facebook_app_secret  == "" ? "app-secret" : var.facebook_app_secret
   }
   registration_population_id = data.pingone_population.default_population.id
 

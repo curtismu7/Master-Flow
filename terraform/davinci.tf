@@ -237,8 +237,6 @@ resource "davinci_variable" "CodeSentMsg" {
   mutable        = "true"
   name           = "CodeSentMsg"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "IsActionReg" {
@@ -250,8 +248,6 @@ resource "davinci_variable" "IsActionReg" {
   mutable        = "true"
   name           = "IsActionReg"
   type           = "boolean"
-
-
 }
 
 resource "davinci_variable" "adminMessage" {
@@ -263,8 +259,6 @@ resource "davinci_variable" "adminMessage" {
   mutable        = "true"
   name           = "adminMessage"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "availableQuestions" {
@@ -276,8 +270,6 @@ resource "davinci_variable" "availableQuestions" {
   mutable        = "true"
   name           = "availableQuestions"
   type           = "object"
-
-
 }
 /*
 resource "davinci_variable" "availableQuestions_2" {
@@ -290,8 +282,6 @@ resource "davinci_variable" "availableQuestions_2" {
   type           = "object"
   value          = "${var.davinci_variable_availableQuestions_2}"
 
-
-
 }
 */
 resource "davinci_variable" "buttonValueDeviceId" {
@@ -303,8 +293,6 @@ resource "davinci_variable" "buttonValueDeviceId" {
   mutable        = "true"
   name           = "buttonValueDeviceId"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "canChangeDevice" {
@@ -316,8 +304,6 @@ resource "davinci_variable" "canChangeDevice" {
   mutable        = "true"
   name           = "canChangeDevice"
   type           = "boolean"
-
-
 }
 
 resource "davinci_variable" "companyName" {
@@ -329,8 +315,6 @@ resource "davinci_variable" "companyName" {
   mutable        = "true"
   name           = "companyName"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "deviceCount" {
@@ -342,8 +326,6 @@ resource "davinci_variable" "deviceCount" {
   mutable        = "true"
   name           = "deviceCount"
   type           = "number"
-
-
 }
 
 resource "davinci_variable" "gotoLogin" {
@@ -355,8 +337,6 @@ resource "davinci_variable" "gotoLogin" {
   mutable        = "true"
   name           = "gotoLogin"
   type           = "boolean"
-
-
 }
 
 resource "davinci_variable" "gv-QA-On" {
@@ -369,8 +349,6 @@ resource "davinci_variable" "gv-QA-On" {
   name           = "gv-QA-On"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-QA-On}"
-
-
 }
 
 resource "davinci_variable" "gv-allowPasswordless" {
@@ -383,8 +361,6 @@ resource "davinci_variable" "gv-allowPasswordless" {
   name           = "gv-allowPasswordless"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-allowPasswordless}"
-
-
 }
 
 
@@ -410,8 +386,6 @@ resource "davinci_variable" "gv-riskScreenDisplay" {
   name           = "gv-riskScreenDisplay"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-riskScreenDisplay}"
-
-
 }
 
 resource "davinci_variable" "gv-fakeLevel" {
@@ -424,8 +398,6 @@ resource "davinci_variable" "gv-fakeLevel" {
   name           = "gv-fakeLevel"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-mfaOnHighRisk}"
-
-
 }
 
 
@@ -439,8 +411,6 @@ resource "davinci_variable" "gv-runVerifyUserRegistration" {
   name           = "gv-runVerifyUserRegistration"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-runVerifyUserRegistration}"
-
-
 }
 
 resource "davinci_variable" "gv-azureLogin" {
@@ -453,8 +423,6 @@ resource "davinci_variable" "gv-azureLogin" {
   name           = "gv-azureLogin"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-azureLogin}"
-
-
 }
 
 resource "davinci_variable" "gv-companyLogo" {
@@ -467,8 +435,6 @@ resource "davinci_variable" "gv-companyLogo" {
   name           = "gv-companyLogo"
   type           = "string"
   value          = "${var.davinci_variable_gv-companyLogo}"
-
-
 }
 
 resource "davinci_variable" "gv-companyName" {
@@ -481,8 +447,6 @@ resource "davinci_variable" "gv-companyName" {
   name           = "gv-companyName"
   type           = "string"
   value          = "${var.davinci_variable_gv-companyName}"
-
-
 }
 
 resource "davinci_variable" "gv-consent" {
@@ -495,8 +459,6 @@ resource "davinci_variable" "gv-consent" {
   name           = "gv-consent"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-consent}"
-
-
 }
 
 resource "davinci_variable" "gv-deviceManagement" {
@@ -509,8 +471,6 @@ resource "davinci_variable" "gv-deviceManagement" {
   name           = "gv-deviceManagement"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-deviceManagement}"
-
-
 }
 
 resource "davinci_variable" "gv-facebookLogin" {
@@ -523,8 +483,6 @@ resource "davinci_variable" "gv-facebookLogin" {
   name           = "gv-facebookLogin"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-facebookLogin}"
-
-
 }
 
 resource "davinci_variable" "gv-facebookExternalIdpId" {
@@ -538,8 +496,6 @@ resource "davinci_variable" "gv-facebookExternalIdpId" {
   name           = "gv-facebookExternalIdpId"
   type           = "string"
   value          = var.davinci_variable_gv-facebookLogin == "true" ? "${pingone_identity_provider.facebook[0].id}" : "N/A"
-
-
 }
 
 resource "davinci_variable" "gv-forcePasswordless" {
@@ -552,8 +508,6 @@ resource "davinci_variable" "gv-forcePasswordless" {
   name           = "gv-forcePasswordless"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-forcePasswordless}"
-
-
 }
 
 resource "davinci_variable" "gv-forgotPasswordDisplay" {
@@ -566,8 +520,6 @@ resource "davinci_variable" "gv-forgotPasswordDisplay" {
   name           = "gv-forgotPasswordDisplay"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-forgotPasswordDisplay}"
-
-
 }
 
 resource "davinci_variable" "gv-forgotUsernameDisplay" {
@@ -580,8 +532,6 @@ resource "davinci_variable" "gv-forgotUsernameDisplay" {
   name           = "gv-forgotUsernameDisplay"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-forgotUsernameDisplay}"
-
-
 }
 
 resource "davinci_variable" "gv-githubLogin" {
@@ -594,8 +544,6 @@ resource "davinci_variable" "gv-githubLogin" {
   name           = "gv-githubLogin"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-githubLogin}"
-
-
 }
 
 resource "davinci_variable" "gv-googleLogin" {
@@ -608,8 +556,6 @@ resource "davinci_variable" "gv-googleLogin" {
   name           = "gv-googleLogin"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-googleLogin}"
-
-
 }
 
 resource "davinci_variable" "gv-googleExternalIdpId" {
@@ -623,8 +569,6 @@ resource "davinci_variable" "gv-googleExternalIdpId" {
   name           = "gv-googleExternalIdpId"
   type           = "string"
   value          = var.davinci_variable_gv-googleLogin == "true" ? "${pingone_identity_provider.google[0].id}" : "N/A"
-
-
 }
 
 resource "davinci_variable" "gv-inlineMFAOn" {
@@ -637,8 +581,6 @@ resource "davinci_variable" "gv-inlineMFAOn" {
   name           = "gv-inlineMFAOn"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-inlineMFAOn}"
-
-
 }
 
 resource "davinci_variable" "gv-mfa-on" {
@@ -651,8 +593,6 @@ resource "davinci_variable" "gv-mfa-on" {
   name           = "gv-mfa-on"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-mfa-on}"
-
-
 }
 
 resource "davinci_variable" "gv-p1AgreementId" {
@@ -665,8 +605,6 @@ resource "davinci_variable" "gv-p1AgreementId" {
   name           = "gv-p1AgreementId"
   type           = "string"
   value          = pingone_agreement.master_flow_agreement.id
-
-
 }
 
 resource "davinci_variable" "gv-p1PasswordPolicy" {
@@ -711,8 +649,6 @@ resource "davinci_variable" "gv-p1PopulationId" {
   name           = "gv-p1PopulationId"
   type           = "string"
   value          = data.pingone_population.default_population.id
-
-
 }
 
 resource "davinci_variable" "gv-passwordlessAllowedTypes" {
@@ -725,11 +661,7 @@ resource "davinci_variable" "gv-passwordlessAllowedTypes" {
   name           = "gv-passwordlessAllowedTypes"
   type           = "object"
   value          = "${var.davinci_variable_gv-passwordlessAllowedTypes}"
-
-
 }
-
-
 
 resource "davinci_variable" "gv-riskLevel" {
   context        = "company"
@@ -741,8 +673,6 @@ resource "davinci_variable" "gv-riskLevel" {
   name           = "gv-riskLevel"
   type           = "string"
   value          = "${var.davinci_variable_gv-riskLevel}"
-
-
 }
 
 resource "davinci_variable" "gv-runMFAforForgot" {
@@ -755,8 +685,6 @@ resource "davinci_variable" "gv-runMFAforForgot" {
   name           = "gv-runMFAforForgot"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-runMFAforForgot}"
-
-
 }
 
 resource "davinci_variable" "gv-runMFAforLogin" {
@@ -769,8 +697,6 @@ resource "davinci_variable" "gv-runMFAforLogin" {
   name           = "gv-runMFAforLogin"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-runMFAforLogin}"
-
-
 }
 
 resource "davinci_variable" "gv-runMFAforSocial" {
@@ -783,8 +709,6 @@ resource "davinci_variable" "gv-runMFAforSocial" {
   name           = "gv-runMFAforSocial"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-runMFAforSocial}"
-
-
 }
 
 resource "davinci_variable" "gv-runPasswordExpire" {
@@ -797,8 +721,6 @@ resource "davinci_variable" "gv-runPasswordExpire" {
   name           = "gv-runPasswordExpire"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-runPasswordExpire}"
-
-
 }
 
 resource "davinci_variable" "gv-runProtect" {
@@ -811,8 +733,6 @@ resource "davinci_variable" "gv-runProtect" {
   name           = "gv-runProtect"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-runProtect}"
-
-
 }
 
 resource "davinci_variable" "gv-runVerifyforHighRisk" {
@@ -825,8 +745,6 @@ resource "davinci_variable" "gv-runVerifyforHighRisk" {
   name           = "gv-runVerifyforHighRisk"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-runVerifyforHighRisk}"
-
-
 }
 
 resource "davinci_variable" "gv-standardForgotPassword" {
@@ -839,8 +757,6 @@ resource "davinci_variable" "gv-standardForgotPassword" {
   name           = "gv-standardForgotPassword"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-standardForgotPassword}"
-
-
 }
 
 resource "davinci_variable" "gv-isDeviceManagement" {
@@ -851,8 +767,6 @@ resource "davinci_variable" "gv-isDeviceManagement" {
   name           = "gv-isDeviceManagement"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-isDeviceManagement}"
-
-
 }
 
 resource "davinci_variable" "gv-webAuthnSupport" {
@@ -865,8 +779,6 @@ resource "davinci_variable" "gv-webAuthnSupport" {
   name           = "gv-webAuthnSupport"
   type           = "string"
   value          = "${var.davinci_variable_gv-webAuthnSupport}"
-
-
 }
 
 resource "davinci_variable" "origin" {
@@ -879,25 +791,7 @@ resource "davinci_variable" "origin" {
   name           = "origin"
   type           = "string"
   value          = "${var.davinci_variable_origin}"
-
-
 }
-
-/*
-resource "davinci_variable" "origin_2" {
-  context        = "flowInstance"
-  description    = "FIDO2 origin"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "origin"
-  type           = "string"
-  value          = "${var.davinci_variable_origin_2}"
-
-
-}
-*/
 
 resource "davinci_variable" "p1AgreementId" {
   context        = "flowInstance"
@@ -908,8 +802,6 @@ resource "davinci_variable" "p1AgreementId" {
   mutable        = "true"
   name           = "p1AgreementId"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "p1AuthMethods" {
@@ -921,8 +813,6 @@ resource "davinci_variable" "p1AuthMethods" {
   mutable        = "true"
   name           = "p1AuthMethods"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "p1AuthenticationMethods" {
@@ -934,8 +824,6 @@ resource "davinci_variable" "p1AuthenticationMethods" {
   mutable        = "true"
   name           = "p1AuthenticationMethods"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "p1DeviceAuthenticationId" {
@@ -946,8 +834,6 @@ resource "davinci_variable" "p1DeviceAuthenticationId" {
   mutable        = "true"
   name           = "p1DeviceAuthenticationId"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "p1DeviceId" {
@@ -959,8 +845,6 @@ resource "davinci_variable" "p1DeviceId" {
   mutable        = "true"
   name           = "p1DeviceId"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "p1UserId" {
@@ -972,8 +856,6 @@ resource "davinci_variable" "p1UserId" {
   mutable        = "true"
   name           = "p1UserId"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "populationId" {
@@ -986,8 +868,6 @@ resource "davinci_variable" "populationId" {
   name           = "populationId"
   type           = "string"
   value          = data.pingone_population.default_population.id
-
-
 }
 
 resource "davinci_variable" "preppedDevices" {
@@ -999,8 +879,6 @@ resource "davinci_variable" "preppedDevices" {
   mutable        = "true"
   name           = "preppedDevices"
   type           = "object"
-
-
 }
 
 resource "davinci_variable" "publicKeyCredentialRequestOptions" {
@@ -1012,8 +890,6 @@ resource "davinci_variable" "publicKeyCredentialRequestOptions" {
   mutable        = "true"
   name           = "publicKeyCredentialRequestOptions"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "relyingParty" {
@@ -1026,8 +902,6 @@ resource "davinci_variable" "relyingParty" {
   name           = "relyingParty"
   type           = "string"
   value          = "${var.davinci_variable_relyingParty}"
-
-
 }
 
 resource "davinci_variable" "relyingParty_2" {
@@ -1039,8 +913,6 @@ resource "davinci_variable" "relyingParty_2" {
   mutable        = "true"
   name           = "relyingParty"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "rpid" {
@@ -1053,8 +925,6 @@ resource "davinci_variable" "rpid" {
   name           = "rpid"
   type           = "string"
   value          = "${var.davinci_variable_rpid}"
-
-
 }
 
 resource "davinci_variable" "rpid_2" {
@@ -1066,8 +936,6 @@ resource "davinci_variable" "rpid_2" {
   mutable        = "true"
   name           = "rpid"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "selectedDeviceId" {
@@ -1079,8 +947,6 @@ resource "davinci_variable" "selectedDeviceId" {
   mutable        = "true"
   name           = "selectedDeviceId"
   type           = "string"
-
-
 }
 
 resource "davinci_variable" "showCodeSentMsg" {
@@ -1092,8 +958,6 @@ resource "davinci_variable" "showCodeSentMsg" {
   mutable        = "true"
   name           = "showCodeSentMsg"
   type           = "boolean"
-
-
 }
 
 resource "davinci_variable" "showRegButton" {
@@ -1106,8 +970,6 @@ resource "davinci_variable" "showRegButton" {
   name           = "showRegButton"
   type           = "boolean"
   value          = "${var.davinci_variable_showRegButton}"
-
-
 }
 
 resource "davinci_variable" "showSettings" {
@@ -1119,8 +981,6 @@ resource "davinci_variable" "showSettings" {
   mutable        = "true"
   name           = "showSettings"
   type           = "boolean"
-
-
 }
 
 resource "davinci_variable" "stopSign" {
@@ -1133,8 +993,6 @@ resource "davinci_variable" "stopSign" {
   name           = "stopSign"
   type           = "string"
   value          = "${var.davinci_variable_stopSign}"
-
-
 }
 
 resource "davinci_variable" "gv-captchaThreshold" {
@@ -1148,6 +1006,7 @@ resource "davinci_variable" "gv-captchaThreshold" {
   type           = "string"
   value          = "${var.davinci_variable_gv-captchaThreshold}"
 }
+
 resource "davinci_variable" "gv-reCaptcha" {
   context        = "company"
   description    = "Determines whether reCAPTCHA is enabled"
@@ -1159,6 +1018,7 @@ resource "davinci_variable" "gv-reCaptcha" {
   type           = "boolean"
   value          = "${var.davinci_variable_gv-reCaptcha}"
 }
+
 resource "davinci_variable" "gv-captchaV3SiteKey" {
   context        = "company"
   description    = "reCAPTCHA v3 Site Key"
@@ -1170,6 +1030,7 @@ resource "davinci_variable" "gv-captchaV3SiteKey" {
   type           = "string"
   value          = "${var.davinci_variable_gv-captchaV3SiteKey}"
 }
+
 resource "davinci_variable" "gv-autoEnrollEmailMFA" {
   context        = "company"
   description    = "Determins whether email should be auto enrolled in MFA"
@@ -1181,6 +1042,7 @@ resource "davinci_variable" "gv-autoEnrollEmailMFA" {
   type           = "boolean"
   value          = "${var.davinci_variable_gv-autoEnrollEmailMFA}"
 }
+
 resource "davinci_variable" "gv-agreement" {
   context        = "company"
   description    = "Consent (agreement in PingOne)"
@@ -1192,6 +1054,7 @@ resource "davinci_variable" "gv-agreement" {
   type           = "boolean"
   value          = "${var.davinci_variable_gv-agreement}"
 }
+
 resource "davinci_variable" "gv-verifyPolicyId" {
   context        = "company"
   description    = "PingOne Verify Policy ID"
@@ -1200,7 +1063,7 @@ resource "davinci_variable" "gv-verifyPolicyId" {
   min            = "0"
   mutable        = "true"
   name           = "gv-verifyPolicyId"
-  type           = "boolean"
+  type           = "string"
   value          = data.pingone_verify_policy.default_policy.id
 }
 
@@ -1214,8 +1077,6 @@ resource "davinci_variable" "gv-progressiveProfilingAuthentication" {
   name           = "gv-progressiveProfilingAuthentication"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-progressiveProfilingAuthentication}"
-
-
 }
 
 resource "davinci_variable" "gv-progressiveProfilingRegistration" {
@@ -1228,8 +1089,6 @@ resource "davinci_variable" "gv-progressiveProfilingRegistration" {
   name           = "gv-progressiveProfilingRegistration"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-progressiveProfilingRegistration}"
-
-
 }
 
 resource "davinci_variable" "gv-magicLinkUserRegistration" {
@@ -1242,8 +1101,6 @@ resource "davinci_variable" "gv-magicLinkUserRegistration" {
   name           = "gv-magicLinkUserRegistration"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-magicLinkUserRegistration}"
-
-
 }
 
 resource "davinci_variable" "gv-notificationPolicyId" {
@@ -1256,7 +1113,6 @@ resource "davinci_variable" "gv-notificationPolicyId" {
   name           = "gv-notificationPolicyId"
   type           = "string"
   value          = pingone_notification_policy.master_flow_notification_policy.id
-
 }
 
 resource "davinci_variable" "gv-pingOneAuthorize" {
@@ -1269,7 +1125,6 @@ resource "davinci_variable" "gv-pingOneAuthorize" {
   name           = "gv-pingOneAuthorize"
   type           = "boolean"
   value          = "${var.davinci_variable_gv-pingOneAuthorize}"
-
 }
 
 
@@ -1593,71 +1448,6 @@ resource "davinci_flow" "PingOne-MFA-Device-Management-Subflow" {
   depends_on = [
     data.davinci_connections.read_connections
   ]
-}
-
-resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
-  connection_link {
-    id   = davinci_connection.Annotation.id
-    name = davinci_connection.Annotation.name
-  }
-
-  connection_link {
-    id   = davinci_connection.Error-Message.id
-    name = davinci_connection.Error-Message.name
-  }
-
-  connection_link {
-    id   = davinci_connection.Flow-Connector.id
-    name = davinci_connection.Flow-Connector.name
-  }
-
-  connection_link {
-    id   = davinci_connection.Functions.id
-    name = davinci_connection.Functions.name
-  }
-
-  connection_link {
-    id   = davinci_connection.Http.id
-    name = davinci_connection.Http.name
-  }
-
-  connection_link {
-    id   = davinci_connection.Node.id
-    name = davinci_connection.Node.name
-    replace_import_connection_id = "e7eae662d2ca276e4c6f097fc36a3bb1"
-  }
-
-  connection_link {
-    id   = davinci_connection.PingOne-MFA.id
-    name = davinci_connection.PingOne-MFA.name
-  }
-
-  connection_link {
-    id   = davinci_connection.PingOne.id
-    name = davinci_connection.PingOne.name
-  }
-
-  connection_link {
-    id   = davinci_connection.Variables.id
-    name = davinci_connection.Variables.name
-  }
-
-  environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flows/flow_PingOne MFA Device Registration subflow.json")}"
-
-  subflow_link {
-    id   = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.id
-    name = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.name
-    replace_import_subflow_id = "46ebc87053d586dbfabe6cb677162c6d"
-  }
-
-  depends_on = [
-    data.davinci_connections.read_connections
-  ]
-  #subflow_link {
-  #  id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
-  #  name = "PingOne MFA Authentication subflow"
-  #}
 }
 
 resource "davinci_flow" "PingOne-Protect-subflow" {
@@ -2200,6 +1990,11 @@ resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow"
   }
 
   connection_link {
+    id   = davinci_connection.PingOne-MFA.id
+    name = davinci_connection.PingOne-MFA.name
+  }
+
+  connection_link {
     id   = davinci_connection.PingOne-Authentication.id
     name = davinci_connection.PingOne-Authentication.name
   }
@@ -2208,12 +2003,6 @@ resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow"
   flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO Social External IdP authentication subflow.json")}"
 
   subflow_link {
-    id   = davinci_flow.PingOne-Auto-enroll-user-in-email.id
-    name = davinci_flow.PingOne-Auto-enroll-user-in-email.name
-    replace_import_subflow_id = "433a45daac5c9a27629a2c59235a939e"
-  }
-
-    subflow_link {
     id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
     name = davinci_flow.PingOne-MFA-Authentication-subflow.name
     replace_import_subflow_id = "49a3fbbfac4050f9c558aaae75bd2a36"
@@ -2222,7 +2011,13 @@ resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow"
   subflow_link {
     id   = davinci_flow.PingOne-Protect-subflow.id
     name = davinci_flow.PingOne-Protect-subflow.name
-    replace_import_subflow_id = "2572ed744b282b38cd33051133f29a50"
+    replace_import_subflow_id = "20ed625295bdce54ea0c8868bc13ae57"
+  }
+
+  subflow_link {
+    id   = davinci_flow.PingOne-SSO-Consent-subflow.id
+    name = davinci_flow.PingOne-SSO-Consent-subflow.name
+    replace_import_subflow_id = "acabff5c7a1c870245600e440e9b9c2b"
   }
 
   depends_on = [
@@ -2326,6 +2121,12 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
     id   = davinci_flow.PingOne-reCAPTCHA-v3-subflow.id
     name = davinci_flow.PingOne-reCAPTCHA-v3-subflow.name
     replace_import_subflow_id = "cf93627a9eecea11e7ac9111c652a14e"
+  }
+
+  subflow_link {
+    id   = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.id
+    name = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.name
+    replace_import_subflow_id = "af65b0426d5e2d4d1ea93502d35f82ed"
   }
 
   depends_on = [
@@ -2507,6 +2308,11 @@ resource "davinci_flow" "PingOne-reCAPTCHA-v3-subflow" {
     name = davinci_connection.Variables.name
   }
 
+  connection_link {
+    id   = davinci_connection.Error-Message.id
+    name = davinci_connection.Error-Message.name
+  }
+
   environment_id = pingone_environment.master_flow_environment.id
   flow_json      = "${file("${path.module}/data/flows/flow_PingOne reCAPTCHA v3  subflow.json")}"
 
@@ -2578,7 +2384,7 @@ resource "davinci_flow" "PingOne-Authorize-subflow" {
   }
 
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Verify subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne Authorize Flow subflow.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
@@ -2629,4 +2435,69 @@ resource "davinci_flow" "PingOne-Auto-enroll-user-in-email" {
   depends_on = [
     data.davinci_connections.read_connections
   ]
+}
+
+resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
+  connection_link {
+    id   = davinci_connection.Annotation.id
+    name = davinci_connection.Annotation.name
+  }
+
+  connection_link {
+    id   = davinci_connection.Error-Message.id
+    name = davinci_connection.Error-Message.name
+  }
+
+  connection_link {
+    id   = davinci_connection.Flow-Connector.id
+    name = davinci_connection.Flow-Connector.name
+  }
+
+  connection_link {
+    id   = davinci_connection.Functions.id
+    name = davinci_connection.Functions.name
+  }
+
+  connection_link {
+    id   = davinci_connection.Http.id
+    name = davinci_connection.Http.name
+  }
+
+  connection_link {
+    id   = davinci_connection.Node.id
+    name = davinci_connection.Node.name
+    replace_import_connection_id = "e7eae662d2ca276e4c6f097fc36a3bb1"
+  }
+
+  connection_link {
+    id   = davinci_connection.PingOne-MFA.id
+    name = davinci_connection.PingOne-MFA.name
+  }
+
+  connection_link {
+    id   = davinci_connection.PingOne.id
+    name = davinci_connection.PingOne.name
+  }
+
+  connection_link {
+    id   = davinci_connection.Variables.id
+    name = davinci_connection.Variables.name
+  }
+
+  environment_id = pingone_environment.master_flow_environment.id
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne MFA Device Registration subflow.json")}"
+
+  subflow_link {
+    id   = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.id
+    name = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.name
+    replace_import_subflow_id = "46ebc87053d586dbfabe6cb677162c6d"
+  }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
+  #subflow_link {
+  #  id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
+  #  name = "PingOne MFA Authentication subflow"
+  #}
 }

@@ -1,12 +1,12 @@
-organization_id           = ""
-admin_environment_id      = ""
-admin_client_id           = ""
-admin_client_secret       = ""
+admin_environment_id      = "875e9c7d-a69d-4402-861b-1cc4ca24e7e9"
+admin_client_id           = "281bb27a-2c37-43d4-ab3e-2b2829a3295f"
+admin_client_secret       = "5j.LkqOVACaxl9KTU610nlF1eOdE~wMxJ74.3TTXVTXYEaGZko5G9SpgilXh33lD"
 region                    = "NorthAmerica"
 license_name              = "INTERNAL"
-admin_user_id             = ""
-dv_admin_username         = ""
-dv_admin_password         = ""
+admin_user_id             = "0af3abf8-51c7-4f4a-9232-265faef8795a"
+dv_admin_username         = "kylemoorehead@pingidentity.com"
+dv_admin_password         = "R29dtq82@"
+organization_id           = "953388fc-2a02-447e-b0df-fcfa5842dfbe"
 
 
 #############
@@ -15,7 +15,7 @@ dv_admin_password         = ""
 
 # Change the name as needed for your P1 environment #
 
-environment_name = "PingOne Master Flow - 1.1 beta"
+environment_name = "PingOne Master Flow - 1.1 - Kyle Test"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "<h1>END-USER LICENSE AGREEMENT</h1><p>GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action.</p>"
@@ -52,15 +52,20 @@ master_flow_user_lifecycle_suppress_verification_code = true
 #  External IDPs  #
 ###################
 
-#  You must put a value in client_id and client_secret if you set to "true"  #
+#  You must put a value in client_id and client_secret if you set to "true"                   #
+#  If davinci_variable_gv-googleLogin = "true" and you do not specify valid credentials,      #
+#  the buttons will still appear on the login screen, but they will not work.                 #
 #  The redirect URI will be generated and shown in terminal for you to configure the ext IDP  #
+#                                                                                             #
+#  The flow will return a Redirect URI to add to the sevice provider.                         #
+#  https://pingidentity.atlassian.net/wiki/spaces/ASA/pages/407765131/Set+Up+Social+Logins+for+PingOne  #
 davinci_variable_gv-googleLogin = "true"
-google_client_id="123"
-google_client_secret="123"
+google_client_id=""
+google_client_secret=""
 
 davinci_variable_gv-facebookLogin = "true"
-facebook_app_id="123"
-facebook_app_secret="123"
+facebook_app_id=""
+facebook_app_secret=""
 
 # TODO: Implement additional external IDPs
 davinci_variable_gv-azureLogin = "false"
@@ -123,4 +128,4 @@ davinci_variable_gv-progressiveProfilingAuthentication = "true"
 davinci_variable_gv-progressiveProfilingRegistration = "true"
 davinci_variable_gv-pingOneAuthorize = "false"
 davinci_variable_gv-magicLinkUserRegistration = "true"
-device_variable_gv-FIDO2-deviceNickName = "Passkey/FIDO2"
+davinci_variable_gv-FIDO2-deviceNickName = "Passkey/FIDO2"
