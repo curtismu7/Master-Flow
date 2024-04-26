@@ -1261,7 +1261,7 @@ resource "davinci_variable" "gv-notificationPolicyId" {
 
 resource "davinci_variable" "gv-pingOneAuthorize" {
   context        = "company"
-  description    = "Use Magic link to confirm user during registration instead of PingOne OTP"
+  description    = "Turns on simple PingOne Authorize flow"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
@@ -1271,19 +1271,6 @@ resource "davinci_variable" "gv-pingOneAuthorize" {
   value          = "${var.davinci_variable_gv-pingOneAuthorize}"
 
 }
-resource "davinci_variable" "gv-FIDO2-deviceNickName" {
-  context        = "company"
-  description    = "Sets the name of the FIDO2 device"
-  environment_id = pingone_environment.master_flow_environment.id
-  max            = "2000"
-  min            = "0"
-  mutable        = "true"
-  name           = "gv-FIDO2-deviceNickName"
-  type           = "boolean"
-  value          = "${var.davinci_variable_gv-FIDO2-deviceNickName}"
-
-}
-
 
 
 
