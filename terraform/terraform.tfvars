@@ -1,12 +1,12 @@
-admin_environment_id      = "875e9c7d-a69d-4402-861b-1cc4ca24e7e9"
-admin_client_id           = "281bb27a-2c37-43d4-ab3e-2b2829a3295f"
-admin_client_secret       = "5j.LkqOVACaxl9KTU610nlF1eOdE~wMxJ74.3TTXVTXYEaGZko5G9SpgilXh33lD"
+admin_environment_id      = ""
+admin_client_id           = ""
+admin_client_secret       = ""
 region                    = "NorthAmerica"
 license_name              = "INTERNAL"
-admin_user_id             = "0af3abf8-51c7-4f4a-9232-265faef8795a"
-dv_admin_username         = "kylemoorehead@pingidentity.com"
-dv_admin_password         = "R29dtq82@"
-organization_id           = "953388fc-2a02-447e-b0df-fcfa5842dfbe"
+admin_user_id             = ""
+dv_admin_username         = ""
+dv_admin_password         = ""
+organization_id           = ""
 
 
 #############
