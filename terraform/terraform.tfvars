@@ -1,3 +1,4 @@
+organization_id           = ""
 admin_environment_id      = ""
 admin_client_id           = ""
 admin_client_secret       = ""
@@ -6,7 +7,7 @@ license_name              = "INTERNAL"
 admin_user_id             = ""
 dv_admin_username         = ""
 dv_admin_password         = ""
-organization_id           = ""
+
 
 #############
 #  PingOne #
