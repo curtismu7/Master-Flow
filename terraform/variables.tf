@@ -454,3 +454,6 @@ variable "davinci_variable_gv-pingOneAuthorize" {
   description = "Value for davinci_variable_gv-pingOneAuthorize variable"
 }
 
+variable "davinci_variable_gv-FIDO2-deviceNickName" {
+  description = "Value for davinci_variable_gv-FIDO2-deviceNickName variable"
+}
