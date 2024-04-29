@@ -18,7 +18,7 @@ https://terraform.pingidentity.com/getting-started/davinci/
 
 #### Legacy
 > [!CAUTION]
-> Below only works for INTERNAL licenses and assumes that DaVinci is enabled on the Administrators environment, which is not recommended by Product, and will not be an option for customers. This is just a shortcut to keep the number of environments down, but it is probably best to follow the pre-requisites above instead.
+> Below only works for INTERNAL licenses and assumes that DaVinci is enabled on the Administrators environment, which is not recommended by Product, and will not be an option for customers. This is just a shortcut to keep the number of environments down, but it is probably best to follow the prerequisites above instead.
 
 Within the Administrators environment of your PingOne organization, create a new Worker application. Name it as you see fit and optionally upload an icon. Enable your Worker application. Navigate to the Roles tab and select the permissions required to create and manage environments and their configurations, as shown in the below screenshot. \
 <img src="https://github.com/kylemoorehead-pingidentity/Master-Flow/blob/main/terraform/images/pingone-console-application-roles.png?raw=true" width="250">
