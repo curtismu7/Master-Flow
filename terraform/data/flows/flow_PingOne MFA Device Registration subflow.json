@@ -12,10 +12,10 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1714397447267,
-  "currentVersion": 56,
+  "createdDate": 1714429059969,
+  "currentVersion": 57,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1714397449612,
+  "deployedDate": 1714429062274,
   "description": "Imported on Wed Jan 17 2024 17:18:59 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -79,14 +79,13 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 56,
+  "publishedVersion": 57,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
     "cssLinks": [
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.6/icons.css",
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.6/icons.css"
+      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css"
     ],
     "customFaviconLink": "https://console.pingone.com/davinci/favicon-davinci.png",
     "debugMode": true,
@@ -95,14 +94,14 @@
     "jsLinks": [],
     "logLevel": 3,
     "useBetaAlgorithm": true,
-    "useCustomCSS": false,
+    "useCustomCSS": true,
     "useCustomScript": false
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1714397449624,
+  "updatedDate": 1714429062282,
   "flowId": "c27a63e07297a1815df9e85ea86de0f9",
-  "versionId": 56,
+  "versionId": 57,
   "graphData": {
     "elements": {
       "nodes": [
@@ -16156,7 +16155,7 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1714397446405,
+  "savedDate": 1714429059133,
   "variables": [
     {
       "context": "flowInstance",
@@ -16299,11 +16298,12 @@
       "fields": {
         "type": "boolean",
         "displayName": "Tells the flow to allow the user to add another device at the end of the Registration - Set to \"false\" to see the screen",
-        "value": "false",
+        "value": "true",
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1714404584159,
       "visibility": "private",
       "name": "gv-registerAnotherDevice##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
