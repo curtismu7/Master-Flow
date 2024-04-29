@@ -12,10 +12,10 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1714052300527,
-  "currentVersion": 54,
+  "createdDate": 1714397447267,
+  "currentVersion": 56,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1714052303097,
+  "deployedDate": 1714397449612,
   "description": "Imported on Wed Jan 17 2024 17:18:59 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -79,7 +79,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 54,
+  "publishedVersion": 56,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -100,9 +100,9 @@
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1714052303114,
+  "updatedDate": 1714397449624,
   "flowId": "c27a63e07297a1815df9e85ea86de0f9",
-  "versionId": 54,
+  "versionId": 56,
   "graphData": {
     "elements": {
       "nodes": [
@@ -11147,10 +11147,10 @@
                 "value": false
               },
               "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-isDeviceManagement\",\n        \"data\": \"{{global.company.variables.gv-isDeviceManagement}}\",\n        \"tooltip\": \"{{global.company.variables.gv-isDeviceManagement}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-isDeviceManagement\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-registerAnotherDevice\",\n        \"data\": \"{{global.company.variables.gv-registerAnotherDevice}}\",\n        \"tooltip\": \"{{global.company.variables.gv-registerAnotherDevice}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-registerAnotherDevice\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
-                "value": "Check if we should do device management"
+                "value": "Check if we should rallow user to egister another device"
               },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
@@ -16156,7 +16156,7 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1714052299578,
+  "savedDate": 1714397446405,
   "variables": [
     {
       "context": "flowInstance",
@@ -16252,27 +16252,9 @@
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1712344941676,
+      "updatedDate": 1714350295214,
       "visibility": "private",
       "name": "gv-forcePasswordless##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
-      "context": "company",
-      "createdDate": 1711103266110,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "boolean",
-        "displayName": "Turns on the new device management page, allowing dev management in the middle of the flow",
-        "value": "false",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "updatedDate": 1713704276522,
-      "visibility": "private",
-      "name": "gv-isDeviceManagement##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {
@@ -16308,6 +16290,22 @@
       "updatedDate": 1712323538892,
       "visibility": "private",
       "name": "gv-passwordlessAllowedTypes##SK##company",
+      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+    },
+    {
+      "context": "company",
+      "createdDate": 1714396609824,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "fields": {
+        "type": "boolean",
+        "displayName": "Tells the flow to allow the user to add another device at the end of the Registration - Set to \"false\" to see the screen",
+        "value": "false",
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "gv-registerAnotherDevice##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
     },
     {

@@ -758,15 +758,14 @@ resource "davinci_variable" "gv-standardForgotPassword" {
   type           = "boolean"
   value          = "${var.davinci_variable_gv-standardForgotPassword}"
 }
-
-resource "davinci_variable" "gv-isDeviceManagement" {
+resource "davinci_variable" "gv-registerAnotherDevice" {
   context        = "company"
-  description    = "Turns on the new device management page, allowing dev management in the middle of the flow"
+  description    = "Tells the flow to allow the user to add another device at the end of the Registration - Set to false to see the screen"
   environment_id = pingone_environment.master_flow_environment.id
   mutable        = "true"
-  name           = "gv-isDeviceManagement"
+  name           = "gv-registerAnotherDevice"
   type           = "boolean"
-  value          = "${var.davinci_variable_gv-isDeviceManagement}"
+  value          = "${var.davinci_variable_gv-registerAnotherDevice}"
 }
 
 resource "davinci_variable" "gv-webAuthnSupport" {
@@ -2073,7 +2072,7 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
   }
 
   environment_id = pingone_environment.master_flow_environment.id
-  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO User Registration subflow.json")}"
+  flow_json      = "${file("${path.module}/data/flows/flow_PingOne SSO User Registration subflow - With Magic Link.json")}"
 
   subflow_link {
     id   = davinci_flow.PingOne-Custom-Security-Question-and-Answer-Registration-subflow.id
@@ -2114,7 +2113,7 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
   subflow_link {
     id   = davinci_flow.PingOne-Verify-subflow.id
     name = davinci_flow.PingOne-Verify-subflow.name
-    replace_import_subflow_id = "5290cf060e588661efaf5f052faedd9c"
+    replace_import_subflow_id = "07e397931703b2dcd18a2e929dee0170"
   }
 
   subflow_link {
