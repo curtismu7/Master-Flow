@@ -11,11 +11,19 @@
     "errorConnector",
     "variablesConnector"
   ],
+<<<<<<< HEAD
   "createdDate": 1714423782781,
   "currentVersion": 4,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
   "deployedDate": 1714423798328,
   "description": "Imported on Mon Apr 29 2024 19:58:54 GMT+0000 (Coordinated Universal Time)",
+=======
+  "createdDate": 1714406353045,
+  "currentVersion": 53,
+  "customerId": "38f1e64332a64e2263c5953d52e846fb",
+  "deployedDate": 1714406355630,
+  "description": "Imported on Fri Mar 01 2024 21:47:08 GMT+0000 (Coordinated Universal Time)",
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -57,7 +65,11 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Authentication subflow",
+<<<<<<< HEAD
   "publishedVersion": 4,
+=======
+  "publishedVersion": 53,
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "css": ".companyLogo {\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}\n\n  .stopSign {\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/Stop_sign.png?v=1703159103390\");\n    width: 165px;\n    height: 165px;\n}\n\n\n \n  \n  \n\n  ",
@@ -94,9 +106,16 @@
     "useCustomScript": true
   },
   "timeouts": "null",
+<<<<<<< HEAD
   "updatedDate": 1714423798352,
   "flowId": "0f10b409c286001744ac494a70c39da9",
   "versionId": 4,
+=======
+  "trigger": {},
+  "updatedDate": 1714406355645,
+  "flowId": "49a3fbbfac4050f9c558aaae75bd2a36",
+  "versionId": 53,
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
   "graphData": {
     "elements": {
       "nodes": [
@@ -12196,7 +12215,12 @@
         },
         {
           "data": {
+<<<<<<< HEAD
             "capabilityName": "updateAnnotationProperties",
+=======
+            "id": "ga47yibe71",
+            "nodeType": "ANNOTATION",
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "ga47yibe71",
@@ -13653,6 +13677,7 @@
         },
         {
           "data": {
+<<<<<<< HEAD
             "capabilityName": "customFunction",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
@@ -13661,6 +13686,17 @@
             "label": "Functions",
             "name": "Functions",
             "nodeType": "CONNECTION",
+=======
+            "id": "8sjyeoh1pt",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "customFunction",
+            "type": "trigger",
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
             "properties": {
               "code": {
                 "value": "module.exports = a = async ({params}) => {\nlet devices = params.devices; \n\n// Find all devices with type \"MAGIC\"\nconst magicLinkDevices = devices.filter(device => device.type === 'MAGIC');\n\n// Declare selected Device Id\nconst selectedDeviceId = params.buttonValue; \n\n// Find the specific magic link device by its ID\nconst specificMagicLinkDevice = magicLinkDevices.find(device => device.id === selectedDeviceId);\n\n// Check if a specific magic link device was found and return its email\nif (specificMagicLinkDevice) {\n    return { 'email': specificMagicLinkDevice.email };\n} else {\n    return false;\n}\n\n}\n"
@@ -13686,8 +13722,12 @@
                 ]
               }
             },
+<<<<<<< HEAD
             "status": "configured",
             "type": "trigger"
+=======
+            "idUnique": "66a9at73pi"
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
           },
           "position": {
             "x": 1080,
@@ -19611,7 +19651,11 @@
     }
   ],
   "flowColor": "#ff661c",
+<<<<<<< HEAD
   "savedDate": 1714423782783,
+=======
+  "savedDate": 1714406351723,
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
   "variables": [
     {
       "context": "flowInstance",
@@ -19802,6 +19846,10 @@
         "max": 2000
       },
       "type": "property",
+<<<<<<< HEAD
+=======
+      "updatedDate": 1714405404717,
+>>>>>>> 0ebbd4835b0bd2a86f92f3c990211626b6308c88
       "visibility": "private",
       "name": "gv-deviceManagement##SK##company",
       "companyId": "5add0f7c-8552-4f3d-9c84-8094e870af37"
