@@ -11,10 +11,10 @@
     "errorConnector",
     "variablesConnector"
   ],
-  "createdDate": 1713203618249,
-  "currentVersion": 28,
+  "createdDate": 1714053464640,
+  "currentVersion": 37,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1713203623181,
+  "deployedDate": 1714053467955,
   "description": "Imported on Fri Mar 01 2024 21:47:08 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -57,7 +57,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Authentication subflow",
-  "publishedVersion": 28,
+  "publishedVersion": 37,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -95,9 +95,9 @@
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1713203623195,
+  "updatedDate": 1714053467965,
   "flowId": "49a3fbbfac4050f9c558aaae75bd2a36",
-  "versionId": 28,
+  "versionId": 37,
   "graphData": {
     "elements": {
       "nodes": [
@@ -8144,7 +8144,7 @@
                 ]
               },
               "inputSchema": {
-                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"showRegButton\": {\n            \"displayName\": \"showRegButton\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"maxMessage\": {\n            \"displayName\": \"maxMessage\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"devices\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"displayName\": \"id\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"type\": {\n                    \"displayName\": \"type\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"status\": {\n                    \"displayName\": \"status\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                }\n            }\n        },\n          \"isActionReg\": {\n            \"displayName\": \"isActionReg\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        }\n    }\n}"
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"showRegButton\": {\n            \"displayName\": \"showRegButton\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"maxMessage\": {\n            \"displayName\": \"maxMessage\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n                \"deviceManagement\": {\n            \"displayName\": \"deviceManagement\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"devices\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"displayName\": \"id\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"type\": {\n                    \"displayName\": \"type\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"status\": {\n                    \"displayName\": \"status\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                }\n            }\n        },\n          \"isActionReg\": {\n            \"displayName\": \"isActionReg\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        }\n    }\n}"
               },
               "isActionReg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"IsActionReg\",\n        \"data\": \"{{global.variables.IsActionReg}}\",\n        \"tooltip\": \"{{global.variables.IsActionReg}}\",\n        \"children\": [\n          {\n            \"text\": \"IsActionReg\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -8181,7 +8181,7 @@
                 "createdDate": 1640610866080,
                 "customerId": "50a0de8b585e95ff04f40f30f8ffd219",
                 "description": "",
-                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"showRegButton\": {\n            \"displayName\": \"showRegButton\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"maxMessage\": {\n            \"displayName\": \"maxMessage\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"devices\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"displayName\": \"id\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"type\": {\n                    \"displayName\": \"type\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"status\": {\n                    \"displayName\": \"status\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                }\n            }\n        },\n          \"isActionReg\": {\n            \"displayName\": \"isActionReg\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        }\n    }\n}",
+                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"showRegButton\": {\n            \"displayName\": \"showRegButton\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"maxMessage\": {\n            \"displayName\": \"maxMessage\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n                \"deviceManagement\": {\n            \"displayName\": \"deviceManagement\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"devices\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"displayName\": \"id\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"type\": {\n                    \"displayName\": \"type\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"status\": {\n                    \"displayName\": \"status\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                }\n            }\n        },\n          \"isActionReg\": {\n            \"displayName\": \"isActionReg\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        }\n    }\n}",
                 "name": "user devices as buttons - meirav",
                 "outputSchema": {},
                 "script": "",
@@ -8933,7 +8933,7 @@
             }
           },
           "position": {
-            "x": 510,
+            "x": 540,
             "y": 5400
           },
           "group": "nodes",
@@ -9264,7 +9264,7 @@
             "type": "trigger",
             "properties": {
               "code": {
-                "value": "/*\n Update the devices array to include a new properties \n used when rendering device list.\n*/\n\n\n// Titles and icons\nconst deviceTypes = {\n\tSMS: { title: \"Text Message\", icon: \"mdi-comment-text-outline\" },\n\tVOICE: { title: \"Voice\", icon: \"mdi-face-agent\" },\n\tEMAIL: { title: \"Email\", icon: \"mdi-email-outline\" },\n\tTOTP: { title: \"Authenticator App\", icon: \"mdi-cellphone-key\" },\n\tFIDO2: { title: \"Passkey\", icon: \"mdi-fingerprint\" },\n\tPLATFORM: { title: \"Biometrics\", icon: \"mdi-fingerprint\" },\n\tMOBILE: { title: \"Mobile Push\", icon: \"mdi-account-key-outline\" },\n\tSECURITY_KEY: { title: \"Security Key\", icon: \"mdi-fingerprint\" },\n\tMAGIC: { title: \"Magic Link\", icon: \"mdi-auto-fix\" }\n\n\n\n}\n\n// Device types that require masking\nconst SMS = \"SMS\";\nconst VOICE = \"VOICE\";\nconst EMAIL = \"EMAIL\";\nconst SEPARATOR = \" - \";\nconst MAGIC = \"Magic Link\"\n\n// Main entry point\nmodule.exports = a = async ({ params }) => {\n\tlet devices = params.devices;\n\tlet passwordlessAuth = params.passwordlessAuth;\n\n\t// If devices is not passed, head to error branch in flow\n\tif (!devices || devices.length === 0) {\n\t\treturn false;\n\t}\n\n\t// Define the types allowed for passwordless authentication\n\tconst allowedTypes = params.passwordlessAllowedTypes;\n\n\t// Filter devices if passwordlessAuth is true\n\tif (passwordlessAuth === true) {\n    devices = devices.filter(d => allowedTypes.includes(d.type));\n\n\t if (devices.length === 0) {\n        return false; // No valid devices for passwordless authentication\n    }\n}\n\n\tfor (const d of devices) {\n\t\tif (d.type === SMS || d.type === VOICE) {\n\t\t\td.maskedValue = maskPhone(d.phone);\n\t\t} else if (d.type === EMAIL) {\n\t\t\td.maskedValue = maskEmail(d.email);\n\t\t}\n\t\tconst nickname = d.nickname || \"\";\n\t\tconst maskedValue = d.maskedValue || \"\";\n\n\t\tif (d.nickname === MAGIC) {\n\t\t\td.type = \"MAGIC\"\n\t\t}\n\n\n\n\t\tif (nickname && maskedValue) {\n\t\t\td.displayText = `${nickname}${SEPARATOR}${maskedValue}`;\n\t\t} else if (!nickname && !maskedValue) {\n\t\t\td.displayText = \"\";\n\t\t} else {\n\t\t\td.displayText = `${nickname}${maskedValue}`;\n\t\t}\n\n\t\t// set the icon\n\t\td.displayIcon = deviceTypes[d.type].icon || \"\";\n\t\t// set the device type\n\t\td.displayType = deviceTypes[d.type].title || \"Unknown\";\n\t}\n\n\treturn { 'devices': devices }\n}\n\n// Mask email\nconst maskEmail = (email) => {\n\tconst [username, domain] = email.split(\"@\");\n\tconst maskedUsername =\n\t\tusername.charAt(0) + \"*\".repeat(username.length - 2) + username.slice(-1);\n\treturn maskedUsername + \"@\" + domain;\n};\n\n//Mask phone number\nconst maskPhone = (phone) => {\n\tconst numericPhoneNumber = phone.replace(/[^\\d+]/g, \"\");\n\n\t// Mask the first six digits of the phone number\n\tconst maskedPhoneNumber = \"***-***-\" + numericPhoneNumber.slice(-4);\n\n\treturn maskedPhoneNumber;\n};\n\n"
+                "value": "/*\n Update the devices array to include a new properties \n used when rendering device list.\n*/\n\n\n// Titles and icons\nconst deviceTypes = {\n\tSMS: { title: \"Text Message\", icon: \"mdi-comment-text-outline\" },\n\tVOICE: { title: \"Voice\", icon: \"mdi-face-agent\" },\n\tEMAIL: { title: \"Email\", icon: \"mdi-email-outline\" },\n\tTOTP: { title: \"Authenticator App\", icon: \"mdi-cellphone-key\" },\n\tFIDO2: { title: \"Passkey/FIDO2\", icon: \"mdi-fingerprint\" },\n\tPLATFORM: { title: \"Biometrics\", icon: \"mdi-fingerprint\" },\n\tMOBILE: { title: \"Mobile Push\", icon: \"mdi-account-key-outline\" },\n\tSECURITY_KEY: { title: \"Security Key\", icon: \"mdi-fingerprint\" },\n\tMAGIC: { title: \"Magic Link\", icon: \"mdi-auto-fix\" }\n\n\n\n}\n\n// Device types that require masking\nconst SMS = \"SMS\";\nconst VOICE = \"VOICE\";\nconst EMAIL = \"EMAIL\";\nconst SEPARATOR = \" - \";\nconst MAGIC = \"Magic Link\"\n\n// Main entry point\nmodule.exports = a = async ({ params }) => {\n\tlet devices = params.devices;\n\tlet passwordlessAuth = params.passwordlessAuth;\n\n\t// If devices is not passed, head to error branch in flow\n\tif (!devices || devices.length === 0) {\n\t\treturn false;\n\t}\n\n\t// Define the types allowed for passwordless authentication\n\tconst allowedTypes = params.passwordlessAllowedTypes;\n\n\t// Filter devices if passwordlessAuth is true\n\tif (passwordlessAuth === true) {\n    devices = devices.filter(d => allowedTypes.includes(d.type));\n\n\t if (devices.length === 0) {\n        return false; // No valid devices for passwordless authentication\n    }\n}\n\n\tfor (const d of devices) {\n\t\tif (d.type === SMS || d.type === VOICE) {\n\t\t\td.maskedValue = maskPhone(d.phone);\n\t\t} else if (d.type === EMAIL) {\n\t\t\td.maskedValue = maskEmail(d.email);\n\t\t}\n\t\tconst nickname = d.nickname || \"\";\n\t\tconst maskedValue = d.maskedValue || \"\";\n\n\t\tif (d.nickname === MAGIC) {\n\t\t\td.type = \"MAGIC\"\n\t\t}\n\n\n\n\t\tif (nickname && maskedValue) {\n\t\t\td.displayText = `${nickname}${SEPARATOR}${maskedValue}`;\n\t\t} else if (!nickname && !maskedValue) {\n\t\t\td.displayText = \"\";\n\t\t} else {\n\t\t\td.displayText = `${nickname}${maskedValue}`;\n\t\t}\n\n\t\t// set the icon\n\t\td.displayIcon = deviceTypes[d.type].icon || \"\";\n\t\t// set the device type\n\t\td.displayType = deviceTypes[d.type].title || \"Unknown\";\n\t}\n\n\treturn { 'devices': devices }\n}\n\n// Mask email\nconst maskEmail = (email) => {\n\tconst [username, domain] = email.split(\"@\");\n\tconst maskedUsername =\n\t\tusername.charAt(0) + \"*\".repeat(username.length - 2) + username.slice(-1);\n\treturn maskedUsername + \"@\" + domain;\n};\n\n//Mask phone number\nconst maskPhone = (phone) => {\n\tconst numericPhoneNumber = phone.replace(/[^\\d+]/g, \"\");\n\n\t// Mask the first six digits of the phone number\n\tconst maskedPhoneNumber = \"***-***-\" + numericPhoneNumber.slice(-4);\n\n\treturn maskedPhoneNumber;\n};\n\n"
               },
               "nodeDescription": {
                 "value": "Prepare the devices for display"
@@ -9437,50 +9437,12 @@
         },
         {
           "data": {
-            "id": "07l1y3ap8b",
-            "nodeType": "CONNECTION",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "name": "Http",
-            "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
-            "properties": {
-              "customCSS": {},
-              "customHTML": {
-                "value": "<div style=\"display: none\">\n    [[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMTAiIHBvbGxSZXRyaWVzPSIxIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjEwIiwicG9sbFJldHJpZXMiOiIxIiwicG9sbENoYWxsZW5nZVN0YXR1cyI6ImZhbHNlIn0sImNvbXBvbmVudFByb3BzIjp7ImNsYXNzIjp7Im5hbWUiOiJjbGFzcyIsImRpc3BsYXlOYW1lIjoiQ1NTIENsYXNzIn0sInBvbGxJbnRlcnZhbCI6eyJuYW1lIjoicG9sbEludGVydmFsIiwiZGlzcGxheU5hbWUiOiJQb2xsIEludGVydmFsIiwidmFsdWUiOjIwMDB9LCJwb2xsUmV0cmllcyI6eyJuYW1lIjoicG9sbFJldHJpZXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgUmV0cmllcyIsInZhbHVlIjo2MH0sInBvbGxDaGFsbGVuZ2VTdGF0dXMiOnsibmFtZSI6InBvbGxDaGFsbGVuZ2VTdGF0dXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgQ2hhbGxlbmdlIFN0YXR1cyIsInR5cGUiOiJzZWxlY3QiLCJ2YWx1ZSI6InRydWUiLCJvcHRpb25zIjpbeyJuYW1lIjoiVHJ1ZSIsInZhbHVlIjoidHJ1ZSJ9LHsibmFtZSI6IkZhbHNlIiwidmFsdWUiOiJmYWxzZSJ9XX19fQ==]]]\n</div>\n<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <!-- <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n            </div>\n        </div> -->\n    </div>\n</div>"
-              },
-              "customScript": {},
-              "formFieldsList": {
-                "value": []
-              },
-              "nodeTitle": {
-                "value": "NOP UI Page"
-              }
-            }
-          },
-          "position": {
-            "x": 1140,
-            "y": 5400
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
             "id": "bev01zacjc",
             "nodeType": "EVAL",
             "properties": {}
           },
           "position": {
-            "x": 630,
+            "x": 660,
             "y": 5400
           },
           "group": "nodes",
@@ -11634,8 +11596,8 @@
             }
           },
           "position": {
-            "x": 374.6959793738595,
-            "y": 5315.999207366632
+            "x": 390,
+            "y": 5280
           },
           "group": "nodes",
           "removed": false,
@@ -11684,7 +11646,7 @@
             }
           },
           "position": {
-            "x": 840,
+            "x": 870,
             "y": 5400
           },
           "group": "nodes",
@@ -11703,11 +11665,14 @@
             "properties": {
               "07l1y3ap8b": {
                 "value": "anyTriggersFalse"
+              },
+              "tndykz49mf": {
+                "value": "anyTriggersFalse"
               }
             }
           },
           "position": {
-            "x": 990,
+            "x": 1020,
             "y": 5400
           },
           "group": "nodes",
@@ -11737,8 +11702,8 @@
             }
           },
           "position": {
-            "x": 1675.1913919483427,
-            "y": 5410.044331374156
+            "x": 1680,
+            "y": 5400
           },
           "group": "nodes",
           "removed": false,
@@ -11761,7 +11726,7 @@
             }
           },
           "position": {
-            "x": 1290,
+            "x": 1320,
             "y": 5520
           },
           "group": "nodes",
@@ -11800,7 +11765,7 @@
             }
           },
           "position": {
-            "x": 1440,
+            "x": 1470,
             "y": 5640
           },
           "group": "nodes",
@@ -11848,7 +11813,7 @@
             }
           },
           "position": {
-            "x": 1140,
+            "x": 1170,
             "y": 5520
           },
           "group": "nodes",
@@ -11881,7 +11846,7 @@
             }
           },
           "position": {
-            "x": 1440,
+            "x": 1470,
             "y": 5520
           },
           "group": "nodes",
@@ -12640,7 +12605,7 @@
             "type": "trigger",
             "properties": {
               "code": {
-                "value": "module.exports = a = async ({params}) => {\n\tconsole.log('params: ', params)\n\t\n    var usableDevices = JSON.parse(params.devices);\n  \n    if(params.webAuthnSupport === \"NONE\"){\n        usableDevices = usableDevices.filter(device => {\n    \t    return device.type !== \"SECURITY_KEY\" && device.type !== \"PLATFORM\" && device.type !== \"TOTP\" && device.type !== \"OTP\";\n        });\n    }\n\n\n    if(params.webAuthnSupport===\"SECURITY_KEY_ONLY\"){\n        usableDevices = usableDevices.filter(device => device.type !== \"PLATFORM\");\n    }\n\n    usableDevices = usableDevices.filter(device => {\n    \treturn device.coolDownExpiresAt == undefined;\n    });\n\n    return { usableDevices: usableDevices, count: usableDevices.length, canChangeDevice: usableDevices.length > 1 }\n}"
+                "value": "module.exports = a = async ({params}) => {\n\tconsole.log('params: ', params)\n\t\n    var usableDevices = JSON.parse(params.devices);\n  \n    if(params.webAuthnSupport === \"NONE\"){\n        usableDevices = usableDevices.filter(device => {\n    \t    return device.type !== \"SECURITY_KEY\" && device.type !== \"PLATFORM\" ;\n        });\n    }\n\n\n    if(params.webAuthnSupport===\"SECURITY_KEY_ONLY\"){\n        usableDevices = usableDevices.filter(device => device.type !== \"PLATFORM\");\n    }\n\n    usableDevices = usableDevices.filter(device => {\n    \treturn device.coolDownExpiresAt == undefined;\n    });\n\n    return { usableDevices: usableDevices, count: usableDevices.length, canChangeDevice: usableDevices.length > 1 }\n}"
               },
               "nodeDescription": {
                 "value": "Fixed Custom Function"
@@ -12654,11 +12619,6 @@
               "variableInputList": {
                 "value": [
                   {
-                    "name": "webAuthnSupport",
-                    "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"webAuthenSupport\",\n        \"data\": \"{{local.ek0byr7ikw.payload.output.webAuthenSupport}}\",\n        \"tooltip\": \"{{local.ek0byr7ikw.payload.output.webAuthenSupport}}\",\n        \"children\": [\n          {\n            \"text\": \"webAuthenSupport\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-                  },
-                  {
                     "name": "devices",
                     "preferredDataType": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"devices\",\n        \"data\": \"{{local.x1veihohtu.payload.output.rawResponse._embedded.devices}}\",\n        \"tooltip\": \"{{local.x1veihohtu.payload.output.rawResponse._embedded.devices}}\",\n        \"children\": [\n          {\n            \"text\": \"devices\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -12666,7 +12626,7 @@
                   {
                     "name": "webAuthnSupport",
                     "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"cross-platform\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-webAuthnSupport\",\n        \"data\": \"{{global.company.variables.gv-webAuthnSupport}}\",\n        \"tooltip\": \"{{global.company.variables.gv-webAuthnSupport}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-webAuthnSupport\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
@@ -13515,8 +13475,8 @@
             }
           },
           "position": {
-            "x": 1428.0320062510461,
-            "y": 5410.044331374156
+            "x": 1440,
+            "y": 5400
           },
           "group": "nodes",
           "removed": false,
@@ -13534,8 +13494,8 @@
             "properties": {}
           },
           "position": {
-            "x": 1284.0160031255232,
-            "y": 5405.022165687078
+            "x": 1290,
+            "y": 5400
           },
           "group": "nodes",
           "removed": false,
@@ -13553,8 +13513,8 @@
             "properties": {}
           },
           "position": {
-            "x": 1551.6116990996943,
-            "y": 5410.044331374156
+            "x": 1560,
+            "y": 5400
           },
           "group": "nodes",
           "removed": false,
@@ -13805,9 +13765,67 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "tndykz49mf",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"d-none\" \n            data-skcomponent=\"skpolling\" \n            data-skpollInterval=\"10\" \n            data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n    </div>\n</div>"
+              },
+              "customCSS": {},
+              "customScript": {},
+              "nodeTitle": {
+                "value": "NOP UI Page"
+              },
+              "formFieldsList": {
+                "value": []
+              }
+            },
+            "idUnique": "g9fybbwj88"
+          },
+          "position": {
+            "x": 1170,
+            "y": 5400
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "4n5fegsq64",
+            "source": "fmphhaq76h",
+            "target": "g9dhwlmkfy"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "yrnlkycy7k",
@@ -19001,9 +19019,9 @@
         },
         {
           "data": {
-            "id": "8sawinw85v",
-            "source": "675z2auyhc",
-            "target": "07l1y3ap8b"
+            "id": "jwme2x13nr",
+            "source": "g9dhwlmkfy",
+            "target": "efdiso8czm"
           },
           "position": {
             "x": 0,
@@ -19514,25 +19532,6 @@
         },
         {
           "data": {
-            "id": "ruy55f93wj",
-            "source": "07l1y3ap8b",
-            "target": "whdx5asjyh"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
             "id": "8qs1txdqvy",
             "source": "nymoub0ii7",
             "target": "k90rf1diku",
@@ -19629,9 +19628,9 @@
         },
         {
           "data": {
-            "id": "4n5fegsq64",
-            "source": "fmphhaq76h",
-            "target": "g9dhwlmkfy"
+            "id": "gulj0nfl9y",
+            "source": "675z2auyhc",
+            "target": "tndykz49mf"
           },
           "position": {
             "x": 0,
@@ -19648,9 +19647,9 @@
         },
         {
           "data": {
-            "id": "jwme2x13nr",
-            "source": "g9dhwlmkfy",
-            "target": "efdiso8czm"
+            "id": "s4mp76ydz9",
+            "source": "tndykz49mf",
+            "target": "whdx5asjyh"
           },
           "position": {
             "x": 0,
@@ -19715,7 +19714,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1713203616964,
+  "savedDate": 1714053463258,
   "variables": [
     {
       "context": "flowInstance",
@@ -19899,13 +19898,14 @@
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "Determine if device management  is available",
-        "value": "true",
+        "displayName": "This adds a device management page to the flow, allowing you to delete/rename/set default for MFA devices",
+        "value": "false",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
+      "updatedDate": 1713808631645,
       "visibility": "private",
       "name": "gv-deviceManagement##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
