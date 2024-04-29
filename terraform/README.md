@@ -9,9 +9,11 @@
 
 ### Prerequisites
 
-Configure your environment for the PingOne Terraform provider: https://terraform.pingidentity.com/getting-started/pingone/
+Configure your environment for the PingOne Terraform provider: \
+https://terraform.pingidentity.com/getting-started/pingone/
 
-Configure your environment for the DaVinci Terraform provider: https://terraform.pingidentity.com/getting-started/davinci/
+Configure your environment for the DaVinci Terraform provider: \
+https://terraform.pingidentity.com/getting-started/davinci/
 
 [Below only works for INTERNAL licenses and assumes that DaVinci is enabled on the Administrators environment, which is not recommended by Product, and will not be an option for customers. This is just a shortcut to keep the number of environments down, but it is probably best to follow the pre-requisites above instead.]
 Within the Administrators environment of your PingOne organization, create a new Worker application. Name it as you see fit and optionally upload an icon. Enable your Worker application. Navigate to the Roles tab and select the permissions required to create and manage environments and their configurations, as shown in the below screenshot. \
