@@ -123,6 +123,11 @@ resource "davinci_connection" "PingOne-MFA" {
     name  = "region"
     value = var.davinci_connection_PingOne_region
   }
+
+  property {
+    name = "policyId"
+    value = pingone_mfa_policy.master_flow_mfa_policy.id
+  }
 }
 
 resource "davinci_connection" "PingOne-Authorize" {
@@ -1064,6 +1069,18 @@ resource "davinci_variable" "gv-verifyPolicyId" {
   name           = "gv-verifyPolicyId"
   type           = "string"
   value          = data.pingone_verify_policy.default_policy.id
+}
+
+resource "davinci_variable" "gv-mfaPolicyId" {
+  context        = "company"
+  description    = "PingOne MFA Policy ID"
+  environment_id = pingone_environment.master_flow_environment.id
+  max            = "2000"
+  min            = "0"
+  mutable        = "true"
+  name           = "gv-mfaPolicyId"
+  type           = "string"
+  value          = pingone_mfa_policy.master_flow_mfa_policy.id
 }
 
 resource "davinci_variable" "gv-progressiveProfilingAuthentication" {
