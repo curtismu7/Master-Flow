@@ -12,10 +12,10 @@
     "pingOneMfaConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1714398008614,
-  "currentVersion": 118,
+  "createdDate": 1714428696449,
+  "currentVersion": 119,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1714398010479,
+  "deployedDate": 1714428698245,
   "description": "Cloned on Tue Apr 09 2024 15:37:48 GMT+0000 (Coordinated Universal Time). \nMaster PingOne Authentication",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -37,22 +37,23 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO User Registration subflow - With Magic Link",
-  "publishedVersion": 118,
+  "publishedVersion": 119,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
     "cssLinks": [
-      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css"
+      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
+      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css"
     ],
     "logLevel": 3,
     "useCustomCSS": true
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1714398010483,
+  "updatedDate": 1714428698249,
   "flowId": "997164e38f8aeef0d9933aba811983a3",
-  "versionId": 118,
+  "versionId": 119,
   "graphData": {
     "elements": {
       "nodes": [
@@ -9959,7 +9960,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1714398006531,
+  "savedDate": 1714428693259,
   "variables": [
     {
       "context": "flowInstance",
@@ -10118,13 +10119,13 @@
       "fields": {
         "type": "boolean",
         "displayName": "This adds a device management page to the flow, allowing you to delete/rename/set default for MFA devices",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1714389802022,
+      "updatedDate": 1714405404717,
       "visibility": "private",
       "name": "gv-deviceManagement##SK##company",
       "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
