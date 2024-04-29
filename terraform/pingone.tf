@@ -159,6 +159,55 @@ resource "pingone_user" "master_flow_user" {
   ]
 }
 
+#########################
+#  PingOne User Groups  #
+#########################
+
+resource "pingone_group" "my_awesome_group" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  name        = "Admin Group"
+  description = "Group used for Authorize Policy, filter to add all enabled users as they are created."
+
+  user_filter = "enabled eq true"
+}
+
+########################
+#  PingOne MFA Policy  #
+########################
+
+resource "pingone_mfa_policy" "master_flow_mfa_policy" {
+  environment_id          = pingone_environment.master_flow_environment.id
+  name                    = "Master Flow MFA Policy"
+  device_selection        = "ALWAYS_DISPLAY_DEVICES"
+  new_device_notification = "EMAIL_THEN_SMS"
+
+  mobile {
+    enabled = false
+  }
+
+  totp {
+    enabled = true
+  }
+
+  fido2 {
+    enabled = true
+  }
+
+  sms {
+    enabled = true
+  }
+
+  voice {
+    enabled = true
+  }
+
+  email {
+    enabled = true
+  }
+}
+
+
 ############################
 #  Social Login Providers  #
 ############################
