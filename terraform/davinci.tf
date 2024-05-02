@@ -207,6 +207,26 @@ resource "davinci_connection" "PingOne-Verify" {
   connector_id   = "pingOneVerifyConnector"
   environment_id = pingone_environment.master_flow_environment.id
   name           = "PingOne Verify"
+
+  property {
+    name  = "clientId"
+    value = pingone_application.dv_worker_app.oidc_options[0].client_id
+  }
+
+  property {
+    name  = "clientSecret"
+    value = pingone_application.dv_worker_app.oidc_options[0].client_secret
+  }
+
+  property {
+    name  = "envId"
+    value = pingone_environment.master_flow_environment.id
+  }
+
+  property {
+    name  = "region"
+    value = var.davinci_connection_PingOne_region
+  }
 }
 
 resource "davinci_connection" "Token-Management" {
