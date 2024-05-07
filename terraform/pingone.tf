@@ -22,8 +22,8 @@ resource "pingone_environment" "master_flow_environment" {
 }
 
 resource "pingone_role_assignment_user" "id_admin" {
-  environment_id = var.admin_environment_id
-  user_id        = var.admin_user_id
+  environment_id = var.dv_environment_id
+  user_id        = var.dv_admin_id
   role_id        = data.pingone_role.identity_data_admin.id
 
   scope_environment_id = pingone_environment.master_flow_environment.id
@@ -34,8 +34,8 @@ resource "pingone_role_assignment_user" "id_admin" {
 }
 
 resource "pingone_role_assignment_user" "app_dev" {
-  environment_id = var.admin_environment_id
-  user_id        = var.admin_user_id
+  environment_id = var.dv_environment_id
+  user_id        = var.dv_admin_id
   role_id        = data.pingone_role.client_application_developer.id
 
   scope_environment_id = pingone_environment.master_flow_environment.id
