@@ -21,6 +21,6 @@ provider "pingone" {
 provider "davinci" {
   username       = var.dv_admin_username
   password       = var.dv_admin_password
-  environment_id = var.admin_environment_id
+  environment_id = var.dv_environment_id != null ? var.dv_environment_id : var.admin_environment_id
   region         = var.region
 }
