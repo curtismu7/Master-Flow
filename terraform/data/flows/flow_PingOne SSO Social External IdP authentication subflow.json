@@ -463,7 +463,7 @@
             "type": "trigger",
             "properties": {
               "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"P1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"P1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"P1UserId\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t},\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"email\"\n\t\t}\n\t}\n}"
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t},\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"email\"\n\t\t}\n\t}\n}"
               },
               "nodeTitle": {
                 "value": "Success"
@@ -504,9 +504,9 @@
                     "key": 0.3530163097355081,
                     "label": "userid (string - flowInstance)",
                     "name": "userid",
-                    "nameDefault": "P1UserId",
+                    "nameDefault": "p1UserId",
                     "type": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"P1UserId\",\n        \"data\": \"{{local.7ae8xropgy.payload.output.P1UserId}}\",\n        \"tooltip\": \"{{local.7ae8xropgy.payload.output.P1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"P1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.7ae8xropgy.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.7ae8xropgy.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "key": 0.09823667313902718,
@@ -620,7 +620,7 @@
             "type": "action",
             "properties": {
               "annotation": {
-                "value": "Input Schema: P1UserId,username,email"
+                "value": "Input Schema: p1UserId,username,email"
               },
               "annotationTextColor": {
                 "value": "#000000"
@@ -1641,7 +1641,7 @@
             "capabilityName": "goToNode",
             "type": "action",
             "properties": {
-              "P1UserId": {
+              "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.il8az8zi74.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.il8az8zi74.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeInstanceId": {
@@ -2177,7 +2177,7 @@
             "capabilityName": "goToNode",
             "type": "action",
             "properties": {
-              "P1UserId": {
+              "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.ock32duny1.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.ock32duny1.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "email": {
@@ -2222,7 +2222,7 @@
             "capabilityName": "goToNode",
             "type": "action",
             "properties": {
-              "P1UserId": {
+              "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "email": {
@@ -3097,7 +3097,7 @@
             "properties": {
               "subFlowId": {
                 "value": {
-                  "label": "PingOne SSO agreements subflow",
+                  "label": "PingOne SSO Consent subflow",
                   "value": "acabff5c7a1c870245600e440e9b9c2b"
                 }
               },
@@ -3105,7 +3105,7 @@
                 "value": -1
               },
               "nodeTitle": {
-                "value": "PingOne SSO agreements subflow"
+                "value": "PingOne SSO Consent subflow"
               },
               "p1PopulationId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-p1PopulationId\",\n        \"data\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"tooltip\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-p1PopulationId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
