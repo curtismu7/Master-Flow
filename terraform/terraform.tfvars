@@ -4,7 +4,7 @@ admin_client_secret       = ""
 region                    = "NorthAmerica"
 license_name              = "INTERNAL"
 
-dv_environment_id         = ""
+dv_environment_id         = "" # Note for INTERNAL licenses: If you have DV deployed in, and are using a user in your Administrator's environment, you can leave this blank.
 dv_admin_id               = ""
 dv_admin_username         = ""
 dv_admin_password         = ""
