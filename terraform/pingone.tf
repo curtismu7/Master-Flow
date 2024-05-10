@@ -252,6 +252,8 @@ resource "pingone_identity_provider" "facebook" {
 #  PingOne Agreement  #
 #######################
 
+resource "time_static" "now" {}
+
 data "pingone_language" "en" {
   environment_id = pingone_environment.master_flow_environment.id
   locale = "en"
@@ -289,6 +291,7 @@ resource "pingone_agreement_localization_revision" "master_flow_agreement_en_now
   agreement_id              = pingone_agreement.master_flow_agreement.id
   agreement_localization_id = pingone_agreement_localization.master_flow_agreement_en.id
 
+  effective_at      = time_static.now.id
   content_type      = "text/html"
   require_reconsent = true
   text              = var.pingone_agreement_localization_revision_master_flow_agreement_en_now_text
