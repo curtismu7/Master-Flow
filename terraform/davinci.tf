@@ -261,7 +261,7 @@ resource "davinci_variable" "CodeSentMsg" {
   min            = "0"
   mutable        = "true"
   name           = "CodeSentMsg"
-  type           = "string"
+  type           = "boolean"
 }
 
 resource "davinci_variable" "IsActionReg" {
@@ -1262,6 +1262,10 @@ resource "davinci_flow" "PingOne-Authorize-subflow" {
     name = davinci_flow.PingOne-MFA-Authentication-subflow.name
     replace_import_subflow_id = "49a3fbbfac4050f9c558aaae75bd2a36"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-Auto-enroll-user-in-email" {
@@ -1299,6 +1303,10 @@ resource "davinci_flow" "PingOne-Auto-enroll-user-in-email" {
     replace_import_connection_id = "e7eae662d2ca276e4c6f097fc36a3bb1"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-Custom-Security-Question-and-Answer-Registration-subflow" {
@@ -1336,6 +1344,10 @@ resource "davinci_flow" "PingOne-Custom-Security-Question-and-Answer-Registratio
     replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-registration-subflow" {
@@ -1398,6 +1410,10 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-registration-subflow"
     replace_import_connection_id = "94141bf2f1b9b59a5f5365ff135e02bb"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-Subflow" {
@@ -1450,6 +1466,10 @@ resource "davinci_flow" "PingOne-Davinci-Custom-Magic-Link-Subflow" {
     replace_import_connection_id = "53ab83a4a4ab919d9f2cb02d9e111ac8"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-MFA-Authentication-subflow" {
@@ -1512,6 +1532,10 @@ resource "davinci_flow" "PingOne-MFA-Authentication-subflow" {
     name = davinci_flow.PingOne-Davinci-Custom-Magic-Link-Subflow.name
     replace_import_subflow_id = "58702ba5c9b10727b13a9788a3e653a0"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-MFA-Device-Management-Subflow" {
@@ -1564,6 +1588,10 @@ resource "davinci_flow" "PingOne-MFA-Device-Management-Subflow" {
     name = davinci_flow.PingOne-MFA-Device-Registration-subflow.name
     replace_import_subflow_id = "c27a63e07297a1815df9e85ea86de0f9"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
@@ -1626,6 +1654,10 @@ resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
     name = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.name
     replace_import_subflow_id = "af65b0426d5e2d4d1ea93502d35f82ed"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-Protect-subflow" {
@@ -1688,6 +1720,10 @@ resource "davinci_flow" "PingOne-Protect-subflow" {
     name = davinci_flow.PingOne-Verify-subflow.name
     replace_import_subflow_id = "c5876e0cf832ac128c4c23e8ffa4a57c"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-reCAPTCHA-v3-subflow" {
@@ -1720,6 +1756,10 @@ resource "davinci_flow" "PingOne-reCAPTCHA-v3-subflow" {
     replace_import_connection_id = "53ab83a4a4ab919d9f2cb02d9e111ac8"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-Security-Question-and-Answer-Validation-subflow" {
@@ -1747,6 +1787,10 @@ resource "davinci_flow" "PingOne-Security-Question-and-Answer-Validation-subflow
     replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Account-Verification-subflow" {
@@ -1789,6 +1833,10 @@ resource "davinci_flow" "PingOne-SSO-Account-Verification-subflow" {
     replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Authentication-MASTER" {
@@ -1896,6 +1944,10 @@ resource "davinci_flow" "PingOne-SSO-Authentication-MASTER" {
     name = davinci_flow.PingOne-reCAPTCHA-v3-subflow.name
     replace_import_subflow_id = "cf93627a9eecea11e7ac9111c652a14e"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Change-Password-subflow" {
@@ -1933,6 +1985,10 @@ resource "davinci_flow" "PingOne-SSO-Change-Password-subflow" {
     replace_import_connection_id = "de650ca45593b82c49064ead10b9fe17"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Consent-subflow" {
@@ -1975,6 +2031,10 @@ resource "davinci_flow" "PingOne-SSO-Consent-subflow" {
     replace_import_connection_id = "e7eae662d2ca276e4c6f097fc36a3bb1"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Forgot-Password-subflow" {
@@ -2032,6 +2092,10 @@ resource "davinci_flow" "PingOne-SSO-Forgot-Password-subflow" {
     name = davinci_flow.PingOne-Security-Question-and-Answer-Validation-subflow.name
     replace_import_subflow_id = "e74d2c58525a28834b4d828ce66d7294"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Forgot-Username-subflow" {
@@ -2074,6 +2138,10 @@ resource "davinci_flow" "PingOne-SSO-Forgot-Username-subflow" {
     replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Password-Expiration-subflow" {
@@ -2106,6 +2174,10 @@ resource "davinci_flow" "PingOne-SSO-Password-Expiration-subflow" {
     replace_import_connection_id = "53ab83a4a4ab919d9f2cb02d9e111ac8"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Progressive-Profiling-subflow" {
@@ -2138,6 +2210,10 @@ resource "davinci_flow" "PingOne-SSO-Progressive-Profiling-subflow" {
     replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow" {
@@ -2200,6 +2276,10 @@ resource "davinci_flow" "PingOne-SSO-Social-External-IdP-authentication-subflow"
     name = davinci_flow.PingOne-reCAPTCHA-v3-subflow.name
     replace_import_subflow_id = "acabff5c7a1c870245600e440e9b9c2b"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
@@ -2297,6 +2377,10 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
     name = davinci_flow.PingOne-Davinci-Custom-Magic-Link-registration-subflow.name
     replace_import_subflow_id = "d3308b9803c90739050ec82f4cb60bae"
   }
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
 
 resource "davinci_flow" "PingOne-Verify-subflow" {
@@ -2339,4 +2423,8 @@ resource "davinci_flow" "PingOne-Verify-subflow" {
     replace_import_connection_id = "e7eae662d2ca276e4c6f097fc36a3bb1"
   }
 
+
+  depends_on = [
+    data.davinci_connections.read_connections
+  ]
 }
