@@ -17,7 +17,12 @@ variable "region" {
     default = "NorthAmerica"
 }
 
-variable "admin_user_id" {
+variable "dv_environment_id" {
+    description = "Environment Id"
+    type = string
+}
+
+variable "dv_admin_id" {
   type        = string
   description = "P1 Administrator to assign Roles to"
   sensitive   = true

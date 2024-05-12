@@ -22,8 +22,8 @@ resource "pingone_environment" "master_flow_environment" {
 }
 
 resource "pingone_role_assignment_user" "id_admin" {
-  environment_id = var.admin_environment_id
-  user_id        = var.admin_user_id
+  environment_id = var.dv_environment_id != "" ? var.dv_environment_id : var.admin_environment_id
+  user_id        = var.dv_admin_id
   role_id        = data.pingone_role.identity_data_admin.id
 
   scope_environment_id = pingone_environment.master_flow_environment.id
@@ -34,8 +34,8 @@ resource "pingone_role_assignment_user" "id_admin" {
 }
 
 resource "pingone_role_assignment_user" "app_dev" {
-  environment_id = var.admin_environment_id
-  user_id        = var.admin_user_id
+  environment_id = var.dv_environment_id != "" ? var.dv_environment_id : var.admin_environment_id
+  user_id        = var.dv_admin_id
   role_id        = data.pingone_role.client_application_developer.id
 
   scope_environment_id = pingone_environment.master_flow_environment.id
@@ -159,6 +159,55 @@ resource "pingone_user" "master_flow_user" {
   ]
 }
 
+#########################
+#  PingOne User Groups  #
+#########################
+
+resource "pingone_group" "my_awesome_group" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  name        = "Admin Group"
+  description = "Group used for Authorize Policy, filter to add all enabled users as they are created."
+
+  user_filter = "enabled eq true"
+}
+
+########################
+#  PingOne MFA Policy  #
+########################
+
+resource "pingone_mfa_policy" "master_flow_mfa_policy" {
+  environment_id          = pingone_environment.master_flow_environment.id
+  name                    = "Master Flow MFA Policy"
+  device_selection        = "ALWAYS_DISPLAY_DEVICES"
+  new_device_notification = "EMAIL_THEN_SMS"
+
+  mobile {
+    enabled = false
+  }
+
+  totp {
+    enabled = true
+  }
+
+  fido2 {
+    enabled = true
+  }
+
+  sms {
+    enabled = true
+  }
+
+  voice {
+    enabled = true
+  }
+
+  email {
+    enabled = true
+  }
+}
+
+
 ############################
 #  Social Login Providers  #
 ############################
@@ -203,6 +252,8 @@ resource "pingone_identity_provider" "facebook" {
 #  PingOne Agreement  #
 #######################
 
+resource "time_static" "now" {}
+
 data "pingone_language" "en" {
   environment_id = pingone_environment.master_flow_environment.id
   locale = "en"
@@ -240,6 +291,7 @@ resource "pingone_agreement_localization_revision" "master_flow_agreement_en_now
   agreement_id              = pingone_agreement.master_flow_agreement.id
   agreement_localization_id = pingone_agreement_localization.master_flow_agreement_en.id
 
+  effective_at      = time_static.now.id
   content_type      = "text/html"
   require_reconsent = true
   text              = var.pingone_agreement_localization_revision_master_flow_agreement_en_now_text
