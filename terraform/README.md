@@ -9,6 +9,17 @@
 
 ### Prerequisites
 
+#### Current Best Practices
+Configure your environment for the PingOne Terraform provider: \
+https://terraform.pingidentity.com/getting-started/pingone/
+
+Configure your environment for the DaVinci Terraform provider: \
+https://terraform.pingidentity.com/getting-started/davinci/
+
+#### Legacy
+> [!CAUTION]
+> Below only works for INTERNAL licenses and assumes that DaVinci is enabled on the Administrators environment, which is not recommended by Product, and will not be an option for customers. This is just a shortcut to keep the number of environments down, but it is probably best to follow the prerequisites above instead.
+
 Within the Administrators environment of your PingOne organization, create a new Worker application. Name it as you see fit and optionally upload an icon. Enable your Worker application. Navigate to the Roles tab and select the permissions required to create and manage environments and their configurations, as shown in the below screenshot. \
 <img src="https://github.com/kylemoorehead-pingidentity/Master-Flow/blob/main/terraform/images/pingone-console-application-roles.png?raw=true" width="250">
 
@@ -20,7 +31,7 @@ Within the Administrators environment of your PingOne organization, create a new
 
 ```bash
 touch ~/Terraform/ && mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/curtismu7/Master-Flow/releases/download/1.1.0/tf-release.zip > tf-release.zip
+curl -L https://github.com/curtismu7/Master-Flow/releases/download/1.1.3/tf-release.zip > tf-release.zip
 unzip ./tf-release.zip && rm ./tf-release.zip
 ```
 
@@ -34,7 +45,7 @@ The following variables must be set for your environment:
 `admin_environment_id` - The environment ID of the Administrators environment. \
 `region`               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica` \
 `license_name`         - Likely `INTERNAL` \
-`admin_user_id`        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user. \
+`dv_admin_id`        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user. \
 `dv_admin_username`    - The username of your admin account within the Administrators environment. \
 `dv_admin_password`    - The password of your admin account within the Administrators environment. \
 `organization_id`      - The id of your PingOne organization. \
@@ -49,7 +60,7 @@ The following variables must be set for your environment:
 | admin_environment_id | STRING | Required: **TRUE** Default: |
 | region | STRING | Required: **TRUE** Default: |
 | license_name | STRING | Required: **TRUE** Default: |
-| admin_user_id | STRING | Required: **TRUE** Default: |
+| dv_admin_id | STRING | Required: **TRUE** Default: |
 | dv_admin_username | STRING | Required: **TRUE** Default: |
 | dv_admin_password | STRING | Required: **TRUE** Default: |
 | organization_id | STRING | Required: **TRUE** Default: |
