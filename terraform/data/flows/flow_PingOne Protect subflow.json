@@ -1,6 +1,5 @@
 {
   "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
-  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
   "authTokenExpireIds": [],
   "connectorIds": [
     "functionsConnector",
@@ -13,13 +12,9 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1715013204902,
-  "currentVersion": 41,
   "createdDate": 1715346566167,
   "currentVersion": 52,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1715013207606,
-  "description": "Cloned on Mon May 06 2024 12:43:49 GMT+0000 (Coordinated Universal Time). \nImported on Tue Apr 30 2024 20:47:55 GMT+0000 (Coordinated Universal Time)",
   "deployedDate": 1715346569463,
   "description": "Cloned on Mon May 06 2024 12:43:49 GMT+0000 (Coordinated Universal Time). \nImported on Tue Apr 30 2024 20:47:55 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -70,12 +65,9 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 41,
   "publishedVersion": 52,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
     "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    height: 65px;\n    width: fit-content;\n}\n",
@@ -86,14 +78,10 @@
     "customFaviconLink": " https://console.pingone.com/davinci/favicon-davinci.png",
     "customTitle": "PingOne Protect",
     "logLevel": 3,
-    "logLevel": 3,
     "pingOneFlow": false,
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1715013207648,
-  "flowId": "d5304e77c20d7430c98fdd9d9fcfff06",
-  "versionId": 41,
   "updatedDate": 1715346569493,
   "flowId": "d5304e77c20d7430c98fdd9d9fcfff06",
   "versionId": 52,
@@ -103,14 +91,10 @@
         {
           "data": {
             "capabilityName": "AEqualsMultipleB",
-            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "h4etad3lqc",
-            "id": "h4etad3lqc",
             "label": "functionsConnector",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -139,14 +123,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2730,
-            "y": 1020
             "x": 2857,
             "y": 1020
           },
@@ -163,14 +141,9 @@
           "data": {
             "capabilityName": "startNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "startNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "afw0vizdys",
-            "id": "afw0vizdys",
             "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -181,14 +154,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 150,
-            "y": 1140
             "x": 277,
             "y": 1140
           },
@@ -204,14 +171,10 @@
         {
           "data": {
             "capabilityName": "saveValue",
-            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
             "id": "qiyw0mpzbt",
-            "id": "qiyw0mpzbt",
             "label": "Variables",
-            "name": "Variables",
-            "nodeType": "CONNECTION",
             "name": "Variables",
             "nodeType": "CONNECTION",
             "properties": {
@@ -243,7 +206,6 @@
             "type": "trigger"
           },
           "position": {
-            "x": 519.8584016408996,
             "x": 646.8584016408996,
             "y": 575.8584016408997
           },
@@ -259,14 +221,10 @@
         {
           "data": {
             "capabilityName": "createSuccessResponse",
-            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "88nxjsmf8u",
-            "id": "88nxjsmf8u",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -293,14 +251,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3300,
-            "y": 1020
             "x": 3728.898571867094,
             "y": 1004.9513881627629
           },
@@ -318,11 +270,8 @@
             "id": "m0qofy6rax",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2820,
-            "y": 1290
             "x": 2947,
             "y": 1290
           },
@@ -338,14 +287,10 @@
         {
           "data": {
             "capabilityName": "createRiskEvaluation",
-            "capabilityName": "createRiskEvaluation",
             "connectionId": "292873d5ceea806d81373ed0341b5c88",
             "connectorId": "pingOneRiskConnector",
             "id": "naewcp4bmf",
-            "id": "naewcp4bmf",
             "label": "Ping One Risk ",
-            "name": "PingOne Protect",
-            "nodeType": "CONNECTION",
             "name": "PingOne Protect",
             "nodeType": "CONNECTION",
             "properties": {
@@ -388,13 +333,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1187.9046815933298,
             "x": 1314.9046815933298,
             "y": 575.8584016408997
           },
@@ -418,7 +358,6 @@
             }
           },
           "position": {
-            "x": 1327.0809899167527,
             "x": 1454.0809899167527,
             "y": 575.8584016408997
           },
@@ -434,14 +373,10 @@
         {
           "data": {
             "capabilityName": "customErrorMessage",
-            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
             "id": "z534efb057",
-            "id": "z534efb057",
             "label": "Error Customize",
-            "name": "Error Message",
-            "nodeType": "CONNECTION",
             "name": "Error Message",
             "nodeType": "CONNECTION",
             "properties": {
@@ -454,13 +389,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 2194,
             "x": 2321,
             "y": 720
           },
@@ -476,14 +406,10 @@
         {
           "data": {
             "capabilityName": "customHTMLTemplate",
-            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "cg5l22l8rl",
-            "id": "cg5l22l8rl",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -500,7 +426,6 @@
                 "value": "\nhtml {\n  font-family: sans-serif;\n}\n\ntable {\n  border-collapse: collapse;\n  border: 2px solid rgb(200,200,200);\n  letter-spacing: 1px;\n  font-size: 0.8rem;\n}\n\ntd, th {\n  border: 1px solid rgb(190,190,190);\n  padding: 10px 20px;\n}\n\nth {\n  background-color: rgb(235,235,235);\n}\n\ntd {\n  text-align: center;\n}\n\ntr:nth-child(even) td {\n  background-color: rgb(250,250,250);\n}\n\ntr:nth-child(odd) td {\n  background-color: rgb(245,245,245);\n}\n\ncaption {\n  padding: 10px;\n}\n.companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n  }\n\n.mainDiv {\n    max-width: 400px; \n    min-width: 400px;\n    width: 100%\n}\n\n/* Break out into individual classes as needed */\n.magicLinkDiv,\n.otpDiv,\n.successDiv,\n.totpDiv,\n.registrationDiv{\n    max-width: 400px; \n    min-width: 400px;\n    width: 100%\n}\n\n.deviceSelectionDiv {\n    max-width: 500px; \n    min-width: 500px;\n    width: 100%\n}\n\n.signInDiv {\n      align-items: center;\n    display: flex;\n    width: fit-content;\n}"
               },
               "customHTML": {
-                "value": "<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div class=\"signInDiv\">\n        <div class=\"card shadow mb-5 \" style=\"width: 100%\">\n            <div class=\" card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                <h1 class=\"text-center mb-4\">{{title}}</h1>\n                {{/if}}\n\n                {{#if textOne}}\n                <h2 class=\"text-muted text-center\">{{textOne}}</h2>\n                {{/if}}\n\n\n                <p class=\"text-danger mdi\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                {{#if fakeLevel}}\n                <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:green; margin-top: 30px; margin-bottom: 15px;\">\n                    Risk Level = {{global.company.variables.gv-riskLevel}}\n                </h3>\n                {{else}}\n                <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:green; margin-top: 30px; margin-bottom: 2px;\">\n                    Risk Score = {{local.naewcp4bmf.payload.output.rawResponse.result.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\n                </h3>\n                {{/if}}\n                <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:blue;  margin-bottom: 30px;\">\n                    IP Address = {{local.naewcp4bmf.payload.output.rawResponse.event.ip}}{{local.7d4rn3u3f3.payload.output.rawResponse.event.ip}}\n                </h3>\n                <!-- <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:green; margin-top: 30px; margin-bottom: 15px;\">\n                    Device =\n                    {{local.naewcp4bmf.payload.output.rawResponse.device.details.os.name}}\n                </h3> -->\n                <table>\n                    <tr>\n                        <td style=\"background-color: fw-bold  white;color:black;font-size:100%;\"><b>Anonymous\n                                Network</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b>Impossible Travel</b>\n                        </td>\n\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>IP Address\n                                Reputation</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.anonymousNetworkDetected}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.impossibleTravel}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.ipRisk.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}\n                        </td>\n                    </tr>\n\n                    <tr>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>ISP</b></td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>IP Velocity by\n                                User</b>\n\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b>IP Velocity by IP</b>\n                        </td>\n                    </tr>\n\n                    <tr>\n\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.ipVelocityByUser.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}\n                        </td>\n\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.userVelocityByIp.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}\n                        </td>\n\n\n                    </tr>\n                    <tr>\n\n\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>User Risk\n                                Behavior</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>Bot Detection</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b>Suspicous Device</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.userBasedRiskBehavior.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.botDetection.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.suspiciousDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>New Device</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b> Device Reason </b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b> Device Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n\n\n\n\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.newDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.newDevice.reason}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.newDevice.status}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}\n                        </td>\n\n\n\n                    </tr>\n                </table>\n\n                <form class=\"form\" style=\"margin-top: 30px; margin-bottom:25px\" id='riskForm' data-id=\"riskForm\">\n                    <div class=\"control text-center\">\n\n                        {{#if buttonLabel}}\n                        <div class=\"d-flex flex-column\">\n                            <button class=\"btn btn-primary mb-3\" data-id=\"continueBtn\" type=\"submit\" id=\"continueBtn\"\n                                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\"\n                                data-skbuttonvalue=\"CONTINUE\">\n                                {{buttonLabel}}\n                            </button>\n                        </div>\n                        {{/if}}\n\n                        {{#if buttonLabel2}}\n                        <div class=\"d-flex flex-column\">\n                            <button class=\"btn btn-link mb-3\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\"\n                                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\"\n                                data-skbuttonvalue=\"RETURN\">\n                                {{buttonLabel2}}\n                            </button>\n                        </div>\n                        {{/if}}\n                </form>\n            </div>\n        </div>\n    </div>"
                 "value": "<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div class=\"signInDiv\">\n        <div class=\"card shadow mb-5 \" style=\"width: 100%\">\n            <div class=\" card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                <h1 class=\"text-center mb-4\">{{title}}</h1>\n                {{/if}}\n\n                {{#if textOne}}\n                <h2 class=\"text-muted text-center\">{{textOne}}</h2>\n                {{/if}}\n\n\n                <p class=\"text-danger mdi\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                {{#if fakeLevel}}\n                <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:green; margin-top: 30px; margin-bottom: 15px;\">\n                    Risk Level = {{global.company.variables.gv-riskLevel}}\n                </h3>\n                {{else}}\n                <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:green; margin-top: 30px; margin-bottom: 2px;\">\n                    Risk Score = {{local.naewcp4bmf.payload.output.rawResponse.result.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\n                </h3>\n                {{/if}}\n                <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:blue;  margin-bottom: 30px;\">\n                    IP Address = {{local.naewcp4bmf.payload.output.rawResponse.event.ip}}{{local.7d4rn3u3f3.payload.output.rawResponse.event.ip}}\n                </h3>\n                <!-- <h3 class=\"heading branding-template-heading text-center\"\n                    style=\"color:green; margin-top: 30px; margin-bottom: 15px;\">\n                    Device =\n                    {{local.naewcp4bmf.payload.output.rawResponse.device.details.os.name}}\n                </h3> -->\n                <table>\n                    <tr>\n                        <td style=\"background-color: fw-bold  white;color:black;font-size:100%;\"><b>Anonymous\n                                Network</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b>Impossible Travel</b>\n                        </td>\n\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>IP Address\n                                Reputation</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.anonymousNetworkDetected}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.impossibleTravel}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.ipRisk.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}\n                        </td>\n                    </tr>\n\n                    <tr>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>ISP</b></td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>IP Velocity by\n                                User</b>\n\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b>IP Velocity by IP</b>\n                        </td>\n                    </tr>\n\n                    <tr>\n\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.ipVelocityByUser.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}\n                        </td>\n\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.userVelocityByIp.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}\n                        </td>\n\n\n                    </tr>\n                    <tr>\n\n\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>User Risk\n                                Behavior</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>Bot Detection</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b>Suspicous Device</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.userBasedRiskBehavior.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.botDetection.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.suspiciousDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\"><b>New Device</b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b> Device Reason </b>\n                        </td>\n                        <td style=\"background-color: fw-bold white;color:black;font-size:100%;\">\n                            <b> Device Status</b>\n                        </td>\n                    </tr>\n                    <tr>\n\n\n\n\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.newDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.newDevice.reason}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}\n                        </td>\n                        <td style=\"background-color: white;color:black;font-size:100%;\">\n                            {{local.naewcp4bmf.payload.output.rawResponse.details.newDevice.status}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}\n                        </td>\n\n\n\n                    </tr>\n                </table>\n\n                <form class=\"form\" style=\"margin-top: 30px; margin-bottom:25px\" id='riskForm' data-id=\"riskForm\">\n                    <div class=\"control text-center\">\n\n                        {{#if buttonLabel}}\n                        <div class=\"d-flex flex-column\">\n                            <button class=\"btn btn-primary mb-3\" data-id=\"continueBtn\" type=\"submit\" id=\"continueBtn\"\n                                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\"\n                                data-skbuttonvalue=\"CONTINUE\">\n                                {{buttonLabel}}\n                            </button>\n                        </div>\n                        {{/if}}\n\n                        {{#if buttonLabel2}}\n                        <div class=\"d-flex flex-column\">\n                            <button class=\"btn btn-link mb-3\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\"\n                                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\"\n                                data-skbuttonvalue=\"RETURN\">\n                                {{buttonLabel2}}\n                            </button>\n                        </div>\n                        {{/if}}\n                </form>\n            </div>\n        </div>\n    </div>"
               },
               "fakeLevel": {
@@ -528,7 +453,6 @@
               },
               "inputSchema": {
                 "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"buttonLabel2\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label2\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel2\"\n        },\n        \"fakeLevel\": {\n            \"type\": \"string\",\n            \"displayName\": \"fakeLevel\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"fakeLevel\"\n        }\n        \n    }\n}\n\n"
-                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"buttonLabel2\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label2\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel2\"\n        },\n        \"fakeLevel\": {\n            \"type\": \"string\",\n            \"displayName\": \"fakeLevel\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"fakeLevel\"\n        }\n        \n    }\n}\n\n"
               },
               "nodeTitle": {
                 "value": "PingOne Protect - Risk Level"
@@ -545,14 +469,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2070,
-            "y": 1110
             "x": 2197,
             "y": 1110
           },
@@ -568,13 +486,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "83w9bk23p2",
-            "id": "83w9bk23p2",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -601,13 +516,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 338,
             "x": 465,
             "y": 799.1531683472078
           },
@@ -623,13 +533,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "xbmqud4y5m",
-            "id": "xbmqud4y5m",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -656,13 +563,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 454,
             "x": 581,
             "y": 390
           },
@@ -678,14 +580,10 @@
         {
           "data": {
             "capabilityName": "createSuccessResponse",
-            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "gfh4n4z2l7",
-            "id": "gfh4n4z2l7",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -698,14 +596,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3930,
-            "y": 1050
             "x": 4575.173425056789,
             "y": 1057.8435664871188
           },
@@ -729,8 +621,6 @@
             }
           },
           "position": {
-            "x": 3450,
-            "y": 1170
             "x": 3940.4672851645173,
             "y": 1137.1818339736526
           },
@@ -746,14 +636,10 @@
         {
           "data": {
             "capabilityName": "updateRiskEvaluation",
-            "capabilityName": "updateRiskEvaluation",
             "connectionId": "292873d5ceea806d81373ed0341b5c88",
             "connectorId": "pingOneRiskConnector",
             "id": "vazw9vnr5f",
-            "id": "vazw9vnr5f",
             "label": "PingOne Risk",
-            "name": "PingOne Protect",
-            "nodeType": "CONNECTION",
             "name": "PingOne Protect",
             "nodeType": "CONNECTION",
             "properties": {
@@ -766,14 +652,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3600,
-            "y": 1050
             "x": 4231.374265948475,
             "y": 1057.8435664871188
           },
@@ -790,11 +670,8 @@
           "data": {
             "id": "g6s7q3ki09",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 3720,
-            "y": 1050
             "x": 4363.604711759365,
             "y": 1057.8435664871188
           },
@@ -810,13 +687,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "0w1y636tk8",
-            "id": "0w1y636tk8",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -846,13 +720,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 436.3526166468459,
             "x": 563.352616646846,
             "y": 214
           },
@@ -868,13 +737,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "bssmx5fy4k",
-            "id": "bssmx5fy4k",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -910,13 +776,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 619,
             "x": 746,
             "y": 473.1531683472079
           },
@@ -932,14 +793,10 @@
         {
           "data": {
             "capabilityName": "customErrorMessage",
-            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
             "id": "ti1giwncq4",
-            "id": "ti1giwncq4",
             "label": "Error Customize",
-            "name": "Error Message",
-            "nodeType": "CONNECTION",
             "name": "Error Message",
             "nodeType": "CONNECTION",
             "properties": {
@@ -964,14 +821,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3120,
-            "y": 1470
             "x": 3247,
             "y": 1470
           },
@@ -987,13 +838,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "ulv3ed1oa7",
-            "id": "ulv3ed1oa7",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -1029,14 +877,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 2640,
-            "y": 930
             "x": 2767,
             "y": 930
           },
@@ -1052,13 +894,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "9psqgncw5u",
-            "id": "9psqgncw5u",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -1094,14 +933,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3450,
-            "y": 930
             "x": 3887.5751068401614,
             "y": 899.1670315140509
           },
@@ -1117,13 +950,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "f5vj8zsi3p",
-            "id": "f5vj8zsi3p",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -1159,14 +989,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 210,
-            "y": 960
             "x": 337,
             "y": 960
           },
@@ -1184,11 +1008,8 @@
             "id": "3n1s3i03np",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2220,
-            "y": 1110
             "x": 2347,
             "y": 1110
           },
@@ -1204,14 +1025,10 @@
         {
           "data": {
             "capabilityName": "AEqualsMultipleB",
-            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "a6qn1czm65",
-            "id": "a6qn1czm65",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1230,21 +1047,14 @@
                   {
                     "id": "sh3uj6e3lz",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"RETURN\"\n      }\n    ]\n  }\n]"
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"RETURN\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2400,
-            "y": 1110
             "x": 2527,
             "y": 1110
           },
@@ -1261,11 +1071,8 @@
           "data": {
             "id": "gq1l4wqfw1",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2550,
-            "y": 1080
             "x": 2677,
             "y": 1080
           },
@@ -1283,11 +1090,8 @@
             "id": "iy8zxqlus2",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2520,
-            "y": 1230
             "x": 2647,
             "y": 1230
           },
@@ -1303,14 +1107,10 @@
         {
           "data": {
             "capabilityName": "createErrorResponse",
-            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "efwe53y391",
-            "id": "efwe53y391",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1335,14 +1135,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 2730,
-            "y": 1380
             "x": 2857,
             "y": 1380
           },
@@ -1358,14 +1152,10 @@
         {
           "data": {
             "capabilityName": "startUiSubFlow",
-            "capabilityName": "startUiSubFlow",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
             "id": "cfysckwdjo",
-            "id": "cfysckwdjo",
             "label": "Flow Conductor",
-            "name": "Flow Connector",
-            "nodeType": "CONNECTION",
             "name": "Flow Connector",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1388,7 +1178,6 @@
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
                   "value": "48bc5d1f074b32efc02f09dfe91f32cf"
-                  "value": "48bc5d1f074b32efc02f09dfe91f32cf"
                 }
               },
               "subFlowVersionId": {
@@ -1397,14 +1186,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 3300,
-            "y": 1170
             "x": 3490.883769407492,
             "y": 1137.1818339736526
           },
@@ -1421,11 +1204,8 @@
           "data": {
             "id": "bxge8z9tar",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2880,
-            "y": 1140
             "x": 2988.4080753261105,
             "y": 1137.1818339736526
           },
@@ -1440,34 +1220,11 @@
         },
         {
           "data": {
-            "id": "o93cu6bxkr",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 2940,
-            "y": 1290
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "startNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "capabilityName": "startNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "u6yxyrshd8",
-            "id": "u6yxyrshd8",
             "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1477,13 +1234,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 731.2771241548706,
             "x": 858.2771241548706,
             "y": 1897.741012983971
           },
@@ -1499,13 +1251,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "icwefcnvrx",
-            "id": "icwefcnvrx",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -1532,13 +1281,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 655.3674836355118,
             "x": 782.3674836355118,
             "y": 1771.2249454517062
           },
@@ -1554,14 +1298,10 @@
         {
           "data": {
             "capabilityName": "customErrorMessage",
-            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
             "id": "6btahqeeb1",
-            "id": "6btahqeeb1",
             "label": "Error Customize",
-            "name": "Error Message",
-            "nodeType": "CONNECTION",
             "name": "Error Message",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1574,13 +1314,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1692.7992374000826,
             "x": 1819.7992374000826,
             "y": 2125.469934542047
           },
@@ -1596,14 +1331,10 @@
         {
           "data": {
             "capabilityName": "updateRiskEvaluation",
-            "capabilityName": "updateRiskEvaluation",
             "connectionId": "292873d5ceea806d81373ed0341b5c88",
             "connectorId": "pingOneRiskConnector",
             "id": "c3uz2484xg",
-            "id": "c3uz2484xg",
             "label": "PingOne Risk",
-            "name": "PingOne Protect",
-            "nodeType": "CONNECTION",
             "name": "PingOne Protect",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1616,13 +1347,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1389.1606753226472,
             "x": 1516.1606753226472,
             "y": 2125.469934542047
           },
@@ -1646,7 +1372,6 @@
             }
           },
           "position": {
-            "x": 1515.676742854912,
             "x": 1642.676742854912,
             "y": 2125.469934542047
           },
@@ -1662,14 +1387,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "enod10gw9d",
-            "id": "enod10gw9d",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1688,13 +1409,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 1034.9156862323061,
             "x": 1161.9156862323061,
             "y": 1897.741012983971
           },
@@ -1711,10 +1427,8 @@
           "data": {
             "id": "vf3d9y4nnr",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 857.7931916871354,
             "x": 984.7931916871354,
             "y": 1897.741012983971
           },
@@ -1738,7 +1452,6 @@
             }
           },
           "position": {
-            "x": 1186.7349672710236,
             "x": 1313.7349672710236,
             "y": 1897.741012983971
           },
@@ -1754,14 +1467,10 @@
         {
           "data": {
             "capabilityName": "startUiSubFlow",
-            "capabilityName": "startUiSubFlow",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
             "id": "p7gbmisqex",
-            "id": "p7gbmisqex",
             "label": "Flow Conductor",
-            "name": "Flow Connector",
-            "nodeType": "CONNECTION",
             "name": "Flow Connector",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1775,7 +1484,6 @@
                 "value": {
                   "label": "PingOne Verify subflow",
                   "value": "c5876e0cf832ac128c4c23e8ffa4a57c"
-                  "value": "c5876e0cf832ac128c4c23e8ffa4a57c"
                 }
               },
               "subFlowVersionId": {
@@ -1784,13 +1492,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 1389.1606753226472,
             "x": 1516.1606753226472,
             "y": 1897.741012983971
           },
@@ -1806,14 +1509,10 @@
         {
           "data": {
             "capabilityName": "updateRiskEvaluation",
-            "capabilityName": "updateRiskEvaluation",
             "connectionId": "292873d5ceea806d81373ed0341b5c88",
             "connectorId": "pingOneRiskConnector",
             "id": "68x4gb2c04",
-            "id": "68x4gb2c04",
             "label": "PingOne Risk",
-            "name": "PingOne Protect",
-            "nodeType": "CONNECTION",
             "name": "PingOne Protect",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1826,13 +1525,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1794.0120914258944,
             "x": 1921.0120914258944,
             "y": 1897.741012983971
           },
@@ -1856,7 +1550,6 @@
             }
           },
           "position": {
-            "x": 1540.9799563613649,
             "x": 1667.9799563613649,
             "y": 1897.741012983971
           },
@@ -1872,14 +1565,10 @@
         {
           "data": {
             "capabilityName": "createSuccessResponse",
-            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "gunagn46fd",
-            "id": "gunagn46fd",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1892,13 +1581,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 2122.9538670097827,
             "x": 2249.9538670097827,
             "y": 1897.741012983971
           },
@@ -1922,7 +1606,6 @@
             }
           },
           "position": {
-            "x": 1945.831372464612,
             "x": 2072.8313724646123,
             "y": 1897.741012983971
           },
@@ -1939,14 +1622,9 @@
           "data": {
             "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "goToNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "jwb2bdkh31",
-            "id": "jwb2bdkh31",
             "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -1956,14 +1634,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3660,
-            "y": 1350
             "x": 4310.712533435009,
             "y": 1401.6427255954325
           },
@@ -1979,14 +1651,10 @@
         {
           "data": {
             "capabilityName": "createErrorResponse",
-            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "w2ga2jat1m",
-            "id": "w2ga2jat1m",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2010,14 +1678,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3630,
-            "y": 1230
             "x": 4257.8203551106535,
             "y": 1295.8583689467205
           },
@@ -2033,14 +1695,10 @@
         {
           "data": {
             "capabilityName": "customErrorMessage",
-            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
             "id": "i5ty9oemya",
-            "id": "i5ty9oemya",
             "label": "Error Customize",
-            "name": "Error Message",
-            "nodeType": "CONNECTION",
             "name": "Error Message",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2065,13 +1723,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 2122.9538670097827,
             "x": 2249.9538670097827,
             "y": 2024.2570805162356
           },
@@ -2087,14 +1740,10 @@
         {
           "data": {
             "capabilityName": "customErrorMessage",
-            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
             "id": "ou0x4limwi",
-            "id": "ou0x4limwi",
             "label": "Error Customize",
-            "name": "Error Message",
-            "nodeType": "CONNECTION",
             "name": "Error Message",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2119,13 +1768,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1692.7992374000826,
             "x": 1819.7992374000826,
             "y": 2277.289215580765
           },
@@ -2141,14 +1785,10 @@
         {
           "data": {
             "capabilityName": "customErrorMessage",
-            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
             "id": "wlgnnxscx2",
-            "id": "wlgnnxscx2",
             "label": "Error Customize",
-            "name": "Error Message",
-            "nodeType": "CONNECTION",
             "name": "Error Message",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2173,14 +1813,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 2640,
-            "y": 1530
             "x": 2767,
             "y": 1530
           },
@@ -2197,11 +1831,8 @@
           "data": {
             "id": "rm4xgawmop",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2520,
-            "y": 1320
             "x": 2647,
             "y": 1320
           },
@@ -2217,14 +1848,10 @@
         {
           "data": {
             "capabilityName": "createErrorResponse",
-            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "iiduki63fv",
-            "id": "iiduki63fv",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2248,13 +1875,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1794.0120914258944,
             "x": 1921.0120914258944,
             "y": 1998.9538670097827
           },
@@ -2270,14 +1892,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "tx9avi852r",
-            "id": "tx9avi852r",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2296,13 +1914,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2194,
             "x": 2321,
             "y": 570
           },
@@ -2329,7 +1942,6 @@
             }
           },
           "position": {
-            "x": 2344,
             "x": 2471,
             "y": 570
           },
@@ -2346,14 +1958,9 @@
           "data": {
             "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "goToNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "3pb0pjqqgx",
-            "id": "3pb0pjqqgx",
             "label": "Node",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2363,13 +1970,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 2494,
             "x": 2621,
             "y": 660
           },
@@ -2385,14 +1987,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "fl4sb3qwsc",
-            "id": "fl4sb3qwsc",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2408,14 +2006,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 1050,
-            "y": 1050
             "x": 1177,
             "y": 1050
           },
@@ -2442,8 +2034,6 @@
             }
           },
           "position": {
-            "x": 1260,
-            "y": 1140
             "x": 1387,
             "y": 1140
           },
@@ -2459,14 +2049,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "pys8o5vixr",
-            "id": "pys8o5vixr",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2485,13 +2071,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2644,
             "x": 2771,
             "y": 570
           },
@@ -2508,14 +2089,9 @@
           "data": {
             "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "goToNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "m0z1qj6ets",
-            "id": "m0z1qj6ets",
             "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2525,13 +2101,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3244,
             "x": 3371,
             "y": 750
           },
@@ -2558,7 +2129,6 @@
             }
           },
           "position": {
-            "x": 2854,
             "x": 2981,
             "y": 570
           },
@@ -2575,14 +2145,9 @@
           "data": {
             "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "goToNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "0e2svqi6q7",
-            "id": "0e2svqi6q7",
             "label": "Node",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2592,13 +2157,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3004,
             "x": 3131,
             "y": 570
           },
@@ -2614,13 +2174,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "olrb2127gp",
-            "id": "olrb2127gp",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -2647,13 +2204,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 478.2449890903412,
             "x": 605.2449890903413,
             "y": 2429.1084966194826
           },
@@ -2670,14 +2222,9 @@
           "data": {
             "capabilityName": "startNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "startNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "jmrb4nqdxt",
-            "id": "jmrb4nqdxt",
             "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2687,13 +2234,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 604.761056622606,
             "x": 731.761056622606,
             "y": 2580.9277776582003
           },
@@ -2711,10 +2253,8 @@
             "id": "vub3ntw2ut",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 680.6706971419648,
             "x": 807.6706971419648,
             "y": 2580.9277776582003
           },
@@ -2730,14 +2270,10 @@
         {
           "data": {
             "capabilityName": "enableUser",
-            "capabilityName": "enableUser",
             "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
             "connectorId": "pingOneSSOConnector",
             "id": "7ptrtz4ktj",
-            "id": "7ptrtz4ktj",
             "label": "PingOne",
-            "name": "PingOne",
-            "nodeType": "CONNECTION",
             "name": "PingOne",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2750,13 +2286,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 908.3996187000413,
             "x": 1035.3996187000412,
             "y": 2580.9277776582003
           },
@@ -2772,14 +2303,10 @@
         {
           "data": {
             "capabilityName": "customHTMLTemplate",
-            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "u7a7cu369x",
-            "id": "u7a7cu369x",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2852,13 +2379,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 1186.7349672710236,
             "x": 1313.7349672710236,
             "y": 2580.9277776582003
           },
@@ -2875,10 +2397,8 @@
           "data": {
             "id": "io9y5mmpc9",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1034.9156862323061,
             "x": 1161.9156862323061,
             "y": 2580.9277776582003
           },
@@ -2896,10 +2416,8 @@
             "id": "tbzlpioqi4",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1354,
             "x": 1481,
             "y": 2580
           },
@@ -2915,14 +2433,10 @@
         {
           "data": {
             "capabilityName": "createErrorResponse",
-            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "uf7l0451fo",
-            "id": "uf7l0451fo",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -2946,13 +2460,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1504,
             "x": 1631,
             "y": 2580
           },
@@ -2970,10 +2479,8 @@
             "id": "veo50jawst",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 638.4287803516999,
             "x": 765.4287803516999,
             "y": 574.5018180455413
           },
@@ -2989,14 +2496,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "y6gy2pyeme",
-            "id": "y6gy2pyeme",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3018,13 +2521,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 798.2110182877456,
             "x": 925.2110182877456,
             "y": 575.8584016408997
           },
@@ -3040,14 +2538,10 @@
         {
           "data": {
             "capabilityName": "createRiskEvaluation",
-            "capabilityName": "createRiskEvaluation",
             "connectionId": "292873d5ceea806d81373ed0341b5c88",
             "connectorId": "pingOneRiskConnector",
             "id": "7d4rn3u3f3",
-            "id": "7d4rn3u3f3",
             "label": "Ping One Risk ",
-            "name": "PingOne Protect",
-            "nodeType": "CONNECTION",
             "name": "PingOne Protect",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3084,13 +2578,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1174,
             "x": 1301,
             "y": 690
           },
@@ -3114,7 +2603,6 @@
             }
           },
           "position": {
-            "x": 937.3873266111684,
             "x": 1064.3873266111684,
             "y": 575.8584016408997
           },
@@ -3138,7 +2626,6 @@
             }
           },
           "position": {
-            "x": 1424.5044057431487,
             "x": 1551.5044057431487,
             "y": 631.5289249702687
           },
@@ -3154,14 +2641,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "myg76b1cix",
-            "id": "myg76b1cix",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3183,13 +2666,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2974,
             "x": 3101,
             "y": 690
           },
@@ -3207,7 +2685,6 @@
             "id": "831fb1kxwy",
             "label": "Evaluator",
             "nodeType": "EVAL",
-            "nodeType": "EVAL",
             "properties": {
               "m0z1qj6ets": {
                 "value": "anyTriggersFalse"
@@ -3215,7 +2692,6 @@
             }
           },
           "position": {
-            "x": 3124,
             "x": 3251,
             "y": 690
           },
@@ -3231,14 +2707,10 @@
         {
           "data": {
             "capabilityName": "createSuccessResponse",
-            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "4ip0rpsddv",
-            "id": "4ip0rpsddv",
             "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3248,13 +2720,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3274,
             "x": 3401,
             "y": 630
           },
@@ -3270,14 +2737,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "8tttj6ny9a",
-            "id": "8tttj6ny9a",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3299,14 +2762,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 3090,
-            "y": 1290
             "x": 3596.6681260562036,
             "y": 1375.1966364332543
           },
@@ -3333,8 +2790,6 @@
             }
           },
           "position": {
-            "x": 3180,
-            "y": 1290
             "x": 3808.2368393536276,
             "y": 1348.7505472710764
           },
@@ -3350,13 +2805,10 @@
         {
           "data": {
             "capabilityName": "updateAnnotationProperties",
-            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "x854q7abt4",
-            "id": "x854q7abt4",
             "name": "Annotation",
-            "nodeType": "ANNOTATION",
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
@@ -3383,13 +2835,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1718.1024509065355,
             "x": 1845.1024509065355,
             "y": 2429.1084966194826
           },
@@ -3406,14 +2853,9 @@
           "data": {
             "capabilityName": "startNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "startNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "gj76t5mq9g",
-            "id": "gj76t5mq9g",
             "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3423,13 +2865,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 1920.528158958159,
             "x": 2047.528158958159,
             "y": 2530.3213506452944
           },
@@ -3447,10 +2884,8 @@
             "id": "75zpik0mmc",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2047.0442264904239,
             "x": 2174.044226490424,
             "y": 2530.3213506452944
           },
@@ -3466,14 +2901,10 @@
         {
           "data": {
             "capabilityName": "AEqualsB",
-            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "x7t79gayz5",
-            "id": "x7t79gayz5",
             "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3495,13 +2926,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2224.1667210355945,
             "x": 2351.1667210355945,
             "y": 2530.3213506452944
           },
@@ -3519,7 +2945,6 @@
             "id": "nal5vtpwi9",
             "label": "Evaluator",
             "nodeType": "EVAL",
-            "nodeType": "EVAL",
             "properties": {
               "nfcdv3wswr": {
                 "value": "anyTriggersFalse"
@@ -3527,7 +2952,6 @@
             }
           },
           "position": {
-            "x": 2350.682788567859,
             "x": 2477.682788567859,
             "y": 2530.3213506452944
           },
@@ -3543,14 +2967,10 @@
         {
           "data": {
             "capabilityName": "saveValue",
-            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
             "id": "nbj5x9f2zu",
-            "id": "nbj5x9f2zu",
             "label": "Variables",
-            "name": "Variables",
-            "nodeType": "CONNECTION",
             "name": "Variables",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3572,13 +2992,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2527.80528311303,
             "x": 2654.80528311303,
             "y": 2530.3213506452944
           },
@@ -3594,14 +3009,10 @@
         {
           "data": {
             "capabilityName": "saveValue",
-            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
             "id": "nfcdv3wswr",
-            "id": "nfcdv3wswr",
             "label": "Variables",
-            "name": "Variables",
-            "nodeType": "CONNECTION",
             "name": "Variables",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3623,13 +3034,8 @@
             },
             "status": "configured",
             "type": "trigger"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
           },
           "position": {
-            "x": 2527.80528311303,
             "x": 2654.80528311303,
             "y": 2682.140631684012
           },
@@ -3647,10 +3053,8 @@
             "id": "c76k2wc6eh",
             "label": "Evaluator",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2629.0181371388417,
             "x": 2756.0181371388417,
             "y": 2530.3213506452944
           },
@@ -3667,22 +3071,15 @@
           "data": {
             "capabilityName": "returnBackToCallingNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "returnBackToCallingNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
-            "id": "7buxev7lz0",
             "id": "7buxev7lz0",
             "label": "Teleport",
             "name": "Teleport",
             "nodeType": "CONNECTION",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "status": "configured",
-            "type": "trigger"
             "type": "trigger"
           },
           "position": {
-            "x": 2755.534204671106,
             "x": 2882.534204671106,
             "y": 2530.3213506452944
           },
@@ -3699,22 +3096,15 @@
           "data": {
             "capabilityName": "returnBackToCallingNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "returnBackToCallingNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
-            "id": "t70vb3ijq1",
             "id": "t70vb3ijq1",
             "label": "Teleport",
             "name": "Teleport",
             "nodeType": "CONNECTION",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "status": "configured",
-            "type": "trigger"
             "type": "trigger"
           },
           "position": {
-            "x": 2755.534204671106,
             "x": 2882.534204671106,
             "y": 2682.140631684012
           },
@@ -3731,10 +3121,8 @@
           "data": {
             "id": "rxslogjwwz",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2629.0181371388417,
             "x": 2756.0181371388417,
             "y": 2682.140631684012
           },
@@ -3751,14 +3139,9 @@
           "data": {
             "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "capabilityName": "goToNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "b6fl85f2ps",
-            "id": "b6fl85f2ps",
             "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3768,13 +3151,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 1924,
             "x": 2051,
             "y": 570
           },
@@ -3791,10 +3169,8 @@
           "data": {
             "id": "dzqjvihcin",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2044,
             "x": 2171,
             "y": 570
           },
@@ -3810,14 +3186,10 @@
         {
           "data": {
             "capabilityName": "updateRiskEvaluation",
-            "capabilityName": "updateRiskEvaluation",
             "connectionId": "292873d5ceea806d81373ed0341b5c88",
             "connectorId": "pingOneRiskConnector",
             "id": "lx14pbelk1",
-            "id": "lx14pbelk1",
             "label": "PingOne Risk",
-            "name": "PingOne Protect",
-            "nodeType": "CONNECTION",
             "name": "PingOne Protect",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3830,14 +3202,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3030,
-            "y": 1020
             "x": 3464.437680245314,
             "y": 1004.9513881627629
           },
@@ -3853,14 +3219,10 @@
         {
           "data": {
             "capabilityName": "updateRiskEvaluation",
-            "capabilityName": "updateRiskEvaluation",
             "connectionId": "292873d5ceea806d81373ed0341b5c88",
             "connectorId": "pingOneRiskConnector",
             "id": "v7gc90h8lb",
-            "id": "v7gc90h8lb",
             "label": "PingOne Risk",
-            "name": "PingOne Protect",
-            "nodeType": "CONNECTION",
             "name": "PingOne Protect",
             "nodeType": "CONNECTION",
             "properties": {
@@ -3873,14 +3235,8 @@
             },
             "status": "configured",
             "type": "action"
-              }
-            },
-            "status": "configured",
-            "type": "action"
           },
           "position": {
-            "x": 3420,
-            "y": 1350
             "x": 4046.2516418132295,
             "y": 1401.6427255954325
           },
@@ -3897,11 +3253,8 @@
           "data": {
             "id": "mvf0083t6h",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2850,
-            "y": 1020
             "x": 2977,
             "y": 1020
           },
@@ -3918,11 +3271,8 @@
           "data": {
             "id": "6lth06ndjd",
             "nodeType": "EVAL"
-            "nodeType": "EVAL"
           },
           "position": {
-            "x": 3150,
-            "y": 1020
             "x": 3570.2220368940257,
             "y": 1004.9513881627629
           },
@@ -3938,195 +3288,6 @@
         {
           "data": {
             "id": "m39tvmg6sk",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 3510,
-            "y": 1350
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "3e22nilrbl",
-            "nodeType": "CONNECTION",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "name": "Http",
-            "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
-            "properties": {
-              "inputSchema": {
-                "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"riskScore\": {\n      \"type\": \"number\",\n      \"displayName\": \"Risk Score\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"riskLevel\": {\n      \"type\": \"number\",\n      \"displayName\": \"Risk Level (Low, Medium, High)\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"ButtonLabl\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"buttonLabel2\": {\n      \"type\": \"string\",\n      \"displayName\": \"buttonLabel2\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    }\n  }\n}"
-              },
-              "outputSchema": {
-                "value": {}
-              },
-              "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <main aria-labelledby=\"title\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n            <form id=\"riskForm\" aria-labelledby=\"title\" data-id=\"riskForm\">\n              {{#if title}}\n              <h1 id=\"title\" class=\"text-center mb-4\">{{title}}</h1>\n              {{/if}}\n\n              {{#if textOne}}\n              <p class=\"text-muted text-center\">{{textOne}}</p>\n              {{/if}}\n\n              <p class=\"text-muted text-center\">Your Risk Score is <strong>{{riskScore}}</strong> ({{riskLevel}})</p>\n\n              <div class=\"d-flex justify-content-center mb-5 mt-4\">\n                <div class=\"progress\">\n                  <div class=\"needle\" id=\"needle\"></div>\n                </div>\n              </div>\n\n              {{#if textTwo}}\n              <p class=\"text-muted text-center\">{{textTwo}}</p>\n              {{/if}}\n\n              <div class=\"d-flex flex-column\">\n                <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                  data-skbuttontype=\"next-event\" id=\"btnContinue\" data-skform=\"riskForm\"\n                  data-skbuttonvalue=\"CONTINUE\">\n                    {{buttonLabel}}\n                </button>\n              </div>\n\n              {{#if buttonLabel2}}\n              <div class=\"d-flex flex-column\">\n                <button class=\"btn btn-link mb-3\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\"\n                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\"\n                data-skbuttonvalue=\"RETURN\">\n                {{buttonLabel2}}\n                  </button>\n              </div>\n              {{/if}}\n\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
-              },
-              "customCSS": {
-                "value": ":root {\n  --risk-green: #28cc2d;\n  --risk-yellow: #ffe135;\n  --risk-red: #d82f3e;\n  --risk-needle: #424344;\n}\n\n.progress {\n  width: 300px;\n  height: 20px;\n  background: linear-gradient(to right, var(--risk-green) 39%, var(--risk-yellow) 39% 75%, var(--risk-red) 75%);\n  border-radius: 4px;\n  position: relative;\n  overflow: visible;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n}\n\n.needle {\n  position: absolute;\n  top: -8px;\n  left: 0%;\n  width: 6px;\n  height: 36px;\n  background-color: var(--risk-needle);\n  transition: left 0.5s cubic-bezier(0.42, 0, 0.58, 1);\n  border-radius: 3px;\n}"
-              },
-              "customScript": {
-                "value": "const riskScore = {{riskScore}};\n\nconst updateProgress = (score) => {\n    const needle = document.getElementById('needle');\n    needle.style.left = `${score}%`;\n}\n\nconst start = () => {\n    setTimeout(() => {\n        updateProgress(riskScore);\n    }, 500);\n}\n\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n    // `DOMContentLoaded` has already fired\n    start();\n}\n"
-              },
-              "validationRules": {
-                "value": []
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Sign On Success\"\n      }\n    ]\n  }\n]"
-              },
-              "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"You have successfully authenticated using adaptive authentication.\"\n      }\n    ]\n  }\n]"
-              },
-              "formFieldsList": {
-                "value": [
-                  {
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "buttonValue"
-                  }
-                ]
-              },
-              "nodeTitle": {
-                "value": "Sign On Success with Risk Details"
-              },
-              "nodeDescription": {
-                "value": "Display risk details"
-              },
-              "riskScore": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"riskScore\",\n        \"data\": \"{{global.variables.riskScore}}\",\n        \"tooltip\": \"{{global.variables.riskScore}}\",\n        \"children\": [\n          {\n            \"text\": \"riskScore\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please continue\"\n      }\n    ]\n  }\n]"
-              },
-              "riskLevel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"riskLevel\",\n        \"data\": \"{{global.variables.riskLevel}}\",\n        \"tooltip\": \"{{global.variables.riskLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"riskLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "backgroundColor": {
-                "value": "#e3f0ffff"
-              },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
-              "buttonLabel2": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Return to Authentication\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "idUnique": "c07oss8l0u"
-          },
-          "position": {
-            "x": 1440,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "6pfld4qmq6",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1560,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "6gz4fvgs2u",
-            "nodeType": "CONNECTION",
-            "connectionId": "06922a684039827499bdbdd97f49827b",
-            "connectorId": "variablesConnector",
-            "name": "Variables",
-            "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
-            "properties": {
-              "saveVariables": {
-                "value": [
-                  {
-                    "name": "riskScore",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"score\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.score}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.score}}\",\n        \"children\": [\n          {\n            \"text\": \"score\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"score\",\n        \"data\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.score}}\",\n        \"tooltip\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.score}}\",\n        \"children\": [\n          {\n            \"text\": \"score\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.7926448027010013,
-                    "type": "number",
-                    "label": "riskScore (number - flowInstance)",
-                    "nameDefault": "score"
-                  },
-                  {
-                    "name": "riskLevel",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.17825589751102267,
-                    "label": "riskLevel (string - flowInstance)",
-                    "type": "string",
-                    "nameDefault": "level"
-                  }
-                ]
-              },
-              "nodeTitle": {
-                "value": "Save riskScore and riskLevel"
-              }
-            }
-          },
-          "position": {
-            "x": 1594,
-            "y": 570
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "7nzkuvvef0",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1729,
-            "y": 570
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "uqof9noa0k",
             "nodeType": "EVAL"
           },
           "position": {
@@ -4318,434 +3479,8 @@
             "id": "uqof9noa0k",
             "nodeType": "EVAL",
             "label": "Evaluator"
-            "label": "Evaluator"
           },
           "position": {
-            "x": 270,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "fkzebn5xdv",
-            "nodeType": "CONNECTION",
-            "connectionId": "de650ca45593b82c49064ead10b9fe17",
-            "connectorId": "functionsConnector",
-            "name": "Functions",
-            "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
-            "properties": {
-              "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-fakeLevel\",\n        \"data\": \"{{global.company.variables.gv-fakeLevel}}\",\n        \"tooltip\": \"{{global.company.variables.gv-fakeLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-fakeLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeTitle": {
-                "value": "check if fake level"
-              }
-            }
-          },
-          "position": {
-            "x": 420,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "w5finyi0sf",
-            "nodeType": "EVAL",
-            "label": "Evaluator",
-            "properties": {
-              "fl4sb3qwsc": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 540,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "bi6pfr9652",
-            "nodeType": "CONNECTION",
-            "connectionId": "06922a684039827499bdbdd97f49827b",
-            "connectorId": "variablesConnector",
-            "name": "Variables",
-            "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
-            "properties": {
-              "saveVariables": {
-                "value": [
-                  {
-                    "name": "riskLevel",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-riskLevel\",\n        \"data\": \"{{global.company.variables.gv-riskLevel}}\",\n        \"tooltip\": \"{{global.company.variables.gv-riskLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-riskLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.6984051994234795,
-                    "label": "riskLevel (string - flowInstance)",
-                    "type": "string",
-                    "nameDefault": "gv-riskLevel"
-                  },
-                  {
-                    "name": "riskScore",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-riskScore\",\n        \"data\": \"{{global.company.variables.gv-riskScore}}\",\n        \"tooltip\": \"{{global.company.variables.gv-riskScore}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-riskScore\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.8714729361114415,
-                    "label": "riskScore (number - flowInstance)",
-                    "type": "number",
-                    "nameDefault": "gv-riskScore"
-                  }
-                ]
-              },
-              "nodeTitle": {
-                "value": "Set Fake Risk level"
-              }
-            }
-          },
-          "position": {
-            "x": 720,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "euu9ljsqn8",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 870,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "AEqualsMultipleB",
-            "connectionId": "de650ca45593b82c49064ead10b9fe17",
-            "connectorId": "functionsConnector",
-            "id": "lhk2ad1xs9",
-            "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.3e22nilrbl.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.3e22nilrbl.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeTitle": {
-                "value": "Check for button hit"
-              },
-              "rightValueMultiple": {
-                "value": [
-                  {
-                    "id": "9teikmbpsh",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CONTINUE\"\n      }\n    ]\n  }\n]"
-                  },
-                  {
-                    "id": "sh3uj6e3lz",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"RETURN\"\n      }\n    ]\n  }\n]"
-                  }
-                ]
-              }
-            },
-            "status": "configured",
-            "type": "trigger",
-            "idUnique": "e7khwlw792"
-          },
-          "position": {
-            "x": 1740,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "1enijgndnq",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
-          },
-          "position": {
-            "x": 2586.8333282470703,
-            "y": 1001.9166717529297
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "5tcfwn01fx",
-            "nodeType": "CONNECTION",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "startNode",
-            "type": "trigger",
-            "properties": {
-              "nodeTitle": {
-                "value": "False Branch"
-              }
-            }
-          },
-          "position": {
-            "x": 2443.6666564941406,
-            "y": 983.8333435058594
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "bvuk0b3q3m",
-            "nodeType": "EVAL",
-            "label": "Evaluator",
-            "properties": {
-              "ma75nwa3nz": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 1200,
-            "y": 1020
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ma75nwa3nz",
-            "nodeType": "CONNECTION",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
-            "properties": {
-              "nodeInstanceId": {
-                "value": "5tcfwn01fx"
-              }
-            }
-          },
-          "position": {
-            "x": 1350,
-            "y": 990
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "iqpbecp47f",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1890,
-            "y": 1110
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "createErrorResponse",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "id": "6fvtn5mj4l",
-            "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
-              },
-              "claimsNameValuePairs": {
-                "value": [
-                  {
-                    "key": 0.34857477588141283,
-                    "label": "p1UserId (string - flowInstance)",
-                    "name": "p1UserId",
-                    "nameDefault": "p1UserId",
-                    "type": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-                  }
-                ]
-              },
-              "nodeTitle": {
-                "value": "Return to Authentication"
-              }
-            },
-            "status": "configured",
-            "type": "action",
-            "idUnique": "wix4tqtmua"
-          },
-          "position": {
-            "x": 2070,
-            "y": 1260
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "3pwxydnb4d",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1905,
-            "y": 1260
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "customErrorMessage",
-            "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
-            "connectorId": "errorConnector",
-            "id": "wlbo5o08h5",
-            "label": "Error Customize",
-            "name": "Error Message",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "errorCode": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
-              },
-              "errorDescription": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"An unexpected password state was received\"\n      }\n    ]\n  }\n]"
-              },
-              "errorMessage": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"An unexpected error has occurred\"\n      }\n    ]\n  }\n]"
-              },
-              "errorReason": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Received an unexpected password state value from PingOne\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeDescription": {
-                "value": "Received an unexpected value for the password status"
-              },
-              "nodeTitle": {
-                "value": "Received an unexpected value"
-              }
-            },
-            "status": "configured",
-            "type": "action",
-            "idUnique": "9hbgtj5z4x"
-          },
-          "position": {
-            "x": 2070,
-            "y": 1410
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "gxy5d392qn",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1850.5,
-            "y": 1401
             "x": 397,
             "y": 1140
           },
@@ -5335,9 +4070,6 @@
       "edges": [
         {
           "data": {
-            "id": "89268lupr9",
-            "source": "6gz4fvgs2u",
-            "target": "7nzkuvvef0"
             "id": "qhzxrdek3x",
             "source": "3pwxydnb4d",
             "target": "6fvtn5mj4l"
@@ -5549,9 +4281,7 @@
           "data": {
             "id": "v9arvapdl8",
             "multiValueSourceId": "9teikmbpsh",
-            "multiValueSourceId": "9teikmbpsh",
             "source": "a6qn1czm65",
-            "target": "gq1l4wqfw1"
             "target": "gq1l4wqfw1"
           },
           "position": {
@@ -5761,9 +4491,7 @@
           "data": {
             "id": "jatebcsl16",
             "multiValueSourceId": "sh3uj6e3lz",
-            "multiValueSourceId": "sh3uj6e3lz",
             "source": "a6qn1czm65",
-            "target": "iy8zxqlus2"
             "target": "iy8zxqlus2"
           },
           "position": {
@@ -5800,9 +4528,6 @@
         },
         {
           "data": {
-            "id": "itypnbf8wq",
-            "source": "3e22nilrbl",
-            "target": "6pfld4qmq6"
             "id": "itypnbf8wq",
             "source": "3e22nilrbl",
             "target": "6pfld4qmq6"
@@ -5862,9 +4587,7 @@
           "data": {
             "id": "9bvh520u5q",
             "multiValueSourceId": "-1",
-            "multiValueSourceId": "-1",
             "source": "h4etad3lqc",
-            "target": "m0qofy6rax"
             "target": "m0qofy6rax"
           },
           "position": {
@@ -5922,9 +4645,7 @@
           "data": {
             "id": "wfocn8iboa",
             "multiValueSourceId": "9y4ehc5dlm",
-            "multiValueSourceId": "9y4ehc5dlm",
             "source": "h4etad3lqc",
-            "target": "bxge8z9tar"
             "target": "bxge8z9tar"
           },
           "position": {
@@ -5961,10 +4682,6 @@
         },
         {
           "data": {
-            "id": "0k6bne5btm",
-            "multiValueSourceId": "hfp94chsr4",
-            "source": "h4etad3lqc",
-            "target": "o93cu6bxkr"
             "id": "zlfq66p7bq",
             "source": "lhk2ad1xs9",
             "target": "gxy5d392qn",
@@ -6215,9 +4932,7 @@
           "data": {
             "id": "2s8cgewvkw",
             "multiValueSourceId": "-1",
-            "multiValueSourceId": "-1",
             "source": "a6qn1czm65",
-            "target": "rm4xgawmop"
             "target": "rm4xgawmop"
           },
           "position": {
@@ -6257,9 +4972,6 @@
             "id": "gm703ctj9i",
             "source": "7nzkuvvef0",
             "target": "b6fl85f2ps"
-            "id": "gm703ctj9i",
-            "source": "7nzkuvvef0",
-            "target": "b6fl85f2ps"
           },
           "position": {
             "x": 0,
@@ -6276,9 +4988,6 @@
         },
         {
           "data": {
-            "id": "k7mo47da1b",
-            "source": "3uy947olgw",
-            "target": "6gz4fvgs2u"
             "id": "k7mo47da1b",
             "source": "3uy947olgw",
             "target": "6gz4fvgs2u"
@@ -6318,9 +5027,7 @@
         {
           "data": {
             "id": "v2bsye0x0j",
-            "id": "v2bsye0x0j",
             "source": "we8s8yqf5x",
-            "target": "3e22nilrbl"
             "target": "3e22nilrbl"
           },
           "position": {
@@ -6338,9 +5045,6 @@
         },
         {
           "data": {
-            "id": "ikdma9hzsv",
-            "source": "5tcfwn01fx",
-            "target": "1enijgndnq"
             "id": "ikdma9hzsv",
             "source": "5tcfwn01fx",
             "target": "1enijgndnq"
@@ -6856,9 +5560,7 @@
           "data": {
             "id": "tbwegzzusl",
             "multiValueSourceId": "7smt5dpufe",
-            "multiValueSourceId": "7smt5dpufe",
             "source": "h4etad3lqc",
-            "target": "mvf0083t6h"
             "target": "mvf0083t6h"
           },
           "position": {
@@ -6974,351 +5676,6 @@
             "id": "8dowd5c8yx",
             "source": "m39tvmg6sk",
             "target": "jwb2bdkh31"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "8edzucmj3y",
-            "source": "zgpzyeqslo",
-            "target": "6gz4fvgs2u"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "5xpj3wnkxm",
-            "source": "afw0vizdys",
-            "target": "uqof9noa0k"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "flgxn2kqa2",
-            "source": "uqof9noa0k",
-            "target": "fkzebn5xdv"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "e9wdy0nldn",
-            "source": "fkzebn5xdv",
-            "target": "w5finyi0sf"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "hfi18cjwmu",
-            "source": "w5finyi0sf",
-            "target": "bi6pfr9652"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "zszc82bz0p",
-            "source": "bi6pfr9652",
-            "target": "euu9ljsqn8"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "lauzcbdzsx",
-            "source": "euu9ljsqn8",
-            "target": "fl4sb3qwsc"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "f09bj9bq09",
-            "source": "w5finyi0sf",
-            "target": "fl4sb3qwsc"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "28xheaj3rg",
-            "source": "6pfld4qmq6",
-            "target": "lhk2ad1xs9"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "y5p8936b62",
-            "source": "1enijgndnq",
-            "target": "h4etad3lqc"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ws1pqjf6tc",
-            "source": "fl4sb3qwsc",
-            "target": "bvuk0b3q3m"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "vsvd5yo7hq",
-            "source": "bvuk0b3q3m",
-            "target": "ma75nwa3nz"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "86kfjx6hvk",
-            "source": "lhk2ad1xs9",
-            "target": "iqpbecp47f",
-            "multiValueSourceId": "9teikmbpsh"
-          },
-          "position": {
-            "x": 64,
-            "y": 52
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "v9kkr7mvj4",
-            "source": "iqpbecp47f",
-            "target": "cg5l22l8rl"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "yz1zcslfez",
-            "source": "lhk2ad1xs9",
-            "target": "3pwxydnb4d",
-            "multiValueSourceId": "sh3uj6e3lz"
-          },
-          "position": {
-            "x": 64,
-            "y": 92
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "qhzxrdek3x",
-            "source": "3pwxydnb4d",
-            "target": "6fvtn5mj4l"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "zlfq66p7bq",
-            "source": "lhk2ad1xs9",
-            "target": "gxy5d392qn",
-            "multiValueSourceId": "-1"
-          },
-          "position": {
-            "x": 64,
-            "y": 132
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "5dnbsdiulz",
-            "source": "gxy5d392qn",
-            "target": "wlbo5o08h5"
           },
           "position": {
             "x": 0,
@@ -7830,20 +6187,15 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1715013204624,
   "savedDate": 1715346565873,
   "variables": [
     {
       "context": "flowInstance",
       "createdDate": 1714509994441,
-      "createdDate": 1714509994441,
       "fields": {
         "displayName": "",
         "max": 2000,
-        "max": 2000,
         "min": 0,
-        "mutable": true,
-        "type": "string"
         "mutable": true,
         "type": "string"
       },
@@ -7851,16 +6203,13 @@
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "flowInstance",
       "createdDate": 1714509958362,
-      "createdDate": 1714509958362,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": "Internal variable",
         "displayName": "Internal variable",
         "mutable": true,
         "min": 0,
@@ -7870,17 +6219,13 @@
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
       "createdDate": 1714509947000,
-      "createdDate": 1714509947000,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "This tells the flow to use the gv-riskLevel variable for its score.",
-        "value": "false",
         "displayName": "This tells the flow to use the gv-riskLevel variable for its score.",
         "value": "true",
         "mutable": true,
@@ -7888,23 +6233,18 @@
         "max": 2000
       },
       "id": "fcf856bd-291d-44aa-a8ac-db99a3720987",
-      "id": "fcf856bd-291d-44aa-a8ac-db99a3720987",
       "type": "property",
-      "updatedDate": 1715014330936,
       "updatedDate": 1715336728690,
       "visibility": "private",
       "name": "gv-fakeLevel##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
       "createdDate": 1714509953140,
-      "createdDate": 1714509953140,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "Turn on and off MFA, This is required for all P1MFA options",
         "displayName": "Turn on and off MFA, This is required for all P1MFA options",
         "value": "true",
         "mutable": true,
@@ -7915,17 +6255,13 @@
       "visibility": "private",
       "name": "gv-mfa-on##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
       "createdDate": 1714509941196,
-      "createdDate": 1714509941196,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "MFA is run when PingOne Risk on High",
-        "value": "true",
         "displayName": "MFA is run when PingOne Risk on High",
         "value": "true",
         "mutable": true,
@@ -7933,18 +6269,14 @@
         "max": 2000
       },
       "id": "f5ae02eb-0fdc-47f5-8c4e-10b1fe8344b5",
-      "id": "f5ae02eb-0fdc-47f5-8c4e-10b1fe8344b5",
       "type": "property",
-      "updatedDate": 1714665893484,
       "updatedDate": 1715336937601,
       "visibility": "private",
       "name": "gv-mfaOnHighRisk##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1714509939918,
       "createdDate": 1714509939918,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
@@ -7961,29 +6293,9 @@
       "visibility": "private",
       "name": "gv-riskLevel##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1715002001914,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "number",
-        "displayName": "Set Fake risk score",
-        "value": "50",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "3c4d4f02-7a46-44a8-a60c-4413bbf7b908",
-      "type": "property",
-      "visibility": "private",
-      "name": "gv-riskScore##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "company",
-      "createdDate": 1714509949345,
       "createdDate": 1715002001914,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
@@ -8006,8 +6318,6 @@
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "This shows a screen the scores returned by PingOne risk during authentication",
-        "value": "true",
         "displayName": "This shows a screen the scores returned by PingOne risk during authentication",
         "value": "true",
         "mutable": true,
@@ -8018,17 +6328,13 @@
       "visibility": "private",
       "name": "gv-riskScreenDisplay##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
       "createdDate": 1714509950331,
-      "createdDate": 1714509950331,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
-        "displayName": "If you want to run Verify when user is a High Risk",
-        "value": "false",
         "displayName": "If you want to run Verify when user is a High Risk",
         "value": "true",
         "mutable": true,
@@ -8040,42 +6346,6 @@
       "updatedDate": 1715336668620,
       "visibility": "private",
       "name": "gv-runVerifyforHighRisk##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1715001041735,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "b6f2366e-533a-4247-ad8e-cc369d9f7f3c",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskLevel##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1715000985902,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "number",
-        "displayName": "",
-        "value": "0",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "5b9fed39-46a4-443a-b1dc-6fe4ad4c3c42",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskScore##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
