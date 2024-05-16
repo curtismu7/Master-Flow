@@ -1,5 +1,5 @@
 {
-  "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18",
+  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
   "authTokenExpireIds": [],
   "connectorIds": [
     "functionsConnector",
@@ -8,106 +8,98 @@
     "annotationConnector",
     "errorConnector"
   ],
-  "createdDate": 1713884714017,
-  "currentVersion": 72,
+  "createdDate": 1715874736403,
+  "currentVersion": 3,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1713884715158,
-  "description": "Reference DaVinci orchestration flow that integrates reCAPTCHA in a sign-on process to assess whether a form submission is by a human or a bot.",
+  "deployedDate": 1715874737785,
+  "description": "Imported on Tue Apr 30 2024 20:46:34 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
       "type": "object",
-      "properties": {
-        "p1UserId": {
-          "description": "",
-          "preferredDataType": "string",
-          "isExpanded": true,
-          "type": "string",
-          "name": "p1UserId"
-        }
-      },
+      "properties": {},
       "additionalProperties": false,
       "required": []
     }
   },
-  "isInputSchemaSaved": true,
+  "isInputSchemaSaved": false,
   "isOutputSchemaSaved": false,
   "name": "PingOne reCAPTCHA v3 subflow ",
-  "publishedVersion": 72,
+  "publishedVersion": 3,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+    "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/RecaptchaLogo.svg.png?v=1711732381261\");\n    height: 100px;\n    width: 671;\n}",
+    "cssLinks": [],
+    "debugMode": true,
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
-    "cssLinks": [],
-    "useCustomCSS": true,
-    "debugMode": true,
-    "logLevel": 3,
     "jsLinks": [
       {
+        "crossorigin": "",
+        "defer": "false",
+        "integrity": "",
         "label": "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js",
-        "value": "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js",
-        "defer": "false",
-        "crossorigin": "",
-        "integrity": "",
         "referrerpolicy": "",
-        "type": ""
+        "type": "",
+        "value": "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       },
       {
+        "crossorigin": "",
+        "defer": "false",
+        "integrity": "",
         "label": "https://www.google.com/recaptcha/api.js",
-        "value": "https://www.google.com/recaptcha/api.js",
-        "defer": "false",
-        "crossorigin": "",
-        "integrity": "",
         "referrerpolicy": "",
-        "type": ""
+        "type": "",
+        "value": "https://www.google.com/recaptcha/api.js"
       },
       {
-        "label": "https://www.google.com/recaptcha/api.js?render=6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
-        "value": "https://www.google.com/recaptcha/api.js?render=6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
-        "defer": "false",
         "crossorigin": "",
+        "defer": "false",
         "integrity": "",
+        "label": "https://www.google.com/recaptcha/api.js?render=6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
         "referrerpolicy": "",
-        "type": ""
+        "type": "",
+        "value": "https://www.google.com/recaptcha/api.js?render=6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr"
       }
     ],
-    "useCustomScript": true,
-    "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/RecaptchaLogo.svg.png?v=1711732381261\");\n    height: 100px;\n    width: 671;\n}"
+    "logLevel": 3,
+    "useCustomCSS": true,
+    "useCustomScript": true
   },
   "timeouts": "null",
-  "updatedDate": 1713884715158,
-  "flowId": "cf93627a9eecea11e7ac9111c652a14e",
-  "versionId": 72,
+  "updatedDate": 1715874737816,
+  "flowId": "957ce22eb07711479e0931062222e07f",
+  "versionId": 3,
   "graphData": {
     "elements": {
       "nodes": [
         {
           "data": {
-            "id": "mwnugsl3ez",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AGreaterThanEqualToB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "mwnugsl3ez",
+            "idUnique": "dz4nfgx57r",
+            "isDisabled": false,
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AGreaterThanEqualToB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"moustache\",\n        \"data\": \"{{local.d5xd4gj7l7.payload.output.rawResponse.body.score}}\",\n        \"name\": \"score\",\n        \"children\": [\n          {\n            \"text\": \"\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "reCaptcha Result Check"
               },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"CAPTCHA_THRESHOLD\",\n        \"data\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"tooltip\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"children\": [\n          {\n            \"text\": \"CAPTCHA_THRESHOLD\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "type": {
                 "value": "number"
-              },
-              "nodeTitle": {
-                "value": "reCaptcha Result Check"
               }
             },
-            "isDisabled": false,
-            "idUnique": "dz4nfgx57r"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1530,
@@ -125,9 +117,9 @@
         {
           "data": {
             "id": "7lbvbju71e",
-            "nodeType": "EVAL",
-            "label": "Evaluator",
             "idUnique": "bzw3senjno",
+            "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "umc3t47pkp": {
                 "value": "anyTriggersFalse"
@@ -149,22 +141,16 @@
         },
         {
           "data": {
-            "id": "d5xd4gj7l7",
-            "nodeType": "CONNECTION",
+            "capabilityName": "makeRestApiCall",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "d5xd4gj7l7",
+            "idUnique": "rg734w4u88",
+            "isDisabled": false,
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "makeRestApiCall",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
-              "url": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://www.google.com/recaptcha/api/siteverify\"\n      }\n    ]\n  }\n]"
-              },
-              "httpMethod": {
-                "value": "POST"
-              },
               "bodyParams": {
                 "value": [
                   {
@@ -177,18 +163,24 @@
                   }
                 ]
               },
-              "outputSchema": {
-                "value": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"success\": {\n      \"type\": \"boolean\"\n    },\n    \"challenge_ts\": {\n      \"type\": \"string\"\n    },\n    \"hostname\": {\n      \"type\": \"string\"\n    },\n    \"error-codes\": {\n      \"type\": \"array\",\n      \"items\": {}\n    }\n  },\n  \"required\": [\n    \"success\",\n    \"challenge_ts\",\n    \"hostname\",\n    \"error-codes\"\n  ]\n}"
+              "httpBody": {
+                "value": "formData"
+              },
+              "httpMethod": {
+                "value": "POST"
               },
               "nodeTitle": {
                 "value": "Verify Captcha API Call"
               },
-              "httpBody": {
-                "value": "formData"
+              "outputSchema": {
+                "value": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"success\": {\n      \"type\": \"boolean\"\n    },\n    \"challenge_ts\": {\n      \"type\": \"string\"\n    },\n    \"hostname\": {\n      \"type\": \"string\"\n    },\n    \"error-codes\": {\n      \"type\": \"array\",\n      \"items\": {}\n    }\n  },\n  \"required\": [\n    \"success\",\n    \"challenge_ts\",\n    \"hostname\",\n    \"error-codes\"\n  ]\n}"
+              },
+              "url": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://www.google.com/recaptcha/api/siteverify\"\n      }\n    ]\n  }\n]"
               }
             },
-            "isDisabled": false,
-            "idUnique": "rg734w4u88"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1230,
@@ -206,16 +198,16 @@
         {
           "data": {
             "id": "pyvavyfdno",
+            "idUnique": "hw6u1vsgw5",
             "nodeType": "EVAL",
             "properties": {
-              "upiynhx9v": {
-                "value": "anyTriggersFalse"
-              },
               "i21eb2n1ho": {
                 "value": "anyTriggersFalse"
+              },
+              "upiynhx9v": {
+                "value": "anyTriggersFalse"
               }
-            },
-            "idUnique": "hw6u1vsgw5"
+            }
           },
           "position": {
             "x": 1650,
@@ -232,43 +224,52 @@
         },
         {
           "data": {
-            "id": "srsltttf0p",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "srsltttf0p",
+            "idUnique": "5c7do7l9e6",
+            "isDisabled": false,
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
+              "CAPTCHA_V3_SITE_KEY": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaV3SiteKey\",\n        \"data\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaV3SiteKey\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "buttonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "customHTML": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"data\": \"[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iMTUiIHBvbGxSZXRyaWVzPSI2MCIgcG9sbENoYWxsZW5nZVN0YXR1cz0iZmFsc2Ui###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjE1IiwicG9sbFJldHJpZXMiOjYwLCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjoiZmFsc2UifSwiY29tcG9uZW50UHJvcHMiOnsiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MifSwicG9sbEludGVydmFsIjp7Im5hbWUiOiJwb2xsSW50ZXJ2YWwiLCJkaXNwbGF5TmFtZSI6IlBvbGwgSW50ZXJ2YWwiLCJ2YWx1ZSI6MjAwMH0sInBvbGxSZXRyaWVzIjp7Im5hbWUiOiJwb2xsUmV0cmllcyIsImRpc3BsYXlOYW1lIjoiUG9sbCBSZXRyaWVzIiwidmFsdWUiOjYwfSwicG9sbENoYWxsZW5nZVN0YXR1cyI6eyJuYW1lIjoicG9sbENoYWxsZW5nZVN0YXR1cyIsImRpc3BsYXlOYW1lIjoiUG9sbCBDaGFsbGVuZ2UgU3RhdHVzIiwidHlwZSI6InNlbGVjdCIsInZhbHVlIjoidHJ1ZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJUcnVlIiwidmFsdWUiOiJ0cnVlIn0seyJuYW1lIjoiRmFsc2UiLCJ2YWx1ZSI6ImZhbHNlIn1dfX19]]]\",\n        \"src\": \"auth.svg\",\n        \"url\": \"skpolling\",\n        \"children\": [\n          {\n            \"text\": \"skpolling\"\n          }\n        ],\n        \"component\": \"skpolling\",\n        \"options\": {\n          \"class\": \"\",\n          \"pollInterval\": \"15\",\n          \"pollRetries\": 60,\n          \"pollChallengeStatus\": \"false\"\n        },\n        \"componentProps\": {\n          \"class\": {\n            \"name\": \"class\",\n            \"displayName\": \"CSS Class\"\n          },\n          \"pollInterval\": {\n            \"name\": \"pollInterval\",\n            \"displayName\": \"Poll Interval\",\n            \"value\": 2000\n          },\n          \"pollRetries\": {\n            \"name\": \"pollRetries\",\n            \"displayName\": \"Poll Retries\",\n            \"value\": 60\n          },\n          \"pollChallengeStatus\": {\n            \"name\": \"pollChallengeStatus\",\n            \"displayName\": \"Poll Challenge Status\",\n            \"type\": \"select\",\n            \"value\": \"true\",\n            \"options\": [\n              {\n                \"name\": \"True\",\n                \"value\": \"true\"\n              },\n              {\n                \"name\": \"False\",\n                \"value\": \"false\"\n              }\n            ]\n          }\n        },\n        \"tooltip\": \"{{component.skpolling}}\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n<div class=\\\"end-user-nano\\\">\\n    <div\\n        class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\\\">\\n        <div style=\\\"max-width: 400px; min-width: 400px; width: 100%\\\">\\n            <div class=\\\"card shadow mb-5\\\">\\n                <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n                    <img class=\\\"companyLogo align-self-center mb-5\\\" src=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyLogo\",\n        \"data\": \"{{global.variables.companyLogo}}\",\n        \"tooltip\": \"{{global.variables.companyLogo}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyLogo}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" alt=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyName\",\n        \"data\": \"{{global.variables.companyName}}\",\n        \"tooltip\": \"{{global.variables.companyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" />\\n\\n\\n                    <!-- Generic Error Message -->\\n                    <p id=\\\"feedback\\\" data-id=\\\"feedback\\\" class=\\\"text-danger mdi mdi-alert-circle\\\"\\n                        data-skcomponent=\\\"skerror\\\"></p>\\n\\n                    {{#if title}}\\n                    <h1 class=\\\"text-center mb-4\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"title\",\n        \"data\": \"{{title}}\",\n        \"tooltip\": \"{{title}}\",\n        \"children\": [\n          {\n            \"text\": \"{{title}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</h1>\\n                    {{/if}}\\n\\n\\n                    {{#if textOne}}\\n                    <p class=\\\"text-muted text-center\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"textOne\",\n        \"data\": \"{{textOne}}\",\n        \"tooltip\": \"{{textOne}}\",\n        \"children\": [\n          {\n            \"text\": \"{{textOne}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                    {{/if}}\\n\\n\\n                    {{#if textTwo}}\\n                    <p class=\\\"text-muted text-center\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"textTwo\",\n        \"data\": \"{{textTwo}}\",\n        \"tooltip\": \"{{textTwo}}\",\n        \"children\": [\n          {\n            \"text\": \"{{textTwo}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                    {{/if}}\\n\\n\\n                    <form id=\\\"signonForm\\\" data-id=\\\"signonForm\\\">\\n                        <!-- Captch form fields -->\\n                        <input type=\\\"hidden\\\" id=\\\"g-recaptcha-response\\\" name=\\\"g-recaptcha-response\\\">\\n                        <input type=\\\"hidden\\\" id=\\\"recaptcha_token\\\" name=\\\"recapture_token\\\">\\n\\n                        <div class=\\\"d-flex flex-column\\\">\\n\\n                            <button class=\\\"btn btn-primary mb-3\\\" type=\\\"button\\\" id=\\\"captchaBtn\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"buttonLabel\",\n        \"data\": \"{{buttonLabel}}\",\n        \"tooltip\": \"{{buttonLabel}}\",\n        \"children\": [\n          {\n            \"text\": \"{{buttonLabel}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</button>\\n\\n                            <div class=\\\"d-flex flex-column\\\">\\n                                <button data-id=\\\"button\\\" type=\\\"submit\\\" class=\\\"btn btn-primary mb-3 d-none\\\" data-skcomponent=\\\"skbutton\\\"\\n                            data-skbuttontype=\\\"form-submit\\\" data-skform=\\\"signonForm\\\" id=\\\"btnSignIn\\\"\\n                             data-skbuttonvalue=\\\"SIGNON\\\">\\n\\n                            </button>\\n\\n                            </div>\\n                        </div>\\n                </div>\\n                </form>\\n            </div>\\n        </div>\\n    </div>\\n</div>\"\n      }\n    ]\n  }\n]"
+              },
+              "customScript": {
+                "value": "\n// Initializes the handler for the captcha button click event.\nconst createCaptchaButtonHandler = () => {\n  let captchaButton = document.getElementById(\"captchaBtn\");\n\n  if (captchaButton) {\n    captchaButton.addEventListener(\"click\", function (e) {\n      e.preventDefault();\n      grecaptcha.ready(function () {\nconsole.log(\"CAPTCHA_V3_SITE_KEY\" , CAPTCHA_V3_SITE_KEY )\n        grecaptcha.execute('{{CAPTCHA_V3_SITE_KEY}}', { action: 'submit' })\n          .then(function (token) {\n            document.getElementById('recaptcha_token').value = token;\n            console.log(\"Token\",token);\n            document.getElementById(\"btnSignIn\").click();\n          })\n          .catch(error => {\n            console.error(\"Captcha execution failed:\", error);\n          });\n      });\n    });\n  }\n};\n\nconst setFieldFocus = (id) => {\n  const element = document.getElementById(id);\n  if (element) {\n    element.focus();\n  }\n}\n\nconst makePasswordToggle = (id) => {\n  let container = document.getElementById(id);\n\n  if (container) {\n    let password = container.getElementsByTagName(\"input\")[0];\n    let toggler = document.createElement(\"button\");\n    toggler.setAttribute(\"type\", \"button\");\n    toggler.setAttribute(\"aria-label\", \"Show/Hide Password\");\n    toggler.className = \"btn mdi mdi-eye-off-outline position-absolute end-0 top-50 translate-middle-y\";\n    container.appendChild(toggler);\n\n    function showHidePassword() {\n      if (password.type == \"password\") {\n        password.setAttribute(\"type\", \"text\");\n        toggler.classList.add(\"mdi-eye-outline\");\n        toggler.classList.remove(\"mdi-eye-off-outline\");\n      } else {\n        toggler.classList.add(\"mdi-eye-off-outline\");\n        toggler.classList.remove(\"mdi-eye-outline\");\n        password.setAttribute(\"type\", \"password\");\n      }\n      password.focus();\n    };\n\n    toggler.addEventListener(\"click\", showHidePassword);\n  }\n}\n\nconst start = () => {\n  makePasswordToggle(\"passwordDiv\");\n  setFieldFocus(\"username\");\n  createCaptchaButtonHandler();\n}\n\nif (document.readyState === \"loading\") {\n  // Loading hasn't finished yet\n  document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n  // `DOMContentLoaded` has already fired\n  start();\n}"
               },
               "formFieldsList": {
                 "value": [
                   {
+                    "displayName": "username",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
                     "propertyName": "username",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"demo_user\"\n      }\n    ]\n  }\n]",
-                    "hashedVisibility": false,
-                    "displayName": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"demo_user\"\n      }\n    ]\n  }\n]"
                   },
                   {
+                    "displayName": "password",
+                    "hashedVisibility": false,
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
                     "propertyName": "password",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "hashedVisibility": false,
-                    "displayName": "password"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "propertyName": "recaptcha_token",
+                    "hashedVisibility": false,
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": false
+                    "propertyName": "recaptcha_token",
+                    "value": ""
                   },
                   {
                     "preferredControlType": "textField",
@@ -277,33 +278,24 @@
                   }
                 ]
               },
-              "customScript": {
-                "value": "\n// Initializes the handler for the captcha button click event.\nconst createCaptchaButtonHandler = () => {\n  let captchaButton = document.getElementById(\"captchaBtn\");\n\n  if (captchaButton) {\n    captchaButton.addEventListener(\"click\", function (e) {\n      e.preventDefault();\n      grecaptcha.ready(function () {\nconsole.log(\"CAPTCHA_V3_SITE_KEY\" , CAPTCHA_V3_SITE_KEY )\n        grecaptcha.execute('{{CAPTCHA_V3_SITE_KEY}}', { action: 'submit' })\n          .then(function (token) {\n            document.getElementById('recaptcha_token').value = token;\n            console.log(\"Token\",token);\n            document.getElementById(\"btnSignIn\").click();\n          })\n          .catch(error => {\n            console.error(\"Captcha execution failed:\", error);\n          });\n      });\n    });\n  }\n};\n\nconst setFieldFocus = (id) => {\n  const element = document.getElementById(id);\n  if (element) {\n    element.focus();\n  }\n}\n\nconst makePasswordToggle = (id) => {\n  let container = document.getElementById(id);\n\n  if (container) {\n    let password = container.getElementsByTagName(\"input\")[0];\n    let toggler = document.createElement(\"button\");\n    toggler.setAttribute(\"type\", \"button\");\n    toggler.setAttribute(\"aria-label\", \"Show/Hide Password\");\n    toggler.className = \"btn mdi mdi-eye-off-outline position-absolute end-0 top-50 translate-middle-y\";\n    container.appendChild(toggler);\n\n    function showHidePassword() {\n      if (password.type == \"password\") {\n        password.setAttribute(\"type\", \"text\");\n        toggler.classList.add(\"mdi-eye-outline\");\n        toggler.classList.remove(\"mdi-eye-off-outline\");\n      } else {\n        toggler.classList.add(\"mdi-eye-off-outline\");\n        toggler.classList.remove(\"mdi-eye-outline\");\n        password.setAttribute(\"type\", \"password\");\n      }\n      password.focus();\n    };\n\n    toggler.addEventListener(\"click\", showHidePassword);\n  }\n}\n\nconst start = () => {\n  makePasswordToggle(\"passwordDiv\");\n  setFieldFocus(\"username\");\n  createCaptchaButtonHandler();\n}\n\nif (document.readyState === \"loading\") {\n  // Loading hasn't finished yet\n  document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n  // `DOMContentLoaded` has already fired\n  start();\n}"
+              "inputSchema": {
+                "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"CAPTCHA_V3_SITE_KEY\": {\n      \"type\": \"string\",\n      \"displayName\": \"Captcha Site Key\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"CAPTCHA_V3_SITE_KEY\"\n    },\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"title\"\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textOne\"\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textTwo\"\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel\"\n    }\n  }\n}"
               },
               "nodeTitle": {
                 "value": "Reference Form with reCaptcha V3"
               },
-              "inputSchema": {
-                "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"CAPTCHA_V3_SITE_KEY\": {\n      \"type\": \"string\",\n      \"displayName\": \"Captcha Site Key\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"CAPTCHA_V3_SITE_KEY\"\n    },\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"title\"\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textOne\"\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textTwo\"\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel\"\n    }\n  }\n}"
-              },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "CAPTCHA_V3_SITE_KEY": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaV3SiteKey\",\n        \"data\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaV3SiteKey\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"If you are a BOT, please go away\"\n      }\n    ]\n  }\n]"
               },
               "textTwo": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please push button to continue\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "title": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"We are going to check you are not a BOT with recaptcha\"\n      }\n    ]\n  }\n]"
-              },
-              "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"If you are a BOT, please go away\"\n      }\n    ]\n  }\n]"
               }
             },
-            "idUnique": "5c7do7l9e6",
-            "isDisabled": false
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 930,
@@ -320,56 +312,56 @@
         },
         {
           "data": {
-            "id": "fk5qu0scfl",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "fk5qu0scfl",
+            "idUnique": "syyanus7e7",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Start - Instance Variables"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "CAPTCHA_V3_SITE_KEY",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaV3SiteKey\",\n        \"data\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaV3SiteKey\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.20674159122602198,
-                    "type": "string",
                     "label": "CAPTCHA_V3_SITE_KEY (string - flowInstance)",
-                    "nameDefault": "gv-captchaV3SiteKey"
+                    "name": "CAPTCHA_V3_SITE_KEY",
+                    "nameDefault": "gv-captchaV3SiteKey",
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaV3SiteKey\",\n        \"data\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaV3SiteKey}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaV3SiteKey\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "CAPTCHA_V3_SECRET",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaV3SecretKey\",\n        \"data\": \"{{global.company.variables.gv-captchaV3SecretKey}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaV3SecretKey}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaV3SecretKey\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.3983255169680584,
                     "label": "CAPTCHA_V3_SECRET (string - flowInstance)",
+                    "name": "CAPTCHA_V3_SECRET",
+                    "nameDefault": "gv-captchaV3SecretKey",
                     "type": "string",
-                    "nameDefault": "gv-captchaV3SecretKey"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaV3SecretKey\",\n        \"data\": \"{{global.company.variables.gv-captchaV3SecretKey}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaV3SecretKey}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaV3SecretKey\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "CAPTCHA_THRESHOLD",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaThreshold\",\n        \"data\": \"{{global.company.variables.gv-captchaThreshold}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaThreshold}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaThreshold\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.07864115773379288,
                     "label": "CAPTCHA_THRESHOLD (number - flowInstance)",
+                    "name": "CAPTCHA_THRESHOLD",
+                    "nameDefault": "gv-captchaThreshold",
                     "type": "number",
-                    "nameDefault": "gv-captchaThreshold"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaThreshold\",\n        \"data\": \"{{global.company.variables.gv-captchaThreshold}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaThreshold}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaThreshold\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "companyLogo",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\"\n      }\n    ]\n  }\n]",
                     "key": 0.5791095173454557,
                     "label": "companyLogo (string - flowInstance)",
-                    "type": "string"
+                    "name": "companyLogo",
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Start - Instance Variables"
               }
             },
-            "idUnique": "syyanus7e7"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 330,
@@ -409,27 +401,36 @@
         },
         {
           "data": {
-            "id": "am4qtuerzq",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "am4qtuerzq",
+            "idUnique": "p3z6662uwb",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              },
+              "buttonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              },
+              "customCSS": {
+                "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
+              },
               "customHTML": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"data\": \"[[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iOCIgcG9sbFJldHJpZXM9IjYwIiBwb2xsQ2hhbGxlbmdlU3RhdHVzPSJmYWxzZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjgiLCJwb2xsUmV0cmllcyI6NjAsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJmYWxzZSJ9LCJjb21wb25lbnRQcm9wcyI6eyJjbGFzcyI6eyJuYW1lIjoiY2xhc3MiLCJkaXNwbGF5TmFtZSI6IkNTUyBDbGFzcyJ9LCJwb2xsSW50ZXJ2YWwiOnsibmFtZSI6InBvbGxJbnRlcnZhbCIsImRpc3BsYXlOYW1lIjoiUG9sbCBJbnRlcnZhbCIsInZhbHVlIjoyMDAwfSwicG9sbFJldHJpZXMiOnsibmFtZSI6InBvbGxSZXRyaWVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIFJldHJpZXMiLCJ2YWx1ZSI6NjB9LCJwb2xsQ2hhbGxlbmdlU3RhdHVzIjp7Im5hbWUiOiJwb2xsQ2hhbGxlbmdlU3RhdHVzIiwiZGlzcGxheU5hbWUiOiJQb2xsIENoYWxsZW5nZSBTdGF0dXMiLCJ0eXBlIjoic2VsZWN0IiwidmFsdWUiOiJ0cnVlIiwib3B0aW9ucyI6W3sibmFtZSI6IlRydWUiLCJ2YWx1ZSI6InRydWUifSx7Im5hbWUiOiJGYWxzZSIsInZhbHVlIjoiZmFsc2UifV19fX0=]]]\",\n        \"src\": \"auth.svg\",\n        \"url\": \"skpolling\",\n        \"children\": [\n          {\n            \"text\": \"skpolling\"\n          }\n        ],\n        \"component\": \"skpolling\",\n        \"options\": {\n          \"class\": \"\",\n          \"pollInterval\": \"8\",\n          \"pollRetries\": 60,\n          \"pollChallengeStatus\": \"false\"\n        },\n        \"componentProps\": {\n          \"class\": {\n            \"name\": \"class\",\n            \"displayName\": \"CSS Class\"\n          },\n          \"pollInterval\": {\n            \"name\": \"pollInterval\",\n            \"displayName\": \"Poll Interval\",\n            \"value\": 2000\n          },\n          \"pollRetries\": {\n            \"name\": \"pollRetries\",\n            \"displayName\": \"Poll Retries\",\n            \"value\": 60\n          },\n          \"pollChallengeStatus\": {\n            \"name\": \"pollChallengeStatus\",\n            \"displayName\": \"Poll Challenge Status\",\n            \"type\": \"select\",\n            \"value\": \"true\",\n            \"options\": [\n              {\n                \"name\": \"True\",\n                \"value\": \"true\"\n              },\n              {\n                \"name\": \"False\",\n                \"value\": \"false\"\n              }\n            ]\n          }\n        },\n        \"tooltip\": \"{{component.skpolling}}\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n<div class=\\\"end-user-nano\\\">\\n    <div\\n        class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\\\">\\n        <div style=\\\"max-width: 400px; min-width: 400px; width: 100%\\\">\\n            <div class=\\\"card shadow mb-5\\\">\\n                <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n                    <img class=\\\"companyLogo align-self-center mb-5\\\" src=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyLogo\",\n        \"data\": \"{{global.variables.companyLogo}}\",\n        \"tooltip\": \"{{global.variables.companyLogo}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyLogo}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" alt=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyName\",\n        \"data\": \"{{global.variables.companyName}}\",\n        \"tooltip\": \"{{global.variables.companyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" />\\n\\n                    {{#if title}}\\n                    <h1 class=\\\"text-center mb-4\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"title\",\n        \"data\": \"{{title}}\",\n        \"tooltip\": \"{{title}}\",\n        \"children\": [\n          {\n            \"text\": \"{{title}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</h1>\\n                    {{/if}}\\n\\n                    <div class=\\\"mx-auto mt-3 mb-4\\\">\\n                        <svg class=\\\"checkmark\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" viewbox=\\\"0 0 52 52\\\">\\n                            <circle class=\\\"checkmarkCircle\\\" cx=\\\"26\\\" cy=\\\"26\\\" r=\\\"25\\\" fill=\\\"none\\\" />\\n                            <path class=\\\"checkmarkCheck\\\" fill=\\\"none\\\" d=\\\"M14.1 27.2l7.1 7.2 16.7-16.8\\\" />\\n                        </svg>\\n                    </div>\\n\\n                    {{#if textOne}}\\n                    <p class=\\\"text-muted text-center\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"textOne\",\n        \"data\": \"{{textOne}}\",\n        \"tooltip\": \"{{textOne}}\",\n        \"children\": [\n          {\n            \"text\": \"{{textOne}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                    {{/if}}\\n\\n                    {{#if textTwo}}\\n                    <p class=\\\"text-muted text-center\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"textTwo\",\n        \"data\": \"{{textTwo}}\",\n        \"tooltip\": \"{{textTwo}}\",\n        \"children\": [\n          {\n            \"text\": \"{{textTwo}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                    {{/if}}\\n\\n                    {{#if textThree}}\\n                    <p class=\\\"text-center fw-bold\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"textThree\",\n        \"data\": \"{{textThree}}\",\n        \"tooltip\": \"{{textThree}}\",\n        \"children\": [\n          {\n            \"text\": \"{{textThree}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                    {{/if}}\\n\\n\\n                    <p class=\\\"text-danger mdi mdi-alert-circle\\\" data-id=\\\"feedback\\\" data-skcomponent=\\\"skerror\\\"></p>\\n\\n                    {{#if buttonLabel}}\\n                    <div class=\\\"d-flex flex-column\\\">\\n                        <button id=\\\"submitBtn\\\" data-id=\\\"submitBtn\\\" class=\\\"btn btn-primary mb-3\\\" type=\\\"submit\\\" data-skcomponent=\\\"skbutton\\\"\\n                        data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\\\"NEXT\\\" >\\n                        \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"buttonLabel\",\n        \"data\": \"{{buttonLabel}}\",\n        \"tooltip\": \"{{buttonLabel}}\",\n        \"children\": [\n          {\n            \"text\": \"{{buttonLabel}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n                        </button>\\n                    </div>\\n                    {{/if}}\\n                </div>\\n            </div>\\n        </div>\\n    </div>\\n</div>\"\n      }\n    ]\n  }\n]"
               },
+              "customScript": {},
               "formFieldsList": {
                 "value": [
                   {
+                    "displayName": "Username",
+                    "hashedVisibility": false,
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "username",
-                    "displayName": "Username",
-                    "hashedVisibility": false,
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
@@ -438,51 +439,42 @@
                     "propertyName": "buttonValue"
                   },
                   {
-                    "propertyName": "password",
+                    "displayName": "Password",
+                    "hashedVisibility": true,
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": true,
-                    "displayName": "Password"
+                    "propertyName": "password",
+                    "value": ""
                   }
                 ]
               },
-              "nodeTitle": {
-                "value": "Verification Success"
-              },
-              "customCSS": {
-                "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
-              },
-              "validationRules": {
-                "value": []
-              },
-              "backgroundColor": {
-                "value": "#9dc967ff"
-              },
-              "customScript": {},
               "inputSchema": {
                 "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"title\"\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textOne\"\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textTwo\"\n    },\n    \"textThree\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Three\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textThree\"\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel\"\n    }\n  }\n}"
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"reCAPTCHA\"\n      },\n      {\n        \"text\": \" Verification \"\n      },\n      {\n        \"text\": \"Success!\"\n      }\n    ]\n  }\n]"
               },
               "nodeDescription": {
                 "value": "Success message with animated checkmark"
               },
+              "nodeTitle": {
+                "value": "Verification Success"
+              },
               "textOne": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"For the reCAPTCHA v3 scale, the range is from 0.0 to 1.0, where 0.0 indicates the highest suspicion of being a bot, and 1.0 signifies the highest confidence in genuine human activity.\"\n      }\n    ]\n  }\n]"
-              },
-              "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"A score of \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"CAPTCHA_THRESHOLD\",\n        \"data\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"tooltip\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"children\": [\n          {\n            \"text\": \"CAPTCHA_THRESHOLD\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" or greater is required to proceed.\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "textThree": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Your score: \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"moustache\",\n        \"data\": \"{{local.d5xd4gj7l7.payload.output.rawResponse.body.score}}\",\n        \"name\": \"score\",\n        \"children\": [\n          {\n            \"text\": \"\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              "textTwo": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"A score of \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"CAPTCHA_THRESHOLD\",\n        \"data\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"tooltip\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"children\": [\n          {\n            \"text\": \"CAPTCHA_THRESHOLD\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" or greater is required to proceed.\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"reCAPTCHA\"\n      },\n      {\n        \"text\": \" Verification \"\n      },\n      {\n        \"text\": \"Success!\"\n      }\n    ]\n  }\n]"
+              },
+              "validationRules": {
+                "value": []
               }
             },
-            "idUnique": "p3z6662uwb"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1830,
@@ -499,27 +491,36 @@
         },
         {
           "data": {
-            "id": "i21eb2n1ho",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "i21eb2n1ho",
+            "idUnique": "the8zdg5iv",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "buttonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              },
+              "customCSS": {
+                "value": ":root {\n    --failure-animation-dimension: 120px;\n    /* --failure-animation-start-color: #ff8a80;\n    --failure-animation-midway-color: #ff5252;\n    --failure-animation-finish-color: #ff1744; */\n    --failure-animation-start-color: #e63946; /* A bright, vivid red */\n    --failure-animation-midway-color: #d90429; /* A slightly deeper red */\n    --failure-animation-finish-color: #ba000d; /* A rich, dark red */\n}\n\n.xmark {\n    width: var(--failure-animation-dimension);\n    height: var(--failure-animation-dimension);\n    display: block;\n    stroke-width: 5;\n    stroke: #ffffff;\n    stroke-miterlimit: 10;\n    border-radius: 50%;\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;\n}\n\n.xmarkCircle {\n    stroke-dasharray: 166;\n    stroke-dashoffset: 166;\n    stroke-width: 5;\n    stroke: var(--failure-animation-finish-color);\n    fill: none;\n    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;\n}\n\n.xmarkX {\n    stroke-dasharray: 56;\n    stroke-dashoffset: 56;\n    stroke-width: 5;\n    stroke: var(--failure-animation-start-color);\n    animation: strokeX 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards, colorChangeX 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes stroke {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes strokeX {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes colorChangeX {\n    0% {\n        stroke: var(--failure-animation-start-color);\n    }\n    50% {\n        stroke: var(--failure-animation-midway-color);\n    }\n    100% {\n        stroke: var(--failure-animation-finish-color);\n    }\n}\n\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n\n/* Ensure scale and fill animations are correctly applied */\n"
+              },
               "customHTML": {
                 "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"xmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                            <circle class=\"xmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"xmarkX\" fill=\"none\" d=\"M16,16 L36,36 M36,16 L16,36\" />\n                        </svg>\n                    </div>\n\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    {{#if textThree}}\n                    <p class=\"text-center fw-bold\">{{textThree}}</p>\n                    {{/if}}\n\n                    {{#if textFour}}\n                    <p class=\"text-center fw-bold\">{{textFour}}</p>\n                    {{/if}}\n\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\" >\n                        {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
               },
+              "customScript": {},
               "formFieldsList": {
                 "value": [
                   {
+                    "displayName": "Username",
+                    "hashedVisibility": false,
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "username",
-                    "displayName": "Username",
-                    "hashedVisibility": false,
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
@@ -528,51 +529,42 @@
                     "propertyName": "buttonValue"
                   },
                   {
-                    "propertyName": "password",
+                    "displayName": "Password",
+                    "hashedVisibility": true,
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": true,
-                    "displayName": "Password"
+                    "propertyName": "password",
+                    "value": ""
                   }
                 ]
               },
-              "nodeTitle": {
-                "value": "Verification Error"
-              },
-              "customCSS": {
-                "value": ":root {\n    --failure-animation-dimension: 120px;\n    /* --failure-animation-start-color: #ff8a80;\n    --failure-animation-midway-color: #ff5252;\n    --failure-animation-finish-color: #ff1744; */\n    --failure-animation-start-color: #e63946; /* A bright, vivid red */\n    --failure-animation-midway-color: #d90429; /* A slightly deeper red */\n    --failure-animation-finish-color: #ba000d; /* A rich, dark red */\n}\n\n.xmark {\n    width: var(--failure-animation-dimension);\n    height: var(--failure-animation-dimension);\n    display: block;\n    stroke-width: 5;\n    stroke: #ffffff;\n    stroke-miterlimit: 10;\n    border-radius: 50%;\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;\n}\n\n.xmarkCircle {\n    stroke-dasharray: 166;\n    stroke-dashoffset: 166;\n    stroke-width: 5;\n    stroke: var(--failure-animation-finish-color);\n    fill: none;\n    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;\n}\n\n.xmarkX {\n    stroke-dasharray: 56;\n    stroke-dashoffset: 56;\n    stroke-width: 5;\n    stroke: var(--failure-animation-start-color);\n    animation: strokeX 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards, colorChangeX 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes stroke {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes strokeX {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes colorChangeX {\n    0% {\n        stroke: var(--failure-animation-start-color);\n    }\n    50% {\n        stroke: var(--failure-animation-midway-color);\n    }\n    100% {\n        stroke: var(--failure-animation-finish-color);\n    }\n}\n\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n\n/* Ensure scale and fill animations are correctly applied */\n"
-              },
-              "validationRules": {
-                "value": []
-              },
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
-              },
-              "customScript": {},
               "inputSchema": {
                 "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"title\"\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textOne\"\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textTwo\"\n    },\n    \"textThree\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Three\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textThree\"\n    },\n    \"textFour\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Four\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textFour\"\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel\"\n    }\n  }\n}"
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"reCAPTCHA\"\n      },\n      {\n        \"text\": \" Verification \"\n      },\n      {\n        \"text\": \"Failure\"\n      }\n    ]\n  }\n]"
               },
               "nodeDescription": {
                 "value": "Error message with animated X"
               },
+              "nodeTitle": {
+                "value": "Verification Error"
+              },
               "textOne": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"For the reCAPTCHA v3 scale, the range is from 0.0 to 1.0, where 0.0 indicates the highest suspicion of being a bot, and 1.0 signifies the highest confidence in genuine human activity.\"\n      }\n    ]\n  }\n]"
-              },
-              "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"A score of \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"CAPTCHA_THRESHOLD\",\n        \"data\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"tooltip\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"children\": [\n          {\n            \"text\": \"CAPTCHA_THRESHOLD\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" or \"\n      },\n      {\n        \"text\": \"greater is required to proceed.\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "textThree": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Your score: \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"moustache\",\n        \"data\": \"{{local.d5xd4gj7l7.payload.output.rawResponse.body.score}}\",\n        \"name\": \"score\",\n        \"children\": [\n          {\n            \"text\": \"\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              "textTwo": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"A score of \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"CAPTCHA_THRESHOLD\",\n        \"data\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"tooltip\": \"{{global.variables.CAPTCHA_THRESHOLD}}\",\n        \"children\": [\n          {\n            \"text\": \"CAPTCHA_THRESHOLD\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" or \"\n      },\n      {\n        \"text\": \"greater is required to proceed.\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"reCAPTCHA\"\n      },\n      {\n        \"text\": \" Verification \"\n      },\n      {\n        \"text\": \"Failure\"\n      }\n    ]\n  }\n]"
+              },
+              "validationRules": {
+                "value": []
               }
             },
-            "idUnique": "the8zdg5iv"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1834.7566086147233,
@@ -589,40 +581,40 @@
         },
         {
           "data": {
-            "id": "4oqyd43bon",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "4oqyd43bon",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#4462edff"
+              "annotation": {
+                "value": "reCAPTCHA v3 Sign On Example"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
               },
-              "annotation": {
-                "value": "reCAPTCHA v3 Sign On Example"
+              "backgroundColor": {
+                "value": "#4462edff"
               },
-              "width": {
-                "value": 1800
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "fontSize": {
-                "value": 16
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 16
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 1800
               }
             },
-            "status": "configured"
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 214,
@@ -639,37 +631,37 @@
         },
         {
           "data": {
-            "id": "u3et9oq8mt",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "u3et9oq8mt",
+            "idUnique": "lb31g4gkg6",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#50e3c2ff"
+              "annotation": {
+                "value": "Set Flow Variables for reCaptcha v3 key and secret"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Set Flow Variables for reCaptcha v3 key and secret"
+              "backgroundColor": {
+                "value": "#50e3c2ff"
               },
-              "width": {
-                "value": 400
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
+              "fontSize": {
+                "value": 14
+              },
               "fontStyle": {
                 "value": "normal"
               },
-              "cornerRadius": {
-                "value": 8
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": true
@@ -677,12 +669,12 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 400
               }
             },
             "status": "configured",
-            "idUnique": "lb31g4gkg6"
+            "type": "action"
           },
           "position": {
             "x": 214,
@@ -699,18 +691,25 @@
         },
         {
           "data": {
-            "id": "5p51qbker7",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customFunction",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "5p51qbker7",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "customFunction",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
+              "code": {
+                "value": "// Iterate over params object, return false if any\n// passed in parameters are null/empty\nmodule.exports = a = async ({ params }) => {\n\n\tfor (var key in params) {\n\t\tif (!params[key]) {\n\t\t\treturn false; \n\t\t}\n\t}\n\n\treturn \n}"
+              },
+              "nodeDescription": {
+                "value": "Add input variables to check for null/empty"
+              },
               "nodeTitle": {
                 "value": "Flow Configuration Check"
+              },
+              "outputSchema": {
+                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\n\t\t}\n\t}\n}"
               },
               "variableInputList": {
                 "value": [
@@ -730,17 +729,10 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-captchaThreshold\",\n        \"data\": \"{{global.company.variables.gv-captchaThreshold}}\",\n        \"tooltip\": \"{{global.company.variables.gv-captchaThreshold}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-captchaThreshold\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "code": {
-                "value": "// Iterate over params object, return false if any\n// passed in parameters are null/empty\nmodule.exports = a = async ({ params }) => {\n\n\tfor (var key in params) {\n\t\tif (!params[key]) {\n\t\t\treturn false; \n\t\t}\n\t}\n\n\treturn \n}"
-              },
-              "outputSchema": {
-                "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\n\t\t}\n\t}\n}"
-              },
-              "nodeDescription": {
-                "value": "Add input variables to check for null/empty"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 630,
@@ -760,11 +752,11 @@
             "id": "7jsqi65vtl",
             "nodeType": "EVAL",
             "properties": {
-              "undefined": {
-                "value": "allTriggersTrue"
-              },
               "udbb34cil1": {
                 "value": "anyTriggersFalse"
+              },
+              "undefined": {
+                "value": "allTriggersTrue"
               }
             }
           },
@@ -783,18 +775,29 @@
         },
         {
           "data": {
-            "id": "udbb34cil1",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "udbb34cil1",
+            "idUnique": "3nm07rhtek",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "customCSS": {
+                "value": ""
+              },
               "customHTML": {
                 "value": "<div\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n  <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n    <div class=\"card shadow mb-5\">\n      <div class=\"card-body p-5 d-flex flex-column\">\n        <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n        <h1 class=\"text-center mb-4\">Flow Configuration Error</h1>\n        <p class=\"text-muted text-center\">{{errorMessage}}</p>\n      </div>\n    </div>\n  </div>\n</div>"
+              },
+              "customScript": {
+                "value": ""
+              },
+              "errorMessage": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unable to execute the flow due to missing flow values.\"\n      }\n    ]\n  }\n]"
               },
               "formFieldsList": {
                 "value": [
@@ -805,17 +808,20 @@
                   }
                 ]
               },
-              "nodeTitle": {
-                "value": "Error Message"
+              "inputSchema": {
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t}\n\t}\n}"
               },
               "nodeDescription": {
                 "value": "Configuration value not set error"
               },
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
+              "nodeTitle": {
+                "value": "Error Message"
+              },
+              "outputSchema": {
+                "value": {}
               },
               "sktemplate": {
-                "uiId": "4283c0de636208a4273efe1c9fda225f",
+                "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
                 "createdDate": 1678116166705,
                 "customerId": "f3e47d945ae971a4b4142ec75012d155",
                 "description": "",
@@ -825,33 +831,19 @@
                 "script": "",
                 "style": "",
                 "template": "",
+                "uiId": "4283c0de636208a4273efe1c9fda225f",
                 "updatedDate": 1678116321755,
                 "validationRules": [],
+                "value": "4283c0de636208a4273efe1c9fda225f",
                 "version": "1.0",
-                "visibility": "private",
-                "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
-                "value": "4283c0de636208a4273efe1c9fda225f"
-              },
-              "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t}\n\t}\n}"
-              },
-              "outputSchema": {
-                "value": {}
-              },
-              "customCSS": {
-                "value": ""
-              },
-              "customScript": {
-                "value": ""
+                "visibility": "private"
               },
               "validationRules": {
                 "value": []
-              },
-              "errorMessage": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unable to execute the flow due to missing flow values.\"\n      }\n    ]\n  }\n]"
               }
             },
-            "idUnique": "3nm07rhtek"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 930,
@@ -868,37 +860,37 @@
         },
         {
           "data": {
-            "id": "raxv2a3pax",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "raxv2a3pax",
+            "idUnique": "cw7x36wsom",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#50e3c2ff"
+              "annotation": {
+                "value": "Add Custom JS link with https://www.google.com/recaptcha/api.js?render=SITEKEY_HERE"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Add Custom JS link with https://www.google.com/recaptcha/api.js?render=SITEKEY_HERE"
+              "backgroundColor": {
+                "value": "#50e3c2ff"
               },
-              "width": {
-                "value": 630
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
+              "fontSize": {
+                "value": 14
+              },
               "fontStyle": {
                 "value": "normal"
               },
-              "cornerRadius": {
-                "value": 8
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": true
@@ -906,12 +898,12 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 630
               }
             },
             "status": "configured",
-            "idUnique": "cw7x36wsom"
+            "type": "action"
           },
           "position": {
             "x": 214,
@@ -929,8 +921,8 @@
         {
           "data": {
             "id": "255mbja8pg",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1950,
@@ -947,23 +939,23 @@
         },
         {
           "data": {
-            "id": "058lyyouun",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "058lyyouun",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createSuccessResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
-              "nodeTitle": {
-                "value": "Success"
-              },
               "backgroundColor": {
                 "value": "#9dc967ff"
+              },
+              "nodeTitle": {
+                "value": "Success"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2130,
@@ -983,11 +975,11 @@
             "id": "o8b810ht2p",
             "nodeType": "EVAL",
             "properties": {
-              "xnhu0yfz4b": {
-                "value": "allTriggersTrue"
-              },
               "wxjq3pm27e": {
                 "value": "anyTriggersFalse"
+              },
+              "xnhu0yfz4b": {
+                "value": "allTriggersTrue"
               }
             }
           },
@@ -1006,23 +998,23 @@
         },
         {
           "data": {
-            "id": "xnhu0yfz4b",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "xnhu0yfz4b",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
-              "nodeTitle": {
-                "value": "send failure"
-              },
               "backgroundColor": {
                 "value": "#ffc8c1ff"
+              },
+              "nodeTitle": {
+                "value": "send failure"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2173.480905589749,
@@ -1039,20 +1031,20 @@
         },
         {
           "data": {
-            "id": "umc3t47pkp",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "umc3t47pkp",
             "label": "Error Message",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.d5xd4gj7l7.payload.error.message}}\",\n        \"tooltip\": \"{{local.d5xd4gj7l7.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1526,
@@ -1429,89 +1421,49 @@
       "name": "null"
     }
   },
-  "inputSchema": [
-    {
-      "propertyName": "p1UserId",
-      "description": "",
-      "preferredDataType": "string",
-      "preferredControlType": "textField",
-      "isExpanded": true
-    }
-  ],
+  "inputSchema": [],
   "flowColor": "#E3F0FF",
-  "savedDate": 1713884713913,
+  "savedDate": 1715874736298,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1711379812346,
+      "createdDate": 1714509994443,
       "fields": {
-        "type": "number",
         "displayName": "",
-        "mutable": true,
-        "min": 0,
         "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "number",
         "value": ".7"
       },
       "type": "property",
       "updatedDate": 1711730412046,
       "visibility": "private",
       "name": "CAPTCHA_THRESHOLD##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1711799418546,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "createdDate": 1714509994442,
       "fields": {
-        "type": "string",
         "displayName": "",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "string"
       },
       "type": "property",
       "visibility": "private",
       "name": "CAPTCHA_V3_SECRET##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1711799399285,
+      "createdDate": 1714509958362,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "CAPTCHA_V3_SITE_KEY##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1711379812348,
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1711103267292,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "string",
-        "displayName": null,
+        "displayName": "Internal variable",
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -1519,16 +1471,16 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711385925110,
+      "createdDate": 1714509958099,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": "Sets the threshold for passing captcha",
-        "value": ".7",
+        "displayName": "reCAPTCHA v3 Threshold",
+        "value": "0.7",
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -1536,43 +1488,41 @@
       "type": "property",
       "visibility": "private",
       "name": "gv-captchaThreshold##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711380037666,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "createdDate": 1714509994445,
       "fields": {
-        "type": "string",
         "displayName": "need Google site secret for reCaptcha",
-        "value": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "string",
+        "value": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF"
       },
       "type": "property",
       "updatedDate": 1711980321801,
       "visibility": "private",
       "name": "gv-captchaV3SecretKey##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711380064954,
+      "createdDate": 1714509940862,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": "need Google site key for reCaptcha",
+        "displayName": "reCAPTCHA v3 Site Key",
         "value": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1711980299692,
       "visibility": "private",
       "name": "gv-captchaV3SiteKey##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     }
   ],
   "connections": []
