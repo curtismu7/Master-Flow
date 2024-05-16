@@ -10,10 +10,10 @@
     "nodeConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1715347537575,
-  "currentVersion": 31,
+  "createdDate": 1715881821693,
+  "currentVersion": 34,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1715347539533,
+  "deployedDate": 1715881899618,
   "description": "Imported on Wed May 01 2024 18:26:09 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -63,7 +63,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Verify subflow",
-  "publishedVersion": 31,
+  "publishedVersion": 34,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -80,9 +80,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1715347539570,
+  "updatedDate": 1715881899661,
   "flowId": "47a078fab415a28277aa766a2b22a8a5",
-  "versionId": 31,
+  "versionId": 34,
   "graphData": {
     "elements": {
       "nodes": [
@@ -421,13 +421,6 @@
               },
               "saveVariables": {
                 "value": [
-                  {
-                    "key": 0.8558926100565449,
-                    "label": "companyName (string - flowInstance)",
-                    "name": "companyName",
-                    "type": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Ping Identity\"\n      }\n    ]\n  }\n]"
-                  },
                   {
                     "key": 0.4468866232800086,
                     "label": "verifyPolicyId (string - flowInstance)",
@@ -2316,6 +2309,9 @@
             "properties": {
               "backgroundColor": {
                 "value": "#9dc967ff"
+              },
+              "nodeTitle": {
+                "value": "Send JSON success"
               }
             }
           },
@@ -3306,23 +3302,8 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1715347537415,
+  "savedDate": 1715881821507,
   "variables": [
-    {
-      "context": "flowInstance",
-      "createdDate": 1714509994441,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
     {
       "context": "flowInstance",
       "createdDate": 1714509958362,

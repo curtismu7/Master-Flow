@@ -12,10 +12,10 @@
     "pingOneMfaConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1715512171494,
-  "currentVersion": 39,
+  "createdDate": 1715882337926,
+  "currentVersion": 42,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1715512177228,
+  "deployedDate": 1715882339547,
   "description": "Imported on Tue Apr 30 2024 20:48:09 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -37,7 +37,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO User Registration subflow - With Magic Link",
-  "publishedVersion": 39,
+  "publishedVersion": 42,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [
@@ -50,9 +50,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1715512177302,
+  "updatedDate": 1715882339617,
   "flowId": "8181cd2b299b54381ba698c636268c7a",
-  "versionId": 39,
+  "versionId": 42,
   "graphData": {
     "elements": {
       "nodes": [
@@ -4718,7 +4718,7 @@
                 "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"title\"\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textOne\"\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textTwo\"\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel\"\n    },\n    \"buttonLabel2\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label2\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel2\"\n    }\n  }\n}"
               },
               "nodeDescription": {
-                "value": "Error message with animated X"
+                "value": "Error message with animated icon"
               },
               "nodeTitle": {
                 "value": "Username already exists, please try again. If you already have an account c"
@@ -4862,14 +4862,17 @@
               },
               "nodeTitle": {
                 "value": "return to login"
+              },
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 1865.6392040273745,
-            "y": 4104.591767592231
+            "x": 1860,
+            "y": 4110
           },
           "group": "nodes",
           "removed": false,
@@ -4926,6 +4929,9 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"REGISTER\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "nodeTitle": {
+                "value": "Check button value"
               }
             },
             "status": "configured",
@@ -10173,7 +10179,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1715512170873,
+  "savedDate": 1715882337368,
   "variables": [
     {
       "context": "flowInstance",
@@ -10193,21 +10199,6 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509994441,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
       "createdDate": 1714509958362,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
@@ -10220,21 +10211,6 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1714510089311,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "confirmPassword##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
@@ -10500,12 +10476,14 @@
       "fields": {
         "type": "boolean",
         "displayName": "Determines whether reCAPTCHA is enabled",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
+      "id": "9f686ab2-4ea6-4c4c-9d74-69620b4015a9",
       "type": "property",
+      "updatedDate": 1715874875175,
       "visibility": "private",
       "name": "gv-reCaptcha##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -10517,14 +10495,14 @@
       "fields": {
         "type": "boolean",
         "displayName": "This allows you to run PingOne verify during the registration process",
-        "value": "true",
+        "value": "false",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "id": "9cd4a72f-c64c-4e10-92d3-06f2018b9104",
       "type": "property",
-      "updatedDate": 1715335224219,
+      "updatedDate": 1715720433684,
       "visibility": "private",
       "name": "gv-runVerifyUserRegistration##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -10608,21 +10586,6 @@
       "type": "property",
       "visibility": "private",
       "name": "p1UserObject##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1714510089313,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "password##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {

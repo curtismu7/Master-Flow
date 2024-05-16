@@ -12,10 +12,10 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1715346566167,
-  "currentVersion": 52,
+  "createdDate": 1715880199729,
+  "currentVersion": 55,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1715346569463,
+  "deployedDate": 1715880200817,
   "description": "Cloned on Mon May 06 2024 12:43:49 GMT+0000 (Coordinated Universal Time). \nImported on Tue Apr 30 2024 20:47:55 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -65,7 +65,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 52,
+  "publishedVersion": 55,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -82,9 +82,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1715346569493,
+  "updatedDate": 1715880200867,
   "flowId": "d5304e77c20d7430c98fdd9d9fcfff06",
-  "versionId": 52,
+  "versionId": 55,
   "graphData": {
     "elements": {
       "nodes": [
@@ -2153,6 +2153,9 @@
             "properties": {
               "nodeInstanceId": {
                 "value": "jmrb4nqdxt"
+              },
+              "nodeTitle": {
+                "value": "Lock User"
               }
             },
             "status": "configured",
@@ -3147,6 +3150,9 @@
             "properties": {
               "nodeInstanceId": {
                 "value": "gj76t5mq9g"
+              },
+              "nodeTitle": {
+                "value": "Set Risk Level"
               }
             },
             "status": "configured",
@@ -3754,6 +3760,9 @@
             "properties": {
               "nodeInstanceId": {
                 "value": "5tcfwn01fx"
+              },
+              "nodeTitle": {
+                "value": "False Branch"
               }
             }
           },
@@ -6187,23 +6196,8 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1715346565873,
+  "savedDate": 1715880199394,
   "variables": [
-    {
-      "context": "flowInstance",
-      "createdDate": 1714509994441,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
     {
       "context": "flowInstance",
       "createdDate": 1714509958362,
@@ -6336,14 +6330,14 @@
       "fields": {
         "type": "boolean",
         "displayName": "If you want to run Verify when user is a High Risk",
-        "value": "true",
+        "value": "false",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "id": "11c4c2aa-f3ac-40e3-b8d8-d88996df6aa8",
       "type": "property",
-      "updatedDate": 1715336668620,
+      "updatedDate": 1715720443178,
       "visibility": "private",
       "name": "gv-runVerifyforHighRisk##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
