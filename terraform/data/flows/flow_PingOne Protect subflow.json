@@ -12,10 +12,10 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1715013204902,
-  "currentVersion": 41,
+  "createdDate": 1715970637222,
+  "currentVersion": 57,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1715013207606,
+  "deployedDate": 1715970638585,
   "description": "Cloned on Mon May 06 2024 12:43:49 GMT+0000 (Coordinated Universal Time). \nImported on Tue Apr 30 2024 20:47:55 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -65,7 +65,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 41,
+  "publishedVersion": 57,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -82,9 +82,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1715013207648,
+  "updatedDate": 1715970638645,
   "flowId": "d5304e77c20d7430c98fdd9d9fcfff06",
-  "versionId": 41,
+  "versionId": 57,
   "graphData": {
     "elements": {
       "nodes": [
@@ -125,7 +125,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2730,
+            "x": 2857,
             "y": 1020
           },
           "group": "nodes",
@@ -156,7 +156,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 150,
+            "x": 277,
             "y": 1140
           },
           "group": "nodes",
@@ -182,14 +182,31 @@
                 "value": "Start"
               },
               "saveVariables": {
-                "value": []
+                "value": [
+                  {
+                    "name": "p1UserId",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.1837742552241468,
+                    "label": "p1UserId (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "p1UserId"
+                  },
+                  {
+                    "name": "username",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.parameters.username}}\",\n        \"tooltip\": \"{{global.parameters.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.20279603353367937,
+                    "label": "username (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "username"
+                  }
+                ]
               }
             },
             "status": "configured",
             "type": "trigger"
           },
           "position": {
-            "x": 519.8584016408996,
+            "x": 646.8584016408996,
             "y": 575.8584016408997
           },
           "group": "nodes",
@@ -236,8 +253,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3300,
-            "y": 1020
+            "x": 3728.898571867094,
+            "y": 1004.9513881627629
           },
           "group": "nodes",
           "removed": false,
@@ -255,7 +272,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2820,
+            "x": 2947,
             "y": 1290
           },
           "group": "nodes",
@@ -318,7 +335,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1187.9046815933298,
+            "x": 1314.9046815933298,
             "y": 575.8584016408997
           },
           "group": "nodes",
@@ -341,7 +358,7 @@
             }
           },
           "position": {
-            "x": 1327.0809899167527,
+            "x": 1454.0809899167527,
             "y": 575.8584016408997
           },
           "group": "nodes",
@@ -374,7 +391,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2194,
+            "x": 2321,
             "y": 720
           },
           "group": "nodes",
@@ -454,7 +471,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2070,
+            "x": 2197,
             "y": 1110
           },
           "group": "nodes",
@@ -501,7 +518,7 @@
             "type": "action"
           },
           "position": {
-            "x": 338,
+            "x": 465,
             "y": 799.1531683472078
           },
           "group": "nodes",
@@ -548,7 +565,7 @@
             "type": "action"
           },
           "position": {
-            "x": 454,
+            "x": 581,
             "y": 390
           },
           "group": "nodes",
@@ -581,8 +598,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3930,
-            "y": 1050
+            "x": 4575.173425056789,
+            "y": 1057.8435664871188
           },
           "group": "nodes",
           "removed": false,
@@ -604,8 +621,8 @@
             }
           },
           "position": {
-            "x": 3450,
-            "y": 1170
+            "x": 3940.4672851645173,
+            "y": 1137.1818339736526
           },
           "group": "nodes",
           "removed": false,
@@ -637,8 +654,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3600,
-            "y": 1050
+            "x": 4231.374265948475,
+            "y": 1057.8435664871188
           },
           "group": "nodes",
           "removed": false,
@@ -655,8 +672,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3720,
-            "y": 1050
+            "x": 4363.604711759365,
+            "y": 1057.8435664871188
           },
           "group": "nodes",
           "removed": false,
@@ -705,7 +722,7 @@
             "type": "action"
           },
           "position": {
-            "x": 436.3526166468459,
+            "x": 563.352616646846,
             "y": 214
           },
           "group": "nodes",
@@ -761,7 +778,7 @@
             "type": "action"
           },
           "position": {
-            "x": 619,
+            "x": 746,
             "y": 473.1531683472079
           },
           "group": "nodes",
@@ -806,7 +823,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3120,
+            "x": 3247,
             "y": 1470
           },
           "group": "nodes",
@@ -862,7 +879,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2640,
+            "x": 2767,
             "y": 930
           },
           "group": "nodes",
@@ -918,8 +935,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3450,
-            "y": 930
+            "x": 3887.5751068401614,
+            "y": 899.1670315140509
           },
           "group": "nodes",
           "removed": false,
@@ -974,7 +991,7 @@
             "type": "action"
           },
           "position": {
-            "x": 210,
+            "x": 337,
             "y": 960
           },
           "group": "nodes",
@@ -993,7 +1010,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2220,
+            "x": 2347,
             "y": 1110
           },
           "group": "nodes",
@@ -1038,7 +1055,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2400,
+            "x": 2527,
             "y": 1110
           },
           "group": "nodes",
@@ -1056,7 +1073,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2550,
+            "x": 2677,
             "y": 1080
           },
           "group": "nodes",
@@ -1075,7 +1092,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2520,
+            "x": 2647,
             "y": 1230
           },
           "group": "nodes",
@@ -1120,7 +1137,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2730,
+            "x": 2857,
             "y": 1380
           },
           "group": "nodes",
@@ -1171,8 +1188,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3300,
-            "y": 1170
+            "x": 3490.883769407492,
+            "y": 1137.1818339736526
           },
           "group": "nodes",
           "removed": false,
@@ -1189,26 +1206,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2880,
-            "y": 1140
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "o93cu6bxkr",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 2940,
-            "y": 1290
+            "x": 2988.4080753261105,
+            "y": 1137.1818339736526
           },
           "group": "nodes",
           "removed": false,
@@ -1237,7 +1236,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 731.2771241548706,
+            "x": 858.2771241548706,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1284,7 +1283,7 @@
             "type": "action"
           },
           "position": {
-            "x": 655.3674836355118,
+            "x": 782.3674836355118,
             "y": 1771.2249454517062
           },
           "group": "nodes",
@@ -1317,7 +1316,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1692.7992374000826,
+            "x": 1819.7992374000826,
             "y": 2125.469934542047
           },
           "group": "nodes",
@@ -1350,7 +1349,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1389.1606753226472,
+            "x": 1516.1606753226472,
             "y": 2125.469934542047
           },
           "group": "nodes",
@@ -1373,7 +1372,7 @@
             }
           },
           "position": {
-            "x": 1515.676742854912,
+            "x": 1642.676742854912,
             "y": 2125.469934542047
           },
           "group": "nodes",
@@ -1412,7 +1411,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1034.9156862323061,
+            "x": 1161.9156862323061,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1430,7 +1429,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 857.7931916871354,
+            "x": 984.7931916871354,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1453,7 +1452,7 @@
             }
           },
           "position": {
-            "x": 1186.7349672710236,
+            "x": 1313.7349672710236,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1495,7 +1494,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1389.1606753226472,
+            "x": 1516.1606753226472,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1528,7 +1527,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1794.0120914258944,
+            "x": 1921.0120914258944,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1551,7 +1550,7 @@
             }
           },
           "position": {
-            "x": 1540.9799563613649,
+            "x": 1667.9799563613649,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1584,7 +1583,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2122.9538670097827,
+            "x": 2249.9538670097827,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1607,7 +1606,7 @@
             }
           },
           "position": {
-            "x": 1945.831372464612,
+            "x": 2072.8313724646123,
             "y": 1897.741012983971
           },
           "group": "nodes",
@@ -1637,8 +1636,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3660,
-            "y": 1350
+            "x": 4310.712533435009,
+            "y": 1401.6427255954325
           },
           "group": "nodes",
           "removed": false,
@@ -1681,8 +1680,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3630,
-            "y": 1230
+            "x": 4257.8203551106535,
+            "y": 1295.8583689467205
           },
           "group": "nodes",
           "removed": false,
@@ -1726,7 +1725,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2122.9538670097827,
+            "x": 2249.9538670097827,
             "y": 2024.2570805162356
           },
           "group": "nodes",
@@ -1771,7 +1770,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1692.7992374000826,
+            "x": 1819.7992374000826,
             "y": 2277.289215580765
           },
           "group": "nodes",
@@ -1816,7 +1815,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2640,
+            "x": 2767,
             "y": 1530
           },
           "group": "nodes",
@@ -1834,7 +1833,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2520,
+            "x": 2647,
             "y": 1320
           },
           "group": "nodes",
@@ -1878,7 +1877,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1794.0120914258944,
+            "x": 1921.0120914258944,
             "y": 1998.9538670097827
           },
           "group": "nodes",
@@ -1917,7 +1916,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2194,
+            "x": 2321,
             "y": 570
           },
           "group": "nodes",
@@ -1943,7 +1942,7 @@
             }
           },
           "position": {
-            "x": 2344,
+            "x": 2471,
             "y": 570
           },
           "group": "nodes",
@@ -1973,7 +1972,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2494,
+            "x": 2621,
             "y": 660
           },
           "group": "nodes",
@@ -2009,7 +2008,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1050,
+            "x": 1177,
             "y": 1050
           },
           "group": "nodes",
@@ -2035,7 +2034,7 @@
             }
           },
           "position": {
-            "x": 1260,
+            "x": 1387,
             "y": 1140
           },
           "group": "nodes",
@@ -2074,7 +2073,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2644,
+            "x": 2771,
             "y": 570
           },
           "group": "nodes",
@@ -2104,7 +2103,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3244,
+            "x": 3371,
             "y": 750
           },
           "group": "nodes",
@@ -2130,7 +2129,7 @@
             }
           },
           "position": {
-            "x": 2854,
+            "x": 2981,
             "y": 570
           },
           "group": "nodes",
@@ -2154,13 +2153,16 @@
             "properties": {
               "nodeInstanceId": {
                 "value": "jmrb4nqdxt"
+              },
+              "nodeTitle": {
+                "value": "Lock User"
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 3004,
+            "x": 3131,
             "y": 570
           },
           "group": "nodes",
@@ -2207,7 +2209,7 @@
             "type": "action"
           },
           "position": {
-            "x": 478.2449890903412,
+            "x": 605.2449890903413,
             "y": 2429.1084966194826
           },
           "group": "nodes",
@@ -2237,7 +2239,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 604.761056622606,
+            "x": 731.761056622606,
             "y": 2580.9277776582003
           },
           "group": "nodes",
@@ -2256,7 +2258,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 680.6706971419648,
+            "x": 807.6706971419648,
             "y": 2580.9277776582003
           },
           "group": "nodes",
@@ -2289,7 +2291,7 @@
             "type": "action"
           },
           "position": {
-            "x": 908.3996187000413,
+            "x": 1035.3996187000412,
             "y": 2580.9277776582003
           },
           "group": "nodes",
@@ -2382,7 +2384,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1186.7349672710236,
+            "x": 1313.7349672710236,
             "y": 2580.9277776582003
           },
           "group": "nodes",
@@ -2400,7 +2402,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1034.9156862323061,
+            "x": 1161.9156862323061,
             "y": 2580.9277776582003
           },
           "group": "nodes",
@@ -2419,7 +2421,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1354,
+            "x": 1481,
             "y": 2580
           },
           "group": "nodes",
@@ -2463,7 +2465,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1504,
+            "x": 1631,
             "y": 2580
           },
           "group": "nodes",
@@ -2482,7 +2484,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 638.4287803516999,
+            "x": 765.4287803516999,
             "y": 574.5018180455413
           },
           "group": "nodes",
@@ -2524,7 +2526,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 798.2110182877456,
+            "x": 925.2110182877456,
             "y": 575.8584016408997
           },
           "group": "nodes",
@@ -2581,7 +2583,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1174,
+            "x": 1301,
             "y": 690
           },
           "group": "nodes",
@@ -2604,7 +2606,7 @@
             }
           },
           "position": {
-            "x": 937.3873266111684,
+            "x": 1064.3873266111684,
             "y": 575.8584016408997
           },
           "group": "nodes",
@@ -2627,7 +2629,7 @@
             }
           },
           "position": {
-            "x": 1424.5044057431487,
+            "x": 1551.5044057431487,
             "y": 631.5289249702687
           },
           "group": "nodes",
@@ -2669,7 +2671,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2974,
+            "x": 3101,
             "y": 690
           },
           "group": "nodes",
@@ -2693,7 +2695,7 @@
             }
           },
           "position": {
-            "x": 3124,
+            "x": 3251,
             "y": 690
           },
           "group": "nodes",
@@ -2723,7 +2725,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3274,
+            "x": 3401,
             "y": 630
           },
           "group": "nodes",
@@ -2765,8 +2767,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3090,
-            "y": 1290
+            "x": 3596.6681260562036,
+            "y": 1375.1966364332543
           },
           "group": "nodes",
           "removed": false,
@@ -2791,8 +2793,8 @@
             }
           },
           "position": {
-            "x": 3180,
-            "y": 1290
+            "x": 3808.2368393536276,
+            "y": 1348.7505472710764
           },
           "group": "nodes",
           "removed": false,
@@ -2838,7 +2840,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1718.1024509065355,
+            "x": 1845.1024509065355,
             "y": 2429.1084966194826
           },
           "group": "nodes",
@@ -2868,7 +2870,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1920.528158958159,
+            "x": 2047.528158958159,
             "y": 2530.3213506452944
           },
           "group": "nodes",
@@ -2887,7 +2889,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2047.0442264904239,
+            "x": 2174.044226490424,
             "y": 2530.3213506452944
           },
           "group": "nodes",
@@ -2929,7 +2931,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2224.1667210355945,
+            "x": 2351.1667210355945,
             "y": 2530.3213506452944
           },
           "group": "nodes",
@@ -2953,7 +2955,7 @@
             }
           },
           "position": {
-            "x": 2350.682788567859,
+            "x": 2477.682788567859,
             "y": 2530.3213506452944
           },
           "group": "nodes",
@@ -2995,7 +2997,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2527.80528311303,
+            "x": 2654.80528311303,
             "y": 2530.3213506452944
           },
           "group": "nodes",
@@ -3037,7 +3039,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2527.80528311303,
+            "x": 2654.80528311303,
             "y": 2682.140631684012
           },
           "group": "nodes",
@@ -3056,7 +3058,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2629.0181371388417,
+            "x": 2756.0181371388417,
             "y": 2530.3213506452944
           },
           "group": "nodes",
@@ -3081,7 +3083,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2755.534204671106,
+            "x": 2882.534204671106,
             "y": 2530.3213506452944
           },
           "group": "nodes",
@@ -3106,7 +3108,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2755.534204671106,
+            "x": 2882.534204671106,
             "y": 2682.140631684012
           },
           "group": "nodes",
@@ -3124,7 +3126,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2629.0181371388417,
+            "x": 2756.0181371388417,
             "y": 2682.140631684012
           },
           "group": "nodes",
@@ -3148,13 +3150,16 @@
             "properties": {
               "nodeInstanceId": {
                 "value": "gj76t5mq9g"
+              },
+              "nodeTitle": {
+                "value": "Set Risk Level"
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 1924,
+            "x": 2051,
             "y": 570
           },
           "group": "nodes",
@@ -3172,7 +3177,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2044,
+            "x": 2171,
             "y": 570
           },
           "group": "nodes",
@@ -3205,8 +3210,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3030,
-            "y": 1020
+            "x": 3464.437680245314,
+            "y": 1004.9513881627629
           },
           "group": "nodes",
           "removed": false,
@@ -3238,8 +3243,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3420,
-            "y": 1350
+            "x": 4046.2516418132295,
+            "y": 1401.6427255954325
           },
           "group": "nodes",
           "removed": false,
@@ -3256,7 +3261,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2850,
+            "x": 2977,
             "y": 1020
           },
           "group": "nodes",
@@ -3274,8 +3279,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3150,
-            "y": 1020
+            "x": 3570.2220368940257,
+            "y": 1004.9513881627629
           },
           "group": "nodes",
           "removed": false,
@@ -3292,8 +3297,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3510,
-            "y": 1350
+            "x": 4152.035998461941,
+            "y": 1401.6427255954325
           },
           "group": "nodes",
           "removed": false,
@@ -3377,7 +3382,7 @@
             "idUnique": "c07oss8l0u"
           },
           "position": {
-            "x": 1440,
+            "x": 1567,
             "y": 1140
           },
           "group": "nodes",
@@ -3395,7 +3400,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1560,
+            "x": 1687,
             "y": 1140
           },
           "group": "nodes",
@@ -3445,7 +3450,7 @@
             }
           },
           "position": {
-            "x": 1594,
+            "x": 1721,
             "y": 570
           },
           "group": "nodes",
@@ -3463,7 +3468,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1729,
+            "x": 1856,
             "y": 570
           },
           "group": "nodes",
@@ -3482,7 +3487,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 270,
+            "x": 397,
             "y": 1140
           },
           "group": "nodes",
@@ -3518,7 +3523,7 @@
             }
           },
           "position": {
-            "x": 420,
+            "x": 547,
             "y": 1140
           },
           "group": "nodes",
@@ -3542,7 +3547,7 @@
             }
           },
           "position": {
-            "x": 540,
+            "x": 667,
             "y": 1140
           },
           "group": "nodes",
@@ -3592,7 +3597,7 @@
             }
           },
           "position": {
-            "x": 720,
+            "x": 847,
             "y": 1140
           },
           "group": "nodes",
@@ -3610,7 +3615,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 870,
+            "x": 997,
             "y": 1140
           },
           "group": "nodes",
@@ -3656,7 +3661,7 @@
             "idUnique": "e7khwlw792"
           },
           "position": {
-            "x": 1740,
+            "x": 1867,
             "y": 1140
           },
           "group": "nodes",
@@ -3675,7 +3680,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2586.8333282470703,
+            "x": 2713.8333282470703,
             "y": 1001.9166717529297
           },
           "group": "nodes",
@@ -3705,7 +3710,7 @@
             }
           },
           "position": {
-            "x": 2443.6666564941406,
+            "x": 2570.6666564941406,
             "y": 983.8333435058594
           },
           "group": "nodes",
@@ -3729,7 +3734,7 @@
             }
           },
           "position": {
-            "x": 1200,
+            "x": 1327,
             "y": 1020
           },
           "group": "nodes",
@@ -3755,11 +3760,14 @@
             "properties": {
               "nodeInstanceId": {
                 "value": "5tcfwn01fx"
+              },
+              "nodeTitle": {
+                "value": "False Branch"
               }
             }
           },
           "position": {
-            "x": 1350,
+            "x": 1477,
             "y": 990
           },
           "group": "nodes",
@@ -3777,7 +3785,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1890,
+            "x": 2017,
             "y": 1110
           },
           "group": "nodes",
@@ -3823,7 +3831,7 @@
             "idUnique": "wix4tqtmua"
           },
           "position": {
-            "x": 2070,
+            "x": 2197,
             "y": 1260
           },
           "group": "nodes",
@@ -3841,7 +3849,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1905,
+            "x": 2032,
             "y": 1260
           },
           "group": "nodes",
@@ -3887,7 +3895,7 @@
             "idUnique": "9hbgtj5z4x"
           },
           "position": {
-            "x": 2070,
+            "x": 2197,
             "y": 1410
           },
           "group": "nodes",
@@ -3905,8 +3913,158 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1850.5,
+            "x": 1977.5,
             "y": 1401
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "za3cs9z0c2",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 2957.0507514473647,
+            "y": 1199.9523750593826
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "anckn5ryel",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-runVerifyforHighRisk\",\n        \"data\": \"{{global.company.variables.gv-runVerifyforHighRisk}}\",\n        \"tooltip\": \"{{global.company.variables.gv-runVerifyforHighRisk}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-runVerifyforHighRisk\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "type": {
+                "value": "boolean"
+              },
+              "nodeTitle": {
+                "value": "check is gv-runVerifyforHighRisk is true"
+              }
+            }
+          },
+          "position": {
+            "x": 3120.638521137,
+            "y": 1269.4122797845425
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r42gp6sl3a",
+            "nodeType": "EVAL",
+            "label": "Evaluator",
+            "properties": {
+              "8tttj6ny9a": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 3252.8689669478904,
+            "y": 1269.4122797845425
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "eu3993uw7o",
+            "nodeType": "CONNECTION",
+            "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
+            "connectorId": "flowConnector",
+            "name": "Flow Connector",
+            "label": "Flow Connector",
+            "status": "configured",
+            "capabilityName": "startUiSubFlow",
+            "type": "trigger",
+            "properties": {
+              "subFlowId": {
+                "value": {
+                  "label": "PingOne Verify subflow",
+                  "value": "47a078fab415a28277aa766a2b22a8a5"
+                }
+              },
+              "subFlowVersionId": {
+                "value": -1
+              },
+              "nodeTitle": {
+                "value": "PingOne Verify subflow"
+              },
+              "p1UserId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "username": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.variables.username}}\",\n        \"tooltip\": \"{{global.variables.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 3411.545501920958,
+            "y": 1269.4122797845425
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ph47qcpm7y",
+            "nodeType": "EVAL",
+            "properties": {
+              "w2ga2jat1m": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 3821.4598839347163,
+            "y": 1163.6279231358308
           },
           "group": "nodes",
           "removed": false,
@@ -3919,6 +4077,25 @@
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "qhzxrdek3x",
+            "source": "3pwxydnb4d",
+            "target": "6fvtn5mj4l"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "89268lupr9",
@@ -4514,10 +4691,10 @@
         },
         {
           "data": {
-            "id": "0k6bne5btm",
-            "multiValueSourceId": "hfp94chsr4",
-            "source": "h4etad3lqc",
-            "target": "o93cu6bxkr"
+            "id": "zlfq66p7bq",
+            "source": "lhk2ad1xs9",
+            "target": "gxy5d392qn",
+            "multiValueSourceId": "-1"
           },
           "position": {
             "x": 64,
@@ -5162,9 +5339,9 @@
         },
         {
           "data": {
-            "id": "j71rpqswfs",
-            "source": "o93cu6bxkr",
-            "target": "8tttj6ny9a"
+            "id": "5dnbsdiulz",
+            "source": "gxy5d392qn",
+            "target": "wlbo5o08h5"
           },
           "position": {
             "x": 0,
@@ -5811,29 +5988,10 @@
         },
         {
           "data": {
-            "id": "qhzxrdek3x",
-            "source": "3pwxydnb4d",
-            "target": "6fvtn5mj4l"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "zlfq66p7bq",
-            "source": "lhk2ad1xs9",
-            "target": "gxy5d392qn",
-            "multiValueSourceId": "-1"
+            "id": "bqlo3t9j5b",
+            "source": "h4etad3lqc",
+            "target": "za3cs9z0c2",
+            "multiValueSourceId": "hfp94chsr4"
           },
           "position": {
             "x": 64,
@@ -5850,9 +6008,123 @@
         },
         {
           "data": {
-            "id": "5dnbsdiulz",
-            "source": "gxy5d392qn",
-            "target": "wlbo5o08h5"
+            "id": "1czhq93xqu",
+            "source": "za3cs9z0c2",
+            "target": "anckn5ryel"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "d79zx1hfda",
+            "source": "anckn5ryel",
+            "target": "r42gp6sl3a"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xvl1l4yej7",
+            "source": "r42gp6sl3a",
+            "target": "eu3993uw7o"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hgtr3zi87t",
+            "source": "r42gp6sl3a",
+            "target": "8tttj6ny9a"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "z5kph94acc",
+            "source": "eu3993uw7o",
+            "target": "ph47qcpm7y"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ntzkxbbk34",
+            "source": "ph47qcpm7y",
+            "target": "vazw9vnr5f"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ygr6f3kcfk",
+            "source": "ph47qcpm7y",
+            "target": "w2ga2jat1m"
           },
           "position": {
             "x": 0,
@@ -5924,23 +6196,8 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1715013204624,
+  "savedDate": 1715970636918,
   "variables": [
-    {
-      "context": "flowInstance",
-      "createdDate": 1714509994441,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
     {
       "context": "flowInstance",
       "createdDate": 1714509958362,
@@ -5964,14 +6221,14 @@
       "fields": {
         "type": "boolean",
         "displayName": "This tells the flow to use the gv-riskLevel variable for its score.",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "id": "fcf856bd-291d-44aa-a8ac-db99a3720987",
       "type": "property",
-      "updatedDate": 1715014330936,
+      "updatedDate": 1715336728690,
       "visibility": "private",
       "name": "gv-fakeLevel##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -6007,7 +6264,7 @@
       },
       "id": "f5ae02eb-0fdc-47f5-8c4e-10b1fe8344b5",
       "type": "property",
-      "updatedDate": 1714665893484,
+      "updatedDate": 1715336937601,
       "visibility": "private",
       "name": "gv-mfaOnHighRisk##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -6019,12 +6276,14 @@
       "fields": {
         "type": "string",
         "displayName": "Used to control the Risk Level for Demos",
-        "value": "MEDIUM",
+        "value": "HIGH",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
+      "id": "caeed7f9-7755-4112-a9ce-4ad77d4c8495",
       "type": "property",
+      "updatedDate": 1715336739948,
       "visibility": "private",
       "name": "gv-riskLevel##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -6076,9 +6335,27 @@
         "min": 0,
         "max": 2000
       },
+      "id": "11c4c2aa-f3ac-40e3-b8d8-d88996df6aa8",
       "type": "property",
+      "updatedDate": 1715720443178,
       "visibility": "private",
       "name": "gv-runVerifyforHighRisk##SK##company",
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1714509940537,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "fields": {
+        "type": "string",
+        "displayName": "Internal variable",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserId##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
@@ -6114,6 +6391,21 @@
       "type": "property",
       "visibility": "private",
       "name": "riskScore##SK##flowInstance",
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1714510089314,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "username##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     }
   ],

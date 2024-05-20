@@ -10,12 +10,12 @@
     "nodeConnector",
     "flowConnector",
     "pingOneMfaConnector",
-    "pingOneSSOConnector",
-    "pingOneRiskConnector"
+    "pingOneSSOConnector"
   ],
-  "createdDate": 1714666351831,
-  "currentVersion": 12,
+  "createdDate": 1716225529804,
+  "currentVersion": 44,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
+  "deployedDate": 1716225531940,
   "description": "Imported on Tue Apr 30 2024 20:48:09 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -37,7 +37,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO User Registration subflow - With Magic Link",
-  "publishedVersion": 12,
+  "publishedVersion": 44,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [
@@ -50,8 +50,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
+  "updatedDate": 1716225532021,
   "flowId": "8181cd2b299b54381ba698c636268c7a",
-  "versionId": 12,
+  "versionId": 44,
   "graphData": {
     "elements": {
       "nodes": [
@@ -912,9 +913,6 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "p1userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1userId\",\n        \"data\": \"{{local.s8wzjnc5lf.payload.output.p1userId}}\",\n        \"tooltip\": \"{{local.s8wzjnc5lf.payload.output.p1userId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
@@ -1005,7 +1003,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
-                "value": "PingOne SSO agreements subflow"
+                "value": "PingOne SSO Consent subflow"
               },
               "p1PopulationId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-p1PopulationId\",\n        \"data\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"tooltip\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-p1PopulationId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1018,6 +1016,9 @@
               },
               "subFlowVersionId": {
                 "value": -1
+              },
+              "p1UserId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -1054,9 +1055,6 @@
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "p1userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1userId\",\n        \"data\": \"{{local.s8wzjnc5lf.payload.output.p1userId}}\",\n        \"tooltip\": \"{{local.s8wzjnc5lf.payload.output.p1userId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1294,8 +1292,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1260.0436973334388,
-            "y": 3184.9837759458837
+            "x": 1242.9661906223646,
+            "y": 3173.5306994613566
           },
           "group": "nodes",
           "removed": false,
@@ -1313,8 +1311,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1080.6079916463468,
-            "y": 3184.9837759458837
+            "x": 1057.8435664871188,
+            "y": 3173.5306994613566
           },
           "group": "nodes",
           "removed": false,
@@ -1342,7 +1340,7 @@
                 "value": "PingOne SSO Progressive Profiling"
               },
               "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1userId\",\n        \"data\": \"{{local.dhvimoos3t.payload.output.p1userId}}\",\n        \"tooltip\": \"{{local.dhvimoos3t.payload.output.p1userId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.dhvimoos3t.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.dhvimoos3t.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "subFlowId": {
                 "value": {
@@ -1370,8 +1368,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1590,
-            "y": 3180
+            "x": 1639.6575280550342,
+            "y": 3173.5306994613566
           },
           "group": "nodes",
           "removed": false,
@@ -1393,8 +1391,8 @@
             }
           },
           "position": {
-            "x": 1439.479403020531,
-            "y": 3184.9837759458837
+            "x": 1428.0888147576104,
+            "y": 3173.5306994613566
           },
           "group": "nodes",
           "removed": false,
@@ -1419,7 +1417,7 @@
                 "value": "65z3wjp3rs"
               },
               "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1userId\",\n        \"data\": \"{{local.dhvimoos3t.payload.output.p1userId}}\",\n        \"tooltip\": \"{{local.dhvimoos3t.payload.output.p1userId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.dhvimoos3t.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.dhvimoos3t.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1429,8 +1427,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1865.6392040273745,
-            "y": 3184.9837759458837
+            "x": 1930.5645088389917,
+            "y": 3173.5306994613566
           },
           "group": "nodes",
           "removed": false,
@@ -1455,8 +1453,8 @@
             }
           },
           "position": {
-            "x": 1731.0624247620556,
-            "y": 3184.9837759458837
+            "x": 1798.3340630281018,
+            "y": 3173.5306994613566
           },
           "group": "nodes",
           "removed": false,
@@ -1481,7 +1479,7 @@
                 "value": "65z3wjp3rs"
               },
               "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1userId\",\n        \"data\": \"{{local.dhvimoos3t.payload.output.p1userId}}\",\n        \"tooltip\": \"{{local.dhvimoos3t.payload.output.p1userId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.dhvimoos3t.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.dhvimoos3t.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.l1889w71hu.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1491,8 +1489,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1596.4856454967364,
-            "y": 3297.1310920003166
+            "x": 1666.103617217212,
+            "y": 3305.7611452722463
           },
           "group": "nodes",
           "removed": false,
@@ -2406,14 +2404,11 @@
             "name": "Flow Connector",
             "nodeType": "CONNECTION",
             "properties": {
-              "MFAnewDevice": {
+              "mfaNewDevice": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
               "isDeviceManagement": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-deviceManagement\",\n        \"data\": \"{{global.company.variables.gv-deviceManagement}}\",\n        \"tooltip\": \"{{global.company.variables.gv-deviceManagement}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-deviceManagement\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "mfaNewDevice": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
                 "value": "PingOne Device Registration subflow"
@@ -2801,8 +2796,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2735.8160374499885,
-            "y": 1355.1238316341064
+            "x": 2822.7024747918817,
+            "y": 1383.1242126480222
           },
           "group": "nodes",
           "removed": false,
@@ -2857,8 +2852,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1892.0596894513938,
-            "y": 1278.4187090887797
+            "x": 1919.4376828584795,
+            "y": 1298.4431384042657
           },
           "group": "nodes",
           "removed": false,
@@ -3094,8 +3089,8 @@
             }
           },
           "position": {
-            "x": 2863.6579083588663,
-            "y": 1355.1238316341064
+            "x": 2963.837598531476,
+            "y": 1383.1242126480222
           },
           "group": "nodes",
           "removed": false,
@@ -3121,17 +3116,14 @@
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.eosbpi78qj.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.eosbpi78qj.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "p1userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 3017.0681534495197,
-            "y": 1355.1238316341064
+            "x": 3104.97272227107,
+            "y": 1383.1242126480222
           },
           "group": "nodes",
           "removed": false,
@@ -3348,7 +3340,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Verify subflow",
-                  "value": "c5876e0cf832ac128c4c23e8ffa4a57c"
+                  "value": "47a078fab415a28277aa766a2b22a8a5"
                 }
               },
               "subFlowVersionId": {
@@ -3356,6 +3348,9 @@
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.variables.username}}\",\n        \"tooltip\": \"{{global.variables.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.bdjncpya21.payload.output.email}}\",\n        \"tooltip\": \"{{local.bdjncpya21.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -3388,8 +3383,8 @@
             }
           },
           "position": {
-            "x": 2454.5639214504567,
-            "y": 1457.3973283612088
+            "x": 2460,
+            "y": 1470
           },
           "group": "nodes",
           "removed": false,
@@ -3411,7 +3406,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.2t9t63e3gi.payload.error.message}}\",\n        \"tooltip\": \"{{local.2t9t63e3gi.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Verify subflow failed. Hit Continue to return to login\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
                 "value": "Verify Subflow Error"
@@ -3698,14 +3693,14 @@
             "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
-                "value": "PingOne reCAPTCHA v3 subflow "
+                "value": "PingOne reCAPTCHA v3 subflow"
               },
-              "p1userId": {
+              "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "subFlowId": {
                 "value": {
-                  "label": "PingOne reCAPTCHA v3 subflow ",
+                  "label": "PingOne reCAPTCHA v3 subflow",
                   "value": "957ce22eb07711479e0931062222e07f"
                 }
               },
@@ -4421,8 +4416,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2454.5639214504567,
-            "y": 1252.850334907004
+            "x": 2640,
+            "y": 1290
           },
           "group": "nodes",
           "removed": false,
@@ -4564,7 +4559,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1userId\": {\n\t\t\t\"type\": \"boolean\",\n\t\t\t\"displayName\": \"p1userId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1userId\"\n\t\t}\n\t}\n}"
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"boolean\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t}\n\t}\n}"
               },
               "nodeTitle": {
                 "value": "Agreements"
@@ -4597,7 +4592,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1userId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \" p1userId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1userId\"\n\t\t}\n\t}\n}"
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \" p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t}\n\t}\n}"
               },
               "nodeTitle": {
                 "value": "Progressive Profile"
@@ -4607,8 +4602,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 946.0312123810278,
-            "y": 3184.9837759458837
+            "x": 925.613120676229,
+            "y": 3173.5306994613566
           },
           "group": "nodes",
           "removed": false,
@@ -4711,7 +4706,7 @@
                 "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"title\"\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textOne\"\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textTwo\"\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel\"\n    },\n    \"buttonLabel2\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label2\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel2\"\n    }\n  }\n}"
               },
               "nodeDescription": {
-                "value": "Error message with animated X"
+                "value": "Error message with animated icon"
               },
               "nodeTitle": {
                 "value": "Username already exists, please try again. If you already have an account c"
@@ -4855,14 +4850,17 @@
               },
               "nodeTitle": {
                 "value": "return to login"
+              },
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 1865.6392040273745,
-            "y": 4104.591767592231
+            "x": 1860,
+            "y": 4110
           },
           "group": "nodes",
           "removed": false,
@@ -4919,6 +4917,9 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"REGISTER\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "nodeTitle": {
+                "value": "Check button value"
               }
             },
             "status": "configured",
@@ -5841,8 +5842,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1871,
-            "y": 3300
+            "x": 1930.5645088389917,
+            "y": 3305.7611452722463
           },
           "group": "nodes",
           "removed": false,
@@ -6066,8 +6067,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2441,
-            "y": 2310
+            "x": 2540.4322273126936,
+            "y": 2399.2971035731
           },
           "group": "nodes",
           "removed": false,
@@ -6092,8 +6093,8 @@
             }
           },
           "position": {
-            "x": 2561,
-            "y": 2310
+            "x": 2653.340326304369,
+            "y": 2399.2971035731
           },
           "group": "nodes",
           "removed": false,
@@ -6143,8 +6144,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2741,
-            "y": 2310
+            "x": 2822.7024747918817,
+            "y": 2399.2971035731
           },
           "group": "nodes",
           "removed": false,
@@ -6167,8 +6168,8 @@
             }
           },
           "position": {
-            "x": 2861,
-            "y": 2310
+            "x": 2963.837598531476,
+            "y": 2399.2971035731
           },
           "group": "nodes",
           "removed": false,
@@ -6201,8 +6202,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3011,
-            "y": 2310
+            "x": 3104.97272227107,
+            "y": 2399.2971035731
           },
           "group": "nodes",
           "removed": false,
@@ -6252,8 +6253,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2021,
-            "y": 2190
+            "x": 2117.026856093911,
+            "y": 2258.1619798335055
           },
           "group": "nodes",
           "removed": false,
@@ -6271,8 +6272,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2291,
-            "y": 2310
+            "x": 2371.0700788251806,
+            "y": 2399.2971035731
           },
           "group": "nodes",
           "removed": false,
@@ -6301,8 +6302,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2171,
-            "y": 2310
+            "x": 2258.1619798335055,
+            "y": 2399.2971035731
           },
           "group": "nodes",
           "removed": false,
@@ -6326,8 +6327,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2768.5529186161234,
-            "y": 2440.1667219046494
+            "x": 2850,
+            "y": 2610
           },
           "group": "nodes",
           "removed": false,
@@ -6356,8 +6357,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2710.247663268213,
-            "y": 1201.713586543453
+            "x": 2794.475450043963,
+            "y": 1213.7620641605092
           },
           "group": "nodes",
           "removed": false,
@@ -6386,8 +6387,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1866.4913152696183,
-            "y": 1252.850334907004
+            "x": 1890,
+            "y": 1230
           },
           "group": "nodes",
           "removed": false,
@@ -6416,8 +6417,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3041,
-            "y": 2400
+            "x": 3133.199747018989,
+            "y": 2483.9781778168563
           },
           "group": "nodes",
           "removed": false,
@@ -6524,8 +6525,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2940.3630309041932,
-            "y": 1201.713586543453
+            "x": 3020.2916480273134,
+            "y": 1213.7620641605092
           },
           "group": "nodes",
           "removed": false,
@@ -6542,8 +6543,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2786.95278581354,
-            "y": 1201.713586543453
+            "x": 2879.1565242877195,
+            "y": 1213.7620641605092
           },
           "group": "nodes",
           "removed": false,
@@ -6560,8 +6561,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3093.7732759948467,
-            "y": 1201.713586543453
+            "x": 3189.6537965148264,
+            "y": 1213.7620641605092
           },
           "group": "nodes",
           "removed": false,
@@ -6590,8 +6591,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1661.9443218154136,
-            "y": 1252.850334907004
+            "x": 1590,
+            "y": 1230
           },
           "group": "nodes",
           "removed": false,
@@ -6608,8 +6609,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1738.6494443607403,
-            "y": 1252.850334907004
+            "x": 1740,
+            "y": 1230
           },
           "group": "nodes",
           "removed": false,
@@ -7095,27 +7096,57 @@
         },
         {
           "data": {
-            "id": "hdfd0ocimh",
+            "capabilityName": "createErrorResponse",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "id": "mt48vbzfjh",
+            "label": "Http",
+            "name": "Http",
             "nodeType": "CONNECTION",
-            "connectionId": "292873d5ceea806d81373ed0341b5c88",
-            "connectorId": "pingOneRiskConnector",
-            "name": "PingOne Protect",
-            "label": "PingOne Protect",
-            "status": "configured",
-            "capabilityName": "createRiskEvaluation",
-            "type": "action",
             "properties": {
-              "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"populationId\",\n        \"data\": \"{{global.parameters.populationId}}\",\n        \"tooltip\": \"{{global.parameters.populationId}}\",\n        \"children\": [\n          {\n            \"text\": \"populationId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
               },
-              "userName": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.bdjncpya21.payload.output.email}}\",\n        \"tooltip\": \"{{local.bdjncpya21.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "key": 0.9402478772467009,
+                    "label": "cancelReturn (boolean - flowInstance)",
+                    "name": "cancelReturn",
+                    "type": "boolean",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Send back to Authentication"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action",
+            "idUnique": "4rgtfgwd91"
           },
           "position": {
-            "x": 1596.2222290039062,
-            "y": 697.0872910844721
+            "x": 3240,
+            "y": 1770
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "uz2n1qbvjo",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 3090.1815154520964,
+            "y": 1690.4037867259312
           },
           "group": "nodes",
           "removed": false,
@@ -7128,6 +7159,63 @@
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "gkr26jojra",
+            "source": "mjxxfi6xdg",
+            "target": "pr6afd5vew"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "othz3ssbz8",
+            "source": "gy2h5luufw",
+            "target": "mjxxfi6xdg"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "j0ww1eh8lu",
+            "source": "368ysan7pj",
+            "target": "gy2h5luufw"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "1t6zr8zr07",
@@ -10014,9 +10102,9 @@
         },
         {
           "data": {
-            "id": "j0ww1eh8lu",
-            "source": "368ysan7pj",
-            "target": "gy2h5luufw"
+            "id": "y2xrnoemrb",
+            "source": "6z53jgrqu5",
+            "target": "uz2n1qbvjo"
           },
           "position": {
             "x": 0,
@@ -10033,47 +10121,9 @@
         },
         {
           "data": {
-            "id": "othz3ssbz8",
-            "source": "gy2h5luufw",
-            "target": "mjxxfi6xdg"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "gkr26jojra",
-            "source": "mjxxfi6xdg",
-            "target": "pr6afd5vew"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "mb27b94vx8",
-            "source": "oc2jc4qj3z",
-            "target": "hdfd0ocimh"
+            "id": "wtr1yef4k2",
+            "source": "uz2n1qbvjo",
+            "target": "mt48vbzfjh"
           },
           "position": {
             "x": 0,
@@ -10117,7 +10167,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1714666351199,
+  "savedDate": 1716225528911,
   "variables": [
     {
       "context": "flowInstance",
@@ -10137,21 +10187,6 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509994441,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
       "createdDate": 1714509958362,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
@@ -10164,21 +10199,6 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1714510089311,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "confirmPassword##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
@@ -10234,12 +10254,14 @@
       "fields": {
         "type": "boolean",
         "displayName": "Determines if KBA (Question and Answer) is turned on for Forgot password",
-        "value": "true",
+        "value": "false",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
+      "id": "be1c0262-6253-481c-b3f4-f3e3ce944575",
       "type": "property",
+      "updatedDate": 1715346065217,
       "visibility": "private",
       "name": "gv-QA-On##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -10324,7 +10346,9 @@
         "min": 0,
         "max": 2000
       },
+      "id": "33e0c54c-f610-4a51-8ade-b6caf978cc71",
       "type": "property",
+      "updatedDate": 1715332557311,
       "visibility": "private",
       "name": "gv-forcePasswordless##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -10358,8 +10382,9 @@
         "min": 0,
         "max": 2000
       },
+      "id": "54847cd0-932f-42fc-ac95-89f26486d64d",
       "type": "property",
-      "updatedDate": 1714617200859,
+      "updatedDate": 1715336160314,
       "visibility": "private",
       "name": "gv-magicLinkUserRegistration##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -10439,12 +10464,14 @@
       "fields": {
         "type": "boolean",
         "displayName": "Determines whether reCAPTCHA is enabled",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
+      "id": "9f686ab2-4ea6-4c4c-9d74-69620b4015a9",
       "type": "property",
+      "updatedDate": 1715874875175,
       "visibility": "private",
       "name": "gv-reCaptcha##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -10463,7 +10490,7 @@
       },
       "id": "9cd4a72f-c64c-4e10-92d3-06f2018b9104",
       "type": "property",
-      "updatedDate": 1714665879498,
+      "updatedDate": 1715720433684,
       "visibility": "private",
       "name": "gv-runVerifyUserRegistration##SK##company",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
@@ -10547,21 +10574,6 @@
       "type": "property",
       "visibility": "private",
       "name": "p1UserObject##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1714510089313,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "password##SK##flowInstance",
       "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {

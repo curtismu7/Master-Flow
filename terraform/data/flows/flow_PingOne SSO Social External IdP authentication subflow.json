@@ -1,5 +1,5 @@
 {
-  "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18",
+  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -11,11 +11,11 @@
     "flowConnector",
     "pingOneMfaConnector"
   ],
-  "createdDate": 1713884606370,
-  "currentVersion": 33,
+  "createdDate": 1715882225526,
+  "currentVersion": 4,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1713884612113,
-  "description": "Imported on Fri Mar 01 2024 21:47:12 GMT+0000 (Coordinated Universal Time)",
+  "deployedDate": 1715882229910,
+  "description": "Imported on Tue Apr 30 2024 20:48:07 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -36,7 +36,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Social External IdP authentication subflow",
-  "publishedVersion": 33,
+  "publishedVersion": 4,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": {},
@@ -46,28 +46,25 @@
       "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.6/icons.css",
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css"
     ],
-    "logLevel": 3,
+    "logLevel": 2,
     "pingOneFlow": false,
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "trigger": {},
-  "updatedDate": 1713884612115,
-  "flowId": "21ffbecef7b49304333154108e0e0c18",
-  "versionId": 33,
+  "updatedDate": 1715882229953,
+  "flowId": "8e02f2ecdf67f8522800959b5cdd9d0b",
+  "versionId": 4,
   "graphData": {
     "elements": {
       "nodes": [
         {
           "data": {
-            "id": "8s59my9tyi",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "8s59my9tyi",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Social External IdP Authentication w/ OIDC"
@@ -93,10 +90,12 @@
               "width": {
                 "value": 1600
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 431,
+            "x": 468,
             "y": 214
           },
           "group": "nodes",
@@ -110,15 +109,13 @@
         },
         {
           "data": {
-            "id": "ttyxmkzlcy",
-            "nodeType": "CONNECTION",
+            "capabilityName": "loginFirstFactor",
             "connectionId": "c3e6a164bde107954e93f5c09f0c8bce",
             "connectorId": "pingOneAuthenticationConnector",
-            "name": "PingOne Authentication",
+            "id": "ttyxmkzlcy",
             "label": "PingOne Authentication",
-            "status": "configured",
-            "capabilityName": "loginFirstFactor",
-            "type": "action",
+            "name": "PingOne Authentication",
+            "nodeType": "CONNECTION",
             "properties": {
               "identityProvider": {
                 "value": "useIdpId"
@@ -133,10 +130,12 @@
                 "value": "Google Auth"
               },
               "population": {}
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 930,
+            "x": 967,
             "y": 420
           },
           "group": "nodes",
@@ -150,15 +149,13 @@
         },
         {
           "data": {
-            "id": "ahexh5cl7k",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "ahexh5cl7k",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsMultipleB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"socialProvider\",\n        \"data\": \"{{global.parameters.socialProvider}}\",\n        \"tooltip\": \"{{global.parameters.socialProvider}}\",\n        \"children\": [\n          {\n            \"text\": \"socialProvider\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -186,10 +183,12 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 600,
+            "x": 637,
             "y": 420
           },
           "group": "nodes",
@@ -204,11 +203,10 @@
         {
           "data": {
             "id": "wfw1rdl4hh",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 750,
+            "x": 787,
             "y": 450
           },
           "group": "nodes",
@@ -223,12 +221,11 @@
         {
           "data": {
             "id": "ndzkrlk0er",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 750,
+            "x": 787,
             "y": 540
           },
           "group": "nodes",
@@ -242,15 +239,13 @@
         },
         {
           "data": {
-            "id": "c29bv0zg1a",
-            "nodeType": "CONNECTION",
+            "capabilityName": "loginFirstFactor",
             "connectionId": "c3e6a164bde107954e93f5c09f0c8bce",
             "connectorId": "pingOneAuthenticationConnector",
-            "name": "PingOne Authentication",
+            "id": "c29bv0zg1a",
             "label": "PingOne Authentication",
-            "status": "configured",
-            "capabilityName": "loginFirstFactor",
-            "type": "action",
+            "name": "PingOne Authentication",
+            "nodeType": "CONNECTION",
             "properties": {
               "identityProvider": {
                 "value": "useIdpId"
@@ -262,10 +257,12 @@
                 "value": "Facebook Auth"
               },
               "population": {}
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 960,
+            "x": 997,
             "y": 600
           },
           "group": "nodes",
@@ -279,15 +276,13 @@
         },
         {
           "data": {
-            "id": "wb2tu6evi5",
-            "nodeType": "CONNECTION",
+            "capabilityName": "loginFirstFactor",
             "connectionId": "c3e6a164bde107954e93f5c09f0c8bce",
             "connectorId": "pingOneAuthenticationConnector",
-            "name": "PingOne Authentication",
+            "id": "wb2tu6evi5",
             "label": "PingOne Authentication",
-            "status": "configured",
-            "capabilityName": "loginFirstFactor",
-            "type": "action",
+            "name": "PingOne Authentication",
+            "nodeType": "CONNECTION",
             "properties": {
               "identityProvider": {
                 "value": "useIdpId"
@@ -304,10 +299,12 @@
               "population": {
                 "value": "bb594de6-f63c-46f7-8e5a-7530cb9c711f"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 930,
+            "x": 967,
             "y": 810
           },
           "group": "nodes",
@@ -322,11 +319,10 @@
         {
           "data": {
             "id": "zeef9f8g4a",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 750,
+            "x": 787,
             "y": 630
           },
           "group": "nodes",
@@ -341,12 +337,11 @@
         {
           "data": {
             "id": "fen4f0y4kq",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 750,
+            "x": 787,
             "y": 690
           },
           "group": "nodes",
@@ -360,15 +355,13 @@
         },
         {
           "data": {
-            "id": "gqv9v1pyyd",
-            "nodeType": "CONNECTION",
+            "capabilityName": "loginFirstFactor",
             "connectionId": "c3e6a164bde107954e93f5c09f0c8bce",
             "connectorId": "pingOneAuthenticationConnector",
-            "name": "PingOne Authentication",
+            "id": "gqv9v1pyyd",
             "label": "PingOne Authentication",
-            "status": "configured",
-            "capabilityName": "loginFirstFactor",
-            "type": "action",
+            "name": "PingOne Authentication",
+            "nodeType": "CONNECTION",
             "properties": {
               "identityProvider": {
                 "value": "useIdpId"
@@ -385,10 +378,12 @@
               "population": {
                 "value": "bb594de6-f63c-46f7-8e5a-7530cb9c711f"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 907,
+            "x": 944,
             "y": 1020
           },
           "group": "nodes",
@@ -402,14 +397,12 @@
         },
         {
           "data": {
-            "id": "xxy2xx4c7h",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "xxy2xx4c7h",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Return Success"
@@ -435,10 +428,12 @@
               "width": {
                 "value": 1000
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 317.35306994613563,
+            "x": 354.35306994613563,
             "y": 2327.2558462716615
           },
           "group": "nodes",
@@ -452,26 +447,26 @@
         },
         {
           "data": {
-            "id": "7ae8xropgy",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "7ae8xropgy",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"P1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"P1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"P1UserId\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t},\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"email\"\n\t\t}\n\t}\n}"
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t},\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"email\"\n\t\t}\n\t}\n}"
               },
               "nodeTitle": {
                 "value": "Success"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 455.457843116153,
+            "x": 492.457843116153,
             "y": 2479.7149236323885
           },
           "group": "nodes",
@@ -485,15 +480,13 @@
         },
         {
           "data": {
-            "id": "vujr5lokcp",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "vujr5lokcp",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createSuccessResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#9dc967ff"
@@ -504,9 +497,9 @@
                     "key": 0.3530163097355081,
                     "label": "userid (string - flowInstance)",
                     "name": "userid",
-                    "nameDefault": "P1UserId",
+                    "nameDefault": "p1UserId",
                     "type": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"P1UserId\",\n        \"data\": \"{{local.7ae8xropgy.payload.output.P1UserId}}\",\n        \"tooltip\": \"{{local.7ae8xropgy.payload.output.P1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"P1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.7ae8xropgy.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.7ae8xropgy.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "key": 0.09823667313902718,
@@ -529,10 +522,12 @@
               "nodeTitle": {
                 "value": "Return Success"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 759.0964051935883,
+            "x": 796.0964051935883,
             "y": 2479.7149236323885
           },
           "group": "nodes",
@@ -546,15 +541,13 @@
         },
         {
           "data": {
-            "id": "r5ibxn0n52",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "r5ibxn0n52",
             "label": "Error Customize",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorCode": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
@@ -574,10 +567,12 @@
               "nodeTitle": {
                 "value": "Received an unexpected value"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 570,
+            "x": 607,
             "y": 810
           },
           "group": "nodes",
@@ -592,11 +587,10 @@
         {
           "data": {
             "id": "eaqs56a8dx",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 390,
+            "x": 427,
             "y": 810
           },
           "group": "nodes",
@@ -610,17 +604,15 @@
         },
         {
           "data": {
-            "id": "24zlwfrklk",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "24zlwfrklk",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
-                "value": "Input Schema: P1UserId,username,email"
+                "value": "Input Schema: p1UserId,username,email"
               },
               "annotationTextColor": {
                 "value": "#000000"
@@ -649,10 +641,12 @@
               "width": {
                 "value": 400
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 303.6385620774353,
+            "x": 340.6385620774353,
             "y": 2403.80528311303
           },
           "group": "nodes",
@@ -667,11 +661,10 @@
         {
           "data": {
             "id": "vab75gxhwe",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 860.3092592194001,
+            "x": 897.3092592194001,
             "y": 2783.353485709824
           },
           "group": "nodes",
@@ -685,14 +678,12 @@
         },
         {
           "data": {
-            "id": "xf0urbdyy",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "xf0urbdyy",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Return Error for Social"
@@ -718,10 +709,12 @@
               "width": {
                 "value": 1000
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 317.35306994613563,
+            "x": 354.35306994613563,
             "y": 2618.162827055619
           },
           "group": "nodes",
@@ -735,15 +728,13 @@
         },
         {
           "data": {
-            "id": "khykcpg2mf",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "khykcpg2mf",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -754,10 +745,12 @@
               "nodeTitle": {
                 "value": "Return Error"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1037.4317537645707,
+            "x": 1074.4317537645707,
             "y": 2783.353485709824
           },
           "group": "nodes",
@@ -771,14 +764,12 @@
         },
         {
           "data": {
-            "id": "zb84dq8023",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "zb84dq8023",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Input Schema: errorMsg"
@@ -810,10 +801,12 @@
               "width": {
                 "value": 400
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 328.9417755838883,
+            "x": 365.9417755838883,
             "y": 2682.140631684012
           },
           "group": "nodes",
@@ -828,11 +821,10 @@
         {
           "data": {
             "id": "3rj4aviki7",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 420,
+            "x": 457,
             "y": 420
           },
           "group": "nodes",
@@ -846,15 +838,13 @@
         },
         {
           "data": {
-            "id": "v02qm03zvp",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "v02qm03zvp",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -922,10 +912,12 @@
               "validationRules": {
                 "value": []
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 708.4899781806824,
+            "x": 745.4899781806824,
             "y": 2783.353485709824
           },
           "group": "nodes",
@@ -940,11 +932,10 @@
         {
           "data": {
             "id": "ncx5qfi4ly",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 556.6706971419648,
+            "x": 593.6706971419648,
             "y": 2783.353485709824
           },
           "group": "nodes",
@@ -958,15 +949,13 @@
         },
         {
           "data": {
-            "id": "cidwrlhli5",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Node",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "cidwrlhli5",
+            "label": "Node",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMsg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Google Error - \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -974,10 +963,12 @@
               "nodeInstanceId": {
                 "value": "lwmngfabub"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1200,
+            "x": 1237,
             "y": 510
           },
           "group": "nodes",
@@ -992,11 +983,10 @@
         {
           "data": {
             "id": "b9ngrksq2c",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 885.6124727258531,
+            "x": 922.6124727258531,
             "y": 3011.0824072679006
           },
           "group": "nodes",
@@ -1010,15 +1000,13 @@
         },
         {
           "data": {
-            "id": "9yx7e20gzd",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "9yx7e20gzd",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -1037,10 +1025,12 @@
               "nodeTitle": {
                 "value": "Return Error"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1062.7349672710236,
+            "x": 1099.7349672710236,
             "y": 3011.0824072679006
           },
           "group": "nodes",
@@ -1054,15 +1044,13 @@
         },
         {
           "data": {
-            "id": "zez69702xc",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "zez69702xc",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -1130,10 +1118,12 @@
               "validationRules": {
                 "value": []
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 733.7931916871354,
+            "x": 770.7931916871354,
             "y": 3011.0824072679006
           },
           "group": "nodes",
@@ -1148,11 +1138,10 @@
         {
           "data": {
             "id": "var1ok6e5q",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 556.6706971419648,
+            "x": 593.6706971419648,
             "y": 3011.0824072679006
           },
           "group": "nodes",
@@ -1166,15 +1155,13 @@
         },
         {
           "data": {
-            "id": "aj7gtzvv8y",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "aj7gtzvv8y",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorMsg\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"errorMsg\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMsg\"\n\t\t}\n\t}\n}"
@@ -1182,10 +1169,12 @@
               "nodeTitle": {
                 "value": "MFA error"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 455.457843116153,
+            "x": 492.457843116153,
             "y": 3011.0824072679006
           },
           "group": "nodes",
@@ -1199,14 +1188,12 @@
         },
         {
           "data": {
-            "id": "jdobail9rk",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "jdobail9rk",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Return Error for MFA"
@@ -1232,10 +1219,12 @@
               "width": {
                 "value": 1000
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 317.35306994613563,
+            "x": 354.35306994613563,
             "y": 2856.177629515221
           },
           "group": "nodes",
@@ -1249,15 +1238,13 @@
         },
         {
           "data": {
-            "id": "lwmngfabub",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "lwmngfabub",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorMsg\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"errorMsg\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMsg\"\n\t\t}\n\t}\n}"
@@ -1265,10 +1252,12 @@
               "nodeTitle": {
                 "value": "Social error"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 455.457843116153,
+            "x": 492.457843116153,
             "y": 2783.353485709824
           },
           "group": "nodes",
@@ -1282,14 +1271,12 @@
         },
         {
           "data": {
-            "id": "2hx2vmjnat",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "2hx2vmjnat",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Input Schema: none"
@@ -1321,10 +1308,12 @@
               "width": {
                 "value": 400
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 328.9417755838883,
+            "x": 365.9417755838883,
             "y": 2909.869553242089
           },
           "group": "nodes",
@@ -1339,12 +1328,11 @@
         {
           "data": {
             "id": "udiyagwpd9",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 556.6706971419648,
+            "x": 593.6706971419648,
             "y": 2479.7149236323885
           },
           "group": "nodes",
@@ -1358,14 +1346,12 @@
         },
         {
           "data": {
-            "id": "tqm3ciheqd",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "tqm3ciheqd",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Continue Auth"
@@ -1391,10 +1377,12 @@
               "width": {
                 "value": 1000
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 310.1615146903724,
+            "x": 347.1615146903724,
             "y": 1344.0332303249472
           },
           "group": "nodes",
@@ -1408,15 +1396,13 @@
         },
         {
           "data": {
-            "id": "ock32duny1",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "ock32duny1",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"p1Email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1Email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1Email\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t}\n\t}\n}"
@@ -1424,10 +1410,12 @@
               "nodeTitle": {
                 "value": "Continue Auth"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 387.70189336296556,
+            "x": 424.70189336296556,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -1441,15 +1429,13 @@
         },
         {
           "data": {
-            "id": "kwc5nqu1a2",
-            "nodeType": "CONNECTION",
+            "capabilityName": "startUiSubFlow",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
-            "name": "Flow Connector",
+            "id": "kwc5nqu1a2",
             "label": "Flow Connector",
-            "status": "configured",
-            "capabilityName": "startUiSubFlow",
-            "type": "trigger",
+            "name": "Flow Connector",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "PingOne Protect subflow"
@@ -1460,16 +1446,18 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Protect subflow",
-                  "value": "20ed625295bdce54ea0c8868bc13ae57"
+                  "value": "a4d75de5717184f389741fd808236995"
                 }
               },
               "subFlowVersionId": {
                 "value": -1
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1473.2671947792692,
+            "x": 1510.2671947792692,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -1484,12 +1472,11 @@
         {
           "data": {
             "id": "qpywtux2yy",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 491.0890649264231,
+            "x": 528.0890649264231,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -1503,15 +1490,13 @@
         },
         {
           "data": {
-            "id": "rb2ko6lugo",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "rb2ko6lugo",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-protectAfterSocial\",\n        \"data\": \"{{global.company.variables.gv-protectAfterSocial}}\",\n        \"tooltip\": \"{{global.company.variables.gv-protectAfterSocial}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-protectAfterSocial\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1525,10 +1510,12 @@
               "type": {
                 "value": "boolean"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 646.1698222716093,
+            "x": 683.1698222716093,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -1551,7 +1538,7 @@
             }
           },
           "position": {
-            "x": 801.2505796167956,
+            "x": 838.2505796167956,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -1565,15 +1552,13 @@
         },
         {
           "data": {
-            "id": "g5xau47hkk",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "g5xau47hkk",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "caseSensitive": {
                 "value": false
@@ -1590,10 +1575,12 @@
               "type": {
                 "value": "boolean"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 930.4845440711174,
+            "x": 967.4845440711174,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -1608,8 +1595,8 @@
         {
           "data": {
             "id": "ax4f5d9rq4",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "m5nsbz0ssl": {
                 "value": "anyTriggersFalse"
@@ -1617,7 +1604,7 @@
             }
           },
           "position": {
-            "x": 1602.5011592335911,
+            "x": 1639.5011592335911,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -1631,17 +1618,15 @@
         },
         {
           "data": {
-            "id": "igj55nve0f",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "igj55nve0f",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
-              "P1UserId": {
+              "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.il8az8zi74.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.il8az8zi74.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeInstanceId": {
@@ -1653,10 +1638,12 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.ock32duny1.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.ock32duny1.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1757.5819165787773,
+            "x": 1794.5819165787773,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -1671,8 +1658,8 @@
         {
           "data": {
             "id": "z3pnvb2zi4",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "cidwrlhli5": {
                 "value": "anyTriggersFalse"
@@ -1680,7 +1667,7 @@
             }
           },
           "position": {
-            "x": 1050,
+            "x": 1087,
             "y": 420
           },
           "group": "nodes",
@@ -1694,15 +1681,13 @@
         },
         {
           "data": {
-            "id": "w8zi7ax1oa",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "w8zi7ax1oa",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "ock32duny1"
@@ -1716,10 +1701,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1200,
+            "x": 1237,
             "y": 420
           },
           "group": "nodes",
@@ -1733,15 +1720,13 @@
         },
         {
           "data": {
-            "id": "m5nsbz0ssl",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "m5nsbz0ssl",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -1760,10 +1745,12 @@
               "nodeTitle": {
                 "value": "Return to Authentication"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1757.5819165787773,
+            "x": 1794.5819165787773,
             "y": 1550.8075734518623
           },
           "group": "nodes",
@@ -1777,14 +1764,12 @@
         },
         {
           "data": {
-            "id": "0309sg2ip4",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "0309sg2ip4",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Silent register email"
@@ -1810,10 +1795,12 @@
               "width": {
                 "value": 2000
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 330,
+            "x": 367,
             "y": 1800
           },
           "group": "nodes",
@@ -1827,15 +1814,13 @@
         },
         {
           "data": {
-            "id": "dobb44pr1b",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "dobb44pr1b",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"p1Email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1Email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1Email\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t},\n\t\t\"callingFlow\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"callingFlow\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"callingFlow\"\n\t\t}\n\t}\n}"
@@ -1843,10 +1828,12 @@
               "nodeTitle": {
                 "value": "Register email"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 330,
+            "x": 367,
             "y": 1950
           },
           "group": "nodes",
@@ -1860,15 +1847,14 @@
         },
         {
           "data": {
-            "id": "r5nxv12ks8",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createDevice",
             "connectionId": "b72bd44e6be8180bd5988ac74cd9c949",
             "connectorId": "pingOneMfaConnector",
-            "name": "PingOne MFA",
+            "id": "r5nxv12ks8",
+            "idUnique": "rxslfm6xnm",
             "label": "PingOne MFA",
-            "status": "configured",
-            "capabilityName": "createDevice",
-            "type": "action",
+            "name": "PingOne MFA",
+            "nodeType": "CONNECTION",
             "properties": {
               "customDeviceType": {
                 "value": "{}"
@@ -1879,23 +1865,24 @@
               "customTemplateVariant": {
                 "value": "{}"
               },
-              "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "deviceType": {
                 "value": "EMAIL"
+              },
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.p1Email}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "status": {
                 "value": "ACTIVE"
               },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.p1Email}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "userId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
-            "idUnique": "rxslfm6xnm"
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 960,
+            "x": 997,
             "y": 1950
           },
           "group": "nodes",
@@ -1910,12 +1897,11 @@
         {
           "data": {
             "id": "agdocjhico",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 480,
+            "x": 517,
             "y": 1950
           },
           "group": "nodes",
@@ -1929,15 +1915,13 @@
         },
         {
           "data": {
-            "id": "5iur7e6rvo",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "5iur7e6rvo",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-autoEnrollEmailMFA\",\n        \"data\": \"{{global.company.variables.gv-autoEnrollEmailMFA}}\",\n        \"tooltip\": \"{{global.company.variables.gv-autoEnrollEmailMFA}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-autoEnrollEmailMFA\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1951,10 +1935,12 @@
               "type": {
                 "value": "boolean"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 630,
+            "x": 667,
             "y": 1950
           },
           "group": "nodes",
@@ -1980,7 +1966,7 @@
             }
           },
           "position": {
-            "x": 780,
+            "x": 817,
             "y": 1950
           },
           "group": "nodes",
@@ -1994,15 +1980,13 @@
         },
         {
           "data": {
-            "id": "hidp6h8zde",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "hidp6h8zde",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "il8az8zi74"
@@ -2016,10 +2000,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.username}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 2280,
+            "x": 2317,
             "y": 1980
           },
           "group": "nodes",
@@ -2033,14 +2019,12 @@
         },
         {
           "data": {
-            "id": "cdwagh40w6",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "cdwagh40w6",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Call to check if we should run protect"
@@ -2075,10 +2059,12 @@
               "width": {
                 "value": 240
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1080,
+            "x": 1117,
             "y": 330
           },
           "group": "nodes",
@@ -2093,8 +2079,8 @@
         {
           "data": {
             "id": "9zib4s1gt0",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "accuc0h8hw": {
                 "value": "anyTriggersFalse"
@@ -2102,7 +2088,7 @@
             }
           },
           "position": {
-            "x": 1085.5653014163036,
+            "x": 1122.5653014163036,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -2116,15 +2102,13 @@
         },
         {
           "data": {
-            "id": "bveg8qoqk3",
-            "nodeType": "CONNECTION",
+            "capabilityName": "startUiSubFlow",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
-            "name": "Flow Connector",
+            "id": "bveg8qoqk3",
             "label": "Flow Connector",
-            "status": "configured",
-            "capabilityName": "startUiSubFlow",
-            "type": "trigger",
+            "name": "Flow Connector",
+            "nodeType": "CONNECTION",
             "properties": {
               "allowMFAReg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"false\"\n      }\n    ]\n  }\n]"
@@ -2144,16 +2128,18 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
-                  "value": "49a3fbbfac4050f9c558aaae75bd2a36"
+                  "value": "48bc5d1f074b32efc02f09dfe91f32cf"
                 }
               },
               "subFlowVersionId": {
                 "value": -1
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1757.5819165787773,
+            "x": 1794.5819165787773,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -2167,17 +2153,15 @@
         },
         {
           "data": {
-            "id": "accuc0h8hw",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "accuc0h8hw",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
-              "P1UserId": {
+              "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.ock32duny1.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.ock32duny1.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "email": {
@@ -2195,10 +2179,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ock32duny1.payload.output.username}}\",\n        \"tooltip\": \"{{local.ock32duny1.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1292.3396445432186,
+            "x": 1329.3396445432186,
             "y": 1757.5819165787773
           },
           "group": "nodes",
@@ -2212,17 +2198,15 @@
         },
         {
           "data": {
-            "id": "6kvgwu4gn3",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "6kvgwu4gn3",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
-              "P1UserId": {
+              "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "email": {
@@ -2237,10 +2221,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 2041.8966383782854,
+            "x": 2078.8966383782854,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -2254,15 +2240,13 @@
         },
         {
           "data": {
-            "id": "oaf6qh9qxz",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "oaf6qh9qxz",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMsg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2270,10 +2254,12 @@
               "nodeInstanceId": {
                 "value": "aj7gtzvv8y"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 2041.8966383782854,
+            "x": 2078.8966383782854,
             "y": 1731.7351236879128
           },
           "group": "nodes",
@@ -2296,7 +2282,7 @@
             }
           },
           "position": {
-            "x": 1912.6626739239634,
+            "x": 1949.6626739239634,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -2310,15 +2296,13 @@
         },
         {
           "data": {
-            "id": "bfjt7r862a",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "bfjt7r862a",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "callingFlow": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"protect\"\n      }\n    ]\n  }\n]"
@@ -2335,10 +2319,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ock32duny1.payload.output.username}}\",\n        \"tooltip\": \"{{local.ock32duny1.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 982.1781298528462,
+            "x": 1019.1781298528462,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -2353,12 +2339,11 @@
         {
           "data": {
             "id": "dmdjuzrbo6",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1318.186437434083,
+            "x": 1355.186437434083,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -2372,15 +2357,13 @@
         },
         {
           "data": {
-            "id": "il8az8zi74",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "il8az8zi74",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"p1Email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1Email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1Email\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t}\n\t}\n}"
@@ -2388,10 +2371,12 @@
               "nodeTitle": {
                 "value": "returnToProtect"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1214.7992658706255,
+            "x": 1251.7992658706255,
             "y": 1473.2671947792692
           },
           "group": "nodes",
@@ -2405,15 +2390,13 @@
         },
         {
           "data": {
-            "id": "ldyeskfngc",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "ldyeskfngc",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "callingFlow": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"mfa\"\n      }\n    ]\n  }\n]"
@@ -2430,10 +2413,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ock32duny1.payload.output.username}}\",\n        \"tooltip\": \"{{local.ock32duny1.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1292.3396445432186,
+            "x": 1329.3396445432186,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -2448,12 +2433,11 @@
         {
           "data": {
             "id": "x5uqe5zxll",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1602.5011592335911,
+            "x": 1639.5011592335911,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -2467,15 +2451,13 @@
         },
         {
           "data": {
-            "id": "dx7psfvssm",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "dx7psfvssm",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"p1Email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1Email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1Email\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t}\n\t}\n}"
@@ -2483,10 +2465,12 @@
               "nodeTitle": {
                 "value": "returnToMFA"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1499.1139876701336,
+            "x": 1536.1139876701336,
             "y": 1654.1947450153198
           },
           "group": "nodes",
@@ -2500,15 +2484,13 @@
         },
         {
           "data": {
-            "id": "yjlk2dkgp3",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "yjlk2dkgp3",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsMultipleB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"callingFlow\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.callingFlow}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.callingFlow}}\",\n        \"children\": [\n          {\n            \"text\": \"callingFlow\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2528,10 +2510,12 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1950,
+            "x": 1987,
             "y": 1950
           },
           "group": "nodes",
@@ -2546,11 +2530,10 @@
         {
           "data": {
             "id": "c0gnmsoo67",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2130,
+            "x": 2167,
             "y": 1980
           },
           "group": "nodes",
@@ -2564,15 +2547,13 @@
         },
         {
           "data": {
-            "id": "pzrsvq17pe",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "pzrsvq17pe",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "dx7psfvssm"
@@ -2586,10 +2567,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.username}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 2280,
+            "x": 2317,
             "y": 2070
           },
           "group": "nodes",
@@ -2604,11 +2587,10 @@
         {
           "data": {
             "id": "dxfpgiqjxh",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 2130,
+            "x": 2167,
             "y": 2070
           },
           "group": "nodes",
@@ -2622,23 +2604,23 @@
         },
         {
           "data": {
-            "id": "5pbibkp4wg",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "5pbibkp4wg",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "rms94j8q97"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 930,
+            "x": 967,
             "y": 2040
           },
           "group": "nodes",
@@ -2652,23 +2634,23 @@
         },
         {
           "data": {
-            "id": "rms94j8q97",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "rms94j8q97",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "Continue"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1050,
+            "x": 1087,
             "y": 1860
           },
           "group": "nodes",
@@ -2682,15 +2664,13 @@
         },
         {
           "data": {
-            "id": "4nd9u8th2t",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Node",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "4nd9u8th2t",
+            "label": "Node",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMsg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Google Error - \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2698,10 +2678,12 @@
               "nodeInstanceId": {
                 "value": "lwmngfabub"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1230,
+            "x": 1267,
             "y": 690
           },
           "group": "nodes",
@@ -2716,8 +2698,8 @@
         {
           "data": {
             "id": "77igchrtxr",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "4nd9u8th2t": {
                 "value": "anyTriggersFalse"
@@ -2725,7 +2707,7 @@
             }
           },
           "position": {
-            "x": 1110,
+            "x": 1147,
             "y": 600
           },
           "group": "nodes",
@@ -2739,15 +2721,13 @@
         },
         {
           "data": {
-            "id": "34l8dneu53",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "34l8dneu53",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "ock32duny1"
@@ -2761,10 +2741,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1230,
+            "x": 1267,
             "y": 600
           },
           "group": "nodes",
@@ -2778,15 +2760,13 @@
         },
         {
           "data": {
-            "id": "7egu3n3bgs",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Node",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "7egu3n3bgs",
+            "label": "Node",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMsg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Google Error - \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2794,10 +2774,12 @@
               "nodeInstanceId": {
                 "value": "lwmngfabub"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1230,
+            "x": 1267,
             "y": 900
           },
           "group": "nodes",
@@ -2812,8 +2794,8 @@
         {
           "data": {
             "id": "orsl8vvxsz",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "7egu3n3bgs": {
                 "value": "anyTriggersFalse"
@@ -2821,7 +2803,7 @@
             }
           },
           "position": {
-            "x": 1080,
+            "x": 1117,
             "y": 810
           },
           "group": "nodes",
@@ -2835,15 +2817,13 @@
         },
         {
           "data": {
-            "id": "ppcruua0c7",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "ppcruua0c7",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "ock32duny1"
@@ -2857,10 +2837,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1230,
+            "x": 1267,
             "y": 810
           },
           "group": "nodes",
@@ -2874,15 +2856,13 @@
         },
         {
           "data": {
-            "id": "ns88h7tkxi",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Node",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "ns88h7tkxi",
+            "label": "Node",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMsg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Google Error - \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2890,10 +2870,12 @@
               "nodeInstanceId": {
                 "value": "lwmngfabub"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1200,
+            "x": 1237,
             "y": 1110
           },
           "group": "nodes",
@@ -2908,8 +2890,8 @@
         {
           "data": {
             "id": "9buc9fxh8l",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "ns88h7tkxi": {
                 "value": "anyTriggersFalse"
@@ -2917,7 +2899,7 @@
             }
           },
           "position": {
-            "x": 1050,
+            "x": 1087,
             "y": 1020
           },
           "group": "nodes",
@@ -2931,15 +2913,13 @@
         },
         {
           "data": {
-            "id": "zmuqsuky2t",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "zmuqsuky2t",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "ock32duny1"
@@ -2953,10 +2933,12 @@
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1200,
+            "x": 1237,
             "y": 1020
           },
           "group": "nodes",
@@ -2979,7 +2961,7 @@
             }
           },
           "position": {
-            "x": 1110,
+            "x": 1147,
             "y": 1950
           },
           "group": "nodes",
@@ -2993,23 +2975,26 @@
         },
         {
           "data": {
-            "id": "hjey2v135x",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "hjey2v135x",
             "label": "Error Message",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Create Device failed for Social\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Create Device failed for Social"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1260,
+            "x": 1297,
             "y": 2070
           },
           "group": "nodes",
@@ -3023,35 +3008,35 @@
         },
         {
           "data": {
-            "id": "po4slgvmm6",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "po4slgvmm6",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
+              "caseSensitive": {
+                "value": false
+              },
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-agreement\",\n        \"data\": \"{{global.company.variables.gv-agreement}}\",\n        \"tooltip\": \"{{global.company.variables.gv-agreement}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-agreement\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Check if call PingOne Agreements (consent)"
               },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
-              "caseSensitive": {
-                "value": false
-              },
               "type": {
                 "value": "boolean"
-              },
-              "nodeTitle": {
-                "value": "Check if call PingOne Agreements (consent)"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1290,
+            "x": 1327,
             "y": 1950
           },
           "group": "nodes",
@@ -3066,11 +3051,11 @@
         {
           "data": {
             "id": "0gl87lafvz",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1442,
+            "x": 1479,
             "y": 1951.75
           },
           "group": "nodes",
@@ -3084,36 +3069,36 @@
         },
         {
           "data": {
-            "id": "lixp1hnhk1",
-            "nodeType": "CONNECTION",
+            "capabilityName": "startUiSubFlow",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
-            "name": "Flow Connector",
-            "label": "Flow Connector",
-            "status": "configured",
+            "id": "lixp1hnhk1",
             "idUnique": "4tk6jmkngs",
-            "capabilityName": "startUiSubFlow",
-            "type": "trigger",
+            "label": "Flow Connector",
+            "name": "Flow Connector",
+            "nodeType": "CONNECTION",
             "properties": {
-              "subFlowId": {
-                "value": {
-                  "label": "PingOne SSO agreements subflow",
-                  "value": "acabff5c7a1c870245600e440e9b9c2b"
-                }
-              },
-              "subFlowVersionId": {
-                "value": -1
-              },
               "nodeTitle": {
                 "value": "PingOne SSO agreements subflow"
               },
               "p1PopulationId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-p1PopulationId\",\n        \"data\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"tooltip\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-p1PopulationId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "subFlowId": {
+                "value": {
+                  "label": "PingOne SSO Consent subflow",
+                  "value": "4811483307e608a793bbcd45f9a7ca31"
+                }
+              },
+              "subFlowVersionId": {
+                "value": -1
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 1594,
+            "x": 1631,
             "y": 1953.5
           },
           "group": "nodes",
@@ -3136,7 +3121,7 @@
             }
           },
           "position": {
-            "x": 1757,
+            "x": 1794,
             "y": 1951.75
           },
           "group": "nodes",
@@ -3154,7 +3139,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1170,
+            "x": 1207,
             "y": 1920
           },
           "group": "nodes",
@@ -3168,15 +3153,13 @@
         },
         {
           "data": {
-            "id": "e8bnxqy2er",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "e8bnxqy2er",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -3184,10 +3167,12 @@
               "nodeTitle": {
                 "value": "Error on agreement subflow"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1920,
+            "x": 1957,
             "y": 2190
           },
           "group": "nodes",
@@ -3201,32 +3186,32 @@
         },
         {
           "data": {
-            "id": "tsccucp22d",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "tsccucp22d",
+            "idUnique": "g9fybbwj88",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
+              "customCSS": {},
               "customHTML": {
                 "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"d-none\" \n            data-skcomponent=\"skpolling\" \n            data-skpollInterval=\"10\" \n            data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n    </div>\n</div>"
               },
-              "customCSS": {},
               "customScript": {},
-              "nodeTitle": {
-                "value": "NOP UI Page"
-              },
               "formFieldsList": {
                 "value": []
+              },
+              "nodeTitle": {
+                "value": "NOP UI Page"
               }
             },
-            "idUnique": "g9fybbwj88"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 240,
+            "x": 277,
             "y": 420
           },
           "group": "nodes",
@@ -3319,9 +3304,9 @@
         {
           "data": {
             "id": "enih6b7f52",
+            "multiValueSourceId": "-1",
             "source": "ahexh5cl7k",
-            "target": "eaqs56a8dx",
-            "multiValueSourceId": "-1"
+            "target": "eaqs56a8dx"
           },
           "position": {
             "x": 64,
@@ -3434,9 +3419,9 @@
         {
           "data": {
             "id": "sfzlr924nk",
+            "multiValueSourceId": "7b8ra4xgd2",
             "source": "ahexh5cl7k",
-            "target": "fen4f0y4kq",
-            "multiValueSourceId": "7b8ra4xgd2"
+            "target": "fen4f0y4kq"
           },
           "position": {
             "x": 64,
@@ -3796,9 +3781,9 @@
         {
           "data": {
             "id": "pavapzs6dp",
+            "multiValueSourceId": "9l66hw7n9",
             "source": "yjlk2dkgp3",
-            "target": "dxfpgiqjxh",
-            "multiValueSourceId": "9l66hw7n9"
+            "target": "dxfpgiqjxh"
           },
           "position": {
             "x": 64,
@@ -3816,9 +3801,9 @@
         {
           "data": {
             "id": "26mlt0n95b",
+            "multiValueSourceId": "81ukw8gqdm",
             "source": "yjlk2dkgp3",
-            "target": "c0gnmsoo67",
-            "multiValueSourceId": "81ukw8gqdm"
+            "target": "c0gnmsoo67"
           },
           "position": {
             "x": 64,
@@ -3950,9 +3935,9 @@
         {
           "data": {
             "id": "35py5a9m1y",
+            "multiValueSourceId": "0j7uholce1",
             "source": "ahexh5cl7k",
-            "target": "wfw1rdl4hh",
-            "multiValueSourceId": "0j7uholce1"
+            "target": "wfw1rdl4hh"
           },
           "position": {
             "x": 64,
@@ -4255,9 +4240,9 @@
         {
           "data": {
             "id": "ugz7netlj1",
+            "multiValueSourceId": "gkv4zoqlka",
             "source": "ahexh5cl7k",
-            "target": "zeef9f8g4a",
-            "multiValueSourceId": "gkv4zoqlka"
+            "target": "zeef9f8g4a"
           },
           "position": {
             "x": 64,
@@ -4294,9 +4279,9 @@
         {
           "data": {
             "id": "dyhowb52qo",
+            "multiValueSourceId": "7e24azuyrr",
             "source": "ahexh5cl7k",
-            "target": "ndzkrlk0er",
-            "multiValueSourceId": "7e24azuyrr"
+            "target": "ndzkrlk0er"
           },
           "position": {
             "x": 64,
@@ -4625,30 +4610,15 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1713884606109,
+  "savedDate": 1715882225241,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1711379812348,
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1711103267292,
+      "createdDate": 1714509958362,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": null,
+        "displayName": "Internal variable",
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -4656,52 +4626,50 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711720090766,
+      "createdDate": 1714509959140,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
         "displayName": "Consent (agreement in PingOne)",
-        "value": "false",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "updatedDate": 1712683458076,
-      "visibility": "private",
-      "name": "gv-agreement##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
-      "context": "company",
-      "createdDate": 1711719356493,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "boolean",
-        "displayName": "Auto enroll users email during user registration",
         "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1713802039356,
       "visibility": "private",
-      "name": "gv-autoEnrollEmailMFA##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "name": "gv-agreement##SK##company",
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711103268340,
+      "createdDate": 1714509965739,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "fields": {
+        "type": "boolean",
+        "displayName": "Determins whether email should be auto enrolled in MFA",
+        "value": "true",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "gv-autoEnrollEmailMFA##SK##company",
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+    },
+    {
+      "context": "company",
+      "createdDate": 1714509962969,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
         "displayName": "The ID of the Facebook External IDP",
-        "value": "N/A",
+        "value": "453119c4-6839-4ba7-b1c3-6fb254bb1046",
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -4709,16 +4677,16 @@
       "type": "property",
       "visibility": "private",
       "name": "gv-facebookExternalIdpId##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711103267870,
+      "createdDate": 1714509941328,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
         "displayName": "The ID of the Google External IDP",
-        "value": "573e6e5f-69ce-4a6c-8ba9-d92ae8b47ddc",
+        "value": "841519eb-8322-4774-b4ff-a8dc03b61c1f",
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -4726,29 +4694,28 @@
       "type": "property",
       "visibility": "private",
       "name": "gv-googleExternalIdpId##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711103267854,
+      "createdDate": 1714509960759,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
         "displayName": "Population ID from PingOne",
-        "value": "bb594de6-f63c-46f7-8e5a-7530cb9c711f",
+        "value": "8df8d7f8-37d0-4bf7-a869-9e38fe87c876",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "type": "property",
-      "updatedDate": 1713802091113,
       "visibility": "private",
       "name": "gv-p1PopulationId##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711103264292,
+      "createdDate": 1714509965485,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
@@ -4760,7 +4727,7 @@
       "type": "property",
       "visibility": "private",
       "name": "gv-runMFAforSocial##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     }
   ],
   "connections": []

@@ -1,5 +1,5 @@
 {
-  "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18",
+  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
@@ -14,11 +14,11 @@
     "variablesConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1712680015004,
-  "currentVersion": 6,
+  "createdDate": 1715877936178,
+  "currentVersion": 5,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1712680077155,
-  "description": "Imported on Fri Mar 01 2024 21:47:10 GMT+0000 (Coordinated Universal Time)",
+  "deployedDate": 1715877937538,
+  "description": "Imported on Tue Apr 30 2024 20:46:37 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -63,7 +63,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Davinci Custom Magic Link registration subflow",
-  "publishedVersion": 6,
+  "publishedVersion": 5,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -77,25 +77,23 @@
     "flowHttpTimeoutInSeconds": 45,
     "flowTimeoutInSeconds": 12000,
     "jsLinks": [],
-    "logLevel": 3,
+    "logLevel": 2,
     "scrubSensitiveInfo": false,
     "useBetaAlgorithm": true,
     "useCustomCSS": true,
     "useCustomScript": false
   },
   "timeouts": "null",
-  "trigger": {},
-  "updatedDate": 1712680077157,
-  "flowId": "af65b0426d5e2d4d1ea93502d35f82ed",
-  "versionId": 6,
+  "updatedDate": 1715877937580,
+  "flowId": "d3308b9803c90739050ec82f4cb60bae",
+  "versionId": 5,
   "graphData": {
     "elements": {
       "nodes": [
         {
           "data": {
             "id": "zv9k30dslp",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1274.8400478436868,
@@ -112,15 +110,13 @@
         },
         {
           "data": {
-            "id": "w9wzxxn1e0",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "w9wzxxn1e0",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#c0dcfdff"
@@ -180,7 +176,9 @@
               "validationRules": {
                 "value": []
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 745.9182646001274,
@@ -197,15 +195,13 @@
         },
         {
           "data": {
-            "id": "zsk0ny89ud",
-            "nodeType": "CONNECTION",
+            "capabilityName": "oobStart",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
-            "name": "Flow Connector",
+            "id": "zsk0ny89ud",
             "label": "Flow Connector",
-            "status": "configured",
-            "capabilityName": "oobStart",
-            "type": "trigger",
+            "name": "Flow Connector",
+            "nodeType": "CONNECTION",
             "properties": {
               "challengeExpiry": {
                 "value": 150
@@ -213,7 +209,9 @@
               "nodeTitle": {
                 "value": "Create Magic Link"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1459.9626719789323,
@@ -230,20 +228,20 @@
         },
         {
           "data": {
-            "id": "hhwhmetaid",
-            "nodeType": "CONNECTION",
+            "capabilityName": "oobContinue",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
-            "name": "Flow Connector",
+            "id": "hhwhmetaid",
             "label": "Flow Connector",
-            "status": "configured",
-            "capabilityName": "oobContinue",
-            "type": "action",
+            "name": "Flow Connector",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "Continue Out of Band"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1459.9626719789323,
@@ -261,9 +259,8 @@
         {
           "data": {
             "id": "65s242z206",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1592.1931177898223,
@@ -281,9 +278,8 @@
         {
           "data": {
             "id": "ln2n5kqqb8",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1592.1931177898223,
@@ -300,15 +296,13 @@
         },
         {
           "data": {
-            "id": "ebtd5fr0tn",
-            "nodeType": "CONNECTION",
+            "capabilityName": "updateChallenge",
             "connectionId": "94cb18cc8ee6ddaf28e881b16637aec6",
             "connectorId": "challengeConnector",
-            "name": "Challenge",
+            "id": "ebtd5fr0tn",
             "label": "Challenge",
-            "status": "configured",
-            "capabilityName": "updateChallenge",
-            "type": "action",
+            "name": "Challenge",
+            "nodeType": "CONNECTION",
             "properties": {
               "challenge": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"challenge\",\n        \"data\": \"{{local.hhwhmetaid.payload.output.challenge}}\",\n        \"tooltip\": \"{{local.hhwhmetaid.payload.output.challenge}}\",\n        \"children\": [\n          {\n            \"text\": \"challenge\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -333,7 +327,9 @@
               "nodeTitle": {
                 "value": "Approve Challenge Status"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2464.9140601416957,
@@ -351,8 +347,8 @@
         {
           "data": {
             "id": "drn0tajuo1",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "undefined": {
                 "value": "anyTriggersFalse"
@@ -409,15 +405,13 @@
         },
         {
           "data": {
-            "id": "fetjewgnk5",
-            "nodeType": "CONNECTION",
+            "capabilityName": "sendEmail",
             "connectionId": "cacf3d2861657174d93cbf445d55797a",
             "connectorId": "notificationsConnector",
-            "name": "PingOne Notifications",
+            "id": "fetjewgnk5",
             "label": "PingOne Notifications",
-            "status": "configured",
-            "capabilityName": "sendEmail",
-            "type": "action",
+            "name": "PingOne Notifications",
+            "nodeType": "CONNECTION",
             "properties": {
               "customTemplateVariant": {
                 "value": "{}"
@@ -453,7 +447,9 @@
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"userId\",\n        \"data\": \"{{global.parameters.userId}}\",\n        \"tooltip\": \"{{global.parameters.userId}}\",\n        \"children\": [\n          {\n            \"text\": \"userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1777.315741925068,
@@ -470,15 +466,13 @@
         },
         {
           "data": {
-            "id": "6pm68xyuuo",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "6pm68xyuuo",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createSuccessResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#9dc967ff"
@@ -506,7 +500,9 @@
               "nodeTitle": {
                 "value": "Return Success Response"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 679.2422720355587,
@@ -524,8 +520,8 @@
         {
           "data": {
             "id": "2ynekjzhbj",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "undefined": {
                 "value": "anyTriggersFalse"
@@ -547,15 +543,13 @@
         },
         {
           "data": {
-            "id": "z80t8d8glj",
-            "nodeType": "CONNECTION",
+            "capabilityName": "getChallenge",
             "connectionId": "94cb18cc8ee6ddaf28e881b16637aec6",
             "connectorId": "challengeConnector",
-            "name": "Challenge",
+            "id": "z80t8d8glj",
             "label": "Challenge [2023-02-06]",
-            "status": "configured",
-            "capabilityName": "getChallenge",
-            "type": "action",
+            "name": "Challenge",
+            "nodeType": "CONNECTION",
             "properties": {
               "challenge": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"challenge\",\n        \"data\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"tooltip\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"children\": [\n          {\n            \"text\": \"challenge\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -563,7 +557,9 @@
               "nodeTitle": {
                 "value": "Check Challenge Status"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2464.9140601416957,
@@ -581,8 +577,8 @@
         {
           "data": {
             "id": "qcxgcbyy02",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "2nagahrwxs": {
                 "value": "anyTriggersFalse"
@@ -607,15 +603,13 @@
         },
         {
           "data": {
-            "id": "qvn5tw6kbc",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "qvn5tw6kbc",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"challenge.svg\",\n        \"url\": \"challengeStatus\",\n        \"data\": \"{{local.z80t8d8glj.payload.output.challengeStatus}}\",\n        \"tooltip\": \"{{local.z80t8d8glj.payload.output.challengeStatus}}\",\n        \"children\": [\n          {\n            \"text\": \"challengeStatus\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -638,7 +632,9 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2861.6053975743653,
@@ -655,15 +651,13 @@
         },
         {
           "data": {
-            "id": "fhoue68esb",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "fhoue68esb",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "challenge": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"challenge\",\n        \"data\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"tooltip\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"children\": [\n          {\n            \"text\": \"challenge\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -695,7 +689,9 @@
               "title": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Magic Link Polling\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2094.668811871204,
@@ -735,15 +731,13 @@
         },
         {
           "data": {
-            "id": "cb5wbngwml",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "cb5wbngwml",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -763,7 +757,9 @@
               "nodeTitle": {
                 "value": "Return Error Response"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 679.2422720355587,
@@ -780,15 +776,13 @@
         },
         {
           "data": {
-            "id": "c9rl5wctez",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Node",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "c9rl5wctez",
+            "label": "Node",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t}\n\t}\n}"
@@ -796,7 +790,9 @@
               "nodeTitle": {
                 "value": "Error"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 317.3871715634575,
@@ -814,8 +810,7 @@
         {
           "data": {
             "id": "g1fs3uznfh",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 472.46792890864367,
@@ -832,14 +827,12 @@
         },
         {
           "data": {
-            "id": "13wbirg2jw",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "13wbirg2jw",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "return error"
@@ -865,7 +858,9 @@
               "width": {
                 "value": 550
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 214,
@@ -883,8 +878,7 @@
         {
           "data": {
             "id": "r20nxc61oc",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 472.46792890864367,
@@ -901,15 +895,13 @@
         },
         {
           "data": {
-            "id": "v9e53rljmv",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "v9e53rljmv",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"pingOneUserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"pingOneUserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"pingOneUserId\"\n\t\t},\n\t\t\"sublfowResult\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"sublfowResult\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"sublfowResult\"\n\t\t}\n\t}\n}"
@@ -917,7 +909,9 @@
               "nodeTitle": {
                 "value": "Success "
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 317.3871715634575,
@@ -934,15 +928,13 @@
         },
         {
           "data": {
-            "id": "gy5df5u07u",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "gy5df5u07u",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "authMethod": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"authMethod\",\n        \"data\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"tooltip\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"children\": [\n          {\n            \"text\": \"authMethod\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -959,7 +951,9 @@
               "rememberMe": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"rememberMe\",\n        \"data\": \"{{local.7vpjww2ek2.payload.output.rememberMe}}\",\n        \"tooltip\": \"{{local.7vpjww2ek2.payload.output.rememberMe}}\",\n        \"children\": [\n          {\n            \"text\": \"rememberMe\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2094.668811871204,
@@ -976,15 +970,13 @@
         },
         {
           "data": {
-            "id": "z86jockb1t",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "z86jockb1t",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsMultipleB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "caseSensitive": {
                 "value": false
@@ -1007,7 +999,9 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1116.163512870619,
@@ -1025,8 +1019,7 @@
         {
           "data": {
             "id": "m2p5qnib8n",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 904.5947995731952,
@@ -1043,15 +1036,13 @@
         },
         {
           "data": {
-            "id": "i57cwf2jh5",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "i57cwf2jh5",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "authMethod": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"authMethod\",\n        \"data\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"tooltip\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"children\": [\n          {\n            \"text\": \"authMethod\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1068,7 +1059,9 @@
               "sublfowResult": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"deviceSelection\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1407.0704936545765,
@@ -1086,8 +1079,7 @@
         {
           "data": {
             "id": "4ry973ap9g",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1221.9478695193307,
@@ -1104,15 +1096,13 @@
         },
         {
           "data": {
-            "id": "2nagahrwxs",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "2nagahrwxs",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "authMethod": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"authMethod\",\n        \"data\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"tooltip\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"children\": [\n          {\n            \"text\": \"authMethod\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1129,7 +1119,9 @@
               "rememberMe": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"rememberMe\",\n        \"data\": \"{{local.7vpjww2ek2.payload.output.rememberMe}}\",\n        \"tooltip\": \"{{local.7vpjww2ek2.payload.output.rememberMe}}\",\n        \"children\": [\n          {\n            \"text\": \"rememberMe\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 3548.236282921504,
@@ -1146,15 +1138,13 @@
         },
         {
           "data": {
-            "id": "31jujh5ubp",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "31jujh5ubp",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "authMethod": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"authMethod\",\n        \"data\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"tooltip\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"children\": [\n          {\n            \"text\": \"authMethod\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1171,7 +1161,9 @@
               "rememberMe": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"rememberMe\",\n        \"data\": \"{{local.7vpjww2ek2.payload.output.rememberMe}}\",\n        \"tooltip\": \"{{local.7vpjww2ek2.payload.output.rememberMe}}\",\n        \"children\": [\n          {\n            \"text\": \"rememberMe\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2861.6053975743653,
@@ -1189,8 +1181,7 @@
         {
           "data": {
             "id": "rbbahd8wkk",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 3341.461939794589,
@@ -1207,15 +1198,13 @@
         },
         {
           "data": {
-            "id": "exmvyabfps",
-            "nodeType": "CONNECTION",
+            "capabilityName": "getChallenge",
             "connectionId": "94cb18cc8ee6ddaf28e881b16637aec6",
             "connectorId": "challengeConnector",
-            "name": "Challenge",
+            "id": "exmvyabfps",
             "label": "Challenge [2023-02-06]",
-            "status": "configured",
-            "capabilityName": "getChallenge",
-            "type": "action",
+            "name": "Challenge",
+            "nodeType": "CONNECTION",
             "properties": {
               "challenge": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"challenge\",\n        \"data\": \"{{local.hhwhmetaid.payload.output.challenge}}\",\n        \"tooltip\": \"{{local.hhwhmetaid.payload.output.challenge}}\",\n        \"children\": [\n          {\n            \"text\": \"challenge\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1223,7 +1212,9 @@
               "nodeTitle": {
                 "value": "Check Challenge Status"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1777.315741925068,
@@ -1241,8 +1232,7 @@
         {
           "data": {
             "id": "9rfeo7c8cp",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1883.1000985737799,
@@ -1259,15 +1249,13 @@
         },
         {
           "data": {
-            "id": "jdrbqfg1mz",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "jdrbqfg1mz",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"challenge.svg\",\n        \"url\": \"challengeStatus\",\n        \"data\": \"{{local.exmvyabfps.payload.output.challengeStatus}}\",\n        \"tooltip\": \"{{local.exmvyabfps.payload.output.challengeStatus}}\",\n        \"children\": [\n          {\n            \"text\": \"challengeStatus\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1290,7 +1278,9 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2094.668811871204,
@@ -1333,15 +1323,13 @@
         },
         {
           "data": {
-            "id": "si1p71skgq",
-            "nodeType": "CONNECTION",
+            "capabilityName": "updateChallenge",
             "connectionId": "94cb18cc8ee6ddaf28e881b16637aec6",
             "connectorId": "challengeConnector",
-            "name": "Challenge",
+            "id": "si1p71skgq",
             "label": "Challenge",
-            "status": "configured",
-            "capabilityName": "updateChallenge",
-            "type": "action",
+            "name": "Challenge",
+            "nodeType": "CONNECTION",
             "properties": {
               "challenge": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"challenge\",\n        \"data\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"tooltip\": \"{{local.zsk0ny89ud.payload.output.challenge}}\",\n        \"children\": [\n          {\n            \"text\": \"challenge\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1352,7 +1340,9 @@
               "nodeTitle": {
                 "value": "Deny Challenge After Expiration"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 3178.9584675205006,
@@ -1369,15 +1359,13 @@
         },
         {
           "data": {
-            "id": "i8unidj14v",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "i8unidj14v",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "authMethod": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"authMethod\",\n        \"data\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"tooltip\": \"{{local.dp43hy7h76.payload.output.authMethod}}\",\n        \"children\": [\n          {\n            \"text\": \"authMethod\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1394,7 +1382,9 @@
               "sublfowResult": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"complete\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 3231.8506458448564,
@@ -1411,14 +1401,12 @@
         },
         {
           "data": {
-            "id": "nf6j16tnqn",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "nf6j16tnqn",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "return success"
@@ -1444,7 +1432,9 @@
               "width": {
                 "value": 550
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 214,
@@ -1461,14 +1451,12 @@
         },
         {
           "data": {
-            "id": "ax7t6gzat3",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "ax7t6gzat3",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Challenge Expiration"
@@ -1494,7 +1482,9 @@
               "width": {
                 "value": 550
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 3073.174110871789,
@@ -1511,14 +1501,12 @@
         },
         {
           "data": {
-            "id": "z81fjw07a8",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "z81fjw07a8",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Create Challenge And Send Email"
@@ -1544,7 +1532,9 @@
               "width": {
                 "value": 550
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1273.7185085254391,
@@ -1561,14 +1551,12 @@
         },
         {
           "data": {
-            "id": "948smm7uc7",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "948smm7uc7",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Display Magic Link Form"
@@ -1594,7 +1582,9 @@
               "width": {
                 "value": 880
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 317.3871715634575,
@@ -1611,14 +1601,12 @@
         },
         {
           "data": {
-            "id": "o6k45l39kf",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "o6k45l39kf",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Display Magic Link Polling And Check For Challenge Status"
@@ -1644,7 +1632,9 @@
               "width": {
                 "value": 880
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1971.581916578777,
@@ -1661,14 +1651,12 @@
         },
         {
           "data": {
-            "id": "ie28rtwly2",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "ie28rtwly2",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Show Success Message"
@@ -1694,7 +1682,9 @@
               "width": {
                 "value": 550
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2979.6068393224878,
@@ -1711,14 +1701,12 @@
         },
         {
           "data": {
-            "id": "7vlk0o6vvj",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "7vlk0o6vvj",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Challenge Acceptance By The User"
@@ -1744,7 +1732,9 @@
               "width": {
                 "value": 1600
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1407.0704936545765,
@@ -1761,15 +1751,13 @@
         },
         {
           "data": {
-            "id": "q0fmrxj1nc",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "q0fmrxj1nc",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -1827,7 +1815,9 @@
               "validationRules": {
                 "value": []
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2490,
@@ -1844,15 +1834,13 @@
         },
         {
           "data": {
-            "id": "ngsri5vv2w",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "ngsri5vv2w",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "customCSS": {
                 "value": "@import \"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\";"
@@ -1911,7 +1899,9 @@
               "validationRules": {
                 "value": []
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2782.267130087831,
@@ -1928,15 +1918,13 @@
         },
         {
           "data": {
-            "id": "6zyixweml",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createDevice",
             "connectionId": "b72bd44e6be8180bd5988ac74cd9c949",
             "connectorId": "pingOneMfaConnector",
-            "name": "PingOne MFA",
+            "id": "6zyixweml",
             "label": "PingOne MFA - nuka",
-            "status": "configured",
-            "capabilityName": "createDevice",
-            "type": "action",
+            "name": "PingOne MFA",
+            "nodeType": "CONNECTION",
             "properties": {
               "customDeviceType": {
                 "value": "{}"
@@ -1974,7 +1962,9 @@
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"userId\",\n        \"data\": \"{{global.parameters.userId}}\",\n        \"tooltip\": \"{{global.parameters.userId}}\",\n        \"children\": [\n          {\n            \"text\": \"userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2333.4370170508787,
@@ -2017,15 +2007,13 @@
         },
         {
           "data": {
-            "id": "c6gaes532j",
-            "nodeType": "CONNECTION",
+            "capabilityName": "activateDevice",
             "connectionId": "b72bd44e6be8180bd5988ac74cd9c949",
             "connectorId": "pingOneMfaConnector",
-            "name": "PingOne MFA",
+            "id": "c6gaes532j",
             "label": "PingOne MFA - nuka",
-            "status": "configured",
-            "capabilityName": "activateDevice",
-            "type": "action",
+            "name": "PingOne MFA",
+            "nodeType": "CONNECTION",
             "properties": {
               "challenge": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"moustache\",\n        \"data\": \"{{local.50xc2r1gmt.payload.output.passcode}}\",\n        \"name\": \"passcode\",\n        \"children\": [\n          {\n            \"text\": \"\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2045,7 +2033,9 @@
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"userId\",\n        \"data\": \"{{global.parameters.userId}}\",\n        \"tooltip\": \"{{global.parameters.userId}}\",\n        \"children\": [\n          {\n            \"text\": \"userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1036.825245384085,
@@ -2062,15 +2052,13 @@
         },
         {
           "data": {
-            "id": "1dm16r1apk",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "1dm16r1apk",
             "label": "Error Customize",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorCode": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"code\",\n        \"data\": \"{{local.c6gaes532j.payload.error.code}}\",\n        \"tooltip\": \"{{local.c6gaes532j.payload.error.code}}\",\n        \"children\": [\n          {\n            \"text\": \"code\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2084,7 +2072,9 @@
               "nodeTitle": {
                 "value": "invalid OTP "
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1645.0852961141782,
@@ -2101,15 +2091,13 @@
         },
         {
           "data": {
-            "id": "snnepiag44",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "snnepiag44",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsMultipleB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"code\",\n        \"data\": \"{{local.c6gaes532j.payload.error.code}}\",\n        \"tooltip\": \"{{local.c6gaes532j.payload.error.code}}\",\n        \"children\": [\n          {\n            \"text\": \"code\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2125,7 +2113,9 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1380.6244044923985,
@@ -2143,8 +2133,7 @@
         {
           "data": {
             "id": "b6nla7571c",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1500,
@@ -2162,8 +2151,7 @@
         {
           "data": {
             "id": "3dbunytrw6",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1500,
@@ -2180,15 +2168,13 @@
         },
         {
           "data": {
-            "id": "0zunierz3f",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "0zunierz3f",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "Update Method ID"
@@ -2205,7 +2191,9 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2617.7517388503866,
@@ -2248,14 +2236,12 @@
         },
         {
           "data": {
-            "id": "h86b073g5r",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "h86b073g5r",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Create OTP device"
@@ -2281,7 +2267,9 @@
               "width": {
                 "value": 800
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1919.8883307970484,
@@ -2298,15 +2286,13 @@
         },
         {
           "data": {
-            "id": "fyh3s5z3r4",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "fyh3s5z3r4",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "Error Message": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.6zyixweml.payload.error.message}}\",\n        \"tooltip\": \"{{local.6zyixweml.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2317,7 +2303,9 @@
               "nodeInstanceId": {
                 "value": "c9rl5wctez"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2591.904945959522,
@@ -2335,9 +2323,8 @@
         {
           "data": {
             "id": "mcrlhjci8u",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 2126.6626739239637,
@@ -2354,15 +2341,13 @@
         },
         {
           "data": {
-            "id": "14e5ewe3gd",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "14e5ewe3gd",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"Country Code\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Country Code\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"Country Code\"\n\t\t},\n\t\t\"Phone Number\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Phone Number\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"Phone Number\"\n\t\t},\n\t\t\"deviceType\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"deviceType\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"deviceType\"\n\t\t},\n\t\t\"email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"email\"\n\t\t}\n\t}\n}"
@@ -2370,7 +2355,9 @@
               "nodeTitle": {
                 "value": "Start OTP Method"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1997.4287094696415,
@@ -2388,9 +2375,8 @@
         {
           "data": {
             "id": "yq7bjmltyp",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 825.2565320866613,
@@ -2407,15 +2393,13 @@
         },
         {
           "data": {
-            "id": "ogxjk25m7p",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "ogxjk25m7p",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "inputSchema": {
                 "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\n\t\t\"verifyCode\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"verifyCode\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"verifyCode\"\n\t\t}\n\t}\n}"
@@ -2423,7 +2407,9 @@
               "nodeTitle": {
                 "value": "Activate OTP"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 719.4721754379494,
@@ -2440,15 +2426,13 @@
         },
         {
           "data": {
-            "id": "frphuef4v2",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "frphuef4v2",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "deviceType": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"type\",\n        \"data\": \"{{local.c6gaes532j.payload.output.device.type}}\",\n        \"tooltip\": \"{{local.c6gaes532j.payload.output.device.type}}\",\n        \"children\": [\n          {\n            \"text\": \"type\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2462,7 +2446,9 @@
               "sublfowResult": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"success\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1380.6244044923985,
@@ -2479,15 +2465,13 @@
         },
         {
           "data": {
-            "id": "neuak8263o",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "neuak8263o",
             "label": "Error Customize",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.c6gaes532j.payload.error.message}}\",\n        \"tooltip\": \"{{local.c6gaes532j.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2495,7 +2479,9 @@
               "nodeTitle": {
                 "value": "Error from activate OTP"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1645.0852961141782,
@@ -2512,14 +2498,12 @@
         },
         {
           "data": {
-            "id": "myifmlfa0z",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "myifmlfa0z",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Activate OTP flow"
@@ -2545,7 +2529,9 @@
               "width": {
                 "value": 1000
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 640.1339079514155,
@@ -2562,14 +2548,12 @@
         },
         {
           "data": {
-            "id": "9wxkshx23r",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "9wxkshx23r",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Create OTP device"
@@ -2601,7 +2585,9 @@
               "width": {
                 "value": 240
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2178.3562597056925,
@@ -2618,14 +2604,12 @@
         },
         {
           "data": {
-            "id": "y5yqaj3eml",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "y5yqaj3eml",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Start OTP registration flow"
@@ -2657,7 +2641,9 @@
               "width": {
                 "value": 240
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1868.1947450153198,
@@ -2674,14 +2660,12 @@
         },
         {
           "data": {
-            "id": "777klmms5a",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "777klmms5a",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Update method ID"
@@ -2713,7 +2697,9 @@
               "width": {
                 "value": 240
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2488.517774396065,
@@ -2730,14 +2716,12 @@
         },
         {
           "data": {
-            "id": "22bdgxgq8b",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "22bdgxgq8b",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "OTP validation"
@@ -2769,7 +2753,9 @@
               "width": {
                 "value": 240
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 904.5947995731952,
@@ -2786,14 +2772,12 @@
         },
         {
           "data": {
-            "id": "5dq10uvh0s",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "5dq10uvh0s",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Invalid OTP error"
@@ -2825,7 +2809,9 @@
               "width": {
                 "value": 240
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1512.8548503032885,
@@ -2842,14 +2828,12 @@
         },
         {
           "data": {
-            "id": "ey7qkqrj4j",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "ey7qkqrj4j",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Input Schema: None"
@@ -2881,7 +2865,9 @@
               "width": {
                 "value": 400
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 613.6878187892376,
@@ -2898,15 +2884,13 @@
         },
         {
           "data": {
-            "id": "pr7clqgb1r",
-            "nodeType": "CONNECTION",
+            "capabilityName": "userLookup",
             "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
             "connectorId": "pingOneSSOConnector",
-            "name": "PingOne",
+            "id": "pr7clqgb1r",
             "label": "PingOne",
-            "status": "configured",
-            "capabilityName": "userLookup",
-            "type": "action",
+            "name": "PingOne",
+            "nodeType": "CONNECTION",
             "properties": {
               "matchAttributes": {
                 "value": [
@@ -2916,7 +2900,9 @@
               "userIdentifierForFindUser": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1620,
@@ -2933,23 +2919,23 @@
         },
         {
           "data": {
-            "id": "gfpyh9psn8",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "gfpyh9psn8",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "Start"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 570,
+            "x": 540,
             "y": 330
           },
           "group": "nodes",
@@ -2963,20 +2949,20 @@
         },
         {
           "data": {
-            "id": "eqnz17l0df",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "eqnz17l0df",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "v9e53rljmv"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 3263.921561121996,
@@ -2994,9 +2980,8 @@
         {
           "data": {
             "id": "saaxqrfxw2",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 2772.8324961955727,
@@ -3013,15 +2998,13 @@
         },
         {
           "data": {
-            "id": "bysnusr0lm",
-            "nodeType": "CONNECTION",
+            "capabilityName": "updateUser",
             "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
             "connectorId": "pingOneSSOConnector",
-            "name": "PingOne",
+            "id": "bysnusr0lm",
             "label": "PingOne",
-            "status": "configured",
-            "capabilityName": "updateUser",
-            "type": "action",
+            "name": "PingOne",
+            "nodeType": "CONNECTION",
             "properties": {
               "additionalUserProperties": {
                 "value": [
@@ -3035,7 +3018,9 @@
               "identifier": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"userId\",\n        \"data\": \"{{global.parameters.userId}}\",\n        \"tooltip\": \"{{global.parameters.userId}}\",\n        \"children\": [\n          {\n            \"text\": \"userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2953.7600464316233,
@@ -3075,15 +3060,13 @@
         },
         {
           "data": {
-            "id": "sjsom1jwve",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "sjsom1jwve",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "buttonLabel": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
@@ -3179,10 +3162,12 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 870,
+            "x": 840,
             "y": 330
           },
           "group": "nodes",
@@ -3197,11 +3182,10 @@
         {
           "data": {
             "id": "xfza8lzaok",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 720,
+            "x": 690,
             "y": 330
           },
           "group": "nodes",
@@ -3216,9 +3200,8 @@
         {
           "data": {
             "id": "ln18rexmaz",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 560.7956404648816,
@@ -3235,20 +3218,20 @@
         },
         {
           "data": {
-            "id": "6qro5f0td4",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "startNode",
-            "type": "trigger",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "6qro5f0td4",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "Magic Link start"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 402.1191054918138,
@@ -3266,9 +3249,8 @@
         {
           "data": {
             "id": "2nqcaqzrmx",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1770,
@@ -3285,20 +3267,20 @@
         },
         {
           "data": {
-            "id": "jt2i9z3v4m",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "jt2i9z3v4m",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "6qro5f0td4"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1980,
@@ -3315,14 +3297,12 @@
         },
         {
           "data": {
-            "id": "fzxre1q2cq",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "fzxre1q2cq",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Magic Link registration"
@@ -3348,7 +3328,9 @@
               "width": {
                 "value": 1800
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 527.7660355456782,
@@ -3366,12 +3348,11 @@
         {
           "data": {
             "id": "jo3mnqhcc9",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1020,
+            "x": 990,
             "y": 330
           },
           "group": "nodes",
@@ -3385,15 +3366,13 @@
         },
         {
           "data": {
-            "id": "4aeg9klrx1",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "4aeg9klrx1",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsMultipleB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "caseSensitive": {
                 "value": false
@@ -3412,8 +3391,13 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "nodeTitle": {
+                "value": "Check button pushed"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1140,
@@ -3431,8 +3415,7 @@
         {
           "data": {
             "id": "j3xcm2cl26",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1380,
@@ -3450,9 +3433,8 @@
         {
           "data": {
             "id": "5vn5l7pzwp",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1290,
@@ -3469,15 +3451,13 @@
         },
         {
           "data": {
-            "id": "saxkyvux29",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "saxkyvux29",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -3496,7 +3476,9 @@
               "nodeTitle": {
                 "value": "Return to Authentication selection"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1470,
@@ -3513,15 +3495,13 @@
         },
         {
           "data": {
-            "id": "qlu5am1jz4",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "qlu5am1jz4",
             "label": "Error Customize",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorCode": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
@@ -3541,7 +3521,9 @@
               "nodeTitle": {
                 "value": "Received an unexpected value"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1470,
@@ -3559,8 +3541,7 @@
         {
           "data": {
             "id": "6ont4zuyq7",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1290,
@@ -3577,15 +3558,13 @@
         },
         {
           "data": {
-            "id": "pay90byhp2",
-            "nodeType": "CONNECTION",
-            "connectionId": "e7eae662d2ca276e4c6f097fc36a3bb1",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Teleport",
-            "status": "configured",
             "capabilityName": "goToNode",
-            "type": "action",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "pay90byhp2",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Update user failed\"\n      }\n    ]\n  }\n]"
@@ -3593,7 +3572,9 @@
               "nodeInstanceId": {
                 "value": "c9rl5wctez"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 3303,
@@ -3610,15 +3591,13 @@
         },
         {
           "data": {
-            "id": "3t7ihpu2ct",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "3t7ihpu2ct",
             "label": "Error Customize",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorCode": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
@@ -3638,7 +3617,9 @@
               "nodeTitle": {
                 "value": "Received an unexpected value"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1170,
@@ -3656,8 +3637,7 @@
         {
           "data": {
             "id": "fik9lxoxae",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 990,
@@ -3772,9 +3752,9 @@
         {
           "data": {
             "id": "fc143zf5nt",
+            "multiValueSourceId": "x16aio9wmw",
             "source": "qvn5tw6kbc",
-            "target": "3ma220y2v8",
-            "multiValueSourceId": "x16aio9wmw"
+            "target": "3ma220y2v8"
           },
           "position": {
             "x": 64,
@@ -4153,9 +4133,9 @@
         {
           "data": {
             "id": "lgsif04kl1",
+            "multiValueSourceId": "06n6y4w6fp",
             "source": "snnepiag44",
-            "target": "b6nla7571c",
-            "multiValueSourceId": "06n6y4w6fp"
+            "target": "b6nla7571c"
           },
           "position": {
             "x": 64,
@@ -4439,9 +4419,9 @@
         {
           "data": {
             "id": "71lbtk5tdu",
+            "multiValueSourceId": "-1",
             "source": "snnepiag44",
-            "target": "3dbunytrw6",
-            "multiValueSourceId": "-1"
+            "target": "3dbunytrw6"
           },
           "position": {
             "x": 64,
@@ -4459,9 +4439,9 @@
         {
           "data": {
             "id": "88934pdedi",
+            "multiValueSourceId": "aw94m7u2lh",
             "source": "z86jockb1t",
-            "target": "4ry973ap9g",
-            "multiValueSourceId": "aw94m7u2lh"
+            "target": "4ry973ap9g"
           },
           "position": {
             "x": 64,
@@ -4650,9 +4630,9 @@
         {
           "data": {
             "id": "kdt7qenq1a",
+            "multiValueSourceId": "1uplmn0ljy",
             "source": "z86jockb1t",
-            "target": "zv9k30dslp",
-            "multiValueSourceId": "1uplmn0ljy"
+            "target": "zv9k30dslp"
           },
           "position": {
             "x": 64,
@@ -4841,9 +4821,9 @@
         {
           "data": {
             "id": "qkfbvvyb2p",
+            "multiValueSourceId": "2c2i0ntvqd",
             "source": "4aeg9klrx1",
-            "target": "j3xcm2cl26",
-            "multiValueSourceId": "2c2i0ntvqd"
+            "target": "j3xcm2cl26"
           },
           "position": {
             "x": 64,
@@ -4880,9 +4860,9 @@
         {
           "data": {
             "id": "yktmlyeawq",
+            "multiValueSourceId": "jgt8aqbnu9",
             "source": "4aeg9klrx1",
-            "target": "5vn5l7pzwp",
-            "multiValueSourceId": "jgt8aqbnu9"
+            "target": "5vn5l7pzwp"
           },
           "position": {
             "x": 64,
@@ -4919,9 +4899,9 @@
         {
           "data": {
             "id": "r1ipvn3z2t",
+            "multiValueSourceId": "-1",
             "source": "4aeg9klrx1",
-            "target": "6ont4zuyq7",
-            "multiValueSourceId": "-1"
+            "target": "6ont4zuyq7"
           },
           "position": {
             "x": 64,
@@ -4977,9 +4957,9 @@
         {
           "data": {
             "id": "8qa5yp67sr",
+            "multiValueSourceId": "-1",
             "source": "z86jockb1t",
-            "target": "fik9lxoxae",
-            "multiValueSourceId": "-1"
+            "target": "fik9lxoxae"
           },
           "position": {
             "x": 64,
@@ -5065,15 +5045,15 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1712680014687,
+  "savedDate": 1715877935897,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1711103267292,
+      "createdDate": 1714509958362,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": null,
+        "displayName": "Internal variable",
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -5081,11 +5061,11 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "company",
-      "createdDate": 1711103268169,
+      "createdDate": 1714509958860,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -5098,11 +5078,11 @@
       "type": "property",
       "visibility": "private",
       "name": "gv-companyLogo##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1711103266939,
+      "createdDate": 1714509944389,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -5114,7 +5094,7 @@
       "type": "property",
       "visibility": "private",
       "name": "p1DeviceId##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     }
   ],
   "connections": []

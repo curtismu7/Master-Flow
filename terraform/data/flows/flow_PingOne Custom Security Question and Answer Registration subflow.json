@@ -1,5 +1,5 @@
 {
-  "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18",
+  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
@@ -9,11 +9,11 @@
     "errorConnector",
     "annotationConnector"
   ],
-  "createdDate": 1711379278512,
-  "currentVersion": 8,
+  "createdDate": 1715877496855,
+  "currentVersion": 5,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1711379282601,
-  "description": "Imported on Fri Mar 01 2024 21:47:10 GMT+0000 (Coordinated Universal Time)",
+  "deployedDate": 1715877498644,
+  "description": "Imported on Tue Apr 30 2024 20:47:03 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -36,7 +36,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Custom Security Question and Answer Registration subflow",
-  "publishedVersion": 8,
+  "publishedVersion": 5,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [
@@ -49,24 +49,21 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "trigger": {},
-  "updatedDate": 1711379282602,
-  "flowId": "4703368e87b0425c9fb0b61a040c3b13",
-  "versionId": 8,
+  "updatedDate": 1715877498671,
+  "flowId": "2657f8377c2d838a6658c46ff4184cdf",
+  "versionId": 5,
   "graphData": {
     "elements": {
       "nodes": [
         {
           "data": {
-            "id": "jet072d7hr",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "jet072d7hr",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#afd5ffff"
@@ -148,7 +145,7 @@
                 "value": "Security Q&A Form"
               },
               "questionSet": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"availableQuestions\",\n        \"data\": \"{{global.variables.availableQuestions}}\",\n        \"tooltip\": \"{{global.variables.availableQuestions}}\",\n        \"children\": [\n          {\n            \"text\": \"availableQuestions\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-availableQuestions\",\n        \"data\": \"{{global.company.variables.gv-availableQuestions}}\",\n        \"tooltip\": \"{{global.company.variables.gv-availableQuestions}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-availableQuestions\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "textOne": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Security Questions\"\n      }\n    ]\n  }\n]"
@@ -162,7 +159,9 @@
               "validationRules": {
                 "value": []
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 724,
@@ -179,32 +178,23 @@
         },
         {
           "data": {
-            "id": "zch0qnuu08",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "zch0qnuu08",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "Start - Available Questions"
               },
               "saveVariables": {
-                "value": [
-                  {
-                    "key": 0.5341911149911753,
-                    "label": "availableQuestions (object - flowInstance)",
-                    "name": "availableQuestions",
-                    "nameDefault": "availableQuestions",
-                    "type": "object",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"availableQuestions\",\n        \"data\": \"{{global.company.variables.availableQuestions}}\",\n        \"tooltip\": \"{{global.company.variables.availableQuestions}}\",\n        \"children\": [\n          {\n            \"text\": \"availableQuestions\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-                  }
-                ]
+                "value": []
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 364,
@@ -222,8 +212,7 @@
         {
           "data": {
             "id": "sf8gvstqmg",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 514,
@@ -241,9 +230,8 @@
         {
           "data": {
             "id": "pyd1kocw2k",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 883.5,
@@ -260,15 +248,13 @@
         },
         {
           "data": {
-            "id": "ga5jnwij1v",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customFunction",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "ga5jnwij1v",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "customFunction",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "code": {
                 "value": "// Write your code here\n// Supported language: Javascript \nmodule.exports = a = async ({params}) => {\nfunction generateJson(question1, answer1, question2, answer2, question3, answer3) {\n    const data = {};\n\n    if (question1 !== \"\" && answer1 !== \"\") {\n        data[\"question1\"] = question1;\n        data[\"answer1\"] = answer1;\n    }\n\n    if (question2 !== \"\" && answer2 !== \"\") {\n        data[\"question2\"] = question2;\n        data[\"answer2\"] = answer2;\n    }\n\n    if (question3 !== \"\" && answer3 !== \"\") {\n        data[\"question3\"] = question3;\n        data[\"answer3\"] = answer3;\n    }\n\n    const jsonObject = JSON.stringify(data, null, 2);\n\treturn jsonObject;\n}\nconst resultJson = generateJson(\n    params.question1, params.answer1,\n    params.question2, params.answer2, // Empty strings won't be added to the output JSON\n    params.question3, params.answer3\n);\n\nreturn {'resultJson': resultJson};\n\n}"
@@ -313,7 +299,9 @@
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1354,
@@ -331,9 +319,8 @@
         {
           "data": {
             "id": "76bryumnkk",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1474,
@@ -350,15 +337,13 @@
         },
         {
           "data": {
-            "id": "o672icru4s",
-            "nodeType": "CONNECTION",
+            "capabilityName": "updateUser",
             "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
             "connectorId": "pingOneSSOConnector",
-            "name": "PingOne",
+            "id": "o672icru4s",
             "label": "PingOne",
-            "status": "configured",
-            "capabilityName": "updateUser",
-            "type": "action",
+            "name": "PingOne",
+            "nodeType": "CONNECTION",
             "properties": {
               "additionalUserProperties": {
                 "value": [
@@ -377,7 +362,9 @@
               "identifier": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1624,
@@ -395,8 +382,8 @@
         {
           "data": {
             "id": "3kjyoxlkmd",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "51yr02bu5j": {
                 "value": "anyTriggersFalse"
@@ -418,15 +405,13 @@
         },
         {
           "data": {
-            "id": "tqlfgvxe0k",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "tqlfgvxe0k",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createSuccessResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#9dc967ff"
@@ -446,7 +431,9 @@
               "nodeTitle": {
                 "value": "Success"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1954,
@@ -463,15 +450,13 @@
         },
         {
           "data": {
-            "id": "51yr02bu5j",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "51yr02bu5j",
             "label": "Error Customize",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Error updating user object, please try again\"\n      }\n    ]\n  }\n]"
@@ -479,7 +464,9 @@
               "nodeTitle": {
                 "value": "Error updating user object, please try again"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1954,
@@ -496,15 +483,13 @@
         },
         {
           "data": {
-            "id": "kb1wr4lym9",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsMultipleB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "kb1wr4lym9",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsMultipleB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.jet072d7hr.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.jet072d7hr.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -520,8 +505,13 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "nodeTitle": {
+                "value": "check which button"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1054,
@@ -539,8 +529,7 @@
         {
           "data": {
             "id": "9n1nifnjdi",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1204,
@@ -558,9 +547,8 @@
         {
           "data": {
             "id": "dxqv0fu2d6",
-            "nodeType": "EVAL",
             "label": "Evaluator",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1204,
@@ -577,15 +565,13 @@
         },
         {
           "data": {
-            "id": "si3w2hv48f",
-            "nodeType": "CONNECTION",
+            "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "si3w2hv48f",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
               "backgroundColor": {
                 "value": "#ffc8c1ff"
@@ -604,7 +590,9 @@
               "nodeTitle": {
                 "value": "CANCEL"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1354,
@@ -621,15 +609,13 @@
         },
         {
           "data": {
-            "id": "vj1t33d3in",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "vj1t33d3in",
             "label": "Error Customize",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorCode": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Unexpected password state\"\n      }\n    ]\n  }\n]"
@@ -649,7 +635,9 @@
               "nodeTitle": {
                 "value": "Received an unexpected value"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1384,
@@ -667,8 +655,7 @@
         {
           "data": {
             "id": "vj12wjoddq",
-            "nodeType": "EVAL",
-            "properties": {}
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1219,
@@ -685,14 +672,12 @@
         },
         {
           "data": {
-            "id": "dame9dwe09",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "dame9dwe09",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Question and Answer for MFA"
@@ -718,7 +703,9 @@
               "width": {
                 "value": 1800
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 300,
@@ -735,14 +722,12 @@
         },
         {
           "data": {
-            "id": "vmq8mv16di",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "vmq8mv16di",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "This is JSON in attribute availableQuestions"
@@ -774,7 +759,9 @@
               "width": {
                 "value": 340
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 214,
@@ -791,14 +778,12 @@
         },
         {
           "data": {
-            "id": "ottr9j0xv9",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "ottr9j0xv9",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Which button was pushed"
@@ -830,7 +815,9 @@
               "width": {
                 "value": 240
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 934,
@@ -847,14 +834,12 @@
         },
         {
           "data": {
-            "id": "oj9xi7ecos",
-            "nodeType": "ANNOTATION",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
+            "id": "oj9xi7ecos",
             "name": "Annotation",
-            "status": "configured",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
                 "value": "Update the user at PingOne with new JSON of questions and answers"
@@ -886,7 +871,9 @@
               "width": {
                 "value": 340
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1444,
@@ -1077,9 +1064,9 @@
         {
           "data": {
             "id": "61qvbvdqmx",
+            "multiValueSourceId": "8v50bvs4t1",
             "source": "kb1wr4lym9",
-            "target": "9n1nifnjdi",
-            "multiValueSourceId": "8v50bvs4t1"
+            "target": "9n1nifnjdi"
           },
           "position": {
             "x": 64,
@@ -1116,9 +1103,9 @@
         {
           "data": {
             "id": "x8b34qzb5z",
+            "multiValueSourceId": "a3zl2ssnaa",
             "source": "kb1wr4lym9",
-            "target": "dxqv0fu2d6",
-            "multiValueSourceId": "a3zl2ssnaa"
+            "target": "dxqv0fu2d6"
           },
           "position": {
             "x": 64,
@@ -1155,9 +1142,9 @@
         {
           "data": {
             "id": "bs4q902iwl",
+            "multiValueSourceId": "-1",
             "source": "kb1wr4lym9",
-            "target": "vj12wjoddq",
-            "multiValueSourceId": "-1"
+            "target": "vj12wjoddq"
           },
           "position": {
             "x": 64,
@@ -1221,48 +1208,15 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1711379278077,
+  "savedDate": 1715877496743,
   "variables": [
     {
-      "context": "company",
-      "createdDate": 1711103266511,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "object",
-        "displayName": null,
-        "value": "[         {           \"question\": \"In what city were you born?\"         },         {           \"question\": \"What was the model of your first car?\"         },         {           \"question\": \"What is the name of your first pet?\"         },     \t{                 \t  \"question\": \"What is the name of your favorite teacher?\"         },         {           \"question\": \"What is your mother's maiden name?\"         },          {           \"question\": \"What is the name of the street you grew up on?\"         },          {           \"question\": \"In which year did you graduate from high school?\"         }          ]",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "availableQuestions##SK##company",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
       "context": "flowInstance",
-      "createdDate": 1711103266992,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "object",
-        "displayName": null,
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "type": "property",
-      "visibility": "private",
-      "name": "availableQuestions##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1711103267292,
+      "createdDate": 1714509958362,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
-        "displayName": null,
+        "displayName": "Internal variable",
         "mutable": true,
         "min": 0,
         "max": 2000
@@ -1270,7 +1224,24 @@
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "9ae7d066-0d23-482b-9b8f-4b5e398acf18"
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+    },
+    {
+      "context": "company",
+      "createdDate": 1715877466015,
+      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "fields": {
+        "type": "string",
+        "displayName": "Questions available for Q&A - KBA",
+        "value": "[         {           \"question\": \"In what city were you born?\"         },         {           \"question\": \"What was the model of your first car?\"         },         {           \"question\": \"What is the name of your first pet?\"         },     \t{                 \t  \"question\": \"What is the name of your favorite teacher?\"         },         {           \"question\": \"What is your mother's maiden name?\"         },          {           \"question\": \"What is the name of the street you grew up on?\"         },          {           \"question\": \"In which year did you graduate from high school?\"         }          ]",
+        "min": 0,
+        "max": 2000
+      },
+      "id": "243ccba4-e926-4645-a522-fc2aa0f554c4",
+      "type": "property",
+      "visibility": "private",
+      "name": "gv-availableQuestions##SK##company",
+      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
     }
   ],
   "connections": []
