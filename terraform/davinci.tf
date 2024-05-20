@@ -2338,8 +2338,8 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
   }
 
   subflow_link {
-    id   = davinci_flow.PingOne-reCAPTCHA-v3-subflow.id
-    name = davinci_flow.PingOne-reCAPTCHA-v3-subflow.name
+    id   = davinci_flow.PingOne-SSO-Consent-subflow.id
+    name = davinci_flow.PingOne-SSO-Consent-subflow.name
     replace_import_subflow_id = "ed2f57ca80e0644399461c4b491c0c54"
   }
   subflow_link {
