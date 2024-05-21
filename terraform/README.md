@@ -28,6 +28,8 @@ Navigate to the Roles tab and provide this user with the following permissions.
 > The permissions are configured this way for the internal use case. For example, in a production environment, you would not want to apply DaVinci Administrator permissions at the Organization level, you would select only the environments which should be managed with Terraform and your Terraform Administration environment.
 <img src="https://github.com/curtismu7/Master-Flow/assets/117233001/f2a13a67-b493-44fc-920a-a81bb32a4617" width="300">
 
+Sign in to the PingOne Dock as this user and go through the password reset flow. Once the user's password has been reset, you can log out of the PingOne Dock. If you do not reset their password, you will see errors relating to the user's credentials later.
+
 Keep this environment handy. We will need to get a number of IDs from it later.
 
 ### Install Terraform
