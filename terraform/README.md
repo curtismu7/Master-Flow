@@ -28,7 +28,7 @@ Navigate to the Roles tab and provide this user with the following permissions.
 > The permissions are configured this way for the internal use case. For example, in a production environment, you would not want to apply DaVinci Administrator permissions at the Organization level, you would select only the environments which should be managed with Terraform and your Terraform Administration environment.
 <img src="https://github.com/curtismu7/Master-Flow/assets/117233001/f2a13a67-b493-44fc-920a-a81bb32a4617" width="300">
 
-Sign in to the PingOne Dock as this user and go through the password reset flow. Once the user's password has been reset, you can log out of the PingOne Dock. If you do not reset their password, you will see errors relating to the user's credentials later.
+Navigate to Applications -> Applications, select "PingOne Self-Service - MyAccount", and then choose "Overview". Using the URL from "Home Page URL", sign in as this user and execute a password reset. Once the user's password has been reset, you can log out of the PingOne Dock. If you do not reset their password, you will see errors relating to the user's credentials later.
 
 Keep this environment handy. We will need to get a number of IDs from it later.
 
@@ -49,9 +49,9 @@ Update the `terraform.tfvars` file for your environment. For the default experie
 
 The following variables must be set for your environment:
 
-`worker_id`      - The client id from the worker app in the Terraform Administration environment that you created. \
-`worker_secret`  - The client secret from the worker the Terraform Administration environment that you created. \
-`pingone_environment_id` - The environment ID of the Terraform Administration environment that you created. \
+`worker_id`      - The client id from the worker app in the **Terraform Administration** environment that you created. \
+`worker_secret`  - The client secret from the worker the **Terraform Administration** environment that you created. \
+`pingone_environment_id` - The environment ID of the **Terraform Administration** environment that you created. \
 `region`               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica` \
 `license_id`         - The license ID that you would like to use. If left blank, it will default to the license used for the environment that you created. \
 `admin_user_id`        - The id of the user account that you created. This can be found on the API tab of your user. \
