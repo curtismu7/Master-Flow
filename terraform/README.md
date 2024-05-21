@@ -9,19 +9,28 @@
 
 ### Prerequisites
 
-#### Current Best Practices
-Configure your environment for the PingOne Terraform provider: \
-https://terraform.pingidentity.com/getting-started/pingone/
+#### Configure PingOne
+Create a new PingOne environment with the PingOne SSO and PingOne DaVinci services. Name it whatever you like. Suggestion: **Terrform Administration**. \
+This environment will only be used to allow Terraform to create and manage new environments within PingOne.
+<img src="https://github.com/curtismu7/Master-Flow/assets/117233001/81e61e41-df67-4c3a-ab42-2f9c6855a519" width="300">
 
-Configure your environment for the DaVinci Terraform provider: \
-https://terraform.pingidentity.com/getting-started/davinci/
+In your new environment, create a worker application. Name it whatever you like. Suggestion: **Pingone Terrform Administration**. \
+Enable it.\
+Navigate to the Roles tab and provide it with the following permissions at a minimum. Additional permissions can be provided, but are not necessary. 
+> [!WARNING]
+> The permissions are configured this way for the internal use case. For example, in a production environment, you would not want to apply Environment Administrator permissions at the Organization level, you would select only the environments which should be managed with Terraform and your Terraform Administration environment. 
+<img src="https://github.com/curtismu7/Master-Flow/assets/117233001/4d0a62bc-3c7a-4352-922d-1dd2ca483785" width="300"> 
+<br />
 
-#### Legacy
-> [!CAUTION]
-> Below only works for INTERNAL licenses and assumes that DaVinci is enabled on the Administrators environment, which is not recommended by Product, and will not be an option for customers. This is just a shortcut to keep the number of environments down, but it is probably best to follow the prerequisites above instead.
+In your new environment, create a user. Its email address must be reachable, but its username and all other attributes may be anything you desire. \
+Navigate to the Roles tab and provide this user with the following permissions.
+> [!WARNING]
+> The permissions are configured this way for the internal use case. For example, in a production environment, you would not want to apply DaVinci Administrator permissions at the Organization level, you would select only the environments which should be managed with Terraform and your Terraform Administration environment.
+<img src="https://github.com/curtismu7/Master-Flow/assets/117233001/f2a13a67-b493-44fc-920a-a81bb32a4617" width="300">
 
-Within the Administrators environment of your PingOne organization, create a new Worker application. Name it as you see fit and optionally upload an icon. Enable your Worker application. Navigate to the Roles tab and select the permissions required to create and manage environments and their configurations, as shown in the below screenshot. \
-<img src="https://github.com/kylemoorehead-pingidentity/Master-Flow/blob/main/terraform/images/pingone-console-application-roles.png?raw=true" width="250">
+Navigate to Applications -> Applications, select "PingOne Self-Service - MyAccount", and then choose "Overview". Using the URL from "Home Page URL", sign in as this user and execute a password reset. Once the user's password has been reset, you can log out of the PingOne Dock. If you do not reset their password, you will see errors relating to the user's credentials later.
+
+Keep this environment handy. We will need to get a number of IDs from it later.
 
 ### Install Terraform
 
@@ -31,7 +40,7 @@ Within the Administrators environment of your PingOne organization, create a new
 
 ```bash
 touch ~/Terraform/ && mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/curtismu7/Master-Flow/releases/download/1.1.3/tf-release.zip > tf-release.zip
+curl -L https://github.com/curtismu7/Master-Flow/releases/download/1.1.7-pre.ef4268f/tf-release.zip > tf-release.zip
 unzip ./tf-release.zip && rm ./tf-release.zip
 ```
 
@@ -40,14 +49,14 @@ Update the `terraform.tfvars` file for your environment. For the default experie
 
 The following variables must be set for your environment:
 
-`admin_client_id`      - The client id from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
-`admin_client_secret`  - The client secret from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
-`admin_environment_id` - The environment ID of the Administrators environment. \
+`worker_id`      - The client id from the worker app in the **Terraform Administration** environment that you created. \
+`worker_secret`  - The client secret from the worker the **Terraform Administration** environment that you created. \
+`pingone_environment_id` - The environment ID of the **Terraform Administration** environment that you created. \
 `region`               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica` \
-`license_name`         - Likely `INTERNAL` \
-`dv_admin_id`        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user. \
-`dv_admin_username`    - The username of your admin account within the Administrators environment. \
-`dv_admin_password`    - The password of your admin account within the Administrators environment. \
+`license_id`         - The license ID that you would like to use. If left blank, it will default to the license used for the environment that you created. \
+`admin_user_id`        - The id of the user account that you created. This can be found on the API tab of your user. \
+`admin_username`    - The username of the user account that you created. \
+`admin_password`    - The password of the user account that you created. \
 `organization_id`      - The id of your PingOne organization. \
 
 <details>
@@ -55,14 +64,14 @@ The following variables must be set for your environment:
 
 | Variable Name | Type | Description |
 | --- | --- | --- |
-| admin_client_id | STRING | Required: **TRUE** Default: |
-| admin_client_secret | STRING | Required: **TRUE** Default: |
-| admin_environment_id | STRING | Required: **TRUE** Default: |
+| worker_id | STRING | Required: **TRUE** Default: |
+| worker_secret | STRING | Required: **TRUE** Default: |
+| pingone_environment_id | STRING | Required: **TRUE** Default: |
 | region | STRING | Required: **TRUE** Default: |
 | license_name | STRING | Required: **TRUE** Default: |
-| dv_admin_id | STRING | Required: **TRUE** Default: |
-| dv_admin_username | STRING | Required: **TRUE** Default: |
-| dv_admin_password | STRING | Required: **TRUE** Default: |
+| admin_user_id | STRING | Required: **TRUE** Default: |
+| admin_username | STRING | Required: **TRUE** Default: |
+| admin_password | STRING | Required: **TRUE** Default: |
 | organization_id | STRING | Required: **TRUE** Default: |
 | pingone_agreement_localization_revision_master_flow_agreement_en_now_text | STRING | Default: |
 | davinci_variable_origin_value | STRING | Default: |

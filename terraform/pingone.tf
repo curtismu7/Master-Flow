@@ -2,7 +2,8 @@ resource "pingone_environment" "master_flow_environment" {
   name        = var.environment_name
   description = var.environment_description
   type        = var.environment_type
-  license_id  = data.pingone_licenses.internal_license.ids[0]
+  license_id  = var.license_id != "" ? var.license_id : data.pingone_licenses.internal_license.ids[0]
+
   service {
     type = "SSO"
   }
@@ -22,8 +23,8 @@ resource "pingone_environment" "master_flow_environment" {
 }
 
 resource "pingone_role_assignment_user" "id_admin" {
-  environment_id = var.dv_environment_id != "" ? var.dv_environment_id : var.admin_environment_id
-  user_id        = var.dv_admin_id
+  environment_id = var.pingone_environment_id != "" ? var.pingone_environment_id : var.pingone_environment_id
+  user_id        = var.admin_user_id
   role_id        = data.pingone_role.identity_data_admin.id
 
   scope_environment_id = pingone_environment.master_flow_environment.id
@@ -34,8 +35,8 @@ resource "pingone_role_assignment_user" "id_admin" {
 }
 
 resource "pingone_role_assignment_user" "app_dev" {
-  environment_id = var.dv_environment_id != "" ? var.dv_environment_id : var.admin_environment_id
-  user_id        = var.dv_admin_id
+  environment_id = var.pingone_environment_id != "" ? var.pingone_environment_id : var.pingone_environment_id
+  user_id        = var.admin_user_id
   role_id        = data.pingone_role.client_application_developer.id
 
   scope_environment_id = pingone_environment.master_flow_environment.id
@@ -51,16 +52,8 @@ resource "pingone_role_assignment_user" "app_dev" {
 
 data "pingone_licenses" "internal_license" {
   organization_id = var.organization_id
-
-  data_filter {
-    name   = "package"
-    values = ["${var.license_name}"]
-  }
-
-  data_filter {
-    name   = "status"
-    values = ["ACTIVE"]
-  }
+  # If the license ID is empty, grab the license ID from the TF environment. If the license ID is present, we don't really care, we'll use var.license_id elsewhere. 
+  scim_filter     = var.license_id != "" ? "(status eq \"active\")" : "(status eq \"active\") and (envId eq \"${var.pingone_environment_id}\")"
 }
 
 data "pingone_population" "default_population" {
