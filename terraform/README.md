@@ -40,14 +40,14 @@ Update the `terraform.tfvars` file for your environment. For the default experie
 
 The following variables must be set for your environment:
 
-`admin_client_id`      - The client id from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
-`admin_client_secret`  - The client secret from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
-`admin_environment_id` - The environment ID of the Administrators environment. \
+`worker_id`      - The client id from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
+`worker_secret`  - The client secret from the worker app in your Administrators environment created in [Prerequisites](#prerequisites). \
+`pingone_environment_id` - The environment ID of the Administrators environment. \
 `region`               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica` \
 `license_name`         - Likely `INTERNAL` \
-`dv_admin_id`        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user. \
-`dv_admin_username`    - The username of your admin account within the Administrators environment. \
-`dv_admin_password`    - The password of your admin account within the Administrators environment. \
+`admin_user_id`        - The id of your admin account within the Administrators environment. This can be found on the API tab of your user. \
+`admin_username`    - The username of your admin account within the Administrators environment. \
+`admin_password`    - The password of your admin account within the Administrators environment. \
 `organization_id`      - The id of your PingOne organization. \
 
 <details>
@@ -55,14 +55,14 @@ The following variables must be set for your environment:
 
 | Variable Name | Type | Description |
 | --- | --- | --- |
-| admin_client_id | STRING | Required: **TRUE** Default: |
-| admin_client_secret | STRING | Required: **TRUE** Default: |
-| admin_environment_id | STRING | Required: **TRUE** Default: |
+| worker_id | STRING | Required: **TRUE** Default: |
+| worker_secret | STRING | Required: **TRUE** Default: |
+| pingone_environment_id | STRING | Required: **TRUE** Default: |
 | region | STRING | Required: **TRUE** Default: |
 | license_name | STRING | Required: **TRUE** Default: |
-| dv_admin_id | STRING | Required: **TRUE** Default: |
-| dv_admin_username | STRING | Required: **TRUE** Default: |
-| dv_admin_password | STRING | Required: **TRUE** Default: |
+| admin_user_id | STRING | Required: **TRUE** Default: |
+| admin_username | STRING | Required: **TRUE** Default: |
+| admin_password | STRING | Required: **TRUE** Default: |
 | organization_id | STRING | Required: **TRUE** Default: |
 | pingone_agreement_localization_revision_master_flow_agreement_en_now_text | STRING | Default: |
 | davinci_variable_origin_value | STRING | Default: |
