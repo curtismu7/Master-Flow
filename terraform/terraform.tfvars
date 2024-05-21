@@ -1,16 +1,13 @@
-admin_environment_id      = ""
-admin_client_id           = ""
-admin_client_secret       = ""
-region                    = "NorthAmerica"
-license_name              = "INTERNAL"
+region                  = "NorthAmerica"
+pingone_environment_id  = "f4aa5738-dcce-4711-bdbc-273c46f1c527"
+admin_user_id           = "bf5bfa15-6439-4a53-8855-b1068edcb1cd"
+license_id              = ""
+worker_id               = "20dde1de-49ba-401e-ac0c-88c72b05bdd2"
+worker_secret           = "ZTro8WDN_g~qCl8P4gzwP-Sn7nmrkm8Pxm9BvVZIOCrC8dx~wFdgOYJ9T~btfZkg"
+admin_username          = "terraform.admin"
+admin_password          = "Test123!"
 
-dv_environment_id         = "" # Note for INTERNAL licenses: If you have DV deployed in, and are using a user in your Administrator's environment, you can leave this blank.
-dv_admin_id               = ""
-dv_admin_username         = ""
-dv_admin_password         = ""
-
-organization_id           = ""
-
+organization_id         = "2793a85b-b5ee-4a93-930a-2760252ed541"
 
 #############
 #  PingOne #
@@ -19,7 +16,7 @@ organization_id           = ""
 # Change the name as needed for your P1 environment #
 
 
-environment_name = "PingOne Master Flow - 1.1.6"
+environment_name = "PingOne Master Flow - 1.1.6 - Kyle"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action."
@@ -31,7 +28,7 @@ master_flow_user_password               = "2FederateM0re!"
 master_flow_user_password_force_change  = false
 master_flow_user_given_name             = "PingOne"
 master_flow_user_family_name            = "Flow"
-master_flow_user_middle_name            = "Master"
+master_flow_user_middle_name            = "GrandMaster"
 master_flow_user_formatted_name         = "PingOne Master Flow"
 master_flow_user_honorific_prefix       = ""
 master_flow_user_honorific_suffix       = ""
