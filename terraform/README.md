@@ -10,11 +10,11 @@
 ### Prerequisites
 
 #### Configure PingOne
-Create a new PingOne environment with the PingOne SSO and PingOne DaVinci services. Name it whatever you like. Suggestion: `Terrform Administration`. \
+Create a new PingOne environment with the PingOne SSO and PingOne DaVinci services. Name it whatever you like. Suggestion: **Terrform Administration**. \
 This environment will only be used to allow Terraform to create and manage new environments within PingOne.
 <img src="https://github.com/curtismu7/Master-Flow/assets/117233001/81e61e41-df67-4c3a-ab42-2f9c6855a519" width="300">
 
-In your new environment, create a worker application. Name it whatever you like. Suggestion: `Pingone Terrform Administration`. \
+In your new environment, create a worker application. Name it whatever you like. Suggestion: **Pingone Terrform Administration**. \
 Enable it.\
 Navigate to the Roles tab and provide it with the following permissions at a minimum. Additional permissions can be provided, but are not necessary. 
 > [!WARNING]
