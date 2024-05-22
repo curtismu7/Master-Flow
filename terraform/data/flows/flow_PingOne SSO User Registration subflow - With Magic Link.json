@@ -12,10 +12,10 @@
     "pingOneMfaConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1716396536917,
-  "currentVersion": 3,
+  "createdDate": 1716396895609,
+  "currentVersion": 4,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1716396578558,
+  "deployedDate": 1716396897927,
   "description": "Imported on Tue May 21 2024 20:53:59 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -37,7 +37,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO User Registration subflow - With Magic Link",
-  "publishedVersion": 3,
+  "publishedVersion": 4,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [
@@ -50,9 +50,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1716396578641,
+  "updatedDate": 1716396898090,
   "flowId": "49507c65ed8f3ea5460bc651487763cd",
-  "versionId": 3,
+  "versionId": 4,
   "graphData": {
     "elements": {
       "nodes": [
@@ -4060,7 +4060,7 @@
                     "name": "p1UserId",
                     "nameDefault": "p1UserId",
                     "type": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.65z3wjp3rs.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.65z3wjp3rs.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               },
@@ -10167,7 +10167,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1716396536302,
+  "savedDate": 1716396894944,
   "variables": [
     {
       "context": "flowInstance",
