@@ -12,15 +12,15 @@ terraform {
 }
 
 provider "pingone" {
-  client_id      = var.admin_client_id
-  client_secret  = var.admin_client_secret
-  environment_id = var.admin_environment_id
+  client_id      = var.worker_id
+  client_secret  = var.worker_secret
+  environment_id = var.pingone_environment_id
   region         = var.region
 }
 
 provider "davinci" {
-  username       = var.dv_admin_username
-  password       = var.dv_admin_password
-  environment_id = var.dv_environment_id != "" ? var.dv_environment_id : var.admin_environment_id
+  username       = var.admin_username
+  password       = var.admin_password
+  environment_id = var.pingone_environment_id != "" ? var.pingone_environment_id : var.pingone_environment_id
   region         = var.region
 }
