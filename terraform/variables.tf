@@ -1,13 +1,13 @@
-variable "admin_client_id" {
+variable "worker_id" {
     description = "Client Id"
     type = string
 }
-variable "admin_client_secret" {
+variable "worker_secret" {
     description = "Client Secret"
     type = string
     sensitive = true
 }
-variable "admin_environment_id" {
+variable "pingone_environment_id" {
     description = "Environment Id"
     type = string
 }
@@ -17,28 +17,23 @@ variable "region" {
     default = "NorthAmerica"
 }
 
-variable "dv_environment_id" {
-    description = "Environment Id"
-    type = string
-}
-
-variable "dv_admin_id" {
+variable "admin_user_id" {
   type        = string
   description = "P1 Administrator to assign Roles to"
   sensitive   = true
 }
 
-variable "dv_admin_username" {
+variable "admin_username" {
     description = "PingOne DaVinci Admin Username"
     type = string
 }
 
-variable "dv_admin_password" {
+variable "admin_password" {
     description = "PingOne DaVinci Admin Password"
     type = string
 }
 
-variable "license_name" {
+variable "license_id" {
   type        = string
   description = "Name of the P1 license you want to assign to the Environment"
 }

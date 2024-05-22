@@ -8,10 +8,10 @@
     "errorConnector",
     "annotationConnector"
   ],
-  "createdDate": 1714998929585,
-  "currentVersion": 17,
+  "createdDate": 1716401977564,
+  "currentVersion": 23,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1714998932204,
+  "deployedDate": 1716401978576,
   "description": "Imported on Tue Apr 30 2024 20:47:04 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -68,7 +68,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Progressive Profiling subflow",
-  "publishedVersion": 17,
+  "publishedVersion": 23,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [
@@ -80,9 +80,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1714998932233,
+  "updatedDate": 1716401978635,
   "flowId": "788c43befe3faaf6463b41988bd0b0b6",
-  "versionId": 17,
+  "versionId": 23,
   "graphData": {
     "elements": {
       "nodes": [
@@ -119,7 +119,7 @@
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "givenName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"firstName\",\n        \"data\": \"{{global.parameters.firstName}}\",\n        \"tooltip\": \"{{global.parameters.firstName}}\",\n        \"children\": [\n          {\n            \"text\": \"firstName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"given\",\n        \"data\": \"{{local.1nml9azuv1.payload.output.matchedUser.name.given}}\",\n        \"tooltip\": \"{{local.1nml9azuv1.payload.output.matchedUser.name.given}}\",\n        \"children\": [\n          {\n            \"text\": \"given\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"firstName\",\n        \"data\": \"{{global.parameters.firstName}}\",\n        \"tooltip\": \"{{global.parameters.firstName}}\",\n        \"children\": [\n          {\n            \"text\": \"firstName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "displayName": "Middle Initial",
@@ -135,7 +135,7 @@
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "familyName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"lastName\",\n        \"data\": \"{{global.parameters.lastName}}\",\n        \"tooltip\": \"{{global.parameters.lastName}}\",\n        \"children\": [\n          {\n            \"text\": \"lastName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"family\",\n        \"data\": \"{{local.1nml9azuv1.payload.output.matchedUser.name.family}}\",\n        \"tooltip\": \"{{local.1nml9azuv1.payload.output.matchedUser.name.family}}\",\n        \"children\": [\n          {\n            \"text\": \"family\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"lastName\",\n        \"data\": \"{{global.parameters.lastName}}\",\n        \"tooltip\": \"{{global.parameters.lastName}}\",\n        \"children\": [\n          {\n            \"text\": \"lastName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "displayName": "Phone Code",
@@ -143,7 +143,7 @@
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "phoneCode",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"+1\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "displayName": "phone",
@@ -151,7 +151,7 @@
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "phone",
-                    "value": ""
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"primaryPhone\",\n        \"data\": \"{{local.1nml9azuv1.payload.output.matchedUser.primaryPhone}}\",\n        \"tooltip\": \"{{local.1nml9azuv1.payload.output.matchedUser.primaryPhone}}\",\n        \"children\": [\n          {\n            \"text\": \"primaryPhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "displayName": "Date of Birth",
@@ -159,7 +159,7 @@
                     "preferredControlType": "textField",
                     "preferredDataType": "string",
                     "propertyName": "dob",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"dob\",\n        \"data\": \"{{global.parameters.dob}}\",\n        \"tooltip\": \"{{global.parameters.dob}}\",\n        \"children\": [\n          {\n            \"text\": \"dob\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"dob\",\n        \"data\": \"{{global.parameters.dob}}\",\n        \"tooltip\": \"{{global.parameters.dob}}\",\n        \"children\": [\n          {\n            \"text\": \"dob\"\n          }\n        ]\n      },\n      {\n        \"text\": \"{{local.1nml9azuv1.payload.output.matchedUser._embedded.users[1].dob}}\"\n      }\n    ]\n  }\n]"
                   },
                   {
                     "preferredControlType": "textField",
@@ -206,8 +206,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1223,
-            "y": 570
+            "x": 1606.555457452331,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -257,7 +257,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1537,
+            "x": 1920,
             "y": 570
           },
           "group": "nodes",
@@ -275,75 +275,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1357,
-            "y": 570
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "createErrorResponse",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "id": "cbi02bqueo",
-            "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
-              },
-              "claimsNameValuePairs": {
-                "value": [
-                  {
-                    "key": 0.0932499621179339,
-                    "label": "cancelReturn (boolean - flowInstance)",
-                    "name": "cancelReturn",
-                    "type": "boolean",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
-                  }
-                ]
-              },
-              "nodeTitle": {
-                "value": "Return to authentication"
-              }
-            },
-            "status": "configured",
-            "type": "action"
-          },
-          "position": {
-            "x": 1867,
-            "y": 690
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ox6ma86kdd",
-            "nodeType": "EVAL",
-            "properties": {
-              "cbi02bqueo": {
-                "value": "allTriggersTrue"
-              }
-            }
-          },
-          "position": {
-            "x": 1687,
-            "y": 690
+            "x": 1759.9657025429844,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -398,8 +331,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1867,
-            "y": 570
+            "x": 2245.7648119967207,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -425,8 +358,8 @@
             }
           },
           "position": {
-            "x": 2017,
-            "y": 570
+            "x": 2399.175057087374,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -470,8 +403,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2197,
-            "y": 570
+            "x": 2578.1536763598033,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -518,8 +451,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 577,
-            "y": 570
+            "x": 967.3461029079409,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -537,8 +470,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 697,
-            "y": 570
+            "x": 1095.187973816819,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -579,8 +512,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 877,
-            "y": 570
+            "x": 1274.1665930892482,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -624,8 +557,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1237,
-            "y": 720
+            "x": 1632.1238316341064,
+            "y": 715.9144770897166
           },
           "group": "nodes",
           "removed": false,
@@ -647,8 +580,8 @@
             }
           },
           "position": {
-            "x": 1027,
-            "y": 570
+            "x": 1427.5768381799016,
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -692,8 +625,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1837,
-            "y": 810
+            "x": 2220.196437814945,
+            "y": 818.187973816819
           },
           "group": "nodes",
           "removed": false,
@@ -710,8 +643,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1687,
-            "y": 810
+            "x": 2066.7861927242916,
+            "y": 818.187973816819
           },
           "group": "nodes",
           "removed": false,
@@ -760,7 +693,7 @@
             "type": "action"
           },
           "position": {
-            "x": 528,
+            "x": 651.5897549093464,
             "y": 214
           },
           "group": "nodes",
@@ -810,8 +743,8 @@
             "type": "action"
           },
           "position": {
-            "x": 517,
-            "y": 390
+            "x": 916.2093545443898,
+            "y": 383.5256127266339
           },
           "group": "nodes",
           "removed": false,
@@ -860,8 +793,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1657,
-            "y": 390
+            "x": 2041.217818542516,
+            "y": 383.5256127266339
           },
           "group": "nodes",
           "removed": false,
@@ -916,8 +849,8 @@
             "type": "action"
           },
           "position": {
-            "x": 427,
-            "y": 450
+            "x": 558.2521159995315,
+            "y": 460.23073527196067
           },
           "group": "nodes",
           "removed": false,
@@ -935,8 +868,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1687,
-            "y": 600
+            "x": 2066.7861927242916,
+            "y": 588.0726061808386
           },
           "group": "nodes",
           "removed": false,
@@ -991,8 +924,8 @@
             "type": "action"
           },
           "position": {
-            "x": 877,
-            "y": 480
+            "x": 1274.1665930892482,
+            "y": 485.79910945373626
           },
           "group": "nodes",
           "removed": false,
@@ -1047,8 +980,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1717,
-            "y": 480
+            "x": 2117.9229410878424,
+            "y": 485.79910945373626
           },
           "group": "nodes",
           "removed": false,
@@ -1089,8 +1022,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2197,
-            "y": 720
+            "x": 2578.1536763598033,
+            "y": 715.9144770897166
           },
           "group": "nodes",
           "removed": false,
@@ -1129,25 +1062,7 @@
           },
           "position": {
             "x": 277,
-            "y": 570
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "0l2wixhsne",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 427,
-            "y": 570
+            "y": 562.504231999063
           },
           "group": "nodes",
           "removed": false,
@@ -1206,8 +1121,144 @@
             "type": "action"
           },
           "position": {
-            "x": 1710,
-            "y": 450
+            "x": 2092.3545669060672,
+            "y": 434.6623610901851
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xmc1kaysnc",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 430.4102450906536,
+            "y": 562.504231999063
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "1nml9azuv1",
+            "nodeType": "CONNECTION",
+            "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
+            "connectorId": "pingOneSSOConnector",
+            "name": "PingOne",
+            "label": "PingOne",
+            "status": "configured",
+            "capabilityName": "userLookup",
+            "type": "action",
+            "properties": {
+              "matchAttributes": {
+                "value": [
+                  "id"
+                ]
+              },
+              "userIdentifierForFindUser": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 634.9572385448583,
+            "y": 562.504231999063
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dsmqn40gsw",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 788.3674836355118,
+            "y": 562.504231999063
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "createSuccessResponse",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "id": "t99pxxdapn",
+            "label": "Http",
+            "name": "Http",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              },
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "key": 0.6422169511089648,
+                    "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "id",
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.kwpyaae519.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Success"
+              }
+            },
+            "status": "configured",
+            "type": "action",
+            "idUnique": "3uw8q5of22"
+          },
+          "position": {
+            "x": 2220,
+            "y": 690
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "my0erk7b65",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2070,
+            "y": 690
           },
           "group": "nodes",
           "removed": false,
@@ -1222,9 +1273,66 @@
       "edges": [
         {
           "data": {
-            "id": "afw73til0k",
-            "source": "0l2wixhsne",
-            "target": "vsubgtuwhp"
+            "id": "1vy2kx1pyk",
+            "source": "xmc1kaysnc",
+            "target": "1nml9azuv1"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "qqn6ya9rtd",
+            "source": "1nml9azuv1",
+            "target": "dsmqn40gsw"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ky6dxolslm",
+            "source": "ox4aeyqpvy",
+            "target": "sapftogoql"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "iselnofa4",
+            "source": "sapftogoql",
+            "target": "g3fjjwek2w"
           },
           "position": {
             "x": 0,
@@ -1394,29 +1502,9 @@
         },
         {
           "data": {
-            "id": "ffexmouk4s",
-            "multiValueSourceId": "qtli5t2v0s",
-            "source": "4fkmxgeymw",
-            "target": "ox6ma86kdd"
-          },
-          "position": {
-            "x": 64,
-            "y": 92
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "lab7ec0p9k",
-            "source": "ox6ma86kdd",
-            "target": "cbi02bqueo"
+            "id": "g7enip36ho",
+            "source": "dsmqn40gsw",
+            "target": "vsubgtuwhp"
           },
           "position": {
             "x": 0,
@@ -1510,47 +1598,48 @@
         },
         {
           "data": {
-            "id": "ky6dxolslm",
-            "source": "ox4aeyqpvy",
-            "target": "sapftogoql"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "iselnofa4",
-            "source": "sapftogoql",
-            "target": "g3fjjwek2w"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "224y1c27ra",
+            "id": "odojl8fwqt",
             "source": "m0q1qd57ia",
-            "target": "0l2wixhsne"
+            "target": "xmc1kaysnc"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "uzwmr969xt",
+            "source": "4fkmxgeymw",
+            "target": "my0erk7b65",
+            "multiValueSourceId": "qtli5t2v0s"
+          },
+          "position": {
+            "x": 64,
+            "y": 92
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "sjq6ecuz0x",
+            "source": "my0erk7b65",
+            "target": "t99pxxdapn"
           },
           "position": {
             "x": 0,
@@ -1629,7 +1718,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1714998929446,
+  "savedDate": 1716401977445,
   "variables": [
     {
       "context": "flowInstance",
