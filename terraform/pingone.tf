@@ -282,7 +282,7 @@ resource "pingone_agreement_localization_revision" "master_flow_agreement_en_now
   agreement_id              = pingone_agreement.master_flow_agreement.id
   agreement_localization_id = pingone_agreement_localization.master_flow_agreement_en.id
 
-  content_type      = "text/html"
+  content_type      = "text/plain"
   require_reconsent = true
   text              = var.pingone_agreement_localization_revision_master_flow_agreement_en_now_text
 
