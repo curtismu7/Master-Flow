@@ -1,5 +1,5 @@
 {
-  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
+  "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
@@ -14,11 +14,11 @@
     "variablesConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1715877936178,
-  "currentVersion": 5,
+  "createdDate": 1716467103303,
+  "currentVersion": 8,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1715877937538,
-  "description": "Imported on Tue Apr 30 2024 20:46:37 GMT+0000 (Coordinated Universal Time)",
+  "deployedDate": 1716467104470,
+  "description": "Imported on Wed May 22 2024 23:21:08 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -63,7 +63,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Davinci Custom Magic Link registration subflow",
-  "publishedVersion": 5,
+  "publishedVersion": 8,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -77,16 +77,16 @@
     "flowHttpTimeoutInSeconds": 45,
     "flowTimeoutInSeconds": 12000,
     "jsLinks": [],
-    "logLevel": 2,
+    "logLevel": 3,
     "scrubSensitiveInfo": false,
     "useBetaAlgorithm": true,
     "useCustomCSS": true,
     "useCustomScript": false
   },
   "timeouts": "null",
-  "updatedDate": 1715877937580,
-  "flowId": "d3308b9803c90739050ec82f4cb60bae",
-  "versionId": 5,
+  "updatedDate": 1716467104532,
+  "flowId": "34cd015deac852311d231475aa1a6deb",
+  "versionId": 8,
   "graphData": {
     "elements": {
       "nodes": [
@@ -3380,6 +3380,9 @@
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.sjsom1jwve.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.sjsom1jwve.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
+              "nodeTitle": {
+                "value": "Check button pushed"
+              },
               "rightValueMultiple": {
                 "value": [
                   {
@@ -3391,9 +3394,6 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Check button pushed"
               }
             },
             "status": "configured",
@@ -5045,11 +5045,11 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1715877935897,
+  "savedDate": 1716467102935,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1714509958362,
+      "createdDate": 1716419998586,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -5058,14 +5058,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "3a2cadf8-b753-46be-89d0-9a74c00bf3ff",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509958860,
+      "createdDate": 1716420000427,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -5075,14 +5076,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "fa924cb6-047b-4a50-a07b-19fb7799d4a2",
       "type": "property",
       "visibility": "private",
       "name": "gv-companyLogo##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509944389,
+      "createdDate": 1716420004455,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -5091,10 +5093,11 @@
         "min": 0,
         "max": 2000
       },
+      "id": "b403d41d-f492-40ab-b547-60f5ab9d1ff5",
       "type": "property",
       "visibility": "private",
       "name": "p1DeviceId##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     }
   ],
   "connections": []

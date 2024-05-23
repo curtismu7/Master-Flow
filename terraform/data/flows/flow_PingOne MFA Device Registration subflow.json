@@ -1,5 +1,5 @@
 {
-  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
+  "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3",
   "authTokenExpireIds": [],
   "connectorIds": [
     "pingOneMfaConnector",
@@ -12,11 +12,11 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1716215362026,
-  "currentVersion": 6,
+  "createdDate": 1716485352299,
+  "currentVersion": 33,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1716215364445,
-  "description": "Imported on Tue Apr 30 2024 20:47:10 GMT+0000 (Coordinated Universal Time)",
+  "deployedDate": 1716485354649,
+  "description": "Imported on Wed May 22 2024 23:21:29 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -79,7 +79,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 6,
+  "publishedVersion": 33,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [
@@ -98,9 +98,9 @@
     "useCustomScript": false
   },
   "timeouts": "null",
-  "updatedDate": 1716215364536,
-  "flowId": "b7e12799623b33e31e95c9e6217e2160",
-  "versionId": 6,
+  "updatedDate": 1716485354773,
+  "flowId": "84a27f0f21a8044d6568af331b4f25b0",
+  "versionId": 33,
   "graphData": {
     "elements": {
       "nodes": [
@@ -7260,6 +7260,9 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "caseSensitive": {
+                "value": false
               }
             },
             "status": "configured",
@@ -7974,9 +7977,6 @@
             "name": "Flow Connector",
             "nodeType": "CONNECTION",
             "properties": {
-              "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"pingone_userId\",\n        \"data\": \"{{global.parameters.pingone_userId}}\",\n        \"tooltip\": \"{{global.parameters.pingone_userId}}\",\n        \"children\": [\n          {\n            \"text\": \"pingone_userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "allowMFAReg": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
@@ -9592,7 +9592,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Davinci Custom Magic Link registration subflow",
-                  "value": "d3308b9803c90739050ec82f4cb60bae"
+                  "value": "34cd015deac852311d231475aa1a6deb"
                 }
               },
               "subFlowVersionId": {
@@ -10398,13 +10398,13 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Cancel\"\n      }\n    ]\n  }\n]"
               },
               "customCSS": {
-                "value": "    /* .dropdown__input,\n    .dropdown__select,\n    .dropdown__select option,\n    .input-text,\n    .placeholder-shown .float-label__label,\n    .text-area,\n    .text-input {\n        font-family: proxima-nova, sans-serif;\n        font-size: 15px;\n        font-weight: 600;\n        color: #798087\n    }\n\n    .dropdown__option,\n    .option-text {\n        font-family: proxima-nova, sans-serif;\n        font-size: 15px;\n        color: #798087;\n        font-weight: 400\n    }\n\n    .primary-input-text {\n        font-family: proxima-nova, sans-serif;\n        font-size: 36px;\n        font-weight: 200;\n        color: #798087\n    } */\n\n    .dropdown__input,\n    .dropdown__list,\n    .dropdown__select,\n    .input-border,\n    .input-box,\n    .text-area,\n    .text-input {\n        background: #fff;\n        border: 1px solid #8b9197;\n        border-radius: 2px;\n        -webkit-box-sizing: border-box;\n        box-sizing: border-box;\n        display: block;\n        width: 100%\n    }\n\n    .dropdown__input,\n    .dropdown__select,\n    .input-box,\n    .input-padding,\n    .text-area,\n    .text-input {\n        padding: 15px 10px\n    }\n\n    .dropdown__input::-webkit-input-placeholder,\n    .dropdown__select::-webkit-input-placeholder,\n    .placeholder-text,\n    .text-area::-webkit-input-placeholder,\n    .text-input::-webkit-input-placeholder {\n        color: #8b9197;\n        font-size: 15px;\n        font-weight: 200;\n        text-transform: unset\n    }\n\n    .dropdown__input::-moz-placeholder,\n    .dropdown__select::-moz-placeholder,\n    .placeholder-text,\n    .text-area::-moz-placeholder,\n    .text-input::-moz-placeholder {\n        color: #8b9197;\n        font-size: 15px;\n        font-weight: 200;\n        text-transform: unset\n    }\n\n    .dropdown__input::-ms-input-placeholder,\n    .dropdown__select::-ms-input-placeholder,\n    .placeholder-text,\n    .text-area::-ms-input-placeholder,\n    .text-input::-ms-input-placeholder {\n        color: #8b9197;\n        font-size: 15px;\n        font-weight: 200;\n        text-transform: unset\n    }\n\n    .dropdown__input::placeholder,\n    .dropdown__select::placeholder,\n    .placeholder-text,\n    .text-area::placeholder,\n    .text-input::placeholder {\n        color: #8b9197;\n        font-size: 15px;\n        font-weight: 200;\n        text-transform: unset\n    }\n\n\n    .dropdown {\n        background: #fff;\n        position: relative\n    }\n\n    .dropdown:focus {\n        border-color: #2996cc\n    }\n\n    .dropdown--standard:after,\n    .dropdown--with-message:after {\n        content: \"\\25BC\";\n        font-size: 13px;\n        line-height: 13px;\n        position: absolute;\n        right: 15px;\n        top: 16px;\n        height: 16px;\n        width: 16px;\n        pointer-events: none\n    }\n\n    .dropdown--with-icon-and-message:after,\n    .dropdown--with-status-icon:after {\n        content: \"\\25BC\";\n        font-size: 13px;\n        line-height: 13px;\n        position: absolute;\n        right: 15px;\n        top: 16px;\n        height: 16px;\n        width: 16px;\n        pointer-events: none;\n        margin-right: 25px\n    }\n\n    .dropdown--open:after {\n        -webkit-transform: translateY(-50%) rotate(180deg);\n        transform: translateY(-50%) rotate(180deg)\n    }\n\n    .dropdown__input,\n    .dropdown__select {\n        cursor: pointer;\n        padding-right: 40px\n    }\n\n    .dropdown__input--error,\n    .dropdown__select--error {\n        border-color: #a31300\n    }\n\n    .dropdown__input--success,\n    .dropdown__select--success {\n        border-color: #4aba78\n    }\n\n    .dropdown__input--error,\n    .dropdown__input--success,\n    .dropdown__select--error,\n    .dropdown__select--success {\n        background-color: #fff;\n        padding-right: 65px\n    }\n\n    .dropdown__select {\n        position: relative;\n        z-index: 1;\n        width: 100%;\n        background-color: transparent;\n        background-image: none;\n        -webkit-appearance: none;\n        -moz-appearance: none;\n        appearance: none\n    }\n\n    .dropdown__select.placeholder-shown {\n        color: hsla(0, 0%, 100%, 0)\n    }\n\n    .dropdown__select.dropdown__select--placeholder {\n        font-weight: 200\n    }\n\n    .dropdown__list {\n        -webkit-box-shadow: 0 1px 4px 1px rgba(121, 128, 135, .35);\n        box-shadow: 0 1px 4px 1px rgba(121, 128, 135, .35);\n        position: absolute;\n        top: 100%;\n        left: 0;\n        right: 0;\n        background: #fff;\n        margin: -1px 0 0;\n        padding: 0;\n        list-style: none;\n        z-index: 1\n    }\n\n    .dropdown--cardwidth .dropdown__list {\n        width: 320px\n    }\n\n    .dropdown__option {\n        cursor: pointer;\n        padding: 5px 10px 5px 20px;\n        position: relative\n    }\n\n    .dropdown__option:hover {\n        color: #fff;\n        background: #2996cc\n    }\n\n    .dropdown__option--selected {\n        font-weight: 600\n    }\n\n    .dropdown__option--selected:before {\n        content: \"\\2022\";\n        position: absolute;\n        left: 10px;\n        top: 50%;\n        -webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\n        vertical-align: middle\n    }\n\n    .dropdown__option--search {\n        position: relative\n    }\n\n    .dropdown--search .dropdown__list {\n        height: 250px;\n        top: 0\n    }\n\n    .dropdown--search .dropdown__list .dropdown__option--container {\n        position: absolute;\n        height: 200px;\n        overflow-y: scroll;\n        width: 100%\n    }\n\n    .dropdown--search.dropdown--open:after {\n        content: none\n    }\n\n    .dropdown--search.dropdown--open .dropdown__close {\n        display: block;\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        right: 0;\n        width: 30px;\n        cursor: pointer;\n        background: none;\n        border: none\n    }\n\n    .dropdown--search.dropdown--open .dropdown__close:after {\n        font-family: iconfont;\n        /* content: \"\\2304\"; */\n        content: \"\\25BC\";\n        font-size: 13px;\n        line-height: 13px;\n        position: absolute;\n        right: 15px;\n        top: 16px;\n        height: 16px;\n        width: 16px;\n        pointer-events: none;\n        -webkit-transform: translateY(-50%) rotate(180deg);\n        transform: translateY(-50%) rotate(180deg)\n    }\n\n    .dropdown--search .dropdown__close {\n        display: none\n    }\n\n    .dropdown__icon {\n        font-family: iconfont;\n        font-size: 16px;\n        line-height: 16px;\n        text-transform: none;\n        position: relative;\n        width: 100%\n    }\n\n    .dropdown__icon:before {\n        position: absolute;\n        right: 15px;\n        top: 14.5px\n    }\n\n    .dropdown__icon--error:before {\n        content: \"\\E914\";\n        color: #a31300\n    }\n\n    .dropdown__icon--success:before {\n        content: \"\\E92E\";\n        color: #4aba78\n    }\n\n    .phone-input {\n        position: relative;\n        height: 48px;\n        width: 100%;\n        max-width: 350px\n    }\n\n    .phone-input__code {\n        width: calc(25% - 5px);\n        margin-right: 5px;\n        -webkit-transition: all .2s;\n        transition: all .2s;\n        position: absolute;\n        top: 0;\n        left: 0;\n        z-index: 10\n    }\n\n    .phone-input__code--open {\n        width: 100%\n    }\n\n    .phone-input__number {\n        position: absolute;\n        top: 0;\n        right: 0;\n        width: 75%\n    }\n\n    .phone-input__longDialCode .phone-input__code {\n        width: calc(30% - 5px)\n    }\n\n    .phone-input__longDialCode .phone-input__number {\n        width: 70%\n    }\n\n    .none {\n        display: none;\n    }\n\n    .dropdown--standard:after {\n        right: 10px;\n    }\n\n    .dropdown__input {\n        padding-right: 26px;\n    }\n\n    .mdi-chevron-down::before {\n        content: \"\\ea01\"\n    }\n\n    /* hide input tyme number arrows */\n    /* Chrome, Safari, Edge, Opera */\n    input::-webkit-outer-spin-button,\n    input::-webkit-inner-spin-button {\n        -webkit-appearance: none;\n        margin: 0;\n    }\n\n    /* Firefox */\n    input[type=number] {\n        -moz-appearance: textfield;\n    }"
+                "value": "/* For Webkit browsers like Chrome, Safari */\ninput[type=\"number\"]::-webkit-inner-spin-button, \ninput[type=\"number\"]::-webkit-outer-spin-button { \n  -webkit-appearance: none;\n  margin: 0; \n}\n\n/* For Firefox */\ninput[type=\"number\"] {\n  -moz-appearance: textfield;\n}\n\n/* For Internet Explorer 10+ */\ninput[type=\"number\"]::-ms-clear,\ninput[type=\"number\"]::-ms-reveal {\n  display: none;\n}\n\n#countryCode {\n  background: none; \n  color: transparent;\n}\n\n"
               },
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n   <div\n      class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n      <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n         <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n               <img class=\"companyLogo align-self-center mb-5\" alt=\"Ping Identity\" />\n\n               <h1 class=\"heading branding-template-heading align-self-center mb-5\">\n\n                  {{#ifEquals selectedDeviceType \"SMS\"}}\n\n                  <svg viewBox=\"0 0 24 24\" role=\"presentation\" style=\"width: 32px; height: 32px;\">\n                     <path\n                        d=\"M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z\"\n                        style=\"fill: rgb(61, 69, 77);\"></path>\n                  </svg>\n                  <span class=\"text-left-to-icon align-self-center mb-5\">Text Message</span>\n\n                  {{/ifEquals}}\n                  {{#ifEquals selectedDeviceType \"VOICE\"}}\n                  <svg viewBox=\"0 0 24 24\" role=\"presentation\" style=\"width: 32px; height: 32px;\">\n                     <path\n                        d=\"M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z\"\n                        style=\"fill: rgb(61, 69, 77);\"></path>\n                  </svg>\n                  <span class=\"text-left-to-icon align-self-center mb-5\">Voice</span>\n                  {{/ifEquals}}\n               </h1>\n               {{#if textOne}}\n               <p class=\"text-muted text-center\">{{textOne}}</p>\n               {{/if}}\n\n               <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n               <p class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"phone\">\n               </p>\n               <form id=\"phone-form\" data-id=\"phone-form\" class=\"form\">\n\n                  <div class=\"mb-4 form-floating\">\n                     <input class=\"form-control\" type=\"text\" name=\"phone-input\" placeholder=\"phone\"\n                            autocomplete=\"off\" data-id=\"phone\" id=\"phone\" pattern=\"[0-9]*\" />\n                     <label class=\"form-label\" for=\"phone\">Phone</label>\n                  </div>\n                  {{#if buttonLabel}}\n                  <div class=\"d-flex flex-column\">\n                     <button class=\"btn btn-primary flex-grow-1\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"phone-form\" id=\"btnSubmit\"\n                            data-skbuttonvalue=\"CONTINUE\"> {{buttonLabel}}</button>\n                  </div>\n                  {{/if}}\n\n\n                  {{#if buttonLabel2}}\n                  <div class=\"d-flex flex-column\">\n                     <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"phone-form\" id=\"btnCancel\"\n                            data-skbuttonvalue=\"CANCEL\"> {{buttonLabel2}}</button>\n                  </div>\n                  {{/if}}\n               </form>\n            </div>\n         </div>\n      </div>\n   </div>\n</div>"
+                "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"mh-100\" style=\"max-width: 400px; width: 100%;\">\n            <div class=\"card shadow mb-5\">\n                <main aria-labelledby=\"title\">\n                    <div class=\"card-body p-5 d-flex flex-column\">\n                        <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\"\n                            alt=\"{{global.variables.companyName}}\" />\n\n                        <h1 id=\"title\" class=\"text-center mb-4\">\n                            {{#ifEquals type \"SMS\"}}\n                           <i class=\"mdi mdi-comment-text-outline text-dark fs-1\" aria-hidden=\"true\"></i>\n                            Text Message\n                            {{/ifEquals}}\n                            {{#ifEquals type \"VOICE\"}}\n                            <i class=\"mdi mdi-phone-outline text-dark fs-1\" aria-hidden=\"true\"></i>\n                            Voice\n                            {{/ifEquals}}\n                        </h1>\n                        \n                        <p class=\"text-muted text-center\">\n                            {{#ifEquals type \"SMS\"}}\n                            Enter your phone number to receive passcodes by text message.\n                            {{/ifEquals}}\n                            {{#ifEquals type \"VOICE\"}}\n                            Enter your phone number to receive passcodes by phone call.\n                            {{/ifEquals}}\n                        </p>\n\n                        <!-- Generic Error Message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n                        <!-- Field Validation Error Messages -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" data-skerrorid=\"phone\" data-skcomponent=\"skerrormessage\" aria-live=\"assertive\"></p>\n\n                        <form id=\"phone-form\" data-id=\"phone-form\">\n                            <div class=\"row gx-2\">\n                                <div class=\"col-4\">\n                                    <div class=\"position-relative form-floating\">\n                                        <div id=\"countryCodeDisplay\" class=\"form-select\">+1</div>\n                                        <select id=\"countryCode\" class=\"form-select position-absolute top-0 left-0 right-0 bottom-0\" aria-label=\"Country Code\" >\n                                        </select>\n                                        <label class=\"form-label\" for=\"countryCode\">Country</label>\n                                    </div>\n                                </div>\n                                <div class=\"col\">\n                                    <div class=\"form-floating\">\n                                        <input class=\"text-input form-control\" data-id=\"text-input\" id=\"phone\" placeholder=\"Phone Number\"\n                                            type=\"number\" autocomplete=\"tel\" inputmode=\"numeric\" aria-describedby=\"phoneLabel\"></input>\n                                            <label id=\"phoneLabel\" data-id=\"phoneLabel\" class=\"form-label\" for=\"phone\">Phone Number</label>\n                                    </div>\n                                </div>\n                            </div>\n\n                            <div class=\"d-flex flex-column mt-5\">\n                                {{#if buttonLabel}}\n                                <button id=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"phone-form\" data-skbuttonvalue=\"CONTINUE\">\n                                    {{buttonLabel}}\n                                </button>\n                                {{/if}}\n                                {{#if cancelButtonLabel}}\n                                <button id=\"cancel\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"next-event\" data-skform=\"phone-form\" data-skbuttonvalue=\"CANCEL\">\n                                    {{cancelButtonLabel}}\n                                </button>\n                                {{/if}}\n                            </div>\n                        </form>\n                    </div>\n                </main>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {
-                "value": "// DOM elements\nconst phone                 = document.getElementById(\"phone\");\nconst phoneCodeDropdown     = document.getElementById(\"phone-input-code-dropdown\");\nconst countryCodeInput      = document.getElementById(\"countryCodeInput\");\nconst phoneCodeList         = document.getElementById(\"code-dropdown-list\");\nconst phoneCode             = document.getElementById(\"phone-input-code\");\nconst closeListBtn          = document.getElementById(\"close-list\");\nconst listContainer         = document.getElementById(\"list-container\");\nconst search                = document.getElementById(\"search-input\");\nconst submitButton          = document.getElementById('submit');\n\n// Initializations\ncountryCodeInput.value = \"+1\";\n\n// Add event listeners to dropdown options\nconst items = document.getElementsByClassName(\"dropdown__option\");\nfor (let i = 0; i < items.length; i++) {\n    items[i].addEventListener(\"click\", selectClick);\n}\n\n// Functions\nfunction closeList() {\n    phoneCodeDropdown.classList.remove(\"dropdown--open\");\n    phoneCode.classList.remove(\"phone-input__code--open\");\n    phoneCodeList.classList.add(\"none\");\n    setFieldFocus(\"phone\");\n}\n\nfunction selectClick(event) {\n    const codeIndex = event.target.innerHTML.indexOf(\"+\");\n    countryCodeInput.value = event.target.innerHTML.substring(codeIndex);\n    closeList();\n}\n\nfunction openList() {\n    phoneCodeDropdown.classList.add(\"dropdown--open\");\n    phoneCode.classList.add(\"phone-input__code--open\");\n    phoneCodeList.classList.remove(\"none\");\n    setFieldFocus(\"search-input\");\n}\n\nfunction searchList() {\n    const searchValue = search.value.toLowerCase();\n    for (let i = 0; i < items.length; i++) {\n        const itemText = items[i].innerHTML.toLowerCase();\n        items[i].classList.toggle(\"none\", !(itemText.includes(searchValue) || searchValue.length < 1));\n    }\n}\n\nphone.addEventListener('input', function() {\n    var phoneNumber = $('#phone').val();\n    checkInputValid(phoneNumber);\n});\n\nphone.addEventListener('focus', function() {\n    var phoneNumber = $('#phone').val();\n    checkInputValid(phoneNumber);\n});\n\nfunction checkInputValid(val) {\n    var inputValid = val.trim().length > 4;\n    if (inputValid) {\n        $('#phone').css('border', '1px solid #8b9197');\n        submitButton.classList.remove('disabled');\n    } else {\n        $('#phone').css('border', '1px solid red');\n        submitButton.classList.add('disabled');\n    }\n    return val.trim().length > 4;\n}\n\nconst setFieldFocus = (id) => {\n    const element = document.getElementById(id);\n    if (element) {\n        element.focus();\n    }\n}\n\n// function inputChanged(event) {\n//     if (!checkInputValid(phone.value)) {\n//         submitButton.setAttribute(\"disabled\", \"true\");\n//         const errorMessage = document.getElementById(\"skerrormessage\");\n//         if (errorMessage) errorMessage.style.display = \"block\";\n//     } else {\n//         submitButton.removeAttribute(\"disabled\");\n//         const errorMessage = document.getElementById(\"skerrormessage\");\n//         if (errorMessage) errorMessage.style.display = \"none\";\n//     }\n// }\n\nconst start = () => {\n    setFieldFocus(\"phone\");\n}\n\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n    // `DOMContentLoaded` has already fired\n    start();\n}\n\nif (window.addEventListener) {\n    // Normal browsers\n    countryCodeInput.addEventListener(\"click\", openList);\n    closeListBtn.addEventListener(\"click\", closeList);\n    search.addEventListener(\"input\", searchList);\n    // phone.addEventListener(\"keyup\", inputChanged);\n} else if (window.attachEvent) {\n    // IE\n    // phone.attachEvent(\"keyup\", inputChanged);\n    countryCodeInput.attachEvent(\"click\", openList);\n    closeListBtn.attachEvent(\"click\", closeList);\n    search.attachEvent(\"input\", searchList);\n}\n\n\n// Initial input check\n// inputChanged();\n"
+                "value": "// DOM elements\nconst phone = document.getElementById(\"phone\");\nconst submitButton = document.getElementById('submit');\nconst countryCodeInput = document.getElementById('countryCode');\nconst countryCodeDisplay = document.getElementById('countryCodeDisplay');\nconst showFlags = \"{{showFlags}}\";\nconst defaultCountry = \"{{defaultCountryCode}}\";\n\nconst countryData = [\n  {\"code\":\"af\",\"flag_code\":\"&#x1F1E6;&#x1F1EB;\",\"name\":\"Afghanistan (&#x202B;افغانستان&#x202C;&lrm;)\",\"dial_code\":\"+93\"},\n  {\"code\":\"al\",\"flag_code\":\"&#x1F1E6;&#x1F1F1;\",\"name\":\"Albania (Shqipëri)\",\"dial_code\":\"+355\"},\n  {\"code\":\"dz\",\"flag_code\":\"&#x1F1E9;&#x1F1FF;\",\"name\":\"Algeria (&#x202B;الجزائر&#x202C;&lrm;)\",\"dial_code\":\"+213\"},\n  {\"code\":\"as\",\"flag_code\":\"&#x1F1E6;&#x1F1F8;\",\"name\":\"American Samoa\",\"dial_code\":\"+1\"},\n  {\"code\":\"ad\",\"flag_code\":\"&#x1F1E6;&#x1F1E9;\",\"name\":\"Andorra\",\"dial_code\":\"+376\"},\n  {\"code\":\"ao\",\"flag_code\":\"&#x1F1E6;&#x1F1F4;\",\"name\":\"Angola\",\"dial_code\":\"+244\"},\n  {\"code\":\"ai\",\"flag_code\":\"&#x1F1E6;&#x1F1EE;\",\"name\":\"Anguilla\",\"dial_code\":\"+1\"},\n  {\"code\":\"ag\",\"flag_code\":\"&#x1F1E6;&#x1F1EC;\",\"name\":\"Antigua and Barbuda\",\"dial_code\":\"+1\"},\n  {\"code\":\"ar\",\"flag_code\":\"&#x1F1E6;&#x1F1F7;\",\"name\":\"Argentina\",\"dial_code\":\"+54\"},\n  {\"code\":\"am\",\"flag_code\":\"&#x1F1E6;&#x1F1F2;\",\"name\":\"Armenia (Հայաստան)\",\"dial_code\":\"+374\"},\n  {\"code\":\"aw\",\"flag_code\":\"&#x1F1E6;&#x1F1FC;\",\"name\":\"Aruba\",\"dial_code\":\"+297\"},\n  {\"code\":\"au\",\"flag_code\":\"&#x1F1E6;&#x1F1FA;\",\"name\":\"Australia\",\"dial_code\":\"+61\"},\n  {\"code\":\"at\",\"flag_code\":\"&#x1F1E6;&#x1F1F9;\",\"name\":\"Austria (Österreich)\",\"dial_code\":\"+43\"},\n  {\"code\":\"az\",\"flag_code\":\"&#x1F1E6;&#x1F1FF;\",\"name\":\"Azerbaijan (Azərbaycan)\",\"dial_code\":\"+994\"},\n  {\"code\":\"bs\",\"flag_code\":\"&#x1F1E7;&#x1F1F8;\",\"name\":\"Bahamas\",\"dial_code\":\"+1\"},\n  {\"code\":\"bh\",\"flag_code\":\"&#x1F1E7;&#x1F1ED;\",\"name\":\"Bahrain (&#x202B;البحرين&#x202C;&lrm;)\",\"dial_code\":\"+973\"},\n  {\"code\":\"bd\",\"flag_code\":\"&#x1F1E7;&#x1F1E9;\",\"name\":\"Bangladesh (বাংলাদেশ)\",\"dial_code\":\"+880\"},\n  {\"code\":\"bb\",\"flag_code\":\"&#x1F1E7;&#x1F1E7;\",\"name\":\"Barbados\",\"dial_code\":\"+1\"},\n  {\"code\":\"by\",\"flag_code\":\"&#x1F1E7;&#x1F1FE;\",\"name\":\"Belarus (Беларусь)\",\"dial_code\":\"+375\"},\n  {\"code\":\"be\",\"flag_code\":\"&#x1F1E7;&#x1F1EA;\",\"name\":\"Belgium (België)\",\"dial_code\":\"+32\"},\n  {\"code\":\"bz\",\"flag_code\":\"&#x1F1E7;&#x1F1FF;\",\"name\":\"Belize\",\"dial_code\":\"+501\"},\n  {\"code\":\"bj\",\"flag_code\":\"&#x1F1E7;&#x1F1EF;\",\"name\":\"Benin (Bénin)\",\"dial_code\":\"+2\"},\n  {\"code\":\"bm\",\"flag_code\":\"&#x1F1E7;&#x1F1F2;\",\"name\":\"Bermuda\",\"dial_code\":\"+1\"},\n  {\"code\":\"bt\",\"flag_code\":\"&#x1F1E7;&#x1F1F9;\",\"name\":\"Bhutan (འབྲུག)\",\"dial_code\":\"+975\"},\n  {\"code\":\"bo\",\"flag_code\":\"&#x1F1E7;&#x1F1F4;\",\"name\":\"Bolivia\",\"dial_code\":\"+591\"},\n  {\"code\":\"ba\",\"flag_code\":\"&#x1F1E7;&#x1F1E6;\",\"name\":\"Bosnia and Herzegovina (Босна и Херцеговина)\",\"dial_code\":\"+387\"},\n  {\"code\":\"bw\",\"flag_code\":\"&#x1F1E7;&#x1F1FC;\",\"name\":\"Botswana\",\"dial_code\":\"+267\"},\n  {\"code\":\"br\",\"flag_code\":\"&#x1F1E7;&#x1F1F7;\",\"name\":\"Brazil (Brasil)\",\"dial_code\":\"+55\"},\n  {\"code\":\"io\",\"flag_code\":\"&#x1F1EE;&#x1F1F4;\",\"name\":\"British Indian Ocean Territory\",\"dial_code\":\"+246\"},\n  {\"code\":\"vg\",\"flag_code\":\"&#x1F1FB;&#x1F1EC;\",\"name\":\"British Virgin Islands\",\"dial_code\":\"+1\"},\n  {\"code\":\"bn\",\"flag_code\":\"&#x1F1E7;&#x1F1F3;\",\"name\":\"Brunei\",\"dial_code\":\"+673\"},\n  {\"code\":\"bg\",\"flag_code\":\"&#x1F1E7;&#x1F1EC;\",\"name\":\"Bulgaria (България)\",\"dial_code\":\"+359\"},\n  {\"code\":\"bf\",\"flag_code\":\"&#x1F1E7;&#x1F1EB;\",\"name\":\"Burkina Faso\",\"dial_code\":\"+226\"},\n  {\"code\":\"bi\",\"flag_code\":\"&#x1F1E7;&#x1F1EE;\",\"name\":\"Burundi (Uburundi)\",\"dial_code\":\"+257\"},\n  {\"code\":\"kh\",\"flag_code\":\"&#x1F1F0;&#x1F1ED;\",\"name\":\"Cambodia (កម្ពុជា)\",\"dial_code\":\"+855\"},\n  {\"code\":\"cm\",\"flag_code\":\"&#x1F1E8;&#x1F1F2;\",\"name\":\"Cameroon (Cameroun)\",\"dial_code\":\"+237\"},\n  {\"code\":\"ca\",\"flag_code\":\"&#x1F1E8;&#x1F1E6;\",\"name\":\"Canada\",\"dial_code\":\"+1\"},\n  {\"code\":\"cv\",\"flag_code\":\"&#x1F1E8;&#x1F1FB;\",\"name\":\"Cape Verde (Kabu Verdi)\",\"dial_code\":\"+238\"},\n  {\"code\":\"bq\",\"flag_code\":\"&#x1F1E7;&#x1F1F6;\",\"name\":\"Caribbean Netherlands\",\"dial_code\":\"+599\"},\n  {\"code\":\"ky\",\"flag_code\":\"&#x1F1F0;&#x1F1FE;\",\"name\":\"Cayman Islands\",\"dial_code\":\"+1\"},\n  {\"code\":\"cf\",\"flag_code\":\"&#x1F1E8;&#x1F1EB;\",\"name\":\"Central African Republic (République centrafricaine)\",\"dial_code\":\"+236\"},\n  {\"code\":\"td\",\"flag_code\":\"&#x1F1F9;&#x1F1E9;\",\"name\":\"Chad (Tchad)\",\"dial_code\":\"+235\"},\n  {\"code\":\"cl\",\"flag_code\":\"&#x1F1E8;&#x1F1F1;\",\"name\":\"Chile\",\"dial_code\":\"+56\"},\n  {\"code\":\"cn\",\"flag_code\":\"&#x1F1E8;&#x1F1F3;\",\"name\":\"China (中国)\",\"dial_code\":\"+86\"},\n  {\"code\":\"cx\",\"flag_code\":\"&#x1F1E8;&#x1F1FD;\",\"name\":\"Christmas Island\",\"dial_code\":\"+61\"},\n  {\"code\":\"cc\",\"flag_code\":\"&#x1F1E8;&#x1F1E8;\",\"name\":\"Cocos (Keeling) Islands\",\"dial_code\":\"+61\"},\n  {\"code\":\"co\",\"flag_code\":\"&#x1F1E8;&#x1F1F4;\",\"name\":\"Colombia\",\"dial_code\":\"+57\"},\n  {\"code\":\"km\",\"flag_code\":\"&#x1F1F0;&#x1F1F2;\",\"name\":\"Comoros (‫جزر القمر‬‎)\",\"dial_code\":\"+269\"},\n  {\"code\":\"cg\",\"flag_code\":\"&#x1F1E8;&#x1F1EC;\",\"name\":\"Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)\",\"dial_code\":\"+243\"},\n  {\"code\":\"cd\",\"flag_code\":\"&#x1F1E8;&#x1F1E9;\",\"name\":\"Congo (Republic) (Congo-Brazzaville)\",\"dial_code\":\"+242\"},\n  {\"code\":\"ck\",\"flag_code\":\"&#x1F1E8;&#x1F1F0;\",\"name\":\"Cook Islands\",\"dial_code\":\"+682\"},\n  {\"code\":\"cr\",\"flag_code\":\"&#x1F1E8;&#x1F1F7;\",\"name\":\"Costa Rica\",\"dial_code\":\"+506\"},\n  {\"code\":\"ci\",\"flag_code\":\"&#x1F1E8;&#x1F1EE;\",\"name\":\"Côte d’Ivoire\",\"dial_code\":\"+225\"},\n  {\"code\":\"hr\",\"flag_code\":\"&#x1F1ED;&#x1F1F7;\",\"name\":\"Croatia (Hrvatska)\",\"dial_code\":\"+385\"},\n  {\"code\":\"cu\",\"flag_code\":\"&#x1F1E8;&#x1F1FA;\",\"name\":\"Cuba\",\"dial_code\":\"+53\"},\n  {\"code\":\"cw\",\"flag_code\":\"&#x1F1E8;&#x1F1FC;\",\"name\":\"Curaçao\",\"dial_code\":\"+599\"},\n  {\"code\":\"cy\",\"flag_code\":\"&#x1F1E8;&#x1F1FE;\",\"name\":\"Cyprus (Κύπρος)\",\"dial_code\":\"+357\"},\n  {\"code\":\"cz\",\"flag_code\":\"&#x1F1E8;&#x1F1FF;\",\"name\":\"Czech Republic (Česká republika)\",\"dial_code\":\"+420\"},\n  {\"code\":\"dk\",\"flag_code\":\"&#x1F1E9;&#x1F1F0;\",\"name\":\"Denmark (Danmark)\",\"dial_code\":\"+45\"},\n  {\"code\":\"dj\",\"flag_code\":\"&#x1F1E9;&#x1F1EF;\",\"name\":\"Djibouti\",\"dial_code\":\"+253\"},\n  {\"code\":\"dm\",\"flag_code\":\"&#x1F1E9;&#x1F1F2;\",\"name\":\"Dominica\",\"dial_code\":\"+1\"},\n  {\"code\":\"do\",\"flag_code\":\"&#x1F1E9;&#x1F1F4;\",\"name\":\"Dominican Republic (República Dominicana)\",\"dial_code\":\"+1\"},\n  {\"code\":\"ec\",\"flag_code\":\"&#x1F1EA;&#x1F1E8;\",\"name\":\"Ecuador\",\"dial_code\":\"+593\"},\n  {\"code\":\"eg\",\"flag_code\":\"&#x1F1EA;&#x1F1EC;\",\"name\":\"Egypt (‫مصر‬‎)\",\"dial_code\":\"+20\"},\n  {\"code\":\"sv\",\"flag_code\":\"&#x1F1F8;&#x1F1FB;\",\"name\":\"El Salvador\",\"dial_code\":\"+503\"},\n  {\"code\":\"gq\",\"flag_code\":\"&#x1F1EC;&#x1F1F6;\",\"name\":\"Equatorial Guinea (Guinea Ecuatorial)\",\"dial_code\":\"+240\"},\n  {\"code\":\"er\",\"flag_code\":\"&#x1F1EA;&#x1F1F7;\",\"name\":\"Eritrea\",\"dial_code\":\"+291\"},\n  {\"code\":\"ee\",\"flag_code\":\"&#x1F1EA;&#x1F1EA;\",\"name\":\"Estonia (Eesti)\",\"dial_code\":\"+372\"},\n  {\"code\":\"et\",\"flag_code\":\"&#x1F1EA;&#x1F1F9;\",\"name\":\"Ethiopia\",\"dial_code\":\"+251\"},\n  {\"code\":\"fk\",\"flag_code\":\"&#x1F1EB;&#x1F1F0;\",\"name\":\"Falkland Islands (Islas Malvinas)\",\"dial_code\":\"+500\"},\n  {\"code\":\"fo\",\"flag_code\":\"&#x1F1EB;&#x1F1F4;\",\"name\":\"Faroe Islands (Føroyar)\",\"dial_code\":\"+298\"},\n  {\"code\":\"fj\",\"flag_code\":\"&#x1F1EB;&#x1F1EF;\",\"name\":\"Fiji\",\"dial_code\":\"+679\"},\n  {\"code\":\"fi\",\"flag_code\":\"&#x1F1EB;&#x1F1EE;\",\"name\":\"Finland (Suomi)\",\"dial_code\":\"+358\"},\n  {\"code\":\"fr\",\"flag_code\":\"&#x1F1EB;&#x1F1F7;\",\"name\":\"France\",\"dial_code\":\"+33\"},\n  {\"code\":\"gf\",\"flag_code\":\"&#x1F1EC;&#x1F1EB;\",\"name\":\"French Guiana (Guyane française)\",\"dial_code\":\"+594\"},\n  {\"code\":\"pf\",\"flag_code\":\"&#x1F1F5;&#x1F1EB;\",\"name\":\"French Polynesia (Polynésie française)\",\"dial_code\":\"+689\"},\n  {\"code\":\"ga\",\"flag_code\":\"&#x1F1EC;&#x1F1E6;\",\"name\":\"Gabon\",\"dial_code\":\"+241\"},\n  {\"code\":\"gm\",\"flag_code\":\"&#x1F1EC;&#x1F1F2;\",\"name\":\"Gambia\",\"dial_code\":\"+220\"},\n  {\"code\":\"ge\",\"flag_code\":\"&#x1F1EC;&#x1F1EA;\",\"name\":\"Georgia (საქართველო)\",\"dial_code\":\"+995\"},\n  {\"code\":\"de\",\"flag_code\":\"&#x1F1E9;&#x1F1EA;\",\"name\":\"Germany (Deutschland)\",\"dial_code\":\"+49\"},\n  {\"code\":\"gh\",\"flag_code\":\"&#x1F1EC;&#x1F1ED;\",\"name\":\"Ghana (Gaana)\",\"dial_code\":\"+233\"},\n  {\"code\":\"gi\",\"flag_code\":\"&#x1F1EC;&#x1F1EE;\",\"name\":\"Gibraltar\",\"dial_code\":\"+350\"},\n  {\"code\":\"gr\",\"flag_code\":\"&#x1F1EC;&#x1F1F7;\",\"name\":\"Greece (Ελλάδα)\",\"dial_code\":\"+30\"},\n  {\"code\":\"gl\",\"flag_code\":\"&#x1F1EC;&#x1F1F1;\",\"name\":\"Greenland (Kalaallit Nunaat)\",\"dial_code\":\"+299\"},\n  {\"code\":\"gd\",\"flag_code\":\"&#x1F1EC;&#x1F1E9;\",\"name\":\"Grenada\",\"dial_code\":\"+1\"},\n  {\"code\":\"gp\",\"flag_code\":\"&#x1F1EC;&#x1F1F5;\",\"name\":\"Guadeloupe\",\"dial_code\":\"+590\"},\n  {\"code\":\"gu\",\"flag_code\":\"&#x1F1EC;&#x1F1FA;\",\"name\":\"Guam\",\"dial_code\":\"+1\"},\n  {\"code\":\"gt\",\"flag_code\":\"&#x1F1EC;&#x1F1F9;\",\"name\":\"Guatemala\",\"dial_code\":\"+502\"},\n  {\"code\":\"gg\",\"flag_code\":\"&#x1F1EC;&#x1F1EC;\",\"name\":\"Guernsey\",\"dial_code\":\"+44\"},\n  {\"code\":\"gn\",\"flag_code\":\"&#x1F1EC;&#x1F1F3;\",\"name\":\"Guinea (Guinée)\",\"dial_code\":\"+224\"},\n  {\"code\":\"gw\",\"flag_code\":\"&#x1F1EC;&#x1F1FC;\",\"name\":\"Guinea-Bissau (Guiné Bissau)\",\"dial_code\":\"+245\"},\n  {\"code\":\"gy\",\"flag_code\":\"&#x1F1EC;&#x1F1FE;\",\"name\":\"Guyana\",\"dial_code\":\"+592\"},\n  {\"code\":\"ht\",\"flag_code\":\"&#x1F1ED;&#x1F1F9;\",\"name\":\"Haiti\",\"dial_code\":\"+509\"},\n  {\"code\":\"hn\",\"flag_code\":\"&#x1F1ED;&#x1F1F3;\",\"name\":\"Honduras\",\"dial_code\":\"+504\"},\n  {\"code\":\"hk\",\"flag_code\":\"&#x1F1ED;&#x1F1F0;\",\"name\":\"Hong Kong (香港)\",\"dial_code\":\"+852\"},\n  {\"code\":\"hu\",\"flag_code\":\"&#x1F1ED;&#x1F1FA;\",\"name\":\"Hungary (Magyarország)\",\"dial_code\":\"+36\"},\n  {\"code\":\"is\",\"flag_code\":\"&#x1F1EE;&#x1F1F8;\",\"name\":\"Iceland (Ísland)\",\"dial_code\":\"+354\"},\n  {\"code\":\"in\",\"flag_code\":\"&#x1F1EE;&#x1F1F3;\",\"name\":\"India (भारत)\",\"dial_code\":\"+91\"},\n  {\"code\":\"id\",\"flag_code\":\"&#x1F1EE;&#x1F1E9;\",\"name\":\"Indonesia\",\"dial_code\":\"+62\"},\n  {\"code\":\"ir\",\"flag_code\":\"&#x1F1EE;&#x1F1F7;\",\"name\":\"Iran (‫ایران‬‎)\",\"dial_code\":\"+98\"},\n  {\"code\":\"iq\",\"flag_code\":\"&#x1F1EE;&#x1F1F6;\",\"name\":\"Iraq (‫العراق‬‎)\",\"dial_code\":\"+964\"},\n  {\"code\":\"ie\",\"flag_code\":\"&#x1F1EA;&#x1F1F7;\",\"name\":\"Ireland\",\"dial_code\":\"+353\"},\n  {\"code\":\"im\",\"flag_code\":\"&#x1F1EE;&#x1F1F2;\",\"name\":\"Isle of Man\",\"dial_code\":\"+44\"},\n  {\"code\":\"il\",\"flag_code\":\"&#x1F1EE;&#x1F1F1;\",\"name\":\"Israel (‫ישראל‬‎)\",\"dial_code\":\"+972\"},\n  {\"code\":\"it\",\"flag_code\":\"&#x1F1EE;&#x1F1F9;\",\"name\":\"Italy (Italia)\",\"dial_code\":\"+39\"},\n  {\"code\":\"jm\",\"flag_code\":\"&#x1F1EF;&#x1F1F2;\",\"name\":\"Jamaica\",\"dial_code\":\"+1\"},\n  {\"code\":\"jp\",\"flag_code\":\"&#x1F1EF;&#x1F1F5;\",\"name\":\"Japan (日本)\",\"dial_code\":\"+81\"},\n  {\"code\":\"je\",\"flag_code\":\"&#x1F1EF;&#x1F1EA;\",\"name\":\"Jersey\",\"dial_code\":\"+44\"},\n  {\"code\":\"jo\",\"flag_code\":\"&#x1F1EF;&#x1F1F4;\",\"name\":\"Jordan (‫الأردن‬‎)\",\"dial_code\":\"+962\"},\n  {\"code\":\"kz\",\"flag_code\":\"&#x1F1F0;&#x1F1FF;\",\"name\":\"Kazakhstan (Казахстан)\",\"dial_code\":\"+7\"},\n  {\"code\":\"ke\",\"flag_code\":\"&#x1F1F0;&#x1F1EA;\",\"name\":\"Kenya\",\"dial_code\":\"+254\"},\n  {\"code\":\"ki\",\"flag_code\":\"&#x1F1F0;&#x1F1EE;\",\"name\":\"Kiribati\",\"dial_code\":\"+686\"},\n  {\"code\":\"xk\",\"flag_code\":\"&#x1F1FD;&#x1F1F0;\",\"name\":\"Kosovo\",\"dial_code\":\"+383\"},\n  {\"code\":\"kw\",\"flag_code\":\"&#x1F1F0;&#x1F1FC;\",\"name\":\"Kuwait (‫الكويت‬‎)\",\"dial_code\":\"+965\"},\n  {\"code\":\"kg\",\"flag_code\":\"&#x1F1F0;&#x1F1EC;\",\"name\":\"Kyrgyzstan (Кыргызстан)\",\"dial_code\":\"+996\"},\n  {\"code\":\"la\",\"flag_code\":\"&#x1F1F1;&#x1F1E6;\",\"name\":\"Laos (ລາວ)\",\"dial_code\":\"+856\"},\n  {\"code\":\"lv\",\"flag_code\":\"&#x1F1F1;&#x1F1FB;\",\"name\":\"Latvia (Latvija)\",\"dial_code\":\"+371\"},\n  {\"code\":\"lb\",\"flag_code\":\"&#x1F1F1;&#x1F1E7;\",\"name\":\"Lebanon (‫لبنان‬‎)\",\"dial_code\":\"+961\"},\n  {\"code\":\"ls\",\"flag_code\":\"&#x1F1F1;&#x1F1F8;\",\"name\":\"Lesotho\",\"dial_code\":\"+266\"},\n  {\"code\":\"lr\",\"flag_code\":\"&#x1F1F1;&#x1F1F7;\",\"name\":\"Liberia\",\"dial_code\":\"+231\"},\n  {\"code\":\"ly\",\"flag_code\":\"&#x1F1F1;&#x1F1FE;\",\"name\":\"Libya (‫ليبيا‬‎)\",\"dial_code\":\"+218\"},\n  {\"code\":\"li\",\"flag_code\":\"&#x1F1F1;&#x1F1EE;\",\"name\":\"Liechtenstein\",\"dial_code\":\"+423\"},\n  {\"code\":\"lt\",\"flag_code\":\"&#x1F1F1;&#x1F1F9;\",\"name\":\"Lithuania (Lietuva)\",\"dial_code\":\"+370\"},\n  {\"code\":\"lu\",\"flag_code\":\"&#x1F1F1;&#x1F1FA;\",\"name\":\"Luxembourg\",\"dial_code\":\"+352\"},\n  {\"code\":\"mo\",\"flag_code\":\"&#x1F1F2;&#x1F1F4;\",\"name\":\"Macau (澳門)\",\"dial_code\":\"+853\"},\n  {\"code\":\"mk\",\"flag_code\":\"&#x1F1F2;&#x1F1F0;\",\"name\":\"Macedonia (FYROM) (Македонија)\",\"dial_code\":\"+389\"},\n  {\"code\":\"mg\",\"flag_code\":\"&#x1F1F2;&#x1F1EC;\",\"name\":\"Madagascar (Madagasikara)\",\"dial_code\":\"+261\"},\n  {\"code\":\"mw\",\"flag_code\":\"&#x1F1F2;&#x1F1FC;\",\"name\":\"Malawi\",\"dial_code\":\"+265\"},\n  {\"code\":\"my\",\"flag_code\":\"&#x1F1F2;&#x1F1FE;\",\"name\":\"Malaysia\",\"dial_code\":\"+60\"},\n  {\"code\":\"mv\",\"flag_code\":\"&#x1F1F2;&#x1F1FB;\",\"name\":\"Maldives\",\"dial_code\":\"+960\"},\n  {\"code\":\"ml\",\"flag_code\":\"&#x1F1F2;&#x1F1F1;\",\"name\":\"Mali\",\"dial_code\":\"+223\"},\n  {\"code\":\"mt\",\"flag_code\":\"&#x1F1F2;&#x1F1F9;\",\"name\":\"Malta\",\"dial_code\":\"+356\"},\n  {\"code\":\"mh\",\"flag_code\":\"&#x1F1F2;&#x1F1ED;\",\"name\":\"Marshall Islands\",\"dial_code\":\"+692\"},\n  {\"code\":\"mq\",\"flag_code\":\"&#x1F1F2;&#x1F1F6;\",\"name\":\"Martinique\",\"dial_code\":\"+596\"},\n  {\"code\":\"mr\",\"flag_code\":\"&#x1F1F2;&#x1F1F7;\",\"name\":\"Mauritania (‫موريتانيا‬‎)\",\"dial_code\":\"+222\"},\n  {\"code\":\"mu\",\"flag_code\":\"&#x1F1F2;&#x1F1FA;\",\"name\":\"Mauritius (Moris)\",\"dial_code\":\"+230\"},\n  {\"code\":\"yt\",\"flag_code\":\"&#x1F1FE;&#x1F1F9;\",\"name\":\"Mayotte\",\"dial_code\":\"+262\"},\n  {\"code\":\"mx\",\"flag_code\":\"&#x1F1F2;&#x1F1FD;\",\"name\":\"Mexico (México)\",\"dial_code\":\"+52\"},\n  {\"code\":\"fm\",\"flag_code\":\"&#x1F1EB;&#x1F1F2;\",\"name\":\"Micronesia\",\"dial_code\":\"+691\"},\n  {\"code\":\"md\",\"flag_code\":\"&#x1F1F2;&#x1F1E9;\",\"name\":\"Moldova (Republica Moldova)\",\"dial_code\":\"+373\"},\n  {\"code\":\"mc\",\"flag_code\":\"&#x1F1F2;&#x1F1E8;\",\"name\":\"Monaco\",\"dial_code\":\"+377\"},\n  {\"code\":\"mn\",\"flag_code\":\"&#x1F1F2;&#x1F1F3;\",\"name\":\"Mongolia (Монгол)\",\"dial_code\":\"+976\"},\n  {\"code\":\"me\",\"flag_code\":\"&#x1F1F2;&#x1F1EA;\",\"name\":\"Montenegro (Crna Gora)\",\"dial_code\":\"+382\"},\n  {\"code\":\"ms\",\"flag_code\":\"&#x1F1F2;&#x1F1F8;\",\"name\":\"Montserrat\",\"dial_code\":\"+1\"},\n  {\"code\":\"ma\",\"flag_code\":\"&#x1F1F2;&#x1F1E6;\",\"name\":\"Morocco (‫المغرب‬‎)\",\"dial_code\":\"+212\"},\n  {\"code\":\"mz\",\"flag_code\":\"&#x1F1F2;&#x1F1FF;\",\"name\":\"Mozambique (Moçambique)\",\"dial_code\":\"+258\"},\n  {\"code\":\"mm\",\"flag_code\":\"&#x1F1F2;&#x1F1F2;\",\"name\":\"Myanmar (Burma) (မြန်မာ)\",\"dial_code\":\"+95\"},\n  {\"code\":\"na\",\"flag_code\":\"&#x1F1F3;&#x1F1E6;\",\"name\":\"Namibia (Namibië)\",\"dial_code\":\"+264\"},\n  {\"code\":\"nr\",\"flag_code\":\"&#x1F1F3;&#x1F1F7;\",\"name\":\"Nauru\",\"dial_code\":\"+674\"},\n  {\"code\":\"np\",\"flag_code\":\"&#x1F1F3;&#x1F1F5;\",\"name\":\"Nepal (नेपाल)\",\"dial_code\":\"+977\"},\n  {\"code\":\"nl\",\"flag_code\":\"&#x1F1F3;&#x1F1F1;\",\"name\":\"Netherlands (Nederland)\",\"dial_code\":\"+31\"},\n  {\"code\":\"nc\",\"flag_code\":\"&#x1F1F3;&#x1F1E8;\",\"name\":\"New Caledonia (Nouvelle-Calédonie)\",\"dial_code\":\"+687\"},\n  {\"code\":\"nz\",\"flag_code\":\"&#x1F1F3;&#x1F1FF;\",\"name\":\"New Zealand\",\"dial_code\":\"+64\"},\n  {\"code\":\"ni\",\"flag_code\":\"&#x1F1F3;&#x1F1EE;\",\"name\":\"Nicaragua\",\"dial_code\":\"+505\"},\n  {\"code\":\"ne\",\"flag_code\":\"&#x1F1F3;&#x1F1EA;\",\"name\":\"Niger (Nijar)\",\"dial_code\":\"+227\"},\n  {\"code\":\"ng\",\"flag_code\":\"&#x1F1F3;&#x1F1EC;\",\"name\":\"Nigeria\",\"dial_code\":\"+234\"},\n  {\"code\":\"nu\",\"flag_code\":\"&#x1F1F3;&#x1F1FA;\",\"name\":\"Niue\",\"dial_code\":\"+683\"},\n  {\"code\":\"nf\",\"flag_code\":\"&#x1F1F3;&#x1F1EB;\",\"name\":\"Norfolk Island\",\"dial_code\":\"+672\"},\n  {\"code\":\"kp\",\"flag_code\":\"&#x1F1F0;&#x1F1F5;\",\"name\":\"North Korea (조선 민주주의 인민 공화국)\",\"dial_code\":\"+850\"},\n  {\"code\":\"mp\",\"flag_code\":\"&#x1F1F2;&#x1F1F5;\",\"name\":\"Northern Mariana Islands\",\"dial_code\":\"+1\"},\n  {\"code\":\"no\",\"flag_code\":\"&#x1F1F3;&#x1F1F4;\",\"name\":\"Norway (Norge)\",\"dial_code\":\"+47\"},\n  {\"code\":\"om\",\"flag_code\":\"&#x1F1F4;&#x1F1F2;\",\"name\":\"Oman (‫عُمان‬‎)\",\"dial_code\":\"+968\"},\n  {\"code\":\"pk\",\"flag_code\":\"&#x1F1F5;&#x1F1F0;\",\"name\":\"Pakistan (‫پاکستان‬‎)\",\"dial_code\":\"+92\"},\n  {\"code\":\"pw\",\"flag_code\":\"&#x1F1F5;&#x1F1FC;\",\"name\":\"Palau\",\"dial_code\":\"+680\"},\n  {\"code\":\"ps\",\"flag_code\":\"&#x1F1F5;&#x1F1F8;\",\"name\":\"Palestine (‫فلسطين‬‎)\",\"dial_code\":\"+970\"},\n  {\"code\":\"pa\",\"flag_code\":\"&#x1F1F5;&#x1F1E6;\",\"name\":\"Panama (Panamá)\",\"dial_code\":\"+507\"},\n  {\"code\":\"pg\",\"flag_code\":\"&#x1F1F5;&#x1F1EC;\",\"name\":\"Papua New Guinea\",\"dial_code\":\"+675\"},\n  {\"code\":\"py\",\"flag_code\":\"&#x1F1F5;&#x1F1FE;\",\"name\":\"Paraguay\",\"dial_code\":\"+595\"},\n  {\"code\":\"pe\",\"flag_code\":\"&#x1F1F5;&#x1F1EA;\",\"name\":\"Peru (Perú)\",\"dial_code\":\"+51\"},\n  {\"code\":\"ph\",\"flag_code\":\"&#x1F1F5;&#x1F1ED;\",\"name\":\"Philippines\",\"dial_code\":\"+63\"},\n  {\"code\":\"pl\",\"flag_code\":\"&#x1F1F5;&#x1F1F1;\",\"name\":\"Poland (Polska)\",\"dial_code\":\"+48\"},\n  {\"code\":\"pt\",\"flag_code\":\"&#x1F1F5;&#x1F1F9;\",\"name\":\"Portugal\",\"dial_code\":\"+351\"},\n  {\"code\":\"pr\",\"flag_code\":\"&#x1F1F5;&#x1F1F7;\",\"name\":\"Puerto Rico\",\"dial_code\":\"+1\"},\n  {\"code\":\"qa\",\"flag_code\":\"&#x1F1F6;&#x1F1E6;\",\"name\":\"Qatar (‫قطر‬‎)\",\"dial_code\":\"+974\"},\n  {\"code\":\"re\",\"flag_code\":\"&#x1F1F7;&#x1F1EA;\",\"name\":\"Réunion (La Réunion)\",\"dial_code\":\"+262\"},\n  {\"code\":\"ro\",\"flag_code\":\"&#x1F1F7;&#x1F1F4;\",\"name\":\"Romania (România)\",\"dial_code\":\"+40\"},\n  {\"code\":\"ru\",\"flag_code\":\"&#x1F1F7;&#x1F1FA;\",\"name\":\"Russia (Россия)\",\"dial_code\":\"+7\"},\n  {\"code\":\"rw\",\"flag_code\":\"&#x1F1F7;&#x1F1FC;\",\"name\":\"Rwanda\",\"dial_code\":\"+250\"},\n  {\"code\":\"bl\",\"flag_code\":\"&#x1F1E7;&#x1F1F1;\",\"name\":\"Saint Barthélemy\",\"dial_code\":\"+590\"},\n  {\"code\":\"sh\",\"flag_code\":\"&#x1F1F8;&#x1F1ED;\",\"name\":\"Saint Helena\",\"dial_code\":\"+290\"},\n  {\"code\":\"kn\",\"flag_code\":\"&#x1F1F0;&#x1F1F3;\",\"name\":\"Saint Kitts and Nevis\",\"dial_code\":\"+1\"},\n  {\"code\":\"lc\",\"flag_code\":\"&#x1F1F1;&#x1F1E8;\",\"name\":\"Saint Lucia\",\"dial_code\":\"+1\"},\n  {\"code\":\"mf\",\"flag_code\":\"&#x1F1F2;&#x1F1EB;\",\"name\":\"Saint Martin (Saint-Martin (partie française))\",\"dial_code\":\"+590\"},\n  {\"code\":\"pm\",\"flag_code\":\"&#x1F1F5;&#x1F1F2;\",\"name\":\"Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)\",\"dial_code\":\"+508\"},\n  {\"code\":\"vc\",\"flag_code\":\"&#x1F1FB;&#x1F1E8;\",\"name\":\"Saint Vincent and the Grenadines\",\"dial_code\":\"+1\"},\n  {\"code\":\"ws\",\"flag_code\":\"&#x1F1FC;&#x1F1F8;\",\"name\":\"Samoa\",\"dial_code\":\"+685\"},\n  {\"code\":\"sm\",\"flag_code\":\"&#x1F1F8;&#x1F1F2;\",\"name\":\"San Marino\",\"dial_code\":\"+378\"},\n  {\"code\":\"st\",\"flag_code\":\"&#x1F1F8;&#x1F1F9;\",\"name\":\"São Tomé and Príncipe (São Tomé e Príncipe)\",\"dial_code\":\"+239\"},\n  {\"code\":\"sa\",\"flag_code\":\"&#x1F1F8;&#x1F1E6;\",\"name\":\"Saudi Arabia (‫المملكة العربية السعودية‬‎)\",\"dial_code\":\"+966\"},\n  {\"code\":\"sn\",\"flag_code\":\"&#x1F1F8;&#x1F1F3;\",\"name\":\"Senegal (Sénégal)\",\"dial_code\":\"+221\"},\n  {\"code\":\"rs\",\"flag_code\":\"&#x1F1F7;&#x1F1F8;\",\"name\":\"Serbia (Србија)\",\"dial_code\":\"+381\"},\n  {\"code\":\"sc\",\"flag_code\":\"&#x1F1F8;&#x1F1E8;\",\"name\":\"Seychelles\",\"dial_code\":\"+248\"},\n  {\"code\":\"sl\",\"flag_code\":\"&#x1F1F8;&#x1F1F1;\",\"name\":\"Sierra Leone\",\"dial_code\":\"+232\"},\n  {\"code\":\"sg\",\"flag_code\":\"&#x1F1F8;&#x1F1EC;\",\"name\":\"Singapore\",\"dial_code\":\"+65\"},\n  {\"code\":\"sx\",\"flag_code\":\"&#x1F1F8;&#x1F1FD;\",\"name\":\"Sint Maarten\",\"dial_code\":\"+1\"},\n  {\"code\":\"sk\",\"flag_code\":\"&#x1F1F8;&#x1F1F0;\",\"name\":\"Slovakia (Slovensko)\",\"dial_code\":\"+421\"},\n  {\"code\":\"si\",\"flag_code\":\"&#x1F1F8;&#x1F1EE;\",\"name\":\"Slovenia (Slovenija)\",\"dial_code\":\"+386\"},\n  {\"code\":\"sb\",\"flag_code\":\"&#x1F1F8;&#x1F1E7;\",\"name\":\"Solomon Islands\",\"dial_code\":\"+677\"},\n  {\"code\":\"so\",\"flag_code\":\"&#x1F1F8;&#x1F1F4;\",\"name\":\"Somalia (Soomaaliya)\",\"dial_code\":\"+252\"},\n  {\"code\":\"za\",\"flag_code\":\"&#x1F1FF;&#x1F1E6;\",\"name\":\"South Africa\",\"dial_code\":\"+27\"},\n  {\"code\":\"kr\",\"flag_code\":\"&#x1F1F0;&#x1F1F7;\",\"name\":\"South Korea (대한민국)\",\"dial_code\":\"+82\"},\n  {\"code\":\"ss\",\"flag_code\":\"&#x1F1F8;&#x1F1F8;\",\"name\":\"South Sudan (‫جنوب السودان‬‎)\",\"dial_code\":\"+211\"},\n  {\"code\":\"es\",\"flag_code\":\"&#x1F1EA;&#x1F1F8;\",\"name\":\"Spain (España)\",\"dial_code\":\"+34\"},\n  {\"code\":\"lk\",\"flag_code\":\"&#x1F1F1;&#x1F1F0;\",\"name\":\"Sri Lanka (ශ්‍රී ලංකාව)\",\"dial_code\":\"+94\"},\n  {\"code\":\"sd\",\"flag_code\":\"&#x1F1F8;&#x1F1E9;\",\"name\":\"Sudan (‫السودان‬‎)\",\"dial_code\":\"+249\"},\n  {\"code\":\"sr\",\"flag_code\":\"&#x1F1F8;&#x1F1F7;\",\"name\":\"Suriname\",\"dial_code\":\"+597\"},\n  {\"code\":\"sj\",\"flag_code\":\"&#x1F1F8;&#x1F1EF;\",\"name\":\"Svalbard and Jan Mayen\",\"dial_code\":\"+47\"},\n  {\"code\":\"sz\",\"flag_code\":\"&#x1F1F8;&#x1F1FF;\",\"name\":\"Swaziland\",\"dial_code\":\"+268\"},\n  {\"code\":\"se\",\"flag_code\":\"&#x1F1F8;&#x1F1EA;\",\"name\":\"Sweden (Sverige)\",\"dial_code\":\"+46\"},\n  {\"code\":\"ch\",\"flag_code\":\"&#x1F1E8;&#x1F1ED;\",\"name\":\"Switzerland (Schweiz)\",\"dial_code\":\"+41\"},\n  {\"code\":\"sy\",\"flag_code\":\"&#x1F1F8;&#x1F1FE;\",\"name\":\"Syria (‫سوريا‬‎)\",\"dial_code\":\"+963\"},\n  {\"code\":\"tw\",\"flag_code\":\"&#x1F1F9;&#x1F1FC;\",\"name\":\"Taiwan (台灣)\",\"dial_code\":\"+886\"},\n  {\"code\":\"tj\",\"flag_code\":\"&#x1F1F9;&#x1F1EF;\",\"name\":\"Tajikistan\",\"dial_code\":\"+992\"},\n  {\"code\":\"tz\",\"flag_code\":\"&#x1F1F9;&#x1F1FF;\",\"name\":\"Tanzania\",\"dial_code\":\"+255\"},\n  {\"code\":\"th\",\"flag_code\":\"&#x1F1F9;&#x1F1ED;\",\"name\":\"Thailand (ไทย)\",\"dial_code\":\"+66\"},\n  {\"code\":\"tl\",\"flag_code\":\"&#x1F1F9;&#x1F1F1;\",\"name\":\"Timor-Leste\",\"dial_code\":\"+670\"},\n  {\"code\":\"tg\",\"flag_code\":\"&#x1F1F9;&#x1F1EC;\",\"name\":\"Togo\",\"dial_code\":\"+228\"},\n  {\"code\":\"tk\",\"flag_code\":\"&#x1F1F9;&#x1F1F0;\",\"name\":\"Tokelau\",\"dial_code\":\"+690\"},\n  {\"code\":\"to\",\"flag_code\":\"&#x1F1F9;&#x1F1F4;\",\"name\":\"Tonga\",\"dial_code\":\"+676\"},\n  {\"code\":\"tt\",\"flag_code\":\"&#x1F1F9;&#x1F1F9;\",\"name\":\"Trinidad and Tobago\",\"dial_code\":\"+1\"},\n  {\"code\":\"tn\",\"flag_code\":\"&#x1F1F9;&#x1F1F3;\",\"name\":\"Tunisia (‫تونس‬‎)\",\"dial_code\":\"+216\"},\n  {\"code\":\"tr\",\"flag_code\":\"&#x1F1F9;&#x1F1F7;\",\"name\":\"Turkey (Türkiye)\",\"dial_code\":\"+90\"},\n  {\"code\":\"tm\",\"flag_code\":\"&#x1F1F9;&#x1F1F2;\",\"name\":\"Turkmenistan\",\"dial_code\":\"+993\"},\n  {\"code\":\"tc\",\"flag_code\":\"&#x1F1F9;&#x1F1E8;\",\"name\":\"Turks and Caicos Islands\",\"dial_code\":\"+1\"},\n  {\"code\":\"tv\",\"flag_code\":\"&#x1F1F9;&#x1F1FB;\",\"name\":\"Tuvalu\",\"dial_code\":\"+688\"},\n  {\"code\":\"vi\",\"flag_code\":\"&#x1F1FB;&#x1F1EE;\",\"name\":\"U.S. Virgin Islands\",\"dial_code\":\"+1\"},\n  {\"code\":\"ug\",\"flag_code\":\"&#x1F1FA;&#x1F1EC;\",\"name\":\"Uganda\",\"dial_code\":\"+256\"},\n  {\"code\":\"ua\",\"flag_code\":\"&#x1F1FA;&#x1F1E6;\",\"name\":\"Ukraine (Україна)\",\"dial_code\":\"+380\"},\n  {\"code\":\"ae\",\"flag_code\":\"&#x1F1E6;&#x1F1EA;\",\"name\":\"United Arab Emirates (‫الإمارات العربية المتحدة‬‎)\",\"dial_code\":\"+971\"},\n  {\"code\":\"gb\",\"flag_code\":\"&#x1F1EC;&#x1F1E7;\",\"name\":\"United Kingdom\",\"dial_code\":\"+44\"},\n  {\"code\":\"us\",\"flag_code\":\"&#x1F1FA;&#x1F1F8;\",\"name\":\"United States\",\"dial_code\":\"+1\"},\n  {\"code\":\"uy\",\"flag_code\":\"&#x1F1FA;&#x1F1FE;\",\"name\":\"Uruguay\",\"dial_code\":\"+598\"},\n  {\"code\":\"uz\",\"flag_code\":\"&#x1F1FA;&#x1F1FF;\",\"name\":\"Uzbekistan (Oʻzbekiston)\",\"dial_code\":\"+998\"},\n  {\"code\":\"vu\",\"flag_code\":\"&#x1F1FB;&#x1F1FA;\",\"name\":\"Vanuatu\",\"dial_code\":\"+678\"},\n  {\"code\":\"va\",\"flag_code\":\"&#x1F1FB;&#x1F1E6;\",\"name\":\"Vatican City (Città del Vaticano)\",\"dial_code\":\"+39\"},\n  {\"code\":\"ve\",\"flag_code\":\"&#x1F1FB;&#x1F1EA;\",\"name\":\"Venezuela\",\"dial_code\":\"+58\"},\n  {\"code\":\"vn\",\"flag_code\":\"&#x1F1FB;&#x1F1F3;\",\"name\":\"Vietnam (Việt Nam)\",\"dial_code\":\"+84\"},\n  {\"code\":\"wf\",\"flag_code\":\"&#x1F1FC;&#x1F1EB;\",\"name\":\"Wallis and Futuna (Wallis-et-Futuna)\",\"dial_code\":\"+681\"},\n  {\"code\":\"eh\",\"flag_code\":\"&#x1F1EA;&#x1F1ED;\",\"name\":\"Western Sahara (‫الصحراء الغربية‬‎)\",\"dial_code\":\"+212\"},\n  {\"code\":\"ye\",\"flag_code\":\"&#x1F1FE;&#x1F1EA;\",\"name\":\"Yemen (‫اليمن‬‎)\",\"dial_code\":\"+967\"},\n  {\"code\":\"zm\",\"flag_code\":\"&#x1F1FF;&#x1F1F2;\",\"name\":\"Zambia\",\"dial_code\":\"+260\"},\n  {\"code\":\"zw\",\"flag_code\":\"&#x1F1FF;&#x1F1FC;\",\"name\":\"Zimbabwe\",\"dial_code\":\"+263\"},\n  {\"code\":\"ax\",\"flag_code\":\"🇦🇽\",\"name\":\"land Islands\",\"dial_code\":\"+358\"}\n];\n\n/**\n * Sync value display with the value of the dropdown\n */\nconst updateCountryCode = (event) => {\n  countryCodeDisplay.innerText = event.target.value;\n}\n\n/**\n * Focus an element for the provider id\n */\nconst setFieldFocus = (id) => {\n    const element = document.getElementById(id);\n    if (element) {\n        element.focus();\n    }\n}\n\n/**\n * Start function to initialize form\n */\nconst start = () => {\n    setFieldFocus(\"phone\");\n\n    countryData.forEach(country => {\n      let opt = document.createElement('option');\n      let flag = showFlags.toUpperCase() === \"SHOW\" ? country.flag_code + ' ' : \"\"\n      opt.setAttribute('data-country', country.code);\n      opt.value = country.dial_code;\n      opt.innerHTML = flag + country.name + ' ' + country.dial_code;\n      countryCodeInput.append(opt);\n    });\n\n    countryCodeInput.addEventListener(\"change\", updateCountryCode);\n    \n    if (defaultCountry) {\n      selectCountryByAttribute(countryCodeInput, defaultCountry)\n    } else {\n      // Default to US if default country not set\n      selectCountryByAttribute(countryCodeInput, \"US\")\n    }\n\n}\n\n/**\n * Set default country\n */\nconst selectCountryByAttribute = (selectElement, countryCode) => {\n  for (let i = 0; i < selectElement.options.length; i++) {\n    if (selectElement.options[i].getAttribute('data-country').toLowerCase() === countryCode.toLowerCase()) {\n      selectElement.selectedIndex = i; \n      selectElement.dispatchEvent(new Event('change')); \n      break; \n    }\n  }\n}\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n    // `DOMContentLoaded` has already fired\n    start();\n}\n\n"
               },
               "formFieldsList": {
                 "value": [
@@ -10428,7 +10428,7 @@
                 ]
               },
               "inputSchema": {
-                "value": "{\n\"type\": \"object\",\n   \"properties\": {\n      \"selectedDeviceType\": {\n        \"displayName\": \"device type\",\n\t\t\t\"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n      },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"buttonLabel2\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label2\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel2\"\n        }\n    }\n}\n   \n"
+                "value": "{\n   \"type\": \"object\",\n   \"properties\": {\n      \"selectedDeviceType\": {\n         \"displayName\": \"device type\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"type\": {\n         \"displayName\": \"Device Type [SMS | VOICE]\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"defaultCountryCode\": {\n         \"displayName\": \"Default Country Code (Eg. US)\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"showFlags\": {\n         \"displayName\": \"Show Flags [SHOW | HIDE]\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"buttonLabel\": {\n         \"displayName\": \"Button Label\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"cancelButtonLabel\": {\n         \"displayName\": \"Cancel Button Label\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      }\n   }\n}"
               },
               "nodeDescription": {
                 "value": "User enters their phone number"
@@ -10447,7 +10447,7 @@
                 "createdDate": 1642402846757,
                 "customerId": "50a0de8b585e95ff04f40f30f8ffd219",
                 "description": "",
-                "inputSchema": "{\n\"type\": \"object\",\n   \"properties\": {\n      \"selectedDeviceType\": {\n        \"displayName\": \"device type\",\n\t\t\t\"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n      },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"buttonLabel2\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label2\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel2\"\n        }\n    }\n}\n   \n",
+                "inputSchema": "{\n   \"type\": \"object\",\n   \"properties\": {\n      \"selectedDeviceType\": {\n         \"displayName\": \"device type\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"type\": {\n         \"displayName\": \"Device Type [SMS | VOICE]\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"defaultCountryCode\": {\n         \"displayName\": \"Default Country Code (Eg. US)\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"showFlags\": {\n         \"displayName\": \"Show Flags [SHOW | HIDE]\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"buttonLabel\": {\n         \"displayName\": \"Button Label\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"cancelButtonLabel\": {\n         \"displayName\": \"Cancel Button Label\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      }\n   }\n}",
                 "name": "sms/voice phone with country form - meirav",
                 "outputSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"buttonValue\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"propertyName\": \"buttonValue\"\n\t\t},\n\t\t\"phone\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"propertyName\": \"phone\"\n\t\t},\n\t\t\"countryCode\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"propertyName\": \"countryCodeInput\"\n\t\t}\n\t}\n}",
                 "script": "const phone = document.getElementById(\"phone\");\nphone.addEventListener(\"input\", myFunction);\nfunction myFunction() {  phone.value === \"\" ? phone.parentElement.classList.add(\"placeholder-shown\") : phone.parentElement.classList.remove(\"placeholder-shown\") ;}\n\nconst phoneCodeDropdown = document.getElementById(\"phone-input-code-dropdown\");\nconst countryCodeInput = document.getElementById(\"countryCodeInput\");\ncountryCodeInput.value = \"+1\";\n\nconst phoneCodeList = document.getElementById(\"code-dropdown-list\");\nconst phoneCode = document.getElementById(\"phone-input-code\");\ncountryCodeInput.addEventListener(\"click\", openList);\nconst closeListBtn =  document.getElementById(\"close-list\");\ncloseListBtn.addEventListener(\"click\", closeList);\nconst listContainer = document.getElementById(\"list-container\");\n\nvar items = document.getElementsByClassName(\"dropdown__option\");\nfor (var i = 0; i < items.length; i++) {\n  items[i].addEventListener(\"click\", selectClick);\n}\n\nfunction closeList() {\n    phoneCodeDropdown.classList.remove(\"dropdown--open\");\n    phoneCode.classList.remove(\"phone-input__code--open\");\n    phoneCodeList.classList.add(\"none\");\n}\nfunction selectClick(event) {\n    let code = event.target.innerHTML.indexOf(\"+\");\n    countryCodeInput.value = event.target.innerHTML.substring(code);\n    closeList(event);\n}\nfunction openList() {\n    phoneCodeDropdown.classList.add(\"dropdown--open\");\n    phoneCode.classList.add(\"phone-input__code--open\");\n    phoneCodeList.classList.remove(\"none\");\n}\n\nconst search = document.getElementById(\"search-input\");\nsearch.addEventListener(\"input\", searchList);\nfunction searchList() {  \n    const searchValue = search.value.toLocaleLowerCase();\n    for (var i = 0; i < items.length; i++) {\n        if(items[i].innerHTML.toLocaleLowerCase().indexOf(searchValue)>-1 || searchValue.length < 1){\n            items[i].classList.remove(\"none\");\n        }else{\n            items[i].classList.add(\"none\");\n        }\n        \n    }\n}",
@@ -10477,7 +10477,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Phone\"\n      }\n    ]\n  }\n]"
               },
               "type": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.m0hxpev7nt.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.m0hxpev7nt.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.u80omuzk45.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.u80omuzk45.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "undefined": {
                 "value": null
@@ -10502,6 +10502,15 @@
                     ]
                   }
                 ]
+              },
+              "defaultCountryCode": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"US\"\n      }\n    ]\n  }\n]"
+              },
+              "showFlags": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SHOW\"\n      }\n    ]\n  }\n]"
+              },
+              "cancelButtonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Cancel\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -11537,6 +11546,44 @@
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "3ygjw6la5c",
+            "source": "58e2xp8wht",
+            "target": "7lwxbl92a7"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "17ackseoue",
+            "source": "99w9cxxa89",
+            "target": "58e2xp8wht"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "n1cl6whfj1",
@@ -15972,44 +16019,6 @@
           "grabbable": true,
           "pannable": true,
           "classes": ""
-        },
-        {
-          "data": {
-            "id": "17ackseoue",
-            "source": "99w9cxxa89",
-            "target": "58e2xp8wht"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "3ygjw6la5c",
-            "source": "58e2xp8wht",
-            "target": "7lwxbl92a7"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
         }
       ]
     },
@@ -16083,11 +16092,11 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1716215361075,
+  "savedDate": 1716485351339,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1714510030118,
+      "createdDate": 1716420089105,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -16096,14 +16105,31 @@
         "type": "boolean",
         "value": "true"
       },
+      "id": "1083b64e-79d3-4c73-83af-e7ef9ce47747",
       "type": "property",
       "visibility": "private",
       "name": "cancelReturn##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509958362,
+      "createdDate": 1716420104236,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "e579f682-855b-4207-9bac-45f5dd26571c",
+      "type": "property",
+      "visibility": "private",
+      "name": "companyLogo##SK##flowInstance",
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1716419998586,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16112,14 +16138,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "3a2cadf8-b753-46be-89d0-9a74c00bf3ff",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714510030119,
+      "createdDate": 1716420089102,
       "fields": {
         "displayName": "Passkey/FIDO2",
         "max": 2000,
@@ -16127,14 +16154,15 @@
         "mutable": true,
         "type": "string"
       },
+      "id": "b55f6bff-38c2-46a6-a8d2-792a9d36a471",
       "type": "property",
       "visibility": "private",
       "name": "gv-FIDO2-deviceNickName##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509958860,
+      "createdDate": 1716420000427,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16144,14 +16172,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "fa924cb6-047b-4a50-a07b-19fb7799d4a2",
       "type": "property",
       "visibility": "private",
       "name": "gv-companyLogo##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509959260,
+      "createdDate": 1716420002970,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
@@ -16161,33 +16190,33 @@
         "min": 0,
         "max": 2000
       },
-      "id": "33e0c54c-f610-4a51-8ade-b6caf978cc71",
+      "id": "0ce24497-9695-4f4e-ab7c-ea1eb06e405a",
       "type": "property",
-      "updatedDate": 1715332557311,
       "visibility": "private",
       "name": "gv-forcePasswordless##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509952625,
+      "createdDate": 1716420000784,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
         "displayName": "PingOne Notification Policy Id",
-        "value": "dc2c14eb-88fd-43fa-805c-cb8206c61533",
+        "value": "2113e447-5186-4f0b-b759-19b3df596637",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
+      "id": "03f662dc-a9df-43a4-a09d-be51083de2cb",
       "type": "property",
       "visibility": "private",
       "name": "gv-notificationPolicyId##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509963467,
+      "createdDate": 1716420004115,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "object",
@@ -16197,31 +16226,33 @@
         "min": 0,
         "max": 2000
       },
+      "id": "01611296-6709-4cf3-b044-ae194f9c4be1",
       "type": "property",
       "visibility": "private",
       "name": "gv-passwordlessAllowedTypes##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509940225,
+      "createdDate": 1716420005825,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
         "displayName": "Tells the flow to allow the user to add another device at the end of the Registration - Set to false to see the screen",
-        "value": "false",
+        "value": "true",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
+      "id": "4518d37b-853a-4c02-bad5-85c0641d7073",
       "type": "property",
       "visibility": "private",
       "name": "gv-registerAnotherDevice##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509951955,
+      "createdDate": 1716419997269,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16231,32 +16262,32 @@
         "min": 0,
         "max": 2000
       },
+      "id": "0cd685e6-3d6e-4710-8c21-55cf98cccba8",
       "type": "property",
       "visibility": "private",
       "name": "gv-webAuthnSupport##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1716214750545,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "createdDate": 1716420089107,
       "fields": {
-        "type": "boolean",
         "displayName": "",
-        "value": "true",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "boolean",
+        "value": "true"
       },
-      "id": "1c2f53d3-1fe1-4464-a7a1-ba3262a20278",
+      "id": "dc4fa7b3-84d5-4959-85d2-fd2b131cb784",
       "type": "property",
       "visibility": "private",
       "name": "gv-webauthnsupport##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509956406,
+      "createdDate": 1716419993431,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16266,14 +16297,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "cf5a23cf-09ed-4ca0-b411-35bc95215895",
       "type": "property",
       "visibility": "private",
       "name": "origin##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714510030116,
+      "createdDate": 1716420089106,
       "fields": {
         "displayName": "FIDO2 origin",
         "max": 2000,
@@ -16282,14 +16314,15 @@
         "type": "string",
         "value": "https://auth.pingone.com"
       },
+      "id": "7e1c7cf6-cc79-4914-b200-bf7da99102f1",
       "type": "property",
       "visibility": "private",
       "name": "origin##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509944389,
+      "createdDate": 1716420004455,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16298,31 +16331,33 @@
         "min": 0,
         "max": 2000
       },
+      "id": "b403d41d-f492-40ab-b547-60f5ab9d1ff5",
       "type": "property",
       "visibility": "private",
       "name": "p1DeviceId##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509944258,
+      "createdDate": 1716419995526,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
         "displayName": "PingOne Population Id",
-        "value": "8df8d7f8-37d0-4bf7-a869-9e38fe87c876",
+        "value": "3c904019-f5a2-46d9-b9c9-f713bcdc5f8a",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
+      "id": "7c52f05c-559e-4b28-a1fe-083ba8d196ae",
       "type": "property",
       "visibility": "private",
       "name": "populationId##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509947562,
+      "createdDate": 1716419991425,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16332,14 +16367,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "b36deb18-e2d4-4743-8af3-6f15841cef41",
       "type": "property",
       "visibility": "private",
       "name": "rpid##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509947912,
+      "createdDate": 1716419996056,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16348,14 +16384,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "a5bae217-9035-4216-99d7-dbde1ac3596a",
       "type": "property",
       "visibility": "private",
       "name": "rpid##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509955840,
+      "createdDate": 1716420008361,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -16365,10 +16402,11 @@
         "min": 0,
         "max": 2000
       },
+      "id": "a965e998-034f-4615-ade9-9b10e37ea90d",
       "type": "property",
       "visibility": "private",
       "name": "stopSign##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     }
   ],
   "connections": []

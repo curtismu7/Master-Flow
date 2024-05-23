@@ -1,5 +1,5 @@
 {
-  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
+  "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
@@ -8,11 +8,11 @@
     "errorConnector",
     "annotationConnector"
   ],
-  "createdDate": 1716401977564,
-  "currentVersion": 23,
+  "createdDate": 1716492961793,
+  "currentVersion": 8,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1716401978576,
-  "description": "Imported on Tue Apr 30 2024 20:47:04 GMT+0000 (Coordinated Universal Time)",
+  "deployedDate": 1716492963237,
+  "description": "Imported on Wed May 22 2024 23:21:06 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -41,22 +41,22 @@
         },
         "firstName": {
           "description": "",
-          "preferredDataType": "string",
           "isExpanded": true,
+          "preferredDataType": "string",
           "type": "string",
           "name": "firstName"
         },
         "lastName": {
           "description": "",
-          "preferredDataType": "string",
           "isExpanded": true,
+          "preferredDataType": "string",
           "type": "string",
           "name": "lastName"
         },
         "dob": {
           "description": "",
-          "preferredDataType": "string",
           "isExpanded": true,
+          "preferredDataType": "string",
           "type": "string",
           "name": "dob"
         }
@@ -68,7 +68,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Progressive Profiling subflow",
-  "publishedVersion": 23,
+  "publishedVersion": 8,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [
@@ -80,9 +80,9 @@
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1716401978635,
-  "flowId": "788c43befe3faaf6463b41988bd0b0b6",
-  "versionId": 23,
+  "updatedDate": 1716492963303,
+  "flowId": "c8dfdc13eab994c9765913dbbfa8e207",
+  "versionId": 8,
   "graphData": {
     "elements": {
       "nodes": [
@@ -184,7 +184,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"hasPrimaryPhone\",\n        \"data\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"tooltip\": \"{{local.vsubgtuwhp.payload.output.hasPrimaryPhone}}\",\n        \"children\": [\n          {\n            \"text\": \"hasPrimaryPhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "inputSchema": {
-                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"cancelButtonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Cancel Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"cancelButtonLabel\"\n        },\n        \"hasPrimaryPhone\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasPrimaryPhone\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasPrimaryPhone\"\n        },\n        \"hasFamilyName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasFamilyName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasFamilyName\"\n        },\n        \"hasGivenName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasGivenName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasGivenName\"\n        },\n        \"hasDob\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasDob\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasDob\"\n        }\n    }\n}"
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"cancelButtonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Cancel Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"cancelButtonLabel\"\n        },\n        \"hasPrimaryPhone\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasPrimaryPhone\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasPrimaryPhone\"\n        },\n        \"hasFamilyName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasFamilyName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasFamilyName\"\n        },\n        \"hasGivenName\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasGivenName\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasGivenName\"\n        },\n        \"hasDob\": {\n            \"type\": \"bool\",\n            \"displayName\": \"hasDob\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"hasDob\"\n        },\n        \"type\": {\n         \"displayName\": \"Device Type [SMS | VOICE]\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"defaultCountryCode\": {\n         \"displayName\": \"Default Country Code (Eg. US)\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      },\n      \"showFlags\": {\n         \"displayName\": \"Show Flags [SHOW | HIDE]\",\n         \"type\": \"string\",\n         \"preferedControlType\": \"textField\",\n         \"enableParameters\": true\n      }\n    }\n}"
               },
               "nodeDescription": {
                 "value": "Name, phone, dob"
@@ -193,13 +193,25 @@
                 "value": "User Details Form"
               },
               "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please update your profile information.\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please update your profile information.      \"\n      }\n    ]\n  }\n]"
               },
               "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"User Details\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"User Details for Progressive profile\"\n      }\n    ]\n  }\n]"
               },
               "validationRules": {
                 "value": []
+              },
+              "textTwo": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"None of the fields are required\"\n      }\n    ]\n  }\n]"
+              },
+              "defaultCountryCode": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"US\"\n      }\n    ]\n  }\n]"
+              },
+              "showFlags": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SHOW\"\n      }\n    ]\n  }\n]"
+              },
+              "type": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SMS\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -1136,8 +1148,8 @@
         {
           "data": {
             "id": "xmc1kaysnc",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 430.4102450906536,
@@ -1154,15 +1166,13 @@
         },
         {
           "data": {
-            "id": "1nml9azuv1",
-            "nodeType": "CONNECTION",
+            "capabilityName": "userLookup",
             "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
             "connectorId": "pingOneSSOConnector",
-            "name": "PingOne",
+            "id": "1nml9azuv1",
             "label": "PingOne",
-            "status": "configured",
-            "capabilityName": "userLookup",
-            "type": "action",
+            "name": "PingOne",
+            "nodeType": "CONNECTION",
             "properties": {
               "matchAttributes": {
                 "value": [
@@ -1172,7 +1182,9 @@
               "userIdentifierForFindUser": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 634.9572385448583,
@@ -1211,6 +1223,7 @@
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "t99pxxdapn",
+            "idUnique": "3uw8q5of22",
             "label": "Http",
             "name": "Http",
             "nodeType": "CONNECTION",
@@ -1235,8 +1248,7 @@
               }
             },
             "status": "configured",
-            "type": "action",
-            "idUnique": "3uw8q5of22"
+            "type": "action"
           },
           "position": {
             "x": 2220,
@@ -1618,9 +1630,9 @@
         {
           "data": {
             "id": "uzwmr969xt",
+            "multiValueSourceId": "qtli5t2v0s",
             "source": "4fkmxgeymw",
-            "target": "my0erk7b65",
-            "multiValueSourceId": "qtli5t2v0s"
+            "target": "my0erk7b65"
           },
           "position": {
             "x": 64,
@@ -1696,33 +1708,33 @@
       "propertyName": "username"
     },
     {
-      "propertyName": "firstName",
       "description": "",
-      "preferredDataType": "string",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "string",
+      "propertyName": "firstName"
     },
     {
-      "propertyName": "lastName",
       "description": "",
-      "preferredDataType": "string",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "string",
+      "propertyName": "lastName"
     },
     {
-      "propertyName": "dob",
       "description": "",
-      "preferredDataType": "string",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "string",
+      "propertyName": "dob"
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1716401977445,
+  "savedDate": 1716492961685,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1714509958362,
+      "createdDate": 1716419998586,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -1731,10 +1743,11 @@
         "min": 0,
         "max": 2000
       },
+      "id": "3a2cadf8-b753-46be-89d0-9a74c00bf3ff",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     }
   ],
   "connections": []
