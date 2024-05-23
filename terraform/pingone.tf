@@ -46,6 +46,30 @@ resource "pingone_role_assignment_user" "app_dev" {
   ]
 }
 
+resource "pingone_role_assignment_user" "env_admin" {
+  environment_id = var.pingone_environment_id != "" ? var.pingone_environment_id : var.pingone_environment_id
+  user_id        = var.admin_user_id
+  role_id        = data.pingone_role.environment_admin.id
+
+  scope_environment_id = pingone_environment.master_flow_environment.id
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
+resource "pingone_role_assignment_user" "davinci_admin" {
+  environment_id = var.pingone_environment_id != "" ? var.pingone_environment_id : var.pingone_environment_id
+  user_id        = var.admin_user_id
+  role_id        = data.pingone_role.davinci_admin.id
+
+  scope_environment_id = pingone_environment.master_flow_environment.id
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
 ##################
 #  Data Sources  #
 ##################
@@ -76,6 +100,10 @@ data "pingone_role" "identity_data_admin" {
 
 data "pingone_role" "client_application_developer" {
   name = "Client Application Developer"
+}
+
+data "pingone_role" "davinci_admin" {
+  name = "DaVinci Admin"
 }
 
 data "pingone_verify_policy" "default_policy" {
