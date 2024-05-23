@@ -1,5 +1,5 @@
 {
-  "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663",
+  "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3",
   "authTokenExpireIds": [],
   "connectorIds": [
     "functionsConnector",
@@ -12,11 +12,11 @@
     "flowConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1715970637222,
-  "currentVersion": 57,
+  "createdDate": 1716481434035,
+  "currentVersion": 6,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
-  "deployedDate": 1715970638585,
-  "description": "Cloned on Mon May 06 2024 12:43:49 GMT+0000 (Coordinated Universal Time). \nImported on Tue Apr 30 2024 20:47:55 GMT+0000 (Coordinated Universal Time)",
+  "deployedDate": 1716481435529,
+  "description": "Imported on Wed May 22 2024 23:22:16 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
     "parameters": {
@@ -65,11 +65,9 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 57,
+  "publishedVersion": 6,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
     "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    height: 65px;\n    width: fit-content;\n}\n",
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
@@ -77,14 +75,16 @@
     ],
     "customFaviconLink": " https://console.pingone.com/davinci/favicon-davinci.png",
     "customTitle": "PingOne Protect",
+    "intermediateLoadingScreenCSS": "",
+    "intermediateLoadingScreenHTML": "",
     "logLevel": 3,
     "pingOneFlow": false,
     "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1715970638645,
-  "flowId": "d5304e77c20d7430c98fdd9d9fcfff06",
-  "versionId": 57,
+  "updatedDate": 1716481435580,
+  "flowId": "5da509296b6851bd9618414aef2fe95c",
+  "versionId": 6,
   "graphData": {
     "elements": {
       "nodes": [
@@ -184,20 +184,20 @@
               "saveVariables": {
                 "value": [
                   {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.1837742552241468,
                     "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "p1UserId",
                     "type": "string",
-                    "nameDefault": "p1UserId"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "username",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.parameters.username}}\",\n        \"tooltip\": \"{{global.parameters.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.20279603353367937,
                     "label": "username (string - flowInstance)",
+                    "name": "username",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.parameters.username}}\",\n        \"tooltip\": \"{{global.parameters.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
@@ -1177,7 +1177,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
-                  "value": "48bc5d1f074b32efc02f09dfe91f32cf"
+                  "value": "b09fcf3d310f8c6504530ecac7c2ffb2"
                 }
               },
               "subFlowVersionId": {
@@ -1483,7 +1483,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Verify subflow",
-                  "value": "c5876e0cf832ac128c4c23e8ffa4a57c"
+                  "value": "44ff3d1a6a7cf9945c06b1f2d717ca78"
                 }
               },
               "subFlowVersionId": {
@@ -3311,39 +3311,32 @@
         },
         {
           "data": {
-            "id": "3e22nilrbl",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
-            "name": "Http",
+            "id": "3e22nilrbl",
+            "idUnique": "c07oss8l0u",
             "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
+            "name": "Http",
+            "nodeType": "CONNECTION",
             "properties": {
-              "inputSchema": {
-                "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"riskScore\": {\n      \"type\": \"number\",\n      \"displayName\": \"Risk Score\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"riskLevel\": {\n      \"type\": \"number\",\n      \"displayName\": \"Risk Level (Low, Medium, High)\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"ButtonLabl\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"buttonLabel2\": {\n      \"type\": \"string\",\n      \"displayName\": \"buttonLabel2\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    }\n  }\n}"
+              "backgroundColor": {
+                "value": "#e3f0ffff"
               },
-              "outputSchema": {
-                "value": {}
+              "buttonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
               },
-              "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <main aria-labelledby=\"title\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n            <form id=\"riskForm\" aria-labelledby=\"title\" data-id=\"riskForm\">\n              {{#if title}}\n              <h1 id=\"title\" class=\"text-center mb-4\">{{title}}</h1>\n              {{/if}}\n\n              {{#if textOne}}\n              <p class=\"text-muted text-center\">{{textOne}}</p>\n              {{/if}}\n\n              <p class=\"text-muted text-center\">Your Risk Score is <strong>{{riskScore}}</strong> ({{riskLevel}})</p>\n\n              <div class=\"d-flex justify-content-center mb-5 mt-4\">\n                <div class=\"progress\">\n                  <div class=\"needle\" id=\"needle\"></div>\n                </div>\n              </div>\n\n              {{#if textTwo}}\n              <p class=\"text-muted text-center\">{{textTwo}}</p>\n              {{/if}}\n\n              <div class=\"d-flex flex-column\">\n                <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                  data-skbuttontype=\"next-event\" id=\"btnContinue\" data-skform=\"riskForm\"\n                  data-skbuttonvalue=\"CONTINUE\">\n                    {{buttonLabel}}\n                </button>\n              </div>\n\n              {{#if buttonLabel2}}\n              <div class=\"d-flex flex-column\">\n                <button class=\"btn btn-link mb-3\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\"\n                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\"\n                data-skbuttonvalue=\"RETURN\">\n                {{buttonLabel2}}\n                  </button>\n              </div>\n              {{/if}}\n\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
+              "buttonLabel2": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Return to Authentication\"\n      }\n    ]\n  }\n]"
               },
               "customCSS": {
                 "value": ":root {\n  --risk-green: #28cc2d;\n  --risk-yellow: #ffe135;\n  --risk-red: #d82f3e;\n  --risk-needle: #424344;\n}\n\n.progress {\n  width: 300px;\n  height: 20px;\n  background: linear-gradient(to right, var(--risk-green) 39%, var(--risk-yellow) 39% 75%, var(--risk-red) 75%);\n  border-radius: 4px;\n  position: relative;\n  overflow: visible;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n}\n\n.needle {\n  position: absolute;\n  top: -8px;\n  left: 0%;\n  width: 6px;\n  height: 36px;\n  background-color: var(--risk-needle);\n  transition: left 0.5s cubic-bezier(0.42, 0, 0.58, 1);\n  border-radius: 3px;\n}"
               },
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <main aria-labelledby=\"title\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n            <form id=\"riskForm\" aria-labelledby=\"title\" data-id=\"riskForm\">\n              {{#if title}}\n              <h1 id=\"title\" class=\"text-center mb-4\">{{title}}</h1>\n              {{/if}}\n\n              {{#if textOne}}\n              <p class=\"text-muted text-center\">{{textOne}}</p>\n              {{/if}}\n\n              <p class=\"text-muted text-center\">Your Risk Score is <strong>{{riskScore}}</strong> ({{riskLevel}})</p>\n\n              <div class=\"d-flex justify-content-center mb-5 mt-4\">\n                <div class=\"progress\">\n                  <div class=\"needle\" id=\"needle\"></div>\n                </div>\n              </div>\n\n              {{#if textTwo}}\n              <p class=\"text-muted text-center\">{{textTwo}}</p>\n              {{/if}}\n\n              <div class=\"d-flex flex-column\">\n                <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                  data-skbuttontype=\"next-event\" id=\"btnContinue\" data-skform=\"riskForm\"\n                  data-skbuttonvalue=\"CONTINUE\">\n                    {{buttonLabel}}\n                </button>\n              </div>\n\n              {{#if buttonLabel2}}\n              <div class=\"d-flex flex-column\">\n                <button class=\"btn btn-link mb-3\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\"\n                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\"\n                data-skbuttonvalue=\"RETURN\">\n                {{buttonLabel2}}\n                  </button>\n              </div>\n              {{/if}}\n\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
+              },
               "customScript": {
                 "value": "const riskScore = {{riskScore}};\n\nconst updateProgress = (score) => {\n    const needle = document.getElementById('needle');\n    needle.style.left = `${score}%`;\n}\n\nconst start = () => {\n    setTimeout(() => {\n        updateProgress(riskScore);\n    }, 500);\n}\n\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n    // `DOMContentLoaded` has already fired\n    start();\n}\n"
-              },
-              "validationRules": {
-                "value": []
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Sign On Success\"\n      }\n    ]\n  }\n]"
-              },
-              "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"You have successfully authenticated using adaptive authentication.\"\n      }\n    ]\n  }\n]"
               },
               "formFieldsList": {
                 "value": [
@@ -3354,32 +3347,39 @@
                   }
                 ]
               },
-              "nodeTitle": {
-                "value": "Sign On Success with Risk Details"
+              "inputSchema": {
+                "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"riskScore\": {\n      \"type\": \"number\",\n      \"displayName\": \"Risk Score\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"riskLevel\": {\n      \"type\": \"number\",\n      \"displayName\": \"Risk Level (Low, Medium, High)\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"ButtonLabl\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    },\n    \"buttonLabel2\": {\n      \"type\": \"string\",\n      \"displayName\": \"buttonLabel2\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true\n    }\n  }\n}"
               },
               "nodeDescription": {
                 "value": "Display risk details"
               },
-              "riskScore": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"riskScore\",\n        \"data\": \"{{global.variables.riskScore}}\",\n        \"tooltip\": \"{{global.variables.riskScore}}\",\n        \"children\": [\n          {\n            \"text\": \"riskScore\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "nodeTitle": {
+                "value": "Sign On Success with Risk Details"
               },
-              "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please continue\"\n      }\n    ]\n  }\n]"
+              "outputSchema": {
+                "value": {}
               },
               "riskLevel": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"riskLevel\",\n        \"data\": \"{{global.variables.riskLevel}}\",\n        \"tooltip\": \"{{global.variables.riskLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"riskLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "backgroundColor": {
-                "value": "#e3f0ffff"
+              "riskScore": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"riskScore\",\n        \"data\": \"{{global.variables.riskScore}}\",\n        \"tooltip\": \"{{global.variables.riskScore}}\",\n        \"children\": [\n          {\n            \"text\": \"riskScore\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"You have successfully authenticated using adaptive authentication.\"\n      }\n    ]\n  }\n]"
               },
-              "buttonLabel2": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Return to Authentication\"\n      }\n    ]\n  }\n]"
+              "textTwo": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please continue\"\n      }\n    ]\n  }\n]"
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Sign On Success\"\n      }\n    ]\n  }\n]"
+              },
+              "validationRules": {
+                "value": []
               }
             },
-            "idUnique": "c07oss8l0u"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1567,
@@ -3414,40 +3414,40 @@
         },
         {
           "data": {
-            "id": "6gz4fvgs2u",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "6gz4fvgs2u",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Save riskScore and riskLevel"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "riskScore",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"score\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.score}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.score}}\",\n        \"children\": [\n          {\n            \"text\": \"score\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"score\",\n        \"data\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.score}}\",\n        \"tooltip\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.score}}\",\n        \"children\": [\n          {\n            \"text\": \"score\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.7926448027010013,
-                    "type": "number",
                     "label": "riskScore (number - flowInstance)",
-                    "nameDefault": "score"
+                    "name": "riskScore",
+                    "nameDefault": "score",
+                    "type": "number",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"score\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.score}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.score}}\",\n        \"children\": [\n          {\n            \"text\": \"score\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"score\",\n        \"data\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.score}}\",\n        \"tooltip\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.score}}\",\n        \"children\": [\n          {\n            \"text\": \"score\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "riskLevel",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.17825589751102267,
                     "label": "riskLevel (string - flowInstance)",
+                    "name": "riskLevel",
+                    "nameDefault": "level",
                     "type": "string",
-                    "nameDefault": "level"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.naewcp4bmf.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Save riskScore and riskLevel"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1721,
@@ -3483,8 +3483,8 @@
         {
           "data": {
             "id": "uqof9noa0k",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 397,
@@ -3501,26 +3501,26 @@
         },
         {
           "data": {
-            "id": "fkzebn5xdv",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "fkzebn5xdv",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-fakeLevel\",\n        \"data\": \"{{global.company.variables.gv-fakeLevel}}\",\n        \"tooltip\": \"{{global.company.variables.gv-fakeLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-fakeLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
-              },
               "nodeTitle": {
                 "value": "check if fake level"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 547,
@@ -3538,8 +3538,8 @@
         {
           "data": {
             "id": "w5finyi0sf",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "fl4sb3qwsc": {
                 "value": "anyTriggersFalse"
@@ -3561,40 +3561,40 @@
         },
         {
           "data": {
-            "id": "bi6pfr9652",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "bi6pfr9652",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Set Fake Risk level"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "riskLevel",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-riskLevel\",\n        \"data\": \"{{global.company.variables.gv-riskLevel}}\",\n        \"tooltip\": \"{{global.company.variables.gv-riskLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-riskLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.6984051994234795,
                     "label": "riskLevel (string - flowInstance)",
+                    "name": "riskLevel",
+                    "nameDefault": "gv-riskLevel",
                     "type": "string",
-                    "nameDefault": "gv-riskLevel"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-riskLevel\",\n        \"data\": \"{{global.company.variables.gv-riskLevel}}\",\n        \"tooltip\": \"{{global.company.variables.gv-riskLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-riskLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "riskScore",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-riskScore\",\n        \"data\": \"{{global.company.variables.gv-riskScore}}\",\n        \"tooltip\": \"{{global.company.variables.gv-riskScore}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-riskScore\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.8714729361114415,
                     "label": "riskScore (number - flowInstance)",
+                    "name": "riskScore",
+                    "nameDefault": "gv-riskScore",
                     "type": "number",
-                    "nameDefault": "gv-riskScore"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-riskScore\",\n        \"data\": \"{{global.company.variables.gv-riskScore}}\",\n        \"tooltip\": \"{{global.company.variables.gv-riskScore}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-riskScore\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Set Fake Risk level"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 847,
@@ -3633,6 +3633,7 @@
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
             "id": "lhk2ad1xs9",
+            "idUnique": "e7khwlw792",
             "label": "Functions",
             "name": "Functions",
             "nodeType": "CONNECTION",
@@ -3657,8 +3658,7 @@
               }
             },
             "status": "configured",
-            "type": "trigger",
-            "idUnique": "e7khwlw792"
+            "type": "trigger"
           },
           "position": {
             "x": 1867,
@@ -3676,8 +3676,8 @@
         {
           "data": {
             "id": "1enijgndnq",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 2713.8333282470703,
@@ -3694,20 +3694,20 @@
         },
         {
           "data": {
-            "id": "5tcfwn01fx",
-            "nodeType": "CONNECTION",
+            "capabilityName": "startNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
-            "name": "Teleport",
+            "id": "5tcfwn01fx",
             "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "startNode",
-            "type": "trigger",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "False Branch"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2570.6666564941406,
@@ -3725,8 +3725,8 @@
         {
           "data": {
             "id": "bvuk0b3q3m",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "ma75nwa3nz": {
                 "value": "anyTriggersFalse"
@@ -3748,15 +3748,13 @@
         },
         {
           "data": {
-            "id": "ma75nwa3nz",
-            "nodeType": "CONNECTION",
+            "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
-            "name": "Teleport",
+            "id": "ma75nwa3nz",
             "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "5tcfwn01fx"
@@ -3764,7 +3762,9 @@
               "nodeTitle": {
                 "value": "False Branch"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1477,
@@ -3803,6 +3803,7 @@
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
             "id": "6fvtn5mj4l",
+            "idUnique": "wix4tqtmua",
             "label": "Http",
             "name": "Http",
             "nodeType": "CONNECTION",
@@ -3827,8 +3828,7 @@
               }
             },
             "status": "configured",
-            "type": "action",
-            "idUnique": "wix4tqtmua"
+            "type": "action"
           },
           "position": {
             "x": 2197,
@@ -3867,6 +3867,7 @@
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
             "id": "wlbo5o08h5",
+            "idUnique": "9hbgtj5z4x",
             "label": "Error Customize",
             "name": "Error Message",
             "nodeType": "CONNECTION",
@@ -3891,8 +3892,7 @@
               }
             },
             "status": "configured",
-            "type": "action",
-            "idUnique": "9hbgtj5z4x"
+            "type": "action"
           },
           "position": {
             "x": 2197,
@@ -3928,8 +3928,8 @@
         {
           "data": {
             "id": "za3cs9z0c2",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 2957.0507514473647,
@@ -3946,29 +3946,29 @@
         },
         {
           "data": {
-            "id": "anckn5ryel",
-            "nodeType": "CONNECTION",
+            "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
             "connectorId": "functionsConnector",
-            "name": "Functions",
+            "id": "anckn5ryel",
             "label": "Functions",
-            "status": "configured",
-            "capabilityName": "AEqualsB",
-            "type": "trigger",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
             "properties": {
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-runVerifyforHighRisk\",\n        \"data\": \"{{global.company.variables.gv-runVerifyforHighRisk}}\",\n        \"tooltip\": \"{{global.company.variables.gv-runVerifyforHighRisk}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-runVerifyforHighRisk\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "check is gv-runVerifyforHighRisk is true"
               },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
               "type": {
                 "value": "boolean"
-              },
-              "nodeTitle": {
-                "value": "check is gv-runVerifyforHighRisk is true"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 3120.638521137,
@@ -3986,8 +3986,8 @@
         {
           "data": {
             "id": "r42gp6sl3a",
-            "nodeType": "EVAL",
             "label": "Evaluator",
+            "nodeType": "EVAL",
             "properties": {
               "8tttj6ny9a": {
                 "value": "anyTriggersFalse"
@@ -4009,35 +4009,35 @@
         },
         {
           "data": {
-            "id": "eu3993uw7o",
-            "nodeType": "CONNECTION",
+            "capabilityName": "startUiSubFlow",
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
-            "name": "Flow Connector",
+            "id": "eu3993uw7o",
             "label": "Flow Connector",
-            "status": "configured",
-            "capabilityName": "startUiSubFlow",
-            "type": "trigger",
+            "name": "Flow Connector",
+            "nodeType": "CONNECTION",
             "properties": {
-              "subFlowId": {
-                "value": {
-                  "label": "PingOne Verify subflow",
-                  "value": "47a078fab415a28277aa766a2b22a8a5"
-                }
-              },
-              "subFlowVersionId": {
-                "value": -1
-              },
               "nodeTitle": {
                 "value": "PingOne Verify subflow"
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
+              "subFlowId": {
+                "value": {
+                  "label": "PingOne Verify subflow",
+                  "value": "44ff3d1a6a7cf9945c06b1f2d717ca78"
+                }
+              },
+              "subFlowVersionId": {
+                "value": -1
+              },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.variables.username}}\",\n        \"tooltip\": \"{{global.variables.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 3411.545501920958,
@@ -4692,9 +4692,9 @@
         {
           "data": {
             "id": "zlfq66p7bq",
+            "multiValueSourceId": "-1",
             "source": "lhk2ad1xs9",
-            "target": "gxy5d392qn",
-            "multiValueSourceId": "-1"
+            "target": "gxy5d392qn"
           },
           "position": {
             "x": 64,
@@ -5930,9 +5930,9 @@
         {
           "data": {
             "id": "86kfjx6hvk",
+            "multiValueSourceId": "9teikmbpsh",
             "source": "lhk2ad1xs9",
-            "target": "iqpbecp47f",
-            "multiValueSourceId": "9teikmbpsh"
+            "target": "iqpbecp47f"
           },
           "position": {
             "x": 64,
@@ -5969,9 +5969,9 @@
         {
           "data": {
             "id": "yz1zcslfez",
+            "multiValueSourceId": "sh3uj6e3lz",
             "source": "lhk2ad1xs9",
-            "target": "3pwxydnb4d",
-            "multiValueSourceId": "sh3uj6e3lz"
+            "target": "3pwxydnb4d"
           },
           "position": {
             "x": 64,
@@ -5989,9 +5989,9 @@
         {
           "data": {
             "id": "bqlo3t9j5b",
+            "multiValueSourceId": "hfp94chsr4",
             "source": "h4etad3lqc",
-            "target": "za3cs9z0c2",
-            "multiValueSourceId": "hfp94chsr4"
+            "target": "za3cs9z0c2"
           },
           "position": {
             "x": 64,
@@ -6196,11 +6196,27 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1715970636918,
+  "savedDate": 1716481433743,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1714509958362,
+      "createdDate": 1716420104236,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "e579f682-855b-4207-9bac-45f5dd26571c",
+      "type": "property",
+      "visibility": "private",
+      "name": "companyLogo##SK##flowInstance",
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1716419998586,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -6209,14 +6225,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "3a2cadf8-b753-46be-89d0-9a74c00bf3ff",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509947000,
+      "createdDate": 1716419992597,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
@@ -6226,16 +6243,16 @@
         "min": 0,
         "max": 2000
       },
-      "id": "fcf856bd-291d-44aa-a8ac-db99a3720987",
+      "id": "769da939-c007-4339-aba6-eab90c3abcf6",
       "type": "property",
-      "updatedDate": 1715336728690,
+      "updatedDate": 1716468180057,
       "visibility": "private",
       "name": "gv-fakeLevel##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509953140,
+      "createdDate": 1716419996371,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
@@ -6245,70 +6262,68 @@
         "min": 0,
         "max": 2000
       },
+      "id": "b0adc542-fbbe-4fc8-a1af-82fb1aa72f41",
       "type": "property",
       "visibility": "private",
       "name": "gv-mfa-on##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509941196,
+      "createdDate": 1716419996605,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
         "displayName": "MFA is run when PingOne Risk on High",
-        "value": "true",
+        "value": "false",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "f5ae02eb-0fdc-47f5-8c4e-10b1fe8344b5",
+      "id": "ef437d85-1add-4195-8f0c-26c13e1e36bc",
       "type": "property",
-      "updatedDate": 1715336937601,
       "visibility": "private",
       "name": "gv-mfaOnHighRisk##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509939918,
+      "createdDate": 1716420003131,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
         "displayName": "Used to control the Risk Level for Demos",
-        "value": "HIGH",
+        "value": "MEDIUM",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "caeed7f9-7755-4112-a9ce-4ad77d4c8495",
+      "id": "b6f533f6-a181-455c-b4ad-0f3a19ade0a3",
       "type": "property",
-      "updatedDate": 1715336739948,
       "visibility": "private",
       "name": "gv-riskLevel##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1715002001914,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
+      "createdDate": 1716420136595,
       "fields": {
-        "type": "number",
         "displayName": "Set Fake risk score",
-        "value": "50",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "number",
+        "value": "50"
       },
-      "id": "3c4d4f02-7a46-44a8-a60c-4413bbf7b908",
+      "id": "951c39cc-2beb-4dc2-9cc3-56b1bf0e2122",
       "type": "property",
       "visibility": "private",
       "name": "gv-riskScore##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509949345,
+      "createdDate": 1716420002080,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
@@ -6318,14 +6333,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "58f56092-625b-4925-8941-4b3962ca31c3",
       "type": "property",
       "visibility": "private",
       "name": "gv-riskScreenDisplay##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "company",
-      "createdDate": 1714509950331,
+      "createdDate": 1716419990981,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "boolean",
@@ -6335,16 +6351,15 @@
         "min": 0,
         "max": 2000
       },
-      "id": "11c4c2aa-f3ac-40e3-b8d8-d88996df6aa8",
+      "id": "756cfaab-215b-4f57-986e-7b241620010a",
       "type": "property",
-      "updatedDate": 1715720443178,
       "visibility": "private",
       "name": "gv-runVerifyforHighRisk##SK##company",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1714509940537,
+      "createdDate": 1716420000654,
       "customerId": "38f1e64332a64e2263c5953d52e846fb",
       "fields": {
         "type": "string",
@@ -6353,49 +6368,15 @@
         "min": 0,
         "max": 2000
       },
+      "id": "146619cb-c25f-4738-93bf-2e2c943b12e8",
       "type": "property",
       "visibility": "private",
       "name": "p1UserId##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1715001041735,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "b6f2366e-533a-4247-ad8e-cc369d9f7f3c",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskLevel##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1715000985902,
-      "customerId": "38f1e64332a64e2263c5953d52e846fb",
-      "fields": {
-        "type": "number",
-        "displayName": "",
-        "value": "0",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "5b9fed39-46a4-443a-b1dc-6fe4ad4c3c42",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskScore##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1714510089314,
+      "createdDate": 1716420136591,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -6403,10 +6384,44 @@
         "mutable": true,
         "type": "string"
       },
+      "id": "b82156d7-d28d-4a18-897f-e24cfcadc12f",
+      "type": "property",
+      "visibility": "private",
+      "name": "riskLevel##SK##flowInstance",
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1716420136594,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "number",
+        "value": "0"
+      },
+      "id": "8ce2c720-709d-4f76-b5c0-cc1b665d1ed3",
+      "type": "property",
+      "visibility": "private",
+      "name": "riskScore##SK##flowInstance",
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1716420104239,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "fb00a3a9-5e98-4859-ac9e-33cf71a3ec95",
       "type": "property",
       "visibility": "private",
       "name": "username##SK##flowInstance",
-      "companyId": "a8ba5c48-b7bb-46f4-8910-cdf71970c663"
+      "companyId": "bc2a5a08-ac5e-4cb6-8406-f70585ace1e3"
     }
   ],
   "connections": []
