@@ -19,7 +19,13 @@ organization_id           = ""
 environment_name = "PingOne Master Flow - 1.1.7"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
-pingone_agreement_localization_revision_master_flow_agreement_en_now_text = "GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.<br><br>While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.<br><br>Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action."
+pingone_agreement_localization_revision_master_flow_agreement_en_now_text = <<EOT
+GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.
+
+While you shouldn't ask for it if you're carrying out a core service or process personal data by law, you should ask for consent when you're offering a non-essential service, like sending marketing emails and newsletters.
+
+Here's a breakdown of the most important things you must know about email consent under GDPR – with plenty of templates and examples of how to put them into action.
+EOT
 
 # This creates a new user in P1, change as needed #
 master_flow_user_email                  = "pingone.flow@mailinator.com"
@@ -111,7 +117,7 @@ davinci_variable_gv-runMFAforForgot = "true"
 davinci_variable_gv-passwordlessAllowedTypes = "['FIDO2', 'PLATFORM', 'MOBILE', 'TOTP', 'SECURITY_KEY']"
 davinci_variable_relyingParty = "auth.pingone.com"
 davinci_variable_availableQuestions_2 = "[         {           \"question\": \"In what city were you born?\"         },         {           \"question\": \"What was the model of your first car?\"         },         {           \"question\": \"What is the name of your first pet?\"         },     \t{                 \t  \"question\": \"What is the name of your favorite teacher?\"         },         {           \"question\": \"What is your mother's maiden name?\"         },          {           \"question\": \"What is the name of the street you grew up on?\"         },          {           \"question\": \"In which year did you graduate from high school?\"         }          ]"
-davinci_variable_gv-runProtect = "false"
+davinci_variable_gv-runProtect = "true"
 davinci_variable_gv-runMFAforSocial = "false"
 davinci_variable_gv-QA-On = "true"
 davinci_variable_gv-progressiveProfiling = "true"
