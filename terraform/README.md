@@ -16,21 +16,25 @@ This environment will only be used to allow Terraform to create and manage new e
 
 In your new environment, create a worker application. Name it whatever you like. Suggestion: **Pingone Terrform Administration**. \
 Enable it.\
-Navigate to the Roles tab and provide it with the following permissions at a minimum. Additional permissions can be provided, but are not necessary. 
+Navigate to the Roles tab and provide it with the following permissions.
 > [!WARNING]
-> The permissions are configured this way for the internal use case. For example, in a production environment, you would not want to apply Environment Administrator permissions at the Organization level, you would select only the environments which should be managed with Terraform and your Terraform Administration environment. 
-<img src="https://github.com/curtismu7/Master-Flow/assets/117233001/4d0a62bc-3c7a-4352-922d-1dd2ca483785" width="300"> 
+> Do not assign Environment Admin permissions at the Organization level. The Terraform configuration will add any permissions needed to maintain the environments it creates moving forward. If you apply Environment Admin permissions at the Organization level, Terraform will error out with a message about duplicate permissions.
+<img src="https://github.com/curtismu7/Master-Flow/assets/117233001/a468ab32-ea32-4c87-855c-139a6a8e886d" width="300"> 
 <br />
 
 In your new environment, create a user. Its email address must be reachable, but its username and all other attributes may be anything you desire. \
 Navigate to the Roles tab and provide this user with the following permissions.
 > [!WARNING]
-> Do not apply DaVinci Admin rights at the Organization level, you must select specific environments or you will not be able to SSO into DaVinci to create environment. For more information, see https://pingidentity.atlassian.net/browse/STAGING-22666
+> Do not apply DaVinci Admin rights at the Organization level. The Terraform configuration will add any permissions needed to maintain the environments it creates moving forward.
 <img src="https://github.com/curtismu7/Master-Flow/assets/117233001/8ce0bd20-1e78-4389-9bad-cd58ee7d0ec9" width="300">
+<br />
 
 Navigate to Applications -> Applications, select "PingOne Self-Service - MyAccount", and then choose "Overview". Using the URL from "Home Page URL", sign in as this user and execute a password reset. Once the user's password has been reset, you can log out of the PingOne Dock. If you do not reset their password, you will see errors relating to the user's credentials later.
 
 Keep this environment handy. We will need to get a number of IDs from it later.
+
+> [!IMPORTANT]  
+> At present, we are unable to provide Identity Data Admin roles to users in the Administrator environment. If you sign in as a user in the Administrator environment, you will likely be able to view the environment that is created in Terraform, but you will not have the ability to view and manage users that are created there. To avoid this, you can sign in as the user you created in the Terraform Administration environment (by using the Conole URL from the Terraform Administration environment). This user will have full permissions for all environments created with the PingOne Master Flow Terraform configuration.
 
 ### Install Terraform
 
