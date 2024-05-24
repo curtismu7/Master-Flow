@@ -16,7 +16,7 @@ organization_id           = ""
 
 # Change the name as needed for your P1 environment #
 
-environment_name = "PingOne Master Flow - 1.1.7"
+environment_name = "PingOne Master Flow - 1.1.8"
 environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = <<EOT
