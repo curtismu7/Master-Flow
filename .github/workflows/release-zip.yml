@@ -31,8 +31,8 @@ jobs:
           exclusions: '*.git* *.DS_* /images/* TODO.md .editorconfig'
           directory: 'terraform'
       - run: |
-          RELEASE="${{ steps.version.outputs.version }}"
-          RELEASE_TITLE="${{ steps.version.outputs.version }}"
+          RELEASE="1.1.8"
+          RELEASE_TITLE="1.1.8"
           gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R curtismu7/Master-Flow
           gh release upload $RELEASE ./terraform/tf-release.zip -R curtismu7/Master-Flow
         env:
