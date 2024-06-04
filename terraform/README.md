@@ -43,7 +43,7 @@ Keep this environment handy. We will need to get a number of IDs from it later.
 ### Download and extract the latest release from Github
 
 ```bash
-touch ~/Terraform/ && mkdir ~/Terraform/master-flow && cd ~/Terraform/master-flow
+mkdir -p ~/Terraform/master-flow && cd ~/Terraform/master-flow
 curl -L https://github.com/curtismu7/Master-Flow/releases/download/1.1.8/tf-release.zip > tf-release.zip
 unzip ./tf-release.zip && rm ./tf-release.zip
 ```
