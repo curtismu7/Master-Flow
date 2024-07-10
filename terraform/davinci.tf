@@ -673,7 +673,7 @@ resource "davinci_variable" "gv-p1PopulationId" {
   mutable        = "true"
   name           = "gv-p1PopulationId"
   type           = "string"
-  value          = data.pingone_population.default_population.id
+  value          = pingone_population_default.default_population.id
 }
 
 resource "davinci_variable" "gv-passwordlessAllowedTypes" {
@@ -891,7 +891,7 @@ resource "davinci_variable" "populationId" {
   mutable        = "true"
   name           = "populationId"
   type           = "string"
-  value          = data.pingone_population.default_population.id
+  value          = pingone_population_default.default_population.id
 }
 
 resource "davinci_variable" "preppedDevices" {

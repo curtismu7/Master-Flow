@@ -82,9 +82,10 @@ data "pingone_licenses" "internal_license" {
   scim_filter     = var.license_id != "" ? "(status eq \"active\")" : "(status eq \"active\") and (envId eq \"${var.pingone_environment_id}\")"
 }
 
-data "pingone_population" "default_population" {
+resource "pingone_population_default" "default_population" {
   environment_id = pingone_environment.master_flow_environment.id
-  name           = "Default"
+
+  name = "Default"
 }
 
 data "pingone_password_policy" "standard_password_policy" {
@@ -144,7 +145,7 @@ output "webhook_decoder_url" {
 resource "pingone_user" "master_flow_user" {
   environment_id = pingone_environment.master_flow_environment.id
 
-  population_id = data.pingone_population.default_population.id
+  population_id = pingone_population_default.default_population.id
 
   email    = var.master_flow_user_email
   username = var.master_flow_user_email
@@ -199,39 +200,6 @@ resource "pingone_group" "my_awesome_group" {
 #  PingOne MFA Policy  #
 ########################
 
-// We leave this policy in place for the time being, but we don't actually use it.
-// We do this because if people have already created an environment and are updating HCL, this will not break their existing state
-resource "pingone_mfa_policy" "master_flow_mfa_policy" {
-  environment_id          = pingone_environment.master_flow_environment.id
-  name                    = "Master Flow MFA Policy"
-  device_selection        = "ALWAYS_DISPLAY_DEVICES"
-  new_device_notification = "EMAIL_THEN_SMS"
-
-  mobile {
-    enabled = false
-  }
-
-  totp {
-    enabled = true
-  }
-
-  fido2 {
-    enabled = true
-  }
-
-  sms {
-    enabled = true
-  }
-
-  voice {
-    enabled = true
-  }
-
-  email {
-    enabled = true
-  }
-}
-
 resource "pingone_mfa_device_policy" "master_flow_mfa_device_policy" {
   environment_id          = pingone_environment.master_flow_environment.id
   name                    = "Master Flow MFA Device Policy"
@@ -282,8 +250,8 @@ resource "pingone_identity_provider" "google" {
     client_id     = var.google_client_id == "" ? "client-id" : var.google_client_id
     client_secret = var.google_client_secret == "" ? "client-secret" : var.google_client_secret
   }
-  registration_population_id = data.pingone_population.default_population.id
-  
+  registration_population_id = pingone_population_default.default_population.id
+
   depends_on = [
     pingone_webhook.master_flow_webhook
   ]
@@ -300,7 +268,7 @@ resource "pingone_identity_provider" "facebook" {
     app_id     = var.facebook_app_id == "" ? "app-id" : var.facebook_app_id
     app_secret = var.facebook_app_secret  == "" ? "app-secret" : var.facebook_app_secret
   }
-  registration_population_id = data.pingone_population.default_population.id
+  registration_population_id = pingone_population_default.default_population.id
 
   depends_on = [
     pingone_webhook.master_flow_webhook
