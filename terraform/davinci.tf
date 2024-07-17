@@ -74,7 +74,7 @@ resource "davinci_connection" "PingOne" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options.id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
@@ -106,7 +106,7 @@ resource "davinci_connection" "PingOne-MFA" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options.id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
@@ -137,7 +137,7 @@ resource "davinci_connection" "PingOne-Authorize" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options.id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
@@ -158,7 +158,7 @@ resource "davinci_connection" "PingOne-Notifications" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options.id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
@@ -184,7 +184,7 @@ resource "davinci_connection" "PingOne-Protect" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options.id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
@@ -210,7 +210,7 @@ resource "davinci_connection" "PingOne-Verify" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options.id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
