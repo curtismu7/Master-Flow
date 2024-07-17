@@ -57,6 +57,7 @@ The following variables must be set for your environment:
 `worker_secret`  - The client secret from the worker the **Terraform Administration** environment that you created. \
 `pingone_environment_id` - The environment ID of the **Terraform Administration** environment that you created. \
 `region`               - Options are `AsiaPacific` `Canada` `Europe` and `NorthAmerica` \
+`region_code`          - Options are `AP` `AU` `CA` `EU` and `NA` \
 `license_id`         - The license ID that you would like to use. If left blank, it will default to the license used for the environment that you created. \
 `admin_user_id`        - The id of the user account that you created. This can be found on the API tab of your user. \
 `admin_username`    - The username of the user account that you created. \
@@ -72,6 +73,7 @@ The following variables must be set for your environment:
 | worker_secret | STRING | Required: **TRUE** Default: |
 | pingone_environment_id | STRING | Required: **TRUE** Default: |
 | region | STRING | Required: **TRUE** Default: |
+| region_code | STRING | Required: **TRUE** Default: |
 | license_name | STRING | Required: **TRUE** Default: |
 | admin_user_id | STRING | Required: **TRUE** Default: |
 | admin_username | STRING | Required: **TRUE** Default: |

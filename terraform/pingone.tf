@@ -4,22 +4,24 @@ resource "pingone_environment" "master_flow_environment" {
   type        = var.environment_type
   license_id  = var.license_id != "" ? var.license_id : data.pingone_licenses.internal_license.ids[0]
 
-  service {
-    type = "SSO"
-  }
-  service {
-    type = "MFA"
-  }
-  service {
-    type = "DaVinci"
-    tags = ["DAVINCI_MINIMAL"]
-  }
-  service {
-    type = "Verify"
-  }
-  service {
-    type = "Risk"
-  }
+  services = [
+    {
+      type = "SSO"
+    },
+    {
+      type = "MFA"
+    },
+    {
+      type = "DaVinci"
+      tags = ["DAVINCI_MINIMAL"]
+    },
+    {
+      type = "Verify"
+    },
+    {
+      type = "Risk"
+    }
+  ]
 }
 
 resource "pingone_role_assignment_user" "id_admin" {
@@ -80,9 +82,10 @@ data "pingone_licenses" "internal_license" {
   scim_filter     = var.license_id != "" ? "(status eq \"active\")" : "(status eq \"active\") and (envId eq \"${var.pingone_environment_id}\")"
 }
 
-data "pingone_population" "default_population" {
+resource "pingone_population_default" "default_population" {
   environment_id = pingone_environment.master_flow_environment.id
-  name           = "Default"
+
+  name = "Default"
 }
 
 data "pingone_password_policy" "standard_password_policy" {
@@ -142,7 +145,7 @@ output "webhook_decoder_url" {
 resource "pingone_user" "master_flow_user" {
   environment_id = pingone_environment.master_flow_environment.id
 
-  population_id = data.pingone_population.default_population.id
+  population_id = pingone_population_default.default_population.id
 
   email    = var.master_flow_user_email
   username = var.master_flow_user_email
@@ -197,33 +200,36 @@ resource "pingone_group" "my_awesome_group" {
 #  PingOne MFA Policy  #
 ########################
 
-resource "pingone_mfa_policy" "master_flow_mfa_policy" {
+resource "pingone_mfa_device_policy" "master_flow_mfa_device_policy" {
   environment_id          = pingone_environment.master_flow_environment.id
-  name                    = "Master Flow MFA Policy"
-  device_selection        = "ALWAYS_DISPLAY_DEVICES"
+  name                    = "Master Flow MFA Device Policy"
   new_device_notification = "EMAIL_THEN_SMS"
 
-  mobile {
+  authentication = {
+    device_selection = "ALWAYS_DISPLAY_DEVICES"
+  }
+
+  mobile = {
     enabled = false
   }
 
-  totp {
+  totp = {
     enabled = true
   }
 
-  fido2 {
+  fido2 = {
     enabled = true
   }
 
-  sms {
+  sms = {
     enabled = true
   }
 
-  voice {
+  voice = {
     enabled = true
   }
 
-  email {
+  email = {
     enabled = true
   }
 }
@@ -240,12 +246,12 @@ resource "pingone_identity_provider" "google" {
   name    = "Google"
   enabled = true
 
-  google {
+  google = {
     client_id     = var.google_client_id == "" ? "client-id" : var.google_client_id
     client_secret = var.google_client_secret == "" ? "client-secret" : var.google_client_secret
   }
-  registration_population_id = data.pingone_population.default_population.id
-  
+  registration_population_id = pingone_population_default.default_population.id
+
   depends_on = [
     pingone_webhook.master_flow_webhook
   ]
@@ -258,11 +264,11 @@ resource "pingone_identity_provider" "facebook" {
   name    = "Facebook"
   enabled = true
 
-  facebook {
+  facebook = {
     app_id     = var.facebook_app_id == "" ? "app-id" : var.facebook_app_id
     app_secret = var.facebook_app_secret  == "" ? "app-secret" : var.facebook_app_secret
   }
-  registration_population_id = data.pingone_population.default_population.id
+  registration_population_id = pingone_population_default.default_population.id
 
   depends_on = [
     pingone_webhook.master_flow_webhook
@@ -359,7 +365,7 @@ resource "pingone_webhook" "master_flow_webhook" {
 
   format                  = "ACTIVITY"
 
-  filter_options {
+  filter_options = {
     included_action_types = ["ACCOUNT.LINKED", "ACCOUNT.UNLINKED", "ACTION.CREATED", "ACTION.DELETED", "ACTION.UPDATED", "ADVANCEDSERVICES_ORCHESTRATION.CREATION_COMPLETED", "ADVANCEDSERVICES_ORCHESTRATION.CREATION_FAILED", "ADVANCEDSERVICES_ORCHESTRATION.CREATION_STARTED", "ADVANCEDSERVICES_ORCHESTRATION.CREATION_START_FAILED", "ADVANCEDSERVICES_ORCHESTRATION.DELETION_COMPLETED", "ADVANCEDSERVICES_ORCHESTRATION.DELETION_FAILED", "ADVANCEDSERVICES_ORCHESTRATION.DELETION_STARTED", "ADVANCEDSERVICES_ORCHESTRATION.DELETION_START_FAILED", "AGREEMENT.CREATED", "AGREEMENT.DELETED", "AGREEMENT.UPDATED", "AGREEMENT_CONSENT.ACCEPTED", "AGREEMENT_CONSENT.REVOKED", "AGREEMENT_LANGUAGE.CREATED", "AGREEMENT_LANGUAGE.DELETED", "AGREEMENT_LANGUAGE.UPDATED", "AGREEMENT_LANGUAGE_REVISION.CREATED", "AGREEMENT_LANGUAGE_REVISION.DELETED", "AGREEMENT_LANGUAGE_REVISION.UPDATED", "API_ACCESS_LOG_ENTRY.HTTP_REQUEST_POLICY_EVALUATED", "API_ACCESS_LOG_ENTRY.HTTP_RESPONSE_POLICY_EVALUATED", "API_SERVER.CREATED", "API_SERVER.DELETED", "API_SERVER.POLICIES_DEPLOYED", "API_SERVER.UPDATED", "APPLICATION.CREATED", "APPLICATION.DELETED", "APPLICATION.PLAY_INTEGRITY_MISCONFIGURATION", "APPLICATION.UPDATED", "APPLICATION_PERMISSION.CREATED", "APPLICATION_PERMISSION.DELETED", "APPLICATION_ROLE.CREATED", "APPLICATION_ROLE_ENTRY.ADDED", "APPLICATION_ROLE_ENTRY.REMOVED", "ASSERTION.CHECK_FAILED", "ASSERTION.CHECK_SUCCESS", "AUTHENTICATION.CREATED", "AUTHENTICATION.UPDATED", "AUTHENTICATION_CODE.CREATED", "AUTHENTICATION_CODE.DELETED", "AUTHENTICATION_CODE.UPDATED", "AUTHORIZE_ATTRIBUTE.CREATED", "AUTHORIZE_ATTRIBUTE.DELETED", "AUTHORIZE_ATTRIBUTE.UPDATED", "AUTHORIZE_CONDITION.CREATED", "AUTHORIZE_CONDITION.DELETED", "AUTHORIZE_CONDITION.UPDATED", "AUTHORIZE_POLICY.CREATED", "AUTHORIZE_POLICY.DELETED", "AUTHORIZE_POLICY.UPDATED", "AUTHORIZE_PROCESSOR.CREATED", "AUTHORIZE_PROCESSOR.DELETED", "AUTHORIZE_PROCESSOR.UPDATED", "AUTHORIZE_SERVICE.CREATED", "AUTHORIZE_SERVICE.DELETED", "AUTHORIZE_SERVICE.UPDATED", "AUTHORIZE_SHARED_ADVICE.CREATED", "AUTHORIZE_SHARED_ADVICE.DELETED", "AUTHORIZE_SHARED_ADVICE.UPDATED", "AUTHORIZE_SHARED_RULE.CREATED", "AUTHORIZE_SHARED_RULE.DELETED", "AUTHORIZE_SHARED_RULE.UPDATED", "AUTHORIZE_TAG.DELETED", "AUTHORIZE_TAG.UPDATED", "BRANDING.DELETED", "BRANDING.UPDATED", "CERTIFICATE.CREATED", "CERTIFICATE.DELETED", "CERTIFICATE.READ", "CERTIFICATE.UPDATED", "CONTENT.CREATED", "CONTENT.DELETED", "CONTENT.UPDATED", "CONTENTS.DELETED", "CONTENTS.UPDATED", "CREDENTIAL_TYPE.CREATED", "CREDENTIAL_TYPE.DELETED", "CREDENTIAL_TYPE.UPDATED", "CUSTOM_DOMAIN.CREATED", "CUSTOM_DOMAIN.DELETED", "CUSTOM_DOMAIN.UPDATED", "DAVINCI_INTERACTION.CUSTOM_ANALYTICS", "DAVINCI_INTERACTION.RECEIVE_REQUEST", "DAVINCI_INTERACTION.SEND_ERROR_RESPONSE", "DAVINCI_INTERACTION.SEND_RESPONSE", "DAVINCI_INTERACTION.START_INTERACTION", "DECISION_ENDPOINT.CREATED", "DECISION_ENDPOINT.DECISION_REQUEST_EVALUATED", "DECISION_ENDPOINT.DELETED", "DECISION_ENDPOINT.UPDATED", "DEVICE.ACTIVATED", "DEVICE.ACTIVATION_FAILED", "DEVICE.ACTIVATION_OTP_FAILED", "DEVICE.ACTIVATION_OTP_INVALID", "DEVICE.BLOCKED", "DEVICE.CREATED", "DEVICE.DELETED", "DEVICE.FRAUD_REPORTED", "DEVICE.KEY_ROTATION_FAILED", "DEVICE.KEY_ROTATION_SUCCEEDED", "DEVICE.LOCKED", "DEVICE.LOGS_RECEIVED", "DEVICE.NICKNAME_UPDATED", "DEVICE.PAIRING_FAILED_COMPROMISED", "DEVICE.UNBLOCKED", "DEVICE.UNLOCKED", "DEVICE.UPDATED", "DEVICE.WEBAUTHN_UPDATED", "DEVICES.ORDER_CREATED", "DEVICES.ORDER_DELETED", "DEVICES.ORDER_UPDATED", "DEVICE_AUTHENTICATION_POLICY.CREATED", "DEVICE_AUTHENTICATION_POLICY.DELETED", "DEVICE_AUTHENTICATION_POLICY.UPDATED", "DIGITAL_WALLET.ACTIVE", "DIGITAL_WALLET.DELETED", "DIGITAL_WALLET.DISABLED", "DIGITAL_WALLET.EXPIRED", "DIGITAL_WALLET.PAIRING_REQUIRED", "DIGITAL_WALLET_APPLICATION.CREATED", "DIGITAL_WALLET_APPLICATION.DELETED", "DIGITAL_WALLET_APPLICATION.UPDATED", "EMAIL_DOMAIN.CREATED", "EMAIL_DOMAIN.DELETED", "ENVIRONMENT.CAPABILITIES", "ENVIRONMENT.CREATED", "ENVIRONMENT.DELETED", "ENVIRONMENT.DEMOTED", "ENVIRONMENT.PROMOTED", "ENVIRONMENT.UPDATED", "FIDO_METADATA.CREATED", "FIDO_METADATA.DELETED", "FIDO_POLICY.CREATED", "FIDO_POLICY.DELETED", "FIDO_POLICY.UPDATED", "FLOW.CREATED", "FLOW.DELETED", "FLOW.UPDATED", "FLOW_DEFINITION.CREATED", "FLOW_DEFINITION.DELETED", "FLOW_DEFINITION.UPDATED", "FLOW_EXECUTION.CREATED", "FLOW_EXECUTION.UPDATED", "FLOW_POLICY_ASSIGNMENT.CREATED", "FLOW_POLICY_ASSIGNMENT.DELETED", "FLOW_POLICY_ASSIGNMENT.UPDATED", "GATEWAY.CREATED", "GATEWAY.DELETED", "GATEWAY.UPDATED", "GATEWAY_INSTANCE.CREATED", "GATEWAY_INSTANCE.DELETED", "GATEWAY_INSTANCE.UPDATED", "GRANT.CREATED", "GRANT.DELETED", "GRANT.UPDATED", "GROUP.CREATED", "GROUP.DELETED", "GROUP.UPDATED", "IDENTITY_PROVIDER.CREATED", "IDENTITY_PROVIDER.DELETED", "IDENTITY_PROVIDER.UPDATED", "IDP_ATTRIBUTE.CREATED", "IDP_ATTRIBUTE.DELETED", "IDP_ATTRIBUTE.UPDATED", "IMAGE.ACTIVATED", "IMAGE.CREATED", "IMAGE.DELETED", "INSTANT_MESSAGING_DELIVERY_SETTINGS.CREATED", "INSTANT_MESSAGING_DELIVERY_SETTINGS.DELETED", "INSTANT_MESSAGING_DELIVERY_SETTINGS.UPDATED", "ISSUANCE.CREATED", "ISSUANCE_RULE.CREATED", "ISSUANCE_RULE.DELETED", "ISSUANCE_RULE.UPDATED", "KEY.CREATED", "KEY.DELETED", "KEY.READ", "KEY.UPDATED", "KRP.CREATED", "KRP.DELETED", "KRP.ROTATED", "KRP.UPDATED", "LICENSE.CREATED", "LICENSE.DELETED", "LICENSE.UPDATED", "MEMBER_OF_GROUP.CREATED", "MEMBER_OF_GROUP.DELETED", "MFA_SETTINGS.UPDATED", "NOTIFICATION.CREATED", "NOTIFICATION.REJECTED", "NOTIFICATION.UPDATED", "NOTIFICATIONS_SETTINGS.UPDATED", "NOTIFICATION_POLICY.CREATED", "NOTIFICATION_POLICY.DELETED", "NOTIFICATION_POLICY.UPDATED", "OAUTH_CONSENT.ACCEPTED", "OAUTH_CONSENT.DECLINED", "OAUTH_CONSENT.DELETED", "OAUTH_CONSENT.REVOKED", "ORGANIZATION.CAPABILITIES", "ORGANIZATION.CREATED", "ORGANIZATION.DELETED", "ORGANIZATION.UPDATED", "OTP.CHECK_FAILED", "OTP.CHECK_INVALID", "OTP.CHECK_SUCCESS", "PASSWORD.CHECK_FAILED", "PASSWORD.CHECK_SUCCEEDED", "PASSWORD.FORCE_CHANGE", "PASSWORD.RECOVERY", "PASSWORD.RESET", "PASSWORD.SET", "PASSWORD.UNLOCKED", "PASSWORD.UNSET", "PHONE_DELIVERY_SETTINGS.CREATED", "PHONE_DELIVERY_SETTINGS.DELETED", "PHONE_DELIVERY_SETTINGS.UPDATED", "POLICY.CREATED", "POLICY.DELETED", "POLICY.UPDATED", "POPULATION.CREATED", "POPULATION.DELETED", "POPULATION.UPDATED", "PROVISIONING_CONNECTION.CREATED", "PROVISIONING_CONNECTION.DELETED", "PROVISIONING_CONNECTION.UPDATED", "PROVISIONING_GROUP_MEMBERSHIP_SYNC.FAILURE", "PROVISIONING_GROUP_SYNC.FAILURE", "PROVISIONING_IDENTITY_SYNC.FAILURE", "PROVISIONING_MAPPING.CREATED", "PROVISIONING_MAPPING.DELETED", "PROVISIONING_MAPPING.UPDATED", "PROVISIONING_POLL.FAILURE", "PROVISIONING_RULE.CREATED", "PROVISIONING_RULE.DELETED", "PROVISIONING_RULE.UPDATED", "PROVISIONING_SYNC.FAILURE", "PROVISIONING_SYNC.STARTED", "PROVISION_CREDENTIAL.ACCEPTED", "PROVISION_CREDENTIAL.CREATED", "PROVISION_CREDENTIAL.DELETED", "PROVISION_CREDENTIAL.DELETED_FROM_WALLET", "PROVISION_CREDENTIAL.REJECTED", "PROVISION_CREDENTIAL.REVOKED", "PUSH_CREDENTIALS.CREATED", "PUSH_CREDENTIALS.DELETED", "PUSH_CREDENTIALS.UPDATED", "RADIUS_SESSION.CREATED", "RADIUS_SESSION.UPDATED", "RESCUE_IDENTITY.CREATED", "RESOURCE.CREATED", "RESOURCE.DELETED", "RESOURCE.UPDATED", "RESOURCE_ATTRIBUTE.CREATED", "RESOURCE_ATTRIBUTE.DELETED", "RESOURCE_ATTRIBUTE.UPDATED", "RISK_EVALUATION.CREATED", "RISK_EVALUATION.STAGING_CREATED", "RISK_EVALUATION.UPDATED", "RISK_POLICY_SET.CREATED", "RISK_POLICY_SET.DELETED", "RISK_POLICY_SET.UPDATED", "RISK_PREDICTOR.CREATED", "RISK_PREDICTOR.DELETED", "RISK_PREDICTOR.UPDATED", "ROLE_ASSIGNMENT.CREATED", "ROLE_ASSIGNMENT.DELETED", "SAML_ATTRIBUTE.CREATED", "SAML_ATTRIBUTE.DELETED", "SAML_ATTRIBUTE.UPDATED", "SCHEMA_ATTRIBUTE.CREATED", "SCHEMA_ATTRIBUTE.DELETED", "SCHEMA_ATTRIBUTE.UPDATED", "SCOPE.CREATED", "SCOPE.DELETED", "SCOPE.UPDATED", "SECRET.READ", "SECRET.UPDATED", "SEEN_DEVICE.CREATED", "SEEN_DEVICE.DELETED", "SEEN_DEVICE.UPDATED", "SESSION.CREATED", "SESSION.DELETED", "SESSION.UPDATED", "SETTINGS.CREATED", "SETTINGS.UPDATED", "SIGN_ON_POLICY_ASSIGNMENT.CREATED", "SIGN_ON_POLICY_ASSIGNMENT.DELETED", "SIGN_ON_POLICY_ASSIGNMENT.UPDATED", "SOLUTIONS_WORKFLOW.CREATION_SUCCESS", "SOLUTIONS_WORKFLOW.RETRIEVE_FAILED", "SOLUTIONS_WORKFLOW.RETRIEVE_SUCCESS", "SOLUTIONS_WORKFLOW.UPDATE_SUCCESS", "STAGED_CHANGE.COMPLETED", "STAGED_CHANGE.CREATED", "STAGED_CHANGE.DELETED", "STAGED_CHANGE.FAILED", "STAGED_CHANGE.UPDATED", "SUBSCRIPTION.CREATED", "SUBSCRIPTION.DELETED", "SUBSCRIPTION.UPDATED", "THEME.CREATED", "THEME.DELETED", "THEME.UPDATED", "TRUSTED_EMAIL.ACTIVE", "TRUSTED_EMAIL.CREATED", "TRUSTED_EMAIL.DELETED", "TRUSTED_EMAIL.SEND_CODE", "USER.ACCESS_ALLOWED", "USER.ACCESS_DENIED", "USER.CREATED", "USER.DELETED", "USER.LOCKED", "USER.MOVED", "USER.QUOTA_RESET", "USER.SLO_FAILURE", "USER.SLO_REQUESTED", "USER.SLO_SUCCESS", "USER.UNLOCKED", "USER.UPDATED", "USER_CREDENTIAL.DELETED", "USER_CREDENTIAL.ISSUED", "USER_CREDENTIAL.PENDING", "USER_CREDENTIAL.REVOKED", "USER_SEEN_DEVICE.CREATED", "USER_SEEN_DEVICE.DELETED", "USER_SEEN_DEVICE.UPDATED", "VALIDATION_TRANSACTION.CREATED", "VALIDATION_TRANSACTION.DELETED", "VALIDATION_TRANSACTION.UPDATED", "VERIFY_APPEVENT.CREATED", "VERIFY_METADATA.CREATED", "VERIFY_POLICY.CREATED", "VERIFY_POLICY.DELETED", "VERIFY_POLICY.UPDATED"]
   }
 }
@@ -373,7 +379,7 @@ resource "pingone_application" "master_flow_webhook_link" {
   name           = "PingOne Facile Decoder"
   enabled        = true
 
-  external_link_options {
+  external_link_options = {
     home_page_url = "https://decoder.pingidentity.cloud/webhooks/${pingone_environment.master_flow_environment.id}"
   }
 
@@ -387,13 +393,13 @@ resource "pingone_application" "dv_worker_app" {
   name           = "PingOne DaVinci Connection"
   enabled        = true
 
-  oidc_options {
-    type                        = "WORKER"
-    grant_types                 = ["CLIENT_CREDENTIALS"]
-    token_endpoint_authn_method = "CLIENT_SECRET_BASIC"
+  oidc_options = {
+    type                       = "WORKER"
+    grant_types                = ["CLIENT_CREDENTIALS"]
+    token_endpoint_auth_method = "CLIENT_SECRET_BASIC"
   }
 
-  icon {
+  icon = {
     id   = "c6dbb456-0857-4fab-bfb0-909944233017"
     href = "https://assets.pingone.com/ux/ui-library/4.18.0/images/logo-pingidentity.png"
   }
@@ -401,6 +407,11 @@ resource "pingone_application" "dv_worker_app" {
   depends_on = [
     pingone_webhook.master_flow_webhook
   ]
+}
+
+resource "pingone_application_secret" "dv_worker_app" {
+  environment_id = pingone_environment.master_flow_environment.id
+  application_id = pingone_application.dv_worker_app.id
 }
 
 resource "pingone_application_role_assignment" "id_admin" {
@@ -432,15 +443,15 @@ resource "pingone_application" "oidc_app" {
   enabled        = true
   name           = "Master Flow OIDC App"
 
-  oidc_options {
-    type                        = "WEB_APP"
-    grant_types                 = ["AUTHORIZATION_CODE"]
-    response_types              = ["CODE"]
-    token_endpoint_authn_method = "NONE"
-    redirect_uris               = ["https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/openid_connect"]
+  oidc_options = {
+    type                       = "WEB_APP"
+    grant_types                = ["AUTHORIZATION_CODE"]
+    response_types             = ["CODE"]
+    token_endpoint_auth_method = "NONE"
+    redirect_uris              = ["https://auth.pingone.com/${pingone_environment.master_flow_environment.id}/rp/callback/openid_connect"]
   }
 
-  icon {
+  icon = {
     id   = "c6dbb456-0857-4fab-bfb0-909944233017"
     href = "https://assets.pingone.com/ux/ui-library/4.18.0/images/logo-pingidentity.png"
   }
@@ -508,18 +519,18 @@ resource "pingone_notification_template_content" "device_pairing" {
   locale         = "en"
   variant        = "OTP"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/devicePairing OTP.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/devicePairing OTP.html")
     subject       = "Device Pairing OTP"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -535,18 +546,18 @@ resource "pingone_notification_template_content" "email_verification_user" {
   template_name  = "email_verification_user"
   locale         = "en"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/Email Address Verification (User) - OTP.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/Email Address Verification (User) - OTP.html")
     subject       = "Email Verification (User)"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -563,18 +574,18 @@ resource "pingone_notification_template_content" "magic_link" {
   locale         = "en"
   variant        = "MagicLink"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/magiclink.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/magiclink.html")
     subject       = "Magic Link"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -590,18 +601,18 @@ resource "pingone_notification_template_content" "new_device_paired" {
   template_name  = "new_device_paired"
   locale         = "en"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/newDevicePaired.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/newDevicePaired.html")
     subject       = "New Device Paired"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -618,18 +629,18 @@ resource "pingone_notification_template_content" "forgot_username" {
   locale         = "en"
   variant        = "Forgot Username"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/forgotusername.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/forgotusername.html")
     subject       = "Forgot Username"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -646,18 +657,18 @@ resource "pingone_notification_template_content" "general_otp" {
   locale         = "en"
   variant        = "OTP"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/general-otp.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/general-otp.html")
     subject       = "General OTP"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -673,18 +684,18 @@ resource "pingone_notification_template_content" "strong_authentication" {
   template_name  = "strong_authentication"
   locale         = "en"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/strongAuthentication.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/strongAuthentication.html")
     subject       = "Strong Authentication"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -700,18 +711,18 @@ resource "pingone_notification_template_content" "verification_code" {
   template_name  = "verification_code_template"
   locale         = "en"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/verification code.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/verification code.html")
     subject       = "Verification Code"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
@@ -727,18 +738,18 @@ resource "pingone_notification_template_content" "password_recovery" {
   template_name  = "recovery_code_template"
   locale         = "en"
 
-  email {
-    body          = "${file("${path.module}/data/notification_templates/Password Recovery.html")}"
+  email = {
+    body          = file("${path.module}/data/notification_templates/Password Recovery.html")
     subject       = "Verification Code"
     content_type  = "text/html"
     character_set = "UTF-8"
 
-    from {
+    from = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }
-    
-    reply_to {
+
+    reply_to = {
       name    = "PingOne"
       address = "noreply@pingidentity.com"
     }

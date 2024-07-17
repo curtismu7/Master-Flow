@@ -1,4 +1,5 @@
 region                  = "NorthAmerica"
+region_code             = "NA"
 pingone_environment_id  = ""
 admin_user_id           = ""
 license_id              = ""

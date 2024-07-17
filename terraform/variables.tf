@@ -12,9 +12,20 @@ variable "pingone_environment_id" {
     type = string
 }
 variable "region" {
-    description = "Region"
-    type = string
-    default = "NorthAmerica"
+  description = "Region"
+  type        = string
+  default     = "NorthAmerica"
+}
+
+variable "region_code" {
+  description = "Region Code"
+  type        = string
+  default     = "NA"
+
+  validation {
+    condition     = contains(["EU", "NA", "CA", "AP", "AU"], var.region_code)
+    error_message = "Allowed values for region_code are \"EU\", \"NA\", \"CA\", \"AP\", \"AU\"."
+  }
 }
 
 variable "admin_user_id" {

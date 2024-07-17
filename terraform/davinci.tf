@@ -74,12 +74,12 @@ resource "davinci_connection" "PingOne" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
     name  = "clientSecret"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_secret
+    value = pingone_application_secret.dv_worker_app.secret
   }
 
   property {
@@ -106,12 +106,12 @@ resource "davinci_connection" "PingOne-MFA" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
     name  = "clientSecret"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_secret
+    value = pingone_application_secret.dv_worker_app.secret
   }
 
   property {
@@ -125,8 +125,8 @@ resource "davinci_connection" "PingOne-MFA" {
   }
 
   property {
-    name = "policyId"
-    value = pingone_mfa_policy.master_flow_mfa_policy.id
+    name  = "policyId"
+    value = pingone_mfa_device_policy.master_flow_mfa_device_policy.id
   }
 }
 
@@ -137,12 +137,12 @@ resource "davinci_connection" "PingOne-Authorize" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
     name  = "clientSecret"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_secret
+    value = pingone_application_secret.dv_worker_app.secret
   }
 
   property {
@@ -158,12 +158,12 @@ resource "davinci_connection" "PingOne-Notifications" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
     name  = "clientSecret"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_secret
+    value = pingone_application_secret.dv_worker_app.secret
   }
 
   property {
@@ -184,12 +184,12 @@ resource "davinci_connection" "PingOne-Protect" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
     name  = "clientSecret"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_secret
+    value = pingone_application_secret.dv_worker_app.secret
   }
 
   property {
@@ -210,12 +210,12 @@ resource "davinci_connection" "PingOne-Verify" {
 
   property {
     name  = "clientId"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_id
+    value = pingone_application.dv_worker_app.oidc_options.client_id
   }
 
   property {
     name  = "clientSecret"
-    value = pingone_application.dv_worker_app.oidc_options[0].client_secret
+    value = pingone_application_secret.dv_worker_app.secret
   }
 
   property {
@@ -641,27 +641,27 @@ resource "davinci_variable" "gv-p1PasswordPolicy" {
   mutable        = "true"
   name           = "gv-p1PasswordPolicy"
   type           = "object"
-  value          = replace(replace(replace(jsonencode({
-                      "id": data.pingone_password_policy.standard_password_policy.id,
-                      "environment": { "id": data.pingone_password_policy.standard_password_policy.environment_id },
-                      "name": data.pingone_password_policy.standard_password_policy.name,
-                      "description": data.pingone_password_policy.standard_password_policy.description,
-                      "excludesProfileData": data.pingone_password_policy.standard_password_policy.exclude_profile_data,
-                      "notSimilarToCurrent": data.pingone_password_policy.standard_password_policy.not_similar_to_current,
-                      "excludesCommonlyUsed": data.pingone_password_policy.standard_password_policy.exclude_commonly_used_passwords,
-                      "maxAgeDays": 22,
-                      "history": { "count": data.pingone_password_policy.standard_password_policy.password_history[0].prior_password_count, "retentionDays": data.pingone_password_policy.standard_password_policy.password_history[0].retention_days },
-                      "lockout": { "failureCount": data.pingone_password_policy.standard_password_policy.account_lockout[0].fail_count, "durationSeconds": data.pingone_password_policy.standard_password_policy.account_lockout[0].duration_seconds },
-                      "length": { "min": data.pingone_password_policy.standard_password_policy.password_length[0].min, "max": data.pingone_password_policy.standard_password_policy.password_length[0].max },
-                      "minCharacters": {
-                        "~!@#$%^&*()-_=+[]{}|;:,.<>/?": data.pingone_password_policy.standard_password_policy.min_characters[0].special_characters,
-                        "0123456789": data.pingone_password_policy.standard_password_policy.min_characters[0].numeric,
-                        "ABCDEFGHIJKLMNOPQRSTUVWXYZ": data.pingone_password_policy.standard_password_policy.min_characters[0].alphabetical_uppercase,
-                        "abcdefghijklmnopqrstuvwxyz": data.pingone_password_policy.standard_password_policy.min_characters[0].alphabetical_lowercase
-                      },
-                      "populationCount": data.pingone_password_policy.standard_password_policy.population_count,
-                      "default": true
-                    }), "\\u0026", "&"), "\\u003c", "<"), "\\u003e", ">")
+  value = replace(replace(replace(jsonencode({
+    "id" : data.pingone_password_policy.standard_password_policy.id,
+    "environment" : { "id" : data.pingone_password_policy.standard_password_policy.environment_id },
+    "name" : data.pingone_password_policy.standard_password_policy.name,
+    "description" : data.pingone_password_policy.standard_password_policy.description,
+    "excludesProfileData" : data.pingone_password_policy.standard_password_policy.excludes_profile_data,
+    "notSimilarToCurrent" : data.pingone_password_policy.standard_password_policy.not_similar_to_current,
+    "excludesCommonlyUsed" : data.pingone_password_policy.standard_password_policy.excludes_commonly_used_passwords,
+    "maxAgeDays" : 22,
+    "history" : { "count" : data.pingone_password_policy.standard_password_policy.history.count, "retentionDays" : data.pingone_password_policy.standard_password_policy.history.retention_days },
+    "lockout" : { "failureCount" : data.pingone_password_policy.standard_password_policy.lockout.failure_count, "durationSeconds" : data.pingone_password_policy.standard_password_policy.lockout.duration_seconds },
+    "length" : { "min" : data.pingone_password_policy.standard_password_policy.length.min, "max" : data.pingone_password_policy.standard_password_policy.length.max },
+    "minCharacters" : {
+      "~!@#$%^&*()-_=+[]{}|;:,.<>/?" : data.pingone_password_policy.standard_password_policy.min_characters.special_characters,
+      "0123456789" : data.pingone_password_policy.standard_password_policy.min_characters.numeric,
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : data.pingone_password_policy.standard_password_policy.min_characters.alphabetical_uppercase,
+      "abcdefghijklmnopqrstuvwxyz" : data.pingone_password_policy.standard_password_policy.min_characters.alphabetical_lowercase
+    },
+    "populationCount" : data.pingone_password_policy.standard_password_policy.population_count,
+    "default" : true
+  }), "\\u0026", "&"), "\\u003c", "<"), "\\u003e", ">")
 }
 
 resource "davinci_variable" "gv-p1PopulationId" {
@@ -673,7 +673,7 @@ resource "davinci_variable" "gv-p1PopulationId" {
   mutable        = "true"
   name           = "gv-p1PopulationId"
   type           = "string"
-  value          = data.pingone_population.default_population.id
+  value          = pingone_population_default.default_population.id
 }
 
 resource "davinci_variable" "gv-passwordlessAllowedTypes" {
@@ -891,7 +891,7 @@ resource "davinci_variable" "populationId" {
   mutable        = "true"
   name           = "populationId"
   type           = "string"
-  value          = data.pingone_population.default_population.id
+  value          = pingone_population_default.default_population.id
 }
 
 resource "davinci_variable" "preppedDevices" {
@@ -1100,7 +1100,7 @@ resource "davinci_variable" "gv-mfaPolicyId" {
   mutable        = "true"
   name           = "gv-mfaPolicyId"
   type           = "string"
-  value          = pingone_mfa_policy.master_flow_mfa_policy.id
+  value          = pingone_mfa_device_policy.master_flow_mfa_device_policy.id
 }
 
 resource "davinci_variable" "gv-progressiveProfilingAuthentication" {

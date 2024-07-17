@@ -2,7 +2,7 @@ terraform {
   required_providers {
     pingone = {
       source  = "pingidentity/pingone"
-      version = ">= 0.27.0, < 1.0.0"
+      version = ">= 1.0.0, < 2.0.0"
     }
     davinci = {
       source = "pingidentity/davinci"
@@ -15,7 +15,7 @@ provider "pingone" {
   client_id      = var.worker_id
   client_secret  = var.worker_secret
   environment_id = var.pingone_environment_id
-  region         = var.region
+  region_code    = var.region_code
 }
 
 provider "davinci" {
