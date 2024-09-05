@@ -23,8 +23,8 @@ admin_group_id          = ""
 
 # Change the name as needed for your P1 environment #
 
-environment_name = "PingOne Master Flow - 2.0 - d8bfab2e-6891-417a-a87a-16af4a9c4eb1"
-environment_description = "[d8bfab2e-6891-417a-a87a-16af4a9c4eb1] This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
+environment_name = "PingOne Master Flow - 2.0"
+environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = <<EOT
 GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.
