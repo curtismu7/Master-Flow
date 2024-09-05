@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Device Registration</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff; /* White background */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333333; /* Dark gray header background */
+            color: white;
+            padding: 20px;
+        }
+
+        .header img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            color: #333333;
+        }
+
+        .content h1 {
+            color: #333333; /* Dark gray for main header */
+            font-size: 24px;
+        }
+
+        .content h2 {
+            color: #555555; /* Medium gray for sub-headers */
+            font-size: 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666666; /* Light gray for paragraph text */
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            font-size: 12px;
+            color: #888888; /* Light gray for footer text */
+        }
+    </style>
+</head>
+
+<body>
+    <table role="presentation"
+        style="width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: #e5e5e5;">
+        <tbody>
+            <tr>
+                <td align="center" style="padding: 1rem 2rem; vertical-align: top; width: 100%;">
+                    <table role="presentation"
+                        style="max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 40px 0px 0px;">
+                                    <div class="email-container">
+                                        <div class="header">
+                                            <img src="${companyLogo}" alt="${companyName}" style="width: 92px;">
+                                            <h1>Device Deletion Confirmation</h1>
+                                        </div>
+                                        <div class="content">
+                                            <h1>${companyName}</h1>
+                                            <h1>Device Deletion Confirmation</h1>
+                                            <p>A device has been successfully deleted from your account and can no longer be used for authentication.</p>
+                                            <h2>Device Details:</h2>
+                                            <p><strong>Type:</strong> ${deviceType}</p>
+                                            <p><strong>Name:</strong> ${deviceName}</p>
+                                            <p>If you did not request this email, please contact our support team immediately.</p>
+                                            <p>Thank You,<br>${companyName}</p>
+                                        </div>
+                                        <div class="footer">
+                                            <p>&copy; Copyright 2024. All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

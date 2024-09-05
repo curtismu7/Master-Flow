@@ -1,0 +1,47 @@
+resource "pingone_group_role_assignment" "id_admin" {
+  environment_id = var.admin_environment_id != "" ? var.admin_environment_id : var.admin_environment_id
+  group_id        = var.admin_group_id
+  role_id        = data.pingone_role.identity_data_admin.id
+
+  scope_environment_id = pingone_environment.master_flow_environment.id
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
+resource "pingone_group_role_assignment" "app_dev" {
+  environment_id = var.admin_environment_id != "" ? var.admin_environment_id : var.admin_environment_id
+  group_id        = var.admin_group_id
+  role_id        = data.pingone_role.client_application_developer.id
+
+  scope_environment_id = pingone_environment.master_flow_environment.id
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
+resource "pingone_group_role_assignment" "env_admin" {
+  environment_id = var.admin_environment_id != "" ? var.admin_environment_id : var.admin_environment_id
+  group_id        = var.admin_group_id
+  role_id        = data.pingone_role.environment_admin.id
+
+  scope_environment_id = pingone_environment.master_flow_environment.id
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
+resource "pingone_group_role_assignment" "davinci_admin" {
+  environment_id = var.admin_environment_id != "" ? var.admin_environment_id : var.admin_environment_id
+  group_id        = var.admin_group_id
+  role_id        = data.pingone_role.davinci_admin.id
+
+  scope_environment_id = pingone_environment.master_flow_environment.id
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}

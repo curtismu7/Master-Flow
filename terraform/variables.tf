@@ -11,10 +11,23 @@ variable "pingone_environment_id" {
     description = "Environment Id"
     type = string
 }
+variable "admin_environment_id" {
+    description = "Environment Id"
+    type = string
+}
+variable "admin_group_id" {
+    description = "Group Id"
+    type = string
+}
 variable "region" {
     description = "Region"
     type = string
     default = "NorthAmerica"
+}
+variable "region_code" {
+    description = "Region"
+    type = string
+    default = "NA"
 }
 
 variable "admin_user_id" {
@@ -228,183 +241,183 @@ variable "master_flow_user_lifecycle_suppress_verification_code" {
 
 
 
-#############
-#  DaVinci  #
-#############
+# #############
+# #  DaVinci  #
+# #############
 
-variable "deployment_type" {
-  type        = string
-  description = "Type of deployment. Allowed values: \"WIDGET\", \"REDIRECT\""
+# variable "deployment_type" {
+#   type        = string
+#   description = "Type of deployment. Allowed values: \"WIDGET\", \"REDIRECT\""
 
-  validation {
-    condition     = contains(["WIDGET", "REDIRECT"], var.deployment_type)
-    error_message = "Must be either \"WIDGET\" or \"REDIRECT\"."
-  }
-}
+#   validation {
+#     condition     = contains(["WIDGET", "REDIRECT"], var.deployment_type)
+#     error_message = "Must be either \"WIDGET\" or \"REDIRECT\"."
+#   }
+# }
 
 variable "davinci_connection_PingOne_region" {
   description = "Value for davinci_connection_PingOne_region variable"
 }
 
-variable "davinci_variable_availableQuestions_2" {
-  description = "Value for davinci_variable_availableQuestions_2 variable"
-}
+# variable "davinci_variable_availableQuestions_2" {
+#   description = "Value for davinci_variable_availableQuestions_2 variable"
+# }
 
-variable "davinci_variable_gv-QA-On" {
-  description = "Value for davinci_variable_gv-QA-On variable"
-}
+# variable "davinci_variable_gv-QA-On" {
+#   description = "Value for davinci_variable_gv-QA-On variable"
+# }
 
-variable "davinci_variable_gv-protectAfterSocial" {
-  description = "Value for davinci_variable_gv-protectAfterSocial variable"
-}
+# variable "davinci_variable_gv-protectAfterSocial" {
+#   description = "Value for davinci_variable_gv-protectAfterSocial variable"
+# }
 
-variable "davinci_variable_gv-fakeLevel" {
-  description = "Value for davinci_variable_gv-fakeLevel variable"
-}
+# variable "davinci_variable_gv-fakeLevel" {
+#   description = "Value for davinci_variable_gv-fakeLevel variable"
+# }
 
-variable "davinci_variable_gv-riskScreenDisplay" {
-  description = "Value for davinci_variable_gv-riskScreenDisplay variable"
-}
+# variable "davinci_variable_gv-riskScreenDisplay" {
+#   description = "Value for davinci_variable_gv-riskScreenDisplay variable"
+# }
 
-variable "davinci_variable_gv-runVerifyUserRegistration" {
-  description = "Value for davinci_variable_gv-runVerifyUserRegistration variable"
-}
+# variable "davinci_variable_gv-runVerifyUserRegistration" {
+#   description = "Value for davinci_variable_gv-runVerifyUserRegistration variable"
+# }
 
-variable "davinci_variable_gv-mfaOnHighRisk" {
-  description = "Value for davinci_variable_gv-mfaOnHighRisk variable"
-}
+# variable "davinci_variable_gv-mfaOnHighRisk" {
+#   description = "Value for davinci_variable_gv-mfaOnHighRisk variable"
+# }
 
-variable "davinci_variable_gv-autoEnrollEmail" {
-  description = "Value for davinci_variable_gv-autoEnrollEmail variable"
-}
+# variable "davinci_variable_gv-autoEnrollEmail" {
+#   description = "Value for davinci_variable_gv-autoEnrollEmail variable"
+# }
 
-variable "davinci_variable_gv-registerAnotherDevice" {
-  description = "Value for davinci_variable_gv-registerAnotherDevice variable"
-}
+# variable "davinci_variable_gv-registerAnotherDevice" {
+#   description = "Value for davinci_variable_gv-registerAnotherDevice variable"
+# }
 
-variable "davinci_variable_gv-verifyUserRegistration" {
-  description = "Value for davinci_variable_gv-verifyUserRegistration variable"
-}
+# variable "davinci_variable_gv-verifyUserRegistration" {
+#   description = "Value for davinci_variable_gv-verifyUserRegistration variable"
+# }
 
-variable "davinci_variable_gv-isDeviceManagement" {
-  description = "Value for davinci_variable_gv-isDeviceManagement variable"
-}
+# variable "davinci_variable_gv-isDeviceManagement" {
+#   description = "Value for davinci_variable_gv-isDeviceManagement variable"
+# }
 
-variable "davinci_variable_gv-allowPasswordless" {
-  description = "Value for davinci_variable_gv-allowPasswordless variable"
-}
+# variable "davinci_variable_gv-allowPasswordless" {
+#   description = "Value for davinci_variable_gv-allowPasswordless variable"
+# }
 
-variable "davinci_variable_gv-azureLogin" {
-  description = "Value for davinci_variable_gv-azureLogin variable"
-}
+# variable "davinci_variable_gv-azureLogin" {
+#   description = "Value for davinci_variable_gv-azureLogin variable"
+# }
 
-variable "davinci_variable_gv-companyLogo" {
-  description = "Value for davinci_variable_gv-companyLogo variable"
-}
+# variable "davinci_variable_gv-companyLogo" {
+#   description = "Value for davinci_variable_gv-companyLogo variable"
+# }
 
-variable "davinci_variable_gv-companyName" {
-  description = "Value for davinci_variable_gv-companyName variable"
-}
+# variable "davinci_variable_gv-companyName" {
+#   description = "Value for davinci_variable_gv-companyName variable"
+# }
 
-variable "davinci_variable_gv-consent" {
-  description = "Value for davinci_variable_gv-consent variable"
-}
+# variable "davinci_variable_gv-consent" {
+#   description = "Value for davinci_variable_gv-consent variable"
+# }
 
-variable "davinci_variable_gv-deviceManagement" {
-  description = "Value for davinci_variable_gv-deviceManagement variable"
-}
+# variable "davinci_variable_gv-deviceManagement" {
+#   description = "Value for davinci_variable_gv-deviceManagement variable"
+# }
 
 variable "davinci_variable_gv-facebookLogin" {
   description = "Value for davinci_variable_gv-facebookLogin variable"
 }
 
-variable "davinci_variable_gv-forcePasswordless" {
-  description = "Value for davinci_variable_gv-forcePasswordless variable"
-}
+# variable "davinci_variable_gv-forcePasswordless" {
+#   description = "Value for davinci_variable_gv-forcePasswordless variable"
+# }
 
-variable "davinci_variable_gv-forgotPasswordDisplay" {
-  description = "Value for davinci_variable_gv-forgotPasswordDisplay variable"
-}
+# variable "davinci_variable_gv-forgotPasswordDisplay" {
+#   description = "Value for davinci_variable_gv-forgotPasswordDisplay variable"
+# }
 
-variable "davinci_variable_gv-forgotUsernameDisplay" {
-  description = "Value for davinci_variable_gv-forgotUsernameDisplay variable"
-}
+# variable "davinci_variable_gv-forgotUsernameDisplay" {
+#   description = "Value for davinci_variable_gv-forgotUsernameDisplay variable"
+# }
 
-variable "davinci_variable_gv-githubLogin" {
-  description = "Value for davinci_variable_gv-githubLogin variable"
-}
+# variable "davinci_variable_gv-githubLogin" {
+#   description = "Value for davinci_variable_gv-githubLogin variable"
+# }
 
 variable "davinci_variable_gv-googleLogin" {
   description = "Value for davinci_variable_gv-googleLogin variable"
 }
 
-variable "davinci_variable_gv-inlineMFAOn" {
-  description = "Value for davinci_variable_gv-inlineMFAOn variable"
-}
+# variable "davinci_variable_gv-inlineMFAOn" {
+#   description = "Value for davinci_variable_gv-inlineMFAOn variable"
+# }
 
-variable "davinci_variable_gv-mfa-on" {
-  description = "Value for davinci_variable_gv-mfa-on variable"
-}
+# variable "davinci_variable_gv-mfa-on" {
+#   description = "Value for davinci_variable_gv-mfa-on variable"
+# }
 
-/*variable "davinci_variable_gv-p1AgreementId" {
-  description = "Value for davinci_variable_gv-p1AgreementId variable"
-}
+# /*variable "davinci_variable_gv-p1AgreementId" {
+#   description = "Value for davinci_variable_gv-p1AgreementId variable"
+# }
 
-variable "davinci_variable_gv-p1PasswordPolicy" {
-  description = "Value for davinci_variable_gv-p1PasswordPolicy variable"
-}
+# variable "davinci_variable_gv-p1PasswordPolicy" {
+#   description = "Value for davinci_variable_gv-p1PasswordPolicy variable"
+# }
 
-variable "davinci_variable_gv-p1PopulationId" {
-  description = "Value for davinci_variable_gv-p1PopulationId variable"
-}*/
+# variable "davinci_variable_mf-str-p1PopulationId" {
+#   description = "Value for davinci_variable_mf-str-p1PopulationId variable"
+# }*/
 
-variable "davinci_variable_gv-passwordlessAllowedTypes" {
-  description = "Value for davinci_variable_gv-passwordlessAllowedTypes variable"
-}
+# variable "davinci_variable_gv-passwordlessAllowedTypes" {
+#   description = "Value for davinci_variable_gv-passwordlessAllowedTypes variable"
+# }
 
-variable "davinci_variable_gv-progressiveProfiling" {
-  description = "Value for davinci_variable_gv-progressiveProfiling variable"
-}
+# variable "davinci_variable_gv-progressiveProfiling" {
+#   description = "Value for davinci_variable_gv-progressiveProfiling variable"
+# }
 
-variable "davinci_variable_gv-riskLevel" {
-  description = "Value for davinci_variable_gv-riskLevel variable"
-}
+# variable "davinci_variable_gv-riskLevel" {
+#   description = "Value for davinci_variable_gv-riskLevel variable"
+# }
 
-variable "davinci_variable_gv-runMFAforForgot" {
-  description = "Value for davinci_variable_gv-runMFAforForgot variable"
-}
+# variable "davinci_variable_gv-runMFAforForgot" {
+#   description = "Value for davinci_variable_gv-runMFAforForgot variable"
+# }
 
-variable "davinci_variable_gv-runMFAforLogin" {
-  description = "Value for davinci_variable_gv-runMFAforLogin variable"
-}
+# variable "davinci_variable_gv-runMFAforLogin" {
+#   description = "Value for davinci_variable_gv-runMFAforLogin variable"
+# }
 
-variable "davinci_variable_gv-runMFAforSocial" {
-  description = "Value for davinci_variable_gv-runMFAforSocial variable"
-}
+# variable "davinci_variable_gv-runMFAforSocial" {
+#   description = "Value for davinci_variable_gv-runMFAforSocial variable"
+# }
 
-variable "davinci_variable_gv-runPasswordExpire" {
-  description = "Value for davinci_variable_gv-runPasswordExpire variable"
-}
+# variable "davinci_variable_gv-runPasswordExpire" {
+#   description = "Value for davinci_variable_gv-runPasswordExpire variable"
+# }
 
-variable "davinci_variable_gv-runProtect" {
-  description = "Value for davinci_variable_gv-runProtect variable"
-}
+# variable "davinci_variable_gv-runProtect" {
+#   description = "Value for davinci_variable_gv-runProtect variable"
+# }
 
-variable "davinci_variable_gv-runVerifyforHighRisk" {
-  description = "Value for davinci_variable_gv-runVerifyforHighRisk variable"
-}
+# variable "davinci_variable_gv-runVerifyforHighRisk" {
+#   description = "Value for davinci_variable_gv-runVerifyforHighRisk variable"
+# }
 
-variable "davinci_variable_gv-standardForgotPassword" {
-  description = "Value for davinci_variable_gv-standardForgotPassword variable"
-}
+# variable "davinci_variable_gv-standardForgotPassword" {
+#   description = "Value for davinci_variable_gv-standardForgotPassword variable"
+# }
 
-variable "davinci_variable_gv-webAuthnSupport" {
-  description = "Value for davinci_variable_gv-webAuthnSupport variable"
-}
+# variable "davinci_variable_gv-webAuthnSupport" {
+#   description = "Value for davinci_variable_gv-webAuthnSupport variable"
+# }
 
-variable "davinci_variable_origin_2" {
-  description = "Value for davinci_variable_origin_2 variable"
-}
+# variable "davinci_variable_origin_2" {
+#   description = "Value for davinci_variable_origin_2 variable"
+# }
 
 variable "davinci_variable_origin" {
   description = "Value for davinci_variable_origin variable"
@@ -414,6 +427,14 @@ variable "davinci_variable_relyingParty" {
   description = "Value for davinci_variable_relyingParty variable"
 }
 
+variable "davinci_variable_disableButton" {
+  description = "Value for davinci_variable_disableButton variable"
+}
+
+# variable "davinci_variable_mf-configObject" {
+#   description = "Value for davinci_variable_mf-configObject variable"
+# }
+
 variable "davinci_variable_rpid" {
   description = "Value for davinci_variable_rpid variable"
 }
@@ -422,38 +443,42 @@ variable "davinci_variable_showRegButton" {
   description = "Value for davinci_variable_showRegButton variable"
 }
 
+variable "davinci_variable_cancelReturn" {
+  description = "Value for davinci_variable_cancelReturn variable"
+}
+
 variable "davinci_variable_stopSign" {
   description = "Value for davinci_variable_stopSign variable"
 }
 
-variable "davinci_variable_gv-captchaThreshold" {
-  description = "Value for davinci_variable_gv-captchaThreshold variable"
-}
-variable "davinci_variable_gv-reCaptcha" {
-  description = "Value for davinci_variable_gv-reCaptcha variable"
-}
-variable "davinci_variable_gv-captchaV3SiteKey" {
-  description = "Value for davinci_variable_gv-captchaV3SiteKey variable"
-}
-variable "davinci_variable_gv-autoEnrollEmailMFA" {
-  description = "Value for davinci_variable_gv-autoEnrollEmailMFA variable"
-}
-variable "davinci_variable_gv-agreement" {
-  description = "Value for davinci_variable_gv-agreement variable"
-}
-variable "davinci_variable_gv-magicLinkUserRegistration" {
-  description = "Value for davinci_variable_gv-magicLinkUserRegistration variable"
-}
-variable "davinci_variable_gv-progressiveProfilingRegistration" {
-  description = "Value for davinci_variable_gv-progressiveProfilingRegistration variable"
-}
-variable "davinci_variable_gv-progressiveProfilingAuthentication" {
-  description = "Value for davinci_variable_gv-progressiveProfilingAuthentication variable"
-}
-variable "davinci_variable_gv-pingOneAuthorize" {
-  description = "Value for davinci_variable_gv-pingOneAuthorize variable"
-}
+# variable "davinci_variable_gv-captchaThreshold" {
+#   description = "Value for davinci_variable_gv-captchaThreshold variable"
+# }
+# variable "davinci_variable_gv-reCaptcha" {
+#   description = "Value for davinci_variable_gv-reCaptcha variable"
+# }
+# variable "davinci_variable_gv-captchaV3SiteKey" {
+#   description = "Value for davinci_variable_gv-captchaV3SiteKey variable"
+# }
+# variable "davinci_variable_gv-autoEnrollEmailMFA" {
+#   description = "Value for davinci_variable_gv-autoEnrollEmailMFA variable"
+# }
+# variable "davinci_variable_gv-agreement" {
+#   description = "Value for davinci_variable_gv-agreement variable"
+# }
+# variable "davinci_variable_gv-magicLinkUserRegistration" {
+#   description = "Value for davinci_variable_gv-magicLinkUserRegistration variable"
+# }
+# variable "davinci_variable_gv-progressiveProfilingRegistration" {
+#   description = "Value for davinci_variable_gv-progressiveProfilingRegistration variable"
+# }
+# variable "davinci_variable_gv-progressiveProfilingAuthentication" {
+#   description = "Value for davinci_variable_gv-progressiveProfilingAuthentication variable"
+# }
+# variable "davinci_variable_gv-pingOneAuthorize" {
+#   description = "Value for davinci_variable_gv-pingOneAuthorize variable"
+# }
 
-variable "davinci_variable_gv-FIDO2-deviceNickName" {
-  description = "Value for davinci_variable_gv-FIDO2-deviceNickName variable"
-}
+# variable "davinci_variable_gv-FIDO2-deviceNickName" {
+#   description = "Value for davinci_variable_gv-FIDO2-deviceNickName variable"
+# }
