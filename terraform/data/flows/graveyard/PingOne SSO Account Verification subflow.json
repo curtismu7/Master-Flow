@@ -10,8 +10,8 @@
     "functionsConnector",
     "variablesConnector"
   ],
-  "createdDate": 1724439829254,
-  "currentVersion": 73,
+  "createdDate": 1725379009967,
+  "currentVersion": 78,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Tue Apr 30 2024 20:46:33 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -48,20 +48,21 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Account Verification subflow",
-  "publishedVersion": 72,
+  "publishedVersion": 78,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
-    "logLevel": 1,
+    "logLevel": 3,
     "flowTimeoutInSeconds": 3600,
     "defaultErrorScreenBrandLogo": false,
     "customErrorScreenBrandLogoUrl": "{{global.variables.mf-configObject.config.mf-str-companyLogo}}",
     "customLogoURLSelection": 3
   },
   "timeouts": "null",
+  "updatedDate": 1725379011706,
   "flowId": "a1e8104de5adce520631bae3ce4cbd79",
-  "versionId": 73,
+  "versionId": 78,
   "graphData": {
     "elements": {
       "nodes": [
@@ -864,9 +865,6 @@
               "backgroundColor": {
                 "value": "#9dc967ff"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
               "customCSS": {
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
@@ -910,7 +908,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Your account has been successfully verified.\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Please click the 'Continue' button to Sign On\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Flow will continue automatically\"\n      }\n    ]\n  }\n]"
               },
               "title": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Account Verified\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -966,9 +964,6 @@
               "backgroundColor": {
                 "value": "#9dc967ff"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
               "customCSS": {
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
@@ -1014,7 +1009,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Your account has been successfully created\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Please click the 'Continue' button to Sign On\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Flow will continue automatically\"\n      }\n    ]\n  }\n]"
               },
               "title": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Account Created\"\n      }\n    ]\n  }\n]"
@@ -2028,7 +2023,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1724439829047,
+  "savedDate": 1725379009827,
   "variables": [
     {
       "context": "flowInstance",

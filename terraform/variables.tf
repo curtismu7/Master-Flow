@@ -259,9 +259,9 @@ variable "davinci_connection_PingOne_region" {
   description = "Value for davinci_connection_PingOne_region variable"
 }
 
-# variable "davinci_variable_availableQuestions_2" {
-#   description = "Value for davinci_variable_availableQuestions_2 variable"
-# }
+variable "davinci_variable_mf-configObject" {
+  description = "Config object that contains all variables for DV"
+}
 
 # variable "davinci_variable_gv-QA-On" {
 #   description = "Value for davinci_variable_gv-QA-On variable"

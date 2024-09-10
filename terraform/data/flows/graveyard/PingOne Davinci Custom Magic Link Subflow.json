@@ -12,8 +12,8 @@
     "variablesConnector",
     "errorConnector"
   ],
-  "createdDate": 1723990267599,
-  "currentVersion": 53,
+  "createdDate": 1725189974565,
+  "currentVersion": 55,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Tue Apr 30 2024 20:47:01 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -67,7 +67,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Davinci Custom Magic Link Subflow",
-  "publishedVersion": 53,
+  "publishedVersion": 55,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -89,9 +89,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1723990269005,
+  "updatedDate": 1725189975865,
   "flowId": "caab30786105b2f2c4f62678b15cae46",
-  "versionId": 53,
+  "versionId": 55,
   "graphData": {
     "elements": {
       "nodes": [
@@ -359,7 +359,7 @@
                 ]
               },
               "templateVariant": {
-                "value": "MagicLink"
+                "value": "Master Flow Magic Link"
               },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -2664,7 +2664,7 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1723990267470,
+  "savedDate": 1725189974407,
   "variables": [
     {
       "context": "flowInstance",

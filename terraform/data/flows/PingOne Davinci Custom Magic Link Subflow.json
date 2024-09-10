@@ -12,8 +12,8 @@
     "variablesConnector",
     "errorConnector"
   ],
-  "createdDate": 1725189974565,
-  "currentVersion": 55,
+  "createdDate": 1725543396996,
+  "currentVersion": 56,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Tue Apr 30 2024 20:47:01 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -67,11 +67,11 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Davinci Custom Magic Link Subflow",
-  "publishedVersion": 55,
+  "publishedVersion": 56,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" alt=\"\ncompanyName {{global.variables.companyName}}\n✕\" />\n                    <h1 class=\"text-center mb-4\">\ntitle {{title}}\n✕</h1>\n                    <p class=\"text-center\">\nsubtitle {{subtitle}}\n✕</p>\n                    <p class=\"text-muted text-center\" id=\"timerMsg\"></p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>",
+    "intermediateLoadingScreenCSS": "        /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
+    "intermediateLoadingScreenHTML": "    <div class=\"message\">\n        Please wait...\n    </div>",
     "css": "body, .page {\n  background-color: #ededed !important;\n}\n\n.buttonLink {\n  background: none !important;\n  border: none;\n  cursor: pointer;\n  color: #2996cc;\n  font-size: 15px;\n}\n.companyLogo {\n    width: 100px;\n    height: 100px;\n}\n",
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
@@ -89,9 +89,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1725189975865,
+  "updatedDate": 1725543402302,
   "flowId": "caab30786105b2f2c4f62678b15cae46",
-  "versionId": 55,
+  "versionId": 56,
   "graphData": {
     "elements": {
       "nodes": [
@@ -2664,7 +2664,7 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1725189974407,
+  "savedDate": 1725543396830,
   "variables": [
     {
       "context": "flowInstance",

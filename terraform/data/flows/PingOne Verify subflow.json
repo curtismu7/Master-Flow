@@ -10,8 +10,8 @@
     "devicePolicyConnector",
     "variablesConnector"
   ],
-  "createdDate": 1725401515242,
-  "currentVersion": 221,
+  "createdDate": 1725546771172,
+  "currentVersion": 222,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Wed May 01 2024 18:26:09 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -76,11 +76,11 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Verify subflow",
-  "publishedVersion": 221,
+  "publishedVersion": 222,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
+    "intermediateLoadingScreenCSS": "        /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
+    "intermediateLoadingScreenHTML": "    <div class=\"message\">\n        Please wait...\n    </div>",
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
       "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.7/icons.css"
@@ -90,12 +90,13 @@
     "displayNodeIDs": true,
     "logLevel": 3,
     "useCustomCSS": true,
-    "flowTimeoutInSeconds": 3600
+    "flowTimeoutInSeconds": 3600,
+    "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1725401549682,
+  "updatedDate": 1725546772599,
   "flowId": "fa53f76dbec74a4c40040cf5cd6d5cea",
-  "versionId": 221,
+  "versionId": 222,
   "graphData": {
     "elements": {
       "nodes": [
@@ -6809,7 +6810,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1725401514223,
+  "savedDate": 1725546768951,
   "variables": [
     {
       "context": "flowInstance",

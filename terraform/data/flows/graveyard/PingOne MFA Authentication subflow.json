@@ -11,8 +11,8 @@
     "errorConnector",
     "variablesConnector"
   ],
-  "createdDate": 1724440035514,
-  "currentVersion": 124,
+  "createdDate": 1725559931686,
+  "currentVersion": 172,
   "customerId": "c8701d025a002f27116f02d2f4d957a8",
   "description": "Imported on Wed Jul 24 2024 12:43:12 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -63,48 +63,48 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Authentication subflow",
-  "publishedVersion": 124,
+  "publishedVersion": 172,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": " .spinner-border.thicker-spinner {\n     border-width: 0.45em;\n     width: 65px;\n     height: 65px;\n }\n\n .spinner-border {\n     animation-duration: 1.25s;\n }\n\n .spinner-color {\n    --bs-text-opacity: .1;\n    color: rgba(39, 123, 165, 1)\n}",
-    "intermediateLoadingScreenHTML": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column\">\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n          <div class=\"d-flex justify-content-center align-items-center mt-4 mb-5\">\n            <div class=\"spinner-border thicker-spinner spinner-color\" role=\"status\">\n              <span class=\"sr-only\"></span>\n            </div>\n          </div>\n          {{#if title}}\n          <h1 class=\"text-center mt-3 mb-4\">{{title}}</h1>\n          {{/if}}\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<!-- Challenge polling component -->\n<div class=\"d-none\">\n  <div class=\"align-self-center\">\n    <div data-skcomponent=\"skpolling\" data-skpollInterval=\"2000\" data-skpollRetries=\"60\"\n      data-skpollChallengeStatus=\"true\"></div>\n  </div>\n</div>",
-    "css": ".companyLogo {\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}\n\n  .stopSign {\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/Stop_sign.png?v=1703159103390\");\n    width: 165px;\n    height: 165px;\n}\n\n\n \n  \n  \n\n  ",
+    "intermediateLoadingScreenCSS": "  /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
+    "intermediateLoadingScreenHTML": "        <div class=\"message\">\n         Getting your Devices, Please wait...\n    </div>",
+    "css": "/* .companyLogo {\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n} */\n\n  /* .stopSign {\n    content: url(\"https://cdn.glitch.global/2e56b165-f280-41c5-82c6-430c70bc9f97/Stop_sign.png?v=1703159103390\");\n    width: 165px;\n    height: 165px;\n} */\n\n\n \n  \n  \n\n  ",
     "cssLinks": [
-      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css"
+      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css",
+      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.9/end-user-nano.css"
     ],
     "flowTimeoutInSeconds": 7600,
     "jsLinks": [
       {
-        "crossorigin": "",
+        "label": "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+        "value": "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
         "defer": "false",
+        "crossorigin": "",
         "integrity": "",
-        "label": "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
         "referrerpolicy": "",
-        "type": "",
-        "value": "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+        "type": ""
       },
       {
-        "crossorigin": "anonymous",
+        "label": "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+        "value": "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
         "defer": "false",
-        "integrity": "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM",
-        "label": "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+        "crossorigin": "",
+        "integrity": "",
         "referrerpolicy": "",
-        "type": "",
-        "value": "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        "type": ""
       }
     ],
     "logLevel": 3,
     "useBetaAlgorithm": true,
     "useCustomCSS": true,
-    "useCustomScript": true,
+    "useCustomScript": false,
     "flowHttpTimeoutInSeconds": 60,
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1724440039574,
+  "updatedDate": 1725559938599,
   "flowId": "bed472b5706a7d61a781d81e483986a7",
-  "versionId": 124,
+  "versionId": 172,
   "graphData": {
     "elements": {
       "nodes": [
@@ -160,7 +160,7 @@
             "type": "action"
           },
           "position": {
-            "x": 630,
+            "x": 577,
             "y": 900
           },
           "group": "nodes",
@@ -211,7 +211,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 930,
+            "x": 1117,
             "y": 900
           },
           "group": "nodes",
@@ -250,7 +250,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2040,
+            "x": 2414,
             "y": 900
           },
           "group": "nodes",
@@ -273,7 +273,7 @@
             }
           },
           "position": {
-            "x": 1050,
+            "x": 1237,
             "y": 900
           },
           "group": "nodes",
@@ -315,7 +315,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1438,
+            "x": 1542,
             "y": 1264
           },
           "group": "nodes",
@@ -365,7 +365,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"userId\",\n        \"data\": \"{{global.parameters.userId}}\",\n        \"tooltip\": \"{{global.parameters.userId}}\",\n        \"children\": [\n          {\n            \"text\": \"userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "mf-configObject": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.variables.mf-configObject}}\",\n        \"tooltip\": \"{{global.variables.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "mfaNewDevice": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
@@ -387,7 +387,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2460,
+            "x": 2564,
             "y": 1230
           },
           "group": "nodes",
@@ -422,7 +422,7 @@
             }
           },
           "position": {
-            "x": 1558,
+            "x": 1662,
             "y": 1264
           },
           "group": "nodes",
@@ -467,7 +467,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2760,
+            "x": 2864,
             "y": 1230
           },
           "group": "nodes",
@@ -490,7 +490,7 @@
             }
           },
           "position": {
-            "x": 2580,
+            "x": 2684,
             "y": 1230
           },
           "group": "nodes",
@@ -550,7 +550,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2700,
+            "x": 2804,
             "y": 840
           },
           "group": "nodes",
@@ -573,7 +573,7 @@
             }
           },
           "position": {
-            "x": 2490,
+            "x": 2594,
             "y": 900
           },
           "group": "nodes",
@@ -666,7 +666,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2670,
+            "x": 2774,
             "y": 990
           },
           "group": "nodes",
@@ -722,7 +722,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 4206.482087624119,
+            "x": 4310.482087624119,
             "y": 860.9365857031611
           },
           "group": "nodes",
@@ -740,7 +740,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 993.1670315140509
           },
           "group": "nodes",
@@ -758,7 +758,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 887.3826748653391
           },
           "group": "nodes",
@@ -776,7 +776,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 1098.951388162763
           },
           "group": "nodes",
@@ -809,7 +809,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 887.3826748653391
           },
           "group": "nodes",
@@ -851,7 +851,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4560,
+            "x": 4664,
             "y": 960
           },
           "group": "nodes",
@@ -870,7 +870,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 834.4904965409831
           },
           "group": "nodes",
@@ -906,7 +906,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 808.0444073788052
           },
           "group": "nodes",
@@ -956,7 +956,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1003.8452788468436,
+            "x": 1107.8452788468435,
             "y": 1747.515611379374
           },
           "group": "nodes",
@@ -1043,7 +1043,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2457.1084966194826,
+            "x": 2561.1084966194826,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -1079,7 +1079,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1078,
+            "x": 1182,
             "y": 1924
           },
           "group": "nodes",
@@ -1124,7 +1124,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3823.482025967942,
+            "x": 3927.482025967942,
             "y": 2421.895642593671
           },
           "group": "nodes",
@@ -1147,7 +1147,7 @@
             }
           },
           "position": {
-            "x": 2634.2309911646535,
+            "x": 2738.2309911646535,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -1202,7 +1202,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2404.985206781125,
+            "x": 2508.985206781125,
             "y": 1926.8560630601446
           },
           "group": "nodes",
@@ -1258,7 +1258,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1948,
+            "x": 2052,
             "y": 1804
           },
           "group": "nodes",
@@ -1314,7 +1314,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2290.431702839866,
+            "x": 2394.431702839866,
             "y": 1840.9409351042004
           },
           "group": "nodes",
@@ -1370,7 +1370,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2381.198856100124,
+            "x": 2485.198856100124,
             "y": 2320.682788567859
           },
           "group": "nodes",
@@ -1426,7 +1426,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2836.656699216277,
+            "x": 2940.656699216277,
             "y": 2270.076361554953
           },
           "group": "nodes",
@@ -1459,7 +1459,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2836.656699216277,
+            "x": 2940.656699216277,
             "y": 2497.80528311303
           },
           "group": "nodes",
@@ -1492,7 +1492,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1774.9409351042004,
+            "x": 1878.9409351042004,
             "y": 1812.3025591188855
           },
           "group": "nodes",
@@ -1510,7 +1510,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1198,
+            "x": 1302,
             "y": 1924
           },
           "group": "nodes",
@@ -1528,7 +1528,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1320,
+            "x": 1574,
             "y": 900
           },
           "group": "nodes",
@@ -1604,7 +1604,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2489.4606066866786,
+            "x": 2593.4606066866786,
             "y": 3185.438840814137
           },
           "group": "nodes",
@@ -1635,7 +1635,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 450,
+            "x": 554,
             "y": 3240
           },
           "group": "nodes",
@@ -1680,7 +1680,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1472.2616491157778,
+            "x": 1576.2616491157778,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -1719,7 +1719,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2971.2916918518426,
+            "x": 3075.2916918518426,
             "y": 3024.8284790924163
           },
           "group": "nodes",
@@ -1742,7 +1742,7 @@
             }
           },
           "position": {
-            "x": 1606.103617217212,
+            "x": 1710.103617217212,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -1792,7 +1792,7 @@
             "type": "action"
           },
           "position": {
-            "x": 615.673053266598,
+            "x": 719.673053266598,
             "y": 2890.986510990982
           },
           "group": "nodes",
@@ -1811,7 +1811,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1659.640404457786,
+            "x": 1763.640404457786,
             "y": 3078.36526633299
           },
           "group": "nodes",
@@ -1844,7 +1844,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1472.2616491157778,
+            "x": 1576.2616491157778,
             "y": 3078.36526633299
           },
           "group": "nodes",
@@ -1900,7 +1900,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1258.1145001534828,
+            "x": 1362.1145001534828,
             "y": 2998.0600854721292
           },
           "group": "nodes",
@@ -1956,7 +1956,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1713.1771916983596,
+            "x": 1817.1771916983596,
             "y": 3105.133659953277
           },
           "group": "nodes",
@@ -2009,7 +2009,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2221.77667048381,
+            "x": 2325.77667048381,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -2028,7 +2028,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2435.923819446105,
+            "x": 2539.923819446105,
             "y": 3533.4279578778664
           },
           "group": "nodes",
@@ -2058,7 +2058,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2650.0709684084,
+            "x": 2754.0709684084,
             "y": 3694.038319599588
           },
           "group": "nodes",
@@ -2227,7 +2227,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1820.250766179507,
+            "x": 1924.250766179507,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -2250,7 +2250,7 @@
             }
           },
           "position": {
-            "x": 2034.397915141802,
+            "x": 2138.397915141802,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -2280,7 +2280,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3265.744021674998,
+            "x": 3369.744021674998,
             "y": 3560.1963514981535
           },
           "group": "nodes",
@@ -2312,7 +2312,7 @@
             }
           },
           "position": {
-            "x": 2783.9129365098343,
+            "x": 2887.9129365098343,
             "y": 3560.1963514981535
           },
           "group": "nodes",
@@ -2384,7 +2384,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2650.0709684084,
+            "x": 2754.0709684084,
             "y": 3560.1963514981535
           },
           "group": "nodes",
@@ -2440,7 +2440,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2864.218117370695,
+            "x": 2968.218117370695,
             "y": 3479.891170637293
           },
           "group": "nodes",
@@ -2458,7 +2458,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2435.923819446105,
+            "x": 2539.923819446105,
             "y": 3453.1227770170062
           },
           "group": "nodes",
@@ -2510,7 +2510,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3165.598474800165,
+            "x": 3269.598474800165,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -2529,7 +2529,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3317.417755838883,
+            "x": 3421.417755838883,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -2562,7 +2562,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3494.5402503840533,
+            "x": 3598.5402503840533,
             "y": 2371.289215580765
           },
           "group": "nodes",
@@ -2604,7 +2604,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3494.5402503840533,
+            "x": 3598.5402503840533,
             "y": 2472.5020696065767
           },
           "group": "nodes",
@@ -2622,7 +2622,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3317.417755838883,
+            "x": 3421.417755838883,
             "y": 2472.5020696065767
           },
           "group": "nodes",
@@ -2645,7 +2645,7 @@
             }
           },
           "position": {
-            "x": 3646.359531422771,
+            "x": 3750.359531422771,
             "y": 2472.5020696065767
           },
           "group": "nodes",
@@ -2678,7 +2678,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3823.482025967942,
+            "x": 3927.482025967942,
             "y": 2523.1084966194826
           },
           "group": "nodes",
@@ -2791,7 +2791,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1225.2510348032883,
+            "x": 1329.2510348032883,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -2830,7 +2830,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1908.437799477518,
+            "x": 2012.437799477518,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -2856,7 +2856,7 @@
             }
           },
           "position": {
-            "x": 2034.9538670097827,
+            "x": 2138.9538670097827,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -2905,7 +2905,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1528.8895968807237,
+            "x": 1632.8895968807237,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -2928,7 +2928,7 @@
             }
           },
           "position": {
-            "x": 1326.4638888291001,
+            "x": 1430.4638888291001,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -2961,7 +2961,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1933.741012983971,
+            "x": 2037.741012983971,
             "y": 4357.636655577642
           },
           "group": "nodes",
@@ -2992,7 +2992,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 592.6706971419648,
+            "x": 696.6706971419648,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -3031,7 +3031,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2186.7731480485004,
+            "x": 2290.7731480485004,
             "y": 4129.907734019565
           },
           "group": "nodes",
@@ -3067,7 +3067,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2186.7731480485004,
+            "x": 2290.7731480485004,
             "y": 4231.120588045377
           },
           "group": "nodes",
@@ -3117,7 +3117,7 @@
             "type": "action"
           },
           "position": {
-            "x": 415.54820259679417,
+            "x": 519.5482025967942,
             "y": 3927.482025967942
           },
           "group": "nodes",
@@ -3173,7 +3173,7 @@
             "type": "action"
           },
           "position": {
-            "x": 396,
+            "x": 500,
             "y": 4062
           },
           "group": "nodes",
@@ -3229,7 +3229,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1098.7349672710236,
+            "x": 1202.7349672710236,
             "y": 4079.3013070066595
           },
           "group": "nodes",
@@ -3247,7 +3247,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1708,
+            "x": 1812,
             "y": 4324
           },
           "group": "nodes",
@@ -3266,7 +3266,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1708,
+            "x": 1812,
             "y": 4444
           },
           "group": "nodes",
@@ -3299,7 +3299,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2931.893840147411,
+            "x": 3035.893840147411,
             "y": 6182.809664825217
           },
           "group": "nodes",
@@ -3332,7 +3332,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2604.034858195284,
+            "x": 2708.034858195284,
             "y": 6182.809664825217
           },
           "group": "nodes",
@@ -3350,7 +3350,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2744.5458504604812,
+            "x": 2848.5458504604812,
             "y": 6182.809664825217
           },
           "group": "nodes",
@@ -3400,7 +3400,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2463.5238659300867,
+            "x": 2567.5238659300867,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -3418,7 +3418,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2757.1445428895477,
+            "x": 2861.1445428895477,
             "y": 3399.585989776432
           },
           "group": "nodes",
@@ -3537,8 +3537,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 808,
-            "y": 484
+            "x": 907,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -3566,8 +3566,8 @@
             }
           },
           "position": {
-            "x": 1258,
-            "y": 484
+            "x": 1357,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -3622,8 +3622,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1378,
-            "y": 574
+            "x": 1477,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -3709,8 +3709,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1476,
-            "y": 672
+            "x": 1597,
+            "y": 660
           },
           "group": "nodes",
           "removed": false,
@@ -3739,8 +3739,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1475.4336065635985,
-            "y": 483.6936633055842
+            "x": 1597,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -3770,7 +3770,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 360,
+            "x": 284,
             "y": 900
           },
           "group": "nodes",
@@ -3811,7 +3811,7 @@
             "type": "action"
           },
           "position": {
-            "x": 478,
+            "x": 582,
             "y": 214
           },
           "group": "nodes",
@@ -3861,7 +3861,7 @@
             "type": "action"
           },
           "position": {
-            "x": 250,
+            "x": 354,
             "y": 762
           },
           "group": "nodes",
@@ -3917,7 +3917,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 4180.035998461941,
+            "x": 4284.035998461941,
             "y": 1231.1818339736526
           },
           "group": "nodes",
@@ -3935,7 +3935,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 1363.4122797845425
           },
           "group": "nodes",
@@ -3953,7 +3953,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 1310.5201014601867
           },
           "group": "nodes",
@@ -3971,7 +3971,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3928,
+            "x": 4032,
             "y": 1564
           },
           "group": "nodes",
@@ -4016,7 +4016,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 1125.3974773249408
           },
           "group": "nodes",
@@ -4049,7 +4049,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 1336.9661906223646
           },
           "group": "nodes",
@@ -4091,7 +4091,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 1416.3044581088984
           },
           "group": "nodes",
@@ -4110,7 +4110,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 1257.6279231358308
           },
           "group": "nodes",
@@ -4146,7 +4146,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 1257.6279231358308
           },
           "group": "nodes",
@@ -4179,7 +4179,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2944.5232982315556,
+            "x": 3048.5232982315556,
             "y": 3399.585989776432
           },
           "group": "nodes",
@@ -4220,7 +4220,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2623.302574788113,
+            "x": 2727.302574788113,
             "y": 3399.585989776432
           },
           "group": "nodes",
@@ -4238,7 +4238,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2435.923819446105,
+            "x": 2539.923819446105,
             "y": 3346.0492025358585
           },
           "group": "nodes",
@@ -4288,7 +4288,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1124.2725320520485,
+            "x": 1228.2725320520485,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -4306,7 +4306,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1311.6512873940565,
+            "x": 1415.6512873940565,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -4339,7 +4339,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1472.2616491157778,
+            "x": 1576.2616491157778,
             "y": 3346.0492025358585
           },
           "group": "nodes",
@@ -4357,7 +4357,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1632.872010837499,
+            "x": 1736.872010837499,
             "y": 3346.0492025358585
           },
           "group": "nodes",
@@ -4423,7 +4423,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3756.898571867094,
+            "x": 3860.898571867094,
             "y": 860.9365857031611
           },
           "group": "nodes",
@@ -4489,7 +4489,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3756.898571867094,
+            "x": 3860.898571867094,
             "y": 940.274853189695
           },
           "group": "nodes",
@@ -4512,7 +4512,7 @@
             }
           },
           "position": {
-            "x": 2818,
+            "x": 2922,
             "y": 844
           },
           "group": "nodes",
@@ -4530,7 +4530,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3915.5751068401614,
+            "x": 4019.5751068401614,
             "y": 860.9365857031611
           },
           "group": "nodes",
@@ -4553,7 +4553,7 @@
             }
           },
           "position": {
-            "x": 2818,
+            "x": 2922,
             "y": 964
           },
           "group": "nodes",
@@ -4571,7 +4571,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4021.359463488873,
+            "x": 4125.359463488873,
             "y": 940.274853189695
           },
           "group": "nodes",
@@ -4621,7 +4621,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2836.656699216277,
+            "x": 2940.656699216277,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -4639,7 +4639,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2963.1727667485416,
+            "x": 3067.1727667485416,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -4689,7 +4689,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 871.0060457129472,
+            "x": 975.0060457129472,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -4707,7 +4707,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 693.8835511677765,
+            "x": 797.8835511677765,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -4730,7 +4730,7 @@
             }
           },
           "position": {
-            "x": 1022.8253267516649,
+            "x": 1126.8253267516648,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -4786,8 +4786,8 @@
             "type": "action"
           },
           "position": {
-            "x": 988,
-            "y": 394
+            "x": 1087,
+            "y": 390
           },
           "group": "nodes",
           "removed": false,
@@ -4839,8 +4839,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1108,
-            "y": 484
+            "x": 1207,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -4862,7 +4862,7 @@
             }
           },
           "position": {
-            "x": 750,
+            "x": 697,
             "y": 900
           },
           "group": "nodes",
@@ -4891,7 +4891,7 @@
             }
           },
           "position": {
-            "x": 1620,
+            "x": 1724,
             "y": 6240
           },
           "group": "nodes",
@@ -4909,7 +4909,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1706.0120914258944,
+            "x": 1810.0120914258944,
             "y": 4180.514161032472
           },
           "group": "nodes",
@@ -4950,7 +4950,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1933.741012983971,
+            "x": 2037.741012983971,
             "y": 4281.727015058283
           },
           "group": "nodes",
@@ -4983,7 +4983,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 896.3092592194001,
+            "x": 1000.3092592194001,
             "y": 4028.6948799937536
           },
           "group": "nodes",
@@ -5001,7 +5001,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1048.128540258118,
+            "x": 1152.128540258118,
             "y": 4104.604520513112
           },
           "group": "nodes",
@@ -5020,7 +5020,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2060.257080516236,
+            "x": 2164.257080516236,
             "y": 4307.030228564736
           },
           "group": "nodes",
@@ -5053,7 +5053,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2186.7731480485004,
+            "x": 2290.7731480485004,
             "y": 4332.333442071189
           },
           "group": "nodes",
@@ -5071,7 +5071,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2280,
+            "x": 2384,
             "y": 1230
           },
           "group": "nodes",
@@ -5104,7 +5104,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 496.36997421732434,
+            "x": 600.3699742173244,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -5122,7 +5122,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1708,
+            "x": 1812,
             "y": 4264
           },
           "group": "nodes",
@@ -5164,7 +5164,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 824.2289561694514,
+            "x": 928.2289561694514,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -5231,7 +5231,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1800,
+            "x": 1904,
             "y": 6240
           },
           "group": "nodes",
@@ -5249,7 +5249,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1339.435927808508,
+            "x": 1443.435927808508,
             "y": 6416.994651933878
           },
           "group": "nodes",
@@ -5299,7 +5299,7 @@
             "type": "action"
           },
           "position": {
-            "x": 388,
+            "x": 492,
             "y": 5794
           },
           "group": "nodes",
@@ -5366,7 +5366,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1550.2024162063042,
+            "x": 1654.2024162063042,
             "y": 6416.994651933878
           },
           "group": "nodes",
@@ -5391,14 +5391,11 @@
               "backgroundColor": {
                 "value": "#9dc967ff"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
               "customCSS": {
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
               "customHTML": {
-                "value": "<!-- Main container with a flexbox layout for centering content -->\n<div class=\"align-self-center\">\n    <!-- Polling component with custom attributes -->\n    <div data-skcomponent=\"skpolling\" data-skpollInterval=\"30\" data-skpollRetries=\"60\" data-skpollChallengeStatus=\"false\"></div>\n\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                    <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title rendering -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Checkmark icon -->\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                            <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                        </svg>\n                    </div>\n\n                    <!-- Conditional first text block rendering -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional second text block rendering -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Error message placeholder -->\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    <!-- Conditional button rendering -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\">\n                        {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "<!-- Main container with a flexbox layout for centering content -->\n<div class=\"align-self-center\">\n    <!-- Polling component with custom attributes -->\n    <div data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"50\" data-skpollChallengeStatus=\"false\"></div>\n\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                    <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title rendering -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Checkmark icon -->\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                            <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                        </svg>\n                    </div>\n\n                    <!-- Conditional first text block rendering -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional second text block rendering -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Error message placeholder -->\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    <!-- Conditional button rendering -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\">\n                        {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {},
               "formFieldsList": {
@@ -5440,13 +5437,19 @@
               },
               "validationRules": {
                 "value": []
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "textTwo": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Flow will continue automatically\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
             "type": "trigger"
           },
           "position": {
-            "x": 1198.9249355433108,
+            "x": 1302.9249355433108,
             "y": 6416.994651933878
           },
           "group": "nodes",
@@ -5502,7 +5505,7 @@
             "type": "action"
           },
           "position": {
-            "x": 874.274853189695,
+            "x": 978.274853189695,
             "y": 1865.8879738659239
           },
           "group": "nodes",
@@ -5558,7 +5561,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1284.8828937737696,
+            "x": 1388.8828937737696,
             "y": 3265.744021674998
           },
           "group": "nodes",
@@ -5599,7 +5602,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1773.9217319452532,
+            "x": 1877.9217319452532,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -5655,7 +5658,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1622.1024509065355,
+            "x": 1726.1024509065355,
             "y": 2295.3795750614063
           },
           "group": "nodes",
@@ -5673,7 +5676,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1883.878410013939,
+            "x": 1987.878410013939,
             "y": 1819.182747336901
           },
           "group": "nodes",
@@ -5696,8 +5699,8 @@
             }
           },
           "position": {
-            "x": 928,
-            "y": 484
+            "x": 1027,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -5729,7 +5732,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3028,
+            "x": 3132,
             "y": 1054
           },
           "group": "nodes",
@@ -5762,7 +5765,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3265.744021674998,
+            "x": 3369.744021674998,
             "y": 3667.269925979301
           },
           "group": "nodes",
@@ -5811,7 +5814,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3292.512415295285,
+            "x": 3396.512415295285,
             "y": 3212.207234434424
           },
           "group": "nodes",
@@ -5844,7 +5847,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3667.269925979301,
+            "x": 3771.269925979301,
             "y": 3212.207234434424
           },
           "group": "nodes",
@@ -5862,7 +5865,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3399.585989776432,
+            "x": 3503.585989776432,
             "y": 3399.585989776432
           },
           "group": "nodes",
@@ -5912,7 +5915,7 @@
             "type": "action"
           },
           "position": {
-            "x": 390.2449890903412,
+            "x": 494.2449890903412,
             "y": 4560.062363629266
           },
           "group": "nodes",
@@ -5945,7 +5948,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 390,
+            "x": 494,
             "y": 4800
           },
           "group": "nodes",
@@ -5964,7 +5967,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3317.417755838883,
+            "x": 3421.417755838883,
             "y": 2548.4117101259358
           },
           "group": "nodes",
@@ -5994,7 +5997,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3494.5402503840533,
+            "x": 3598.5402503840533,
             "y": 2548.4117101259358
           },
           "group": "nodes",
@@ -6024,7 +6027,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 1495.6427255954325
           },
           "group": "nodes",
@@ -6042,7 +6045,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 1469.1966364332543
           },
           "group": "nodes",
@@ -6072,7 +6075,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4550.281246732433,
+            "x": 4654.281246732433,
             "y": 1046.0592098384068
           },
           "group": "nodes",
@@ -6090,7 +6093,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4391.604711759365,
+            "x": 4495.604711759365,
             "y": 1046.0592098384068
           },
           "group": "nodes",
@@ -6123,7 +6126,7 @@
             "type": "action"
           },
           "position": {
-            "x": 930,
+            "x": 1034,
             "y": 4800
           },
           "group": "nodes",
@@ -6162,7 +6165,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1981.9530033365043,
+            "x": 2085.9530033365045,
             "y": 4778.477072101619
           },
           "group": "nodes",
@@ -6234,7 +6237,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1230,
+            "x": 1334,
             "y": 4800
           },
           "group": "nodes",
@@ -6257,7 +6260,7 @@
             }
           },
           "position": {
-            "x": 1050,
+            "x": 1154,
             "y": 4800
           },
           "group": "nodes",
@@ -6275,7 +6278,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1440,
+            "x": 1544,
             "y": 4770
           },
           "group": "nodes",
@@ -6317,7 +6320,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2357.713196285832,
+            "x": 2461.713196285832,
             "y": 4728.375713041709
           },
           "group": "nodes",
@@ -6419,7 +6422,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2100,
+            "x": 2204,
             "y": 5130
           },
           "group": "nodes",
@@ -6445,7 +6448,7 @@
             }
           },
           "position": {
-            "x": 1770,
+            "x": 1874,
             "y": 4860
           },
           "group": "nodes",
@@ -6495,7 +6498,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 630,
+            "x": 734,
             "y": 4800
           },
           "group": "nodes",
@@ -6513,7 +6516,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 780,
+            "x": 884,
             "y": 4800
           },
           "group": "nodes",
@@ -6549,7 +6552,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2760,
+            "x": 2864,
             "y": 5130
           },
           "group": "nodes",
@@ -6582,7 +6585,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3690,
+            "x": 3794,
             "y": 5400
           },
           "group": "nodes",
@@ -6606,7 +6609,7 @@
             }
           },
           "position": {
-            "x": 2880,
+            "x": 2984,
             "y": 5130
           },
           "group": "nodes",
@@ -6645,7 +6648,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3330,
+            "x": 3434,
             "y": 5280
           },
           "group": "nodes",
@@ -6668,7 +6671,7 @@
             }
           },
           "position": {
-            "x": 3480,
+            "x": 3584,
             "y": 5280
           },
           "group": "nodes",
@@ -6701,7 +6704,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3690,
+            "x": 3794,
             "y": 5190
           },
           "group": "nodes",
@@ -6734,7 +6737,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2100,
+            "x": 2204,
             "y": 5280
           },
           "group": "nodes",
@@ -6752,7 +6755,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2220,
+            "x": 2324,
             "y": 5280
           },
           "group": "nodes",
@@ -6770,7 +6773,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 636.8809664825217,
+            "x": 740.8809664825217,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -6796,7 +6799,7 @@
             }
           },
           "position": {
-            "x": 964.7399484346487,
+            "x": 1068.7399484346488,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -6849,7 +6852,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1590,
+            "x": 1694,
             "y": 4770
           },
           "group": "nodes",
@@ -6867,7 +6870,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1770,
+            "x": 1874,
             "y": 4920
           },
           "group": "nodes",
@@ -6886,7 +6889,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 450,
+            "x": 397,
             "y": 900
           },
           "group": "nodes",
@@ -6904,7 +6907,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 480,
+            "x": 584,
             "y": 4800
           },
           "group": "nodes",
@@ -6945,7 +6948,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1933.741012983971,
+            "x": 2037.741012983971,
             "y": 4661.2752176550775
           },
           "group": "nodes",
@@ -6963,7 +6966,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1710,
+            "x": 1814,
             "y": 4800
           },
           "group": "nodes",
@@ -6982,7 +6985,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1110,
+            "x": 1214,
             "y": 4680
           },
           "group": "nodes",
@@ -7015,7 +7018,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 990,
+            "x": 1094,
             "y": 4650
           },
           "group": "nodes",
@@ -7034,7 +7037,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2060.257080516236,
+            "x": 2164.257080516236,
             "y": 4661.2752176550775
           },
           "group": "nodes",
@@ -7067,7 +7070,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2262.682788567859,
+            "x": 2366.682788567859,
             "y": 4661.2752176550775
           },
           "group": "nodes",
@@ -7085,7 +7088,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1620,
+            "x": 1724,
             "y": 5100
           },
           "group": "nodes",
@@ -7108,7 +7111,7 @@
             }
           },
           "position": {
-            "x": 2157.3077600461907,
+            "x": 2261.3077600461907,
             "y": 4753.426392571664
           },
           "group": "nodes",
@@ -7127,7 +7130,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2220,
+            "x": 2324,
             "y": 5130
           },
           "group": "nodes",
@@ -7172,7 +7175,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2400,
+            "x": 2504,
             "y": 5130
           },
           "group": "nodes",
@@ -7190,7 +7193,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2550,
+            "x": 2654,
             "y": 5130
           },
           "group": "nodes",
@@ -7209,7 +7212,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2550,
+            "x": 2654,
             "y": 5280
           },
           "group": "nodes",
@@ -7239,7 +7242,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2730,
+            "x": 2834,
             "y": 5280
           },
           "group": "nodes",
@@ -7269,7 +7272,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1830,
+            "x": 1934,
             "y": 4980
           },
           "group": "nodes",
@@ -7287,7 +7290,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1710,
+            "x": 1814,
             "y": 4950
           },
           "group": "nodes",
@@ -7310,7 +7313,7 @@
             }
           },
           "position": {
-            "x": 2254.682788567859,
+            "x": 2358.682788567859,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -7360,7 +7363,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2128.1667210355945,
+            "x": 2232.1667210355945,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -7386,7 +7389,7 @@
             }
           },
           "position": {
-            "x": 2548,
+            "x": 2652,
             "y": 1984
           },
           "group": "nodes",
@@ -7410,7 +7413,7 @@
             }
           },
           "position": {
-            "x": 2558.3213506452944,
+            "x": 2662.3213506452944,
             "y": 2674.9277776582003
           },
           "group": "nodes",
@@ -7449,7 +7452,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2710.140631684012,
+            "x": 2814.140631684012,
             "y": 2801.4438451904653
           },
           "group": "nodes",
@@ -7497,7 +7500,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1689.025807148256,
+            "x": 1793.025807148256,
             "y": 1926.8560630601446
           },
           "group": "nodes",
@@ -7539,7 +7542,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2968,
+            "x": 3072,
             "y": 2014
           },
           "group": "nodes",
@@ -7587,7 +7590,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2728,
+            "x": 2832,
             "y": 2014
           },
           "group": "nodes",
@@ -7605,7 +7608,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2848,
+            "x": 2952,
             "y": 2014
           },
           "group": "nodes",
@@ -7647,7 +7650,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1140,
+            "x": 1244,
             "y": 6000
           },
           "group": "nodes",
@@ -7674,7 +7677,7 @@
             }
           },
           "position": {
-            "x": 1292.5989303867757,
+            "x": 1396.5989303867757,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -7728,7 +7731,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1526.783917495438,
+            "x": 1630.783917495438,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -7803,7 +7806,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1831.2244007366987,
+            "x": 1935.2244007366987,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -7829,7 +7832,7 @@
             }
           },
           "position": {
-            "x": 1643.8764110497689,
+            "x": 1747.8764110497689,
             "y": 5995.461675138286
           },
           "group": "nodes",
@@ -7847,7 +7850,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2548,
+            "x": 2652,
             "y": 2014
           },
           "group": "nodes",
@@ -7865,7 +7868,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1293.1606753226472,
+            "x": 1397.1606753226472,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -7888,7 +7891,7 @@
             }
           },
           "position": {
-            "x": 1832.2176870748299,
+            "x": 1936.2176870748299,
             "y": 1926.8560630601446
           },
           "group": "nodes",
@@ -7907,7 +7910,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2548,
+            "x": 2652,
             "y": 2104
           },
           "group": "nodes",
@@ -7948,7 +7951,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2698,
+            "x": 2802,
             "y": 2134
           },
           "group": "nodes",
@@ -8022,7 +8025,7 @@
                 "value": "User Select An Authentication Method"
               },
               "oeNodeCacheExpire": {
-                "value": true
+                "value": false
               },
               "outputSchema": {
                 "value": {}
@@ -8077,8 +8080,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2061.3246949573477,
-            "y": 1926.8560630601446
+            "x": 2167,
+            "y": 2010
           },
           "group": "nodes",
           "removed": false,
@@ -8095,7 +8098,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2204.5165748839217,
+            "x": 2308.5165748839217,
             "y": 1926.8560630601446
           },
           "group": "nodes",
@@ -8140,7 +8143,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4168,
+            "x": 4272,
             "y": 1564
           },
           "group": "nodes",
@@ -8158,7 +8161,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1951.0442264904239,
+            "x": 2055.044226490424,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -8203,7 +8206,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3469.2370368776005,
+            "x": 3573.2370368776005,
             "y": 2674.9277776582003
           },
           "group": "nodes",
@@ -8221,7 +8224,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3317.417755838883,
+            "x": 3421.417755838883,
             "y": 2674.9277776582003
           },
           "group": "nodes",
@@ -8266,7 +8269,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3667.269925979301,
+            "x": 3771.269925979301,
             "y": 3479.891170637293
           },
           "group": "nodes",
@@ -8311,7 +8314,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1860,
+            "x": 1964,
             "y": 5220
           },
           "group": "nodes",
@@ -8356,7 +8359,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2790,
+            "x": 2894,
             "y": 5430
           },
           "group": "nodes",
@@ -8374,7 +8377,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2580,
+            "x": 2684,
             "y": 5370
           },
           "group": "nodes",
@@ -8430,7 +8433,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2608,
+            "x": 2712,
             "y": 1894
           },
           "group": "nodes",
@@ -8486,7 +8489,7 @@
             "type": "action"
           },
           "position": {
-            "x": 838,
+            "x": 942,
             "y": 1804
           },
           "group": "nodes",
@@ -8542,7 +8545,7 @@
             "type": "action"
           },
           "position": {
-            "x": 666,
+            "x": 770,
             "y": 3972
           },
           "group": "nodes",
@@ -8598,7 +8601,7 @@
             "type": "action"
           },
           "position": {
-            "x": 246,
+            "x": 350,
             "y": 4632
           },
           "group": "nodes",
@@ -8654,7 +8657,7 @@
             "type": "action"
           },
           "position": {
-            "x": 780,
+            "x": 884,
             "y": 4890
           },
           "group": "nodes",
@@ -8710,7 +8713,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2486.9423646409527,
+            "x": 2590.9423646409527,
             "y": 6089.135669981752
           },
           "group": "nodes",
@@ -8766,7 +8769,7 @@
             "type": "action"
           },
           "position": {
-            "x": 332.44048324126084,
+            "x": 436.44048324126084,
             "y": 5925.206179005688
           },
           "group": "nodes",
@@ -8797,7 +8800,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 568,
+            "x": 672,
             "y": 5494
           },
           "group": "nodes",
@@ -8839,7 +8842,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1444.9799563613649,
+            "x": 1548.9799563613649,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -8857,7 +8860,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1571.4960238936296,
+            "x": 1675.4960238936296,
             "y": 2396.592429087218
           },
           "group": "nodes",
@@ -8876,7 +8879,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2355.6186385852443,
+            "x": 2459.6186385852443,
             "y": 3586.9647451184405
           },
           "group": "nodes",
@@ -8925,7 +8928,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2516.2290003069656,
+            "x": 2620.2290003069656,
             "y": 3801.1118940807355
           },
           "group": "nodes",
@@ -8944,7 +8947,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2650.0709684084,
+            "x": 2754.0709684084,
             "y": 3801.1118940807355
           },
           "group": "nodes",
@@ -8974,7 +8977,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2783.9129365098343,
+            "x": 2887.9129365098343,
             "y": 3801.1118940807355
           },
           "group": "nodes",
@@ -9010,7 +9013,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2112.2463852670935,
+            "x": 2216.2463852670935,
             "y": 6112.554168692618
           },
           "group": "nodes",
@@ -9051,7 +9054,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1831.2244007366987,
+            "x": 1935.2244007366987,
             "y": 6112.554168692618
           },
           "group": "nodes",
@@ -9069,7 +9072,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1971.735393001896,
+            "x": 2075.735393001896,
             "y": 6112.554168692618
           },
           "group": "nodes",
@@ -9092,7 +9095,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "code": {
-                "value": "/*\n Update the devices array to include a new properties \n used when rendering device list.\n*/\n\n\n// Titles and icons\nconst deviceTypes = {\n\tSMS: { title: \"Text Message\", icon: \"mdi-comment-text-outline\" },\n\tVOICE: { title: \"Voice\", icon: \"mdi-face-agent\" },\n\tEMAIL: { title: \"Email\", icon: \"mdi-email-outline\" },\n\tTOTP: { title: \"Authenticator App\", icon: \"mdi-cellphone-key\" },\n\tFIDO2: { title: \"Passkey/FIDO2\", icon: \"mdi-fingerprint\" },\n\tPLATFORM: { title: \"Biometrics\", icon: \"mdi-fingerprint\" },\n\tMOBILE: { title: \"Mobile Push\", icon: \"mdi-account-key-outline\" },\n\tSECURITY_KEY: { title: \"Security Key\", icon: \"mdi-fingerprint\" },\n\tMAGIC: { title: \"Magic Link\", icon: \"mdi-auto-fix\" }\n\n\n\n}\n\n// Device types that require masking\nconst SMS = \"SMS\";\nconst VOICE = \"VOICE\";\nconst EMAIL = \"EMAIL\";\nconst SEPARATOR = \" - \";\nconst MAGIC = \"Magic Link\"\n\n// Main entry point\nmodule.exports = a = async ({ params }) => {\n\tlet devices = params.devices;\n\tlet passwordlessAuth = params.passwordlessAuth;\n\n\t// If devices is not passed, head to error branch in flow\n\tif (!devices || devices.length === 0) {\n\t\treturn false;\n\t}\n\n\t// Define the types allowed for passwordless authentication\n\tconst allowedTypes = params.passwordlessAllowedTypes;\n\n\t// Filter devices if passwordlessAuth is true\n\tif (passwordlessAuth === true) {\n    devices = devices.filter(d => allowedTypes.includes(d.type));\n\n\t if (devices.length === 0) {\n        return false; // No valid devices for passwordless authentication\n    }\n}\n\n\tfor (const d of devices) {\n\t\tif (d.type === SMS || d.type === VOICE) {\n\t\t\td.maskedValue = maskPhone(d.phone);\n\t\t} else if (d.type === EMAIL) {\n\t\t\td.maskedValue = maskEmail(d.email);\n\t\t}\n\t\tconst nickname = d.nickname || \"\";\n\t\tconst maskedValue = d.maskedValue || \"\";\n\n\t\tif (d.nickname === MAGIC) {\n\t\t\td.type = \"MAGIC\"\n\t\t}\n\n\n\n\t\tif (nickname && maskedValue) {\n\t\t\td.displayText = `${nickname}${SEPARATOR}${maskedValue}`;\n\t\t} else if (!nickname && !maskedValue) {\n\t\t\td.displayText = \"\";\n\t\t} else {\n\t\t\td.displayText = `${nickname}${maskedValue}`;\n\t\t}\n\n\t\t// set the icon\n\t\td.displayIcon = deviceTypes[d.type].icon || \"\";\n\t\t// set the device type\n\t\td.displayType = deviceTypes[d.type].title || \"Unknown\";\n\t}\n\n\treturn { 'devices': devices }\n}\n\n// Mask email\nconst maskEmail = (email) => {\n\tconst [username, domain] = email.split(\"@\");\n\tconst maskedUsername =\n\t\tusername.charAt(0) + \"*\".repeat(username.length - 2) + username.slice(-1);\n\treturn maskedUsername + \"@\" + domain;\n};\n\n//Mask phone number\nconst maskPhone = (phone) => {\n\tconst numericPhoneNumber = phone.replace(/[^\\d+]/g, \"\");\n\n\t// Mask the first six digits of the phone number\n\tconst maskedPhoneNumber = \"***-***-\" + numericPhoneNumber.slice(-4);\n\n\treturn maskedPhoneNumber;\n};\n\n"
+                "value": "/*\n Update the devices array to include new properties \n used when rendering the device list.\n*/\n\n// Titles and icons\nconst deviceTypes = {\n\tSMS: { title: \"Text Message\", icon: \"mdi-comment-text-outline\" },\n\tVOICE: { title: \"Voice\", icon: \"mdi-face-agent\" },\n\tEMAIL: { title: \"Email\", icon: \"mdi-email-outline\" },\n\tTOTP: { title: \"Authenticator App\", icon: \"mdi-cellphone-key\" },\n\tFIDO2: { title: \"Passkey/FIDO2\", icon: \"mdi-fingerprint\" },\n\tPLATFORM: { title: \"Biometrics\", icon: \"mdi-fingerprint\" },\n\tMOBILE: { title: \"Mobile Push\", icon: \"mdi-account-key-outline\" },\n\tSECURITY_KEY: { title: \"Security Key\", icon: \"mdi-fingerprint\" },\n\tMAGIC: { title: \"Magic Link\", icon: \"mdi-auto-fix\" }\n}\n\n// Device types that require masking\nconst SMS = \"SMS\";\nconst VOICE = \"VOICE\";\nconst EMAIL = \"EMAIL\";\nconst SEPARATOR = \" - \";\nconst MAGIC = \"Magic Link\";\n\n// Default passwordless allowed types\nconst defaultPasswordlessAllowedTypes = [\n    \"FIDO2\",\n    \"PLATFORM\",\n    \"MOBILE\",\n    \"TOTP\",\n    \"SECURITY_KEY\"\n];\n\n// Main entry point\nmodule.exports = a = async ({ params }) => {\n\ttry {\n\t\t// Check if devices are passed in the params\n\t\tlet devices = params.devices;\n\t\tlet passwordlessAuth = params.passwordlessAuth;\n\n\t\t// If devices are not passed or empty, return an error\n\t\tif (!devices || devices.length === 0) {\n\t\t\tthrow new Error(\"No devices available\");\n\t\t}\n\n\t\t// If passwordlessAllowedTypes is empty, default to the predefined array\n\t\tlet allowedTypes = params.passwordlessAllowedTypes && params.passwordlessAllowedTypes.length > 0 \n\t\t\t? params.passwordlessAllowedTypes \n\t\t\t: defaultPasswordlessAllowedTypes;\n\n\t\t// Filter devices if passwordlessAuth is true\n\t\tif (passwordlessAuth === true) {\n\t\t\tdevices = devices.filter(d => allowedTypes.includes(d.type));\n\n\t\t\tif (devices.length === 0) {\n\t\t\t\tthrow new Error(\"No valid devices for passwordless authentication\");\n\t\t\t}\n\t\t}\n\n\t\t// Process each device\n\t\tfor (const d of devices) {\n\t\t\tif (!d.type) {\n\t\t\t\tthrow new Error(\"Device type is undefined for one of the devices\");\n\t\t\t}\n\n\t\t\t// Mask phone and email where applicable\n\t\t\tif (d.type === SMS || d.type === VOICE) {\n\t\t\t\tif (!d.phone) throw new Error(\"Phone number missing for SMS/VOICE device\");\n\t\t\t\td.maskedValue = maskPhone(d.phone);\n\t\t\t} else if (d.type === EMAIL) {\n\t\t\t\tif (!d.email) throw new Error(\"Email missing for EMAIL device\");\n\t\t\t\td.maskedValue = maskEmail(d.email);\n\t\t\t}\n\n\t\t\tconst nickname = d.nickname || \"\";\n\t\t\tconst maskedValue = d.maskedValue || \"\";\n\n\t\t\tif (nickname && maskedValue) {\n\t\t\t\td.displayText = `${nickname}${SEPARATOR}${maskedValue}`;\n\t\t\t} else if (!nickname && !maskedValue) {\n\t\t\t\td.displayText = \"\";\n\t\t\t} else {\n\t\t\t\td.displayText = `${nickname}${maskedValue}`;\n\t\t\t}\n\n\t\t\t// Assign Magic Link type\n\t\t\tif (d.nickname === MAGIC) {\n\t\t\t\td.type = \"MAGIC\";\n\t\t\t}\n\n\t\t\t// Set the icon\n\t\t\td.displayIcon = deviceTypes[d.type]?.icon || \"mdi-help-circle-outline\";\n\t\t\t// Set the device type title\n\t\t\td.displayType = deviceTypes[d.type]?.title || \"Unknown\";\n\t\t}\n\n\t\treturn { 'devices': devices };\n\t} catch (error) {\n\t\tconsole.error(\"Error processing devices:\", error.message);\n\t\treturn { error: error.message }; // Return error message in case of failure\n\t}\n};\n\n// Mask email\nconst maskEmail = (email) => {\n\ttry {\n\t\tconst [username, domain] = email.split(\"@\");\n\t\tif (!username || !domain) throw new Error(\"Invalid email format\");\n\n\t\tconst maskedUsername =\n\t\t\tusername.charAt(0) + \"*\".repeat(username.length - 2) + username.slice(-1);\n\t\treturn maskedUsername + \"@\" + domain;\n\t} catch (error) {\n\t\tconsole.error(\"Error masking email:\", error.message);\n\t\treturn \"Invalid email\";\n\t}\n};\n\n// Mask phone number\nconst maskPhone = (phone) => {\n\ttry {\n\t\tconst numericPhoneNumber = phone.replace(/[^\\d+]/g, \"\");\n\t\tif (numericPhoneNumber.length < 4) throw new Error(\"Invalid phone number format\");\n\n\t\t// Mask the first six digits of the phone number\n\t\tconst maskedPhoneNumber = \"***-***-\" + numericPhoneNumber.slice(-4);\n\t\treturn maskedPhoneNumber;\n\t} catch (error) {\n\t\tconsole.error(\"Error masking phone:\", error.message);\n\t\treturn \"Invalid phone number\";\n\t}\n};"
               },
               "nodeDescription": {
                 "value": "Prepare the devices for display"
@@ -9118,7 +9121,7 @@
                   {
                     "name": "passwordlessAllowedTypes",
                     "preferredDataType": "object",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-obj-p1MFAPasswordlessAllowedTypes}}\"\n      }\n    ]\n  }\n]"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \" \\\"mf-obj-p1MFAPasswordlessAllowedTypes\\\": [            \\\"FIDO2\\\",            \\\"PLATFORM\\\",            \\\"MOBILE\\\",            \\\"TOTP\\\",            \\\"SECURITY_KEY\\\"        ]\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
@@ -9127,7 +9130,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1470,
+            "x": 1724,
             "y": 900
           },
           "group": "nodes",
@@ -9171,7 +9174,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1374.0036713097936,
+            "x": 1478.0036713097936,
             "y": 1926.8560630601446
           },
           "group": "nodes",
@@ -9189,7 +9192,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1500,
+            "x": 1604,
             "y": 1950
           },
           "group": "nodes",
@@ -9207,7 +9210,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1500,
+            "x": 1604,
             "y": 2010
           },
           "group": "nodes",
@@ -9238,7 +9241,7 @@
             "idUnique": "9ixxozlfu4"
           },
           "position": {
-            "x": 2760,
+            "x": 2864,
             "y": 1350
           },
           "group": "nodes",
@@ -9256,7 +9259,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 688,
+            "x": 792,
             "y": 5494
           },
           "group": "nodes",
@@ -9298,7 +9301,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1978,
+            "x": 2082,
             "y": 4474
           },
           "group": "nodes",
@@ -9317,7 +9320,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2085.5,
+            "x": 2189.5,
             "y": 4473.250045776367
           },
           "group": "nodes",
@@ -9347,7 +9350,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2205,
+            "x": 2309,
             "y": 4472.500091552734
           },
           "group": "nodes",
@@ -9383,7 +9386,7 @@
               },
               "subFlowId": {
                 "value": {
-                  "label": "PingOne Davinci Custom Magic Link Subflow",
+                  "label": "PingOne Davinci Custom Magic Link Subflow",
                   "value": "caab30786105b2f2c4f62678b15cae46"
                 }
               },
@@ -9401,7 +9404,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2400,
+            "x": 2504,
             "y": 2670
           },
           "group": "nodes",
@@ -9434,7 +9437,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2710.140631684012,
+            "x": 2814.140631684012,
             "y": 2674.9277776582003
           },
           "group": "nodes",
@@ -9482,7 +9485,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2332.662516755877,
+            "x": 2436.662516755877,
             "y": 4853.629110691485
           },
           "group": "nodes",
@@ -9566,7 +9569,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2708.4227097052044,
+            "x": 2812.4227097052044,
             "y": 4778.477072101619
           },
           "group": "nodes",
@@ -9585,7 +9588,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2833.6761073549806,
+            "x": 2937.6761073549806,
             "y": 4778.477072101619
           },
           "group": "nodes",
@@ -9621,7 +9624,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2958.9295050047563,
+            "x": 3062.9295050047563,
             "y": 4778.477072101619
           },
           "group": "nodes",
@@ -9654,7 +9657,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3360,
+            "x": 3464,
             "y": 5130
           },
           "group": "nodes",
@@ -9672,7 +9675,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2495.491933700586,
+            "x": 2599.491933700586,
             "y": 4853.629110691485
           },
           "group": "nodes",
@@ -9695,7 +9698,7 @@
             }
           },
           "position": {
-            "x": 2495.491933700586,
+            "x": 2599.491933700586,
             "y": 4853.629110691485
           },
           "group": "nodes",
@@ -9731,7 +9734,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2700,
+            "x": 2804,
             "y": 4980
           },
           "group": "nodes",
@@ -9815,7 +9818,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3060,
+            "x": 3164,
             "y": 4980
           },
           "group": "nodes",
@@ -9834,7 +9837,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3210,
+            "x": 3314,
             "y": 4980
           },
           "group": "nodes",
@@ -9870,7 +9873,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3330,
+            "x": 3434,
             "y": 4980
           },
           "group": "nodes",
@@ -9896,7 +9899,7 @@
             }
           },
           "position": {
-            "x": 2850,
+            "x": 2954,
             "y": 4980
           },
           "group": "nodes",
@@ -9952,7 +9955,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2305.289215580765,
+            "x": 2409.289215580765,
             "y": 2548.4117101259358
           },
           "group": "nodes",
@@ -10008,7 +10011,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2328.8502449649577,
+            "x": 2432.8502449649577,
             "y": 3051.596872712703
           },
           "group": "nodes",
@@ -10064,7 +10067,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2382.3870322055313,
+            "x": 2486.3870322055313,
             "y": 3720.806713219875
           },
           "group": "nodes",
@@ -10120,7 +10123,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2516.2290003069656,
+            "x": 2620.2290003069656,
             "y": 3479.891170637293
           },
           "group": "nodes",
@@ -10176,7 +10179,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1070.7357448114747,
+            "x": 1174.7357448114747,
             "y": 3105.133659953277
           },
           "group": "nodes",
@@ -10232,7 +10235,7 @@
             "type": "action"
           },
           "position": {
-            "x": 688,
+            "x": 792,
             "y": 4594
           },
           "group": "nodes",
@@ -10288,7 +10291,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2608.9277776582003,
+            "x": 2712.9277776582003,
             "y": 4648.57843116153
           },
           "group": "nodes",
@@ -10344,7 +10347,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2610,
+            "x": 2714,
             "y": 5040
           },
           "group": "nodes",
@@ -10400,7 +10403,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1980,
+            "x": 2084,
             "y": 5010
           },
           "group": "nodes",
@@ -10456,7 +10459,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3210,
+            "x": 3314,
             "y": 5160
           },
           "group": "nodes",
@@ -10512,7 +10515,7 @@
             "type": "action"
           },
           "position": {
-            "x": 636.8809664825217,
+            "x": 740.8809664825217,
             "y": 5878.369181583956
           },
           "group": "nodes",
@@ -10568,7 +10571,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1058.4139432781135,
+            "x": 1162.4139432781135,
             "y": 5831.5321841622235
           },
           "group": "nodes",
@@ -10624,7 +10627,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1105.250940699846,
+            "x": 1209.250940699846,
             "y": 6323.320657090414
           },
           "group": "nodes",
@@ -10680,7 +10683,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1409.691423941107,
+            "x": 1513.691423941107,
             "y": 5878.369181583956
           },
           "group": "nodes",
@@ -10736,7 +10739,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1409.691423941107,
+            "x": 1513.691423941107,
             "y": 6135.972667403484
           },
           "group": "nodes",
@@ -10792,7 +10795,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2001.6506535033297,
+            "x": 2105.6506535033295,
             "y": 2320.682788567859
           },
           "group": "nodes",
@@ -10833,7 +10836,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2971.2916918518426,
+            "x": 3075.2916918518426,
             "y": 3667.269925979301
           },
           "group": "nodes",
@@ -10851,7 +10854,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3105.133659953277,
+            "x": 3209.133659953277,
             "y": 3667.269925979301
           },
           "group": "nodes",
@@ -10870,7 +10873,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3399.585989776432,
+            "x": 3503.585989776432,
             "y": 3212.207234434424
           },
           "group": "nodes",
@@ -10888,7 +10891,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2355.6186385852443,
+            "x": 2459.6186385852443,
             "y": 3292.512415295285
           },
           "group": "nodes",
@@ -10921,7 +10924,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2783.9129365098343,
+            "x": 2887.9129365098343,
             "y": 3212.207234434424
           },
           "group": "nodes",
@@ -10944,7 +10947,7 @@
             }
           },
           "position": {
-            "x": 2623.302574788113,
+            "x": 2727.302574788113,
             "y": 3185.438840814137
           },
           "group": "nodes",
@@ -11000,7 +11003,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2703.6077556489736,
+            "x": 2807.6077556489736,
             "y": 3131.9020535735635
           },
           "group": "nodes",
@@ -11023,7 +11026,7 @@
             }
           },
           "position": {
-            "x": 2944.5232982315556,
+            "x": 3048.5232982315556,
             "y": 3212.207234434424
           },
           "group": "nodes",
@@ -11106,7 +11109,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2428,
+            "x": 2532,
             "y": 1474
           },
           "group": "nodes",
@@ -11125,7 +11128,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2158,
+            "x": 2262,
             "y": 1474
           },
           "group": "nodes",
@@ -11169,7 +11172,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2728,
+            "x": 2832,
             "y": 1474
           },
           "group": "nodes",
@@ -11187,7 +11190,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3426.354383396719,
+            "x": 3530.354383396719,
             "y": 3372.8175961561456
           },
           "group": "nodes",
@@ -11226,7 +11229,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4309.711372866186,
+            "x": 4413.711372866186,
             "y": 3399.585989776432
           },
           "group": "nodes",
@@ -11265,7 +11268,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3667.269925979301,
+            "x": 3771.269925979301,
             "y": 3372.8175961561456
           },
           "group": "nodes",
@@ -11310,7 +11313,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1230,
+            "x": 1334,
             "y": 4950
           },
           "group": "nodes",
@@ -11329,7 +11332,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2330.592429087218,
+            "x": 2434.592429087218,
             "y": 2345.986002074312
           },
           "group": "nodes",
@@ -11359,7 +11362,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2178.7731480485004,
+            "x": 2282.7731480485004,
             "y": 2270.076361554953
           },
           "group": "nodes",
@@ -11409,7 +11412,7 @@
             "type": "action"
           },
           "position": {
-            "x": 418,
+            "x": 522,
             "y": 5374
           },
           "group": "nodes",
@@ -11459,7 +11462,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 898,
+            "x": 1002,
             "y": 5494
           },
           "group": "nodes",
@@ -11485,7 +11488,7 @@
             }
           },
           "position": {
-            "x": 1048,
+            "x": 1152,
             "y": 5494
           },
           "group": "nodes",
@@ -11515,7 +11518,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1710,
+            "x": 1814,
             "y": 5580
           },
           "group": "nodes",
@@ -11539,7 +11542,7 @@
             }
           },
           "position": {
-            "x": 1348,
+            "x": 1452,
             "y": 5614
           },
           "group": "nodes",
@@ -11578,7 +11581,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1498,
+            "x": 1602,
             "y": 5734
           },
           "group": "nodes",
@@ -11614,7 +11617,7 @@
               },
               "subFlowId": {
                 "value": {
-                  "label": "PingOne Davinci Custom Magic Link Subflow",
+                  "label": "PingOne Davinci Custom Magic Link Subflow",
                   "value": "caab30786105b2f2c4f62678b15cae46"
                 }
               },
@@ -11629,7 +11632,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1200,
+            "x": 1304,
             "y": 5610
           },
           "group": "nodes",
@@ -11662,7 +11665,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1498,
+            "x": 1602,
             "y": 5614
           },
           "group": "nodes",
@@ -11704,7 +11707,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1708,
+            "x": 1812,
             "y": 1264
           },
           "group": "nodes",
@@ -11727,7 +11730,7 @@
             }
           },
           "position": {
-            "x": 1888,
+            "x": 1992,
             "y": 1264
           },
           "group": "nodes",
@@ -11810,7 +11813,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2130,
+            "x": 2234,
             "y": 1350
           },
           "group": "nodes",
@@ -11834,7 +11837,7 @@
             }
           },
           "position": {
-            "x": 856.5885958491798,
+            "x": 960.5885958491798,
             "y": 3238.9756280547113
           },
           "group": "nodes",
@@ -11864,7 +11867,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1043.9673511911878,
+            "x": 1147.9673511911878,
             "y": 3346.0492025358585
           },
           "group": "nodes",
@@ -11894,7 +11897,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2698,
+            "x": 2802,
             "y": 4174
           },
           "group": "nodes",
@@ -11913,7 +11916,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2848,
+            "x": 2952,
             "y": 4174
           },
           "group": "nodes",
@@ -11949,7 +11952,7 @@
               },
               "subFlowId": {
                 "value": {
-                  "label": "PingOne Davinci Custom Magic Link Subflow",
+                  "label": "PingOne Davinci Custom Magic Link Subflow",
                   "value": "caab30786105b2f2c4f62678b15cae46"
                 }
               },
@@ -11967,7 +11970,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3028,
+            "x": 3132,
             "y": 4174
           },
           "group": "nodes",
@@ -12000,7 +12003,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3658,
+            "x": 3762,
             "y": 4174
           },
           "group": "nodes",
@@ -12027,7 +12030,7 @@
             }
           },
           "position": {
-            "x": 3148,
+            "x": 3252,
             "y": 4174
           },
           "group": "nodes",
@@ -12051,9 +12054,6 @@
             "properties": {
               "backgroundColor": {
                 "value": "#9dc967ff"
-              },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
               },
               "customCSS": {
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
@@ -12110,7 +12110,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3328,
+            "x": 3432,
             "y": 4174
           },
           "group": "nodes",
@@ -12160,7 +12160,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2548,
+            "x": 2652,
             "y": 4054
           },
           "group": "nodes",
@@ -12216,7 +12216,7 @@
             "type": "action"
           },
           "position": {
-            "x": 562.1362660260243,
+            "x": 666.1362660260243,
             "y": 3105.133659953277
           },
           "group": "nodes",
@@ -12249,7 +12249,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1521,
+            "x": 1625,
             "y": 4438.39990234375
           },
           "group": "nodes",
@@ -12291,7 +12291,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3105.133659953277,
+            "x": 3209.133659953277,
             "y": 3292.512415295285
           },
           "group": "nodes",
@@ -12309,7 +12309,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 540,
+            "x": 644,
             "y": 3240
           },
           "group": "nodes",
@@ -12342,7 +12342,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3333.7611452722463,
+            "x": 3437.7611452722463,
             "y": 4351.8203551106535
           },
           "group": "nodes",
@@ -12395,7 +12395,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1200,
+            "x": 1454,
             "y": 900
           },
           "group": "nodes",
@@ -12421,7 +12421,7 @@
             }
           },
           "position": {
-            "x": 1590,
+            "x": 1844,
             "y": 900
           },
           "group": "nodes",
@@ -12463,7 +12463,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1740,
+            "x": 2024,
             "y": 900
           },
           "group": "nodes",
@@ -12502,7 +12502,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2968,
+            "x": 3072,
             "y": 934
           },
           "group": "nodes",
@@ -12528,7 +12528,7 @@
             }
           },
           "position": {
-            "x": 3088,
+            "x": 3192,
             "y": 934
           },
           "group": "nodes",
@@ -12575,7 +12575,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3439.545501920958,
+            "x": 3543.545501920958,
             "y": 1072.5052990005847
           },
           "group": "nodes",
@@ -12614,7 +12614,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3208,
+            "x": 3312,
             "y": 994
           },
           "group": "nodes",
@@ -12637,7 +12637,7 @@
             }
           },
           "position": {
-            "x": 3307.3150561100683,
+            "x": 3411.3150561100683,
             "y": 1019.613120676229
           },
           "group": "nodes",
@@ -12663,7 +12663,7 @@
             }
           },
           "position": {
-            "x": 3571.7759477318477,
+            "x": 3675.7759477318477,
             "y": 1072.5052990005847
           },
           "group": "nodes",
@@ -12693,7 +12693,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3968.4672851645173,
+            "x": 4072.4672851645173,
             "y": 1151.8435664871188
           },
           "group": "nodes",
@@ -12758,7 +12758,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3730.452482704916,
+            "x": 3834.452482704916,
             "y": 1125.3974773249408
           },
           "group": "nodes",
@@ -12776,7 +12776,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3836.2368393536276,
+            "x": 3940.2368393536276,
             "y": 1151.8435664871188
           },
           "group": "nodes",
@@ -12815,7 +12815,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1768,
+            "x": 1872,
             "y": 1504
           },
           "group": "nodes",
@@ -12838,7 +12838,7 @@
             }
           },
           "position": {
-            "x": 1918,
+            "x": 2022,
             "y": 1504
           },
           "group": "nodes",
@@ -12921,7 +12921,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2098,
+            "x": 2202,
             "y": 1654
           },
           "group": "nodes",
@@ -12940,7 +12940,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2278,
+            "x": 2382,
             "y": 1654
           },
           "group": "nodes",
@@ -12984,7 +12984,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2458,
+            "x": 2562,
             "y": 1654
           },
           "group": "nodes",
@@ -13071,7 +13071,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1860,
+            "x": 1964,
             "y": 1080
           },
           "group": "nodes",
@@ -13115,7 +13115,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2160,
+            "x": 2264,
             "y": 1080
           },
           "group": "nodes",
@@ -13133,7 +13133,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1980,
+            "x": 2084,
             "y": 1080
           },
           "group": "nodes",
@@ -13174,7 +13174,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2944.5232982315556,
+            "x": 3048.5232982315556,
             "y": 3560.1963514981535
           },
           "group": "nodes",
@@ -13192,7 +13192,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3105.133659953277,
+            "x": 3209.133659953277,
             "y": 3560.1963514981535
           },
           "group": "nodes",
@@ -13233,7 +13233,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1468,
+            "x": 1572,
             "y": 5494
           },
           "group": "nodes",
@@ -13251,7 +13251,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1318,
+            "x": 1422,
             "y": 5494
           },
           "group": "nodes",
@@ -13269,7 +13269,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1588,
+            "x": 1692,
             "y": 5494
           },
           "group": "nodes",
@@ -13288,7 +13288,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3426.354383396719,
+            "x": 3530.354383396719,
             "y": 3319.280808915572
           },
           "group": "nodes",
@@ -13324,7 +13324,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3827.880287701022,
+            "x": 3931.880287701022,
             "y": 3319.280808915572
           },
           "group": "nodes",
@@ -13363,7 +13363,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4309.711372866186,
+            "x": 4413.711372866186,
             "y": 3265.744021674998
           },
           "group": "nodes",
@@ -13389,7 +13389,7 @@
             }
           },
           "position": {
-            "x": 3934.95386218217,
+            "x": 4038.95386218217,
             "y": 3319.280808915572
           },
           "group": "nodes",
@@ -13430,7 +13430,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 4095.5642239038907,
+            "x": 4199.564223903891,
             "y": 3265.744021674998
           },
           "group": "nodes",
@@ -13471,7 +13471,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 4095.5642239038907,
+            "x": 4199.564223903891,
             "y": 3399.585989776432
           },
           "group": "nodes",
@@ -13489,7 +13489,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4202.637798385038,
+            "x": 4306.637798385038,
             "y": 3265.744021674998
           },
           "group": "nodes",
@@ -13507,7 +13507,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4202.637798385038,
+            "x": 4306.637798385038,
             "y": 3399.585989776432
           },
           "group": "nodes",
@@ -13546,7 +13546,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1198,
+            "x": 1302,
             "y": 5494
           },
           "group": "nodes",
@@ -13564,7 +13564,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3493,
+            "x": 3597,
             "y": 4174
           },
           "group": "nodes",
@@ -13615,45 +13615,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 720,
+            "x": 824,
             "y": 3240
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "kgojky39ku",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1890,
-            "y": 900
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "nkrxv7wjx8",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
-          },
-          "position": {
-            "x": 650.5001945247295,
-            "y": 483.1849215632493
           },
           "group": "nodes",
           "removed": false,
@@ -13694,8 +13657,8 @@
             }
           },
           "position": {
-            "x": 493.00038904945893,
-            "y": 482.36984312649855
+            "x": 277,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -13745,7 +13708,7 @@
             "idUnique": "48uidbgg74"
           },
           "position": {
-            "x": 328,
+            "x": 432,
             "y": 334
           },
           "group": "nodes",
@@ -13802,7 +13765,7 @@
             "idUnique": "o2v5xhdcbc"
           },
           "position": {
-            "x": 214,
+            "x": 318,
             "y": 221
           },
           "group": "nodes",
@@ -13841,7 +13804,7 @@
             "idUnique": "g9fybbwj88"
           },
           "position": {
-            "x": 2100,
+            "x": 2204,
             "y": 1230
           },
           "group": "nodes",
@@ -13901,7 +13864,7 @@
             }
           },
           "position": {
-            "x": 1470,
+            "x": 1574,
             "y": 6240
           },
           "group": "nodes",
@@ -13920,7 +13883,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 810,
+            "x": 914,
             "y": 4740
           },
           "group": "nodes",
@@ -13950,7 +13913,7 @@
             }
           },
           "position": {
-            "x": 690,
+            "x": 794,
             "y": 4710
           },
           "group": "nodes",
@@ -13980,7 +13943,7 @@
             }
           },
           "position": {
-            "x": 3000,
+            "x": 3104,
             "y": 4860
           },
           "group": "nodes",
@@ -14068,7 +14031,7 @@
             "idUnique": "eqn5ledc0s"
           },
           "position": {
-            "x": 930,
+            "x": 914,
             "y": 1050
           },
           "group": "nodes",
@@ -14098,8 +14061,313 @@
             }
           },
           "position": {
-            "x": 1835.2371432053667,
+            "x": 1939.2371432053667,
             "y": 6345.428209904459
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "a9xez95qcw",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 2349,
+            "y": 1348.75
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "a118jdmnwr",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createErrorResponse",
+            "type": "action",
+            "properties": {
+              "nodeTitle": {
+                "value": "No Devices"
+              },
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              }
+            }
+          },
+          "position": {
+            "x": 2534,
+            "y": 1350
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "09ispgboo9",
+            "nodeType": "EVAL",
+            "properties": {
+              "azrmwop3lj": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 2144,
+            "y": 900
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l2e195bo74",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2264,
+            "y": 900
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "kv92a3jme6",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "sktemplate": {
+                "uiId": "624fbda9a79d412a0e62cc045b410da7",
+                "createdDate": 1693913007853,
+                "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                "description": "",
+                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n\t\t\"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}",
+                "name": "Custom Message",
+                "outputSchema": null,
+                "script": "",
+                "style": "",
+                "template": "",
+                "updatedDate": 1693913396823,
+                "validationRules": [],
+                "version": "1.0",
+                "visibility": "private",
+                "companyId": "9343c168-20f8-4262-b335-5250b428bd12",
+                "value": "624fbda9a79d412a0e62cc045b410da7"
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        }\n    }\n}"
+              },
+              "outputSchema": {
+                "value": {}
+              },
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n           <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"1\" data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n\n          <!-- PingOne Protect -->\n          <div data-skcomponent=\"skrisk\" data-skenvironmentid=\"{{global.companyId}}\" data-skcollectBehavioralData=\"true\" data-skpropertyname=\"riskfp\"></div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+              },
+              "customCSS": {
+                "value": ""
+              },
+              "customScript": {
+                "value": ""
+              },
+              "validationRules": {
+                "value": []
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Looking up your Devices, please wait...\"\n      }\n    ]\n  }\n]"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please do not refresh the page.\"\n      }\n    ]\n  }\n]"
+              },
+              "formFieldsList": {
+                "value": []
+              },
+              "nodeTitle": {
+                "value": "PingOne MFA wait"
+              },
+              "nodeDescription": {
+                "value": "Gather Risk Signals"
+              }
+            },
+            "idUnique": "93ar57kfmj"
+          },
+          "position": {
+            "x": 847,
+            "y": 900
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r6gwuhupov",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 967,
+            "y": 900
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ume68u3qev",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "sktemplate": {
+                "uiId": "624fbda9a79d412a0e62cc045b410da7",
+                "createdDate": 1693913007853,
+                "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                "description": "",
+                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n\t\t\"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}",
+                "name": "Custom Message",
+                "outputSchema": null,
+                "script": "",
+                "style": "",
+                "template": "",
+                "updatedDate": 1693913396823,
+                "validationRules": [],
+                "version": "1.0",
+                "visibility": "private",
+                "companyId": "9343c168-20f8-4262-b335-5250b428bd12",
+                "value": "624fbda9a79d412a0e62cc045b410da7"
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        }\n    }\n}"
+              },
+              "outputSchema": {
+                "value": {}
+              },
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n           <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"1\" data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n\n          <!-- PingOne Protect -->\n          <div data-skcomponent=\"skrisk\" data-skenvironmentid=\"{{global.companyId}}\" data-skcollectBehavioralData=\"true\" data-skpropertyname=\"riskfp\"></div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+              },
+              "customCSS": {
+                "value": ""
+              },
+              "customScript": {
+                "value": ""
+              },
+              "validationRules": {
+                "value": []
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Looking up your Devices, please wait...\"\n      }\n    ]\n  }\n]"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please do not refresh the page.\"\n      }\n    ]\n  }\n]"
+              },
+              "formFieldsList": {
+                "value": []
+              },
+              "nodeTitle": {
+                "value": "PingOne MFA wait"
+              },
+              "nodeDescription": {
+                "value": "Gather Risk Signals"
+              }
+            },
+            "idUnique": "n7v8jz4er0"
+          },
+          "position": {
+            "x": 577,
+            "y": 480
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ms81dwmx7b",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 427,
+            "y": 480
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lmmgnkzwia",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 742,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -14112,6 +14380,82 @@
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "ldggbrgvbr",
+            "source": "1uz3sknfru",
+            "target": "kv92a3jme6"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "icza1hc798",
+            "source": "ngrfngznvl",
+            "target": "09ispgboo9"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "nczmf5asco",
+            "source": "l2e195bo74",
+            "target": "cthqitfpqc"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l2aaejp53z",
+            "source": "9ujfuwxncp",
+            "target": "uv0r8j88br"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "bipbcx8g2b",
@@ -14190,9 +14534,9 @@
         },
         {
           "data": {
-            "id": "jifz85b1fp",
-            "source": "ngrfngznvl",
-            "target": "kgojky39ku"
+            "id": "kkxqkjtlaj",
+            "source": "ofbvzyfyqk",
+            "target": "a9xez95qcw"
           },
           "position": {
             "x": 0,
@@ -14247,9 +14591,9 @@
         },
         {
           "data": {
-            "id": "23crrjktij",
-            "source": "kgojky39ku",
-            "target": "cthqitfpqc"
+            "id": "6agxmqz3n3",
+            "source": "a9xez95qcw",
+            "target": "a118jdmnwr"
           },
           "position": {
             "x": 0,
@@ -14513,9 +14857,9 @@
         },
         {
           "data": {
-            "id": "u02tbgo60z",
-            "source": "nkrxv7wjx8",
-            "target": "ku5xxdl5w5"
+            "id": "1tf1yg6iws",
+            "source": "kv92a3jme6",
+            "target": "r6gwuhupov"
           },
           "position": {
             "x": 0,
@@ -18116,9 +18460,9 @@
         },
         {
           "data": {
-            "id": "frk6i60sgh",
-            "source": "nznr1jh1uc",
-            "target": "5xulgbf7k6"
+            "id": "c44jvdtzvj",
+            "source": "09ispgboo9",
+            "target": "cthqitfpqc"
           },
           "position": {
             "x": 0,
@@ -18713,9 +19057,9 @@
         },
         {
           "data": {
-            "id": "0ooz6rieb3",
-            "source": "v2zq6lksck",
-            "target": "nkrxv7wjx8"
+            "id": "sri3fa59vo",
+            "source": "r6gwuhupov",
+            "target": "houvapn38b"
           },
           "position": {
             "x": 0,
@@ -18770,9 +19114,9 @@
         },
         {
           "data": {
-            "id": "xczbctbmum",
-            "source": "1uz3sknfru",
-            "target": "houvapn38b"
+            "id": "pjh0unm5ny",
+            "source": "uv0r8j88br",
+            "target": "zfwkrphbqo"
           },
           "position": {
             "x": 0,
@@ -20047,9 +20391,9 @@
         },
         {
           "data": {
-            "id": "pjh0unm5ny",
-            "source": "uv0r8j88br",
-            "target": "zfwkrphbqo"
+            "id": "lboous3he0",
+            "source": "nznr1jh1uc",
+            "target": "5xulgbf7k6"
           },
           "position": {
             "x": 0,
@@ -20066,9 +20410,66 @@
         },
         {
           "data": {
-            "id": "l2aaejp53z",
-            "source": "9ujfuwxncp",
-            "target": "uv0r8j88br"
+            "id": "eo2921ckvv",
+            "source": "v2zq6lksck",
+            "target": "ms81dwmx7b"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0urpjbfdqu",
+            "source": "ms81dwmx7b",
+            "target": "ume68u3qev"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xg2ak55xko",
+            "source": "ume68u3qev",
+            "target": "lmmgnkzwia"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "rhpynai4jm",
+            "source": "lmmgnkzwia",
+            "target": "ku5xxdl5w5"
           },
           "position": {
             "x": 0,
@@ -20141,7 +20542,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1724440031287,
+  "savedDate": 1725559930051,
   "variables": [
     {
       "context": "flowInstance",
@@ -20158,23 +20559,6 @@
       "type": "property",
       "visibility": "private",
       "name": "p1UserId##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1720639754826,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
-      "fields": {
-        "type": "object",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
-      "type": "property",
-      "visibility": "private",
-      "name": "mf-configObject##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -20535,6 +20919,23 @@
       "type": "property",
       "visibility": "private",
       "name": "IsActionReg##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1720639754826,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "object",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
+      "type": "property",
+      "visibility": "private",
+      "name": "mf-configObject##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
