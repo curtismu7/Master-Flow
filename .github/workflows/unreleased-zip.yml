@@ -33,8 +33,8 @@ jobs:
       - run: |
           RELEASE="${{ steps.version.outputs.version }}"
           RELEASE_TITLE="${{ steps.version.outputs.version }}"
-          gh release create $RELEASE --title $RELEASE_TITLE --notes "This is an alpha release" --prerelease -R curtismu7/Master-Flow
-          gh release upload $RELEASE ./terraform/tf-release.zip -R curtismu7/Master-Flow
+          gh release create $RELEASE-tech-enablement --title $RELEASE_TITLE-tech-enablement --notes "This is an early release of 2.0 so that Tech Enablement can begin implementing." --prerelease -R curtismu7/Master-Flow
+          gh release upload $RELEASE-tech-enablement ./terraform/tf-release.zip -R curtismu7/Master-Flow
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: stefanzweifel/git-auto-commit-action@v5
