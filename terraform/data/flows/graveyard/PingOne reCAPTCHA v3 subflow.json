@@ -8,8 +8,8 @@
     "annotationConnector",
     "errorConnector"
   ],
-  "createdDate": 1721837356767,
-  "currentVersion": 20,
+  "createdDate": 1725379502054,
+  "currentVersion": 22,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Tue Apr 30 2024 20:46:34 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -32,7 +32,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne reCAPTCHA v3 subflow",
-  "publishedVersion": 20,
+  "publishedVersion": 22,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -75,9 +75,9 @@
     "flowTimeoutInSeconds": 3600
   },
   "timeouts": "null",
-  "updatedDate": 1721837490723,
+  "updatedDate": 1725379784812,
   "flowId": "c768a672b7fc67ab842110a8bbaf4e1f",
-  "versionId": 20,
+  "versionId": 22,
   "graphData": {
     "elements": {
       "nodes": [
@@ -110,7 +110,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1680,
+            "x": 1747,
             "y": 510
           },
           "group": "nodes",
@@ -135,7 +135,7 @@
             }
           },
           "position": {
-            "x": 1500,
+            "x": 1567,
             "y": 510
           },
           "group": "nodes",
@@ -191,7 +191,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1380,
+            "x": 1447,
             "y": 510
           },
           "group": "nodes",
@@ -218,7 +218,7 @@
             }
           },
           "position": {
-            "x": 1800,
+            "x": 1867,
             "y": 510
           },
           "group": "nodes",
@@ -306,7 +306,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1080,
+            "x": 1147,
             "y": 510
           },
           "group": "nodes",
@@ -372,7 +372,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 480,
+            "x": 547,
             "y": 510
           },
           "group": "nodes",
@@ -395,7 +395,7 @@
             }
           },
           "position": {
-            "x": 600,
+            "x": 667,
             "y": 510
           },
           "group": "nodes",
@@ -421,14 +421,11 @@
               "backgroundColor": {
                 "value": "#9dc967ff"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
               "customCSS": {
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
               "customHTML": {
-                "value": "<div class=\"align-self-center\">\n    <!-- Polling component for real-time updates -->\n    <div data-skcomponent=\"skpolling\" data-skpollInterval=\"20\" data-skpollRetries=\"60\" data-skpollChallengeStatus=\"false\"></div>\n</div>\n\n<div class=\"end-user-nano\">\n    <!-- Main container for centering content -->\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <!-- Container with fixed width for the card -->\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5\">\n                <!-- Card body with padding and column layout -->\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                    <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Checkmark icon -->\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                            <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                        </svg>\n                    </div>\n\n                    <!-- Conditional textOne -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textTwo -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textThree -->\n                    {{#if textThree}}\n                    <p class=\"text-center fw-bold\">{{textThree}}</p>\n                    {{/if}}\n\n                    <!-- Generic Error Message -->\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    <!-- Conditional Submit Button -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\">\n                            {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "<div class=\"align-self-center\">\n    <!-- Polling component for real-time updates -->\n    <div data-skcomponent=\"skpolling\" data-skpollInterval=\"30\" data-skpollRetries=\"1\" data-skpollChallengeStatus=\"false\"></div>\n</div>\n\n<div class=\"end-user-nano\">\n    <!-- Main container for centering content -->\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <!-- Container with fixed width for the card -->\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5\">\n                <!-- Card body with padding and column layout -->\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                    <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Checkmark icon -->\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                            <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                        </svg>\n                    </div>\n\n                    <!-- Conditional textOne -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textTwo -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textThree -->\n                    {{#if textThree}}\n                    <p class=\"text-center fw-bold\">{{textThree}}</p>\n                    {{/if}}\n\n                    <!-- Generic Error Message -->\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    <!-- Conditional Submit Button -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\">\n                            {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {},
               "formFieldsList": {
@@ -485,7 +482,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1980,
+            "x": 2047,
             "y": 510
           },
           "group": "nodes",
@@ -575,7 +572,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1980,
+            "x": 2047,
             "y": 720
           },
           "group": "nodes",
@@ -625,7 +622,7 @@
             "type": "action"
           },
           "position": {
-            "x": 514,
+            "x": 581,
             "y": 214
           },
           "group": "nodes",
@@ -685,7 +682,7 @@
             "type": "action"
           },
           "position": {
-            "x": 274,
+            "x": 341,
             "y": 334
           },
           "group": "nodes",
@@ -743,7 +740,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 780,
+            "x": 847,
             "y": 510
           },
           "group": "nodes",
@@ -769,7 +766,7 @@
             }
           },
           "position": {
-            "x": 900,
+            "x": 967,
             "y": 510
           },
           "group": "nodes",
@@ -854,7 +851,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1080,
+            "x": 1147,
             "y": 720
           },
           "group": "nodes",
@@ -914,7 +911,7 @@
             "type": "action"
           },
           "position": {
-            "x": 214,
+            "x": 281,
             "y": 274
           },
           "group": "nodes",
@@ -933,7 +930,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2100,
+            "x": 2167,
             "y": 510
           },
           "group": "nodes",
@@ -966,7 +963,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2280,
+            "x": 2347,
             "y": 510
           },
           "group": "nodes",
@@ -992,7 +989,7 @@
             }
           },
           "position": {
-            "x": 2130,
+            "x": 2197,
             "y": 720
           },
           "group": "nodes",
@@ -1025,7 +1022,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2310,
+            "x": 2377,
             "y": 720
           },
           "group": "nodes",
@@ -1055,7 +1052,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1680,
+            "x": 1747,
             "y": 600
           },
           "group": "nodes",
@@ -1073,7 +1070,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1230,
+            "x": 1297,
             "y": 510
           },
           "group": "nodes",
@@ -1123,7 +1120,7 @@
             "status": "configured"
           },
           "position": {
-            "x": 244,
+            "x": 311,
             "y": 394
           },
           "group": "nodes",
@@ -1180,7 +1177,7 @@
             "idUnique": "o2v5xhdcbc"
           },
           "position": {
-            "x": 244,
+            "x": 311,
             "y": 214
           },
           "group": "nodes",
@@ -1199,7 +1196,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 330,
+            "x": 397,
             "y": 510
           },
           "group": "nodes",
@@ -1241,7 +1238,7 @@
             }
           },
           "position": {
-            "x": 210,
+            "x": 277,
             "y": 510
           },
           "group": "nodes",
@@ -1645,7 +1642,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1721837356675,
+  "savedDate": 1725379501922,
   "variables": [
     {
       "context": "flowInstance",

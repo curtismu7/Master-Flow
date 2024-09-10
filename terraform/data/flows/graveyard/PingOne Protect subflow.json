@@ -15,8 +15,8 @@
     "stringsConnector",
     "pingOneMfaConnector"
   ],
-  "createdDate": 1724087723168,
-  "currentVersion": 642,
+  "createdDate": 1725639078209,
+  "currentVersion": 691,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Wed May 22 2024 23:22:16 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -102,31 +102,28 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 642,
+  "publishedVersion": 691,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
-    "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    height: 65px;\n    width: fit-content;\n}\n",
-    "cssLinks": [
-      "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",
-      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css"
-    ],
+    "intermediateLoadingScreenHTML": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Device Lookup</title>\n</head>\n<body>\n    <div style=\"text-align: center; margin-top: 20%;\">\n        <h1>Loading your Risk score, please wait...</h1>\n    </div>\n</body>\n</html>",
+    "css": "/* .companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    height: 65px;\n    width: fit-content;\n} */\n\n/* Highlight every other row starting from the second row */\n.table-striped tbody tr:nth-child(2n) {\n    background-color: #f2f2f2; /* Light grey background */\n}\n\n/* Additional highlighting for clarity if desired */\n.highlight {\n    background-color: #e9ecef; /* Slightly darker grey */\n}\n",
+    "cssLinks": [],
     "customFaviconLink": " https://console.pingone.com/davinci/favicon-davinci.png",
     "customTitle": "PingOne Protect",
-    "logLevel": 1,
+    "logLevel": 3,
     "pingOneFlow": false,
     "useCustomCSS": true,
     "flowTimeoutInSeconds": 3600,
     "defaultErrorScreenBrandLogo": true,
     "customLogoURLSelection": 2,
-    "customErrorShowFooter": false
+    "customErrorShowFooter": false,
+    "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1724087725148,
+  "updatedDate": 1725643983397,
   "flowId": "3a1bf218079b8a6c594c3a4beb29f1fa",
-  "versionId": 642,
+  "versionId": 691,
   "graphData": {
     "elements": {
       "nodes": [
@@ -167,7 +164,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2660.0777984844804,
+            "x": 2674.0777984844804,
             "y": 2558.1115219914
           },
           "group": "nodes",
@@ -200,7 +197,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1715.009283047122,
+            "x": 1729.009283047122,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -258,7 +255,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 688.8773758647542,
+            "x": 277,
             "y": 540
           },
           "group": "nodes",
@@ -305,7 +302,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3537.144606024389,
+            "x": 3551.144606024389,
             "y": 2387.5707538586403
           },
           "group": "nodes",
@@ -324,7 +321,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2781.892632865023,
+            "x": 2795.892632865023,
             "y": 2728.65229012416
           },
           "group": "nodes",
@@ -387,7 +384,7 @@
             "type": "action"
           },
           "position": {
-            "x": 901.5983182166271,
+            "x": 915.5983182166271,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -419,10 +416,10 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Return to Authetication\"\n      }\n    ]\n  }\n]"
               },
               "customCSS": {
-                "value": "\nhtml {\n  font-family: sans-serif;\n}\n\n\ncaption {\n  padding: 10px;\n}\n.companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n  }\n\n.mainDiv {\n    max-width: 700px; \n    min-width: 700px;\n    width: 100%\n}\n\n/* Break out into individual classes as needed */\n.magicLinkDiv,\n.otpDiv,\n.successDiv,\n.totpDiv,\n.registrationDiv{\n    max-width: 400px; \n    min-width: 400px;\n    width: 100%\n}\n\n.deviceSelectionDiv {\n    max-width: 500px; \n    min-width: 500px;\n    width: 100%\n}\n\n.signInDiv {\n      align-items: center;\n    display: flex;\n    width: fit-content;\n}\n    @media (min-width: 768px) {\n        .custom-container {\n            max-width: 500px; /* Reduced width for larger screens */\n        }\n        .custom-card {\n            padding: 2rem;\n        }\n        .custom-heading {\n            font-size: 2rem;\n        }\n        .custom-subheading {\n            font-size: 1.5rem;\n        }\n    }\n \n .custom-table {\n    width: 80%;\n    border-collapse: collapse;\n    margin: 20px 20px;\n    font-size: 16px;\n    text-align: left;\n    align-self: center;\n}\n\n    .custom-table th, .custom-table td {\n        padding: 12px 15px;\n        border: 1px solid #ddd;\n    }\n\n    .custom-table th {\n        background-color: #f4f4f4;\n        font-weight: bold;\n        color: #333;\n    }\n\n    /* Set different background colors for even and odd rows */\n    .custom-table tbody tr:nth-child(odd) {\n        background-color: #f9f9f9; /* Light gray for odd rows */\n    }\n\n    .custom-table tbody tr:nth-child(even) {\n        background-color: #e9e9e9; /* Slightly darker gray for even rows */\n    }\n\n    .custom-table td {\n        font-weight: bold;\n        color: #444;\n        transition: background-color 0.3s ease;\n    }\n\n    .card {\n        max-width: 600px !important;\n    }"
+                "value": "\nhtml {\n  font-family: sans-serif;\n}\n\n\ncaption {\n  padding: 10px;\n}\n/* .companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n  } */\n\n.mainDiv {\n    max-width: 700px; \n    min-width: 700px;\n    width: 100%\n}\n\n/* Break out into individual classes as needed */\n.magicLinkDiv,\n.otpDiv,\n.successDiv,\n.totpDiv,\n.registrationDiv{\n    max-width: 400px; \n    min-width: 400px;\n    width: 100%\n}\n\n.deviceSelectionDiv {\n    max-width: 500px; \n    min-width: 500px;\n    width: 100%\n}\n\n.signInDiv {\n      align-items: center;\n    display: flex;\n    width: fit-content;\n}\n    @media (min-width: 768px) {\n        .custom-container {\n            max-width: 500px; /* Reduced width for larger screens */\n        }\n        .custom-card {\n            padding: 2rem;\n        }\n        .custom-heading {\n            font-size: 2rem;\n        }\n        .custom-subheading {\n            font-size: 1.5rem;\n        }\n    }\n \n .custom-table {\n    width: 80%;\n    border-collapse: collapse;\n    margin: 20px 20px;\n    font-size: 16px;\n    text-align: left;\n    align-self: center;\n}\n\n    .custom-table th, .custom-table td {\n        padding: 12px 15px;\n        border: 1px solid #ddd;\n    }\n\n    .custom-table th {\n        background-color: #f4f4f4;\n        font-weight: bold;\n        color: #333;\n    }\n\n    /* Set different background colors for even and odd rows */\n    .custom-table tbody tr:nth-child(odd) {\n        background-color: #f9f9f9; /* Light gray for odd rows */\n    }\n\n    .custom-table tbody tr:nth-child(even) {\n        background-color: #e9e9e9; /* Slightly darker gray for even rows */\n    }\n\n    .custom-table td {\n        font-weight: bold;\n        color: #444;\n        transition: background-color 0.3s ease;\n    }\n\n    .card {\n        max-width: 600px !important;\n    }"
               },
               "customHTML": {
-                "value": "<!-- Main container for centering content -->\n<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n          <div style=\"max-width: 600px; width: 100%\">\n        <!-- Container with wider responsive width for the card -->\n        <div class=\"container custom-container\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5 custom-card\">\n                <!-- Main content area -->\n                <main aria-labelledby=\"title\">\n                    <!-- Card body with padding and column layout -->\n                    <div class=\"card-body p-5 d-flex flex-column\">\n                        <!-- Company logo -->\n                        <img class=\"companyLogo align-self-center mb-4 img-fluid\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                        <!-- Conditional title -->\n                        {{#if title}}\n                        <h1 class=\"text-center mb-4 custom-heading\">{{title}}</h1>\n                        {{/if}}\n\n                        <!-- Conditional textOne -->\n                        {{#if textOne}}\n                        <p class=\"text-muted text-center custom-subheading\">{{textOne}}</p>\n                        {{/if}}\n\n                        <!-- Conditional textTwo -->\n                        {{#if textTwo}}\n                        <p class=\"text-muted text-center\"><strong>{{textTwo}}</strong></p>\n                        {{/if}}\n\n                        <!-- Blank line -->\n                        <p>&nbsp;</p>\n\n                        <!-- Generic Error Message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n                            data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                        <!-- Conditional risk level or score -->\n                        {{#if fakeLevel}}\n                        <h3 class=\"heading branding-template-heading text-center \"\n                            style=\"color:green; margin-top: 10px; margin-bottom: 10px;\">\n                            Risk Level = {{global.variables.mf-configObject.p1Protect.mf-str-fakeRiskLevel}}\n                        </h3>\n                        {{else}}\n                        <p class=\"heading branding-template-heading text-center \"\n                            style=\"color:green; margin-top: 30px; margin-bottom: 10px;\">\n                            Risk Level =\n                            {{global.variables.riskLevel}}\n                        </p>\n                        {{/if}}\n                        <!-- \n                        <p class=\"heading branding-template-heading text-center custom-subheading\"\n                            style=\"color:red; margin-bottom: 10px;\">\n                            Risk Source = {{global.variables.riskSource}}\n                        </p> -->\n                        <p class=\"text-center\" style=\"color:red; margin-bottom: 10px;\"> Risk Source =\n                            {{global.variables.riskSource}}</p>\n\n                        <!-- IP address -->\n                        <!-- <p class=\"heading branding-template-heading text-center custom-subheading\"\n                            style=\"color:blue; margin-bottom: 30px;\">\n                            IP Address =\n                            {{global.variables.ipAddress}}\n                        </p> -->\n                        <p class=\"text-center\" style=\"color:blue; margin-bottom: 10px;\"> IP Address =\n                            {{global.variables.ipAddress}}\n                        </p>\n\n                        <!-- Information table -->\n                        <table class=\"custom-table\">\n                            <thead>\n                                <tr>\n                                    <th>Anonymous Network</th>\n                                    <th>Impossible Travel</th>\n                                    <th>IP Address Reputation</th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.anonymousNetworkDetected}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.impossibleTravel}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipRisk.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <th>ISP</th>\n                                    <th>IP Velocity by User</th>\n                                    <th>IP Velocity by IP</th>\n                                </tr>\n                                <tr>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipVelocityByUser.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.userVelocityByIp.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <th>User Risk Behavior</th>\n                                    <th>Bot Detection</th>\n                                    <th>Suspicious Device</th>\n                                </tr>\n                                <tr>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.userBasedRiskBehavior.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.botDetection.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.suspiciousDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <th>New Device</th>\n                                    <th>Device Reason</th>\n                                    <th>Device Status</th>\n                                </tr>\n                                <tr>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.reason}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}\n                                    </td>\n                                    <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.status}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}\n                                    </td>\n                                </tr>\n                            </tbody>\n                        </table>\n\n                        <!-- Form with buttons -->\n                        <form class=\"form\" style=\"margin-top: 30px; margin-bottom: 25px\" id='riskForm'\n                            data-id=\"riskForm\">\n                            <div class=\"control text-center\">\n                                {{#if buttonLabel}}\n                                <div class=\"d-flex flex-column\">\n                                    <button class=\"btn btn-primary mb-3\" data-id=\"continueBtn\" type=\"submit\" id=\"continueBtn\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\" data-skbuttonvalue=\"CONTINUE\">\n                                        {{buttonLabel}}\n                                    </button>\n                                </div>\n                                {{/if}}\n                                {{#if buttonLabel2}}\n                                <div class=\"d-flex flex-column\">\n                                    <button class=\"btn btn-link mb-3\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\" data-skbuttonvalue=\"RETURN\">\n                                        {{buttonLabel2}}\n                                    </button>\n                                </div>\n                                {{/if}}\n                            </div>\n                        </form>\n                    </div>\n                </main>\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "<!-- Main container for centering content -->\n<div class=\"end-user-nano\">\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"container custom-container\" style=\"max-width: 600px; width: 100%;\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5 custom-card\">\n                <main aria-labelledby=\"title\">\n                    <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n                        <!-- Company logo (Smaller) -->\n                        <img class=\"companyLogo mb-4 img-fluid\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" style=\"max-width: 100px; height: auto;\"/>\n\n                        <!-- Conditional title -->\n                        {{#if title}}\n                        <h1 class=\"text-center mb-4 custom-heading\">{{title}}</h1>\n                        {{/if}}\n\n                        <!-- Conditional textOne -->\n                        {{#if textOne}}\n                        <p class=\"text-muted text-center custom-subheading\">{{textOne}}</p>\n                        {{/if}}\n\n                        <!-- Conditional textTwo -->\n                        {{#if textTwo}}\n                        <p class=\"text-muted text-center font-weight-bold\">{{textTwo}}</p>\n                        {{/if}}\n\n                        <!-- Error Message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                        <!-- Risk Level -->\n                        {{#if fakeLevel}}\n                        <h3 class=\"text-center text-success my-3\">Risk Level = {{global.variables.mf-configObject.p1Protect.mf-str-fakeRiskLevel}}</h3>\n                        {{else}}\n                        <p class=\"text-center text-success my-4\">Risk Level = {{global.variables.riskLevel}}</p>\n                        {{/if}}\n\n                        <!-- Risk Source -->\n                        <p class=\"text-center text-danger mb-3\">Risk Source = {{global.variables.riskSource}}</p>\n\n                        <!-- IP address -->\n                        <p class=\"text-center text-primary mb-4\">IP Address = {{global.variables.ipAddress}}</p>\n\n                        <!-- Information table -->\n                        <div class=\"table-responsive\">\n                            <table class=\"table table-striped custom-table\">\n                                <thead>\n                                    <tr>\n                                        <th>Anonymous Network</th>\n                                        <th>Impossible Travel</th>\n                                        <th>IP Address Reputation</th>\n                                    </tr>\n                                </thead>\n                                <tbody>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.anonymousNetworkDetected}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.impossibleTravel}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipRisk.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}</td>\n                                    </tr>\n                                    <tr class=\"highlight\">\n                                        <th>ISP</th>\n                                        <th>IP Velocity by User</th>\n                                        <th>IP Velocity by IP</th>\n                                    </tr>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipVelocityByUser.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.userVelocityByIp.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}</td>\n                                    </tr>\n                                    <tr class=\"highlight\">\n                                        <th>User Risk Behavior</th>\n                                        <th>Bot Detection</th>\n                                        <th>Suspicious Device</th>\n                                    </tr>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.userBasedRiskBehavior.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.botDetection.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.suspiciousDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}</td>\n                                    </tr>\n                                    <tr class=\"highlight\">\n                                        <th>New Device</th>\n                                        <th>Device Reason</th>\n                                        <th>Device Status</th>\n                                    </tr>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.reason}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.status}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n\n                        <!-- Form with buttons -->\n                        <form class=\"form mt-4 mb-4\" id='riskForm' data-id=\"riskForm\">\n                            <div class=\"text-center\">\n                                <!-- Continue button on top -->\n                                {{#if buttonLabel}}\n                                <button class=\"btn btn-primary mb-3\" data-id=\"continueBtn\" type=\"submit\" id=\"continueBtn\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\" data-skbuttonvalue=\"CONTINUE\">\n                                    {{buttonLabel}}\n                                </button>\n                                {{/if}}\n\n                                <!-- Return to Authentication button below -->\n                                {{#if buttonLabel2}}\n                                <button class=\"btn btn-link mb-3\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\" data-skbuttonvalue=\"RETURN\">\n                                    {{buttonLabel2}}\n                                </button>\n                                {{/if}}\n                            </div>\n                        </form>\n                    </div>\n                </main>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "fakeLevel": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1Protect.mf-str-fakeRiskLevel}}\"\n      }\n    ]\n  }\n]"
@@ -470,7 +467,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1685.559123440137,
+            "x": 1699.559123440137,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -517,7 +514,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1258.8773758647542,
+            "x": 1272.8773758647542,
             "y": 1650
           },
           "group": "nodes",
@@ -564,7 +561,7 @@
             "type": "action"
           },
           "position": {
-            "x": 929.6760069206923,
+            "x": 943.6760069206923,
             "y": 344.69566267703794
           },
           "group": "nodes",
@@ -608,7 +605,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3902.5891091660174,
+            "x": 3916.5891091660174,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -634,7 +631,7 @@
             }
           },
           "position": {
-            "x": 3390.9668047677374,
+            "x": 3404.9668047677374,
             "y": 2558.1115219914
           },
           "group": "nodes",
@@ -667,7 +664,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3610.2335066527144,
+            "x": 3624.2335066527144,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -685,7 +682,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3756.411307909366,
+            "x": 3770.411307909366,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -735,7 +732,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1034.2325370623228,
+            "x": 1048.2325370623228,
             "y": 214
           },
           "group": "nodes",
@@ -791,7 +788,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1374.0412600226214,
+            "x": 1388.0412600226214,
             "y": 423.1130602832607
           },
           "group": "nodes",
@@ -836,7 +833,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3001.15933475,
+            "x": 3015.15933475,
             "y": 2899.1930582569203
           },
           "group": "nodes",
@@ -892,7 +889,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2172.818460962309,
+            "x": 2186.818460962309,
             "y": 2314.4818532303143
           },
           "group": "nodes",
@@ -948,7 +945,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3366.6038378916287,
+            "x": 3380.6038378916287,
             "y": 2290.1188863542056
           },
           "group": "nodes",
@@ -1004,7 +1001,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1152.9653139863326,
+            "x": 1166.9653139863326,
             "y": 1686.1319071823677
           },
           "group": "nodes",
@@ -1023,7 +1020,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1856.0998915728971,
+            "x": 1870.0998915728971,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -1068,7 +1065,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2026.640659705657,
+            "x": 2040.640659705657,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -1087,7 +1084,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2172.818460962309,
+            "x": 2186.818460962309,
             "y": 2606.8374557436173
           },
           "group": "nodes",
@@ -1132,7 +1129,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2392.085162847286,
+            "x": 2406.085162847286,
             "y": 2679.926356371943
           },
           "group": "nodes",
@@ -1162,7 +1159,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 958.8773758647542,
+            "x": 972.8773758647542,
             "y": 3540
           },
           "group": "nodes",
@@ -1209,7 +1206,7 @@
             "type": "action"
           },
           "position": {
-            "x": 570.7363578168813,
+            "x": 584.7363578168813,
             "y": 3395.6823130756015
           },
           "group": "nodes",
@@ -1232,7 +1229,7 @@
             }
           },
           "position": {
-            "x": 1078.8773758647542,
+            "x": 1092.8773758647542,
             "y": 3540
           },
           "group": "nodes",
@@ -1277,7 +1274,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1288.8773758647542,
+            "x": 1302.8773758647542,
             "y": 3540
           },
           "group": "nodes",
@@ -1310,7 +1307,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1738.8773758647542,
+            "x": 1752.8773758647542,
             "y": 3540
           },
           "group": "nodes",
@@ -1336,7 +1333,7 @@
             }
           },
           "position": {
-            "x": 1408.8773758647542,
+            "x": 1422.8773758647542,
             "y": 3540
           },
           "group": "nodes",
@@ -1369,7 +1366,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2068.8773758647544,
+            "x": 2082.8773758647544,
             "y": 3540
           },
           "group": "nodes",
@@ -1392,7 +1389,7 @@
             }
           },
           "position": {
-            "x": 1858.8773758647542,
+            "x": 1872.8773758647542,
             "y": 3540
           },
           "group": "nodes",
@@ -1437,7 +1434,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2128.8773758647544,
+            "x": 2142.8773758647544,
             "y": 3660
           },
           "group": "nodes",
@@ -1482,7 +1479,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2392.085162847286,
+            "x": 2406.085162847286,
             "y": 2826.1041576285943
           },
           "group": "nodes",
@@ -1500,7 +1497,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2172.818460962309,
+            "x": 2186.818460962309,
             "y": 2679.926356371943
           },
           "group": "nodes",
@@ -1544,7 +1541,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1828.8773758647542,
+            "x": 1842.8773758647542,
             "y": 3690
           },
           "group": "nodes",
@@ -1583,7 +1580,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1691.5907843362556,
+            "x": 1705.5907843362556,
             "y": 1405.109922651973
           },
           "group": "nodes",
@@ -1609,7 +1606,7 @@
             }
           },
           "position": {
-            "x": 1832.101776601453,
+            "x": 1846.101776601453,
             "y": 1405.109922651973
           },
           "group": "nodes",
@@ -1651,7 +1648,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1996.0312675775165,
+            "x": 2010.0312675775165,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -1680,7 +1677,7 @@
             }
           },
           "position": {
-            "x": 2183.3792572644466,
+            "x": 2197.3792572644466,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -1719,7 +1716,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2019.4497662883825,
+            "x": 2033.4497662883825,
             "y": 1358.2729252302406
           },
           "group": "nodes",
@@ -1766,7 +1763,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3213.79320054256,
+            "x": 3227.79320054256,
             "y": 3887.470786003792
           },
           "group": "nodes",
@@ -1796,7 +1793,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3296.873697862341,
+            "x": 3310.873697862341,
             "y": 4036.9366330558423
           },
           "group": "nodes",
@@ -1815,7 +1812,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3434.1844676941723,
+            "x": 3448.1844676941723,
             "y": 4036.9366330558423
           },
           "group": "nodes",
@@ -1848,7 +1845,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3598.95739149237,
+            "x": 3612.95739149237,
             "y": 4036.9366330558423
           },
           "group": "nodes",
@@ -1941,7 +1938,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3928.503239088765,
+            "x": 3942.503239088765,
             "y": 4036.9366330558423
           },
           "group": "nodes",
@@ -1959,7 +1956,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3763.7303152905674,
+            "x": 3777.7303152905674,
             "y": 4036.9366330558423
           },
           "group": "nodes",
@@ -1978,7 +1975,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4065.8140089205967,
+            "x": 4079.8140089205967,
             "y": 4036.9366330558423
           },
           "group": "nodes",
@@ -2022,7 +2019,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4230.586932718794,
+            "x": 4244.586932718794,
             "y": 4036.9366330558423
           },
           "group": "nodes",
@@ -2064,7 +2061,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1768.8773758647542,
+            "x": 1782.8773758647542,
             "y": 540
           },
           "group": "nodes",
@@ -2090,7 +2087,7 @@
             }
           },
           "position": {
-            "x": 1918.8773758647542,
+            "x": 1932.8773758647542,
             "y": 540
           },
           "group": "nodes",
@@ -2132,7 +2129,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2722.0047276143696,
+            "x": 2736.0047276143696,
             "y": 1358.2729252302406
           },
           "group": "nodes",
@@ -2162,7 +2159,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3049.8637095664963,
+            "x": 3063.8637095664963,
             "y": 1358.2729252302406
           },
           "group": "nodes",
@@ -2207,7 +2204,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3342.24087101552,
+            "x": 3356.24087101552,
             "y": 2850.467124504703
           },
           "group": "nodes",
@@ -2236,7 +2233,7 @@
             }
           },
           "position": {
-            "x": 3537.144606024389,
+            "x": 3551.144606024389,
             "y": 2850.467124504703
           },
           "group": "nodes",
@@ -2283,7 +2280,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1621.335288203657,
+            "x": 1635.335288203657,
             "y": 772.8104574585851
           },
           "group": "nodes",
@@ -2313,7 +2310,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1715.009283047122,
+            "x": 1729.009283047122,
             "y": 913.3214497237825
           },
           "group": "nodes",
@@ -2332,7 +2329,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1808.6832778905866,
+            "x": 1822.6832778905866,
             "y": 913.3214497237825
           },
           "group": "nodes",
@@ -2377,7 +2374,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2019.4497662883825,
+            "x": 2033.4497662883825,
             "y": 913.3214497237825
           },
           "group": "nodes",
@@ -2401,7 +2398,7 @@
             }
           },
           "position": {
-            "x": 2136.542259842714,
+            "x": 2150.542259842714,
             "y": 913.3214497237825
           },
           "group": "nodes",
@@ -2450,7 +2447,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2300.4717508187773,
+            "x": 2314.4717508187773,
             "y": 913.3214497237825
           },
           "group": "nodes",
@@ -2492,7 +2489,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2300.4717508187773,
+            "x": 2314.4717508187773,
             "y": 1053.8324419889798
           },
           "group": "nodes",
@@ -2511,7 +2508,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2464.401241794841,
+            "x": 2478.401241794841,
             "y": 913.3214497237825
           },
           "group": "nodes",
@@ -2536,7 +2533,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2604.9122340600384,
+            "x": 2618.9122340600384,
             "y": 913.3214497237825
           },
           "group": "nodes",
@@ -2561,7 +2558,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2604.9122340600384,
+            "x": 2618.9122340600384,
             "y": 1053.8324419889798
           },
           "group": "nodes",
@@ -2579,7 +2576,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2464.401241794841,
+            "x": 2478.401241794841,
             "y": 1053.8324419889798
           },
           "group": "nodes",
@@ -2612,7 +2609,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2998.8773758647544,
+            "x": 3012.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -2645,7 +2642,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3269.1519703871945,
+            "x": 3283.1519703871945,
             "y": 2436.296687610857
           },
           "group": "nodes",
@@ -2678,7 +2675,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4048.8773758647544,
+            "x": 4062.8773758647544,
             "y": 3270
           },
           "group": "nodes",
@@ -2696,7 +2693,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2781.892632865023,
+            "x": 2795.892632865023,
             "y": 2582.4744888675086
           },
           "group": "nodes",
@@ -2714,7 +2711,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3390.9668047677374,
+            "x": 3404.9668047677374,
             "y": 2411.9337207347485
           },
           "group": "nodes",
@@ -2799,7 +2796,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2394.1457456622425,
+            "x": 2408.1457456622425,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -2817,7 +2814,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2534.6567379274397,
+            "x": 2548.6567379274397,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -2890,7 +2887,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2728.8773758647544,
+            "x": 2742.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -2908,7 +2905,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2848.8773758647544,
+            "x": 2862.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -2954,7 +2951,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2698.586228903503,
+            "x": 2712.586228903503,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -2985,7 +2982,7 @@
             "idUnique": "uw8xnpyw3j"
           },
           "position": {
-            "x": 1271.3886865462914,
+            "x": 1285.3886865462914,
             "y": 2338.844820106423
           },
           "group": "nodes",
@@ -3018,7 +3015,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2417.5642443731085,
+            "x": 2431.5642443731085,
             "y": 1943.735393001896
           },
           "group": "nodes",
@@ -3064,7 +3061,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2979.6082134338976,
+            "x": 2993.6082134338976,
             "y": 1943.735393001896
           },
           "group": "nodes",
@@ -3082,7 +3079,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2839.0972211687003,
+            "x": 2853.0972211687003,
             "y": 1943.735393001896
           },
           "group": "nodes",
@@ -3128,7 +3125,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3026.44521085563,
+            "x": 3040.44521085563,
             "y": 2037.409387845361
           },
           "group": "nodes",
@@ -3146,7 +3143,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2862.515719879567,
+            "x": 2876.515719879567,
             "y": 2037.409387845361
           },
           "group": "nodes",
@@ -3165,7 +3162,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2781.892632865023,
+            "x": 2795.892632865023,
             "y": 2679.926356371943
           },
           "group": "nodes",
@@ -3207,7 +3204,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3001.15933475,
+            "x": 3015.15933475,
             "y": 2704.2893232480515
           },
           "group": "nodes",
@@ -3231,7 +3228,7 @@
             }
           },
           "position": {
-            "x": 3178.8773758647544,
+            "x": 3192.8773758647544,
             "y": 2700
           },
           "group": "nodes",
@@ -3262,7 +3259,7 @@
             "idUnique": "gfqutrb85g"
           },
           "position": {
-            "x": 3328.8773758647544,
+            "x": 3342.8773758647544,
             "y": 2700
           },
           "group": "nodes",
@@ -3285,7 +3282,7 @@
             }
           },
           "position": {
-            "x": 3448.8773758647544,
+            "x": 3462.8773758647544,
             "y": 2700
           },
           "group": "nodes",
@@ -3328,7 +3325,7 @@
             "idUnique": "bbkuh6xlpt"
           },
           "position": {
-            "x": 1393.2035209268342,
+            "x": 1407.2035209268342,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -3376,7 +3373,7 @@
             "idUnique": "ku1m2qf2b3"
           },
           "position": {
-            "x": 962.5906107212074,
+            "x": 976.5906107212074,
             "y": 2196.9723173093016
           },
           "group": "nodes",
@@ -3402,7 +3399,7 @@
             }
           },
           "position": {
-            "x": 1539.3813221834857,
+            "x": 1553.3813221834857,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -3421,7 +3418,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1149.5738521657486,
+            "x": 1163.5738521657486,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -3451,7 +3448,7 @@
             }
           },
           "position": {
-            "x": 1052.1219846613142,
+            "x": 1066.1219846613142,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -3470,7 +3467,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2839.0972211687003,
+            "x": 2853.0972211687003,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -3500,7 +3497,7 @@
             }
           },
           "position": {
-            "x": 2979.6082134338976,
+            "x": 2993.6082134338976,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -3557,7 +3554,7 @@
             "idUnique": "o2v5xhdcbc"
           },
           "position": {
-            "x": 720.5629466374317,
+            "x": 734.5629466374317,
             "y": 214
           },
           "group": "nodes",
@@ -3575,7 +3572,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1271.3886865462914,
+            "x": 1285.3886865462914,
             "y": 2436.296687610857
           },
           "group": "nodes",
@@ -3594,7 +3591,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 808.8773758647542,
+            "x": 397,
             "y": 540
           },
           "group": "nodes",
@@ -3682,7 +3679,7 @@
             }
           },
           "position": {
-            "x": 958.8773758647542,
+            "x": 577,
             "y": 540
           },
           "group": "nodes",
@@ -3737,7 +3734,7 @@
             "idUnique": "oltyk02fvp"
           },
           "position": {
-            "x": 4050,
+            "x": 4064,
             "y": 2850
           },
           "group": "nodes",
@@ -3794,7 +3791,7 @@
             "idUnique": "4kxjd3e9to"
           },
           "position": {
-            "x": 1563.7442890595942,
+            "x": 1577.7442890595942,
             "y": 2363.2077869825316
           },
           "group": "nodes",
@@ -3812,7 +3809,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2172.818460962309,
+            "x": 2186.818460962309,
             "y": 2460.659654486966
           },
           "group": "nodes",
@@ -3851,7 +3848,7 @@
             }
           },
           "position": {
-            "x": 2343.3592290950687,
+            "x": 2357.3592290950687,
             "y": 2411.9337207347485
           },
           "group": "nodes",
@@ -3874,7 +3871,7 @@
             }
           },
           "position": {
-            "x": 2465.1740634756115,
+            "x": 2479.1740634756115,
             "y": 2460.659654486966
           },
           "group": "nodes",
@@ -3905,7 +3902,7 @@
             "idUnique": "u3brbs0mxl"
           },
           "position": {
-            "x": 293.33826748653394,
+            "x": 307.33826748653394,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -3931,7 +3928,7 @@
             }
           },
           "position": {
-            "x": 2518.8773758647544,
+            "x": 2532.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -3961,7 +3958,7 @@
             }
           },
           "position": {
-            "x": 2610,
+            "x": 2624,
             "y": 720
           },
           "group": "nodes",
@@ -4001,7 +3998,7 @@
             "idUnique": "urxky7hvie"
           },
           "position": {
-            "x": 1536.3044581088984,
+            "x": 1550.3044581088984,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -4035,7 +4032,7 @@
             "idUnique": "hl0sxb1jfm"
           },
           "position": {
-            "x": 2726.378470406907,
+            "x": 2740.378470406907,
             "y": 4469.389068408077
           },
           "group": "nodes",
@@ -4075,7 +4072,7 @@
             "idUnique": "lzger1aj3a"
           },
           "position": {
-            "x": 1800.765349730678,
+            "x": 1814.765349730678,
             "y": 4152.035998461941
           },
           "group": "nodes",
@@ -4101,7 +4098,7 @@
             }
           },
           "position": {
-            "x": 1642.0888147576104,
+            "x": 1656.0888147576104,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -4149,7 +4146,7 @@
             "idUnique": "s6vn1xt9sr"
           },
           "position": {
-            "x": 214,
+            "x": 228,
             "y": 3914.0211960023394
           },
           "group": "nodes",
@@ -4194,7 +4191,7 @@
             "idUnique": "ozc952pshb"
           },
           "position": {
-            "x": 1853.6575280550342,
+            "x": 1867.6575280550342,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -4239,7 +4236,7 @@
             "idUnique": "f1pcyt3n3w"
           },
           "position": {
-            "x": 2594.1480245960174,
+            "x": 2608.1480245960174,
             "y": 4284.266444272831
           },
           "group": "nodes",
@@ -4262,7 +4259,7 @@
             }
           },
           "position": {
-            "x": 2409.025400460772,
+            "x": 2423.025400460772,
             "y": 4284.266444272831
           },
           "group": "nodes",
@@ -4301,7 +4298,7 @@
             "idUnique": "g9fybbwj88"
           },
           "position": {
-            "x": 610.6913374326696,
+            "x": 624.6913374326696,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -4319,7 +4316,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 399.1226241352458,
+            "x": 413.1226241352458,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -4337,7 +4334,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 716.4756940813813,
+            "x": 730.4756940813813,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -4427,7 +4424,7 @@
             "idUnique": "eqn5ledc0s"
           },
           "position": {
-            "x": 4348.877375864754,
+            "x": 4362.877375864754,
             "y": 3060
           },
           "group": "nodes",
@@ -4473,7 +4470,7 @@
             "idUnique": "09pewel1ny"
           },
           "position": {
-            "x": 3748.8773758647544,
+            "x": 3762.8773758647544,
             "y": 3060
           },
           "group": "nodes",
@@ -4496,7 +4493,7 @@
             }
           },
           "position": {
-            "x": 3898.8773758647544,
+            "x": 3912.8773758647544,
             "y": 3060
           },
           "group": "nodes",
@@ -4514,7 +4511,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2781.892632865023,
+            "x": 2795.892632865023,
             "y": 2631.200422619726
           },
           "group": "nodes",
@@ -4559,7 +4556,7 @@
             "idUnique": "zv3xy1e3us"
           },
           "position": {
-            "x": 3537.144606024389,
+            "x": 3551.144606024389,
             "y": 2606.8374557436173
           },
           "group": "nodes",
@@ -4582,7 +4579,7 @@
             }
           },
           "position": {
-            "x": 4170,
+            "x": 4184,
             "y": 2850
           },
           "group": "nodes",
@@ -4616,7 +4613,7 @@
             "idUnique": "fxqp8n9chh"
           },
           "position": {
-            "x": 4380,
+            "x": 4394,
             "y": 2850
           },
           "group": "nodes",
@@ -4661,7 +4658,7 @@
             "idUnique": "1kgagqplam"
           },
           "position": {
-            "x": 3598.8773758647544,
+            "x": 3612.8773758647544,
             "y": 2700
           },
           "group": "nodes",
@@ -4706,7 +4703,7 @@
             "idUnique": "c2izazrtjx"
           },
           "position": {
-            "x": 4650,
+            "x": 4664,
             "y": 2850
           },
           "group": "nodes",
@@ -4724,7 +4721,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4470,
+            "x": 4484,
             "y": 2850
           },
           "group": "nodes",
@@ -4769,7 +4766,7 @@
             "idUnique": "qo3wwxz3j8"
           },
           "position": {
-            "x": 4410,
+            "x": 4424,
             "y": 2940
           },
           "group": "nodes",
@@ -4809,7 +4806,7 @@
             "idUnique": "3cu76xjdqg"
           },
           "position": {
-            "x": 2394.1457456622425,
+            "x": 2408.1457456622425,
             "y": 1358.2729252302406
           },
           "group": "nodes",
@@ -4832,7 +4829,7 @@
             }
           },
           "position": {
-            "x": 2183.3792572644466,
+            "x": 2197.3792572644466,
             "y": 1358.2729252302406
           },
           "group": "nodes",
@@ -4855,7 +4852,7 @@
             }
           },
           "position": {
-            "x": 2534.6567379274397,
+            "x": 2548.6567379274397,
             "y": 1358.2729252302406
           },
           "group": "nodes",
@@ -4881,7 +4878,7 @@
             }
           },
           "position": {
-            "x": 2862.515719879567,
+            "x": 2876.515719879567,
             "y": 1358.2729252302406
           },
           "group": "nodes",
@@ -4921,7 +4918,7 @@
             "idUnique": "hkfu24mvhn"
           },
           "position": {
-            "x": 1932.995795541568,
+            "x": 1946.995795541568,
             "y": 4284.266444272831
           },
           "group": "nodes",
@@ -4944,7 +4941,7 @@
             }
           },
           "position": {
-            "x": 1906.54970637939,
+            "x": 1920.54970637939,
             "y": 4152.035998461941
           },
           "group": "nodes",
@@ -4989,7 +4986,7 @@
             "idUnique": "6dadtm95px"
           },
           "position": {
-            "x": 2091.672330514636,
+            "x": 2105.672330514636,
             "y": 4152.035998461941
           },
           "group": "nodes",
@@ -5012,7 +5009,7 @@
             }
           },
           "position": {
-            "x": 2091.672330514636,
+            "x": 2105.672330514636,
             "y": 4284.266444272831
           },
           "group": "nodes",
@@ -5057,7 +5054,7 @@
             }
           },
           "position": {
-            "x": 2303.2410438120596,
+            "x": 2317.2410438120596,
             "y": 4284.266444272831
           },
           "group": "nodes",
@@ -5105,7 +5102,7 @@
             "idUnique": "xqkxg71xnn"
           },
           "position": {
-            "x": 3260.630197964292,
+            "x": 3274.630197964292,
             "y": 4519.77025119718
           },
           "group": "nodes",
@@ -5124,7 +5121,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3928.503239088765,
+            "x": 3942.503239088765,
             "y": 4668.566174282267
           },
           "group": "nodes",
@@ -5143,7 +5140,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3598.95739149237,
+            "x": 3612.95739149237,
             "y": 4668.566174282267
           },
           "group": "nodes",
@@ -5173,7 +5170,7 @@
             }
           },
           "position": {
-            "x": 3489.108775626905,
+            "x": 3503.108775626905,
             "y": 4668.566174282267
           },
           "group": "nodes",
@@ -5199,7 +5196,7 @@
             "properties": {}
           },
           "position": {
-            "x": 4093.276162886963,
+            "x": 4107.276162886963,
             "y": 4668.566174282267
           },
           "group": "nodes",
@@ -5229,7 +5226,7 @@
             }
           },
           "position": {
-            "x": 3791.1924692569337,
+            "x": 3805.1924692569337,
             "y": 4668.566174282267
           },
           "group": "nodes",
@@ -5248,7 +5245,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3892.9296631576804,
+            "x": 3906.9296631576804,
             "y": 4894.466230571039
           },
           "group": "nodes",
@@ -5267,7 +5264,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3611.907678627286,
+            "x": 3625.907678627286,
             "y": 4894.466230571039
           },
           "group": "nodes",
@@ -5297,7 +5294,7 @@
             }
           },
           "position": {
-            "x": 3494.8151850729546,
+            "x": 3508.8151850729546,
             "y": 4894.466230571039
           },
           "group": "nodes",
@@ -5323,7 +5320,7 @@
             "properties": {}
           },
           "position": {
-            "x": 4056.8591541337437,
+            "x": 4070.8591541337437,
             "y": 4894.466230571039
           },
           "group": "nodes",
@@ -5362,7 +5359,7 @@
             }
           },
           "position": {
-            "x": 3799.255668314215,
+            "x": 3813.255668314215,
             "y": 4894.466230571039
           },
           "group": "nodes",
@@ -5410,7 +5407,7 @@
             "idUnique": "m012os9lmh"
           },
           "position": {
-            "x": 3269.411543895975,
+            "x": 3283.411543895975,
             "y": 4805.876944114098
           },
           "group": "nodes",
@@ -5440,7 +5437,7 @@
             }
           },
           "position": {
-            "x": 1996.0312675775165,
+            "x": 2010.0312675775165,
             "y": 1498.783917495438
           },
           "group": "nodes",
@@ -5459,7 +5456,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1551.0797920710584,
+            "x": 1565.0797920710584,
             "y": 1405.109922651973
           },
           "group": "nodes",
@@ -5492,7 +5489,7 @@
             }
           },
           "position": {
-            "x": 1433.9872985167272,
+            "x": 1447.9872985167272,
             "y": 1405.109922651973
           },
           "group": "nodes",
@@ -5511,7 +5508,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3118.8773758647544,
+            "x": 3132.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -5544,7 +5541,7 @@
             }
           },
           "position": {
-            "x": 3268.8773758647544,
+            "x": 3282.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -5592,7 +5589,7 @@
             "idUnique": "rjzxvjscmc"
           },
           "position": {
-            "x": 1270.0578075406636,
+            "x": 1284.0578075406636,
             "y": 1241.1804316759094
           },
           "group": "nodes",
@@ -5625,7 +5622,7 @@
             }
           },
           "position": {
-            "x": 4384.71813608587,
+            "x": 4398.71813608587,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -5670,7 +5667,7 @@
             }
           },
           "position": {
-            "x": 3518.2336837838207,
+            "x": 3532.2336837838207,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -5694,7 +5691,7 @@
             }
           },
           "position": {
-            "x": 3658.744676049018,
+            "x": 3672.744676049018,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -5724,7 +5721,7 @@
             }
           },
           "position": {
-            "x": 3822.6741670250817,
+            "x": 3836.6741670250817,
             "y": 4262.166765377651
           },
           "group": "nodes",
@@ -5754,7 +5751,7 @@
             }
           },
           "position": {
-            "x": 3822.6741670250817,
+            "x": 3836.6741670250817,
             "y": 4355.840760221116
           },
           "group": "nodes",
@@ -5773,7 +5770,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3354.3041928077573,
+            "x": 3368.3041928077573,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -5803,7 +5800,7 @@
             }
           },
           "position": {
-            "x": 3237.211699253426,
+            "x": 3251.211699253426,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -5851,7 +5848,7 @@
             "idUnique": "aprazqow4m"
           },
           "position": {
-            "x": 3143.5377044099614,
+            "x": 3157.5377044099614,
             "y": 4168.492770534187
           },
           "group": "nodes",
@@ -5882,7 +5879,7 @@
             "idUnique": "l34psg089d"
           },
           "position": {
-            "x": 2394.1457456622425,
+            "x": 2408.1457456622425,
             "y": 1522.2024162063042
           },
           "group": "nodes",
@@ -5913,7 +5910,7 @@
             "idUnique": "obpmesqbev"
           },
           "position": {
-            "x": 2722.0047276143696,
+            "x": 2736.0047276143696,
             "y": 1522.2024162063042
           },
           "group": "nodes",
@@ -5959,7 +5956,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3568.8773758647544,
+            "x": 3582.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -5977,7 +5974,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3388.8773758647544,
+            "x": 3402.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -6044,7 +6041,7 @@
             "idUnique": "j6ypatob2o"
           },
           "position": {
-            "x": 2128.8773758647544,
+            "x": 2142.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -6074,7 +6071,7 @@
             }
           },
           "position": {
-            "x": 3049.8637095664963,
+            "x": 3063.8637095664963,
             "y": 1522.2024162063042
           },
           "group": "nodes",
@@ -6162,7 +6159,7 @@
             "idUnique": "eqn5ledc0s"
           },
           "position": {
-            "x": 4127.114650266342,
+            "x": 4141.114650266342,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -6180,7 +6177,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3916.3481618685464,
+            "x": 3930.3481618685464,
             "y": 4309.003762799384
           },
           "group": "nodes",
@@ -6198,7 +6195,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3916.3481618685464,
+            "x": 3930.3481618685464,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -6216,7 +6213,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4244.207143820673,
+            "x": 4258.207143820673,
             "y": 4285.585264088518
           },
           "group": "nodes",
@@ -6243,7 +6240,7 @@
             }
           },
           "position": {
-            "x": 1033.828764027517,
+            "x": 1047.828764027517,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -6309,7 +6306,7 @@
             }
           },
           "position": {
-            "x": 1192.505299000585,
+            "x": 1206.505299000585,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -6327,7 +6324,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1351.1818339736526,
+            "x": 1365.1818339736526,
             "y": 4019.8055526510516
           },
           "group": "nodes",
@@ -6346,7 +6343,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2248.8773758647544,
+            "x": 2262.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -6394,7 +6391,7 @@
             }
           },
           "position": {
-            "x": 2368.8773758647544,
+            "x": 2382.8773758647544,
             "y": 540
           },
           "group": "nodes",
@@ -6442,7 +6439,7 @@
             "idUnique": "47hzzleasr"
           },
           "position": {
-            "x": 875.1522290544492,
+            "x": 889.1522290544492,
             "y": 4575.173425056789
           },
           "group": "nodes",
@@ -6475,7 +6472,7 @@
             }
           },
           "position": {
-            "x": 928.0444073788051,
+            "x": 942.0444073788051,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6520,7 +6517,7 @@
             }
           },
           "position": {
-            "x": 1483.4122797845425,
+            "x": 1497.4122797845425,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6544,7 +6541,7 @@
             }
           },
           "position": {
-            "x": 1642.0888147576104,
+            "x": 1656.0888147576104,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6612,12 +6609,12 @@
                 ]
               },
               "templateVariant": {
-                "value": "newDevice"
+                "value": "Master Flow New Device"
               }
             }
           },
           "position": {
-            "x": 2065.226241352458,
+            "x": 2079.226241352458,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6647,7 +6644,7 @@
             }
           },
           "position": {
-            "x": 2356.133222136416,
+            "x": 2370.133222136416,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6677,7 +6674,7 @@
             }
           },
           "position": {
-            "x": 1827.211438892856,
+            "x": 1841.211438892856,
             "y": 4839.634316678568
           },
           "group": "nodes",
@@ -6695,7 +6692,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2197.456687163348,
+            "x": 2211.456687163348,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6737,7 +6734,7 @@
             }
           },
           "position": {
-            "x": 1166.0592098384068,
+            "x": 1180.0592098384068,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6760,7 +6757,7 @@
             }
           },
           "position": {
-            "x": 1324.7357448114747,
+            "x": 1338.7357448114747,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -6790,7 +6787,7 @@
             }
           },
           "position": {
-            "x": 1509.8583689467205,
+            "x": 1523.8583689467205,
             "y": 4971.864762489458
           },
           "group": "nodes",
@@ -6846,7 +6843,7 @@
             "status": "configured"
           },
           "position": {
-            "x": 2188.8773758647544,
+            "x": 2202.8773758647544,
             "y": 420
           },
           "group": "nodes",
@@ -6865,7 +6862,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2578.8773758647544,
+            "x": 2592.8773758647544,
             "y": 480
           },
           "group": "nodes",
@@ -6895,7 +6892,7 @@
             }
           },
           "position": {
-            "x": 2518.8773758647544,
+            "x": 2532.8773758647544,
             "y": 450
           },
           "group": "nodes",
@@ -6929,7 +6926,7 @@
             "idUnique": "apoi995vgj"
           },
           "position": {
-            "x": 1558.8773758647542,
+            "x": 1572.8773758647542,
             "y": 3690
           },
           "group": "nodes",
@@ -6947,7 +6944,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1678.8773758647542,
+            "x": 1692.8773758647542,
             "y": 3690
           },
           "group": "nodes",
@@ -7003,7 +7000,7 @@
             "status": "configured"
           },
           "position": {
-            "x": 1694.9809930819663,
+            "x": 1708.9809930819663,
             "y": 4628.065603381145
           },
           "group": "nodes",
@@ -7021,7 +7018,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1007.382674865339,
+            "x": 1021.382674865339,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -7061,7 +7058,7 @@
             }
           },
           "position": {
-            "x": 1827.211438892856,
+            "x": 1841.211438892856,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -7079,7 +7076,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1932.995795541568,
+            "x": 1946.995795541568,
             "y": 4733.849960029856
           },
           "group": "nodes",
@@ -7112,7 +7109,7 @@
             }
           },
           "position": {
-            "x": 3238.8773758647544,
+            "x": 3252.8773758647544,
             "y": 5220
           },
           "group": "nodes",
@@ -7146,7 +7143,7 @@
             "idUnique": "vzkt5wp6ie"
           },
           "position": {
-            "x": 3508.8773758647544,
+            "x": 3522.8773758647544,
             "y": 5220
           },
           "group": "nodes",
@@ -7164,7 +7161,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3358.8773758647544,
+            "x": 3372.8773758647544,
             "y": 5220
           },
           "group": "nodes",
@@ -7198,7 +7195,7 @@
             "idUnique": "nyb4qooj9z"
           },
           "position": {
-            "x": 3838.8773758647544,
+            "x": 3852.8773758647544,
             "y": 5220
           },
           "group": "nodes",
@@ -7216,7 +7213,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3658.8773758647544,
+            "x": 3672.8773758647544,
             "y": 5220
           },
           "group": "nodes",
@@ -7250,7 +7247,7 @@
             "idUnique": "kdno73sq0d"
           },
           "position": {
-            "x": 4108.877375864754,
+            "x": 4122.877375864754,
             "y": 5220
           },
           "group": "nodes",
@@ -7268,7 +7265,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3958.8773758647544,
+            "x": 3972.8773758647544,
             "y": 5220
           },
           "group": "nodes",
@@ -7307,7 +7304,7 @@
             }
           },
           "position": {
-            "x": 4408.877375864754,
+            "x": 4422.877375864754,
             "y": 5220
           },
           "group": "nodes",
@@ -7325,7 +7322,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4258.877375864754,
+            "x": 4272.877375864754,
             "y": 5220
           },
           "group": "nodes",
@@ -7373,7 +7370,7 @@
             "idUnique": "uwdeyzci8f"
           },
           "position": {
-            "x": 3148.8773758647544,
+            "x": 3162.8773758647544,
             "y": 5040
           },
           "group": "nodes",
@@ -7412,7 +7409,7 @@
             }
           },
           "position": {
-            "x": 2903.707467245566,
+            "x": 2917.707467245566,
             "y": 2509.385588239183
           },
           "group": "nodes",
@@ -7438,7 +7435,7 @@
             }
           },
           "position": {
-            "x": 3049.8852685022175,
+            "x": 3063.8852685022175,
             "y": 2485.0226213630744
           },
           "group": "nodes",
@@ -7456,7 +7453,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1832.101776601453,
+            "x": 1846.101776601453,
             "y": 1826.642899447565
           },
           "group": "nodes",
@@ -7513,7 +7510,7 @@
             "idUnique": "0ta76uhqv2"
           },
           "position": {
-            "x": 2513.899997227829,
+            "x": 2527.899997227829,
             "y": 2460.659654486966
           },
           "group": "nodes",
@@ -7547,7 +7544,7 @@
             "idUnique": "6xty0el8j1"
           },
           "position": {
-            "x": 4048.8773758647544,
+            "x": 4062.8773758647544,
             "y": 3060
           },
           "group": "nodes",
@@ -7565,7 +7562,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4168.877375864754,
+            "x": 4182.877375864754,
             "y": 3060
           },
           "group": "nodes",
@@ -7655,7 +7652,7 @@
             "idUnique": "921z3e7bdw"
           },
           "position": {
-            "x": 4348.877375864754,
+            "x": 4362.877375864754,
             "y": 3270
           },
           "group": "nodes",
@@ -7673,7 +7670,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 4168.877375864754,
+            "x": 4182.877375864754,
             "y": 3270
           },
           "group": "nodes",
@@ -7703,7 +7700,7 @@
             }
           },
           "position": {
-            "x": 1498.8773758647542,
+            "x": 1512.8773758647542,
             "y": 600
           },
           "group": "nodes",
@@ -7721,7 +7718,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1618.8773758647542,
+            "x": 1632.8773758647542,
             "y": 570
           },
           "group": "nodes",
@@ -7769,7 +7766,7 @@
             "idUnique": "40c8c5mll2"
           },
           "position": {
-            "x": 540,
+            "x": 554,
             "y": 2970
           },
           "group": "nodes",
@@ -7799,7 +7796,7 @@
             }
           },
           "position": {
-            "x": 630,
+            "x": 644,
             "y": 3150
           },
           "group": "nodes",
@@ -7841,8 +7838,8 @@
             }
           },
           "position": {
-            "x": 2010,
-            "y": 3150
+            "x": 2040,
+            "y": 3180
           },
           "group": "nodes",
           "removed": false,
@@ -7860,8 +7857,8 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2130,
-            "y": 3150
+            "x": 2160,
+            "y": 3180
           },
           "group": "nodes",
           "removed": false,
@@ -7890,8 +7887,8 @@
             }
           },
           "position": {
-            "x": 2280,
-            "y": 3150
+            "x": 2310,
+            "y": 3180
           },
           "group": "nodes",
           "removed": false,
@@ -7965,7 +7962,7 @@
             "idUnique": "p3z6662uwb"
           },
           "position": {
-            "x": 1170,
+            "x": 1184,
             "y": 3150
           },
           "group": "nodes",
@@ -7984,7 +7981,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1290,
+            "x": 1304,
             "y": 3150
           },
           "group": "nodes",
@@ -8032,7 +8029,7 @@
             }
           },
           "position": {
-            "x": 1440,
+            "x": 1454,
             "y": 3150
           },
           "group": "nodes",
@@ -8078,7 +8075,7 @@
             "idUnique": "t6or1bgbfx"
           },
           "position": {
-            "x": 1770,
+            "x": 1784,
             "y": 3300
           },
           "group": "nodes",
@@ -8096,27 +8093,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1560,
+            "x": 1574,
             "y": 3300
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "n0km921nvi",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
-          },
-          "position": {
-            "x": 1083.3773758647542,
-            "y": 539.5337455599272
           },
           "group": "nodes",
           "removed": false,
@@ -8157,7 +8135,7 @@
             }
           },
           "position": {
-            "x": 1228.8773758647542,
+            "x": 1207,
             "y": 540
           },
           "group": "nodes",
@@ -8180,7 +8158,7 @@
             }
           },
           "position": {
-            "x": 1363.8773758647542,
+            "x": 1377.8773758647542,
             "y": 540
           },
           "group": "nodes",
@@ -8226,7 +8204,7 @@
             "isDisabled": false
           },
           "position": {
-            "x": 1740,
+            "x": 1754,
             "y": 3180
           },
           "group": "nodes",
@@ -8244,7 +8222,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1560,
+            "x": 1574,
             "y": 3210
           },
           "group": "nodes",
@@ -8262,7 +8240,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1590,
+            "x": 1604,
             "y": 3240
           },
           "group": "nodes",
@@ -8280,8 +8258,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1860,
-            "y": 3150
+            "x": 1890,
+            "y": 3180
           },
           "group": "nodes",
           "removed": false,
@@ -8325,7 +8303,7 @@
             }
           },
           "position": {
-            "x": 900,
+            "x": 914,
             "y": 3150
           },
           "group": "nodes",
@@ -8343,7 +8321,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 720,
+            "x": 734,
             "y": 3150
           },
           "group": "nodes",
@@ -8361,7 +8339,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1020,
+            "x": 1034,
             "y": 3150
           },
           "group": "nodes",
@@ -8404,7 +8382,7 @@
             "idUnique": "5mcnugzrri"
           },
           "position": {
-            "x": 2070,
+            "x": 2084,
             "y": 660
           },
           "group": "nodes",
@@ -8435,7 +8413,7 @@
             "idUnique": "uoi3nrk28a"
           },
           "position": {
-            "x": 2340,
+            "x": 2354,
             "y": 660
           },
           "group": "nodes",
@@ -8458,7 +8436,7 @@
             }
           },
           "position": {
-            "x": 2190,
+            "x": 2204,
             "y": 660
           },
           "group": "nodes",
@@ -8476,7 +8454,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2475,
+            "x": 2489,
             "y": 660
           },
           "group": "nodes",
@@ -8531,7 +8509,7 @@
             "idUnique": "7npyut5kfw"
           },
           "position": {
-            "x": 3210,
+            "x": 3224,
             "y": 2580
           },
           "group": "nodes",
@@ -8553,7 +8531,7 @@
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
-                "value": "Notification on new device"
+                "value": "Set MFAEnabled"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
@@ -8579,7 +8557,7 @@
             "idUnique": "xlzjxkcc82"
           },
           "position": {
-            "x": 900,
+            "x": 914,
             "y": 5100
           },
           "group": "nodes",
@@ -8609,7 +8587,7 @@
             }
           },
           "position": {
-            "x": 1020,
+            "x": 1034,
             "y": 5310
           },
           "group": "nodes",
@@ -8648,7 +8626,7 @@
             }
           },
           "position": {
-            "x": 1590,
+            "x": 1604,
             "y": 5310
           },
           "group": "nodes",
@@ -8667,7 +8645,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1130.0014498669111,
+            "x": 1144.0014498669111,
             "y": 5309.408203125
           },
           "group": "nodes",
@@ -8702,7 +8680,7 @@
             }
           },
           "position": {
-            "x": 1290,
+            "x": 1304,
             "y": 5310
           },
           "group": "nodes",
@@ -8720,7 +8698,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1440,
+            "x": 1454,
             "y": 5310
           },
           "group": "nodes",
@@ -8744,7 +8722,7 @@
             }
           },
           "position": {
-            "x": 1733.0022783622887,
+            "x": 1747.0022783622887,
             "y": 5307.908203125
           },
           "group": "nodes",
@@ -8770,7 +8748,7 @@
             "properties": {}
           },
           "position": {
-            "x": 1876.0045567245775,
+            "x": 1890.0045567245775,
             "y": 5305.81640625
           },
           "group": "nodes",
@@ -8800,7 +8778,7 @@
             }
           },
           "position": {
-            "x": 1920,
+            "x": 1934,
             "y": 5430
           },
           "group": "nodes",
@@ -8819,7 +8797,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2047.0026665566638,
+            "x": 2061.002666556664,
             "y": 5428.908203125
           },
           "group": "nodes",
@@ -8845,7 +8823,7 @@
             "properties": {}
           },
           "position": {
-            "x": 2174.0053331133277,
+            "x": 2188.0053331133277,
             "y": 5427.81640625
           },
           "group": "nodes",
@@ -8875,7 +8853,7 @@
             }
           },
           "position": {
-            "x": 2940,
+            "x": 2954,
             "y": 2610
           },
           "group": "nodes",
@@ -8893,7 +8871,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3075,
+            "x": 3089,
             "y": 2595
           },
           "group": "nodes",
@@ -8924,7 +8902,7 @@
             "idUnique": "gp5lqg6dws"
           },
           "position": {
-            "x": 3720,
+            "x": 3734,
             "y": 2850
           },
           "group": "nodes",
@@ -8942,7 +8920,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3885,
+            "x": 3899,
             "y": 2850
           },
           "group": "nodes",
@@ -9032,7 +9010,7 @@
             "idUnique": "eqn5ledc0s"
           },
           "position": {
-            "x": 1200,
+            "x": 1214,
             "y": 4200
           },
           "group": "nodes",
@@ -9077,7 +9055,7 @@
             "idUnique": "s3f14c6rmg"
           },
           "position": {
-            "x": 1500,
+            "x": 1514,
             "y": 4200
           },
           "group": "nodes",
@@ -9095,8 +9073,128 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1335,
+            "x": 1349,
             "y": 4200
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "n5saupblp6",
+            "nodeType": "EVAL",
+            "properties": {
+              "2t7xfpowaj": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 727,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "jmkc2e7o1u",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1057,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xf2qck8hfq",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "sktemplate": {
+                "uiId": "624fbda9a79d412a0e62cc045b410da7",
+                "createdDate": 1693913007853,
+                "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                "description": "",
+                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n\t\t\"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}",
+                "name": "Custom Message",
+                "outputSchema": null,
+                "script": "",
+                "style": "",
+                "template": "",
+                "updatedDate": 1693913396823,
+                "validationRules": [],
+                "version": "1.0",
+                "visibility": "private",
+                "companyId": "9343c168-20f8-4262-b335-5250b428bd12",
+                "value": "624fbda9a79d412a0e62cc045b410da7"
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        }\n    }\n}"
+              },
+              "outputSchema": {
+                "value": null
+              },
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n\n          <!-- PingOne Protect -->\n          <div data-skcomponent=\"skrisk\" data-skenvironmentid=\"{{global.companyId}}\" data-skcollectBehavioralData=\"true\" data-skpropertyname=\"riskfp\"></div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+              },
+              "customCSS": {
+                "value": ""
+              },
+              "customScript": {
+                "value": ""
+              },
+              "validationRules": {
+                "value": []
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Ensuring a secure experience, one moment...\"\n      }\n    ]\n  }\n]"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please do not refresh the page.\"\n      }\n    ]\n  }\n]"
+              },
+              "formFieldsList": {
+                "value": []
+              },
+              "nodeTitle": {
+                "value": "P1 Protect "
+              },
+              "nodeDescription": {
+                "value": "Gather Risk Signals"
+              }
+            },
+            "idUnique": "4ekhyr20iu"
+          },
+          "position": {
+            "x": 877,
+            "y": 540
           },
           "group": "nodes",
           "removed": false,
@@ -9109,6 +9207,101 @@
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "93cmepk372",
+            "source": "u1eoihnm7m",
+            "target": "8rbkz11s6b"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "e6l5k6ychk",
+            "source": "8rbkz11s6b",
+            "target": "44gppalqg1"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9auvnialvh",
+            "source": "fbkscewkv0",
+            "target": "n5saupblp6"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "wiequ80w25",
+            "source": "jmkc2e7o1u",
+            "target": "lqdg7fpma4"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "izq5kdugvx",
+            "source": "oo8gnthdo3",
+            "target": "t5ykecg0vt"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "1kmjs70pli",
@@ -9187,9 +9380,9 @@
         },
         {
           "data": {
-            "id": "cqd20d2pnv",
-            "source": "n0km921nvi",
-            "target": "lqdg7fpma4"
+            "id": "ni6skl1qcy",
+            "source": "t5ykecg0vt",
+            "target": "62xdugcn4b"
           },
           "position": {
             "x": 0,
@@ -9264,9 +9457,9 @@
         },
         {
           "data": {
-            "id": "y96pxxatdn",
-            "source": "fbkscewkv0",
-            "target": "n0km921nvi"
+            "id": "b5j8vxr04j",
+            "source": "62xdugcn4b",
+            "target": "3ijc3tvgjv"
           },
           "position": {
             "x": 0,
@@ -13361,9 +13554,9 @@
         },
         {
           "data": {
-            "id": "93cmepk372",
-            "source": "u1eoihnm7m",
-            "target": "8rbkz11s6b"
+            "id": "v3l7zd626d",
+            "source": "n5saupblp6",
+            "target": "xf2qck8hfq"
           },
           "position": {
             "x": 0,
@@ -13380,66 +13573,9 @@
         },
         {
           "data": {
-            "id": "e6l5k6ychk",
-            "source": "8rbkz11s6b",
-            "target": "44gppalqg1"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "izq5kdugvx",
-            "source": "oo8gnthdo3",
-            "target": "t5ykecg0vt"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ni6skl1qcy",
-            "source": "t5ykecg0vt",
-            "target": "62xdugcn4b"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "b5j8vxr04j",
-            "source": "62xdugcn4b",
-            "target": "3ijc3tvgjv"
+            "id": "cs176mgnv8",
+            "source": "xf2qck8hfq",
+            "target": "jmkc2e7o1u"
           },
           "position": {
             "x": 0,
@@ -13546,7 +13682,7 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1724087717285,
+  "savedDate": 1725639070450,
   "variables": [
     {
       "context": "flowInstance",
@@ -13689,14 +13825,14 @@
       "fields": {
         "type": "object",
         "displayName": "",
-        "value": "{     \"config\": {         \"mf-bool-webauthnBrowserSupport\": true,         \"mf-obj-passwordPolicy\": {             \"length\": {                 \"min\": 8,                 \"max\": 255             },             \"minUniqueCharacters\": 5,             \"maxRepeatedCharacters\": 2,             \"minCharacters\": {                 \"0123456789\": 1,                 \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\": 1,                 \"abcdefghijklmnopqrstuvwxyz\": 1,                 \"~!@#$%^&*()-_=+[]{}|;:,.<>/?\": 1             }         },         \"mf-str-availableQuestions\": [             {                 \"question\": \"In what city were you born?\"             },             {                 \"question\": \"What was the model of your first car?\"             },             {                 \"question\": \"What is the name of your first pet?\"             },             {                 \"question\": \"What is the name of your favorite teacher?\"             },             {                 \"question\": \"What is your mother's maiden name?\"             },             {                 \"question\": \"What is the name of the street you grew up on?\"             },             {                 \"question\": \"In which year did you graduate from high school?\"             }         ],         \"mf-str-azureExternalIdPId\": \" \",         \"mf-str-captchaThreshold\": \"0.7\",         \"mf-str-captchaV3SecretKey\": \"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",         \"mf-str-captchaV3SiteKey\": \"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",         \"mf-str-companyLogo\": \"https://cdn.brandfetch.io/idUp1ZYe2x/w/464/h/100/theme/dark/logo.png?k=bfHSJFAPEG\",         \"mf-str-companyName\": \"\",         \"mf-str-facebookExternalIdPId\": \"\",         \"mf-str-githubExternalIdPId\": \"\",         \"mf-str-googleExternalIdPId\": \"21ad062f-bbce-4365-b0ed-8c98f9e7f4f2\",         \"mf-str-webAuthnSupport\": \"cross-platform\",         \"mf-str-passwordExpiredDays\": 30,         \"mf-str-browserVersion\": 128,         \"mf-str-fidoDeviceNickname\": \"Passkeys\",         \"mf-str-fidoOrigin\": \"https://auth.pingone.com\",         \"mf-str-fidoRPID\": \"pingone.com\",         \"mf-obj-p1MFAPasswordlessAllowedTypes\": [             \"FIDO2\",             \"PLATFORM\",             \"MOBILE\",             \"TOTP\",             \"SECURITY_KEY\"         ]     },          \"p1Authorize\": {         \"mf-bool-runAuthorize\": false     },     \"p1MFA\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-sendEmailConfirmation\": true,         \"mf-bool-sendEmailDeleteDeviceConfirmation\": true,         \"mf-bool-allowHybridPasswordless\": true,         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runAutoEnrollEmail\": false,         \"mf-bool-runDeviceManagement\": false,         \"mf-bool-runInlineMFA\": true,         \"mf-bool-runOnlyPasswordless\": false,         \"mf-bool-runP1MFA\": true,         \"mf-bool-allowRegisterAnotherDevice\": true     },     \"pingone\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowForgotUsername\": true,         \"mf-bool-allowKBAforForgotPassword\": false,         \"mf-bool-allowMagicLinkUserRegistration\": false,         \"mf-bool-allowOTPForgotPassword\": false,         \"mf-bool-allowreCaptcha\": false,         \"mf-bool-runAgreement\": false,         \"mf-bool-runAzureLogin\": false,         \"mf-bool-runConsent\": false,         \"mf-bool-runFacebookLogin\": false,         \"mf-bool-runGithubLogin\": false,         \"mf-bool-runPasswordExpireCheck\": false,         \"mf-bool-runProgressiveProfileAuthN\": false,         \"mf-bool-runProgressiveProfileRegstration\": false,         \"mf-bool-showAzureButton\": false,         \"mf-bool-showFacebookButton\": false,         \"mf-bool-runProfileUpdateQuestion\": false,         \"mf-bool-showGoogleButton\": true,         \"mf-string-daysUntilProgressiveProfile\": 30,         \"mf-bool-showGithubButton\": false,         \"mf-bool-runMFAOnAccountUnlock\": true     },     \"p1Protect\": {         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runFakeRiskLevel\": true,         \"mf-bool-runProtect\": true,         \"mf-bool-runMFAOnHigh\": false,         \"mf-bool-showDetailScreenDisplay\": true,         \"mf-bool-showProgressScreenDisplay\": true,         \"mf-bool-runStopOnHighRiskLevel\": false,         \"mf-str-fakeRiskLevel\": \"MEDIUM\",         \"mf-str-fakeRiskScore\": 50,         \"mf-bool-runPassiveMode\": false,         \"mf-bool-runNotificationForNewDevice\": true,         \"mf-bool-userLockedOnTempEmail\": true,         \"mf-bool-userDeleteOnTempEmail\": false,         \"mf-bool-runBrowserVersionAuthentication\": false,         \"mf-bool-runBrowserVersionRegistration\": true     },     \"p1Verify\": {         \"mf-bool-allowVerifyUserRegistration\": false,         \"mf-bool-runVerifyOnHigh\": true,         \"mf-bool-runVerifyFakeSuccess\": false            } }",
+        "value": "{     \"config\": {         \"mf-bool-webauthnBrowserSupport\": true,         \"mf-obj-passwordPolicy\": {             \"length\": {                 \"min\": 8,                 \"max\": 255             },             \"minCharacters\": {                 \"0123456789\": 1,                 \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\": 1,                 \"abcdefghijklmnopqrstuvwxyz\": 1,                 \"~!@#$%^&*()-_=+[]{}|;:,.<>/?\": 1             },             \"minUniqueCharacters\": 5,             \"maxRepeatedCharacters\": 2         },         \"mf-obj-p1MFAPasswordlessAllowedTypes\": [             \"FIDO2\",             \"PLATFORM\",             \"MOBILE\",             \"TOTP\",             \"SECURITY_KEY\"         ],         \"mf-str-availableQuestions\": [             {                 \"question\": \"In what city were you born?\"             },             {                 \"question\": \"What was the model of your first car?\"             },             {                 \"question\": \"What is the name of your first pet?\"             },             {                 \"question\": \"What is the name of your favorite teacher?\"             },             {                 \"question\": \"What is your mother's maiden name?\"             },             {                 \"question\": \"What is the name of the street you grew up on?\"             },             {                 \"question\": \"In which year did you graduate from high school?\"             }         ],         \"mf-str-azureExternalIdPId\": \" \",         \"mf-str-browserVersion\": 128,         \"mf-str-captchaThreshold\": \"0.7\",         \"mf-str-captchaV3SecretKey\": \"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",         \"mf-str-captchaV3SiteKey\": \"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",         \"mf-str-companyLogo\": \"https://avatars.githubusercontent.com/u/93611276?v=4\",         \"mf-str-companyName\": \"Davinci Demo Company\",         \"mf-str-facebookExternalIdPId\": \"\",         \"mf-str-githubExternalIdPId\": \"\",         \"mf-str-googleExternalIdPId\": \"21ad062f-bbce-4365-b0ed-8c98f9e7f4f2\",         \"mf-str-passwordExpiredDays\": 30,         \"mf-str-fidoDeviceNickname\": \"Passkeys\",         \"mf-str-fidoOrigin\": \"https://auth.pingone.com\",         \"mf-str-fidoRPID\": \"pingone.com\",         \"mf-str-webAuthnSupport\": \"cross-platform\"     },     \"pingone\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowForgotUsername\": true,         \"mf-bool-allowKBAforForgotPassword\": true,         \"mf-bool-allowMagicLinkUserRegistration\": true,         \"mf-bool-allowOTPForgotPassword\": true,         \"mf-bool-allowreCaptcha\": false,         \"mf-bool-displayProfileUpdateQuestion\": true,         \"mf-bool-runAgreement\": false,         \"mf-bool-runAzureLogin\": true,         \"mf-bool-runGoogleLogin\": true,         \"mf-bool-runConsent\": true,         \"mf-bool-runFacebookLogin\": false,         \"mf-bool-runGithubLogin\": false,         \"mf-bool-runMFAOnAccountUnlock\": true,         \"mf-bool-runPasswordExpireCheck\": true,         \"mf-bool-runProgressiveProfileAuthN\": true,         \"mf-bool-runProgressiveProfileRegstration\": true,         \"mf-bool-runTimeBasedProgressiveProfile\": true,         \"mf-bool-showAzureButton\": true,         \"mf-bool-showFacebookButton\": false,         \"mf-bool-showGithubButton\": false,         \"mf-bool-showGoogleButton\": true,         \"mf-string-daysUntilProgressiveProfile\": 30     },     \"p1Authorize\": {         \"mf-bool-runAuthorize\": false     },     \"p1MFA\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowHybridPasswordless\": true,         \"mf-bool-allowRegisterAnotherDevice\": true,         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runAutoEnrollEmail\": true,         \"mf-bool-runDeviceManagement\": true,         \"mf-bool-runInlineMFA\": true,         \"mf-bool-runOnlyPasswordless\": false,         \"mf-bool-runP1MFA\": true,         \"mf-bool-sendEmailConfirmation\": true,         \"mf-bool-sendEmailDeleteDeviceConfirmation\": true     },     \"p1Protect\": {         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runBrowserVersionAuthentication\": false,         \"mf-bool-runBrowserVersionRegistration\": true,         \"mf-bool-runFakeRiskLevel\": true,         \"mf-bool-runMFAOnHigh\": false,         \"mf-bool-runNotificationForNewDevice\": true,         \"mf-bool-runPassiveMode\": false,         \"mf-bool-runProtect\": true,         \"mf-bool-runStopOnHighRiskLevel\": false,         \"mf-bool-showDetailScreenDisplay\": true,         \"mf-bool-showProgressScreenDisplay\": true,         \"mf-bool-userDeleteOnTempEmail\": false,         \"mf-bool-userLockedOnTempEmail\": true,         \"mf-str-fakeRiskLevel\": \"MEDIUM\",         \"mf-str-fakeRiskScore\": 50     },     \"p1Verify\": {         \"mf-bool-allowVerifyUserRegistration\": false,         \"mf-bool-runVerifyFakeSuccess\": false,         \"mf-bool-runVerifyOnHigh\": false     } }",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "id": "b2bd55af-cc37-4b45-9c69-3336e6be655c",
       "type": "property",
-      "updatedDate": 1724792764784,
+      "updatedDate": 1725894306924,
       "visibility": "private",
       "name": "mf-configObject##SK##company",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"

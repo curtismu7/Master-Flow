@@ -10,8 +10,8 @@
     "devicePolicyConnector",
     "variablesConnector"
   ],
-  "createdDate": 1724753460078,
-  "currentVersion": 204,
+  "createdDate": 1725546771172,
+  "currentVersion": 222,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Wed May 01 2024 18:26:09 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -76,11 +76,11 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Verify subflow",
-  "publishedVersion": 204,
+  "publishedVersion": 222,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
+    "intermediateLoadingScreenCSS": "        /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
+    "intermediateLoadingScreenHTML": "    <div class=\"message\">\n        Please wait...\n    </div>",
     "cssLinks": [
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
       "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.7/icons.css"
@@ -90,12 +90,13 @@
     "displayNodeIDs": true,
     "logLevel": 3,
     "useCustomCSS": true,
-    "flowTimeoutInSeconds": 3600
+    "flowTimeoutInSeconds": 3600,
+    "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1724753472770,
+  "updatedDate": 1725546772599,
   "flowId": "fa53f76dbec74a4c40040cf5cd6d5cea",
-  "versionId": 204,
+  "versionId": 222,
   "graphData": {
     "elements": {
       "nodes": [
@@ -1176,7 +1177,7 @@
             "type": "trigger",
             "properties": {
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n    <div id=\"container\" class=\"reactSingularKey_hftMain styles_hftMain__1rrse\">\n\n        <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n        <form id=\"skForm\">\n\n            <br>\n            <p class=\"dialog-form-message\">\n                Please scan the QR code below with your smart phone's camera to\n                start the ID verification process, <tr>\n                    <td><a href=\"{{local.m48nak2orj.payload.output.transaction.webVerificationUrl}}&dt=1\"\n                            target=\"_blank\">or click on this link for Desktop browser experience. </a></td>\n                </tr>\n            <p>\n                <br>\n                <img id=\"qr\" src=\"{{local.m48nak2orj.payload.output.transaction.qrUrl}}\"/>\n                <br>\n            Ensure that this code is displayed on your mobile browser page:\n                <br>\n                <br><span id=\"code\">{{local.m48nak2orj.payload.output.transaction.webVerificationCode}}</span></br>\n            </p>\n            [[[skcomponent###c2tjb21wb25lbnQgInNrYnV0dG9uIiAgaWQ9InFyQ29kZUNsYWltZWQiIGNsYXNzPSJidG4tLWhpZGUiIGxhYmVsPSJCdXR0b24iIHZhbHVlPSJTdWJtaXQiIGJ1dHRvbkltYWdlPSIiIGJ1dHRvbkltYWdlQ2xhc3M9IiIgYnV0dG9uSW1hZ2VQbGFjZW1lbnQ9IiIgYnV0dG9uVHlwZT0ibmV4dC1ldmVudCIgZm9ybT0ic2tGb3JtIiBvdHBJbnB1dD0iIiBkZWZhdWx0TG9hZGluZ0NvbG9yPSIiIGN1c3RvbUxvYWRpbmdJbmRpY2F0b3I9IiIgY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzPSIi###eyJuYW1lIjoic2tidXR0b24iLCJvcHRpb25zIjp7ImlkIjoicXJDb2RlQ2xhaW1lZCIsImNsYXNzIjoiYnRuLS1oaWRlIiwibGFiZWwiOiJCdXR0b24iLCJ2YWx1ZSI6IlN1Ym1pdCIsImJ1dHRvbkltYWdlIjoiIiwiYnV0dG9uSW1hZ2VDbGFzcyI6IiIsImJ1dHRvbkltYWdlUGxhY2VtZW50IjoiIiwiYnV0dG9uVHlwZSI6Im5leHQtZXZlbnQiLCJmb3JtIjoic2tGb3JtIiwib3RwSW5wdXQiOiIiLCJkZWZhdWx0TG9hZGluZ0NvbG9yIjoiIiwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6IiIsImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6IiJ9LCJjb21wb25lbnRQcm9wcyI6eyJpZCI6eyJuYW1lIjoiaWQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJRCIsImluZm8iOiJUaGUgaWQgdXNlZCB0byByZXByZXNlbnQgYnV0dG9ucyBpbiB0aGUgdGVtcGxhdGUuIFRoaXMgc2hvdWxkIGJlIHVuaXF1ZS4ifSwiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXBwbGllZCB0byBidXR0b25zLiJ9LCJsYWJlbCI6eyJuYW1lIjoibGFiZWwiLCJkaXNwbGF5TmFtZSI6IkxhYmVsIiwidmFsdWUiOiJCdXR0b24iLCJpbmZvIjoiVGhlIGJ1dHRvbiBsYWJlbCB0aGF0IHdpbGwgYmUgc2VlbiBpbiB0aGUgdGVtcGxhdGUifSwidmFsdWUiOnsibmFtZSI6InZhbHVlIiwiZGlzcGxheU5hbWUiOiJCdXR0b24gVmFsdWUiLCJpbmZvIjoiVGhlIHZhbHVlIHRoYXQgaXMgYXNzaWduZWQgdG8gdGhlIGJ1dHRvbi4gVGhpcyB2YWx1ZSB3aWxsIGJlIHNlbnQgdG8gdGhlIGJhY2tlbmQgdG8gaWRlbnRpZnkgd2hpY2ggYnV0dG9uIHdhcyBwcmVzc2VkIn0sImJ1dHRvbkltYWdlIjp7Im5hbWUiOiJidXR0b25JbWFnZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIEltYWdlIChVUkwgZm9yIGFuIGltYWdlKSIsImluZm8iOiJBbiBpbWFnZSB0byBzaG93IGFsb25nc2lkZSB0aGUgbGFiZWwiLCJncm91cCI6IkltYWdlIn0sImJ1dHRvbkltYWdlQ2xhc3MiOnsibmFtZSI6ImJ1dHRvbkltYWdlQ2xhc3MiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBDbGFzcyIsImluZm8iOiJUaGUgY2xhc3MgbmFtZSBhc3NpZ25lZCB0byB0aGUgYnV0dG9uIGltYWdlIiwiZ3JvdXAiOiJJbWFnZSJ9LCJidXR0b25JbWFnZVBsYWNlbWVudCI6eyJuYW1lIjoiYnV0dG9uSW1hZ2VQbGFjZW1lbnQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBQbGFjZW1lbnQiLCJ0eXBlIjoic2VsZWN0Iiwib3B0aW9ucyI6W3sibmFtZSI6IkxlZnQiLCJ2YWx1ZSI6ImxlZnQifSx7Im5hbWUiOiJSaWdodCIsInZhbHVlIjoicmlnaHQifV0sImluZm8iOiJUaGUgcGxhY2VtZW50IG9mIHRoZSBpbWFnZSB3aXRoIHJlc3BlY3QgdG8gdGhlIGJ1dHRvbiBsYWJlbCIsImdyb3VwIjoiSW1hZ2UifSwiYnV0dG9uVHlwZSI6eyJuYW1lIjoiYnV0dG9uVHlwZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIFR5cGUiLCJ0eXBlIjoiYnV0dG9uVHlwZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJGb3JtIFN1Ym1pdCIsInZhbHVlIjoiZm9ybS1zdWJtaXQifSx7Im5hbWUiOiJDbGVhciBNRkEgQXV0aGVudGljYXRpb24iLCJ2YWx1ZSI6Im1mYS1yZXNldCJ9LHsibmFtZSI6Ik9UUCIsInZhbHVlIjoib3RwIn0seyJuYW1lIjoiTmV4dCBFdmVudCIsInZhbHVlIjoibmV4dC1ldmVudCJ9LHsibmFtZSI6Ik51YW5jZSBBdWRpbyBSZWNvcmRpbmcgQnV0dG9uIiwidmFsdWUiOiJudWFuY2UtYXVkaW8ifSx7Im5hbWUiOiJCYWNrIHRvIFByZXZpb3VzIE5vZGUiLCJ2YWx1ZSI6ImJhY2stdG8tcHJldmlvdXMifV0sImluZm8iOiJUaGUgdHlwZSBvZiBhY3Rpb24gdGhhdCB0cmlnZ2VycyB3aGVuIHRoZSBidXR0b24gaXMgcHJlc3NlZCIsImdyb3VwIjoiRXZlbnQifSwiZm9ybSI6eyJuYW1lIjoiZm9ybSIsImRpc3BsYXlOYW1lIjoiRm9ybSBJRCIsImluZm8iOiJXaGVuIGEgZm9ybS1zdWJtaXQgdHlwZSBidXR0b24gaXMgcHJlc3NlZCwgdGhpcyBmb3JtIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgdGhlIGZvcm0gdmFsdWVzLiIsImdyb3VwIjoiRXZlbnQifSwib3RwSW5wdXQiOnsibmFtZSI6Im90cElucHV0IiwiZGlzcGxheU5hbWUiOiJPVFAgSW5wdXQgSUQiLCJpbmZvIjoiV2hlbiBhIG90cCB0eXBlIGJ1dHRvbiBpcyBwcmVzc2VkLCB0aGlzIGlucHV0IGZpZWxkIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgb3RwIHZhbHVlLiIsImdyb3VwIjoiRXZlbnQifSwiZGVmYXVsdExvYWRpbmdDb2xvciI6eyJuYW1lIjoiZGVmYXVsdExvYWRpbmdDb2xvciIsImRpc3BsYXlOYW1lIjoiQ29sb3Igb2YgRGVmYXVsdCBMb2FkaW5nIEluZGljYXRvciIsImluZm8iOiJUaGUgY29sb3Igb2YgdGhlIGRlZmF1bHQgbG9hZGluZyBhY3Rpdml0eSBpbmRpY2F0b3IgaWNvbi4iLCJncm91cCI6IkxvYWRpbmcifSwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvciIsImRpc3BsYXlOYW1lIjoiQ3VzdG9tIExvYWRpbmcgSW5kaWNhdG9yIEltYWdlIFVSTCIsImluZm8iOiJVcmwgb2YgYSBsb2FkaW5nIGluZGljYXRvciBpbWFnZS4gVGhpcyB3aWxsIHJlcGxhY2UgdGhlIGRlZmF1bHQgbG9hZGluZyBpbmRpY2F0b3IgaW1hZ2UuIiwiZ3JvdXAiOiJMb2FkaW5nIn0sImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzIiwiZGlzcGxheU5hbWUiOiJDdXN0b20gTG9hZGluZyBJbmRpY2F0b3IgSW1hZ2UgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXNzaWduZWQgdG8gdGhlIGN1c3RvbSBsb2FkaW5nIGluZGljYXRvciBpbWFnZSIsImdyb3VwIjoiTG9hZGluZyJ9fX0=]]][[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iNTAwMCIgcG9sbFJldHJpZXM9IjE4MCIgcG9sbENoYWxsZW5nZVN0YXR1cz0idHJ1ZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjUwMDAiLCJwb2xsUmV0cmllcyI6IjE4MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJ0cnVlIn0sImNvbXBvbmVudFByb3BzIjp7ImNsYXNzIjp7Im5hbWUiOiJjbGFzcyIsImRpc3BsYXlOYW1lIjoiQ1NTIENsYXNzIn0sInBvbGxJbnRlcnZhbCI6eyJuYW1lIjoicG9sbEludGVydmFsIiwiZGlzcGxheU5hbWUiOiJQb2xsIEludGVydmFsIiwidmFsdWUiOjIwMDB9LCJwb2xsUmV0cmllcyI6eyJuYW1lIjoicG9sbFJldHJpZXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgUmV0cmllcyIsInZhbHVlIjo2MH0sInBvbGxDaGFsbGVuZ2VTdGF0dXMiOnsibmFtZSI6InBvbGxDaGFsbGVuZ2VTdGF0dXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgQ2hhbGxlbmdlIFN0YXR1cyIsInR5cGUiOiJzZWxlY3QiLCJ2YWx1ZSI6InRydWUiLCJvcHRpb25zIjpbeyJuYW1lIjoiVHJ1ZSIsInZhbHVlIjoidHJ1ZSJ9LHsibmFtZSI6IkZhbHNlIiwidmFsdWUiOiJmYWxzZSJ9XX19fQ==]]]\n            <div id=\"footer-text\">Powered by Ping Identity</div>\n        </form>\n    </div>\n</div>"
+                "value": "<div class=\"end-user-nano\">\n    <div id=\"container\" class=\"reactSingularKey_hftMain styles_hftMain__1rrse\">\n\n        <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n        <form id=\"skForm\">\n\n            <br>\n            <p class=\"dialog-form-message\">\n                Please scan the QR code below with your smart phone's camera to\n                start the ID verification process, <tr>\n                    <td><a href=\"{{local.m48nak2orj.payload.output.transaction.webVerificationUrl}}&dt=1\"\n                            target=\"_blank\">or click on this link for Desktop browser experience. </a></td>\n                </tr>\n            <p>\n                <br>\n                <img id=\"qr\" src=\"{{local.m48nak2orj.payload.output.transaction.qrUrl}}\"/>\n                <br>\n            Ensure that this code is displayed on your mobile browser page:\n                <br>\n                <br><span id=\"code\">{{local.m48nak2orj.payload.output.transaction.webVerificationCode}}</span></br>\n            </p>\n            [[[skcomponent###c2tjb21wb25lbnQgInNrYnV0dG9uIiAgaWQ9InFyQ29kZUNsYWltZWQiIGNsYXNzPSJidG4tLWhpZGUiIGxhYmVsPSJCdXR0b24iIHZhbHVlPSJTdWJtaXQiIGJ1dHRvbkltYWdlPSIiIGJ1dHRvbkltYWdlQ2xhc3M9IiIgYnV0dG9uSW1hZ2VQbGFjZW1lbnQ9IiIgYnV0dG9uVHlwZT0ibmV4dC1ldmVudCIgZm9ybT0ic2tGb3JtIiBvdHBJbnB1dD0iIiBkZWZhdWx0TG9hZGluZ0NvbG9yPSIiIGN1c3RvbUxvYWRpbmdJbmRpY2F0b3I9IiIgY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzPSIi###eyJuYW1lIjoic2tidXR0b24iLCJvcHRpb25zIjp7ImlkIjoicXJDb2RlQ2xhaW1lZCIsImNsYXNzIjoiYnRuLS1oaWRlIiwibGFiZWwiOiJCdXR0b24iLCJ2YWx1ZSI6IlN1Ym1pdCIsImJ1dHRvbkltYWdlIjoiIiwiYnV0dG9uSW1hZ2VDbGFzcyI6IiIsImJ1dHRvbkltYWdlUGxhY2VtZW50IjoiIiwiYnV0dG9uVHlwZSI6Im5leHQtZXZlbnQiLCJmb3JtIjoic2tGb3JtIiwib3RwSW5wdXQiOiIiLCJkZWZhdWx0TG9hZGluZ0NvbG9yIjoiIiwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6IiIsImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6IiJ9LCJjb21wb25lbnRQcm9wcyI6eyJpZCI6eyJuYW1lIjoiaWQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJRCIsImluZm8iOiJUaGUgaWQgdXNlZCB0byByZXByZXNlbnQgYnV0dG9ucyBpbiB0aGUgdGVtcGxhdGUuIFRoaXMgc2hvdWxkIGJlIHVuaXF1ZS4ifSwiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXBwbGllZCB0byBidXR0b25zLiJ9LCJsYWJlbCI6eyJuYW1lIjoibGFiZWwiLCJkaXNwbGF5TmFtZSI6IkxhYmVsIiwidmFsdWUiOiJCdXR0b24iLCJpbmZvIjoiVGhlIGJ1dHRvbiBsYWJlbCB0aGF0IHdpbGwgYmUgc2VlbiBpbiB0aGUgdGVtcGxhdGUifSwidmFsdWUiOnsibmFtZSI6InZhbHVlIiwiZGlzcGxheU5hbWUiOiJCdXR0b24gVmFsdWUiLCJpbmZvIjoiVGhlIHZhbHVlIHRoYXQgaXMgYXNzaWduZWQgdG8gdGhlIGJ1dHRvbi4gVGhpcyB2YWx1ZSB3aWxsIGJlIHNlbnQgdG8gdGhlIGJhY2tlbmQgdG8gaWRlbnRpZnkgd2hpY2ggYnV0dG9uIHdhcyBwcmVzc2VkIn0sImJ1dHRvbkltYWdlIjp7Im5hbWUiOiJidXR0b25JbWFnZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIEltYWdlIChVUkwgZm9yIGFuIGltYWdlKSIsImluZm8iOiJBbiBpbWFnZSB0byBzaG93IGFsb25nc2lkZSB0aGUgbGFiZWwiLCJncm91cCI6IkltYWdlIn0sImJ1dHRvbkltYWdlQ2xhc3MiOnsibmFtZSI6ImJ1dHRvbkltYWdlQ2xhc3MiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBDbGFzcyIsImluZm8iOiJUaGUgY2xhc3MgbmFtZSBhc3NpZ25lZCB0byB0aGUgYnV0dG9uIGltYWdlIiwiZ3JvdXAiOiJJbWFnZSJ9LCJidXR0b25JbWFnZVBsYWNlbWVudCI6eyJuYW1lIjoiYnV0dG9uSW1hZ2VQbGFjZW1lbnQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBQbGFjZW1lbnQiLCJ0eXBlIjoic2VsZWN0Iiwib3B0aW9ucyI6W3sibmFtZSI6IkxlZnQiLCJ2YWx1ZSI6ImxlZnQifSx7Im5hbWUiOiJSaWdodCIsInZhbHVlIjoicmlnaHQifV0sImluZm8iOiJUaGUgcGxhY2VtZW50IG9mIHRoZSBpbWFnZSB3aXRoIHJlc3BlY3QgdG8gdGhlIGJ1dHRvbiBsYWJlbCIsImdyb3VwIjoiSW1hZ2UifSwiYnV0dG9uVHlwZSI6eyJuYW1lIjoiYnV0dG9uVHlwZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIFR5cGUiLCJ0eXBlIjoiYnV0dG9uVHlwZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJGb3JtIFN1Ym1pdCIsInZhbHVlIjoiZm9ybS1zdWJtaXQifSx7Im5hbWUiOiJDbGVhciBNRkEgQXV0aGVudGljYXRpb24iLCJ2YWx1ZSI6Im1mYS1yZXNldCJ9LHsibmFtZSI6Ik9UUCIsInZhbHVlIjoib3RwIn0seyJuYW1lIjoiTmV4dCBFdmVudCIsInZhbHVlIjoibmV4dC1ldmVudCJ9LHsibmFtZSI6Ik51YW5jZSBBdWRpbyBSZWNvcmRpbmcgQnV0dG9uIiwidmFsdWUiOiJudWFuY2UtYXVkaW8ifSx7Im5hbWUiOiJCYWNrIHRvIFByZXZpb3VzIE5vZGUiLCJ2YWx1ZSI6ImJhY2stdG8tcHJldmlvdXMifV0sImluZm8iOiJUaGUgdHlwZSBvZiBhY3Rpb24gdGhhdCB0cmlnZ2VycyB3aGVuIHRoZSBidXR0b24gaXMgcHJlc3NlZCIsImdyb3VwIjoiRXZlbnQifSwiZm9ybSI6eyJuYW1lIjoiZm9ybSIsImRpc3BsYXlOYW1lIjoiRm9ybSBJRCIsImluZm8iOiJXaGVuIGEgZm9ybS1zdWJtaXQgdHlwZSBidXR0b24gaXMgcHJlc3NlZCwgdGhpcyBmb3JtIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgdGhlIGZvcm0gdmFsdWVzLiIsImdyb3VwIjoiRXZlbnQifSwib3RwSW5wdXQiOnsibmFtZSI6Im90cElucHV0IiwiZGlzcGxheU5hbWUiOiJPVFAgSW5wdXQgSUQiLCJpbmZvIjoiV2hlbiBhIG90cCB0eXBlIGJ1dHRvbiBpcyBwcmVzc2VkLCB0aGlzIGlucHV0IGZpZWxkIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgb3RwIHZhbHVlLiIsImdyb3VwIjoiRXZlbnQifSwiZGVmYXVsdExvYWRpbmdDb2xvciI6eyJuYW1lIjoiZGVmYXVsdExvYWRpbmdDb2xvciIsImRpc3BsYXlOYW1lIjoiQ29sb3Igb2YgRGVmYXVsdCBMb2FkaW5nIEluZGljYXRvciIsImluZm8iOiJUaGUgY29sb3Igb2YgdGhlIGRlZmF1bHQgbG9hZGluZyBhY3Rpdml0eSBpbmRpY2F0b3IgaWNvbi4iLCJncm91cCI6IkxvYWRpbmcifSwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvciIsImRpc3BsYXlOYW1lIjoiQ3VzdG9tIExvYWRpbmcgSW5kaWNhdG9yIEltYWdlIFVSTCIsImluZm8iOiJVcmwgb2YgYSBsb2FkaW5nIGluZGljYXRvciBpbWFnZS4gVGhpcyB3aWxsIHJlcGxhY2UgdGhlIGRlZmF1bHQgbG9hZGluZyBpbmRpY2F0b3IgaW1hZ2UuIiwiZ3JvdXAiOiJMb2FkaW5nIn0sImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzIiwiZGlzcGxheU5hbWUiOiJDdXN0b20gTG9hZGluZyBJbmRpY2F0b3IgSW1hZ2UgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXNzaWduZWQgdG8gdGhlIGN1c3RvbSBsb2FkaW5nIGluZGljYXRvciBpbWFnZSIsImdyb3VwIjoiTG9hZGluZyJ9fX0=]]][[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iNTAwMCIgcG9sbFJldHJpZXM9IjE4MCIgcG9sbENoYWxsZW5nZVN0YXR1cz0idHJ1ZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjUwMDAiLCJwb2xsUmV0cmllcyI6IjE4MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJ0cnVlIn0sImNvbXBvbmVudFByb3BzIjp7ImNsYXNzIjp7Im5hbWUiOiJjbGFzcyIsImRpc3BsYXlOYW1lIjoiQ1NTIENsYXNzIn0sInBvbGxJbnRlcnZhbCI6eyJuYW1lIjoicG9sbEludGVydmFsIiwiZGlzcGxheU5hbWUiOiJQb2xsIEludGVydmFsIiwidmFsdWUiOjIwMDB9LCJwb2xsUmV0cmllcyI6eyJuYW1lIjoicG9sbFJldHJpZXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgUmV0cmllcyIsInZhbHVlIjo2MH0sInBvbGxDaGFsbGVuZ2VTdGF0dXMiOnsibmFtZSI6InBvbGxDaGFsbGVuZ2VTdGF0dXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgQ2hhbGxlbmdlIFN0YXR1cyIsInR5cGUiOiJzZWxlY3QiLCJ2YWx1ZSI6InRydWUiLCJvcHRpb25zIjpbeyJuYW1lIjoiVHJ1ZSIsInZhbHVlIjoidHJ1ZSJ9LHsibmFtZSI6IkZhbHNlIiwidmFsdWUiOiJmYWxzZSJ9XX19fQ==]]]\n            <div id=\"footer-text\">Powered by Ping Identity</div>\n\n                <div class=\"d-flex flex-column\">          \n      \n                <button id=\"cancelBtn\" data-id=\"cancelBtn\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                  data-skbuttontype=\"next-event\" data-skform=\"emailForm\" data-skbuttonvalue=\"CANCEL\">\n                  Cancel\n                </button>\n              </div>\n        </form>\n    </div>\n</div>"
               },
               "customScript": {},
               "customCSS": {
@@ -1242,8 +1243,8 @@
             "idUnique": "ispz6fnipg"
           },
           "position": {
-            "x": 2730,
-            "y": 574
+            "x": 3270,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -1288,8 +1289,8 @@
             "idUnique": "yytrhfzusa"
           },
           "position": {
-            "x": 3108.867213127197,
-            "y": 582.04627995243
+            "x": 3630,
+            "y": 600
           },
           "group": "nodes",
           "removed": false,
@@ -1304,11 +1305,16 @@
           "data": {
             "id": "5dt1awmqzw",
             "nodeType": "EVAL",
-            "idUnique": "9bmbw0p7gn"
+            "idUnique": "9bmbw0p7gn",
+            "properties": {
+              "htvnugaixf": {
+                "value": "anyTriggersFalse"
+              }
+            }
           },
           "position": {
-            "x": 2580,
-            "y": 574
+            "x": 3090,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -1455,7 +1461,7 @@
             "type": "trigger",
             "properties": {
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n    <div id=\"container\" class=\"reactSingularKey_hftMain styles_hftMain__1rrse\">\n        <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n        <form id=\"skForm\">\n            <img style=\"width: 50%; margin-bottom: 25px;\" src=\"https://www.pingidentity.com/content/dam/picr/nav/Ping-Logo-2.svg\"/>\n            <br>\n            <p class=\"dialog-form-message\">\n                Please <tr>\n                    <td><a href=\"{{local.m48nak2orj.payload.output.transaction.webVerificationUrl}}\" target=\"_blank\">\n                            click on this link here on your mobile browser. </a></td>\n                </tr>\n            <p>\n                <br>\n                    Ensure that this code is displayed on the new mobile browser page after starting the experience:\n                <br>\n                <br><span id=\"code\">{{local.m48nak2orj.payload.output.transaction.webVerificationCode}}</span></br>\n            </p>\n            [[[skcomponent###c2tjb21wb25lbnQgInNrYnV0dG9uIiAgaWQ9InFyQ29kZUNsYWltZWQiIGNsYXNzPSJidG4tLWhpZGUiIGxhYmVsPSJCdXR0b24iIHZhbHVlPSJTdWJtaXQiIGJ1dHRvbkltYWdlPSIiIGJ1dHRvbkltYWdlQ2xhc3M9IiIgYnV0dG9uSW1hZ2VQbGFjZW1lbnQ9IiIgYnV0dG9uVHlwZT0ibmV4dC1ldmVudCIgZm9ybT0ic2tGb3JtIiBvdHBJbnB1dD0iIiBkZWZhdWx0TG9hZGluZ0NvbG9yPSIiIGN1c3RvbUxvYWRpbmdJbmRpY2F0b3I9IiIgY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzPSIi###eyJuYW1lIjoic2tidXR0b24iLCJvcHRpb25zIjp7ImlkIjoicXJDb2RlQ2xhaW1lZCIsImNsYXNzIjoiYnRuLS1oaWRlIiwibGFiZWwiOiJCdXR0b24iLCJ2YWx1ZSI6IlN1Ym1pdCIsImJ1dHRvbkltYWdlIjoiIiwiYnV0dG9uSW1hZ2VDbGFzcyI6IiIsImJ1dHRvbkltYWdlUGxhY2VtZW50IjoiIiwiYnV0dG9uVHlwZSI6Im5leHQtZXZlbnQiLCJmb3JtIjoic2tGb3JtIiwib3RwSW5wdXQiOiIiLCJkZWZhdWx0TG9hZGluZ0NvbG9yIjoiIiwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6IiIsImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6IiJ9LCJjb21wb25lbnRQcm9wcyI6eyJpZCI6eyJuYW1lIjoiaWQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJRCIsImluZm8iOiJUaGUgaWQgdXNlZCB0byByZXByZXNlbnQgYnV0dG9ucyBpbiB0aGUgdGVtcGxhdGUuIFRoaXMgc2hvdWxkIGJlIHVuaXF1ZS4ifSwiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXBwbGllZCB0byBidXR0b25zLiJ9LCJsYWJlbCI6eyJuYW1lIjoibGFiZWwiLCJkaXNwbGF5TmFtZSI6IkxhYmVsIiwidmFsdWUiOiJCdXR0b24iLCJpbmZvIjoiVGhlIGJ1dHRvbiBsYWJlbCB0aGF0IHdpbGwgYmUgc2VlbiBpbiB0aGUgdGVtcGxhdGUifSwidmFsdWUiOnsibmFtZSI6InZhbHVlIiwiZGlzcGxheU5hbWUiOiJCdXR0b24gVmFsdWUiLCJpbmZvIjoiVGhlIHZhbHVlIHRoYXQgaXMgYXNzaWduZWQgdG8gdGhlIGJ1dHRvbi4gVGhpcyB2YWx1ZSB3aWxsIGJlIHNlbnQgdG8gdGhlIGJhY2tlbmQgdG8gaWRlbnRpZnkgd2hpY2ggYnV0dG9uIHdhcyBwcmVzc2VkIn0sImJ1dHRvbkltYWdlIjp7Im5hbWUiOiJidXR0b25JbWFnZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIEltYWdlIChVUkwgZm9yIGFuIGltYWdlKSIsImluZm8iOiJBbiBpbWFnZSB0byBzaG93IGFsb25nc2lkZSB0aGUgbGFiZWwiLCJncm91cCI6IkltYWdlIn0sImJ1dHRvbkltYWdlQ2xhc3MiOnsibmFtZSI6ImJ1dHRvbkltYWdlQ2xhc3MiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBDbGFzcyIsImluZm8iOiJUaGUgY2xhc3MgbmFtZSBhc3NpZ25lZCB0byB0aGUgYnV0dG9uIGltYWdlIiwiZ3JvdXAiOiJJbWFnZSJ9LCJidXR0b25JbWFnZVBsYWNlbWVudCI6eyJuYW1lIjoiYnV0dG9uSW1hZ2VQbGFjZW1lbnQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBQbGFjZW1lbnQiLCJ0eXBlIjoic2VsZWN0Iiwib3B0aW9ucyI6W3sibmFtZSI6IkxlZnQiLCJ2YWx1ZSI6ImxlZnQifSx7Im5hbWUiOiJSaWdodCIsInZhbHVlIjoicmlnaHQifV0sImluZm8iOiJUaGUgcGxhY2VtZW50IG9mIHRoZSBpbWFnZSB3aXRoIHJlc3BlY3QgdG8gdGhlIGJ1dHRvbiBsYWJlbCIsImdyb3VwIjoiSW1hZ2UifSwiYnV0dG9uVHlwZSI6eyJuYW1lIjoiYnV0dG9uVHlwZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIFR5cGUiLCJ0eXBlIjoiYnV0dG9uVHlwZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJGb3JtIFN1Ym1pdCIsInZhbHVlIjoiZm9ybS1zdWJtaXQifSx7Im5hbWUiOiJDbGVhciBNRkEgQXV0aGVudGljYXRpb24iLCJ2YWx1ZSI6Im1mYS1yZXNldCJ9LHsibmFtZSI6Ik9UUCIsInZhbHVlIjoib3RwIn0seyJuYW1lIjoiTmV4dCBFdmVudCIsInZhbHVlIjoibmV4dC1ldmVudCJ9LHsibmFtZSI6Ik51YW5jZSBBdWRpbyBSZWNvcmRpbmcgQnV0dG9uIiwidmFsdWUiOiJudWFuY2UtYXVkaW8ifSx7Im5hbWUiOiJCYWNrIHRvIFByZXZpb3VzIE5vZGUiLCJ2YWx1ZSI6ImJhY2stdG8tcHJldmlvdXMifV0sImluZm8iOiJUaGUgdHlwZSBvZiBhY3Rpb24gdGhhdCB0cmlnZ2VycyB3aGVuIHRoZSBidXR0b24gaXMgcHJlc3NlZCIsImdyb3VwIjoiRXZlbnQifSwiZm9ybSI6eyJuYW1lIjoiZm9ybSIsImRpc3BsYXlOYW1lIjoiRm9ybSBJRCIsImluZm8iOiJXaGVuIGEgZm9ybS1zdWJtaXQgdHlwZSBidXR0b24gaXMgcHJlc3NlZCwgdGhpcyBmb3JtIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgdGhlIGZvcm0gdmFsdWVzLiIsImdyb3VwIjoiRXZlbnQifSwib3RwSW5wdXQiOnsibmFtZSI6Im90cElucHV0IiwiZGlzcGxheU5hbWUiOiJPVFAgSW5wdXQgSUQiLCJpbmZvIjoiV2hlbiBhIG90cCB0eXBlIGJ1dHRvbiBpcyBwcmVzc2VkLCB0aGlzIGlucHV0IGZpZWxkIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgb3RwIHZhbHVlLiIsImdyb3VwIjoiRXZlbnQifSwiZGVmYXVsdExvYWRpbmdDb2xvciI6eyJuYW1lIjoiZGVmYXVsdExvYWRpbmdDb2xvciIsImRpc3BsYXlOYW1lIjoiQ29sb3Igb2YgRGVmYXVsdCBMb2FkaW5nIEluZGljYXRvciIsImluZm8iOiJUaGUgY29sb3Igb2YgdGhlIGRlZmF1bHQgbG9hZGluZyBhY3Rpdml0eSBpbmRpY2F0b3IgaWNvbi4iLCJncm91cCI6IkxvYWRpbmcifSwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvciIsImRpc3BsYXlOYW1lIjoiQ3VzdG9tIExvYWRpbmcgSW5kaWNhdG9yIEltYWdlIFVSTCIsImluZm8iOiJVcmwgb2YgYSBsb2FkaW5nIGluZGljYXRvciBpbWFnZS4gVGhpcyB3aWxsIHJlcGxhY2UgdGhlIGRlZmF1bHQgbG9hZGluZyBpbmRpY2F0b3IgaW1hZ2UuIiwiZ3JvdXAiOiJMb2FkaW5nIn0sImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzIiwiZGlzcGxheU5hbWUiOiJDdXN0b20gTG9hZGluZyBJbmRpY2F0b3IgSW1hZ2UgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXNzaWduZWQgdG8gdGhlIGN1c3RvbSBsb2FkaW5nIGluZGljYXRvciBpbWFnZSIsImdyb3VwIjoiTG9hZGluZyJ9fX0=]]][[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iNTAwMCIgcG9sbFJldHJpZXM9IjE4MCIgcG9sbENoYWxsZW5nZVN0YXR1cz0idHJ1ZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjUwMDAiLCJwb2xsUmV0cmllcyI6IjE4MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJ0cnVlIn0sImNvbXBvbmVudFByb3BzIjp7ImNsYXNzIjp7Im5hbWUiOiJjbGFzcyIsImRpc3BsYXlOYW1lIjoiQ1NTIENsYXNzIn0sInBvbGxJbnRlcnZhbCI6eyJuYW1lIjoicG9sbEludGVydmFsIiwiZGlzcGxheU5hbWUiOiJQb2xsIEludGVydmFsIiwidmFsdWUiOjIwMDB9LCJwb2xsUmV0cmllcyI6eyJuYW1lIjoicG9sbFJldHJpZXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgUmV0cmllcyIsInZhbHVlIjo2MH0sInBvbGxDaGFsbGVuZ2VTdGF0dXMiOnsibmFtZSI6InBvbGxDaGFsbGVuZ2VTdGF0dXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgQ2hhbGxlbmdlIFN0YXR1cyIsInR5cGUiOiJzZWxlY3QiLCJ2YWx1ZSI6InRydWUiLCJvcHRpb25zIjpbeyJuYW1lIjoiVHJ1ZSIsInZhbHVlIjoidHJ1ZSJ9LHsibmFtZSI6IkZhbHNlIiwidmFsdWUiOiJmYWxzZSJ9XX19fQ==]]]\n            <div id=\"footer-text\">Powered by Ping Identity</div>\n        </form>\n    </div>\n</div>"
+                "value": "<div class=\"end-user-nano\">\n    <div id=\"container\" class=\"reactSingularKey_hftMain styles_hftMain__1rrse\">\n        <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n        <form id=\"skForm\">\n            <img style=\"width: 50%; margin-bottom: 25px;\" src=\"https://www.pingidentity.com/content/dam/picr/nav/Ping-Logo-2.svg\"/>\n            <br>\n            <p class=\"dialog-form-message\">\n                Please <tr>\n                    <td><a href=\"{{local.m48nak2orj.payload.output.transaction.webVerificationUrl}}\" target=\"_blank\">\n                            click on this link here on your mobile browser. </a></td>\n                </tr>\n            <p>\n                <br>\n                    Ensure that this code is displayed on the new mobile browser page after starting the experience:\n                <br>\n                <br><span id=\"code\">{{local.m48nak2orj.payload.output.transaction.webVerificationCode}}</span></br>\n            </p>\n            [[[skcomponent###c2tjb21wb25lbnQgInNrYnV0dG9uIiAgaWQ9InFyQ29kZUNsYWltZWQiIGNsYXNzPSJidG4tLWhpZGUiIGxhYmVsPSJCdXR0b24iIHZhbHVlPSJTdWJtaXQiIGJ1dHRvbkltYWdlPSIiIGJ1dHRvbkltYWdlQ2xhc3M9IiIgYnV0dG9uSW1hZ2VQbGFjZW1lbnQ9IiIgYnV0dG9uVHlwZT0ibmV4dC1ldmVudCIgZm9ybT0ic2tGb3JtIiBvdHBJbnB1dD0iIiBkZWZhdWx0TG9hZGluZ0NvbG9yPSIiIGN1c3RvbUxvYWRpbmdJbmRpY2F0b3I9IiIgY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzPSIi###eyJuYW1lIjoic2tidXR0b24iLCJvcHRpb25zIjp7ImlkIjoicXJDb2RlQ2xhaW1lZCIsImNsYXNzIjoiYnRuLS1oaWRlIiwibGFiZWwiOiJCdXR0b24iLCJ2YWx1ZSI6IlN1Ym1pdCIsImJ1dHRvbkltYWdlIjoiIiwiYnV0dG9uSW1hZ2VDbGFzcyI6IiIsImJ1dHRvbkltYWdlUGxhY2VtZW50IjoiIiwiYnV0dG9uVHlwZSI6Im5leHQtZXZlbnQiLCJmb3JtIjoic2tGb3JtIiwib3RwSW5wdXQiOiIiLCJkZWZhdWx0TG9hZGluZ0NvbG9yIjoiIiwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6IiIsImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6IiJ9LCJjb21wb25lbnRQcm9wcyI6eyJpZCI6eyJuYW1lIjoiaWQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJRCIsImluZm8iOiJUaGUgaWQgdXNlZCB0byByZXByZXNlbnQgYnV0dG9ucyBpbiB0aGUgdGVtcGxhdGUuIFRoaXMgc2hvdWxkIGJlIHVuaXF1ZS4ifSwiY2xhc3MiOnsibmFtZSI6ImNsYXNzIiwiZGlzcGxheU5hbWUiOiJDU1MgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXBwbGllZCB0byBidXR0b25zLiJ9LCJsYWJlbCI6eyJuYW1lIjoibGFiZWwiLCJkaXNwbGF5TmFtZSI6IkxhYmVsIiwidmFsdWUiOiJCdXR0b24iLCJpbmZvIjoiVGhlIGJ1dHRvbiBsYWJlbCB0aGF0IHdpbGwgYmUgc2VlbiBpbiB0aGUgdGVtcGxhdGUifSwidmFsdWUiOnsibmFtZSI6InZhbHVlIiwiZGlzcGxheU5hbWUiOiJCdXR0b24gVmFsdWUiLCJpbmZvIjoiVGhlIHZhbHVlIHRoYXQgaXMgYXNzaWduZWQgdG8gdGhlIGJ1dHRvbi4gVGhpcyB2YWx1ZSB3aWxsIGJlIHNlbnQgdG8gdGhlIGJhY2tlbmQgdG8gaWRlbnRpZnkgd2hpY2ggYnV0dG9uIHdhcyBwcmVzc2VkIn0sImJ1dHRvbkltYWdlIjp7Im5hbWUiOiJidXR0b25JbWFnZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIEltYWdlIChVUkwgZm9yIGFuIGltYWdlKSIsImluZm8iOiJBbiBpbWFnZSB0byBzaG93IGFsb25nc2lkZSB0aGUgbGFiZWwiLCJncm91cCI6IkltYWdlIn0sImJ1dHRvbkltYWdlQ2xhc3MiOnsibmFtZSI6ImJ1dHRvbkltYWdlQ2xhc3MiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBDbGFzcyIsImluZm8iOiJUaGUgY2xhc3MgbmFtZSBhc3NpZ25lZCB0byB0aGUgYnV0dG9uIGltYWdlIiwiZ3JvdXAiOiJJbWFnZSJ9LCJidXR0b25JbWFnZVBsYWNlbWVudCI6eyJuYW1lIjoiYnV0dG9uSW1hZ2VQbGFjZW1lbnQiLCJkaXNwbGF5TmFtZSI6IkJ1dHRvbiBJbWFnZSBQbGFjZW1lbnQiLCJ0eXBlIjoic2VsZWN0Iiwib3B0aW9ucyI6W3sibmFtZSI6IkxlZnQiLCJ2YWx1ZSI6ImxlZnQifSx7Im5hbWUiOiJSaWdodCIsInZhbHVlIjoicmlnaHQifV0sImluZm8iOiJUaGUgcGxhY2VtZW50IG9mIHRoZSBpbWFnZSB3aXRoIHJlc3BlY3QgdG8gdGhlIGJ1dHRvbiBsYWJlbCIsImdyb3VwIjoiSW1hZ2UifSwiYnV0dG9uVHlwZSI6eyJuYW1lIjoiYnV0dG9uVHlwZSIsImRpc3BsYXlOYW1lIjoiQnV0dG9uIFR5cGUiLCJ0eXBlIjoiYnV0dG9uVHlwZSIsIm9wdGlvbnMiOlt7Im5hbWUiOiJGb3JtIFN1Ym1pdCIsInZhbHVlIjoiZm9ybS1zdWJtaXQifSx7Im5hbWUiOiJDbGVhciBNRkEgQXV0aGVudGljYXRpb24iLCJ2YWx1ZSI6Im1mYS1yZXNldCJ9LHsibmFtZSI6Ik9UUCIsInZhbHVlIjoib3RwIn0seyJuYW1lIjoiTmV4dCBFdmVudCIsInZhbHVlIjoibmV4dC1ldmVudCJ9LHsibmFtZSI6Ik51YW5jZSBBdWRpbyBSZWNvcmRpbmcgQnV0dG9uIiwidmFsdWUiOiJudWFuY2UtYXVkaW8ifSx7Im5hbWUiOiJCYWNrIHRvIFByZXZpb3VzIE5vZGUiLCJ2YWx1ZSI6ImJhY2stdG8tcHJldmlvdXMifV0sImluZm8iOiJUaGUgdHlwZSBvZiBhY3Rpb24gdGhhdCB0cmlnZ2VycyB3aGVuIHRoZSBidXR0b24gaXMgcHJlc3NlZCIsImdyb3VwIjoiRXZlbnQifSwiZm9ybSI6eyJuYW1lIjoiZm9ybSIsImRpc3BsYXlOYW1lIjoiRm9ybSBJRCIsImluZm8iOiJXaGVuIGEgZm9ybS1zdWJtaXQgdHlwZSBidXR0b24gaXMgcHJlc3NlZCwgdGhpcyBmb3JtIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgdGhlIGZvcm0gdmFsdWVzLiIsImdyb3VwIjoiRXZlbnQifSwib3RwSW5wdXQiOnsibmFtZSI6Im90cElucHV0IiwiZGlzcGxheU5hbWUiOiJPVFAgSW5wdXQgSUQiLCJpbmZvIjoiV2hlbiBhIG90cCB0eXBlIGJ1dHRvbiBpcyBwcmVzc2VkLCB0aGlzIGlucHV0IGZpZWxkIGlkIHdpbGwgYmUgdXNlZCB0byBnZXQgb3RwIHZhbHVlLiIsImdyb3VwIjoiRXZlbnQifSwiZGVmYXVsdExvYWRpbmdDb2xvciI6eyJuYW1lIjoiZGVmYXVsdExvYWRpbmdDb2xvciIsImRpc3BsYXlOYW1lIjoiQ29sb3Igb2YgRGVmYXVsdCBMb2FkaW5nIEluZGljYXRvciIsImluZm8iOiJUaGUgY29sb3Igb2YgdGhlIGRlZmF1bHQgbG9hZGluZyBhY3Rpdml0eSBpbmRpY2F0b3IgaWNvbi4iLCJncm91cCI6IkxvYWRpbmcifSwiY3VzdG9tTG9hZGluZ0luZGljYXRvciI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvciIsImRpc3BsYXlOYW1lIjoiQ3VzdG9tIExvYWRpbmcgSW5kaWNhdG9yIEltYWdlIFVSTCIsImluZm8iOiJVcmwgb2YgYSBsb2FkaW5nIGluZGljYXRvciBpbWFnZS4gVGhpcyB3aWxsIHJlcGxhY2UgdGhlIGRlZmF1bHQgbG9hZGluZyBpbmRpY2F0b3IgaW1hZ2UuIiwiZ3JvdXAiOiJMb2FkaW5nIn0sImN1c3RvbUxvYWRpbmdJbmRpY2F0b3JDbGFzcyI6eyJuYW1lIjoiY3VzdG9tTG9hZGluZ0luZGljYXRvckNsYXNzIiwiZGlzcGxheU5hbWUiOiJDdXN0b20gTG9hZGluZyBJbmRpY2F0b3IgSW1hZ2UgQ2xhc3MiLCJpbmZvIjoiVGhlIGNsYXNzIG5hbWUgYXNzaWduZWQgdG8gdGhlIGN1c3RvbSBsb2FkaW5nIGluZGljYXRvciBpbWFnZSIsImdyb3VwIjoiTG9hZGluZyJ9fX0=]]][[[skcomponent###c2tjb21wb25lbnQgInNrcG9sbGluZyIgIGNsYXNzPSIiIHBvbGxJbnRlcnZhbD0iNTAwMCIgcG9sbFJldHJpZXM9IjE4MCIgcG9sbENoYWxsZW5nZVN0YXR1cz0idHJ1ZSI=###eyJuYW1lIjoic2twb2xsaW5nIiwib3B0aW9ucyI6eyJjbGFzcyI6IiIsInBvbGxJbnRlcnZhbCI6IjUwMDAiLCJwb2xsUmV0cmllcyI6IjE4MCIsInBvbGxDaGFsbGVuZ2VTdGF0dXMiOiJ0cnVlIn0sImNvbXBvbmVudFByb3BzIjp7ImNsYXNzIjp7Im5hbWUiOiJjbGFzcyIsImRpc3BsYXlOYW1lIjoiQ1NTIENsYXNzIn0sInBvbGxJbnRlcnZhbCI6eyJuYW1lIjoicG9sbEludGVydmFsIiwiZGlzcGxheU5hbWUiOiJQb2xsIEludGVydmFsIiwidmFsdWUiOjIwMDB9LCJwb2xsUmV0cmllcyI6eyJuYW1lIjoicG9sbFJldHJpZXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgUmV0cmllcyIsInZhbHVlIjo2MH0sInBvbGxDaGFsbGVuZ2VTdGF0dXMiOnsibmFtZSI6InBvbGxDaGFsbGVuZ2VTdGF0dXMiLCJkaXNwbGF5TmFtZSI6IlBvbGwgQ2hhbGxlbmdlIFN0YXR1cyIsInR5cGUiOiJzZWxlY3QiLCJ2YWx1ZSI6InRydWUiLCJvcHRpb25zIjpbeyJuYW1lIjoiVHJ1ZSIsInZhbHVlIjoidHJ1ZSJ9LHsibmFtZSI6IkZhbHNlIiwidmFsdWUiOiJmYWxzZSJ9XX19fQ==]]]\n            <div id=\"footer-text\">Powered by Ping Identity</div>\n                          <div class=\"d-flex flex-column\">          \n\n                </button>            \n                <button id=\"cancelBtn\" data-id=\"cancelBtn\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                  data-skbuttontype=\"next-event\" data-skform=\"emailForm\" data-skbuttonvalue=\"CANCEL\">\n                  Cancel\n                </button>\n              </div>\n        </form>\n    </div>\n</div>"
               },
               "customScript": {},
               "customCSS": {
@@ -1504,8 +1510,8 @@
             "idUnique": "sp0374u0vx"
           },
           "position": {
-            "x": 3248.04352145062,
-            "y": 776.8931116052222
+            "x": 3780,
+            "y": 780
           },
           "group": "nodes",
           "removed": false,
@@ -1538,7 +1544,7 @@
             "idUnique": "6cnkddadlk"
           },
           "position": {
-            "x": 3750,
+            "x": 4290,
             "y": 540
           },
           "group": "nodes",
@@ -1572,7 +1578,7 @@
             "idUnique": "gfj2wfjrl0"
           },
           "position": {
-            "x": 3720,
+            "x": 4260,
             "y": 690
           },
           "group": "nodes",
@@ -1609,7 +1615,7 @@
             "idUnique": "49w8t6fgv6"
           },
           "position": {
-            "x": 3420,
+            "x": 3960,
             "y": 840
           },
           "group": "nodes",
@@ -1633,8 +1639,8 @@
             }
           },
           "position": {
-            "x": 2858.349858145036,
-            "y": 582.04627995243
+            "x": 3390,
+            "y": 600
           },
           "group": "nodes",
           "removed": false,
@@ -1759,14 +1765,11 @@
               "backgroundColor": {
                 "value": "#9dc967ff"
               },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
               "customCSS": {
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
               "customHTML": {
-                "value": "<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                <h1 class=\"text-center mb-4\">{{title}}</h1>\n                {{/if}}\n  <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\"  data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n                <div class=\"mx-auto mt-3 mb-4\">\n                    <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                        <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                        <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                    </svg>\n                </div>\n\n                {{#if textOne}}\n                <p class=\"text-muted text-center\">{{textOne}}</p>\n                {{/if}}\n\n                {{#if textTwo}}\n                <p class=\"text-muted text-center\">{{textTwo}}</p>\n                {{/if}}\n\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                {{#if buttonLabel}}\n                <div class=\"d-flex flex-column\">\n                    <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                    data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\" >\n                    {{buttonLabel}}\n                    </button>\n                </div>\n                {{/if}}\n\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "<div class=\"end-user-nano\"><div\n\n<!-- Auto Advance -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"40\" data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                <h1 class=\"text-center mb-4\">{{title}}</h1>\n                {{/if}}\n                <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n                    data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n                <div class=\"mx-auto mt-3 mb-4\">\n                    <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                        <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                        <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                    </svg>\n                </div>\n\n                {{#if textOne}}\n                <p class=\"text-muted text-center\">{{textOne}}</p>\n                {{/if}}\n\n                {{#if textTwo}}\n                <p class=\"text-muted text-center\">{{textTwo}}</p>\n                {{/if}}\n\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                {{#if buttonLabel}}\n                <div class=\"d-flex flex-column\">\n                    <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                    data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\" >\n                    {{buttonLabel}}\n                    </button>\n                </div>\n                {{/if}}\n\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {},
               "formFieldsList": {
@@ -1805,7 +1808,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Your Identity has been verififed\"\n      }\n    ]\n  }\n]"
               },
               "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Please click the 'Continue' button to Continue\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Flow will continue automatically\"\n      }\n    ]\n  }\n]"
               },
               "title": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Identity Verified\"\n      }\n    ]\n  }\n]"
@@ -3680,7 +3683,7 @@
                 ]
               },
               "nodeTitle": {
-                "value": "read Govt Data failed"
+                "value": "Read Govt Data failed"
               },
               "customCSS": {
                 "value": ":root {\n    --failure-animation-dimension: 120px;\n    --failure-animation-start-color: #e63946; \n    --failure-animation-midway-color: #d90429; \n    --failure-animation-finish-color: #ba000d; \n}\n\n.xmark {\n    width: var(--failure-animation-dimension);\n    height: var(--failure-animation-dimension);\n    display: block;\n    stroke-width: 5;\n    stroke: #ffffff;\n    stroke-miterlimit: 10;\n    border-radius: 50%;\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;\n}\n\n.xmarkCircle {\n    stroke-dasharray: 166;\n    stroke-dashoffset: 166;\n    stroke-width: 5;\n    stroke: var(--failure-animation-finish-color);\n    fill: none;\n    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;\n}\n\n.xmarkX {\n    stroke-dasharray: 56;\n    stroke-dashoffset: 56;\n    stroke-width: 5;\n    stroke: var(--failure-animation-start-color);\n    animation: strokeX 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards, colorChangeX 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes stroke {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes strokeX {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes colorChangeX {\n    0% {\n        stroke: var(--failure-animation-start-color);\n    }\n    50% {\n        stroke: var(--failure-animation-midway-color);\n    }\n    100% {\n        stroke: var(--failure-animation-finish-color);\n    }\n}\n\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n\n/* Ensure scale and fill animations are correctly applied */\n"
@@ -3807,7 +3810,7 @@
             "idUnique": "k8hh4ejsfp"
           },
           "position": {
-            "x": 3000,
+            "x": 3540,
             "y": 870
           },
           "group": "nodes",
@@ -3973,7 +3976,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3120,
+            "x": 3660,
             "y": 870
           },
           "group": "nodes",
@@ -4003,7 +4006,7 @@
             }
           },
           "position": {
-            "x": 3270,
+            "x": 3810,
             "y": 870
           },
           "group": "nodes",
@@ -4093,7 +4096,7 @@
             "idUnique": "udpaiamiii"
           },
           "position": {
-            "x": 3420,
+            "x": 3960,
             "y": 540
           },
           "group": "nodes",
@@ -4111,8 +4114,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3220.2082597859353,
-            "y": 582.04627995243
+            "x": 3750,
+            "y": 600
           },
           "group": "nodes",
           "removed": false,
@@ -4129,7 +4132,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3570,
+            "x": 4110,
             "y": 540
           },
           "group": "nodes",
@@ -4480,8 +4483,8 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3231.0446741398273,
-            "y": 694.3703814069381
+            "x": 3750,
+            "y": 690
           },
           "group": "nodes",
           "removed": false,
@@ -4522,7 +4525,7 @@
             }
           },
           "position": {
-            "x": 3420,
+            "x": 3960,
             "y": 690
           },
           "group": "nodes",
@@ -4545,7 +4548,7 @@
             }
           },
           "position": {
-            "x": 3540,
+            "x": 4080,
             "y": 690
           },
           "group": "nodes",
@@ -4606,7 +4609,7 @@
             }
           },
           "position": {
-            "x": 3750,
+            "x": 4290,
             "y": 840
           },
           "group": "nodes",
@@ -4625,7 +4628,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3900,
+            "x": 4440,
             "y": 840
           },
           "group": "nodes",
@@ -4650,13 +4653,177 @@
             "type": "action",
             "properties": {
               "nodeInstanceId": {
-                "value": "k297gu947h"
+                "value": "wy8gkyn5d0"
               }
             }
           },
           "position": {
-            "x": 4080,
+            "x": 4620,
             "y": 840
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7mv4jv8dvr",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "buttonValue",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.2m6zz8p6bi.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.2m6zz8p6bi.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.328txgk3zs.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.328txgk3zs.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8938321519092858,
+                    "label": "buttonValue (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "buttonValue"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 2670,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "agll91f2yr",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2520,
+            "y": 527
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9mjxiq7wiq",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2520,
+            "y": 617
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "w5btmt1cu7",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 2774.5,
+            "y": 568.75
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "y9w7wi4k3r",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{global.variables.buttonValue}}\",\n        \"tooltip\": \"{{global.variables.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "caseSensitive": {
+                "value": false
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Check for Cancel button"
+              }
+            }
+          },
+          "position": {
+            "x": 2940,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "qmgs624zsx",
+            "nodeType": "CONNECTION",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "name": "Teleport",
+            "label": "Teleport",
+            "status": "configured",
+            "capabilityName": "goToNode",
+            "type": "action",
+            "properties": {
+              "nodeInstanceId": {
+                "value": "byes7jzubx"
+              }
+            },
+            "idUnique": "6oytpcs4xs"
+          },
+          "position": {
+            "x": 3240,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -5907,9 +6074,9 @@
         },
         {
           "data": {
-            "id": "ri4474kwld",
-            "source": "328txgk3zs",
-            "target": "5dt1awmqzw"
+            "id": "uemkh59gpp",
+            "source": "9j132txgsi",
+            "target": "g6toyk293m"
           },
           "position": {
             "x": 0,
@@ -6060,9 +6227,9 @@
         },
         {
           "data": {
-            "id": "a76pwo9a5i",
-            "source": "2m6zz8p6bi",
-            "target": "5dt1awmqzw"
+            "id": "5vyvhk4nbw",
+            "source": "46ee9u3976",
+            "target": "5njzsq22tz"
           },
           "position": {
             "x": 0,
@@ -6422,9 +6589,9 @@
         },
         {
           "data": {
-            "id": "5vyvhk4nbw",
-            "source": "46ee9u3976",
-            "target": "5njzsq22tz"
+            "id": "0qp1wowayb",
+            "source": "328txgk3zs",
+            "target": "agll91f2yr"
           },
           "position": {
             "x": 0,
@@ -6441,9 +6608,123 @@
         },
         {
           "data": {
-            "id": "uemkh59gpp",
-            "source": "9j132txgsi",
-            "target": "g6toyk293m"
+            "id": "xo5a5k8uq3",
+            "source": "agll91f2yr",
+            "target": "7mv4jv8dvr"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "o7zff8sfuf",
+            "source": "2m6zz8p6bi",
+            "target": "9mjxiq7wiq"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "j3g5jtd5in",
+            "source": "9mjxiq7wiq",
+            "target": "7mv4jv8dvr"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ak29f55vf6",
+            "source": "7mv4jv8dvr",
+            "target": "w5btmt1cu7"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "uohzrqs3vl",
+            "source": "w5btmt1cu7",
+            "target": "y9w7wi4k3r"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7ogwx4alxa",
+            "source": "y9w7wi4k3r",
+            "target": "5dt1awmqzw"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "290c3x2phv",
+            "source": "5dt1awmqzw",
+            "target": "qmgs624zsx"
           },
           "position": {
             "x": 0,
@@ -6529,7 +6810,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1724753459156,
+  "savedDate": 1725546768951,
   "variables": [
     {
       "context": "flowInstance",
@@ -6696,6 +6977,23 @@
       "type": "property",
       "visibility": "private",
       "name": "firstName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1721660301566,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "5f88e1bb-2988-4a55-a30d-daedb045cedb",
+      "type": "property",
+      "visibility": "private",
+      "name": "buttonValue##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {

@@ -50,6 +50,12 @@ resource "davinci_connection" "Flow-Connector" {
   name           = "Flow Connector"
 }
 
+resource "davinci_connection" "Flow-Analytics" {
+  connector_id   = "analyticsConnector"
+  environment_id = pingone_environment.master_flow_environment.id
+  name           = "Flow Analytics"
+}
+
 resource "davinci_connection" "Functions" {
   connector_id   = "functionsConnector"
   environment_id = pingone_environment.master_flow_environment.id
@@ -684,133 +690,7 @@ resource "davinci_variable" "mf-configObject" {
   mutable        = "true"
   name           = "mf-configObject"
   type           = "object"
-  value          = replace(replace(replace(jsonencode({
-						"config": {
-							"mf-bool-webauthnBrowserSupport": true,
-							"mf-obj-passwordPolicy": {
-								"length": {
-									"min": 8,
-									"max": 255
-								},
-								"minCharacters": {
-									"0123456789": 1,
-									"ABCDEFGHIJKLMNOPQRSTUVWXYZ": 1,
-									"abcdefghijklmnopqrstuvwxyz": 1,
-									"~!@#$%^&*()-_=+[]{}|;:,.<>/?": 1
-								},
-								"minUniqueCharacters": 5,
-								"maxRepeatedCharacters": 2
-							},
-							"mf-obj-p1MFAPasswordlessAllowedTypes": [
-								"FIDO2",
-								"PLATFORM",
-								"MOBILE",
-								"TOTP",
-								"SECURITY_KEY"
-							],
-							"mf-str-availableQuestions": [
-								{
-									"question": "In what city were you born?"
-								},
-								{
-									"question": "What was the model of your first car?"
-								},
-								{
-									"question": "What is the name of your first pet?"
-								},
-								{
-									"question": "What is the name of your favorite teacher?"
-								},
-								{
-									"question": "What is your mother's maiden name?"
-								},
-								{
-									"question": "What is the name of the street you grew up on?"
-								},
-								{
-									"question": "In which year did you graduate from high school?"
-								}
-							],
-							"mf-str-azureExternalIdPId": " ",
-							"mf-str-browserVersion": 128,
-							"mf-str-captchaThreshold": "0.7",
-							"mf-str-captchaV3SecretKey": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF",
-							"mf-str-captchaV3SiteKey": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
-							"mf-str-companyLogo": "https://avatars.githubusercontent.com/u/93611276?v=4",
-							"mf-str-companyName": "Davinci Demo Company",
-							"mf-str-facebookExternalIdPId": "",
-							"mf-str-githubExternalIdPId": "",
-							"mf-str-googleExternalIdPId": "21ad062f-bbce-4365-b0ed-8c98f9e7f4f2",
-							"mf-str-passwordExpiredDays": 30,
-							"mf-str-fidoDeviceNickname": "Passkeys",
-							"mf-str-fidoOrigin": "https://auth.pingone.com",
-							"mf-str-fidoRPID": "pingone.com",
-							"mf-str-webAuthnSupport": "cross-platform"
-						},
-						"pingone": {
-							"mf-bool-allowForgotPassword": true,
-							"mf-bool-allowForgotUsername": true,
-							"mf-bool-allowKBAforForgotPassword": true,
-							"mf-bool-allowMagicLinkUserRegistration": true,
-							"mf-bool-allowOTPForgotPassword": true,
-							"mf-bool-allowreCaptcha": false,
-							"mf-bool-displayProfileUpdateQuestion": true,
-							"mf-bool-runAgreement": false,
-							"mf-bool-runAzureLogin": true,
-							"mf-bool-runGoogleLogin": true,
-							"mf-bool-runConsent": true,
-							"mf-bool-runFacebookLogin": false,
-							"mf-bool-runGithubLogin": false,
-							"mf-bool-runMFAOnAccountUnlock": true,
-							"mf-bool-runPasswordExpireCheck": true,
-							"mf-bool-runProgressiveProfileAuthN": true,
-							"mf-bool-runProgressiveProfileRegstration": true,
-							"mf-bool-runTimeBasedProgressiveProfile": true,
-							"mf-bool-showAzureButton": true,
-							"mf-bool-showFacebookButton": false,
-							"mf-bool-showGithubButton": false,
-							"mf-bool-showGoogleButton": true,
-							"mf-string-daysUntilProgressiveProfile": 30
-						},
-						"p1Authorize": {
-							"mf-bool-runAuthorize": false
-						},
-						"p1MFA": {
-							"mf-bool-allowForgotPassword": true,
-							"mf-bool-allowHybridPasswordless": true,
-							"mf-bool-allowRegisterAnotherDevice": true,
-							"mf-bool-runAfterSocialLogin": false,
-							"mf-bool-runAutoEnrollEmail": true,
-							"mf-bool-runDeviceManagement": true,
-							"mf-bool-runInlineMFA": true,
-							"mf-bool-runOnlyPasswordless": false,
-							"mf-bool-runP1MFA": true,
-							"mf-bool-sendEmailConfirmation": true,
-							"mf-bool-sendEmailDeleteDeviceConfirmation": true
-						},
-						"p1Protect": {
-							"mf-bool-runAfterSocialLogin": false,
-							"mf-bool-runBrowserVersionAuthentication": false,
-							"mf-bool-runBrowserVersionRegistration": true,
-							"mf-bool-runFakeRiskLevel": true,
-							"mf-bool-runMFAOnHigh": false,
-							"mf-bool-runNotificationForNewDevice": true,
-							"mf-bool-runPassiveMode": false,
-							"mf-bool-runProtect": true,
-							"mf-bool-runStopOnHighRiskLevel": false,
-							"mf-bool-showDetailScreenDisplay": true,
-							"mf-bool-showProgressScreenDisplay": true,
-							"mf-bool-userDeleteOnTempEmail": false,
-							"mf-bool-userLockedOnTempEmail": true,
-							"mf-str-fakeRiskLevel": "MEDIUM",
-							"mf-str-fakeRiskScore": 50
-						},
-						"p1Verify": {
-							"mf-bool-allowVerifyUserRegistration": true,
-							"mf-bool-runVerifyFakeSuccess": false,
-							"mf-bool-runVerifyOnHigh": true
-						}
-					}), "\\u0026", "&"), "\\u003c", "<"), "\\u003e", ">")
+  value          = replace(replace(replace(jsonencode(var.davinci_variable_mf-configObject), "\\u0026", "&"), "\\u003c", "<"), "\\u003e", ">")
 }
 
 resource "davinci_variable" "mf-str-p1PopulationId" {
@@ -1390,6 +1270,11 @@ resource "davinci_flow" "PingOne-SSO-Authentication-Sensei---MASTER" {
 		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
 	}
 	connection_link {
+		id   = davinci_connection.Flow-Analytics.id
+		name = davinci_connection.Flow-Analytics.name
+		replace_import_connection_id = "c4b2032a1b63d370c5fbdd205522f1c5"
+	}
+	connection_link {
 		id   = davinci_connection.Error-Message.id
 		name = davinci_connection.Error-Message.name
 		replace_import_connection_id = "53ab83a4a4ab919d9f2cb02d9e111ac8"
@@ -1930,6 +1815,46 @@ resource "davinci_flow" "PingOne-Authorize-Flow" {
 	]
 }
 
+resource "davinci_flow" "PingOne-Auto-enroll-user-in-mobile-SMS" {
+	environment_id = pingone_environment.master_flow_environment.id
+	flow_json = "${file("${path.module}/data/flows/ PingOne Auto enroll user in mobile SMS.json")}"
+
+	connection_link {
+		id   = davinci_connection.Annotation.id
+		name = davinci_connection.Annotation.name
+		replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
+	}
+	connection_link {
+		id   = davinci_connection.Variables.id
+		name = davinci_connection.Variables.name
+		replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
+	}
+	connection_link {
+		id   = davinci_connection.PingOne-MFA.id
+		name = davinci_connection.PingOne-MFA.name
+		replace_import_connection_id = "b72bd44e6be8180bd5988ac74cd9c949"
+	}
+	connection_link {
+		id   = davinci_connection.Http.id
+		name = davinci_connection.Http.name
+		replace_import_connection_id = "867ed4363b2bc21c860085ad2baa817d"
+	}
+	connection_link {
+		id   = davinci_connection.Functions.id
+		name = davinci_connection.Functions.name
+		replace_import_connection_id = "de650ca45593b82c49064ead10b9fe17"
+	}
+	connection_link {
+		id   = davinci_connection.Node.id
+		name = davinci_connection.Node.name
+		replace_import_connection_id = "3566e86a35c26e575396dcfb89a3dcc0"
+	}
+
+	depends_on = [
+		data.davinci_connections.read_connections
+	]
+}
+
 resource "davinci_flow" "PingOne-MFA-Device-Management-Subflow" {
 	environment_id = pingone_environment.master_flow_environment.id
 	flow_json = "${file("${path.module}/data/flows/PingOne MFA Device Management Subflow.json")}"
@@ -2427,6 +2352,11 @@ resource "davinci_flow" "PingOne-SSO-Progressive-Profiling-subflow" {
 		id   = davinci_connection.PingOne-Notifications.id
 		name = davinci_connection.PingOne-Notifications.name
 		replace_import_connection_id = "cacf3d2861657174d93cbf445d55797a"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Connector.id
+		name = davinci_connection.Flow-Connector.name
+		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
 	}
 
 	depends_on = [
