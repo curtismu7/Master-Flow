@@ -1,16 +1,20 @@
-region                  = "NorthAmerica"     
-region_code             = "NA"
-pingone_environment_id  = "" # Terraform Administration Environment
-admin_user_id           = "" # Terraform Administration Environment
-license_id              = "" # Terraform Administration Environment
-worker_id               = ""
-worker_secret           = ""
-admin_username          = "" # Terraform Administration Environment
-admin_password          = "" # Terraform Administration Environment
-organization_id         = ""
+region                  = "NorthAmerica"     # Used in DV Provider
+region_code             = "NA"               # Used in PingOne provider
+pingone_environment_id  = "2e82aecc-ff12-41e1-9659-ac64cd404781" # Terraform DV Environment, probably need to rename
+admin_user_id           = "d465c795-4b06-4e1d-9c74-74deb86e8284" # Terraform DV Admin, rename? | Switch to group Id
+license_id              = "b0f833d2-d0cd-4d74-8df2-bf52bcf9f843" # Terraform DV Admin, rename?
+worker_id               = "796fd336-579f-4e3c-9bc4-9bcad0afb891"
+worker_secret           = "V9nZ_BD_WlFOFUaCKBRdUJzymAa3o~tnc7BiKYbBFSuasmqQe-_RzpivrTn0cor0"
+admin_username          = "terraform.admin"                      # Terraform DV Admin, rename?
+admin_password          = "Test123!"                             # Terraform DV Admin, rename?
 
-admin_environment_id    = ""
-admin_group_id          = ""
+# Names not hard requirement to keep as-is
+
+organization_id         = "c12c18d0-b89a-4c11-aa4d-a9e5e2d0f720"
+
+# New Vars
+admin_environment_id    = "ce707d16-da7a-4391-81a8-13bae68a5ce9"
+admin_group_id          = "4cb5799a-5830-42ab-998c-8cf39577a731"
 
 
 #############
@@ -19,8 +23,11 @@ admin_group_id          = ""
 
 # Change the name as needed for your P1 environment #
 
-environment_name = "PingOne Master Flow - 2.0"
-environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
+environment_name = "Curtis - PingOne Master Flow - 2.0 - 10a143b8-d9da-4e1f-ab7c-1e4ad9f9f2f3"
+environment_description = <<EOT
+[10a143b8-d9da-4e1f-ab7c-1e4ad9f9f2f3] This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master 
+This environment is created and maintained utilizing the PingOne Terraform provider.
+EOT
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = <<EOT
 GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.

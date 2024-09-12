@@ -718,7 +718,7 @@ resource "davinci_variable" "mf-str-p1AgreementId" {
   mutable        = "true"
   name           = "mf-str-p1AgreementId"
   type           = "string"
-  value          = pingone_population_default.master_flow_default_population.id # What does this need to be pointed at?
+  value          = pingone_agreement.master_flow_agreement.id
 }
 
 # resource "davinci_variable" "gv-passwordlessAllowedTypes" {
@@ -1255,10 +1255,6 @@ resource "davinci_application_flow_policy" "PingOne-SSO-Flow-Policy" {
 }
 
 
-###################
-#  DaVinci Flows  #
-###################
-
 resource "davinci_flow" "PingOne-SSO-Authentication-Sensei---MASTER" {
 	environment_id = pingone_environment.master_flow_environment.id
 	flow_json = "${file("${path.module}/data/flows/PingOne SSO Authentication Sensei - MASTER.json")}"
@@ -1272,11 +1268,6 @@ resource "davinci_flow" "PingOne-SSO-Authentication-Sensei---MASTER" {
 		id   = davinci_connection.Flow-Connector.id
 		name = davinci_connection.Flow-Connector.name
 		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
-	}
-	connection_link {
-		id   = davinci_connection.Flow-Analytics.id
-		name = davinci_connection.Flow-Analytics.name
-		replace_import_connection_id = "c4b2032a1b63d370c5fbdd205522f1c5"
 	}
 	connection_link {
 		id   = davinci_connection.Error-Message.id
@@ -1312,6 +1303,11 @@ resource "davinci_flow" "PingOne-SSO-Authentication-Sensei---MASTER" {
 		id   = davinci_connection.PingOne-Authentication.id
 		name = davinci_connection.PingOne-Authentication.name
 		replace_import_connection_id = "c3e6a164bde107954e93f5c09f0c8bce"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Analytics.id
+		name = davinci_connection.Flow-Analytics.name
+		replace_import_connection_id = "78f6209abfff297bca70010581d074b1"
 	}
 
 	subflow_link {
@@ -1821,7 +1817,7 @@ resource "davinci_flow" "PingOne-Authorize-Flow" {
 
 resource "davinci_flow" "PingOne-Auto-enroll-user-in-mobile-SMS" {
 	environment_id = pingone_environment.master_flow_environment.id
-	flow_json = "${file("${path.module}/data/flows/ PingOne Auto enroll user in mobile SMS.json")}"
+	flow_json = "${file("${path.module}/data/flows/PingOne Auto enroll user in mobile SMS.json")}"
 
 	connection_link {
 		id   = davinci_connection.Annotation.id
@@ -2014,6 +2010,11 @@ resource "davinci_flow" "PingOne-Custom-Security-Question-and-Answer-Registratio
 		name = davinci_connection.Annotation.name
 		replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
 	}
+	connection_link {
+		id   = davinci_connection.Flow-Analytics.id
+		name = davinci_connection.Flow-Analytics.name
+		replace_import_connection_id = "78f6209abfff297bca70010581d074b1"
+	}
 
 	depends_on = [
 		data.davinci_connections.read_connections
@@ -2098,6 +2099,11 @@ resource "davinci_flow" "PingOne-MFA-Authentication-subflow" {
 		id   = davinci_connection.Variables.id
 		name = davinci_connection.Variables.name
 		replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Analytics.id
+		name = davinci_connection.Flow-Analytics.name
+		replace_import_connection_id = "78f6209abfff297bca70010581d074b1"
 	}
 
 	subflow_link {
@@ -2185,6 +2191,11 @@ resource "davinci_flow" "PingOne-Protect-subflow" {
 		name = davinci_connection.PingOne-MFA.name
 		replace_import_connection_id = "b72bd44e6be8180bd5988ac74cd9c949"
 	}
+	connection_link {
+		id   = davinci_connection.Flow-Analytics.id
+		name = davinci_connection.Flow-Analytics.name
+		replace_import_connection_id = "78f6209abfff297bca70010581d074b1"
+	}
 
 	subflow_link {
 		id   = davinci_flow.PingOne-Verify-subflow.id
@@ -2255,6 +2266,11 @@ resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
 		id   = davinci_connection.PingOne-Notifications.id
 		name = davinci_connection.PingOne-Notifications.name
 		replace_import_connection_id = "cacf3d2861657174d93cbf445d55797a"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Analytics.id
+		name = davinci_connection.Flow-Analytics.name
+		replace_import_connection_id = "78f6209abfff297bca70010581d074b1"
 	}
 
 	# subflow_link {
@@ -2451,6 +2467,11 @@ resource "davinci_flow" "PingOne-Verify-subflow" {
 		id   = davinci_connection.Variables.id
 		name = davinci_connection.Variables.name
 		replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Analytics.id
+		name = davinci_connection.Flow-Analytics.name
+		replace_import_connection_id = "78f6209abfff297bca70010581d074b1"
 	}
 
 	depends_on = [

@@ -9,10 +9,11 @@
     "nodeConnector",
     "annotationConnector",
     "errorConnector",
-    "variablesConnector"
+    "variablesConnector",
+    "analyticsConnector"
   ],
-  "createdDate": 1725559931686,
-  "currentVersion": 172,
+  "createdDate": 1726145168485,
+  "currentVersion": 174,
   "customerId": "c8701d025a002f27116f02d2f4d957a8",
   "description": "Imported on Wed Jul 24 2024 12:43:12 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -63,7 +64,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Authentication subflow",
-  "publishedVersion": 172,
+  "publishedVersion": 174,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "  /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
@@ -102,9 +103,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1725559938599,
+  "updatedDate": 1726145171878,
   "flowId": "bed472b5706a7d61a781d81e483986a7",
-  "versionId": 172,
+  "versionId": 174,
   "graphData": {
     "elements": {
       "nodes": [
@@ -3537,8 +3538,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 907,
-            "y": 480
+            "x": 1650,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -3566,8 +3567,8 @@
             }
           },
           "position": {
-            "x": 1357,
-            "y": 480
+            "x": 2100,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -3622,8 +3623,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1477,
-            "y": 570
+            "x": 2220,
+            "y": 600
           },
           "group": "nodes",
           "removed": false,
@@ -3709,8 +3710,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1597,
-            "y": 660
+            "x": 2340,
+            "y": 690
           },
           "group": "nodes",
           "removed": false,
@@ -3739,8 +3740,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1597,
-            "y": 480
+            "x": 2340,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -4786,7 +4787,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1087,
+            "x": 1830,
             "y": 390
           },
           "group": "nodes",
@@ -4839,8 +4840,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1207,
-            "y": 480
+            "x": 1950,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -5699,8 +5700,8 @@
             }
           },
           "position": {
-            "x": 1027,
-            "y": 480
+            "x": 1770,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -13657,8 +13658,8 @@
             }
           },
           "position": {
-            "x": 277,
-            "y": 480
+            "x": 690,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -13708,8 +13709,8 @@
             "idUnique": "48uidbgg74"
           },
           "position": {
-            "x": 432,
-            "y": 334
+            "x": 750,
+            "y": 330
           },
           "group": "nodes",
           "removed": false,
@@ -14330,8 +14331,8 @@
             "idUnique": "n7v8jz4er0"
           },
           "position": {
-            "x": 577,
-            "y": 480
+            "x": 990,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -14348,8 +14349,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 427,
-            "y": 480
+            "x": 840,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -14366,8 +14367,66 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 742,
-            "y": 480
+            "x": 1170,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ihooz51tox",
+            "nodeType": "CONNECTION",
+            "connectionId": "78f6209abfff297bca70010581d074b1",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "outcomeStatusDetail": {
+                "value": "Running Protect"
+              }
+            },
+            "idUnique": "vp8mvklpzw"
+          },
+          "position": {
+            "x": 1320,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0qhzi5zuwl",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1470,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -20467,8 +20526,46 @@
         },
         {
           "data": {
-            "id": "rhpynai4jm",
+            "id": "cdtcd2g3w1",
             "source": "lmmgnkzwia",
+            "target": "ihooz51tox"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hafr7r7zll",
+            "source": "ihooz51tox",
+            "target": "0qhzi5zuwl"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dm3rf9cdwt",
+            "source": "0qhzi5zuwl",
             "target": "ku5xxdl5w5"
           },
           "position": {
@@ -20542,7 +20639,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1725559930051,
+  "savedDate": 1726145163375,
   "variables": [
     {
       "context": "flowInstance",
