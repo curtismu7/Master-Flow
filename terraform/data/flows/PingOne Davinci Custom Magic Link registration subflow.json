@@ -14,8 +14,8 @@
     "variablesConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1725543149923,
-  "currentVersion": 101,
+  "createdDate": 1726145420110,
+  "currentVersion": 103,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Wed May 22 2024 23:21:08 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -76,7 +76,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Davinci Custom Magic Link registration subflow",
-  "publishedVersion": 101,
+  "publishedVersion": 103,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "        /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
@@ -97,9 +97,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1725543154100,
+  "updatedDate": 1726145421778,
   "flowId": "05f765201fcd10df42222983c28e07f3",
-  "versionId": 101,
+  "versionId": 103,
   "graphData": {
     "elements": {
       "nodes": [
@@ -2449,7 +2449,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 630,
+            "x": 300,
             "y": 600
           },
           "group": "nodes",
@@ -2723,7 +2723,7 @@
                 "value": "#000000"
               },
               "annotation": {
-                "value": "Last Updated: 7/19, 2024"
+                "value": "Last Updated: 9/12, 2024"
               },
               "width": {
                 "value": 240
@@ -2811,24 +2811,6 @@
           },
           "position": {
             "x": 900,
-            "y": 600
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "vuwp0nc30s",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 750,
             "y": 600
           },
           "group": "nodes",
@@ -2961,14 +2943,148 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "mj0tv5535t",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "sktemplate": {
+                "uiId": "624fbda9a79d412a0e62cc045b410da7",
+                "createdDate": 1693913007853,
+                "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                "description": "",
+                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n\t\t\"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}",
+                "name": "Custom Message",
+                "outputSchema": null,
+                "script": "",
+                "style": "",
+                "template": "",
+                "updatedDate": 1693913396823,
+                "validationRules": [],
+                "version": "1.0",
+                "visibility": "private",
+                "companyId": "9343c168-20f8-4262-b335-5250b428bd12",
+                "value": "624fbda9a79d412a0e62cc045b410da7"
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        }\n    }\n}"
+              },
+              "outputSchema": {
+                "value": null
+              },
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n\n          <!-- PingOne Protect -->\n          <div data-skcomponent=\"skrisk\" data-skenvironmentid=\"{{global.companyId}}\" data-skcollectBehavioralData=\"true\" data-skpropertyname=\"riskfp\"></div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+              },
+              "customCSS": {
+                "value": ""
+              },
+              "customScript": {
+                "value": ""
+              },
+              "validationRules": {
+                "value": []
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Ensuring a secure experience, one moment...\"\n      }\n    ]\n  }\n]"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please do not refresh the page.\"\n      }\n    ]\n  }\n]"
+              },
+              "formFieldsList": {
+                "value": []
+              },
+              "nodeTitle": {
+                "value": "Magic Link Wait ..."
+              },
+              "nodeDescription": {
+                "value": "Gather Risk Signals"
+              }
+            },
+            "idUnique": "g9newwvtxi"
+          },
+          "position": {
+            "x": 630,
+            "y": 600
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "54kvfvyjsg",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 480,
+            "y": 600
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zk6ve3ruyj",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 750,
+            "y": 600
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
         {
           "data": {
-            "id": "esb6k2378l",
-            "source": "gfpyh9psn8",
-            "target": "vuwp0nc30s"
+            "id": "rveqi5wpqx",
+            "source": "v0rkta2j1x",
+            "target": "0egoe2ah2g"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "z8nw5jhaan",
+            "source": "0egoe2ah2g",
+            "target": "mag499n566"
           },
           "position": {
             "x": 0,
@@ -3156,9 +3272,9 @@
         },
         {
           "data": {
-            "id": "y4ou3srnnz",
-            "source": "vuwp0nc30s",
-            "target": "ttsh26f32n"
+            "id": "wlvqzzl3s8",
+            "source": "mag499n566",
+            "target": "q0fmrxj1nc"
           },
           "position": {
             "x": 0,
@@ -3880,9 +3996,9 @@
         },
         {
           "data": {
-            "id": "rveqi5wpqx",
-            "source": "v0rkta2j1x",
-            "target": "0egoe2ah2g"
+            "id": "5t08knyumv",
+            "source": "gfpyh9psn8",
+            "target": "54kvfvyjsg"
           },
           "position": {
             "x": 0,
@@ -3899,9 +4015,9 @@
         },
         {
           "data": {
-            "id": "z8nw5jhaan",
-            "source": "0egoe2ah2g",
-            "target": "mag499n566"
+            "id": "grlrlnd9d1",
+            "source": "54kvfvyjsg",
+            "target": "mj0tv5535t"
           },
           "position": {
             "x": 0,
@@ -3918,9 +4034,28 @@
         },
         {
           "data": {
-            "id": "wlvqzzl3s8",
-            "source": "mag499n566",
-            "target": "q0fmrxj1nc"
+            "id": "l2t4xflk5i",
+            "source": "mj0tv5535t",
+            "target": "zk6ve3ruyj"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "gqvza64c92",
+            "source": "zk6ve3ruyj",
+            "target": "ttsh26f32n"
           },
           "position": {
             "x": 0,
@@ -4002,7 +4137,7 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1725543148801,
+  "savedDate": 1726145419058,
   "variables": [
     {
       "context": "flowInstance",

@@ -7,10 +7,11 @@
     "functionsConnector",
     "pingOneSSOConnector",
     "errorConnector",
-    "annotationConnector"
+    "annotationConnector",
+    "analyticsConnector"
   ],
-  "createdDate": 1724250158115,
-  "currentVersion": 17,
+  "createdDate": 1726144866840,
+  "currentVersion": 59,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Tue Apr 30 2024 20:47:03 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -42,23 +43,24 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Custom Security Question and Answer Registration subflow",
-  "publishedVersion": 17,
+  "publishedVersion": 59,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
     "cssLinks": [
-      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.10/icons.css"
+      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css",
+      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css"
     ],
     "logLevel": 3,
     "useCustomCSS": true,
-    "flowTimeoutInSeconds": 3600
+    "flowTimeoutInSeconds": 3600,
+    "customFaviconLink": "https://console.pingone.com/favicon.ico"
   },
   "timeouts": "null",
-  "updatedDate": 1724250205780,
+  "updatedDate": 1726144868925,
   "flowId": "e7c4eca065591220b37b78c530459858",
-  "versionId": 17,
+  "versionId": 59,
   "graphData": {
     "elements": {
       "nodes": [
@@ -82,13 +84,13 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Cancel\"\n      }\n    ]\n  }\n]"
               },
               "customCSS": {
-                "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}\n#addAnotherBtn {\n        font-size: smaller;\n        color: #007BFF;\n        background-color: transparent !important;\n        margin-right: 10px;\n    }\n\n#addAnotherBtn:hover {\n        color:black;\n    }\n\n.removeBtn {\n  color: red;\n  background-color: transparent !important;\n  border:none;\n  font-size: smaller;\n}\n\n.removeBtn:hover{\n  \n  color:black;\n}\n\n.add-question-btn {\n    font-size: 1.5em; /* Increase the font size */\n    font-weight: bold; /* Make the font bold */\n    padding: 10px 20px; /* Increase padding for a larger button */\n}"
+                "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}\n#addAnotherBtn {\n        font-size: smaller;\n        color: #007BFF;\n        background-color: transparent !important;\n        margin-right: 10px;\n    }\n\n#addAnotherBtn:hover {\n        color:black;\n    }\n\n.removeBtn {\n  color: red;\n  background-color: transparent !important;\n  border:none;\n  font-size: smaller;\n}\n\n.removeBtn:hover{\n  \n  color:black;\n}\n\n.add-question-btn {\n    font-size: 1.5em; /* Increase the font size */\n    font-weight: bold; /* Make the font bold */\n    padding: 10px 20px; /* Increase padding for a larger button */\n}\n"
               },
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <!-- Container with fixed width for the card -->\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5\">\n                <main aria-labelledby=\"title\">\n                <!-- Card body with padding and column layout -->\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                   <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Conditional textOne -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textTwo -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Generic Error Message -->\n                   <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\"  data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                    <!-- Security Questions Form -->\n                    <form id=\"securityQA\">\n\n                        <!-- Existing Question Section -->\n                        <div id=\"selectSection\" class=\"mb-3 row selectBox\">\n                            <label for=\"Question\" class=\"col-sm-5 col-form-label\">\n                                <span>Select Question</span>\n                                <span class=\"starRed\" style=\"color:red\">*</span>\n                            </label>\n                            <div class=\"col-sm-7\">\n                                <select class=\"form-select\" id=\"selectQuestion0\" aria-label=\"Default select\">\n                                    <option selected style=\"margin-bottom:15px\">select</option>\n                                    {{#each questionSet}}\n                                    <option value=\"{{question}}\">{{question}}</option>\n                                    {{/each}}\n                                </select>\n                            </div>\n                        </div>\n\n                        <!-- Existing Answer Input -->\n                        <div class=\"mb-4 form-floating\" id=\"answerSection\">\n                            <input class=\"form-control\" type=\"text\" id=\"answer0\" name=\"answer\" placeholder=\"answer\" autocomplete=\"off\" value=\"\" data-id=\"answer-input\" style=\"margin-bottom:15px\" />\n                            <label class=\"form-label\" for=\"answer\">Answer</label>\n                        </div>\n\n                        <!-- Dynamic Cloned Sections will be inserted above the + Add Question button -->\n                        <div id=\"dynamicSectionsContainer\"></div>\n\n                        <!-- + Add Question button -->\n                        <button id=\"addAnotherBtn\" class=\"btn btn-link\" style=\"margin-bottom:15px; border:none; margin-top:-15px\">+ Add Question</button>\n\n                        <!-- Conditional Submit Button -->\n                        {{#if buttonLabel}}\n                        <div class=\"d-flex flex-column\">\n                            <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skform=\"securityQA\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"SUBMIT\">\n                                {{buttonLabel}}\n                            </button>\n                        </div>\n                        {{/if}}\n\n                        <!-- Conditional Cancel Button -->\n                        {{#if buttonLabel2}}\n                        <div class=\"d-flex flex-column\">\n                            <button id=\"cancelBtn\" data-id=\"cancelBtn\" class=\"btn btn-link mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skform=\"securityQA\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"CANCEL\">\n                                {{buttonLabel2}}\n                            </button>\n                        </div>\n                        {{/if}}\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "<!-- Main Container for the End User Interface -->\n<div class=\"end-user-nano\">\n    <!-- Centered Content Wrapper -->\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\">\n        \n        <!-- Container with fixed width for the card -->\n        <div style=\"max-width: 400px; width: 100%\">\n            \n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5\">\n                <main aria-labelledby=\"title\">\n                    <!-- Card body with padding and column layout -->\n                    <div class=\"card-body p-5 d-flex flex-column\">\n                        \n                        <!-- Company Logo, dynamically sourced -->\n                       <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n                        <!-- Conditional title -->\n                        {{#if title}}\n                        <h1 id=\"title\" class=\"text-center mb-4\">{{title}}</h1>\n                        {{/if}}\n\n                        <!-- Conditional textOne -->\n                        {{#if textOne}}\n                        <h2 class=\"text-muted text-center\">{{textOne}}</h2>\n                        {{/if}}\n\n                        <!-- Conditional textTwo -->\n                        {{#if textTwo}}\n                        <p class=\"text-muted text-center\">{{textTwo}}</p>\n                        {{/if}}\n\n                        <!-- Generic Error Message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                        <!-- Security Questions Form -->\n                        <form id=\"securityQA\">\n\n                            <!-- Existing Question Section -->\n                            <div id=\"selectSection\" class=\"mb-3 row selectBox\">\n                                <label for=\"selectQuestion0\" class=\"col-sm-5 col-form-label\">\n                                    <span>Select Question</span>\n                                    <span class=\"starRed\" style=\"color:red\">*</span>\n                                </label>\n                                <div class=\"col-sm-7\">\n                                    <select class=\"form-select\" id=\"selectQuestion0\" aria-label=\"Default select\">\n                                        <option selected style=\"margin-bottom:15px\">select</option>\n                                        {{#each questionSet}}\n                                        <option value=\"{{question}}\">{{question}}</option>\n                                        {{/each}}\n                                    </select>\n                                </div>\n                            </div>\n\n                            <!-- Existing Answer Input -->\n                            <div class=\"mb-4 form-floating\" id=\"answerSection\">\n                                <input class=\"form-control\" type=\"text\" id=\"answer0\" name=\"answer\" placeholder=\"answer\" autocomplete=\"off\" value=\"\" data-id=\"answer-input\" style=\"margin-bottom:15px\" />\n                                <label class=\"form-label\" for=\"answer0\">Answer</label>\n                            </div>\n\n                            <!-- Dynamic Cloned Sections will be inserted above the + Add Question button -->\n                            <div id=\"dynamicSectionsContainer\"></div>\n\n                            <!-- + Add Question button -->\n                            <button id=\"addAnotherBtn\" class=\"btn btn-link\" style=\"margin-bottom:15px; border:none; margin-top:-15px\">+ Add Question</button>\n\n                            <!-- Conditional Submit Button -->\n                            {{#if buttonLabel}}\n                            <div class=\"d-flex flex-column\">\n                                <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skform=\"securityQA\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"SUBMIT\">\n                                    {{buttonLabel}}\n                                </button>\n                            </div>\n                            {{/if}}\n\n                            <!-- Conditional Cancel Button -->\n                            {{#if buttonLabel2}}\n                            <div class=\"d-flex flex-column\">\n                                <button id=\"cancelBtn\" data-id=\"cancelBtn\" class=\"btn btn-link mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skform=\"securityQA\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"CANCEL\">\n                                    {{buttonLabel2}}\n                                </button>\n                            </div>\n                            {{/if}}\n                        </form> <!-- End of Security Questions Form -->\n                    </div> <!-- End of Card Body -->\n                </main>\n            </div> <!-- End of Card -->\n        </div> <!-- End of Width-Limited Container -->\n    </div> <!-- End of Centered Content Wrapper -->\n</div> <!-- End of Main Container -->"
               },
               "customScript": {
-                "value": "var counter = 1; // Initialize a counter for unique IDs\n\ndocument.getElementById('addAnotherBtn').addEventListener('click', function () {\n    // Check if the counter is less than or equal to 2 before cloning\n    if (counter <= 2) {\n        // Clone the select and answer input fields\n        var cloneSelectSection = document.querySelector('#selectSection').cloneNode(true);\n        var cloneAnswer = document.querySelector('#answerSection').cloneNode(true);\n\n        // Generate unique IDs for the cloned elements\n        var newSelectSectionId = 'selectSection' + counter;\n        var newSelectQuestionId = 'selectQuestion' + counter;\n        var newAnswerId = 'answer' + counter;\n        var newRemoveBtnId = 'removeBtn' + counter;\n\n        // Assign new IDs to the cloned elements\n        cloneSelectSection.id = newSelectSectionId;\n\n        // Find the \"selectQuestion\" element inside the cloned \"selectSection\"\n        var clonedSelectQuestion = cloneSelectSection.querySelector('.form-select');\n\n        // Find the \"answer\" element inside the cloned \"selectSection\"\n        var clonedAnswerInput = cloneAnswer.querySelector('.form-control');\n\n        // Check if the \"selectQuestion\" element exists inside the cloned \"selectSection\"\n        if (clonedSelectQuestion) {\n            // Assign a new ID to the \"selectQuestion\" element\n            clonedSelectQuestion.id = newSelectQuestionId;\n\n            // Add an event listener to update the options on change\n            clonedSelectQuestion.addEventListener('change', updateOptions);\n        }\n        if (clonedAnswerInput) {\n            clonedAnswerInput.id = newAnswerId; // Assign new IDs to the cloned answer element\n            clonedAnswerInput.value = ''; // Clear the value of the cloned answer input\n        }\n\n        // Create a \"Remove\" button\n        var removeBtn = document.createElement('button');\n        removeBtn.id = newRemoveBtnId;\n        removeBtn.className = 'btn btn-danger removeBtn';\n        removeBtn.innerHTML = '- Remove Question';\n\n        // Attach an event listener to the \"Remove\" button\n        removeBtn.addEventListener('click', function () {\n            // Remove the corresponding cloned container\n            cloneSelectSection.parentNode.removeChild(cloneSelectSection);\n            cloneAnswer.parentNode.removeChild(cloneAnswer);\n\n            // Decrement the counter by 1\n            counter--;\n\n            // Enable the \"addAnotherBtn\" button after removing a section\n            document.getElementById('addAnotherBtn').style.display = 'block';\n            document.getElementById('addAnotherBtn').disabled = false;\n\n            // Remove the \"Remove\" button row\n            removeBtnRow.parentNode.removeChild(removeBtnRow);\n\n            // Disable the \"remove\" button if there are no cloned sections\n            if (counter <= 1) {\n                document.getElementById('removeSectionBtn').disabled = true;\n            }\n\n            // Update options after removing a section\n            updateOptions();\n        });\n\n        // Increment the counter for the next set of cloned elements\n        counter++;\n\n        // Clear the values in the cloned fields\n        if (clonedSelectQuestion) {\n            clonedSelectQuestion.selectedIndex = 0;\n        }\n        if (clonedAnswerInput) {\n            clonedAnswerInput.value = ''; // Ensure the cloned answer input is cleared\n        }\n\n        // Append the cloned fields above the submit and cancel buttons\n        var form = document.getElementById('securityQA');\n        form.insertBefore(cloneSelectSection, document.getElementById('addAnotherBtn'));\n        form.insertBefore(cloneAnswer, document.getElementById('addAnotherBtn'));\n\n        // Create a new row for the \"Remove\" button\n        var removeBtnRow = document.createElement('div');\n        removeBtnRow.className = 'mb-3 row selectBox';\n        removeBtnRow.appendChild(removeBtn);\n        form.insertBefore(removeBtnRow, document.getElementById('addAnotherBtn'));\n\n        // Update options after adding a new section\n        updateOptions();\n    }\n\n    // If counter exceeds 2, you can disable the button or hide it as needed\n    if (counter > 2) {\n        document.getElementById('addAnotherBtn').style.display = 'none';\n    }\n});\n\nfunction updateOptions() {\n    // Get all the select elements\n    var selectElements = document.querySelectorAll('.form-select');\n    var selectedOptions = [];\n\n    // Collect the selected options\n    selectElements.forEach(function(selectElement) {\n        if (selectElement.value) {\n            selectedOptions.push(selectElement.value);\n        }\n    });\n\n    // Disable selected options in other select elements\n    selectElements.forEach(function(selectElement) {\n        var options = selectElement.querySelectorAll('option');\n        options.forEach(function(option) {\n            if (selectedOptions.includes(option.value) && option.value !== selectElement.value) {\n                option.disabled = true;\n            } else {\n                option.disabled = false;\n            }\n        });\n    });\n}"
+                "value": "var counter = 1; // Initialize a counter for unique IDs\n console.log(\"In Progressive subflow:\");\n\ndocument.getElementById('addAnotherBtn').addEventListener('click', function () {\n    try {\n        console.log(\"Add Another button clicked. Current counter:\", counter);\n\n        // Check if the counter is less than or equal to 2 before cloning\n        if (counter <= 2) {\n            console.log(\"Counter is within limit. Proceeding with cloning.\");\n\n            // Clone the select and answer input fields\n            var cloneSelectSection = document.querySelector('#selectSection').cloneNode(true);\n            var cloneAnswer = document.querySelector('#answerSection').cloneNode(true);\n\n            // Generate unique IDs for the cloned elements\n            var newSelectSectionId = 'selectSection' + counter;\n            var newSelectQuestionId = 'selectQuestion' + counter;\n            var newAnswerId = 'answer' + counter;\n            var newRemoveBtnId = 'removeBtn' + counter;\n\n            console.log(\"Generated new IDs:\", newSelectSectionId, newSelectQuestionId, newAnswerId, newRemoveBtnId);\n\n            // Assign new IDs to the cloned elements\n            cloneSelectSection.id = newSelectSectionId;\n\n            // Find the \"selectQuestion\" element inside the cloned \"selectSection\"\n            var clonedSelectQuestion = cloneSelectSection.querySelector('.form-select');\n\n            // Find the \"answer\" element inside the cloned \"selectSection\"\n            var clonedAnswerInput = cloneAnswer.querySelector('.form-control');\n\n            // Check if the \"selectQuestion\" element exists inside the cloned \"selectSection\"\n            if (clonedSelectQuestion) {\n                // Assign a new ID to the \"selectQuestion\" element\n                clonedSelectQuestion.id = newSelectQuestionId;\n\n                // Add an event listener to update the options on change\n                clonedSelectQuestion.addEventListener('change', updateOptions);\n                console.log(\"Cloned select question element found and updated:\", clonedSelectQuestion);\n            }\n            if (clonedAnswerInput) {\n                clonedAnswerInput.id = newAnswerId; // Assign new IDs to the cloned answer element\n                clonedAnswerInput.value = ''; // Clear the value of the cloned answer input\n                console.log(\"Cloned answer input element found and updated:\", clonedAnswerInput);\n            }\n\n            // Create a \"Remove\" button\n            var removeBtn = document.createElement('button');\n            removeBtn.id = newRemoveBtnId;\n            removeBtn.className = 'btn btn-danger removeBtn';\n            removeBtn.innerHTML = '- Remove Question';\n\n            // Attach an event listener to the \"Remove\" button\n            removeBtn.addEventListener('click', function () {\n                try {\n                    console.log(\"Remove button clicked for:\", newRemoveBtnId);\n\n                    // Remove the corresponding cloned container\n                    cloneSelectSection.parentNode.removeChild(cloneSelectSection);\n                    cloneAnswer.parentNode.removeChild(cloneAnswer);\n\n                    // Decrement the counter by 1\n                    counter--;\n\n                    // Enable the \"addAnotherBtn\" button after removing a section\n                    document.getElementById('addAnotherBtn').style.display = 'block';\n                    document.getElementById('addAnotherBtn').disabled = false;\n\n                    // Remove the \"Remove\" button row\n                    removeBtnRow.parentNode.removeChild(removeBtnRow);\n\n                    // Disable the \"remove\" button if there are no cloned sections\n                    if (counter <= 1) {\n                        document.getElementById('removeSectionBtn').disabled = true;\n                    }\n\n                    // Update options after removing a section\n                    updateOptions();\n                    console.log(\"Section removed. Updated counter:\", counter);\n                } catch (error) {\n                    console.error(\"Error removing cloned section:\", error);\n                }\n            });\n\n            // Increment the counter for the next set of cloned elements\n            counter++;\n            console.log(\"Counter incremented. New counter:\", counter);\n\n            // Clear the values in the cloned fields\n            clearClonedFields(clonedSelectQuestion, clonedAnswerInput);\n\n            // Append the cloned fields above the submit and cancel buttons\n            var form = document.getElementById('securityQA');\n            form.insertBefore(cloneSelectSection, document.getElementById('addAnotherBtn'));\n            form.insertBefore(cloneAnswer, document.getElementById('addAnotherBtn'));\n\n            // Create a new row for the \"Remove\" button\n            var removeBtnRow = document.createElement('div');\n            removeBtnRow.className = 'mb-3 row selectBox';\n            removeBtnRow.appendChild(removeBtn);\n            form.insertBefore(removeBtnRow, document.getElementById('addAnotherBtn'));\n\n            // Update options after adding a new section\n            updateOptions();\n            console.log(\"New section added and options updated.\");\n        }\n\n        // If counter exceeds 2, you can disable the button or hide it as needed\n        if (counter > 2) {\n            document.getElementById('addAnotherBtn').style.display = 'none';\n            console.log(\"Counter exceeded limit. Add Another button hidden.\");\n        }\n    } catch (error) {\n        console.error(\"Error adding another section:\", error);\n    }\n});\n\nfunction clearClonedFields(clonedSelectQuestion, clonedAnswerInput) {\n    if (clonedSelectQuestion) {\n        clonedSelectQuestion.selectedIndex = 0;\n        console.log(\"Cloned select question field cleared.\");\n    }\n    if (clonedAnswerInput) {\n        clonedAnswerInput.value = ''; // Ensure the cloned answer input is cleared\n        console.log(\"Cloned answer input field cleared.\");\n    }\n}\n\nfunction updateOptions() {\n    try {\n        console.log(\"Updating options for select elements.\");\n\n        // Get all the select elements\n        var selectElements = document.querySelectorAll('.form-select');\n        var selectedOptions = [];\n\n        // Collect the selected options\n        selectElements.forEach(function(selectElement) {\n            if (selectElement.value) {\n                selectedOptions.push(selectElement.value);\n            }\n        });\n\n        // Disable selected options in other select elements\n        selectElements.forEach(function(selectElement) {\n            var options = selectElement.querySelectorAll('option');\n            options.forEach(function(option) {\n                if (selectedOptions.includes(option.value) && option.value !== selectElement.value) {\n                    option.disabled = true;\n                } else {\n                    option.disabled = false;\n                }\n            });\n        });\n\n        console.log(\"Options updated for select elements.\");\n    } catch (error) {\n        console.error(\"Error updating options:\", error);\n    }\n}"
               },
               "formFieldsList": {
                 "value": [
@@ -155,13 +157,13 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-availableQuestions}}\"\n      }\n    ]\n  }\n]"
               },
               "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Security Questions\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Security Questions Registration\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "textTwo": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Register up to three security questions and provide the answers\"\n      }\n    ]\n  }\n]"
               },
               "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Password Reset\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"     {{global.variables.mf-configObject.config.mf-str-companyName}}  \"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "validationRules": {
                 "value": []
@@ -171,7 +173,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 750,
+            "x": 1440,
             "y": 540
           },
           "group": "nodes",
@@ -213,25 +215,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 450,
-            "y": 540
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "sf8gvstqmg",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 600,
+            "x": 454,
             "y": 540
           },
           "group": "nodes",
@@ -250,7 +234,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 900,
+            "x": 1590,
             "y": 540
           },
           "group": "nodes",
@@ -320,7 +304,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1350,
+            "x": 2040,
             "y": 540
           },
           "group": "nodes",
@@ -339,7 +323,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1470,
+            "x": 2160,
             "y": 540
           },
           "group": "nodes",
@@ -383,7 +367,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1620,
+            "x": 2310,
             "y": 540
           },
           "group": "nodes",
@@ -407,7 +391,7 @@
             }
           },
           "position": {
-            "x": 1770,
+            "x": 2460,
             "y": 540
           },
           "group": "nodes",
@@ -452,7 +436,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1950,
+            "x": 2640,
             "y": 540
           },
           "group": "nodes",
@@ -485,7 +469,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1950,
+            "x": 2640,
             "y": 690
           },
           "group": "nodes",
@@ -530,7 +514,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1050,
+            "x": 1740,
             "y": 540
           },
           "group": "nodes",
@@ -548,7 +532,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1200,
+            "x": 1890,
             "y": 540
           },
           "group": "nodes",
@@ -567,7 +551,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1200,
+            "x": 1890,
             "y": 660
           },
           "group": "nodes",
@@ -611,7 +595,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1350,
+            "x": 2040,
             "y": 660
           },
           "group": "nodes",
@@ -656,7 +640,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1350,
+            "x": 2040,
             "y": 780
           },
           "group": "nodes",
@@ -674,7 +658,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1200,
+            "x": 1890,
             "y": 780
           },
           "group": "nodes",
@@ -724,7 +708,7 @@
             "type": "action"
           },
           "position": {
-            "x": 750,
+            "x": 844,
             "y": 214
           },
           "group": "nodes",
@@ -781,7 +765,7 @@
           },
           "position": {
             "x": 214,
-            "y": 462
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -836,8 +820,8 @@
             "type": "action"
           },
           "position": {
-            "x": 934,
-            "y": 462
+            "x": 1650,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -892,8 +876,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1444,
-            "y": 462
+            "x": 2160,
+            "y": 450
           },
           "group": "nodes",
           "removed": false,
@@ -942,7 +926,7 @@
             "status": "configured"
           },
           "position": {
-            "x": 270,
+            "x": 364,
             "y": 364
           },
           "group": "nodes",
@@ -999,8 +983,145 @@
             "idUnique": "o2v5xhdcbc"
           },
           "position": {
-            "x": 429,
+            "x": 523,
             "y": 216
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "m91req3vl9",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 574,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "vutqa51q7c",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "companyLogo",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]",
+                    "key": 0.24525851653144048,
+                    "label": "companyLogo (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "mf-configObject"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Company Variables"
+              }
+            }
+          },
+          "position": {
+            "x": 754,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "em0wazy4ft",
+            "nodeType": "CONNECTION",
+            "connectionId": "78f6209abfff297bca70010581d074b1",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "enrollment"
+              },
+              "outcomeStatus": {
+                "value": "approved"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "outcomeStatusDetail": {
+                "value": "Running KBA registration"
+              }
+            },
+            "idUnique": "vp8mvklpzw"
+          },
+          "position": {
+            "x": 1050,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ndcj65r4ne",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 902,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4td64po6a7",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1200,
+            "y": 540
           },
           "group": "nodes",
           "removed": false,
@@ -1013,6 +1134,84 @@
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "61qvbvdqmx",
+            "multiValueSourceId": "8v50bvs4t1",
+            "source": "kb1wr4lym9",
+            "target": "9n1nifnjdi"
+          },
+          "position": {
+            "x": 64,
+            "y": 52
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "o145puqmug",
+            "source": "9n1nifnjdi",
+            "target": "ga5jnwij1v"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "x8b34qzb5z",
+            "multiValueSourceId": "a3zl2ssnaa",
+            "source": "kb1wr4lym9",
+            "target": "dxqv0fu2d6"
+          },
+          "position": {
+            "x": 64,
+            "y": 92
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7lxh5m18rl",
+            "source": "dxqv0fu2d6",
+            "target": "si3w2hv48f"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "nmxl66zb3d",
@@ -1034,13 +1233,14 @@
         },
         {
           "data": {
-            "id": "lgg9bbwr47",
-            "source": "sf8gvstqmg",
-            "target": "jet072d7hr"
+            "id": "bs4q902iwl",
+            "multiValueSourceId": "-1",
+            "source": "kb1wr4lym9",
+            "target": "vj12wjoddq"
           },
           "position": {
-            "x": 0,
-            "y": 0
+            "x": 64,
+            "y": 132
           },
           "group": "edges",
           "removed": false,
@@ -1053,9 +1253,9 @@
         },
         {
           "data": {
-            "id": "s7pdbvjjy9",
-            "source": "zch0qnuu08",
-            "target": "sf8gvstqmg"
+            "id": "ggak4l6fi2",
+            "source": "vj12wjoddq",
+            "target": "vj1t33d3in"
           },
           "position": {
             "x": 0,
@@ -1186,29 +1386,9 @@
         },
         {
           "data": {
-            "id": "61qvbvdqmx",
-            "multiValueSourceId": "8v50bvs4t1",
-            "source": "kb1wr4lym9",
-            "target": "9n1nifnjdi"
-          },
-          "position": {
-            "x": 64,
-            "y": 52
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "o145puqmug",
-            "source": "9n1nifnjdi",
-            "target": "ga5jnwij1v"
+            "id": "dkbwfg6idc",
+            "source": "zch0qnuu08",
+            "target": "m91req3vl9"
           },
           "position": {
             "x": 0,
@@ -1225,29 +1405,9 @@
         },
         {
           "data": {
-            "id": "x8b34qzb5z",
-            "multiValueSourceId": "a3zl2ssnaa",
-            "source": "kb1wr4lym9",
-            "target": "dxqv0fu2d6"
-          },
-          "position": {
-            "x": 64,
-            "y": 92
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "7lxh5m18rl",
-            "source": "dxqv0fu2d6",
-            "target": "si3w2hv48f"
+            "id": "aqaazg47n9",
+            "source": "m91req3vl9",
+            "target": "vutqa51q7c"
           },
           "position": {
             "x": 0,
@@ -1264,14 +1424,13 @@
         },
         {
           "data": {
-            "id": "bs4q902iwl",
-            "multiValueSourceId": "-1",
-            "source": "kb1wr4lym9",
-            "target": "vj12wjoddq"
+            "id": "pc5x98tug9",
+            "source": "vutqa51q7c",
+            "target": "ndcj65r4ne"
           },
           "position": {
-            "x": 64,
-            "y": 132
+            "x": 0,
+            "y": 0
           },
           "group": "edges",
           "removed": false,
@@ -1284,9 +1443,47 @@
         },
         {
           "data": {
-            "id": "ggak4l6fi2",
-            "source": "vj12wjoddq",
-            "target": "vj1t33d3in"
+            "id": "2zj4dxgj57",
+            "source": "ndcj65r4ne",
+            "target": "em0wazy4ft"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "29sowyd2tv",
+            "source": "em0wazy4ft",
+            "target": "4td64po6a7"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "3j4qgr5gtl",
+            "source": "4td64po6a7",
+            "target": "jet072d7hr"
           },
           "position": {
             "x": 0,
@@ -1338,7 +1535,7 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1724250157986,
+  "savedDate": 1726144866674,
   "variables": [
     {
       "context": "flowInstance",

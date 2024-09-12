@@ -1,5 +1,5 @@
 {
-  "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb",
+  "companyId": "b864c908-0b69-45b5-935a-17017f58b76f",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -13,10 +13,9 @@
     "pingOneSSOConnector",
     "notificationsConnector"
   ],
-  "createdDate": 1725973781044,
-  "currentVersion": 51,
-  "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
-  "deployedDate": 1725973893214,
+  "createdDate": 1726159686259,
+  "currentVersion": 31,
+  "customerId": "c8701d025a002f27116f02d2f4d957a8",
   "description": "Imported on Wed May 22 2024 23:21:44 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -47,24 +46,24 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO User Registration subflow",
-  "publishedVersion": 51,
+  "publishedVersion": 31,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+    "intermediateLoadingScreenCSS": " /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        } /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
+    "intermediateLoadingScreenHTML": "    <div class=\"message\">\n        Please wait...\n    </div>",
     "cssLinks": [
       "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css",
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.9/end-user-nano.css"
     ],
     "flowTimeoutInSeconds": 7600,
-    "intermediateLoadingScreenCSS": " /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        } /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
-    "intermediateLoadingScreenHTML": "    <div class=\"message\">\n        Please wait...\n    </div>",
     "logLevel": 3,
     "useCustomCSS": true,
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1725973893331,
-  "flowId": "903b96b8b4435d625941503e3b3101a5",
-  "versionId": 51,
+  "updatedDate": 1726159701219,
+  "flowId": "c0e0d090b8cfbc7396193b4a343c142b",
+  "versionId": 31,
   "graphData": {
     "elements": {
       "nodes": [
@@ -365,7 +364,7 @@
             "type": "action"
           },
           "position": {
-            "x": 907,
+            "x": 900,
             "y": 450
           },
           "group": "nodes",
@@ -487,7 +486,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 967,
+            "x": 960,
             "y": 540
           },
           "group": "nodes",
@@ -1065,7 +1064,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Consent subflow",
-                  "value": "c29948a4726d7c1f78000d164c55c03c"
+                  "value": "f5e4badc15ad9cf204bc18c7c1a95a31"
                 }
               },
               "subFlowVersionId": {
@@ -1395,7 +1394,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Progressive Profiling subflow",
-                  "value": "8188b3d853c0bfa7d06d48373bce67ac"
+                  "value": "35d40c635dc3e3fa4f4c2b5ab9ccc343"
                 }
               },
               "subFlowVersionId": {
@@ -1761,7 +1760,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1267,
+            "x": 1260,
             "y": 540
           },
           "group": "nodes",
@@ -1790,7 +1789,7 @@
             }
           },
           "position": {
-            "x": 1387,
+            "x": 1380,
             "y": 540
           },
           "group": "nodes",
@@ -1808,7 +1807,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1117,
+            "x": 1110,
             "y": 540
           },
           "group": "nodes",
@@ -1967,7 +1966,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Custom Security Question and Answer Registration subflow",
-                  "value": "e4fa51f1a50f3971ef800ef89d57da58"
+                  "value": "e7c4eca065591220b37b78c530459858"
                 }
               },
               "subFlowVersionId": {
@@ -2514,7 +2513,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Device Registration subflow",
-                  "value": "6b42a45378be1de52d07c6c191759759"
+                  "value": "55d7c7c02b0985934703055fbca259e7"
                 }
               },
               "subFlowVersionId": {
@@ -2880,7 +2879,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Account Verification subflow",
-                  "value": "4c811ba64211ff9315fa3140c7b310b8"
+                  "value": "a1e8104de5adce520631bae3ce4cbd79"
                 }
               },
               "subFlowVersionId": {
@@ -3460,7 +3459,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Verify subflow",
-                  "value": "1bb6acaf82c65eb41a77f3774edddc2a"
+                  "value": "fa53f76dbec74a4c40040cf5cd6d5cea"
                 }
               },
               "subFlowVersionId": {
@@ -3788,7 +3787,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne reCAPTCHA v3 subflow",
-                  "value": "ecd3cd579f3308127c5640f8237b48f2"
+                  "value": "c768a672b7fc67ab842110a8bbaf4e1f"
                 }
               },
               "subFlowVersionId": {
@@ -5125,7 +5124,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1417,
+            "x": 1410,
             "y": 450
           },
           "group": "nodes",
@@ -5158,7 +5157,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1297,
+            "x": 1290,
             "y": 450
           },
           "group": "nodes",
@@ -5330,7 +5329,7 @@
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n\n                {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n\n\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                    <form id=\"RegisterOptionsForm\">\n                        <div class=\"mb-3 row selectBox\">\n                            <label for=\"OptionosOn\" class=\"col-sm-5 col-form-label\"><span>Select Answer</span><span class=\"starRed\">*</span></label>\n                            <div class=\"col-sm-7\">\n                                <select class=\"form-select\" id=\"yesNo\" aria-label=\"Default select\">\n                                <option selected>select</option>      \n                                    <option value=\"YES\">Yes</option>\n                                    <option value=\"NO\">No</option>\n                            </select>\n                            </div>\n                        </div>\n\n                        {{#if buttonLabel}}\n                        <div class=\"d-flex flex-column\">\n                            <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                    data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"NEXT\" data-skform=\"RegisterOptionsForm\">\n                    {{buttonLabel}}\n                    </button>\n                        </div>\n                        {{/if}}\n                        {{#if buttonLabel2}}\n                        <div class=\"d-flex flex-column\">\n                            <button id=\"cancelBtn\" data-id=\"cancelBtn\" class=\"btn btn-link mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                    data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"CANCEL\" data-skform=\"RegisterOptionsForm\">\n                    {{buttonLabel2}}\n                    </button>\n                        </div>\n                        {{/if}}\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "<!-- Main Container for the End User Interface -->\n<div class=\"end-user-nano\">\n\n    <!-- Centered Content Wrapper -->\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        \n        <!-- Setting the fixed width for the card container -->\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            \n            <!-- Card with shadow effect and padding -->\n            <div class=\"card shadow mb-5\">\n                \n                <!-- Card Body (Content Area) -->\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    \n                    <!-- Company Logo, dynamically sourced -->\n                    <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Dynamic Title, shown only if provided -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- First Text Block, shown only if provided -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Second Text Block, shown only if provided -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Feedback/Error Message -->\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    <!-- Form for Register Options -->\n                    <form id=\"RegisterOptionsForm\">\n                        \n                        <!-- Select Box for Yes/No Options -->\n                        <div class=\"mb-3 row selectBox\">\n                            <label for=\"OptionosOn\" class=\"col-sm-5 col-form-label\">\n                                <span>Select Answer</span><span class=\"starRed\">*</span>\n                            </label>\n                            <div class=\"col-sm-7\">\n                                <select class=\"form-select\" id=\"yesNo\" aria-label=\"Default select\">\n                                    <option selected>select</option>\n                                    <option value=\"YES\">Yes</option>\n                                    <option value=\"NO\">No</option>\n                                </select>\n                            </div>\n                        </div>\n\n                        <!-- Submit Button, shown only if label is provided -->\n                        {{#if buttonLabel}}\n                        <div class=\"d-flex flex-column\">\n                            <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" \n                                    data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"NEXT\" \n                                    data-skform=\"RegisterOptionsForm\">\n                                {{buttonLabel}}\n                            </button>\n                        </div>\n                        {{/if}}\n\n                        <!-- Cancel Button, shown only if label is provided -->\n                        {{#if buttonLabel2}}\n                        <div class=\"d-flex flex-column\">\n                            <button id=\"cancelBtn\" data-id=\"cancelBtn\" class=\"btn btn-link mb-3\" type=\"submit\" \n                                    data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"CANCEL\" \n                                    data-skform=\"RegisterOptionsForm\">\n                                {{buttonLabel2}}\n                            </button>\n                        </div>\n                        {{/if}}\n\n                    </form> <!-- End of Register Options Form -->\n                </div> <!-- End of Card Body -->\n            </div> <!-- End of Card -->\n        </div> <!-- End of Width-Limited Container -->\n    </div> <!-- End of Centered Content Wrapper -->\n</div> <!-- End of Main Container -->"
               },
               "customScript": {},
               "formFieldsList": {
@@ -6137,7 +6136,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Davinci Custom Magic Link registration subflow",
-                  "value": "c3c7319155ba947aa3d811f18b80fbae"
+                  "value": "05f765201fcd10df42222983c28e07f3"
                 }
               },
               "subFlowVersionId": {
@@ -6157,7 +6156,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2677,
+            "x": 2670,
             "y": 2400
           },
           "group": "nodes",
@@ -7124,25 +7123,6 @@
         },
         {
           "data": {
-            "id": "5asj4pqvk6",
-            "label": "Evaluator",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 787,
-            "y": 540
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
             "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
@@ -7171,7 +7151,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 637,
+            "x": 360,
             "y": 540
           },
           "group": "nodes",
@@ -7335,7 +7315,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Protect subflow",
-                  "value": "8468a3dda62e65e1a3207b47d8cd5111"
+                  "value": "3a1bf218079b8a6c594c3a4beb29f1fa"
                 }
               },
               "subFlowVersionId": {
@@ -7349,7 +7329,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3127,
+            "x": 3120,
             "y": 540
           },
           "group": "nodes",
@@ -7501,7 +7481,7 @@
                 "value": "<!-- Main container for centering content -->\n<div  data-skcomponent=“skrisk”  data-skenvironmentid=“{{global.companyId}}”  data-skcollectBehavioralData=“true”  data-skpropertyname=“riskfp”></div>\n\n<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\">\n    <!-- Container with fixed width for the card -->\n    <div style=\"max-width: 400px; width: 100%\">\n      <!-- Card for holding the content -->\n      <div class=\"card shadow mb-4\">\n        <!-- Main content area -->\n        <main aria-labelledby=\"title\">\n          <!-- Card body with padding and column layout -->\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <!-- Company logo -->\n            <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n            <!-- Conditional title -->\n            {{#if title}}\n            <h1 class=\"text-center mb-4\">{{title}}</h1>\n            {{/if}}\n\n            <!-- Conditional textOne -->\n            {{#if textOne}}\n            <p class=\"text-muted text-center\">{{textOne}}</p>\n            {{/if}}\n\n            <!-- Conditional textTwo -->\n            {{#if textTwo}}\n            <p class=\"text-muted text-center\">{{textTwo}}</p>\n            {{/if}}\n\n            <!-- Generic Error Message -->\n            <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n              data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n            <p class=\"text-danger mdi mdi-alert-circle text-center\" data-skerrorid=\"email\"\n              data-skcomponent=\"skerrormessage\"></p>\n            <p class=\"text-danger mdi mdi-alert-circle text-center\" data-skerrorid=\"password\"\n              data-skcomponent=\"skerrormessage\"></p>\n\n            <!-- Registration Form -->\n            <form id=\"registrationForm\" data-id=\"registrationForm\" class=\"form\">\n              <!-- Username Input -->\n              <div class=\"mb-3 form-floating\">\n                <input id=\"username\" data-id=\"username\" class=\"form-control\" type=\"text\" name=\"username\" placeholder=\"Username\" autocomplete=\"off\" required aria-required=\"true\" aria-describedby=\"usernameLabel\" data-required-message=\"Enter a valid username\" />\n                <label id=\"usernameLabel\" data-id=\"usernameLabel\" class=\"form-label\" for=\"username\">Username</label>\n              </div>\n              <!-- Email Input -->\n              <div class=\"mb-3 form-floating\">\n                <input class=\"form-control\" type=\"email\" id=\"email\" name=\"email\" placeholder=\"Email Address\" autocomplete=\"email\" value=\"\" data-id=\"email-input\" aria-required=\"true\" aria-describedby=\"emailLabel\" required data-required-message=\"Enter a valid email address\" data-type-mismatch-message=\"Enter a valid email address\" data-email-invalid-message=\"Invalid email address. Please correct and try again.\" />\n                <label id=\"emailLabel\" for=\"email\">Email Address</label>\n              </div>\n              <!-- Conditional Password Inputs -->\n              {{#unless forcePasswordless}}\n              <!-- <div class=\"container\">\n                <div id=\"passwordContainer\" class=\"mb-3 form-floating\">\n                  <input id=\"newPassword\" data-id=\"newPassword\" class=\"form-control\" type=\"password\" name=\"newPassword\" placeholder=\"New Password\" autocomplete=\"off\" value=\"\" />\n                  <label class=\"form-label\" for=\"newPassword\">New Password</label>\n                </div>\n                <div id=\"verifyPasswordContainer\" class=\"mb-3 form-floating\">\n                  <input id=\"confirmPassword\" data-id=\"confirmPassword\" class=\"form-control\" type=\"password\" name=\"confirmPassword\" placeholder=\"Confirm Password\" autocomplete=\"off\" value=\"\" />\n                  <label class=\"form-label\" for=\"confirmPassword\">Confirm Password</label>\n                </div>\n                <p id=\"matchFeedback\" class=\"text text-red text-12\" style=\"display: none;\">Password fields must match</p>\n                <div class=\"aro-pswd_info\">\n                  <div id=\"pswd_info\">\n                    <h4 class=\"text-muted text-center\">Minimum Password Requirements:</h4>\n                    <ul>\n                      <li id=\"similar\" class=\"invalid\">Differs from current password</li>\n                      <li id=\"repeating\" class=\"invalid\">No more than 2 repeating characters</li>\n                      <li id=\"unique\" class=\"invalid\">Five unique characters</li>\n                      <li id=\"letter\" class=\"invalid\">One lowercase character</li>\n                      <li id=\"capital\" class=\"invalid\">One UPPERCASE character</strong></li>\n                      <li id=\"number\" class=\"invalid\">One number</strong></li>\n                      <li id=\"length\" class=\"invalid\">From 8 to 255 characters</li>\n                      <li id=\"space\" class=\"invalid\">One special character: ~!@#$%^&*()-_=+[]{}|;:,.<>/?</strong></li>\n                    </ul>\n                  </div>\n                </div>\n              </div> -->\n              {{/unless}}\n              <!-- Checkbox for agreement -->\n              <div class=\"mt-4 form-check d-flex justify-content-center mb-3\">\n                <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"agreeCheckBox\"\n                                 required\n                                        aria-required=\"true\" aria-describedby=\"form-check-label\"\n                                        data-required-message=\"\">\n                <label class=\"form-check-label ms-3 fs-5\" for=\"agreeCheckBox\">I agree to the <button id=\"TOSBtn\" data-id=\"TOSBtn\" class=\"link-button\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"registrationForm\" data-skbuttonvalue=\"TOS\">\n                  terms and conditions\n                </button></label>\n              </div>\n              <!-- Buttons -->\n              <div class=\"d-flex flex-column mb-4\">\n                <!-- Conditional Register Button -->\n                {{#if buttonLabel}}\n                <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"registrationForm\" data-skbuttonvalue=\"REGISTER\">\n                  {{buttonLabel}}\n                </button>\n                {{/if}}\n                {{#unless forcePasswordless}}\n                <button id=\"switchBtn\" data-id=\"switchBtn\" class=\"btn btn-secondary\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"registrationForm\" data-skbuttonvalue=\"SWITCH\">\n                  Register with Password\n                </button>\n                {{/unless}}\n                <!-- Conditional Cancel Button -->\n                {{#if buttonLabel2}}\n                <button id=\"continueBtn\" data-id=\"continueBtn\" class=\"btn btn-link\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"registrationForm\" data-skbuttonvalue=\"CANCEL\">\n                  {{buttonLabel2}}\n                </button>\n                {{/if}}\n\n                <!-- Conditional Magic Link Button -->\n                {{#if magicLink}}\n                <button id=\"magicBtn\" data-id=\"magicBtn\" class=\"btn btn-link\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"registrationForm\" data-skbuttonvalue=\"MAGIC\">\n                  {{buttonLabel3}}\n                </button>\n                {{/if}}\n              </div>\n            </form>\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
               },
               "customScript": {
-                "value": "const start = () => {\r\n    DaVinciFormUtils.addDaVinciFormValidation({\r\n        formId: 'registrationForm', // required\r\n        formType: 'STANDARD', // required (UPDATE_PASSWORD or STANDARD)\r\n        // passwordPolicy: '{{global.variables.passwordPolicy}}', \r\n        // passwordFieldContainerId: 'passwordContainer', \r\n        // confirmPasswordFieldContainerId: 'verifyPasswordContainer', \r\n        delayValidationUntilSubmit: false,\r\n        invalidFieldBorderColor: \"red\",\r\n        disableSubmitButtonUntilValid: true,\r\n            validationSuccessClickHandler: function(status) {\r\n      if (status === \"success\") {\r\n        const agreeCheckBox = document.getElementById(\"agreeCheckBox\");\r\n        const submitButton = document.getElementById(\"validationSubmitButton\");\r\n        \r\n        if (agreeCheckBox.checked) {\r\n          submitButton.disabled = false;\r\n        } else {\r\n          alert(\"You must agree to the terms and conditions to proceed.\");\r\n          submitButton.disabled = true;\r\n        }\r\n      }\r\n    }\r\n    });\r\n};\r\n\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}\r\n\r\n\r\n\r\n// const form = document.getElementById('registrationForm');\r\n\r\n// const allowPasswordless = {{global.variables.mf-configObject.p1MFA.mf-bool-allowHybridPasswordless}};\r\n// const forcePasswordless = {{global.variables.mf-configObject.p1MFA.mf-bool-runOnlyPasswordless}};\r\n\r\n// if (typeof allowPasswordless !== 'undefined' && allowPasswordless !== null && typeof forcePasswordless !== 'undefined' && forcePasswordless !== null) {\r\n//     if (allowPasswordless && forcePasswordless !== true) {\r\n//         // Generate the button element\r\n//         const passwordlessToggle = document.createElement('button');\r\n//         passwordlessToggle.id = 'passwordlessToggle';\r\n//         passwordlessToggle.type = 'button';\r\n//         passwordlessToggle.textContent = 'Register Passwordless';\r\n//         passwordlessToggle.classList.add('btn', 'btn-secondary', 'mb-3');\r\n\r\n//         // Append the button to the form underneath the submit button\r\n//         const submitButton = document.getElementById('submitBtn');\r\n//         submitButton.insertAdjacentElement('afterend', passwordlessToggle);\r\n\r\n//         // The elements you want to show/hide\r\n//         const passwordContainer = document.getElementById('passwordContainer');\r\n//         const verifyPasswordContainer = document.getElementById('verifyPasswordContainer');\r\n\r\n//         // Track the state of the form\r\n//         let isPasswordless = false;\r\n\r\n//         // Add event listener for this button\r\n//         passwordlessToggle.addEventListener('click', function () {\r\n//             if (isPasswordless) {\r\n//                 // Show password fields\r\n//                 passwordContainer.style.display = 'block';\r\n//                 verifyPasswordContainer.style.display = 'block';\r\n//                 // Update button text\r\n//                 passwordlessToggle.textContent = 'Register Passwordless';\r\n//             } else {\r\n//                 // Hide password fields\r\n//                 passwordContainer.style.display = 'none';\r\n//                 verifyPasswordContainer.style.display = 'none';\r\n//                 // Update button text\r\n//                 passwordlessToggle.textContent = 'Register a password';\r\n//             }\r\n//             // Toggle the state\r\n//             isPasswordless = !isPasswordless;\r\n//         });\r\n//     }\r\n// }\r\n"
+                "value": "const start = () => {\r\n    DaVinciFormUtils.addDaVinciFormValidation({\r\n        formId: 'registrationForm', // required\r\n        formType: 'STANDARD', // required (UPDATE_PASSWORD or STANDARD)\r\n        // passwordPolicy: '{{global.variables.passwordPolicy}}', \r\n        // passwordFieldContainerId: 'passwordContainer', \r\n        // confirmPasswordFieldContainerId: 'verifyPasswordContainer', \r\n        delayValidationUntilSubmit: false,\r\n        invalidFieldBorderColor: \"red\",\r\n        disableSubmitButtonUntilValid: true,\r\n        validationSuccessClickHandler: function(status) {\r\n            console.log(\"Validation status:\", status);\r\n            if (status === \"success\") {\r\n                const agreeCheckBox = document.getElementById(\"agreeCheckBox\");\r\n                const submitButton = document.getElementById(\"validationSubmitButton\");\r\n                \r\n                if (!agreeCheckBox) {\r\n                    console.error(\"Element with ID 'agreeCheckBox' not found.\");\r\n                    return;\r\n                }\r\n                \r\n                if (!submitButton) {\r\n                    console.error(\"Element with ID 'validationSubmitButton' not found.\");\r\n                    return;\r\n                }\r\n                \r\n                if (agreeCheckBox.checked) {\r\n                    submitButton.disabled = false;\r\n                } else {\r\n                    alert(\"You must agree to the terms and conditions to proceed.\");\r\n                    submitButton.disabled = true;\r\n                }\r\n            }\r\n        }\r\n    });\r\n};\r\n\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}\r\n\r\n\r\n\r\n// const form = document.getElementById('registrationForm');\r\n\r\n// const allowPasswordless = {{global.variables.mf-configObject.p1MFA.mf-bool-allowHybridPasswordless}};\r\n// const forcePasswordless = {{global.variables.mf-configObject.p1MFA.mf-bool-runOnlyPasswordless}};\r\n\r\n// if (typeof allowPasswordless !== 'undefined' && allowPasswordless !== null && typeof forcePasswordless !== 'undefined' && forcePasswordless !== null) {\r\n//     if (allowPasswordless && forcePasswordless !== true) {\r\n//         // Generate the button element\r\n//         const passwordlessToggle = document.createElement('button');\r\n//         passwordlessToggle.id = 'passwordlessToggle';\r\n//         passwordlessToggle.type = 'button';\r\n//         passwordlessToggle.textContent = 'Register Passwordless';\r\n//         passwordlessToggle.classList.add('btn', 'btn-secondary', 'mb-3');\r\n\r\n//         // Append the button to the form underneath the submit button\r\n//         const submitButton = document.getElementById('submitBtn');\r\n//         submitButton.insertAdjacentElement('afterend', passwordlessToggle);\r\n\r\n//         // The elements you want to show/hide\r\n//         const passwordContainer = document.getElementById('passwordContainer');\r\n//         const verifyPasswordContainer = document.getElementById('verifyPasswordContainer');\r\n\r\n//         // Track the state of the form\r\n//         let isPasswordless = false;\r\n\r\n//         // Add event listener for this button\r\n//         passwordlessToggle.addEventListener('click', function () {\r\n//             if (isPasswordless) {\r\n//                 // Show password fields\r\n//                 passwordContainer.style.display = 'block';\r\n//                 verifyPasswordContainer.style.display = 'block';\r\n//                 // Update button text\r\n//                 passwordlessToggle.textContent = 'Register Passwordless';\r\n//             } else {\r\n//                 // Hide password fields\r\n//                 passwordContainer.style.display = 'none';\r\n//                 verifyPasswordContainer.style.display = 'none';\r\n//                 // Update button text\r\n//                 passwordlessToggle.textContent = 'Register a password';\r\n//             }\r\n//             // Toggle the state\r\n//             isPasswordless = !isPasswordless;\r\n//         });\r\n//     }\r\n// }\r\n"
               },
               "forcePasswordless": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-bool-runOnlyPasswordless}}\"\n      }\n    ]\n  }\n]"
@@ -7754,7 +7734,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1567,
+            "x": 1560,
             "y": 540
           },
           "group": "nodes",
@@ -7879,7 +7859,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Consent subflow",
-                  "value": "c29948a4726d7c1f78000d164c55c03c"
+                  "value": "f5e4badc15ad9cf204bc18c7c1a95a31"
                 }
               },
               "subFlowVersionId": {
@@ -7964,7 +7944,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO Consent subflow",
-                  "value": "c29948a4726d7c1f78000d164c55c03c"
+                  "value": "f5e4badc15ad9cf204bc18c7c1a95a31"
                 }
               },
               "subFlowVersionId": {
@@ -8328,7 +8308,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.9yxb7on02w.payload.output.matchedUser.email}}\",\n        \"tooltip\": \"{{local.9yxb7on02w.payload.output.matchedUser.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
-                "value": "Send  Email"
+                "value": "Send  Email - Auto Enrolled"
               },
               "templateVariables": {
                 "value": [
@@ -9162,9 +9142,143 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "jfjhfcub53",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "sktemplate": {
+                "uiId": "624fbda9a79d412a0e62cc045b410da7",
+                "createdDate": 1693913007853,
+                "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                "description": "",
+                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n\t\t\"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}",
+                "name": "Custom Message",
+                "outputSchema": null,
+                "script": "",
+                "style": "",
+                "template": "",
+                "updatedDate": 1693913396823,
+                "validationRules": [],
+                "version": "1.0",
+                "visibility": "private",
+                "companyId": "9343c168-20f8-4262-b335-5250b428bd12",
+                "value": "624fbda9a79d412a0e62cc045b410da7"
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        }\n    }\n}"
+              },
+              "outputSchema": {
+                "value": {}
+              },
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n           <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"1\" data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n\n          <!-- PingOne Protect -->\n          <div data-skcomponent=\"skrisk\" data-skenvironmentid=\"{{global.companyId}}\" data-skcollectBehavioralData=\"true\" data-skpropertyname=\"riskfp\"></div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+              },
+              "customCSS": {
+                "value": ""
+              },
+              "customScript": {
+                "value": ""
+              },
+              "validationRules": {
+                "value": []
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Loading user registration please wait...\"\n      }\n    ]\n  }\n]"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please do not refresh the page.\"\n      }\n    ]\n  }\n]"
+              },
+              "formFieldsList": {
+                "value": []
+              },
+              "nodeTitle": {
+                "value": "PingOne User Reg wait"
+              },
+              "nodeDescription": {
+                "value": "Gather Risk Signals"
+              }
+            },
+            "idUnique": "d5ksdfn1j7"
+          },
+          "position": {
+            "x": 660,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "3wffb196ro",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 510,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "oz2jjhnuev",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 810,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "wsptstw56j",
+            "source": "fz5f16pk1k",
+            "target": "uacltdwjny"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "27fslwr2h6",
@@ -9834,9 +9948,9 @@
         },
         {
           "data": {
-            "id": "9rl1k1ab8q",
-            "source": "5asj4pqvk6",
-            "target": "z9q8iwzkq9"
+            "id": "ynkvfx6847",
+            "source": "uacltdwjny",
+            "target": "s5qds9vtan"
           },
           "position": {
             "x": 0,
@@ -12358,9 +12472,9 @@
         },
         {
           "data": {
-            "id": "blxbxlpxjv",
-            "source": "axkbv7hwdj",
-            "target": "5asj4pqvk6"
+            "id": "l8xlnnl6",
+            "source": "s5qds9vtan",
+            "target": "e62odx6ius"
           },
           "position": {
             "x": 0,
@@ -13085,9 +13199,9 @@
         },
         {
           "data": {
-            "id": "wsptstw56j",
-            "source": "fz5f16pk1k",
-            "target": "uacltdwjny"
+            "id": "v6kacrg2i6",
+            "source": "axkbv7hwdj",
+            "target": "3wffb196ro"
           },
           "position": {
             "x": 0,
@@ -13104,9 +13218,9 @@
         },
         {
           "data": {
-            "id": "ynkvfx6847",
-            "source": "uacltdwjny",
-            "target": "s5qds9vtan"
+            "id": "uqj4vco4bw",
+            "source": "3wffb196ro",
+            "target": "jfjhfcub53"
           },
           "position": {
             "x": 0,
@@ -13123,9 +13237,28 @@
         },
         {
           "data": {
-            "id": "l8xlnnl6",
-            "source": "s5qds9vtan",
-            "target": "e62odx6ius"
+            "id": "mjjklmdfvp",
+            "source": "jfjhfcub53",
+            "target": "oz2jjhnuev"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7nmpxfq4zz",
+            "source": "oz2jjhnuev",
+            "target": "z9q8iwzkq9"
           },
           "position": {
             "x": 0,
@@ -13146,8 +13279,8 @@
     "zoomingEnabled": true,
     "userZoomingEnabled": true,
     "zoom": 1,
-    "minZoom": 1e-50,
-    "maxZoom": 1e+50,
+    "minZoom": 1E-50,
+    "maxZoom": 1E+50,
     "panningEnabled": true,
     "userPanningEnabled": true,
     "pan": {
@@ -13177,191 +13310,263 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1725973780134,
+  "savedDate": 1726159685249,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1724967003334,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "b2dad55c-c1a5-4f75-b916-6280b47da2dd",
-      "type": "property",
-      "visibility": "private",
-      "name": "birthDate##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1725899573214,
-      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
+      "createdDate": 1721660301566,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
       "fields": {
         "type": "string",
-        "displayName": null,
+        "displayName": "",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "af69b8d4-e10e-4eb1-a3e1-748749cedae0",
+      "id": "5f88e1bb-2988-4a55-a30d-daedb045cedb",
       "type": "property",
       "visibility": "private",
       "name": "buttonValue##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724966993919,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "7bce12f1-b5aa-47ba-96d5-57cc94149662",
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724966993919,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "1c1ae200-6bd1-4a40-8c90-314a60f7beb3",
-      "type": "property",
-      "visibility": "private",
-      "name": "companyName##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967059199,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "74abc7ca-e5c3-43ba-8f30-0205db7a52cd",
-      "type": "property",
-      "visibility": "private",
-      "name": "deviceName##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967059195,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "d4ace7d7-a8a2-4b29-a609-2b689287be71",
-      "type": "property",
-      "visibility": "private",
-      "name": "deviceType##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967085937,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "87cba4f5-b192-4b59-8613-0b26f68fcd4b",
-      "type": "property",
-      "visibility": "private",
-      "name": "email##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967003337,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "1553d421-3ec4-4c62-ba17-09828e2df734",
-      "type": "property",
-      "visibility": "private",
-      "name": "firstName##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967003335,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "2c2e6e95-8e71-4ccc-9f2a-a3c70fea7d19",
-      "type": "property",
-      "visibility": "private",
-      "name": "lastName##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724966993918,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "object"
-      },
-      "id": "3e9a4dc0-6b52-4267-8bd0-848b92a5e355",
-      "type": "property",
-      "visibility": "private",
-      "name": "mf-configObject##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
       "context": "company",
-      "createdDate": 1724966960646,
-      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
+      "createdDate": 1722857693825,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
         "type": "string",
-        "displayName": "Population ID from PingOne",
-        "value": "3a988a38-fd82-4c24-96ca-871e4b9c884b",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000,
+        "value": "11d371ea-73cc-43ba-a676-3da148429ffd"
+      },
+      "id": "0a04af3a-29ea-4ada-a92a-8d9ca7db5440",
+      "type": "property",
+      "updatedDate": 1722858606969,
+      "visibility": "private",
+      "name": "mf-str-p1PopulationId##SK##company",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1720639754826,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "object",
+        "displayName": "",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "579db21e-71c4-4166-a012-6bfa84edc34e",
+      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
       "type": "property",
       "visibility": "private",
-      "name": "mf-str-p1PopulationId##SK##company",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
+      "name": "mf-configObject##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424419666,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "string",
+        "displayName": "Internal variable",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "98f9d761-0dfd-45aa-ac0d-fe17e13e1746",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserId##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492146,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "c93790a8-99be-401e-857b-d015987b79d0",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserObject##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492143,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "f56a7fb9-428a-4da7-a4e3-720db9d81df8",
+      "type": "property",
+      "visibility": "private",
+      "name": "birthDate##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492145,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "4debb231-e575-4b1a-8c96-03617c06d316",
+      "type": "property",
+      "visibility": "private",
+      "name": "firstName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492145,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "1c829b84-f963-4e16-afee-ad8653d2ffcb",
+      "type": "property",
+      "visibility": "private",
+      "name": "lastName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1725193214400,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "2b6f2c54-04b2-4df8-b9e3-37d6fb67e104",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424477651,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "d2b7a39c-2e47-41db-ad55-6b01182556a6",
+      "type": "property",
+      "visibility": "private",
+      "name": "companyLogo##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424393931,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "string",
+        "displayName": "Internal variable",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "e4cd357f-2114-4ff3-bf50-877f2072ae6c",
+      "type": "property",
+      "visibility": "private",
+      "name": "companyName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1721185209721,
+      "fields": {
+        "type": "object",
+        "displayName": "Password policy used for validation",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "877ae96f-84c0-4139-b849-3c8e99c3679e",
+      "type": "property",
+      "visibility": "private",
+      "name": "passwordPolicy##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1721391197282,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "6a397613-75d1-4d08-b848-9e3f97386775",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1Email##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492145,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "ee4d3100-a20e-48fc-8bac-fb8ad52ac004",
+      "type": "property",
+      "visibility": "private",
+      "name": "username##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424417188,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "string",
+        "displayName": "PingOne Population Id",
+        "value": "11d371ea-73cc-43ba-a676-3da148429ffd",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "6fcbdf4e-6958-4afc-bdaf-5ee199d0caaa",
+      "type": "property",
+      "visibility": "private",
+      "name": "populationId##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
       "context": "company",
-      "createdDate": 1724966943238,
-      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
+      "createdDate": 1719424418665,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
       "fields": {
         "type": "string",
         "displayName": "FIDO2 origin",
@@ -13370,148 +13575,16 @@
         "min": 0,
         "max": 2000
       },
-      "id": "0cabda2b-ea08-43fa-9bf6-5e1fd58a3010",
+      "id": "d853c3f7-6934-41ab-8c75-f46d3ba62e7a",
       "type": "property",
       "visibility": "private",
       "name": "origin##SK##company",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967024706,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "6c40b27d-d1eb-4625-a937-8cfe4049fa81",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1Email##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967003335,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "5525998e-01a4-4d8e-8c54-62fefd1fac1c",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1UserId##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1725899573971,
-      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
-      "fields": {
-        "type": "string",
-        "displayName": null,
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "fe6880a6-c94a-4dd7-b904-a549338daaa5",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1UserName##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967085934,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "95ac9bba-4903-44c7-b3c1-108857d84a4a",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1UserObject##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724967085937,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "044505c2-fad1-4766-84d9-2eebf3357b9e",
-      "type": "property",
-      "visibility": "private",
-      "name": "password##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724966996060,
-      "fields": {
-        "displayName": "Password policy used for validation",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "object"
-      },
-      "id": "dde1c6d3-661a-418f-811a-89bbb04e1202",
-      "type": "property",
-      "visibility": "private",
-      "name": "passwordPolicy##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724966960446,
-      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
-      "fields": {
-        "type": "string",
-        "displayName": "PingOne Population Id",
-        "value": "3a988a38-fd82-4c24-96ca-871e4b9c884b",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "02553686-29a4-4230-9e36-b255facd44ab",
-      "type": "property",
-      "visibility": "private",
-      "name": "populationId##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1725920417952,
-      "customerId": "3dca21c80f08243477fcf3079a570665",
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "f68039c8-1365-4532-9ac8-987ee6469507",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskPayload##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
       "context": "company",
-      "createdDate": 1724966936927,
-      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
+      "createdDate": 1719424397357,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
       "fields": {
         "type": "string",
         "displayName": "Internal variable",
@@ -13520,15 +13593,15 @@
         "min": 0,
         "max": 2000
       },
-      "id": "aef3f3be-dc4a-4b7e-a58c-f08199ed288d",
+      "id": "35c50838-05f0-4ea6-9af6-829fbab669b9",
       "type": "property",
       "visibility": "private",
       "name": "rpid##SK##company",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1724967029752,
+      "createdDate": 1719424492145,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -13536,12 +13609,78 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "a7eec5ce-eb8f-457a-bf98-849e76cba48c",
+      "id": "923e2d22-09d6-4018-8f75-54c26ae855e8",
       "type": "property",
       "visibility": "private",
-      "name": "username##SK##flowInstance",
-      "companyId": "8d2bb93e-d3e3-46e7-b560-e1b79bd12deb"
+      "name": "email##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1725980639557,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "ed5b244f-9ab5-4011-9ca2-62b95033efac",
+      "type": "property",
+      "visibility": "private",
+      "name": "riskPayload##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1721991039474,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "c9d6fdc2-b146-4245-9551-4ef98b2a8e82",
+      "type": "property",
+      "visibility": "private",
+      "name": "deviceType##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1723725814611,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "e132d4df-6393-4328-b312-09ea6662e6e0",
+      "type": "property",
+      "visibility": "private",
+      "name": "password##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1721991047435,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "48a44b81-4ff9-4871-8e24-0858477af4fb",
+      "type": "property",
+      "visibility": "private",
+      "name": "deviceName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     }
-  ],
-  "connections": []
+  ]
 }

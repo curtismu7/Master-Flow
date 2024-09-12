@@ -8,12 +8,12 @@
     "nodeConnector",
     "functionsConnector",
     "devicePolicyConnector",
-    "variablesConnector"
+    "variablesConnector",
+    "analyticsConnector"
   ],
-  "createdDate": 1726087014101,
-  "currentVersion": 251,
+  "createdDate": 1726145048699,
+  "currentVersion": 252,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
-  "deployedDate": 1726087062389,
   "description": "Imported on Wed May 01 2024 18:26:09 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -77,7 +77,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Verify subflow",
-  "publishedVersion": 251,
+  "publishedVersion": 252,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "        /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
@@ -95,9 +95,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1726087062469,
+  "updatedDate": 1726145051971,
   "flowId": "fa53f76dbec74a4c40040cf5cd6d5cea",
-  "versionId": 251,
+  "versionId": 252,
   "graphData": {
     "elements": {
       "nodes": [
@@ -1153,7 +1153,7 @@
             "idUnique": "3jajc56uy1"
           },
           "position": {
-            "x": 1020,
+            "x": 1140,
             "y": 570
           },
           "group": "nodes",
@@ -1345,7 +1345,7 @@
             "idUnique": "127ws4k1uz"
           },
           "position": {
-            "x": 1680,
+            "x": 1800,
             "y": 570
           },
           "group": "nodes",
@@ -1394,7 +1394,7 @@
             "idUnique": "pkihd8m90y"
           },
           "position": {
-            "x": 1980,
+            "x": 2100,
             "y": 570
           },
           "group": "nodes",
@@ -1437,7 +1437,7 @@
             "idUnique": "m9xpl9la2r"
           },
           "position": {
-            "x": 1800,
+            "x": 1920,
             "y": 570
           },
           "group": "nodes",
@@ -2593,33 +2593,7 @@
             }
           },
           "position": {
-            "x": 1350,
-            "y": 570
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "wcfsoenwqg",
-            "nodeType": "EVAL",
-            "properties": {
-              "7xmk0ur9wl": {
-                "value": "anyTriggersFalse"
-              },
-              "jyovy602sq": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 840,
+            "x": 1470,
             "y": 570
           },
           "group": "nodes",
@@ -2645,7 +2619,7 @@
             }
           },
           "position": {
-            "x": 1170,
+            "x": 1290,
             "y": 570
           },
           "group": "nodes",
@@ -2663,7 +2637,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1530,
+            "x": 1650,
             "y": 570
           },
           "group": "nodes",
@@ -2713,7 +2687,7 @@
             }
           },
           "position": {
-            "x": 390,
+            "x": 270,
             "y": 570
           },
           "group": "nodes",
@@ -2803,7 +2777,7 @@
             "idUnique": "eqn5ledc0s"
           },
           "position": {
-            "x": 1470,
+            "x": 1590,
             "y": 720
           },
           "group": "nodes",
@@ -3809,7 +3783,7 @@
             "idUnique": "8aah17dhhk"
           },
           "position": {
-            "x": 1740,
+            "x": 1860,
             "y": 720
           },
           "group": "nodes",
@@ -3827,7 +3801,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1590,
+            "x": 1710,
             "y": 720
           },
           "group": "nodes",
@@ -4252,7 +4226,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 540,
+            "x": 420,
             "y": 570
           },
           "group": "nodes",
@@ -4318,7 +4292,7 @@
             }
           },
           "position": {
-            "x": 690,
+            "x": 570,
             "y": 570
           },
           "group": "nodes",
@@ -4773,9 +4747,104 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "dflu7nz64p",
+            "nodeType": "CONNECTION",
+            "connectionId": "78f6209abfff297bca70010581d074b1",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "outcomeStatusDetail": {
+                "value": null
+              }
+            },
+            "idUnique": "vp8mvklpzw"
+          },
+          "position": {
+            "x": 840,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "wcepvav0cy",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 690,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zh0er6h8zn",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 960,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "tr186w9ykb",
+            "source": "etfw8gvumu",
+            "target": "tprt63cgdb"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "ns4rrczt22",
@@ -5995,9 +6064,9 @@
         },
         {
           "data": {
-            "id": "plznxccesy",
-            "source": "2tsc2pve47",
-            "target": "wcfsoenwqg"
+            "id": "tnsfs8xxw5",
+            "source": "etfw8gvumu",
+            "target": "kj23s9r6jz"
           },
           "position": {
             "x": 0,
@@ -6150,25 +6219,6 @@
             "id": "u9vf7mpfjt",
             "source": "20nlncfjem",
             "target": "0k4v4bz5ww"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "c3jfmwqofl",
-            "source": "wcfsoenwqg",
-            "target": "m48nak2orj"
           },
           "position": {
             "x": 0,
@@ -6624,9 +6674,9 @@
         },
         {
           "data": {
-            "id": "tr186w9ykb",
-            "source": "etfw8gvumu",
-            "target": "tprt63cgdb"
+            "id": "xjw5ulfhvj",
+            "source": "2tsc2pve47",
+            "target": "wcepvav0cy"
           },
           "position": {
             "x": 0,
@@ -6643,9 +6693,47 @@
         },
         {
           "data": {
-            "id": "tnsfs8xxw5",
-            "source": "etfw8gvumu",
-            "target": "kj23s9r6jz"
+            "id": "3x1x7326lc",
+            "source": "wcepvav0cy",
+            "target": "dflu7nz64p"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4ht0dskeku",
+            "source": "dflu7nz64p",
+            "target": "zh0er6h8zn"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "08pqf3jsq5",
+            "source": "zh0er6h8zn",
+            "target": "m48nak2orj"
           },
           "position": {
             "x": 0,
@@ -6666,8 +6754,8 @@
     "zoomingEnabled": true,
     "userZoomingEnabled": true,
     "zoom": 1,
-    "minZoom": 1e-50,
-    "maxZoom": 1e+50,
+    "minZoom": 1E-50,
+    "maxZoom": 1E+50,
     "panningEnabled": true,
     "userPanningEnabled": true,
     "pan": {
@@ -6731,11 +6819,11 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726087012778,
+  "savedDate": 1726145046770,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1722286647585,
+      "createdDate": 1722019073899,
       "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
         "type": "string",
@@ -6744,43 +6832,27 @@
         "min": 0,
         "max": 2000
       },
-      "id": "aaebca41-c011-47ba-94fc-d238a23b517c",
+      "id": "39d2a83a-8ed8-486d-b982-96d6416f5e0a",
       "type": "property",
       "visibility": "private",
-      "name": "address##SK##flowInstance",
+      "name": "p1VerifyTransactionID##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424492143,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "f56a7fb9-428a-4da7-a4e3-720db9d81df8",
-      "type": "property",
-      "visibility": "private",
-      "name": "birthDate##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1721660301566,
+      "createdDate": 1719424419666,
       "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
       "fields": {
         "type": "string",
-        "displayName": "",
+        "displayName": "Internal variable",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "5f88e1bb-2988-4a55-a30d-daedb045cedb",
+      "id": "98f9d761-0dfd-45aa-ac0d-fe17e13e1746",
       "type": "property",
       "visibility": "private",
-      "name": "buttonValue##SK##flowInstance",
+      "name": "p1UserId##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -6826,22 +6898,6 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "4debb231-e575-4b1a-8c96-03617c06d316",
-      "type": "property",
-      "visibility": "private",
-      "name": "firstName##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1719424492145,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
       "id": "1c829b84-f963-4e16-afee-ad8653d2ffcb",
       "type": "property",
       "visibility": "private",
@@ -6850,19 +6906,35 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1720639754826,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1722286647585,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
-        "type": "object",
+        "type": "string",
         "displayName": "",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
+      "id": "aaebca41-c011-47ba-94fc-d238a23b517c",
       "type": "property",
       "visibility": "private",
-      "name": "mf-configObject##SK##flowInstance",
+      "name": "address##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492143,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "f56a7fb9-428a-4da7-a4e3-720db9d81df8",
+      "type": "property",
+      "visibility": "private",
+      "name": "birthDate##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -6886,6 +6958,55 @@
     },
     {
       "context": "flowInstance",
+      "createdDate": 1719424455511,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "b313a442-9c32-4800-a2c3-cbcf1590fe53",
+      "type": "property",
+      "visibility": "private",
+      "name": "verificationStatus##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492145,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "4debb231-e575-4b1a-8c96-03617c06d316",
+      "type": "property",
+      "visibility": "private",
+      "name": "firstName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1721660301566,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "5f88e1bb-2988-4a55-a30d-daedb045cedb",
+      "type": "property",
+      "visibility": "private",
+      "name": "buttonValue##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
       "createdDate": 1722175818852,
       "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
@@ -6903,54 +7024,20 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424419666,
+      "createdDate": 1720639754826,
       "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
       "fields": {
-        "type": "string",
-        "displayName": "Internal variable",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "98f9d761-0dfd-45aa-ac0d-fe17e13e1746",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1UserId##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1722019073899,
-      "customerId": "c8701d025a002f27116f02d2f4d957a8",
-      "fields": {
-        "type": "string",
+        "type": "object",
         "displayName": "",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "39d2a83a-8ed8-486d-b982-96d6416f5e0a",
+      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
       "type": "property",
       "visibility": "private",
-      "name": "p1VerifyTransactionID##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1719424455511,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "b313a442-9c32-4800-a2c3-cbcf1590fe53",
-      "type": "property",
-      "visibility": "private",
-      "name": "verificationStatus##SK##flowInstance",
+      "name": "mf-configObject##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     }
-  ],
-  "connections": []
+  ]
 }
