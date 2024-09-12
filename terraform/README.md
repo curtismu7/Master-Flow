@@ -1,4 +1,4 @@
-# PingOne Master Flow - Terraform Configuration
+![image](https://github.com/user-attachments/assets/28eef6b7-5388-479b-a669-a7635c420d2b)# PingOne Master Flow - Terraform Configuration
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -10,6 +10,14 @@
 ### Prerequisites
 
 #### Configure PingOne
+
+In your Administrators environment, create a new group. Name it whatever you would like. Suggestion: **PingOne Master Flow Administrators** \
+Add your own admin account to this group. Do not provide it with any Roles. \
+You will need the Group ID from this group and the Environment ID of the Administrators environment.
+<img src="https://github.com/user-attachments/assets/28ea7018-f9dd-45d3-85cf-51b9c15319f0" width="300">
+> [!WARNING]
+> Terraform will reach back into the administrators environment and use this group to provide permissions to the environments it creates for Administrators. Once Terraform has added Roles to this group, you will no longer be able to add or remove yourself from the group. If this happens, you can still create another Administator account, sign into it and provide your initial account with access.
+
 Create a new PingOne environment with the PingOne SSO and PingOne DaVinci services. Name it whatever you like. Suggestion: **Terrform Administration**. \
 This environment will only be used to allow Terraform to create and manage new environments within PingOne.
 <img src="https://github.com/curtismu7/Master-Flow/assets/117233001/81e61e41-df67-4c3a-ab42-2f9c6855a519" width="300">
@@ -51,8 +59,7 @@ unzip ./tf-release.zip && rm ./tf-release.zip
 ### Update the TFVars File
 Update the `terraform.tfvars` file for your environment. For the default experience, you will not need to modify anything below the DaVinci header.
 
-The following variables must be set for your environment:
-
+Variables from the *Terraform Administration* environment: \
 `worker_id`      - The client id from the worker app in the **Terraform Administration** environment that you created. \
 `worker_secret`  - The client secret from the worker the **Terraform Administration** environment that you created. \
 `pingone_environment_id` - The environment ID of the **Terraform Administration** environment that you created. \
@@ -62,6 +69,10 @@ The following variables must be set for your environment:
 `admin_username`    - The username of the user account that you created. \
 `admin_password`    - The password of the user account that you created. \
 `organization_id`      - The id of your PingOne organization. \
+
+Variables from the *Administrators* \
+`admin_environment_id`  - The environment ID of the **Administrators** environment. \
+`admin_group_id`          - The group ID of the group you created in the **Administrators** environment. \
 
 <details>
 <summary>Additional variables</summary>
