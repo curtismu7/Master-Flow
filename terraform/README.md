@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/28eef6b7-5388-479b-a669-a7635c420d2b)# PingOne Master Flow - Terraform Configuration
-
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Install Terraform](#install-terraform)
