@@ -691,6 +691,10 @@ resource "davinci_variable" "mf-configObject" {
   name           = "mf-configObject"
   type           = "object"
   value          = replace(replace(replace(jsonencode(var.davinci_variable_mf-configObject), "\\u0026", "&"), "\\u003c", "<"), "\\u003e", ">")
+  
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 resource "davinci_variable" "mf-str-p1PopulationId" {
