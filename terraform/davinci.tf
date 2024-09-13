@@ -22,7 +22,8 @@ data "davinci_connections" "read_connections" {
     "pingOneAuthorizeConnector",
     "variablesConnector",
     "devicePolicyConnector",
-    "stringsConnector"
+    "stringsConnector",
+	"analyticsConnector"
   ]
 }
 
