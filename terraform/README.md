@@ -25,7 +25,7 @@ Enable it.\
 Navigate to the Roles tab and provide it with the following permissions.
 > [!WARNING]
 > Do not assign Environment Admin permissions at the Organization level. The Terraform configuration will add any permissions needed to maintain the environments it creates moving forward. If you apply Environment Admin permissions at the Organization level, Terraform will error out with a message about duplicate permissions.
-<img src="https://github.com/curtismu7/Master-Flow/assets/117233001/a468ab32-ea32-4c87-855c-139a6a8e886d" width="300"> 
+<img src="https://github.com/user-attachments/assets/c86b8175-ee5f-4a05-aca1-d4e2dcac2ab0" width="300"> 
 <br />
 
 In your new environment, create a user. Its email address must be reachable, but its username and all other attributes may be anything you desire. \
@@ -50,7 +50,7 @@ Keep this environment handy. We will need to get a number of IDs from it later.
 
 ```bash
 mkdir -p ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/curtismu7/Master-Flow/releases/download/1.1.8/tf-release.zip > tf-release.zip
+curl -L https://github.com/curtismu7/Master-Flow/releases/download/1.1.9-pre.612f24d/tf-release.zip > tf-release.zip
 unzip ./tf-release.zip && rm ./tf-release.zip
 ```
 

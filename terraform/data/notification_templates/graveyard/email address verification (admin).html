@@ -1,0 +1,120 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Code</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff; /* White background */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header {
+            background-color: #333333; /* Dark gray header background */
+            color: white;
+            padding: 40px;
+        }
+
+        .header img {
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 20px;
+            color: #333333;
+            text-align: left; /* Aligning text to the left for readability */
+        }
+
+        .content h2 {
+            text-align: center; /* Center the username */
+            padding-bottom: 16px;
+            text-transform: capitalize;
+            color: #333333;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666666; /* Light gray for paragraph text */
+        }
+
+        .content ol {
+            padding-left: 20px; /* Indentation for the ordered list */
+            color: #666666; /* Light gray for list text */
+        }
+
+        .content ol li {
+            margin-bottom: 10px; /* Space between list items */
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #888888; /* Light gray for footer text */
+        }
+    </style>
+</head>
+
+<body>
+    <table role="presentation"
+        style="width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif;">
+        <tbody>
+            <tr>
+                <td align="center" style="padding: 1rem 2rem; vertical-align: top; width: 100%;">
+                    <table role="presentation"
+                        style="max-width: 600px; border-collapse: collapse; border: 0px; border-spacing: 0px;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 40px 0px 0px;">
+                                    <div class="email-container">
+                                        <div class="header">
+                                           
+                                        </div>
+
+                                        <div class="content">
+                                            <h2 style="text-align: center; padding-bottom: 16px; text-transform: capitalize;">Username: ${user.username}</h2>
+                                            <p>
+                                                Use the code provided to verify your email address with PingOne. If you think you received this email in error, contact your supervisor.
+                                            </p>
+
+                                            <p>
+                                                To verify your email address:
+                                            </p>
+
+                                            <ol type="1">
+                                                <li>Sign-on to the self-service portal. For instructions, see <a href="https://docs.pingidentity.com/bundle/pingone/page/snd1631892368614.html" style="color: #333333;">Managing your PingOne user profile</a>.</li>
+                                                <li>Enter your verification code in the <b>Contact</b> section: <span style="color: #333333;">${code}</span></li>
+                                                <li>Click <b>Verify</b>.</li>
+                                            </ol>
+                                        </div>
+
+                                        <div class="footer">
+                                            <p>&copy; Copyright 2024. All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
