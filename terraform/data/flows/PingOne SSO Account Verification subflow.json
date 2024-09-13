@@ -10,8 +10,8 @@
     "functionsConnector",
     "variablesConnector"
   ],
-  "createdDate": 1725379009967,
-  "currentVersion": 78,
+  "createdDate": 1726230746841,
+  "currentVersion": 80,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Tue Apr 30 2024 20:46:33 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -48,7 +48,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Account Verification subflow",
-  "publishedVersion": 78,
+  "publishedVersion": 80,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -60,9 +60,9 @@
     "customLogoURLSelection": 3
   },
   "timeouts": "null",
-  "updatedDate": 1725379011706,
+  "updatedDate": 1726230749103,
   "flowId": "a1e8104de5adce520631bae3ce4cbd79",
-  "versionId": 78,
+  "versionId": 80,
   "graphData": {
     "elements": {
       "nodes": [
@@ -1480,6 +1480,66 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "iu9k3nl09q",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#50e3c2ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Email Template:  Verification Code"
+              },
+              "width": {
+                "value": 240
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              }
+            },
+            "status": "configured",
+            "idUnique": "lb31g4gkg6"
+          },
+          "position": {
+            "x": 247,
+            "y": 274
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
@@ -2023,7 +2083,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1725379009827,
+  "savedDate": 1726230746571,
   "variables": [
     {
       "context": "flowInstance",

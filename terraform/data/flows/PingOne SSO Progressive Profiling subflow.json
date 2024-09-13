@@ -12,8 +12,8 @@
     "notificationsConnector",
     "flowConnector"
   ],
-  "createdDate": 1726154649203,
-  "currentVersion": 265,
+  "createdDate": 1726230369745,
+  "currentVersion": 270,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Wed May 22 2024 23:21:06 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -92,7 +92,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Progressive Profiling subflow",
-  "publishedVersion": 265,
+  "publishedVersion": 270,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "  /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
@@ -104,9 +104,9 @@
     "useIntermediateLoadingScreen": false
   },
   "timeouts": "null",
-  "updatedDate": 1726154654331,
+  "updatedDate": 1726230373855,
   "flowId": "35d40c635dc3e3fa4f4c2b5ab9ccc343",
-  "versionId": 265,
+  "versionId": 270,
   "graphData": {
     "elements": {
       "nodes": [
@@ -133,7 +133,7 @@
                 "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\">\n    <div style=\"max-width: 400px; width: 400%\">\n      <div class=\"card shadow mb-5\">\n        <main aria-labelledby=\"title\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"\n              alt=\"{{global.variables.companyName}}\" />\n\n            {{#if title}}\n            <h1 class=\"text-center mb-4\">{{title}}</h1>\n            {{/if}}\n\n            {{#if textOne}}\n            <p class=\"text-muted text-center\">{{textOne}}</p>\n            {{/if}}\n\n            {{#if textTwo}}\n            <p class=\"text-muted text-center\">{{textTwo}}</p>\n            {{/if}}\n\n            <!-- Generic Error Message -->\n            <!-- Generic Error Message -->\n            <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n              data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n            <!-- Form Validation Error Messages -->\n            <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"givenName\" data-skcomponent=\"skerrormessage\">\n            </p>\n            <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"middleInitial\"\n              data-skcomponent=\"skerrormessage\"></p>\n            <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"familyName\" data-skcomponent=\"skerrormessage\">\n            </p>\n            <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phoneCode\" data-skcomponent=\"skerrormessage\">\n            </p>\n            <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"phone\" data-skcomponent=\"skerrormessage\"></p>\n            <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"dob\" data-skcomponent=\"skerrormessage\"></p>\n            <form id=\"profileForm\" data-id=\"profileForm\" class=\"form\">\n              <div class=\"mb-4 p-0\">\n                <!-- Container for Given Name Input -->\n                <div style=\"display: flex;\">\n                  {{#unless hasGivenName}}\n                  <!-- Given Name Input with Floating Label -->\n                  <div class=\"mb-4 form-floating\" style=\"flex: 4;\">\n                    <!-- Input field for Given Name with required attributes and error message -->\n                    <!-- *********** If you want to make this field required add \"required\" inside the \"input\" statment *********** -->\n                    <input id=\"givenName\" data-id=\"givenName\" class=\"form-control\" type=\"text\" name=\"givenName\"\n                      placeholder=\"First Name\" autocomplete=\"off\"\n                      aria-required=\"true\"\n                      aria-describedby=\"givenNameLabel\" data-required-message=\"Enter a valid first name\" />\n                    <!-- Floating label for Given Name input -->\n                    <label id=\"givenNameLabel\" data-id=\"givenNameLabel\" class=\"form-label\" for=\"givenName\">First\n                      Name</label>\n                  </div>\n                  {{/unless}}\n                </div>\n\n                <!-- Container for Family Name Input -->\n                {{#unless hasFamilyName}}\n                <div class=\"mb-4 form-floating\">\n                  <!-- Input field for Family Name with required attributes and error message -->\n                  <!-- *********** If you want to make this field required add \"required\" inside the \"input\" statment *********** -->\n                  <input id=\"familyName\" data-id=\"familyName\" class=\"form-control\" type=\"text\" placeholder=\"Last Name\"\n                    autocomplete=\"off\" name=\"familyName\"\n\n                    aria-required=\"true\"\n                    aria-describedby=\"familyNameLabel\" data-required-message=\"Enter a valid last name\" />\n                  <!-- Floating label for Family Name input -->\n                  <label id=\"familyNameLabel\" data-id=\"familyNameLabel\" class=\"form-label\" for=\"familyName\">Last\n                    Name</label>\n                </div>\n                {{/unless}}\n                {{#unless hasPrimaryPhone}}\n\n                <div class=\"mb-4 form-floating\">\n                  <div id=\"phone-input\" class=\"phone-input\" data-id=\"phone-input\">\n                    <div id=\"phone-input-code\" class=\"phone-input__code\">\n                      <div id=\"phone-input-code-dropdown\" class=\"dropdown dropdown--search dropdown--standard\">\n                        <input class=\"dropdown__input form-control\" id=\"countryCodeInput\" name=\"countryCodeInput\"\n                        aria-required=\"true\"\n                        aria-describedby=\"familyNameLabel\"\n                          placeholder=\"\" type=\"text\" readonly=\"\" />\n                        <ul id=\"code-dropdown-list\" class=\"dropdown__list none\">\n                          <li class=\"dropdown__option--search\">\n                            <input id=\"search-input\" class=\"text-input text-input--dropdown-search form-control\"\n                              data-id=\"text-input\" placeholder=\"Search countries...\" type=\"text\" autocomplete=\"off\" aria-required=\"true\" aria-describedby=\"text-input\"\n                              value=\"\">\n                            <div id=\"close-list\" class=\"dropdown__close\"></div>\n                          </li>\n                          <span id=\"list-container\" class=\"dropdown__option--container\">\n                            <li class=\"dropdown__option\" value=\"af\" role=\"button\">Afghanistan\n                              (&#x202B;افغانستان&#x202C;&lrm;) +93</li>\n                            <li class=\"dropdown__option\" value=\"al\" role=\"button\">Albania (Shqipëri) +355</li>\n                            <li class=\"dropdown__option\" value=\"dz\" role=\"button\">Algeria (&#x202B;الجزائر&#x202C;&lrm;)\n                              +213</li>\n                            <li class=\"dropdown__option\" value=\"as\" role=\"button\">American Samoa +1</li>\n                            <li class=\"dropdown__option\" value=\"ad\" role=\"button\">Andorra +376</li>\n                            <li class=\"dropdown__option\" value=\"ao\" role=\"button\">Angola +244</li>\n                            <li class=\"dropdown__option\" value=\"ai\" role=\"button\">Anguilla +1</li>\n                            <li class=\"dropdown__option\" value=\"ag\" role=\"button\">Antigua and Barbuda +1</li>\n                            <li class=\"dropdown__option\" value=\"ar\" role=\"button\">Argentina +54</li>\n                            <li class=\"dropdown__option\" value=\"am\" role=\"button\">Armenia (Հայաստան) +374</li>\n                            <li class=\"dropdown__option\" value=\"aw\" role=\"button\">Aruba +297</li>\n                            <li class=\"dropdown__option\" value=\"au\" role=\"button\">Australia +61</li>\n                            <li class=\"dropdown__option\" value=\"at\" role=\"button\">Austria (Österreich) +43</li>\n                            <li class=\"dropdown__option\" value=\"az\" role=\"button\">Azerbaijan (Azərbaycan) +994</li>\n                            <li class=\"dropdown__option\" value=\"bs\" role=\"button\">Bahamas +1</li>\n                            <li class=\"dropdown__option\" value=\"bh\" role=\"button\">Bahrain (&#x202B;البحرين&#x202C;&lrm;)\n                              +973</li>\n                            <li class=\"dropdown__option\" value=\"bd\" role=\"button\">Bangladesh (বাংলাদেশ) +880</li>\n                            <li class=\"dropdown__option\" value=\"bb\" role=\"button\">Barbados +1</li>\n                            <li class=\"dropdown__option\" value=\"by\" role=\"button\">Belarus (Беларусь) +375</li>\n                            <li class=\"dropdown__option\" value=\"be\" role=\"button\">Belgium (België) +32</li>\n                            <li class=\"dropdown__option\" value=\"bz\" role=\"button\">Belize +501</li>\n                            <li class=\"dropdown__option\" value=\"bj\" role=\"button\">Benin (Bénin) +229</li>\n                            <li class=\"dropdown__option\" value=\"bm\" role=\"button\">Bermuda +1</li>\n                            <li class=\"dropdown__option\" value=\"bt\" role=\"button\">Bhutan (འབྲུག) +975</li>\n                            <li class=\"dropdown__option\" value=\"bo\" role=\"button\">Bolivia +591</li>\n                            <li class=\"dropdown__option\" value=\"ba\" role=\"button\">Bosnia and Herzegovina (Босна и\n                              Херцеговина) +387</li>\n                            <li class=\"dropdown__option\" value=\"bw\" role=\"button\">Botswana +267</li>\n                            <li class=\"dropdown__option\" value=\"br\" role=\"button\">Brazil (Brasil) +55</li>\n                            <li class=\"dropdown__option\" value=\"io\" role=\"button\">British Indian Ocean Territory +246\n                            </li>\n                            <li class=\"dropdown__option\" value=\"vg\" role=\"button\">British Virgin Islands +1</li>\n                            <li class=\"dropdown__option\" value=\"bn\" role=\"button\">Brunei +673</li>\n                            <li class=\"dropdown__option\" value=\"bg\" role=\"button\">Bulgaria (България) +359</li>\n                            <li class=\"dropdown__option\" value=\"bf\" role=\"button\">Burkina Faso +226</li>\n                            <li class=\"dropdown__option\" value=\"bi\" role=\"button\">Burundi (Uburundi) +257</li>\n                            <li class=\"dropdown__option\" value=\"kh\" role=\"button\">Cambodia (កម្ពុជា) +855</li>\n                            <li class=\"dropdown__option\" value=\"cm\" role=\"button\">Cameroon (Cameroun) +237</li>\n                            <li class=\"dropdown__option\" value=\"ca\" role=\"button\">Canada +1</li>\n                            <li class=\"dropdown__option\" value=\"cv\" role=\"button\">Cape Verde (Kabu Verdi) +238</li>\n                            <li class=\"dropdown__option\" value=\"bq\" role=\"button\">Caribbean Netherlands +599</li>\n                            <li class=\"dropdown__option\" value=\"ky\" role=\"button\">Cayman Islands +1</li>\n                            <li class=\"dropdown__option\" value=\"cf\" role=\"button\">Central African Republic (République\n                              centrafricaine) +236</li>\n                            <li class=\"dropdown__option\" value=\"td\" role=\"button\">Chad (Tchad) +235</li>\n                            <li class=\"dropdown__option\" value=\"cl\" role=\"button\">Chile +56</li>\n                            <li class=\"dropdown__option\" value=\"cn\" role=\"button\">China (中国) +86</li>\n                            <li class=\"dropdown__option\" value=\"cx\" role=\"button\">Christmas Island +61</li>\n                            <li class=\"dropdown__option\" value=\"cc\" role=\"button\">Cocos (Keeling) Islands +61</li>\n                            <li class=\"dropdown__option\" value=\"co\" role=\"button\">Colombia +57</li>\n                            <li class=\"dropdown__option\" value=\"km\" role=\"button\">Comoros (&#x202B;جزر\n                              القمر&#x202C;&lrm;) +269</li>\n                            <li class=\"dropdown__option\" value=\"cd\" role=\"button\">Congo (DRC) (Jamhuri ya Kidemokrasia\n                              ya Kongo) +243</li>\n                            <li class=\"dropdown__option\" value=\"cg\" role=\"button\">Congo (Republic) (Congo-Brazzaville)\n                              +242</li>\n                            <li class=\"dropdown__option\" value=\"ck\" role=\"button\">Cook Islands +682</li>\n                            <li class=\"dropdown__option\" value=\"cr\" role=\"button\">Costa Rica +506</li>\n                            <li class=\"dropdown__option\" value=\"ci\" role=\"button\">Côte d’Ivoire +225</li>\n                            <li class=\"dropdown__option\" value=\"hr\" role=\"button\">Croatia (Hrvatska) +385</li>\n                            <li class=\"dropdown__option\" value=\"cu\" role=\"button\">Cuba +53</li>\n                            <li class=\"dropdown__option\" value=\"cw\" role=\"button\">Curaçao +599</li>\n                            <li class=\"dropdown__option\" value=\"cy\" role=\"button\">Cyprus (Κύπρος) +357</li>\n                            <li class=\"dropdown__option\" value=\"cz\" role=\"button\">Czech Republic (Česká republika) +420\n                            </li>\n                            <li class=\"dropdown__option\" value=\"dk\" role=\"button\">Denmark (Danmark) +45</li>\n                            <li class=\"dropdown__option\" value=\"dj\" role=\"button\">Djibouti +253</li>\n                            <li class=\"dropdown__option\" value=\"dm\" role=\"button\">Dominica +1</li>\n                            <li class=\"dropdown__option\" value=\"do\" role=\"button\">Dominican Republic (República\n                              Dominicana) +1</li>\n                            <li class=\"dropdown__option\" value=\"ec\" role=\"button\">Ecuador +593</li>\n                            <li class=\"dropdown__option\" value=\"eg\" role=\"button\">Egypt (&#x202B;مصر&#x202C;&lrm;) +20\n                            </li>\n                            <li class=\"dropdown__option\" value=\"sv\" role=\"button\">El Salvador +503</li>\n                            <li class=\"dropdown__option\" value=\"gq\" role=\"button\">Equatorial Guinea (Guinea Ecuatorial)\n                              +240</li>\n                            <li class=\"dropdown__option\" value=\"er\" role=\"button\">Eritrea +291</li>\n                            <li class=\"dropdown__option\" value=\"ee\" role=\"button\">Estonia (Eesti) +372</li>\n                            <li class=\"dropdown__option\" value=\"et\" role=\"button\">Ethiopia +251</li>\n                            <li class=\"dropdown__option\" value=\"fk\" role=\"button\">Falkland Islands (Islas Malvinas) +500\n                            </li>\n                            <li class=\"dropdown__option\" value=\"fo\" role=\"button\">Faroe Islands (Føroyar) +298</li>\n                            <li class=\"dropdown__option\" value=\"fj\" role=\"button\">Fiji +679</li>\n                            <li class=\"dropdown__option\" value=\"fi\" role=\"button\">Finland (Suomi) +358</li>\n                            <li class=\"dropdown__option\" value=\"fr\" role=\"button\">France +33</li>\n                            <li class=\"dropdown__option\" value=\"gf\" role=\"button\">French Guiana (Guyane française) +594\n                            </li>\n                            <li class=\"dropdown__option\" value=\"pf\" role=\"button\">French Polynesia (Polynésie française)\n                              +689</li>\n                            <li class=\"dropdown__option\" value=\"ga\" role=\"button\">Gabon +241</li>\n                            <li class=\"dropdown__option\" value=\"gm\" role=\"button\">Gambia +220</li>\n                            <li class=\"dropdown__option\" value=\"ge\" role=\"button\">Georgia (საქართველო) +995</li>\n                            <li class=\"dropdown__option\" value=\"de\" role=\"button\">Germany (Deutschland) +49</li>\n                            <li class=\"dropdown__option\" value=\"gh\" role=\"button\">Ghana (Gaana) +233</li>\n                            <li class=\"dropdown__option\" value=\"gi\" role=\"button\">Gibraltar +350</li>\n                            <li class=\"dropdown__option\" value=\"gr\" role=\"button\">Greece (Ελλάδα) +30</li>\n                            <li class=\"dropdown__option\" value=\"gl\" role=\"button\">Greenland (Kalaallit Nunaat) +299</li>\n                            <li class=\"dropdown__option\" value=\"gd\" role=\"button\">Grenada +1</li>\n                            <li class=\"dropdown__option\" value=\"gp\" role=\"button\">Guadeloupe +590</li>\n                            <li class=\"dropdown__option\" value=\"gu\" role=\"button\">Guam +1</li>\n                            <li class=\"dropdown__option\" value=\"gt\" role=\"button\">Guatemala +502</li>\n                            <li class=\"dropdown__option\" value=\"gg\" role=\"button\">Guernsey +44</li>\n                            <li class=\"dropdown__option\" value=\"gn\" role=\"button\">Guinea (Guinée) +224</li>\n                            <li class=\"dropdown__option\" value=\"gw\" role=\"button\">Guinea-Bissau (Guiné Bissau) +245</li>\n                            <li class=\"dropdown__option\" value=\"gy\" role=\"button\">Guyana +592</li>\n                            <li class=\"dropdown__option\" value=\"ht\" role=\"button\">Haiti +509</li>\n                            <li class=\"dropdown__option\" value=\"hn\" role=\"button\">Honduras +504</li>\n                            <li class=\"dropdown__option\" value=\"hk\" role=\"button\">Hong Kong (香港) +852</li>\n                            <li class=\"dropdown__option\" value=\"hu\" role=\"button\">Hungary (Magyarország) +36</li>\n                            <li class=\"dropdown__option\" value=\"is\" role=\"button\">Iceland (Ísland) +354</li>\n                            <li class=\"dropdown__option\" value=\"in\" role=\"button\">India (भारत) +91</li>\n                            <li class=\"dropdown__option\" value=\"id\" role=\"button\">Indonesia +62</li>\n                            <li class=\"dropdown__option\" value=\"ir\" role=\"button\">Iran (&#x202B;ایران&#x202C;&lrm;) +98\n                            </li>\n                            <li class=\"dropdown__option\" value=\"iq\" role=\"button\">Iraq (&#x202B;العراق&#x202C;&lrm;)\n                              +964</li>\n                            <li class=\"dropdown__option\" value=\"ie\" role=\"button\">Ireland +353</li>\n                            <li class=\"dropdown__option\" value=\"im\" role=\"button\">Isle of Man +44</li>\n                            <li class=\"dropdown__option\" value=\"il\" role=\"button\">Israel (&#x202B;ישראל&#x202C;&lrm;)\n                              +972</li>\n                            <li class=\"dropdown__option\" value=\"it\" role=\"button\">Italy (Italia) +39</li>\n                            <li class=\"dropdown__option\" value=\"jm\" role=\"button\">Jamaica +1</li>\n                            <li class=\"dropdown__option\" value=\"jp\" role=\"button\">Japan (日本) +81</li>\n                            <li class=\"dropdown__option\" value=\"je\" role=\"button\">Jersey +44</li>\n                            <li class=\"dropdown__option\" value=\"jo\" role=\"button\">Jordan (&#x202B;الأردن&#x202C;&lrm;)\n                              +962</li>\n                            <li class=\"dropdown__option\" value=\"kz\" role=\"button\">Kazakhstan (Казахстан) +7</li>\n                            <li class=\"dropdown__option\" value=\"ke\" role=\"button\">Kenya +254</li>\n                            <li class=\"dropdown__option\" value=\"ki\" role=\"button\">Kiribati +686</li>\n                            <li class=\"dropdown__option\" value=\"xk\" role=\"button\">Kosovo (Republika e Kosovës) +383</li>\n                            <li class=\"dropdown__option\" value=\"kw\" role=\"button\">Kuwait (&#x202B;الكويت&#x202C;&lrm;)\n                              +965</li>\n                            <li class=\"dropdown__option\" value=\"kg\" role=\"button\">Kyrgyzstan (Кыргызстан) +996</li>\n                            <li class=\"dropdown__option\" value=\"la\" role=\"button\">Laos (ລາວ) +856</li>\n                            <li class=\"dropdown__option\" value=\"lv\" role=\"button\">Latvia (Latvija) +371</li>\n                            <li class=\"dropdown__option\" value=\"lb\" role=\"button\">Lebanon (&#x202B;لبنان&#x202C;&lrm;)\n                              +961</li>\n                            <li class=\"dropdown__option\" value=\"ls\" role=\"button\">Lesotho +266</li>\n                            <li class=\"dropdown__option\" value=\"lr\" role=\"button\">Liberia +231</li>\n                            <li class=\"dropdown__option\" value=\"ly\" role=\"button\">Libya (&#x202B;ليبيا&#x202C;&lrm;)\n                              +218</li>\n                            <li class=\"dropdown__option\" value=\"li\" role=\"button\">Liechtenstein +423</li>\n                            <li class=\"dropdown__option\" value=\"lt\" role=\"button\">Lithuania (Lietuva) +370</li>\n                            <li class=\"dropdown__option\" value=\"lu\" role=\"button\">Luxembourg +352</li>\n                            <li class=\"dropdown__option\" value=\"mo\" role=\"button\">Macau (澳門) +853</li>\n                            <li class=\"dropdown__option\" value=\"mk\" role=\"button\">Macedonia (FYROM) (Македонија) +389\n                            </li>\n                            <li class=\"dropdown__option\" value=\"mg\" role=\"button\">Madagascar (Madagasikara) +261</li>\n                            <li class=\"dropdown__option\" value=\"mw\" role=\"button\">Malawi +265</li>\n                            <li class=\"dropdown__option\" value=\"my\" role=\"button\">Malaysia +60</li>\n                            <li class=\"dropdown__option\" value=\"mv\" role=\"button\">Maldives +960</li>\n                            <li class=\"dropdown__option\" value=\"ml\" role=\"button\">Mali +223</li>\n                            <li class=\"dropdown__option\" value=\"mt\" role=\"button\">Malta +356</li>\n                            <li class=\"dropdown__option\" value=\"mh\" role=\"button\">Marshall Islands +692</li>\n                            <li class=\"dropdown__option\" value=\"mq\" role=\"button\">Martinique +596</li>\n                            <li class=\"dropdown__option\" value=\"mr\" role=\"button\">Mauritania\n                              (&#x202B;موريتانيا&#x202C;&lrm;) +222</li>\n                            <li class=\"dropdown__option\" value=\"mu\" role=\"button\">Mauritius (Moris) +230</li>\n                            <li class=\"dropdown__option\" value=\"yt\" role=\"button\">Mayotte +262</li>\n                            <li class=\"dropdown__option\" value=\"mx\" role=\"button\">Mexico (México) +52</li>\n                            <li class=\"dropdown__option\" value=\"fm\" role=\"button\">Micronesia +691</li>\n                            <li class=\"dropdown__option\" value=\"md\" role=\"button\">Moldova (Republica Moldova) +373</li>\n                            <li class=\"dropdown__option\" value=\"mc\" role=\"button\">Monaco +377</li>\n                            <li class=\"dropdown__option\" value=\"mn\" role=\"button\">Mongolia (Монгол) +976</li>\n                            <li class=\"dropdown__option\" value=\"me\" role=\"button\">Montenegro (Crna Gora) +382</li>\n                            <li class=\"dropdown__option\" value=\"ms\" role=\"button\">Montserrat +1</li>\n                            <li class=\"dropdown__option\" value=\"ma\" role=\"button\">Morocco (&#x202B;المغرب&#x202C;&lrm;)\n                              +212</li>\n                            <li class=\"dropdown__option\" value=\"mz\" role=\"button\">Mozambique (Moçambique) +258</li>\n                            <li class=\"dropdown__option\" value=\"mm\" role=\"button\">Myanmar (Burma) (မြန်မာ) +95</li>\n                            <li class=\"dropdown__option\" value=\"na\" role=\"button\">Namibia (Namibië) +264</li>\n                            <li class=\"dropdown__option\" value=\"nr\" role=\"button\">Nauru +674</li>\n                            <li class=\"dropdown__option\" value=\"np\" role=\"button\">Nepal (नेपाल) +977</li>\n                            <li class=\"dropdown__option\" value=\"nl\" role=\"button\">Netherlands (Nederland) +31</li>\n                            <li class=\"dropdown__option\" value=\"nc\" role=\"button\">New Caledonia (Nouvelle-Calédonie)\n                              +687</li>\n                            <li class=\"dropdown__option\" value=\"nz\" role=\"button\">New Zealand +64</li>\n                            <li class=\"dropdown__option\" value=\"ni\" role=\"button\">Nicaragua +505</li>\n                            <li class=\"dropdown__option\" value=\"ne\" role=\"button\">Niger (Nijar) +227</li>\n                            <li class=\"dropdown__option\" value=\"ng\" role=\"button\">Nigeria +234</li>\n                            <li class=\"dropdown__option\" value=\"nu\" role=\"button\">Niue +683</li>\n                            <li class=\"dropdown__option\" value=\"nf\" role=\"button\">Norfolk Island +672</li>\n                            <li class=\"dropdown__option\" value=\"kp\" role=\"button\">North Korea (조선 민주주의 인민 공화국) +850</li>\n                            <li class=\"dropdown__option\" value=\"mp\" role=\"button\">Northern Mariana Islands +1</li>\n                            <li class=\"dropdown__option\" value=\"no\" role=\"button\">Norway (Norge) +47</li>\n                            <li class=\"dropdown__option\" value=\"om\" role=\"button\">Oman (&#x202B;عُمان&#x202C;&lrm;) +968\n                            </li>\n                            <li class=\"dropdown__option\" value=\"pk\" role=\"button\">Pakistan\n                              (&#x202B;پاکستان&#x202C;&lrm;) +92</li>\n                            <li class=\"dropdown__option\" value=\"pw\" role=\"button\">Palau +680</li>\n                            <li class=\"dropdown__option\" value=\"ps\" role=\"button\">Palestine\n                              (&#x202B;فلسطين&#x202C;&lrm;) +970</li>\n                            <li class=\"dropdown__option\" value=\"pa\" role=\"button\">Panama (Panamá) +507</li>\n                            <li class=\"dropdown__option\" value=\"pg\" role=\"button\">Papua New Guinea +675</li>\n                            <li class=\"dropdown__option\" value=\"py\" role=\"button\">Paraguay +595</li>\n                            <li class=\"dropdown__option\" value=\"pe\" role=\"button\">Peru (Perú) +51</li>\n                            <li class=\"dropdown__option\" value=\"ph\" role=\"button\">Philippines +63</li>\n                            <li class=\"dropdown__option\" value=\"pl\" role=\"button\">Poland (Polska) +48</li>\n                            <li class=\"dropdown__option\" value=\"pt\" role=\"button\">Portugal +351</li>\n                            <li class=\"dropdown__option\" value=\"pr\" role=\"button\">Puerto Rico +1</li>\n                            <li class=\"dropdown__option\" value=\"qa\" role=\"button\">Qatar (&#x202B;قطر&#x202C;&lrm;) +974\n                            </li>\n                            <li class=\"dropdown__option\" value=\"re\" role=\"button\">Réunion (La Réunion) +262</li>\n                            <li class=\"dropdown__option\" value=\"ro\" role=\"button\">Romania (România) +40</li>\n                            <li class=\"dropdown__option\" value=\"ru\" role=\"button\">Russia (Россия) +7</li>\n                            <li class=\"dropdown__option\" value=\"rw\" role=\"button\">Rwanda +250</li>\n                            <li class=\"dropdown__option\" value=\"bl\" role=\"button\">Saint Barthélemy (Saint-Barthélemy)\n                              +590</li>\n                            <li class=\"dropdown__option\" value=\"sh\" role=\"button\">Saint Helena +290</li>\n                            <li class=\"dropdown__option\" value=\"kn\" role=\"button\">Saint Kitts and Nevis +1</li>\n                            <li class=\"dropdown__option\" value=\"lc\" role=\"button\">Saint Lucia +1</li>\n                            <li class=\"dropdown__option\" value=\"mf\" role=\"button\">Saint Martin (Saint-Martin (partie\n                              française)) +590</li>\n                            <li class=\"dropdown__option\" value=\"pm\" role=\"button\">Saint Pierre and Miquelon\n                              (Saint-Pierre-et-Miquelon) +508</li>\n                            <li class=\"dropdown__option\" value=\"vc\" role=\"button\">Saint Vincent and the Grenadines +1\n                            </li>\n                            <li class=\"dropdown__option\" value=\"ws\" role=\"button\">Samoa +685</li>\n                            <li class=\"dropdown__option\" value=\"sm\" role=\"button\">San Marino +378</li>\n                            <li class=\"dropdown__option\" value=\"st\" role=\"button\">São Tomé and Príncipe (São Tomé e\n                              Príncipe) +239</li>\n                            <li class=\"dropdown__option\" value=\"sa\" role=\"button\">Saudi Arabia (&#x202B;المملكة العربية\n                              السعودية&#x202C;&lrm;) +966</li>\n                            <li class=\"dropdown__option\" value=\"sn\" role=\"button\">Senegal (Sénégal) +221</li>\n                            <li class=\"dropdown__option\" value=\"rs\" role=\"button\">Serbia (Србија) +381</li>\n                            <li class=\"dropdown__option\" value=\"sc\" role=\"button\">Seychelles +248</li>\n                            <li class=\"dropdown__option\" value=\"sl\" role=\"button\">Sierra Leone +232</li>\n                            <li class=\"dropdown__option\" value=\"sg\" role=\"button\">Singapore +65</li>\n                            <li class=\"dropdown__option\" value=\"sx\" role=\"button\">Sint Maarten +1</li>\n                            <li class=\"dropdown__option\" value=\"sk\" role=\"button\">Slovakia (Slovensko) +421</li>\n                            <li class=\"dropdown__option\" value=\"si\" role=\"button\">Slovenia (Slovenija) +386</li>\n                            <li class=\"dropdown__option\" value=\"sb\" role=\"button\">Solomon Islands +677</li>\n                            <li class=\"dropdown__option\" value=\"so\" role=\"button\">Somalia (Soomaaliya) +252</li>\n                            <li class=\"dropdown__option\" value=\"za\" role=\"button\">South Africa +27</li>\n                            <li class=\"dropdown__option\" value=\"kr\" role=\"button\">South Korea (대한민국) +82</li>\n                            <li class=\"dropdown__option\" value=\"ss\" role=\"button\">South Sudan (&#x202B;جنوب\n                              السودان&#x202C;&lrm;) +211</li>\n                            <li class=\"dropdown__option\" value=\"es\" role=\"button\">Spain (España) +34</li>\n                            <li class=\"dropdown__option\" value=\"lk\" role=\"button\">Sri Lanka (ශ්&zwj;රී ලංකාව) +94</li>\n                            <li class=\"dropdown__option\" value=\"sd\" role=\"button\">Sudan (&#x202B;السودان&#x202C;&lrm;)\n                              +249</li>\n                            <li class=\"dropdown__option\" value=\"sr\" role=\"button\">Suriname +597</li>\n                            <li class=\"dropdown__option\" value=\"sj\" role=\"button\">Svalbard and Jan Mayen +47</li>\n                            <li class=\"dropdown__option\" value=\"sz\" role=\"button\">Swaziland +268</li>\n                            <li class=\"dropdown__option\" value=\"se\" role=\"button\">Sweden (Sverige) +46</li>\n                            <li class=\"dropdown__option\" value=\"ch\" role=\"button\">Switzerland (Schweiz) +41</li>\n                            <li class=\"dropdown__option\" value=\"sy\" role=\"button\">Syria (&#x202B;سوريا&#x202C;&lrm;)\n                              +963</li>\n                            <li class=\"dropdown__option\" value=\"tw\" role=\"button\">Taiwan (台灣) +886</li>\n                            <li class=\"dropdown__option\" value=\"tj\" role=\"button\">Tajikistan +992</li>\n                            <li class=\"dropdown__option\" value=\"tz\" role=\"button\">Tanzania +255</li>\n                            <li class=\"dropdown__option\" value=\"th\" role=\"button\">Thailand (ไทย) +66</li>\n                            <li class=\"dropdown__option\" value=\"tl\" role=\"button\">Timor-Leste +670</li>\n                            <li class=\"dropdown__option\" value=\"tg\" role=\"button\">Togo +228</li>\n                            <li class=\"dropdown__option\" value=\"tk\" role=\"button\">Tokelau +690</li>\n                            <li class=\"dropdown__option\" value=\"to\" role=\"button\">Tonga +676</li>\n                            <li class=\"dropdown__option\" value=\"tt\" role=\"button\">Trinidad and Tobago +1</li>\n                            <li class=\"dropdown__option\" value=\"tn\" role=\"button\">Tunisia (&#x202B;تونس&#x202C;&lrm;)\n                              +216</li>\n                            <li class=\"dropdown__option\" value=\"tr\" role=\"button\">Turkey (Türkiye) +90</li>\n                            <li class=\"dropdown__option\" value=\"tm\" role=\"button\">Turkmenistan +993</li>\n                            <li class=\"dropdown__option\" value=\"tc\" role=\"button\">Turks and Caicos Islands +1</li>\n                            <li class=\"dropdown__option\" value=\"tv\" role=\"button\">Tuvalu +688</li>\n                            <li class=\"dropdown__option\" value=\"vi\" role=\"button\">U.S. Virgin Islands +1</li>\n                            <li class=\"dropdown__option\" value=\"ug\" role=\"button\">Uganda +256</li>\n                            <li class=\"dropdown__option\" value=\"ua\" role=\"button\">Ukraine (Україна) +380</li>\n                            <li class=\"dropdown__option\" value=\"ae\" role=\"button\">United Arab Emirates (&#x202B;الإمارات\n                              العربية المتحدة&#x202C;&lrm;) +971</li>\n                            <li class=\"dropdown__option\" value=\"gb\" role=\"button\">United Kingdom +44</li>\n                            <li class=\"dropdown__option\" value=\"us\" role=\"button\">United States +1</li>\n                            <li class=\"dropdown__option\" value=\"uy\" role=\"button\">Uruguay +598</li>\n                            <li class=\"dropdown__option\" value=\"uz\" role=\"button\">Uzbekistan (Oʻzbekiston) +998</li>\n                            <li class=\"dropdown__option\" value=\"vu\" role=\"button\">Vanuatu +678</li>\n                            <li class=\"dropdown__option\" value=\"va\" role=\"button\">Vatican City (Città del Vaticano) +39\n                            </li>\n                            <li class=\"dropdown__option\" value=\"ve\" role=\"button\">Venezuela +58</li>\n                            <li class=\"dropdown__option\" value=\"vn\" role=\"button\">Vietnam (Việt Nam) +84</li>\n                            <li class=\"dropdown__option\" value=\"wf\" role=\"button\">Wallis and Futuna +681</li>\n                            <li class=\"dropdown__option\" value=\"eh\" role=\"button\">Western Sahara (&#x202B;الصحراء\n                              الغربية&#x202C;&lrm;) +212</li>\n                            <li class=\"dropdown__option\" value=\"ye\" role=\"button\">Yemen (&#x202B;اليمن&#x202C;&lrm;)\n                              +967</li>\n                            <li class=\"dropdown__option\" value=\"zm\" role=\"button\">Zambia +260</li>\n                            <li class=\"dropdown__option\" value=\"zw\" role=\"button\">Zimbabwe +263</li>\n                            <li class=\"dropdown__option\" value=\"ax\" role=\"button\">Åland Islands +358</li>\n                          </span>\n                        </ul>\n                      </div>\n                    </div>\n                    <div class=\"phone-input__number\">\n                      <input class=\"text-input form-control\" type=\"number\" data-id=\"text-input\" id=\"phone\" type=\"text\" aria-required=\"true\" aria-describedby=\"text-input\"\n                        autocomplete=\"on\" inputmode=\"numeric\"></input>\n                    </div>\n                  </div>\n                </div>\n                {{/unless}}\n                <!-- {{#unless hasPrimaryPhone}} -->\n                <div class=\"form-check form-switch mb-3\">\n                  <label> {{buttonLabel2}}</label>\n                  <input class=\"form-check-input\" type=\"checkbox\" name=\"autoEnroll\" autocomplete=\"off\" role=\"switch\" id=\"autoEnroll\" data-id=\"autoEnroll-input\">\n                </div>\n                <!-- {{/unless}} -->\n                {{#unless hasDob}}\n                <!-- Date of Birth Input with Floating Label -->\n                <div class=\"mb-4 form-floating\">\n                  <!-- Input field for Date of Birth with required attributes and error message -->\n                  <!-- *********** If you want to make this field required add \"required\" inside the \"input\" statment *********** -->\n                  <input id=\"dob\" data-id=\"dob\" class=\"form-control\" type=\"date\" placeholder=\"Birthdate\"\n                    autocomplete=\"off\" name=\"dob\"\n                     aria-required=\"true\" aria-describedby=\"dobLabel\"\n\n                    data-required-message=\"Enter a valid birthdate\" />\n                  <!-- Floating label for Date of Birth input -->\n                  <label id=\"dobLabel\" data-id=\"dobLabel\" class=\"form-label\" for=\"dob\">Birthdate</label>\n                </div>\n                {{/unless}}\n              </div>\n              {{#if buttonLabel}}\n              <div class=\"d-flex flex-column\">\n                <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\"\n                  data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"profileForm\"\n                  data-skbuttonvalue=\"SUBMIT\">\n                  {{buttonLabel}}\n                </button>\n              </div>\n              {{/if}}\n              {{#if cancelButtonLabel}}\n              <div class=\"d-flex flex-column\">\n                <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                  data-skbuttonvalue=\"CANCEL\" id=\"btnCancel\">\n                  {{cancelButtonLabel}}\n                </button>\n              </div>\n              {{/if}}\n            </form>\n          </div>\n      </div>\n    </div>\n  </div>\n</div>"
               },
               "customScript": {
-                "value": "// DOM elements\r\nconst phone                 = document.getElementById(\"phone\"); // Phone input field\r\nconst phoneCodeDropdown     = document.getElementById(\"phone-input-code-dropdown\"); // Phone code dropdown\r\nconst countryCodeInput      = document.getElementById(\"countryCodeInput\"); // Country code input field\r\nconst phoneCodeList         = document.getElementById(\"code-dropdown-list\"); // Dropdown list for phone codes\r\nconst phoneCode             = document.getElementById(\"phone-input-code\"); // Phone input code container\r\nconst closeListBtn          = document.getElementById(\"close-list\"); // Button to close the dropdown list\r\nconst listContainer         = document.getElementById(\"list-container\"); // Container for the list\r\nconst search                = document.getElementById(\"search-input\"); // Search input field\r\nconst submitButton          = document.getElementById('submit'); // Submit button\r\n\r\n// Initializations\r\ncountryCodeInput.value = \"+1\"; // Set default country code to +1\r\n\r\n// Add event listeners to dropdown options\r\nconst items = document.getElementsByClassName(\"dropdown__option\");\r\nfor (let i = 0; i < items.length; i++) {\r\n    items[i].addEventListener(\"click\", selectClick);\r\n}\r\n\r\n// Functions\r\n// Function to close the dropdown list\r\nfunction closeList() {\r\n    phoneCodeDropdown.classList.remove(\"dropdown--open\");\r\n    phoneCode.classList.remove(\"phone-input__code--open\");\r\n    phoneCodeList.classList.add(\"none\");\r\n    setFieldFocus(\"phone\");\r\n}\r\n\r\n// Function to handle selection of a country code\r\nfunction selectClick(event) {\r\n    const codeIndex = event.target.innerHTML.indexOf(\"+\");\r\n    countryCodeInput.value = event.target.innerHTML.substring(codeIndex);\r\n    closeList();\r\n}\r\n\r\n// Function to open the dropdown list\r\nfunction openList() {\r\n    phoneCodeDropdown.classList.add(\"dropdown--open\");\r\n    phoneCode.classList.add(\"phone-input__code--open\");\r\n    phoneCodeList.classList.remove(\"none\");\r\n    setFieldFocus(\"search-input\");\r\n}\r\n\r\n// Function to search and filter the dropdown list\r\nfunction searchList() {\r\n    const searchValue = search.value.toLowerCase();\r\n    for (let i = 0; i < items.length; i++) {\r\n        const itemText = items[i].innerHTML.toLowerCase();\r\n        items[i].classList.toggle(\"none\", !(itemText.includes(searchValue) || searchValue.length < 1));\r\n    }\r\n}\r\n\r\n// Event listener for phone input changes\r\nphone.addEventListener('input', function() {\r\n    var phoneNumber = $('#phone').val();\r\n    checkInputValid(phoneNumber);\r\n});\r\n\r\n// Event listener for phone input focus\r\nphone.addEventListener('focus', function() {\r\n    var phoneNumber = $('#phone').val();\r\n    checkInputValid(phoneNumber);\r\n});\r\n\r\n// Function to check if the input value is valid\r\nfunction checkInputValid(val) {\r\n    var inputValid = val.trim().length > 4;\r\n    if (inputValid) {\r\n        $('#phone').css('border', '1px solid #8b9197');\r\n        submitButton.classList.remove('disabled');\r\n    } else {\r\n        $('#phone').css('border', '1px solid red');\r\n        submitButton.classList.add('disabled');\r\n    }\r\n    return val.trim().length > 4;\r\n}\r\n\r\n// Function to set focus to a specific field\r\nconst setFieldFocus = (id) => {\r\n    const element = document.getElementById(id);\r\n    if (element) {\r\n        element.focus();\r\n    }\r\n}\r\n\r\n// DaVinci form validation setup\r\nconst start = () => {\r\n    DaVinciFormUtils.addDaVinciFormValidation({\r\n        formId: 'profileForm', // required\r\n        formType: 'STANDARD', // required (UPDATE_PASSWORD or STANDARD)\r\n        delayValidationUntilSubmit: false,\r\n        invalidFieldBorderColor: \"red\",\r\n        disableSubmitButtonUntilValid: false\r\n    });\r\n}\r\n\r\n// Ensure the DOM is fully loaded before running the start function\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}\r\n\r\n// Event listeners for opening and closing the list and searching within the list\r\nif (window.addEventListener) {\r\n    // Normal browsers\r\n    countryCodeInput.addEventListener(\"click\", openList);\r\n    closeListBtn.addEventListener(\"click\", closeList);\r\n    search.addEventListener(\"input\", searchList);\r\n} else if (window.attachEvent) {\r\n    // IE\r\n    countryCodeInput.attachEvent(\"click\", openList);\r\n    closeListBtn.attachEvent(\"click\", closeList);\r\n    search.attachEvent(\"input\", searchList);\r\n}\r\n\r\n"
+                "value": "// DOM elements\r\nconst phone                 = document.getElementById(\"phone\"); // Phone input field\r\nconst phoneCodeDropdown     = document.getElementById(\"phone-input-code-dropdown\"); // Phone code dropdown\r\nconst countryCodeInput      = document.getElementById(\"countryCodeInput\"); // Country code input field\r\nconst phoneCodeList         = document.getElementById(\"code-dropdown-list\"); // Dropdown list for phone codes\r\nconst phoneCode             = document.getElementById(\"phone-input-code\"); // Phone input code container\r\nconst closeListBtn          = document.getElementById(\"close-list\"); // Button to close the dropdown list\r\nconst listContainer         = document.getElementById(\"list-container\"); // Container for the list\r\nconst search                = document.getElementById(\"search-input\"); // Search input field\r\nconst submitButton          = document.getElementById('submitBtn'); // Submit button\r\n\r\n// Initializations\r\ncountryCodeInput.value = \"+1\"; // Set default country code to +1\r\n\r\n// Add event listeners to dropdown options\r\nconst items = document.getElementsByClassName(\"dropdown__option\");\r\nfor (let i = 0; i < items.length; i++) {\r\n    items[i].addEventListener(\"click\", selectClick);\r\n}\r\n\r\n// Functions\r\n// Function to close the dropdown list\r\nfunction closeList() {\r\n    phoneCodeDropdown.classList.remove(\"dropdown--open\");\r\n    phoneCode.classList.remove(\"phone-input__code--open\");\r\n    phoneCodeList.classList.add(\"none\");\r\n    setFieldFocus(\"phone\");\r\n}\r\n\r\n// Function to handle selection of a country code\r\nfunction selectClick(event) {\r\n    const codeIndex = event.target.innerHTML.indexOf(\"+\");\r\n    countryCodeInput.value = event.target.innerHTML.substring(codeIndex);\r\n    closeList();\r\n}\r\n\r\n// Function to open the dropdown list\r\nfunction openList() {\r\n    phoneCodeDropdown.classList.add(\"dropdown--open\");\r\n    phoneCode.classList.add(\"phone-input__code--open\");\r\n    phoneCodeList.classList.remove(\"none\");\r\n    setFieldFocus(\"search-input\");\r\n}\r\n\r\n// Function to search and filter the dropdown list\r\nfunction searchList() {\r\n    const searchValue = search.value.toLowerCase();\r\n    for (let i = 0; i < items.length; i++) {\r\n        const itemText = items[i].innerHTML.toLowerCase();\r\n        items[i].classList.toggle(\"none\", !(itemText.includes(searchValue) || searchValue.length < 1));\r\n    }\r\n}\r\n\r\n// Event listener for phone input changes\r\nphone.addEventListener('input', function() {\r\n    var phoneNumber = $('#phone').val();\r\n    checkInputValid(phoneNumber);\r\n});\r\n\r\n// Event listener for phone input focus\r\nphone.addEventListener('focus', function() {\r\n    var phoneNumber = $('#phone').val();\r\n    checkInputValid(phoneNumber);\r\n});\r\n\r\n// Function to check if the input value is valid\r\nfunction checkInputValid(val) {\r\n    var inputValid = val.trim().length > 4;\r\n    if (inputValid) {\r\n        $('#phone').css('border', '1px solid #8b9197');\r\n        submitButton.classList.remove('disabled');\r\n    } else {\r\n        $('#phone').css('border', '1px solid red');\r\n        submitButton.classList.add('disabled');\r\n    }\r\n    return val.trim().length > 4;\r\n}\r\n\r\n// Function to set focus to a specific field\r\nconst setFieldFocus = (id) => {\r\n    const element = document.getElementById(id);\r\n    if (element) {\r\n        element.focus();\r\n    }\r\n}\r\n\r\n// DaVinci form validation setup\r\nconst start = () => {\r\n    DaVinciFormUtils.addDaVinciFormValidation({\r\n        formId: 'profileForm', // required\r\n        formType: 'STANDARD', // required (UPDATE_PASSWORD or STANDARD)\r\n        delayValidationUntilSubmit: false,\r\n        invalidFieldBorderColor: \"red\",\r\n        disableSubmitButtonUntilValid: false\r\n    });\r\n}\r\n\r\n// Ensure the DOM is fully loaded before running the start function\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}\r\n\r\n// Event listeners for opening and closing the list and searching within the list\r\nif (window.addEventListener) {\r\n    // Normal browsers\r\n    countryCodeInput.addEventListener(\"click\", openList);\r\n    closeListBtn.addEventListener(\"click\", closeList);\r\n    search.addEventListener(\"input\", searchList);\r\n} else if (window.attachEvent) {\r\n    // IE\r\n    countryCodeInput.attachEvent(\"click\", openList);\r\n    closeListBtn.attachEvent(\"click\", closeList);\r\n    search.attachEvent(\"input\", searchList);\r\n}\r\n\r\n"
               },
               "defaultCountryCode": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"US\"\n      }\n    ]\n  }\n]"
@@ -377,8 +377,8 @@
             }
           },
           "position": {
-            "x": 3090,
-            "y": 2880
+            "x": 3334.236282921504,
+            "y": 2817.3004251042166
           },
           "group": "nodes",
           "removed": false,
@@ -422,8 +422,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3270,
-            "y": 2880
+            "x": 3515.1638331575546,
+            "y": 2765.6068393224878
           },
           "group": "nodes",
           "removed": false,
@@ -2472,8 +2472,8 @@
             }
           },
           "position": {
-            "x": 2970,
-            "y": 2880
+            "x": 3205.0023184671822,
+            "y": 2868.994010885945
           },
           "group": "nodes",
           "removed": false,
@@ -2538,26 +2538,8 @@
             }
           },
           "position": {
-            "x": 2670,
-            "y": 2880
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "91l8es8pa6",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 2820,
-            "y": 2880
+            "x": 2662.2196677590305,
+            "y": 2868.994010885945
           },
           "group": "nodes",
           "removed": false,
@@ -2801,8 +2783,8 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 3150,
-            "y": 2850
+            "x": 3385.929868703233,
+            "y": 2713.913253540759
           },
           "group": "nodes",
           "removed": false,
@@ -2831,8 +2813,8 @@
             }
           },
           "position": {
-            "x": 3030,
-            "y": 2820
+            "x": 3230.8491113580462,
+            "y": 2688.0664606498945
           },
           "group": "nodes",
           "removed": false,
@@ -3498,7 +3480,7 @@
             "properties": {
               "subFlowId": {
                 "value": {
-                  "label": "PingOne Auto enroll user in mobile SMS",
+                  "label": " PingOne Auto enroll user in mobile SMS",
                   "value": "1c982c3650aeca1ce7d4ca7421892f5f"
                 }
               },
@@ -3512,7 +3494,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.variables.mf-configObject}}\",\n        \"tooltip\": \"{{global.variables.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
-                "value": "PingOne Auto enroll user in mobile SMS"
+                "value": " PingOne Auto enroll user in mobile SMS"
               },
               "p1SMS": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -3865,9 +3847,172 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "3bsbey1hmi",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-bool-sendEmailUserProfileUpdate}}\"\n      }\n    ]\n  }\n]"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "type": {
+                "value": "boolean"
+              },
+              "nodeTitle": {
+                "value": "Check if send email on user update"
+              },
+              "nodeDescription": {
+                "value": "{{global.variables.mf-configObject.pingone.mf-bool-runProfileUpdateQuestion}}"
+              }
+            },
+            "idUnique": "832phktyca"
+          },
+          "position": {
+            "x": 2946.5343895585384,
+            "y": 2868.994010885945
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ea9424tqk5",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2791.453632213352,
+            "y": 2868.994010885945
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "sg8n18muxw",
+            "nodeType": "EVAL",
+            "properties": {
+              "1bl9rp6dau": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 3075.76835401286,
+            "y": 2868.994010885945
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7sccff0urc",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#50e3c2ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Email template: Master Flow Progressive Profile"
+              },
+              "width": {
+                "value": 340
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              }
+            },
+            "status": "configured",
+            "idUnique": "lb31g4gkg6"
+          },
+          "position": {
+            "x": 356,
+            "y": 374
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "2q7lxwwhd3",
+            "source": "z2s10qb6vj",
+            "target": "7vosskvu6t"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "8ctu5wjqxb",
@@ -4824,9 +4969,9 @@
         },
         {
           "data": {
-            "id": "9r088y9npg",
-            "source": "91l8es8pa6",
-            "target": "82t1ijbd9u"
+            "id": "nk8uexog67",
+            "source": "7vosskvu6t",
+            "target": "w6as8n4jml"
           },
           "position": {
             "x": 0,
@@ -5034,9 +5179,9 @@
         },
         {
           "data": {
-            "id": "udoz706xkf",
-            "source": "34gcfl5ua8",
-            "target": "91l8es8pa6"
+            "id": "yggp0guq45",
+            "source": "q4qqcnu2km",
+            "target": "5gkhii96f2"
           },
           "position": {
             "x": 0,
@@ -5358,9 +5503,9 @@
         },
         {
           "data": {
-            "id": "2q7lxwwhd3",
-            "source": "z2s10qb6vj",
-            "target": "7vosskvu6t"
+            "id": "eeatuudiuh",
+            "source": "34gcfl5ua8",
+            "target": "ea9424tqk5"
           },
           "position": {
             "x": 0,
@@ -5377,9 +5522,9 @@
         },
         {
           "data": {
-            "id": "nk8uexog67",
-            "source": "7vosskvu6t",
-            "target": "w6as8n4jml"
+            "id": "yc1myfjkcw",
+            "source": "ea9424tqk5",
+            "target": "3bsbey1hmi"
           },
           "position": {
             "x": 0,
@@ -5396,9 +5541,47 @@
         },
         {
           "data": {
-            "id": "yggp0guq45",
-            "source": "q4qqcnu2km",
-            "target": "5gkhii96f2"
+            "id": "fcpiq0lkif",
+            "source": "3bsbey1hmi",
+            "target": "sg8n18muxw"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7z5ya66yjl",
+            "source": "sg8n18muxw",
+            "target": "82t1ijbd9u"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "u9jw1r4p4h",
+            "source": "sg8n18muxw",
+            "target": "1bl9rp6dau"
           },
           "position": {
             "x": 0,
@@ -5498,7 +5681,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726154648040,
+  "savedDate": 1726230368548,
   "variables": [
     {
       "context": "flowInstance",
