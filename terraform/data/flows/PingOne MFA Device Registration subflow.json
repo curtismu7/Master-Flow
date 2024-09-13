@@ -14,8 +14,8 @@
     "notificationsConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1726144981262,
-  "currentVersion": 241,
+  "createdDate": 1726230451621,
+  "currentVersion": 246,
   "customerId": "c8701d025a002f27116f02d2f4d957a8",
   "description": "Imported on Wed May 22 2024 23:21:29 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -59,11 +59,11 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 241,
+  "publishedVersion": 246,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
+    "intermediateLoadingScreenCSS": "   /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
+    "intermediateLoadingScreenHTML": "    <div class=\"message\">\n        Please wait...\n    </div>",
     "cssLinks": [],
     "customFaviconLink": "https://console.pingone.com/davinci/favicon-davinci.png",
     "debugMode": true,
@@ -74,15 +74,15 @@
     "useBetaAlgorithm": true,
     "useCustomCSS": false,
     "useCustomScript": false,
-    "useIntermediateLoadingScreen": false,
+    "useIntermediateLoadingScreen": true,
     "defaultErrorScreenBrandLogo": false,
     "customErrorScreenBrandLogoUrl": "",
     "customLogoURLSelection": 1
   },
   "timeouts": "null",
-  "updatedDate": 1726144984087,
+  "updatedDate": 1726230454746,
   "flowId": "55d7c7c02b0985934703055fbca259e7",
-  "versionId": 241,
+  "versionId": 246,
   "graphData": {
     "elements": {
       "nodes": [
@@ -129,7 +129,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1837,
+            "x": 1784,
             "y": 600
           },
           "group": "nodes",
@@ -168,7 +168,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3164,
+            "x": 3111,
             "y": 600
           },
           "group": "nodes",
@@ -200,7 +200,7 @@
             }
           },
           "position": {
-            "x": 3314,
+            "x": 3261,
             "y": 600
           },
           "group": "nodes",
@@ -277,7 +277,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2541,
+            "x": 2488,
             "y": 1170
           },
           "group": "nodes",
@@ -295,7 +295,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1290
           },
           "group": "nodes",
@@ -375,7 +375,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1251,
+            "x": 1198,
             "y": 2250
           },
           "group": "nodes",
@@ -404,7 +404,7 @@
             }
           },
           "position": {
-            "x": 1678,
+            "x": 1625,
             "y": 2250
           },
           "group": "nodes",
@@ -433,7 +433,7 @@
             }
           },
           "position": {
-            "x": 1316.8937767100404,
+            "x": 1263.8937767100404,
             "y": 3036.0600854721292
           },
           "group": "nodes",
@@ -481,7 +481,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1156.2834149883192,
+            "x": 1103.2834149883192,
             "y": 3036.0600854721292
           },
           "group": "nodes",
@@ -514,7 +514,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1701,
+            "x": 1648,
             "y": 6210
           },
           "group": "nodes",
@@ -553,7 +553,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1816,
+            "x": 1763,
             "y": 3154
           },
           "group": "nodes",
@@ -598,7 +598,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1504.2725320520485,
+            "x": 1451.2725320520485,
             "y": 3223.438840814137
           },
           "group": "nodes",
@@ -616,7 +616,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1641,
+            "x": 1588,
             "y": 3270
           },
           "group": "nodes",
@@ -634,7 +634,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1641,
+            "x": 1588,
             "y": 3390
           },
           "group": "nodes",
@@ -683,7 +683,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2488,
+            "x": 2435,
             "y": 2520
           },
           "group": "nodes",
@@ -701,7 +701,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2308,
+            "x": 2255,
             "y": 2520
           },
           "group": "nodes",
@@ -719,7 +719,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2608,
+            "x": 2555,
             "y": 2580
           },
           "group": "nodes",
@@ -752,7 +752,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3673.8694394684762,
+            "x": 3620.8694394684762,
             "y": 2496.1115219914
           },
           "group": "nodes",
@@ -778,7 +778,7 @@
             }
           },
           "position": {
-            "x": 3501.801632929078,
+            "x": 3448.801632929078,
             "y": 2496.1115219914
           },
           "group": "nodes",
@@ -853,7 +853,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3088,
+            "x": 3035,
             "y": 2490
           },
           "group": "nodes",
@@ -898,7 +898,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 660,
+            "x": 607,
             "y": 630
           },
           "group": "nodes",
@@ -940,7 +940,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1558,
+            "x": 1505,
             "y": 2250
           },
           "group": "nodes",
@@ -966,7 +966,7 @@
             }
           },
           "position": {
-            "x": 1408,
+            "x": 1355,
             "y": 2250
           },
           "group": "nodes",
@@ -1008,7 +1008,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3378.896056829508,
+            "x": 3325.896056829508,
             "y": 2496.1115219914
           },
           "group": "nodes",
@@ -1026,7 +1026,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3208,
+            "x": 3155,
             "y": 2490
           },
           "group": "nodes",
@@ -1052,7 +1052,7 @@
             }
           },
           "position": {
-            "x": 2384,
+            "x": 2331,
             "y": 600
           },
           "group": "nodes",
@@ -1091,7 +1091,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2818,
+            "x": 2765,
             "y": 2490
           },
           "group": "nodes",
@@ -1109,7 +1109,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2908,
+            "x": 2855,
             "y": 2490
           },
           "group": "nodes",
@@ -1189,7 +1189,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1461,
+            "x": 1408,
             "y": 3660
           },
           "group": "nodes",
@@ -1237,7 +1237,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2744,
+            "x": 2691,
             "y": 3630
           },
           "group": "nodes",
@@ -1263,7 +1263,7 @@
             }
           },
           "position": {
-            "x": 2991,
+            "x": 2938,
             "y": 3630
           },
           "group": "nodes",
@@ -1305,7 +1305,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1791,
+            "x": 1738,
             "y": 3660
           },
           "group": "nodes",
@@ -1334,7 +1334,7 @@
             }
           },
           "position": {
-            "x": 1911,
+            "x": 1858,
             "y": 3660
           },
           "group": "nodes",
@@ -1457,7 +1457,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2458,
+            "x": 2405,
             "y": 2250
           },
           "group": "nodes",
@@ -1475,7 +1475,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1410
           },
           "group": "nodes",
@@ -1493,7 +1493,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1350
           },
           "group": "nodes",
@@ -1523,7 +1523,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3346,
+            "x": 3293,
             "y": 2164
           },
           "group": "nodes",
@@ -1564,7 +1564,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1858,
+            "x": 1805,
             "y": 2250
           },
           "group": "nodes",
@@ -1587,7 +1587,7 @@
             }
           },
           "position": {
-            "x": 1971,
+            "x": 1918,
             "y": 2370
           },
           "group": "nodes",
@@ -1605,7 +1605,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1470
           },
           "group": "nodes",
@@ -1639,7 +1639,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1152,
+            "x": 1099,
             "y": 5070
           },
           "group": "nodes",
@@ -1665,7 +1665,7 @@
             }
           },
           "position": {
-            "x": 1611,
+            "x": 1558,
             "y": 3660
           },
           "group": "nodes",
@@ -1683,7 +1683,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2511,
+            "x": 2458,
             "y": 1860
           },
           "group": "nodes",
@@ -1734,7 +1734,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1641,
+            "x": 1588,
             "y": 6870
           },
           "group": "nodes",
@@ -1794,7 +1794,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2264,
+            "x": 2211,
             "y": 600
           },
           "group": "nodes",
@@ -1820,7 +1820,7 @@
             }
           },
           "position": {
-            "x": 2054,
+            "x": 2001,
             "y": 600
           },
           "group": "nodes",
@@ -1859,7 +1859,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2594,
+            "x": 2541,
             "y": 600
           },
           "group": "nodes",
@@ -1914,7 +1914,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2421,
+            "x": 2368,
             "y": 3660
           },
           "group": "nodes",
@@ -1932,7 +1932,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2541,
+            "x": 2488,
             "y": 3690
           },
           "group": "nodes",
@@ -1965,7 +1965,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2751,
+            "x": 2698,
             "y": 3900
           },
           "group": "nodes",
@@ -1983,7 +1983,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2541,
+            "x": 2488,
             "y": 3840
           },
           "group": "nodes",
@@ -2033,7 +2033,7 @@
             "type": "action"
           },
           "position": {
-            "x": 822.4600739584521,
+            "x": 769.4600739584521,
             "y": 2004.48921759312
           },
           "group": "nodes",
@@ -2087,7 +2087,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1482,
+            "x": 1429,
             "y": 4290
           },
           "group": "nodes",
@@ -2117,7 +2117,7 @@
             }
           },
           "position": {
-            "x": 1602,
+            "x": 1549,
             "y": 4290
           },
           "group": "nodes",
@@ -2153,7 +2153,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2682,
+            "x": 2629,
             "y": 4560
           },
           "group": "nodes",
@@ -2202,7 +2202,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3012,
+            "x": 2959,
             "y": 4560
           },
           "group": "nodes",
@@ -2231,7 +2231,7 @@
             }
           },
           "position": {
-            "x": 2832,
+            "x": 2779,
             "y": 4560
           },
           "group": "nodes",
@@ -2327,7 +2327,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2082,
+            "x": 2029,
             "y": 4650
           },
           "group": "nodes",
@@ -2368,7 +2368,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2382,
+            "x": 2329,
             "y": 4290
           },
           "group": "nodes",
@@ -2386,7 +2386,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2502,
+            "x": 2449,
             "y": 4500
           },
           "group": "nodes",
@@ -2422,7 +2422,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2682,
+            "x": 2629,
             "y": 4290
           },
           "group": "nodes",
@@ -2440,7 +2440,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2532,
+            "x": 2479,
             "y": 4320
           },
           "group": "nodes",
@@ -2469,7 +2469,7 @@
             }
           },
           "position": {
-            "x": 2832,
+            "x": 2779,
             "y": 4290
           },
           "group": "nodes",
@@ -2502,7 +2502,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1782,
+            "x": 1729,
             "y": 4290
           },
           "group": "nodes",
@@ -2525,7 +2525,7 @@
             }
           },
           "position": {
-            "x": 1902,
+            "x": 1849,
             "y": 4290
           },
           "group": "nodes",
@@ -2558,7 +2558,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3402,
+            "x": 3349,
             "y": 4560
           },
           "group": "nodes",
@@ -2576,7 +2576,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3118,
+            "x": 3065,
             "y": 4620
           },
           "group": "nodes",
@@ -2663,7 +2663,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1701,
+            "x": 1648,
             "y": 5940
           },
           "group": "nodes",
@@ -2718,7 +2718,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1895,
+            "x": 1842,
             "y": 1170
           },
           "group": "nodes",
@@ -2760,7 +2760,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1152,
+            "x": 1099,
             "y": 4290
           },
           "group": "nodes",
@@ -2778,7 +2778,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1302,
+            "x": 1249,
             "y": 4290
           },
           "group": "nodes",
@@ -2796,7 +2796,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1002,
+            "x": 949,
             "y": 4290
           },
           "group": "nodes",
@@ -2846,7 +2846,7 @@
             "type": "action"
           },
           "position": {
-            "x": 676,
+            "x": 623,
             "y": 4954
           },
           "group": "nodes",
@@ -2864,7 +2864,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3118,
+            "x": 3065,
             "y": 4680
           },
           "group": "nodes",
@@ -2897,7 +2897,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2128,
+            "x": 2075,
             "y": 2250
           },
           "group": "nodes",
@@ -2915,7 +2915,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1971,
+            "x": 1918,
             "y": 2310
           },
           "group": "nodes",
@@ -2933,7 +2933,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2248,
+            "x": 2195,
             "y": 2250
           },
           "group": "nodes",
@@ -2956,7 +2956,7 @@
             }
           },
           "position": {
-            "x": 1302,
+            "x": 1249,
             "y": 5070
           },
           "group": "nodes",
@@ -2987,7 +2987,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1311,
+            "x": 1258,
             "y": 6870
           },
           "group": "nodes",
@@ -3006,7 +3006,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1475,
+            "x": 1422,
             "y": 1320
           },
           "group": "nodes",
@@ -3037,7 +3037,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1355,
+            "x": 1302,
             "y": 1320
           },
           "group": "nodes",
@@ -3067,7 +3067,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1860
           },
           "group": "nodes",
@@ -3098,7 +3098,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 831,
+            "x": 778,
             "y": 3660
           },
           "group": "nodes",
@@ -3128,7 +3128,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2871,
+            "x": 2818,
             "y": 1590
           },
           "group": "nodes",
@@ -3158,7 +3158,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2871,
+            "x": 2818,
             "y": 1500
           },
           "group": "nodes",
@@ -3177,7 +3177,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1491,
+            "x": 1438,
             "y": 6210
           },
           "group": "nodes",
@@ -3210,7 +3210,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1371,
+            "x": 1318,
             "y": 6210
           },
           "group": "nodes",
@@ -3246,7 +3246,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1791,
+            "x": 1738,
             "y": 3810
           },
           "group": "nodes",
@@ -3277,7 +3277,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 882,
+            "x": 829,
             "y": 4290
           },
           "group": "nodes",
@@ -3296,7 +3296,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1500
           },
           "group": "nodes",
@@ -3326,7 +3326,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2871,
+            "x": 2818,
             "y": 1650
           },
           "group": "nodes",
@@ -3362,7 +3362,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1782,
+            "x": 1729,
             "y": 4470
           },
           "group": "nodes",
@@ -3381,7 +3381,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1521,
+            "x": 1468,
             "y": 5940
           },
           "group": "nodes",
@@ -3414,7 +3414,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1401,
+            "x": 1348,
             "y": 5940
           },
           "group": "nodes",
@@ -3450,7 +3450,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3012,
+            "x": 2959,
             "y": 4830
           },
           "group": "nodes",
@@ -3469,7 +3469,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3118,
+            "x": 3065,
             "y": 4710
           },
           "group": "nodes",
@@ -3505,7 +3505,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3372,
+            "x": 3319,
             "y": 4710
           },
           "group": "nodes",
@@ -3541,7 +3541,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3012,
+            "x": 2959,
             "y": 4380
           },
           "group": "nodes",
@@ -3572,7 +3572,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 485,
+            "x": 432,
             "y": 1170
           },
           "group": "nodes",
@@ -3605,7 +3605,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3012,
+            "x": 2959,
             "y": 4290
           },
           "group": "nodes",
@@ -3635,7 +3635,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3118,
+            "x": 3065,
             "y": 2640
           },
           "group": "nodes",
@@ -3671,7 +3671,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3201,
+            "x": 3148,
             "y": 3720
           },
           "group": "nodes",
@@ -3690,7 +3690,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1002,
+            "x": 949,
             "y": 5070
           },
           "group": "nodes",
@@ -3723,7 +3723,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 852,
+            "x": 799,
             "y": 5070
           },
           "group": "nodes",
@@ -3759,7 +3759,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3171,
+            "x": 3118,
             "y": 3630
           },
           "group": "nodes",
@@ -3792,7 +3792,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2564,
+            "x": 2511,
             "y": 720
           },
           "group": "nodes",
@@ -3825,7 +3825,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1558,
+            "x": 1505,
             "y": 2460
           },
           "group": "nodes",
@@ -3858,7 +3858,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3372,
+            "x": 3319,
             "y": 4650
           },
           "group": "nodes",
@@ -3891,7 +3891,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 921,
+            "x": 868,
             "y": 2250
           },
           "group": "nodes",
@@ -3927,7 +3927,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3471,
+            "x": 3418,
             "y": 1440
           },
           "group": "nodes",
@@ -3960,7 +3960,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2871,
+            "x": 2818,
             "y": 1440
           },
           "group": "nodes",
@@ -3979,7 +3979,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 968.9046596463111,
+            "x": 915.9046596463111,
             "y": 3036.0600854721292
           },
           "group": "nodes",
@@ -4012,7 +4012,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 861.8310851651636,
+            "x": 808.8310851651636,
             "y": 3036.0600854721292
           },
           "group": "nodes",
@@ -4048,7 +4048,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3108.503789410454,
+            "x": 3055.503789410454,
             "y": 2078.232563252862
           },
           "group": "nodes",
@@ -4084,7 +4084,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2811,
+            "x": 2758,
             "y": 2760
           },
           "group": "nodes",
@@ -4117,7 +4117,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1504.2725320520485,
+            "x": 1451.2725320520485,
             "y": 3036.0600854721292
           },
           "group": "nodes",
@@ -4150,7 +4150,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2054,
+            "x": 2001,
             "y": 780
           },
           "group": "nodes",
@@ -4200,7 +4200,7 @@
             "type": "action"
           },
           "position": {
-            "x": 856,
+            "x": 803,
             "y": 214
           },
           "group": "nodes",
@@ -4256,7 +4256,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1747,
+            "x": 1694,
             "y": 510
           },
           "group": "nodes",
@@ -4306,7 +4306,7 @@
             "type": "action"
           },
           "position": {
-            "x": 424.8545064104097,
+            "x": 371.8545064104097,
             "y": 975.8452788468436
           },
           "group": "nodes",
@@ -4356,7 +4356,7 @@
             "type": "action"
           },
           "position": {
-            "x": 796,
+            "x": 743,
             "y": 2824
           },
           "group": "nodes",
@@ -4406,7 +4406,7 @@
             "type": "action"
           },
           "position": {
-            "x": 727.9891170637293,
+            "x": 674.9891170637293,
             "y": 3491.1227770170062
           },
           "group": "nodes",
@@ -4456,7 +4456,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1011,
+            "x": 958,
             "y": 6720
           },
           "group": "nodes",
@@ -4506,7 +4506,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1004,
+            "x": 951,
             "y": 6030
           },
           "group": "nodes",
@@ -4556,7 +4556,7 @@
             "type": "action"
           },
           "position": {
-            "x": 704.4876526270402,
+            "x": 651.4876526270402,
             "y": 4101.7328411704575
           },
           "group": "nodes",
@@ -4606,7 +4606,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1011,
+            "x": 958,
             "y": 5820
           },
           "group": "nodes",
@@ -4662,7 +4662,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2444,
+            "x": 2391,
             "y": 510
           },
           "group": "nodes",
@@ -4718,7 +4718,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1363.24460879656,
+            "x": 1310.24460879656,
             "y": 1070.4068392363881
           },
           "group": "nodes",
@@ -4774,7 +4774,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1977.77248929441,
+            "x": 1924.77248929441,
             "y": 1070.4068392363881
           },
           "group": "nodes",
@@ -4830,7 +4830,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2767,
+            "x": 2714,
             "y": 1050
           },
           "group": "nodes",
@@ -4886,7 +4886,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2751,
+            "x": 2698,
             "y": 1230
           },
           "group": "nodes",
@@ -4942,7 +4942,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1078,
+            "x": 1025,
             "y": 2160
           },
           "group": "nodes",
@@ -4998,7 +4998,7 @@
             "type": "action"
           },
           "position": {
-            "x": 808,
+            "x": 755,
             "y": 2160
           },
           "group": "nodes",
@@ -5054,7 +5054,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1408,
+            "x": 1355,
             "y": 2160
           },
           "group": "nodes",
@@ -5110,7 +5110,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1678,
+            "x": 1625,
             "y": 2160
           },
           "group": "nodes",
@@ -5166,7 +5166,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1978,
+            "x": 1925,
             "y": 2160
           },
           "group": "nodes",
@@ -5222,7 +5222,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2038,
+            "x": 1985,
             "y": 2430
           },
           "group": "nodes",
@@ -5278,7 +5278,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2308,
+            "x": 2255,
             "y": 2160
           },
           "group": "nodes",
@@ -5334,7 +5334,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2698,
+            "x": 2645,
             "y": 2370
           },
           "group": "nodes",
@@ -5390,7 +5390,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2968,
+            "x": 2915,
             "y": 2370
           },
           "group": "nodes",
@@ -5446,7 +5446,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3280.571595949852,
+            "x": 3227.571595949852,
             "y": 2373.20594589183
           },
           "group": "nodes",
@@ -5502,7 +5502,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3575.54497858882,
+            "x": 3522.54497858882,
             "y": 2373.20594589183
           },
           "group": "nodes",
@@ -5558,7 +5558,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1022.4414468868848,
+            "x": 969.4414468868848,
             "y": 2955.7549046112686
           },
           "group": "nodes",
@@ -5614,7 +5614,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1377.3974773249408,
+            "x": 1324.3974773249408,
             "y": 3128.1924319748223
           },
           "group": "nodes",
@@ -5670,7 +5670,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1100,
+            "x": 1047,
             "y": 4988
           },
           "group": "nodes",
@@ -5726,7 +5726,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1461,
+            "x": 1408,
             "y": 3570
           },
           "group": "nodes",
@@ -5782,7 +5782,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2031,
+            "x": 1978,
             "y": 3540
           },
           "group": "nodes",
@@ -5838,7 +5838,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2721,
+            "x": 2668,
             "y": 3540
           },
           "group": "nodes",
@@ -5894,7 +5894,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2601,
+            "x": 2548,
             "y": 3810
           },
           "group": "nodes",
@@ -5950,7 +5950,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1002,
+            "x": 949,
             "y": 4200
           },
           "group": "nodes",
@@ -6006,7 +6006,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2532,
+            "x": 2479,
             "y": 4410
           },
           "group": "nodes",
@@ -6062,7 +6062,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3132,
+            "x": 3079,
             "y": 4410
           },
           "group": "nodes",
@@ -6118,7 +6118,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2532,
+            "x": 2479,
             "y": 4200
           },
           "group": "nodes",
@@ -6174,7 +6174,7 @@
             "type": "action"
           },
           "position": {
-            "x": 732,
+            "x": 679,
             "y": 4200
           },
           "group": "nodes",
@@ -6230,7 +6230,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1512,
+            "x": 1459,
             "y": 4200
           },
           "group": "nodes",
@@ -6286,7 +6286,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1932,
+            "x": 1879,
             "y": 4200
           },
           "group": "nodes",
@@ -6334,7 +6334,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2361,
+            "x": 2308,
             "y": 5070
           },
           "group": "nodes",
@@ -6352,7 +6352,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2481,
+            "x": 2428,
             "y": 5190
           },
           "group": "nodes",
@@ -6371,7 +6371,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2481,
+            "x": 2428,
             "y": 5130
           },
           "group": "nodes",
@@ -6404,7 +6404,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2631,
+            "x": 2578,
             "y": 5100
           },
           "group": "nodes",
@@ -6423,7 +6423,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2481,
+            "x": 2428,
             "y": 5250
           },
           "group": "nodes",
@@ -6442,7 +6442,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1560
           },
           "group": "nodes",
@@ -6487,7 +6487,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3231,
+            "x": 3178,
             "y": 1740
           },
           "group": "nodes",
@@ -6543,7 +6543,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2954,
+            "x": 2901,
             "y": 420
           },
           "group": "nodes",
@@ -6599,7 +6599,7 @@
             "type": "action"
           },
           "position": {
-            "x": 710,
+            "x": 657,
             "y": 4988
           },
           "group": "nodes",
@@ -6655,7 +6655,7 @@
             "type": "action"
           },
           "position": {
-            "x": 773.297843518624,
+            "x": 720.297843518624,
             "y": 2889.409365510024
           },
           "group": "nodes",
@@ -6711,7 +6711,7 @@
             "type": "action"
           },
           "position": {
-            "x": 681,
+            "x": 628,
             "y": 3570
           },
           "group": "nodes",
@@ -6767,7 +6767,7 @@
             "type": "action"
           },
           "position": {
-            "x": 726.9171158379268,
+            "x": 673.9171158379268,
             "y": 4146.591767592231
           },
           "group": "nodes",
@@ -6823,7 +6823,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1011,
+            "x": 958,
             "y": 5850
           },
           "group": "nodes",
@@ -6879,7 +6879,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1011,
+            "x": 958,
             "y": 6090
           },
           "group": "nodes",
@@ -6935,7 +6935,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1011,
+            "x": 958,
             "y": 6750
           },
           "group": "nodes",
@@ -6991,7 +6991,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1551,
+            "x": 1498,
             "y": 6090
           },
           "group": "nodes",
@@ -7036,7 +7036,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3201,
+            "x": 3148,
             "y": 1410
           },
           "group": "nodes",
@@ -7054,7 +7054,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3351,
+            "x": 3298,
             "y": 1470
           },
           "group": "nodes",
@@ -7084,7 +7084,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3764,
+            "x": 3711,
             "y": 1530
           },
           "group": "nodes",
@@ -7123,7 +7123,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3501,
+            "x": 3448,
             "y": 1110
           },
           "group": "nodes",
@@ -7171,7 +7171,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3231,
+            "x": 3178,
             "y": 1170
           },
           "group": "nodes",
@@ -7189,7 +7189,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3351,
+            "x": 3298,
             "y": 1200
           },
           "group": "nodes",
@@ -7208,7 +7208,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3351,
+            "x": 3298,
             "y": 1230
           },
           "group": "nodes",
@@ -7238,7 +7238,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3501,
+            "x": 3448,
             "y": 1200
           },
           "group": "nodes",
@@ -7283,7 +7283,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2758,
+            "x": 2705,
             "y": 2130
           },
           "group": "nodes",
@@ -7301,7 +7301,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2608,
+            "x": 2555,
             "y": 2250
           },
           "group": "nodes",
@@ -7319,7 +7319,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2878,
+            "x": 2825,
             "y": 2130
           },
           "group": "nodes",
@@ -7338,7 +7338,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2878,
+            "x": 2825,
             "y": 2250
           },
           "group": "nodes",
@@ -7371,7 +7371,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3021,
+            "x": 2968,
             "y": 3750
           },
           "group": "nodes",
@@ -7415,7 +7415,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3854,
+            "x": 3801,
             "y": 600
           },
           "group": "nodes",
@@ -7433,7 +7433,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3614,
+            "x": 3561,
             "y": 1530
           },
           "group": "nodes",
@@ -7451,7 +7451,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2608,
+            "x": 2555,
             "y": 2670
           },
           "group": "nodes",
@@ -7470,7 +7470,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2593.3995705145066,
+            "x": 2540.3995705145066,
             "y": 2737.788143431422
           },
           "group": "nodes",
@@ -7500,7 +7500,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2871,
+            "x": 2818,
             "y": 1830
           },
           "group": "nodes",
@@ -7518,7 +7518,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1620
           },
           "group": "nodes",
@@ -7547,7 +7547,7 @@
             }
           },
           "position": {
-            "x": 1445,
+            "x": 1392,
             "y": 1170
           },
           "group": "nodes",
@@ -7610,7 +7610,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1325,
+            "x": 1272,
             "y": 1170
           },
           "group": "nodes",
@@ -7672,7 +7672,7 @@
             "type": "action"
           },
           "position": {
-            "x": 766,
+            "x": 713,
             "y": 1024
           },
           "group": "nodes",
@@ -7691,7 +7691,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1978,
+            "x": 1925,
             "y": 2580
           },
           "group": "nodes",
@@ -7724,7 +7724,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1828,
+            "x": 1775,
             "y": 2640
           },
           "group": "nodes",
@@ -7757,7 +7757,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3698.45055468839,
+            "x": 3645.45055468839,
             "y": 2594.4359828710562
           },
           "group": "nodes",
@@ -7796,7 +7796,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3134,
+            "x": 3081,
             "y": 750
           },
           "group": "nodes",
@@ -7871,7 +7871,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3434,
+            "x": 3381,
             "y": 840
           },
           "group": "nodes",
@@ -7894,7 +7894,7 @@
             }
           },
           "position": {
-            "x": 3284,
+            "x": 3231,
             "y": 750
           },
           "group": "nodes",
@@ -7925,7 +7925,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2894,
+            "x": 2841,
             "y": 450
           },
           "group": "nodes",
@@ -7943,7 +7943,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2984,
+            "x": 2931,
             "y": 510
           },
           "group": "nodes",
@@ -7967,7 +7967,7 @@
             }
           },
           "position": {
-            "x": 3584,
+            "x": 3531,
             "y": 840
           },
           "group": "nodes",
@@ -7997,7 +7997,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3764,
+            "x": 3711,
             "y": 780
           },
           "group": "nodes",
@@ -8027,7 +8027,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3434,
+            "x": 3381,
             "y": 720
           },
           "group": "nodes",
@@ -8046,7 +8046,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2714,
+            "x": 2661,
             "y": 600
           },
           "group": "nodes",
@@ -8085,7 +8085,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2864,
+            "x": 2811,
             "y": 600
           },
           "group": "nodes",
@@ -8108,7 +8108,7 @@
             }
           },
           "position": {
-            "x": 2984,
+            "x": 2931,
             "y": 600
           },
           "group": "nodes",
@@ -8164,7 +8164,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1477,
+            "x": 1424,
             "y": 630
           },
           "group": "nodes",
@@ -8193,7 +8193,7 @@
             }
           },
           "position": {
-            "x": 1627,
+            "x": 1574,
             "y": 630
           },
           "group": "nodes",
@@ -8280,7 +8280,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1814,
+            "x": 1761,
             "y": 810
           },
           "group": "nodes",
@@ -8336,7 +8336,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1020,
+            "x": 967,
             "y": 510
           },
           "group": "nodes",
@@ -8392,7 +8392,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1657,
+            "x": 1604,
             "y": 720
           },
           "group": "nodes",
@@ -8442,7 +8442,7 @@
             "type": "action"
           },
           "position": {
-            "x": 587.4953862182169,
+            "x": 534.4953862182169,
             "y": 379.495386218217
           },
           "group": "nodes",
@@ -8472,7 +8472,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3494,
+            "x": 3441,
             "y": 480
           },
           "group": "nodes",
@@ -8568,7 +8568,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1625,
+            "x": 1572,
             "y": 1170
           },
           "group": "nodes",
@@ -8586,7 +8586,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1745,
+            "x": 1692,
             "y": 1170
           },
           "group": "nodes",
@@ -8706,7 +8706,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2901,
+            "x": 2848,
             "y": 1320
           },
           "group": "nodes",
@@ -8724,7 +8724,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3021,
+            "x": 2968,
             "y": 1410
           },
           "group": "nodes",
@@ -8756,7 +8756,7 @@
                 "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
               },
               "customHTML": {
-                "value": "<!-- Main container for centering content -->\n<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <!-- Container with fixed width for the card -->\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <!-- Card for holding the content -->\n        <div class=\"card shadow mb-5\">\n            <!-- Main content area -->\n            <main aria-labelledby=\"title\">\n                <!-- Card body with padding and column layout -->\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                    <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- SVG Checkmark centered -->\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                            <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                        </svg>\n                    </div>\n\n                    <!-- Conditional textOne -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textTwo -->\n                    {{#if textTwo}}\n                    <h2 class=\"text-muted text-center\">{{textTwo}}</h2>\n                    {{/if}}\n\n                    <!-- Generic Error Message -->\n                    <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                    <!-- Button section -->\n                    <div>\n                        <!-- Button to add another device -->\n                        <div class=\"d-flex flex-column\">\n                            <button class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"ANOTHER\" id=\"another\">Add another device</button>\n                        </div>\n\n                        <!-- Button to finish the process -->\n                        <div class=\"d-flex flex-column\">\n                            <button class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"FINISH\" id=\"login\">Finish</button>\n                        </div>\n                    </div>\n                </div>\n            </main>\n        </div>\n    </div>\n</div>"
+                "value": "<div class=\"end-user-nano\">\n    <!-- Main container for centering content -->\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <!-- Container with fixed width for the card -->\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5\">\n                <!-- Main content area -->\n                <main aria-labelledby=\"title\">\n                    <!-- Card body with padding and column layout -->\n                    <div class=\"card-body p-5 d-flex flex-column\">\n                        <!-- Company logo -->\n                        <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n                        <!-- Conditional title -->\n                        {{#if title}}\n                        <h1 class=\"text-center mb-4\">{{title}}</h1>\n                        {{/if}}\n\n                        <!-- SVG Checkmark centered -->\n                        <div class=\"mx-auto mt-3 mb-4\">\n                            <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                                <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                                <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                            </svg>\n                        </div>\n\n                        <!-- Conditional textOne -->\n                        {{#if textOne}}\n                        <p class=\"text-muted text-center\">{{textOne}}</p>\n                        {{/if}}\n\n                        <!-- Conditional textTwo -->\n                        {{#if textTwo}}\n                        <h2 class=\"text-muted text-center\">{{textTwo}}</h2>\n                        {{/if}}\n\n                        <!-- Generic Error Message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n                            data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                        <!-- Button section -->\n                        <div>\n                            <!-- Button to add another device -->\n                            <div class=\"d-flex flex-column\">\n                                <button class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"ANOTHER\" id=\"another\">Add another device</button>\n                            </div>\n\n                            <!-- Button to finish the process -->\n                            <div class=\"d-flex flex-column\">\n                                <button class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skbuttonvalue=\"FINISH\" id=\"login\">Finish</button>\n                            </div>\n                        </div>\n                    </div>\n                </main>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {},
               "formFieldsList": {
@@ -8813,7 +8813,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2091,
+            "x": 2038,
             "y": 5070
           },
           "group": "nodes",
@@ -8843,7 +8843,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2631,
+            "x": 2578,
             "y": 5220
           },
           "group": "nodes",
@@ -8953,7 +8953,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2052,
+            "x": 1999,
             "y": 4290
           },
           "group": "nodes",
@@ -8976,7 +8976,7 @@
             }
           },
           "position": {
-            "x": 2202,
+            "x": 2149,
             "y": 4290
           },
           "group": "nodes",
@@ -9002,7 +9002,7 @@
                 "value": ".passcode-input{\n    font-size: 24px;\n    text-align: center;\n    font-weight: 400;\n    padding: 11px 0px 10px !important;\n}\n \n.copyright{\n    font: normal normal 14px \"campton-medium\",  Arial, Helvetica, sans-serif;\n    color: #000000;\n    margin: 0 auto;\n    text-align: center;\n}\n.copyright .footerLink{\n    color: #009ea0;\n    text-decoration: none;\n    margin: 0 12px;\n}\n.copyright a:hover {\n    display: inline-block;\n    text-decoration: underline;\n    -webkit-transform: scale(1.15);\n    transform: scale(1.15);\n    -webkit-transition: .3s;\n    transition: .3s;\n}\n.hippaTitle{\n    font: normal 22px \"campton-medium\", Helvetica, sans-serif;\n    color: #009ea0;\n}\n.hippaTitle2{\n    font: bold 16px \"campton-medium\", Helvetica, sans-serif;\n    color: #000000;\n    text-align: center;\n}\n.hippaModal .btn-close{\n    position: absolute;\n    top: 20px;\n    right: 20px;\n}\n.hippaModal .modal-content{\n    padding: 30px;\n}\n.modalBody{\n    /* width: 60%; */\n    font: normal 14px \"campton-medium\", Helvetica, sans-serif;\n    padding: 20px 0px;\n}\n.starRed{\n    color: #ff0000;\n}\n#selectState{\n    width: 150px;\n}\n.selectBox {\n    width: 70%;\n    margin: 0 auto;\n    text-align: center;\n}\n"
               },
               "customHTML": {
-                "value": "<div\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n  <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n    <div class=\"card shadow mb-5\">\n      <main aria-labelledby=\"title\">\n        <div class=\"card-body p-5 d-flex flex-column\">\n          <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n        {{#ifEquals type \"SMS\"}}\n          <h1 class=\"text-center mb-4\" id=\"lblTitle\">Text Message Pairing</h1>\n          {{/ifEquals}}\n          {{#ifEquals type \"VOICE\"}}\n          <h1 class=\"text-center mb-4\" id=\"lblTitle\">Voice Message Pairing</h1>\n          {{/ifEquals}}\n          {{#ifEquals type \"EMAIL\"}}\n          <h1 class=\"text-center mb-4\" id=\"lblTitle\">Email Pairing</h1>\n          {{/ifEquals}}\n\n          {{#ifEquals type \"SMS\"}}\n          <p class=\"text-center\">\n            <i class=\"mdi mdi-cellphone text-dark display-6\" text-dark display-6\" aria-hidden=\"true\"></i>\n            {{/ifEquals}}\n            {{#ifEquals type \"VOICE\"}}\n          <p class=\"text-center\">\n            <i class=\"mdi mdi-cellphone text-dark display-6\" text-dark display-6\" aria-hidden=\"true\"></i>\n            {{/ifEquals}}\n            {{#ifEquals type \"EMAIL\"}}\n          <p class=\"text-center\">\n            <i class=\"mdi mdi-email-outline text-dark display-6\" text-dark display-6\" aria-hidden=\"true\"></i>\n            {{/ifEquals}}\n\n            {{#ifEquals type \"SMS\"}}\n          <div class=\"text-muted text-center mb-3\" id=\"lblSubTitle\"> Enter the passcode you received to complete text\n            message pairing.</div>\n          {{/ifEquals}}\n          {{#ifEquals type \"VOICE\"}}\n          <div class=\"text-muted text-center mb-3\" id=\"lblSubTitle\">Enter the passcode you received to complete voice\n            message pairing.</div>\n          {{/ifEquals}}\n          {{#ifEquals type \"EMAIL\"}}\n          <div class=\"text-muted text-center mb-3\" id=\"lblSubTitle\"> Enter the passcode you received to complete email\n            pairing.</div>\n          {{/ifEquals}}\n          <div id=\"error-wrap\">\n\n          </div>\n          {{#ifEquals type \"SMS\"}}\n          <div class=\"text-muted text-center mb-3\" id=\"lblSMSSentTo\">Text message sent to:</div>\n          <div class=\"text-muted text-center mb-3\">{{phone}}</div>\n          {{/ifEquals}}\n          {{#ifEquals type \"VOICE\"}}\n          <div class=\"text-muted text-center mb-3\" id=\"lblSMSSentTo\">Voice message sent to:</div>\n          <div class=\"text-muted text-center mb-3\">{{phone}}</div>\n          {{/ifEquals}}\n          {{#ifEquals type \"EMAIL\"}}\n          <div class=\"text-muted text-center mb-3\" id=\"lblSMSSentTo\">Email sent to:</div>\n          <div class=\"text-muted text-center mb-3\">{{email}}</div>\n          {{/ifEquals}}\n\n          <!-- Generic Error Message -->\n          <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n            data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n          <!-- Field Validation Error Messages -->\n          <p class=\"text-danger mdi\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"verifyCode\"></p>\n\n          <form id=\"otpForm\" data-id=\"otpForm\">\n            <div class=\"mb-4 form-floating\">\n              <input class=\"form-control\" type=\"text\" name=\"verifyCode\" placeholder=\"Verification Code\" autocomplete=\"off\"\n            data-id=\"verifyCode\" id=\"verifyCode\" maxlength=\"{{codeMaxLength}}\" aria-required=\"true\" aria-describedby=\"emailLabel\" required\n             data-required-message=\"Verify Code required\"/>\n              <label class=\"form-label\" for=\"verifyCode\" >Verification Code</label>\n            </div>\n            <div class=\"d-flex flex-column\">\n              {{#if continueButtonLabel}}\n              <button class=\"btn btn-primary flex-grow-1\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\"\n            data-skrequiredinputs=\"verifyCode\" data-skform=\"otpForm\" id=\"btnVerify\" data-skbuttonvalue=\"CONTINUE\">{{continueButtonLabel}}</button>\n              {{/if}}\n              {{#if resendButtonLabel}}\n              <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n            data-skform=\"otpForm\" id=\"btnResend\" data-skbuttonvalue=\"RESEND\">{{resendButtonLabel}}</button>\n              {{/if}}\n              {{#if cancelButtonLabel}}\n              <!-- Cancel Button -->\n              <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"otpForm\" id=\"btnCancel\" data-skbuttonvalue=\"CANCEL\">{{cancelButtonLabel}}</button>\n              {{/if}}\n            </div>\n          </form>\n        </div>\n    </div>\n  </div>"
+                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <main aria-labelledby=\"title\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n        {{#ifEquals type \"SMS\"}}\n            <h1 class=\"text-center mb-4\" id=\"lblTitle\">Text Message Pairing</h1>\n            {{/ifEquals}}\n            {{#ifEquals type \"VOICE\"}}\n            <h1 class=\"text-center mb-4\" id=\"lblTitle\">Voice Message Pairing</h1>\n            {{/ifEquals}}\n            {{#ifEquals type \"EMAIL\"}}\n            <h1 class=\"text-center mb-4\" id=\"lblTitle\">Email Pairing</h1>\n            {{/ifEquals}}\n\n            {{#ifEquals type \"SMS\"}}\n            <p class=\"text-center\">\n              <i class=\"mdi mdi-cellphone text-dark display-6\" text-dark display-6\" aria-hidden=\"true\"></i>\n              {{/ifEquals}}\n              {{#ifEquals type \"VOICE\"}}\n            <p class=\"text-center\">\n              <i class=\"mdi mdi-cellphone text-dark display-6\" text-dark display-6\" aria-hidden=\"true\"></i>\n              {{/ifEquals}}\n              {{#ifEquals type \"EMAIL\"}}\n            <p class=\"text-center\">\n              <i class=\"mdi mdi-email-outline text-dark display-6\" text-dark display-6\" aria-hidden=\"true\"></i>\n              {{/ifEquals}}\n\n              {{#ifEquals type \"SMS\"}}\n            <div class=\"text-muted text-center mb-3\" id=\"lblSubTitle\"> Enter the passcode you received to complete text\n              message pairing.</div>\n            {{/ifEquals}}\n            {{#ifEquals type \"VOICE\"}}\n            <div class=\"text-muted text-center mb-3\" id=\"lblSubTitle\">Enter the passcode you received to complete voice\n              message pairing.</div>\n            {{/ifEquals}}\n            {{#ifEquals type \"EMAIL\"}}\n            <div class=\"text-muted text-center mb-3\" id=\"lblSubTitle\"> Enter the passcode you received to complete email\n              pairing.</div>\n            {{/ifEquals}}\n            <div id=\"error-wrap\">\n\n            </div>\n            {{#ifEquals type \"SMS\"}}\n            <div class=\"text-muted text-center mb-3\" id=\"lblSMSSentTo\">Text message sent to:</div>\n            <div class=\"text-muted text-center mb-3\">{{phone}}</div>\n            {{/ifEquals}}\n            {{#ifEquals type \"VOICE\"}}\n            <div class=\"text-muted text-center mb-3\" id=\"lblSMSSentTo\">Voice message sent to:</div>\n            <div class=\"text-muted text-center mb-3\">{{phone}}</div>\n            {{/ifEquals}}\n            {{#ifEquals type \"EMAIL\"}}\n            <div class=\"text-muted text-center mb-3\" id=\"lblSMSSentTo\">Email sent to:</div>\n            <div class=\"text-muted text-center mb-3\">{{email}}</div>\n            {{/ifEquals}}\n\n            <!-- Generic Error Message -->\n            <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n              data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n            <!-- Field Validation Error Messages -->\n            <p class=\"text-danger mdi\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"verifyCode\"></p>\n\n            <form id=\"otpForm\" data-id=\"otpForm\">\n              <div class=\"mb-4 form-floating\">\n                <input class=\"form-control\" type=\"text\" name=\"verifyCode\" placeholder=\"Verification Code\" autocomplete=\"off\"\n            data-id=\"verifyCode\" id=\"verifyCode\" maxlength=\"{{codeMaxLength}}\" aria-required=\"true\" aria-describedby=\"emailLabel\" required\n             data-required-message=\"Verify Code required\"/>\n                <label class=\"form-label\" for=\"verifyCode\" >Verification Code</label>\n              </div>\n              <div class=\"d-flex flex-column\">\n                {{#if continueButtonLabel}}\n                <button class=\"btn btn-primary flex-grow-1\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\"\n            data-skrequiredinputs=\"verifyCode\" data-skform=\"otpForm\" id=\"btnVerify\" data-skbuttonvalue=\"CONTINUE\">{{continueButtonLabel}}</button>\n                {{/if}}\n                {{#if resendButtonLabel}}\n                <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n            data-skform=\"otpForm\" id=\"btnResend\" data-skbuttonvalue=\"RESEND\">{{resendButtonLabel}}</button>\n                {{/if}}\n                {{#if cancelButtonLabel}}\n                <!-- Cancel Button -->\n                <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"otpForm\" id=\"btnCancel\" data-skbuttonvalue=\"CANCEL\">{{cancelButtonLabel}}</button>\n                {{/if}}\n              </div>\n            </form>\n          </div>\n      </div>\n    </div>\n  </div>"
               },
               "customScript": {
                 "value": "const verifyCode = document.getElementById(\"verifyCode\");\nconst submitbtn = document.getElementById(\"submitBtn\");\n\nconst codevalidationMsg = document.getElementById(\"codevalidationMsg\");\nverifyCode.addEventListener(\"blur\", showValidationMsg);\nverifyCode.addEventListener(\"input\", showValidationMsg);\n\nfunction checkInputValid(val) {\n        if (/^[0-9]{6}$/.test(val)) {\n            return true;\n        }\n    return false;\n}\n\nverifyCode.addEventListener('focus', function() {\n    $('#verifyCode').css('border', '1px solid red');\n});\n\nverifyCode.addEventListener('input', function() {\n    var inputVal = this.value;\n\n    // Check if the input is valid\n    if (checkInputValid(inputVal)) {\n        // If valid, delay the submission to allow the last digit to appear\n        $('#OTPFeedback').css('display', 'none');\n        $('#verifyCode').css('border', '1px solid #8b9197');\n        setTimeout(function() {\n            document.getElementById('btnVerify').click();\n        }, 100); // Delay in milliseconds\n    } else {\n        $('#OTPFeedback').css('display', 'block');\n        $('#verifyCode').css('border', '1px solid red');\n    }\n});\n\n function showValidationMsg() {\n    if (verifyCode.value === \"\") {\n        verifyCode.classList.add(\"is-invalid\");\n        codevalidationMsg.style.display = \"block\";\n        submitbtn.disabled = true;\n    } else {\n        verifyCode.classList.remove(\"is-invalid\");\n        codevalidationMsg.style.display = \"none\";\n        submitbtn.disabled = false;\n    }\n\n}\n\nvar errorDiv = document.getElementById('error-wrap');\nif(window.addEventListener) {\n   // Normal browsers\n   errorDiv.addEventListener('DOMSubtreeModified', contentChanged, false);\n} else\n   if(window.attachEvent) {\n      // IE\n      errorDiv.attachEvent('DOMSubtreeModified', contentChanged);\n   }\n\nfunction contentChanged() {\n   let errorMsg  = document.getElementById('error-msg');\n   if (errorMsg) {\n      errorDiv.classList.add(\"feedback\");\n       if (errorMsg.innerText === \"OTP Resent\") {\n            errorMsg.classList.add(\"feedback--alert\");\n            errorMsg.classList.add(\"picon-alert\");\n            errorMsg.classList.remove(\"feedback--error\");\n            errorMsg.classList.remove(\"picon-error\");\n       }else{\n            errorMsg.classList.remove(\"feedback--alert\");\n            errorMsg.classList.remove(\"picon-alert\");\n            errorMsg.classList.add(\"feedback--error\");\n            errorMsg.classList.add(\"picon-error\");\n       }\n   }else{\n          errorDiv.classList.remove(\"feedback\");\n       }\n}\n\n\n\n\n"
@@ -9114,7 +9114,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2121,
+            "x": 2068,
             "y": 2520
           },
           "group": "nodes",
@@ -9155,7 +9155,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2901,
+            "x": 2848,
             "y": 1740
           },
           "group": "nodes",
@@ -9173,7 +9173,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3021,
+            "x": 2968,
             "y": 1740
           },
           "group": "nodes",
@@ -9259,7 +9259,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1468,
+            "x": 1415,
             "y": 5400
           },
           "group": "nodes",
@@ -9300,7 +9300,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1791,
+            "x": 1738,
             "y": 5400
           },
           "group": "nodes",
@@ -9318,7 +9318,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1611,
+            "x": 1558,
             "y": 5400
           },
           "group": "nodes",
@@ -9337,7 +9337,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1932,
+            "x": 1879,
             "y": 5460
           },
           "group": "nodes",
@@ -9381,7 +9381,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2112,
+            "x": 2059,
             "y": 5460
           },
           "group": "nodes",
@@ -9399,7 +9399,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2661,
+            "x": 2608,
             "y": 1710
           },
           "group": "nodes",
@@ -9453,7 +9453,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3141,
+            "x": 3088,
             "y": 1920
           },
           "group": "nodes",
@@ -9477,7 +9477,7 @@
             }
           },
           "position": {
-            "x": 3291,
+            "x": 3238,
             "y": 1920
           },
           "group": "nodes",
@@ -9510,7 +9510,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3501,
+            "x": 3448,
             "y": 1860
           },
           "group": "nodes",
@@ -9536,7 +9536,7 @@
             }
           },
           "position": {
-            "x": 1911,
+            "x": 1858,
             "y": 5070
           },
           "group": "nodes",
@@ -9555,7 +9555,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1918,
+            "x": 1865,
             "y": 5520
           },
           "group": "nodes",
@@ -9600,7 +9600,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3531,
+            "x": 3478,
             "y": 1650
           },
           "group": "nodes",
@@ -9618,7 +9618,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3351,
+            "x": 3298,
             "y": 1560
           },
           "group": "nodes",
@@ -9663,7 +9663,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3501,
+            "x": 3448,
             "y": 1290
           },
           "group": "nodes",
@@ -9681,7 +9681,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3351,
+            "x": 3298,
             "y": 1290
           },
           "group": "nodes",
@@ -9726,7 +9726,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3118,
+            "x": 3065,
             "y": 2280
           },
           "group": "nodes",
@@ -9771,7 +9771,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2811,
+            "x": 2758,
             "y": 2880
           },
           "group": "nodes",
@@ -9816,7 +9816,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2082,
+            "x": 2029,
             "y": 5580
           },
           "group": "nodes",
@@ -9861,7 +9861,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3402,
+            "x": 3349,
             "y": 4830
           },
           "group": "nodes",
@@ -9879,7 +9879,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3118,
+            "x": 3065,
             "y": 4770
           },
           "group": "nodes",
@@ -9924,7 +9924,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2631,
+            "x": 2578,
             "y": 5310
           },
           "group": "nodes",
@@ -9980,7 +9980,7 @@
             "type": "action"
           },
           "position": {
-            "x": 740,
+            "x": 687,
             "y": 2078
           },
           "group": "nodes",
@@ -10036,7 +10036,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1468,
+            "x": 1415,
             "y": 2550
           },
           "group": "nodes",
@@ -10077,7 +10077,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3494,
+            "x": 3441,
             "y": 1530
           },
           "group": "nodes",
@@ -10095,7 +10095,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3351,
+            "x": 3298,
             "y": 1500
           },
           "group": "nodes",
@@ -10139,7 +10139,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3764,
+            "x": 3711,
             "y": 900
           },
           "group": "nodes",
@@ -10183,7 +10183,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3501,
+            "x": 3448,
             "y": 1950
           },
           "group": "nodes",
@@ -10228,7 +10228,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2352,
+            "x": 2299,
             "y": 4650
           },
           "group": "nodes",
@@ -10246,7 +10246,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2202,
+            "x": 2149,
             "y": 4650
           },
           "group": "nodes",
@@ -10291,7 +10291,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2712,
+            "x": 2659,
             "y": 4860
           },
           "group": "nodes",
@@ -10309,7 +10309,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2488,
+            "x": 2435,
             "y": 4830
           },
           "group": "nodes",
@@ -10328,7 +10328,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2488,
+            "x": 2435,
             "y": 4680
           },
           "group": "nodes",
@@ -10358,7 +10358,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2682,
+            "x": 2629,
             "y": 4680
           },
           "group": "nodes",
@@ -10377,7 +10377,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2488,
+            "x": 2435,
             "y": 4770
           },
           "group": "nodes",
@@ -10408,7 +10408,7 @@
             "idUnique": "nka9uw83ru"
           },
           "position": {
-            "x": 2682,
+            "x": 2629,
             "y": 4770
           },
           "group": "nodes",
@@ -10443,7 +10443,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2871,
+            "x": 2818,
             "y": 1920
           },
           "group": "nodes",
@@ -10461,7 +10461,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2991,
+            "x": 2938,
             "y": 1920
           },
           "group": "nodes",
@@ -10506,7 +10506,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1816,
+            "x": 1763,
             "y": 3394
           },
           "group": "nodes",
@@ -10551,7 +10551,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2751,
+            "x": 2698,
             "y": 3990
           },
           "group": "nodes",
@@ -10569,7 +10569,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2541,
+            "x": 2488,
             "y": 3900
           },
           "group": "nodes",
@@ -10587,7 +10587,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2211,
+            "x": 2158,
             "y": 5070
           },
           "group": "nodes",
@@ -10606,7 +10606,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1687,
+            "x": 1634,
             "y": 570
           },
           "group": "nodes",
@@ -10636,7 +10636,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1567,
+            "x": 1514,
             "y": 510
           },
           "group": "nodes",
@@ -10675,7 +10675,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1816,
+            "x": 1763,
             "y": 3274
           },
           "group": "nodes",
@@ -10693,7 +10693,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1641,
+            "x": 1588,
             "y": 3330
           },
           "group": "nodes",
@@ -10738,7 +10738,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1498,
+            "x": 1445,
             "y": 5070
           },
           "group": "nodes",
@@ -10831,7 +10831,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3524,
+            "x": 3471,
             "y": 600
           },
           "group": "nodes",
@@ -10849,7 +10849,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3674,
+            "x": 3621,
             "y": 600
           },
           "group": "nodes",
@@ -10868,7 +10868,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2878,
+            "x": 2825,
             "y": 2190
           },
           "group": "nodes",
@@ -10904,7 +10904,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3088,
+            "x": 3035,
             "y": 2160
           },
           "group": "nodes",
@@ -10922,7 +10922,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3208,
+            "x": 3155,
             "y": 2160
           },
           "group": "nodes",
@@ -10941,7 +10941,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2541,
+            "x": 2488,
             "y": 3780
           },
           "group": "nodes",
@@ -10974,7 +10974,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2751,
+            "x": 2698,
             "y": 3750
           },
           "group": "nodes",
@@ -10992,7 +10992,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2871,
+            "x": 2818,
             "y": 3750
           },
           "group": "nodes",
@@ -11032,7 +11032,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2818,
+            "x": 2765,
             "y": 2640
           },
           "group": "nodes",
@@ -11050,7 +11050,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2608,
+            "x": 2555,
             "y": 2640
           },
           "group": "nodes",
@@ -11068,7 +11068,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2938,
+            "x": 2885,
             "y": 2640
           },
           "group": "nodes",
@@ -11163,7 +11163,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2091,
+            "x": 2038,
             "y": 3660
           },
           "group": "nodes",
@@ -11181,7 +11181,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2234,
+            "x": 2181,
             "y": 3660
           },
           "group": "nodes",
@@ -11238,7 +11238,7 @@
             "idUnique": "o2v5xhdcbc"
           },
           "position": {
-            "x": 586,
+            "x": 533,
             "y": 214
           },
           "group": "nodes",
@@ -11310,7 +11310,7 @@
             "idUnique": "4xljppu16x"
           },
           "position": {
-            "x": 1814,
+            "x": 1761,
             "y": 6420
           },
           "group": "nodes",
@@ -11361,7 +11361,7 @@
             "idUnique": "am2nevw0wj"
           },
           "position": {
-            "x": 891,
+            "x": 838,
             "y": 6300
           },
           "group": "nodes",
@@ -11391,7 +11391,7 @@
             }
           },
           "position": {
-            "x": 981,
+            "x": 928,
             "y": 6420
           },
           "group": "nodes",
@@ -11463,7 +11463,7 @@
             "idUnique": "zn0602zpi5"
           },
           "position": {
-            "x": 930,
+            "x": 877,
             "y": 630
           },
           "group": "nodes",
@@ -11481,7 +11481,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 780,
+            "x": 727,
             "y": 630
           },
           "group": "nodes",
@@ -11500,7 +11500,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1101,
+            "x": 1048,
             "y": 6420
           },
           "group": "nodes",
@@ -11542,7 +11542,7 @@
             }
           },
           "position": {
-            "x": 1251,
+            "x": 1198,
             "y": 6420
           },
           "group": "nodes",
@@ -11561,7 +11561,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1941,
+            "x": 1888,
             "y": 6420
           },
           "group": "nodes",
@@ -11587,7 +11587,7 @@
             "properties": {}
           },
           "position": {
-            "x": 2061,
+            "x": 2008,
             "y": 6420
           },
           "group": "nodes",
@@ -11611,7 +11611,7 @@
             }
           },
           "position": {
-            "x": 1371,
+            "x": 1318,
             "y": 6420
           },
           "group": "nodes",
@@ -11646,7 +11646,7 @@
             }
           },
           "position": {
-            "x": 1521,
+            "x": 1468,
             "y": 6420
           },
           "group": "nodes",
@@ -11664,7 +11664,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1641,
+            "x": 1588,
             "y": 6420
           },
           "group": "nodes",
@@ -11699,7 +11699,7 @@
             }
           },
           "position": {
-            "x": 755,
+            "x": 702,
             "y": 1170
           },
           "group": "nodes",
@@ -11717,7 +11717,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 605,
+            "x": 552,
             "y": 1170
           },
           "group": "nodes",
@@ -11741,7 +11741,7 @@
             }
           },
           "position": {
-            "x": 875,
+            "x": 822,
             "y": 1170
           },
           "group": "nodes",
@@ -11791,7 +11791,7 @@
             }
           },
           "position": {
-            "x": 1025,
+            "x": 972,
             "y": 1170
           },
           "group": "nodes",
@@ -11809,7 +11809,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1145,
+            "x": 1092,
             "y": 1170
           },
           "group": "nodes",
@@ -11839,7 +11839,7 @@
             }
           },
           "position": {
-            "x": 1048,
+            "x": 995,
             "y": 1290
           },
           "group": "nodes",
@@ -11865,7 +11865,7 @@
             "properties": {}
           },
           "position": {
-            "x": 1551,
+            "x": 1498,
             "y": 6570
           },
           "group": "nodes",
@@ -11883,7 +11883,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 510,
+            "x": 457,
             "y": 630
           },
           "group": "nodes",
@@ -11902,7 +11902,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2019.3361941220069,
+            "x": 1966.3361941220069,
             "y": 1170.685638721583
           },
           "group": "nodes",
@@ -11952,7 +11952,7 @@
             }
           },
           "position": {
-            "x": 2181,
+            "x": 2128,
             "y": 1170
           },
           "group": "nodes",
@@ -11970,7 +11970,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2361,
+            "x": 2308,
             "y": 1170
           },
           "group": "nodes",
@@ -11988,7 +11988,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1461,
+            "x": 1408,
             "y": 6870
           },
           "group": "nodes",
@@ -12019,7 +12019,7 @@
             "idUnique": "86zosmcm9g"
           },
           "position": {
-            "x": 1744,
+            "x": 1691,
             "y": 5071.4443359375
           },
           "group": "nodes",
@@ -12037,7 +12037,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1621,
+            "x": 1568,
             "y": 5070.72216796875
           },
           "group": "nodes",
@@ -12082,7 +12082,7 @@
             "idUnique": "sgv7s2qi4o"
           },
           "position": {
-            "x": 1101,
+            "x": 1048,
             "y": 3660
           },
           "group": "nodes",
@@ -12100,7 +12100,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 951,
+            "x": 898,
             "y": 3660
           },
           "group": "nodes",
@@ -12118,7 +12118,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1251,
+            "x": 1198,
             "y": 3660
           },
           "group": "nodes",
@@ -12136,7 +12136,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1041,
+            "x": 988,
             "y": 2250
           },
           "group": "nodes",
@@ -12264,7 +12264,7 @@
             "idUnique": "7epki2w1du"
           },
           "position": {
-            "x": 2901,
+            "x": 2848,
             "y": 1140
           },
           "group": "nodes",
@@ -12282,7 +12282,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2721,
+            "x": 2668,
             "y": 1140
           },
           "group": "nodes",
@@ -12300,7 +12300,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2721,
+            "x": 2668,
             "y": 1140
           },
           "group": "nodes",
@@ -12318,7 +12318,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3066,
+            "x": 3013,
             "y": 1155
           },
           "group": "nodes",
@@ -12397,7 +12397,7 @@
             "idUnique": "4bauco1ecy"
           },
           "position": {
-            "x": 330,
+            "x": 277,
             "y": 630
           },
           "group": "nodes",
@@ -12437,7 +12437,7 @@
             "idUnique": "vp8mvklpzw"
           },
           "position": {
-            "x": 1230,
+            "x": 1177,
             "y": 630
           },
           "group": "nodes",
@@ -12455,7 +12455,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1080,
+            "x": 1027,
             "y": 630
           },
           "group": "nodes",
@@ -12473,8 +12473,68 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1353.5,
+            "x": 1300.5,
             "y": 630
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4pafqpxard",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#50e3c2ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Email Template: Master Flow New Ping Device Paired"
+              },
+              "width": {
+                "value": 440
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              }
+            },
+            "status": "configured",
+            "idUnique": "lb31g4gkg6"
+          },
+          "position": {
+            "x": 321,
+            "y": 285
           },
           "group": "nodes",
           "removed": false,
@@ -17468,7 +17528,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726144977376,
+  "savedDate": 1726230447306,
   "variables": [
     {
       "context": "flowInstance",

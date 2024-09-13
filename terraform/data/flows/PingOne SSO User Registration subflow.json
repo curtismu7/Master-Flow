@@ -13,8 +13,8 @@
     "pingOneSSOConnector",
     "notificationsConnector"
   ],
-  "createdDate": 1726159686259,
-  "currentVersion": 31,
+  "createdDate": 1726230571497,
+  "currentVersion": 33,
   "customerId": "c8701d025a002f27116f02d2f4d957a8",
   "description": "Imported on Wed May 22 2024 23:21:44 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -46,7 +46,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO User Registration subflow",
-  "publishedVersion": 31,
+  "publishedVersion": 33,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": " /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        } /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
@@ -61,9 +61,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1726159701219,
-  "flowId": "c0e0d090b8cfbc7396193b4a343c142b",
-  "versionId": 31,
+  "updatedDate": 1726230574006,
+  "flowId": "57a87229b049e880c37a5d3fa1f83268",
+  "versionId": 33,
   "graphData": {
     "elements": {
       "nodes": [
@@ -7174,7 +7174,7 @@
             "nodeType": "ANNOTATION",
             "properties": {
               "annotation": {
-                "value": "Last Updated: 7/10, 2024"
+                "value": "Last Updated: 9/12, 2024"
               },
               "annotationTextColor": {
                 "value": "#000000"
@@ -9248,6 +9248,66 @@
           "position": {
             "x": 810,
             "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xieqolqsag",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#50e3c2ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Email template: Master Flow New Ping Device Paired"
+              },
+              "width": {
+                "value": 440
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              }
+            },
+            "status": "configured",
+            "idUnique": "lb31g4gkg6"
+          },
+          "position": {
+            "x": 329,
+            "y": 294
           },
           "group": "nodes",
           "removed": false,
@@ -13310,7 +13370,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726159685249,
+  "savedDate": 1726230570539,
   "variables": [
     {
       "context": "flowInstance",
