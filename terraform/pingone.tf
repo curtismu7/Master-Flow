@@ -1056,6 +1056,33 @@ resource "pingone_notification_template_content" "new_ping_device_paired" {
   ]
 }
 
+resource "pingone_notification_template_content" "new_device" {
+  environment_id = pingone_environment.master_flow_environment.id
+  template_name  = "new_device_paired"
+  locale         = "en"
+
+  email = {
+    body          = "${file("${path.module}/data/notification_templates/Device Paired.html")}"
+    subject       = "PingOne: New MFA Device Paired"
+    content_type  = "text/html"
+    character_set = "UTF-8"
+
+    from = {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+    
+    reply_to = {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+  }
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
 resource "pingone_notification_template_content" "id_verification" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "id_verification"

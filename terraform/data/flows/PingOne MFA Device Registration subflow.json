@@ -14,8 +14,8 @@
     "notificationsConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1726230451621,
-  "currentVersion": 246,
+  "createdDate": 1726398351352,
+  "currentVersion": 262,
   "customerId": "c8701d025a002f27116f02d2f4d957a8",
   "description": "Imported on Wed May 22 2024 23:21:29 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -59,7 +59,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 246,
+  "publishedVersion": 262,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "   /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
@@ -68,7 +68,7 @@
     "customFaviconLink": "https://console.pingone.com/davinci/favicon-davinci.png",
     "debugMode": true,
     "flowHttpTimeoutInSeconds": 0,
-    "flowTimeoutInSeconds": 300,
+    "flowTimeoutInSeconds": 3000,
     "jsLinks": [],
     "logLevel": 3,
     "useBetaAlgorithm": true,
@@ -80,9 +80,9 @@
     "customLogoURLSelection": 1
   },
   "timeouts": "null",
-  "updatedDate": 1726230454746,
+  "updatedDate": 1726398353955,
   "flowId": "55d7c7c02b0985934703055fbca259e7",
-  "versionId": 246,
+  "versionId": 262,
   "graphData": {
     "elements": {
       "nodes": [
@@ -321,7 +321,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"deviceType\",\n        \"data\": \"{{global.variables.deviceType}}\",\n        \"tooltip\": \"{{global.variables.deviceType}}\",\n        \"children\": [\n          {\n            \"text\": \"deviceType\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "customNotificationPolicyId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-p1NotificationPolicyId}}\"\n      }\n    ]\n  }\n]"
+                "value": "{}"
               },
               "device": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"device\",\n        \"data\": \"{{local.t6ik0u7i4i.payload.output.device}}\",\n        \"tooltip\": \"{{local.t6ik0u7i4i.payload.output.device}}\",\n        \"children\": [\n          {\n            \"text\": \"device\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -336,7 +336,7 @@
                 "value": "Create OTP Method"
               },
               "notificationPolicyId": {
-                "value": "enterNotificationPolicyId"
+                "value": "acf27237-1da5-4b36-b4f5-361b3e68d442"
               },
               "phone": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"Country Code\",\n        \"data\": \"{{local.q381f5dmr1.payload.output.Country Code}}\",\n        \"tooltip\": \"{{local.q381f5dmr1.payload.output.Country Code}}\",\n        \"children\": [\n          {\n            \"text\": \"Country Code\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"Phone Number\",\n        \"data\": \"{{local.q381f5dmr1.payload.output.Phone Number}}\",\n        \"tooltip\": \"{{local.q381f5dmr1.payload.output.Phone Number}}\",\n        \"children\": [\n          {\n            \"text\": \"Phone Number\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -355,6 +355,16 @@
                     "name": "companyName",
                     "preferredDataType": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "deviceName",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"deviceName\",\n        \"data\": \"{{global.variables.deviceName}}\",\n        \"tooltip\": \"{{global.variables.deviceName}}\",\n        \"children\": [\n          {\n            \"text\": \"deviceName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "deviceType",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"deviceType\",\n        \"data\": \"{{global.variables.deviceType}}\",\n        \"tooltip\": \"{{global.variables.deviceType}}\",\n        \"children\": [\n          {\n            \"text\": \"deviceType\"\n          }\n        ]\n      },\n      {\n        \"text\": \"Type\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               },
@@ -843,7 +853,7 @@
                 ]
               },
               "templateVariant": {
-                "value": "OTP"
+                "value": "Master Flow Device Pairing"
               },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1172,6 +1182,21 @@
                     "name": "companyName",
                     "preferredDataType": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "deviceType",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"deviceType\",\n        \"data\": \"{{global.variables.deviceType}}\",\n        \"tooltip\": \"{{global.variables.deviceType}}\",\n        \"children\": [\n          {\n            \"text\": \"deviceType\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "deviceName",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"deviceName\",\n        \"data\": \"{{global.variables.deviceName}}\",\n        \"tooltip\": \"{{global.variables.deviceName}}\",\n        \"children\": [\n          {\n            \"text\": \"deviceName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "companyLogo",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               },
@@ -1183,13 +1208,16 @@
               },
               "notificationPolicyId": {
                 "value": "acf27237-1da5-4b36-b4f5-361b3e68d442"
+              },
+              "templateVariant": {
+                "value": "Master Flow Device Pairing"
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 1408,
+            "x": 1410,
             "y": 3660
           },
           "group": "nodes",
@@ -1297,6 +1325,13 @@
                     "nameDefault": "id",
                     "type": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.97ie488do7.payload.output.device.id}}\",\n        \"tooltip\": \"{{local.97ie488do7.payload.output.device.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "deviceName",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Passkey/FIDO2\"\n      }\n    ]\n  }\n]",
+                    "key": 0.06576326150514977,
+                    "label": "deviceName (string - flowInstance)",
+                    "type": "string"
                   }
                 ]
               }
@@ -11261,7 +11296,7 @@
             "nodeType": "CONNECTION",
             "properties": {
               "customTemplateVariant": {
-                "value": "{}"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Master Flow New Ping Device Paired\"\n      }\n    ]\n  }\n]"
               },
               "email": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.pklfm2u7rk.payload.output.matchedUser.email}}\",\n        \"tooltip\": \"{{local.pklfm2u7rk.payload.output.matchedUser.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -11299,7 +11334,7 @@
                 ]
               },
               "templateVariant": {
-                "value": "Master Flow New Ping Device Paired"
+                "value": "enterCustomValue"
               },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -11438,7 +11473,7 @@
                   },
                   {
                     "name": "origin",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://auth.pingone.com\"\n      }\n    ]\n  }\n]",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-str-fidoOrigin}}\"\n      }\n    ]\n  }\n]",
                     "key": 0.17411306743081623,
                     "label": "origin (string - flowInstance)",
                     "type": "string"
@@ -12019,8 +12054,8 @@
             "idUnique": "86zosmcm9g"
           },
           "position": {
-            "x": 1691,
-            "y": 5071.4443359375
+            "x": 1746.9409351042004,
+            "y": 5183.546053341972
           },
           "group": "nodes",
           "removed": false,
@@ -12034,7 +12069,12 @@
         {
           "data": {
             "id": "i1zkpx8b72",
-            "nodeType": "EVAL"
+            "nodeType": "EVAL",
+            "properties": {
+              "7fmzaa2exb": {
+                "value": "anyTriggersFalse"
+              }
+            }
           },
           "position": {
             "x": 1568,
@@ -12431,7 +12471,10 @@
                 "value": true
               },
               "outcomeStatusDetail": {
-                "value": null
+                "value": "Device Registration "
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Started Device Registration\"\n      }\n    ]\n  }\n]"
               }
             },
             "idUnique": "vp8mvklpzw"
@@ -17476,6 +17519,25 @@
           "grabbable": true,
           "pannable": true,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "ky49453jpi",
+            "source": "i1zkpx8b72",
+            "target": "sk0fxugh05"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
         }
       ]
     },
@@ -17528,7 +17590,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726230447306,
+  "savedDate": 1726398347288,
   "variables": [
     {
       "context": "flowInstance",

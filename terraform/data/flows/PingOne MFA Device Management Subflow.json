@@ -13,8 +13,8 @@
     "notificationsConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1725890625172,
-  "currentVersion": 109,
+  "createdDate": 1726486623861,
+  "currentVersion": 134,
   "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
   "description": "Imported on Fri Mar 01 2024 21:47:11 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -58,17 +58,15 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Management Subflow",
-  "publishedVersion": 109,
+  "publishedVersion": 134,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
-    "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}",
     "cssLinks": [
       "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css",
       "https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css",
-      "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",
-      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.9/end-user-nano.css"
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     ],
     "flowTimeoutInSeconds": 30000,
     "logLevel": 3,
@@ -85,12 +83,13 @@
         "referrerpolicy": "",
         "type": ""
       }
-    ]
+    ],
+    "css": ".companyLogo {\n    /* Logo image URL set using Branding Node  */\n    height: 65px;\n}\n.style {\n  float: left !important;\n}"
   },
   "timeouts": "null",
-  "updatedDate": 1725890626686,
+  "updatedDate": 1726486625658,
   "flowId": "1f52f5f9eeb123b76069cb24cc5c2e90",
-  "versionId": 109,
+  "versionId": 134,
   "graphData": {
     "elements": {
       "nodes": [
@@ -146,8 +145,8 @@
             "type": "action"
           },
           "position": {
-            "x": 694,
-            "y": 934
+            "x": 690,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -164,7 +163,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 904,
+            "x": 911,
             "y": 1294
           },
           "group": "nodes",
@@ -230,7 +229,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2730,
+            "x": 2737,
             "y": 1504
           },
           "group": "nodes",
@@ -248,7 +247,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1080,
+            "x": 1087,
             "y": 484
           },
           "group": "nodes",
@@ -271,7 +270,7 @@
             }
           },
           "position": {
-            "x": 900,
+            "x": 907,
             "y": 544
           },
           "group": "nodes",
@@ -309,10 +308,10 @@
                 "value": "/* \n  This selector class is required as DV\n  injects a div into any data-skcomponent=\"skbutton\",\n  which alters layout\n*/\nbutton > div:first-child {\n display: contents;\n}  \n\n.borderexample {\n border-width:3px;\n border-style:solid;\n border-color:#FF0000;\n}\n\n.tile {\npadding-left: 0.75rem;\npadding-right:0.75rem;\npadding-top:11px;\npadding-bottom:11px;\ntext-algin: center;\ntext-decoration: none;\nvertical-align: middle;\nuser-select:none;\nborder: 1px solid grey;\nbackground-color: #00000000;\nmax-width: 85%\n}\n\n.btn-makeDefault {\nfont-size: smaller;\n}\n\n.btn-edit {\nalign-self: center;\nmax-width: 15% !important;\n}\n\n.row-manage {\npadding-left: 12px;\nmargin-top: 10px;\nmargin-bottom: 10px;\n}\n\n.text-display {\nfont-size: smaller;\n}\n\n.text-displaySecondary {\nfont-size: smaller !important;\ncolor: #686f77 !important;\n}\n\n/* .hidden-input {\n  outline: none;\n  border: none;\n  background-color: transparent;\n  color:#4c7637;\n} */\n/* \n.hidden-input,\n.hidden-input::placeholder {\n  outline: none;\n  border: none;\n  background-color: transparent;\n  color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left; \n  text-indent: -10px; \n  padding-left: 10px; \n} */\n\n.hidden-input,\n.hidden-input:enabled,\n.hidden-input:enabled::placeholder {\n  background-color: #fff; /* Add background color for the enabled state */\n  color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left;\n  /* text-indent: -10px;\n  padding-left: 10px; */\n}\n\n.hidden-input::placeholder {\n  /* Adjust the left padding to move the placeholder text to the left */\n  padding-left: 5px; /* Adjust the value as needed */\n}\n\n.hidden-input:disabled {\n  outline: none;\n  border: none;\n  background-color: transparent;\n  color:#267ba5;\n  font-size: 15px;\n  padding: 5px;\n  text-align: left;\n  padding-left: 10px;\n}\n\n.hidden-input:disabled::placeholder {\n color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left;\n  text-indent: -10px;\n  padding-left: 10px;\n}\n\n.hidden-input:disabled::value {\n color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left;\n  text-indent: -10px;\n  padding-left: 10px;\n}\n\n.hide {\n  display:none;\n}\n\n.btn-check {\n  color:green;\n}\n\n/* .btn-delete {\nalign-self: center;\nmax-width: 8%;\n} */\n\n.transparent-trash{\n  background:transparent;\n  border:none;\n  font-size:20px;\n  color:red;\n}"
               },
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n    <!-- Main container for centering content -->\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <!-- Container with fixed width for the card -->\n        <div style=\"max-width: 480px; width: 100%\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5\">\n                <main aria-labelledby=\"title\">\n                <!-- Card body with padding and column layout -->\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                     <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Conditional textOne -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textTwo -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Feedback messages -->\n                   <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\"  data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n                    <p id=\"maxDevicesFeedback\" data-id=\"feedback\" class=\"text-success text-center\"></p>\n                    <p id=\"deleteFeedback\" data-id=\"feedback\" class=\"text-success text-center\"></p>\n\n                    <!-- Device management form -->\n                    <form id=\"deviceManagementForm\" data-id=\"deviceManagementForm\" class=\"form\">\n                        {{#each devices}}\n                        <div class=\"row row-manage\">\n                            <div class=\"flex:6 tile d-flex flex-grow-1 align-items-center gap-4 w-75\" style=\"color:#4c7637\" type=\"submit\">\n                                <i class=\"mdi {{displayIcon}} text-dark fs-2\" aria-hidden=\"true\"></i>\n                                <div class=\"d-flex flex-column text-start gap-1\">\n                                    <input class=\"hidden-input primary-color-text\" type=\"text\" id=\"nickname-{{id}}\" name=\"nickname-{{id}}\" placeholder=\"{{displayNickname}}\" value=\"{{displayNickname}}\" autocomplete=\"off\" data-id=\"nickname-input\" disabled/>\n                                    <div class=\"text-primary text-displaySecondary primary-color-text\">{{displayType}}</div>\n                                    <div class=\"fs-5 text-displaySecondary\">\n                                        {{displayText}}\n                                    </div>\n                                </div>\n                                <div class=\"d-flex flex-column text-start gap-1\">\n                                    <button id=\"nicknameSubmit-{{id}}\" class=\"btn btn-link\" data-id=\"button\" type=\"button\" role=\"button\" aria-label=\"Save\" style=\"display:none; color:green;\" disabled>\n                                        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                                            <path fill=\"currentColor\" d=\"M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59z\"/>\n                                        </svg>\n                                    </button>\n                                </div>\n                                <div class=\"d-flex flex-column make-default gap-1 ms-auto\">\n                                    <button class=\"btn btn-link btn-makeDefault\" data-id=\"submit-button\" type=\"button\" id=\"btnMakeDefault-{{id}}\">\n                                        Set as Default\n                                    </button>\n                                </div>\n                            </div>\n                            {{#ifEquals type \"MAGIC\"}}\n                            <div class=\"flex:1 btn-edit\">\n                                <button id=\"btnDelete-{{id}}\" data-id=\"delete-button\" type=\"button\" class=\"btn mdi mdi-trash-can-outline transparent-trash text-end\"></button>\n                                <button class=\"btn btn-link btn-make-default text-end\" data-id=\"submit-button\" type=\"submit\" id=\"btnEdit-{{id}}\" style=\"display:none\">\n                                    <svg class=\"mdi-icon css-vzqeze e146bxl90\" display=\"flex\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                                        <path d=\"M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z\"></path>\n                                    </svg>\n                                </button>\n                            </div>\n                            {{else}}\n                            <div class=\"flex:1 btn-edit\">\n                                <button class=\"btn btn-link btn-make-default\" data-id=\"submit-button\" type=\"submit\" id=\"btnEdit-{{id}}\">\n                                    <svg class=\"mdi-icon css-vzqeze e146bxl90\" display=\"flex\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                                        <path d=\"M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z\"></path>\n                                    </svg>\n                                </button>\n                                <button id=\"btnDelete-{{id}}\" data-id=\"delete-button\" type=\"button\" class=\"btn mdi mdi-trash-can-outline transparent-trash text-end\"></button>\n                            </div>\n                            {{/ifEquals}}\n                        </div>\n                        <!-- Hidden buttons for form submission -->\n                        <button id=\"nicknameSubmitBtn\" data-id=\"nicknameSubmitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"setNickname\" data-skform=\"deviceManagementForm\" style=\"display:none\"></button>\n                        <button id=\"defaultSubmitBtn\" data-id=\"defaultSubmitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"setDefault\" data-skform=\"deviceManagementForm\" style=\"display:none\"></button>\n                        <button id=\"deleteDeviceBtn\" data-id=\"deleteDeviceBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"deleteDevice\" data-skform=\"deviceManagementForm\" style=\"display:none\"></button>\n                           <!-- <button id=\"btnCreate\" data-id=\"btnCreate\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"btnCreate\" data-skform=\"deviceManagementForm\" style=\"display:none\"></button> -->\n\n                        {{/each}}\n                        <!-- Hidden inputs for submission data -->\n                        <input class=\"input\" type=\"text\" id=\"nicknameToSubmit\" name=\"nicknameToSubmit\" autocomplete=\"off\" data-id=\"nickname-submission\" style=\"display:none;\"/>\n                        <input class=\"input\" type=\"text\" id=\"idToSubmit\" name=\"idToSubmit\" autocomplete=\"off\" data-id=\"id-submission\" style=\"display:none;\"/>\n                    </form>\n\n                    <!-- Conditional buttons for actions -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"doneBtn\" data-id=\"doneBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"deviceManagementForm\" data-skbuttonvalue=\"CONTINUE\">\n                            {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                    {{#if showRegButton}}\n                    <div class=\"d-flex flex-column\">\n                        <button class=\"btn btn-link\" data-id=\"submit-button\" type=\"submit\" class=\"btn btn-link mb-3\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"REGISTER\" id=\"btnRegister\" data-skform=\"deviceManagementForm\">\n                            {{buttonLabel2}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                "value": "<div class=\"end-user-nano\">\n    <!-- Main container for centering content -->\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <!-- Container with fixed width for the card -->\n        <div style=\"max-width: 480px; width: 100%\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5\">\n                <main aria-labelledby=\"title\">\n                <!-- Card body with padding and column layout -->\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                     <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n                    <!-- Conditional title -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Conditional textOne -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional textTwo -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Feedback messages -->\n                   <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\"  data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n                    <p id=\"maxDevicesFeedback\" data-id=\"feedback\" class=\"text-success text-center\"></p>\n                    <p id=\"deleteFeedback\" data-id=\"feedback\" class=\"text-success text-center\"></p>\n\n                    <!-- Device management form -->\n                    <form id=\"deviceManagementForm\" data-id=\"deviceManagementForm\" class=\"form\">\n                        {{#each devices}}\n                        <div class=\"row row-manage\">\n                            <div class=\"flex:6 tile d-flex flex-grow-1 align-items-center gap-4 w-75\" style=\"color:#4c7637\" type=\"submit\">\n                                <i class=\"mdi {{displayIcon}} text-dark fs-2\" aria-hidden=\"true\"></i>\n                                <div class=\"d-flex flex-column text-start gap-1\">\n                                    <input class=\"hidden-input primary-color-text\" type=\"text\" id=\"nickname-{{id}}\" name=\"nickname-{{id}}\" placeholder=\"{{displayNickname}}\" value=\"{{displayNickname}}\" autocomplete=\"off\" data-id=\"nickname-input\" disabled/>\n                                    <div class=\"text-primary text-displaySecondary primary-color-text\">{{displayType}}</div>\n                                    <div class=\"fs-5 text-displaySecondary\">\n                                        {{displayText}}\n                                    </div>\n                                </div>\n                                <div class=\"d-flex flex-column text-start gap-1\">\n                                    <button id=\"nicknameSubmit-{{id}}\" class=\"btn btn-link\" data-id=\"button\" type=\"button\" role=\"button\" aria-label=\"Save\" style=\"display:none; color:green;\" disabled>\n                                        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                                            <path fill=\"currentColor\" d=\"M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59z\"/>\n                                        </svg>\n                                    </button>\n                                </div>\n                                <div class=\"d-flex flex-column make-default gap-1 ms-auto\">\n                                    <button class=\"btn btn-link btn-makeDefault\" data-id=\"submit-button\" type=\"button\" id=\"btnMakeDefault-{{id}}\">\n                                        Set as Default\n                                    </button>\n                                </div>\n                            </div>\n                            {{#ifEquals type \"MAGIC\"}}\n                            <div class=\"flex:1 btn-edit\">\n                                <button id=\"btnDelete-{{id}}\" data-id=\"delete-button\" type=\"button\" class=\"btn mdi mdi-trash-can-outline transparent-trash text-end\"></button>\n                                <button class=\"btn btn-link btn-make-default text-end\" data-id=\"submit-button\" type=\"submit\" id=\"btnEdit-{{id}}\" style=\"display:none\">\n                                    <svg class=\"mdi-icon css-vzqeze e146bxl90\" display=\"flex\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                                        <path d=\"M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z\"></path>\n                                    </svg>\n                                </button>\n                            </div>\n                            {{else}}\n                            <div class=\"flex:1 btn-edit\">\n                                <button class=\"btn btn-link btn-make-default\" data-id=\"submit-button\" type=\"submit\" id=\"btnEdit-{{id}}\">\n                                    <svg class=\"mdi-icon css-vzqeze e146bxl90\" display=\"flex\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                                        <path d=\"M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z\"></path>\n                                    </svg>\n                                </button>\n                                <button id=\"btnDelete-{{id}}\" data-id=\"delete-button\" type=\"button\" class=\"btn mdi mdi-trash-can-outline transparent-trash text-end\"></button>\n                            </div>\n                            {{/ifEquals}}\n                        </div>\n                        <!-- Hidden buttons for form submission -->\n                        <button id=\"nicknameSubmitBtn\" data-id=\"nicknameSubmitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"setNickname\" data-skform=\"deviceManagementForm\" style=\"display:none\"></button>\n                        <button id=\"defaultSubmitBtn\" data-id=\"defaultSubmitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"setDefault\" data-skform=\"deviceManagementForm\" style=\"display:none\"></button>\n                        <button id=\"deleteDeviceBtn\" data-id=\"deleteDeviceBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"deleteDevice\" data-skform=\"deviceManagementForm\" style=\"display:none\"></button>\n                       \n\n                        {{/each}}\n                        <!-- Hidden inputs for submission data -->\n                        <input class=\"input\" type=\"text\" id=\"nicknameToSubmit\" name=\"nicknameToSubmit\" autocomplete=\"off\" data-id=\"nickname-submission\" style=\"display:none;\"/>\n                        <input class=\"input\" type=\"text\" id=\"idToSubmit\" name=\"idToSubmit\" autocomplete=\"off\" data-id=\"id-submission\" style=\"display:none;\"/>\n                    </form>\n\n                    <!-- Conditional buttons for actions -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"doneBtn\" data-id=\"doneBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"deviceManagementForm\" data-skbuttonvalue=\"CONTINUE\">\n                            {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                    {{#if showRegButton}}\n                    <div class=\"d-flex flex-column\">\n                        <button class=\"btn btn-link\" data-id=\"submit-button\" type=\"submit\" class=\"btn btn-link mb-3\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"REGISTER\" id=\"btnRegister\" data-skform=\"deviceManagementForm\">\n                            {{buttonLabel2}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {
-                "value": "let devices = {{local.13gzhnm7so.payload.output.devices}};\nvar defaultDeviceId = devices[0].id;\nvar defaultButtonId = \"btnMakeDefault-\" + defaultDeviceId;\nvar defaultButton = document.getElementById(defaultButtonId);\n\nif (defaultButton) {\n    defaultButton.style.display = 'none';\n}\n\nvar dynamicVariables = {};\n\n\n\n\n//For Loop for Manging objects on the screen\n\nfor (let i = 0; i < devices.length; i++) {\n    var dynamicVariableName = \"btnEdit-\" + devices[i].id;\n    dynamicVariables[dynamicVariableName] = \"btnEdit-\" + devices[i].id;\n\n    var buttonElement = document.getElementById(dynamicVariableName);\n\n    console.log(\"Dynamic variable name:\", dynamicVariableName);\n    console.log(\"Button element:\", buttonElement);\n\n    if (buttonElement) {\n        // Use a closure to capture the value of i\n        (function(index) {\n            buttonElement.addEventListener(\"click\", function() {\n                console.log(\"Button clicked! \" + dynamicVariables[this.id]);\n\n                // Enable the hidden-input (nickname element)\n                var nicknameElement = document.getElementById(\"nickname-\" + devices[index].id);\n                if (nicknameElement) {\n                    console.log(\"Nickname element found:\", nicknameElement);\n                    nicknameElement.disabled = false; \n                    nicknameElement.classList.add(\"enabled\");\n                } else {\n                    console.log(\"Nickname element not found\");\n                }\n\n                var nicknameButton = document.getElementById(\"nicknameButton-\" + devices[index].id);\n                if (nicknameButton) {\n                    console.log(\"Nickname button found:\", nicknameButton);\n                    nicknameButton.classList.remove(\"hidden\");\n                } else {\n                    console.log(\"Nickname button not found\");\n                }\n\n                var newButton = document.getElementById(\"nicknameSubmit-\" + devices[index].id);\n                if (newButton) {\n                    console.log(\"New button found:\", newButton);\n                    newButton.style.display = 'flex'; // Show the button\n                    newButton.disabled = false; // Enable the button\n                } else {\n                    console.log(\"New button not found\");\n                }\n            });\n\n            // Add event listener for nicknameSubmit-{id} button\n            var submitButtonElement = document.getElementById(\"nicknameSubmit-\" + devices[index].id);\n            if (submitButtonElement) {\n                submitButtonElement.addEventListener(\"click\", function() {\n                    // Get the value from the nickname-{id} input\n                    var nicknameInputElement = document.getElementById(\"nickname-\" + devices[index].id);\n                    var nicknameValue = nicknameInputElement.value;\n\n                    // Set the value of nicknameToSubmit input\n                    var nicknameToSubmitInput = document.getElementById(\"nicknameToSubmit\");\n                    if (nicknameToSubmitInput) {\n                        nicknameToSubmitInput.value = nicknameValue;\n                    }\n\n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the nicknameSubmitBtn button\n                    var nicknameSubmitBtn = document.getElementById(\"nicknameSubmitBtn\");\n                    if (nicknameSubmitBtn) {\n                        nicknameSubmitBtn.click();\n                    }\n\n                     // Re-disable the hidden-input (nickname element)\n                        nicknameInputElement.disabled = true;\n                        nicknameInputElement.classList.remove(\"enabled\");\n\n                        // Hide the nicknameSubmit-{id} button\n                        submitButtonElement.style.display = 'none';\n                });\n            } else {\n                console.log(\"Submit button not found for\", dynamicVariableName);\n            }\n\n            // Add event listener for btnMakeDefault-{id} button\n            var defaultButtonElement = document.getElementById(\"btnMakeDefault-\" + devices[index].id);\n            if (defaultButtonElement) {\n                defaultButtonElement.addEventListener(\"click\", function() {\n                  \n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the setDefault button\n                    var defaultSubmitBtn = document.getElementById(\"defaultSubmitBtn\");\n                    if (defaultSubmitBtn) {\n                        defaultSubmitBtn.click();\n                    }\n\n                });\n            } else {\n                console.log(\"Submit button not found for\", dynamicVariableName);\n            }\n\n            // Add event listener for btnDelete-{id} button\n            var deleteButtonElement = document.getElementById(\"btnDelete-\" + devices[index].id);\n            var deleteFeedbackElement = document.getElementById(\"deleteFeedback\");\n\n            if (deleteButtonElement) {\n                deleteButtonElement.addEventListener(\"click\", function() {\n                    if (devices.length <= 1) {\n                        console.log(\"Cannot delete. Only one device left.\");\n                        this.disabled = true; // This line disables the button, you can remove it if you don't want to disable\n                        deleteFeedbackElement.textContent = \"Please add a new device before deleting your last remaining device\";\n                        return; // Exit the function to prevent further action\n                    }\n                \n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the deleteDevice button\n                    var deleteDeviceBtn = document.getElementById(\"deleteDeviceBtn\");\n                    if (deleteDeviceBtn) {\n                        deleteDeviceBtn.click();\n                    }\n\n                });\n            } else {\n                console.log(\"Delete button not found for\", dynamicVariableName);\n            }\n\n        })(i);\n    } else {\n        console.log(\"Button element not found for\", dynamicVariableName);\n    }\n}\n\n// Add jS to tell the user they can not register another device, the have hit the max.\n\nconsole.log(\"JS begins\");\nconst size = {{local.x1veihohtu.payload.output.rawResponse.size}};\nconst maxAllowedDevices = {{local.x1veihohtu.payload.output.mfaSettings.pairing.maxAllowedDevices}};\nconsole.log(\"Size (number of active devices): \", size);\nconsole.log(\"maxAllowed: \", maxAllowedDevices);\n\n    var btnCreate = document.getElementById('btnCreate');\n    var dvBtnCreate = document.getElementById('dvBtnCreate');\n\n    btnCreate.addEventListener('click', function() {\n        // Check if 'size' is smaller than 'maxAllowedDevices'\n        if (size < maxAllowedDevices) {\n              console.log(\"eventListener\")\n              console.log(\"Size (number of active devices): \", size);\n                console.log(\"maxAllowed: \", maxAllowedDevices);\n            dvBtnCreate.click();\n        } else {\n              console.log(\"Maxedout\")\n            maxDevicesFeedback.innerText = \"You have reached the max device limit. To register another device, you will have to delete an existing device.\";\n            btnCreate.disabled = true;\n\n        }\n    });\n\n"
+                "value": "let devices = {{local.13gzhnm7so.payload.output.devices}};\nvar defaultDeviceId = devices[0].id;\nvar defaultButtonId = \"btnMakeDefault-\" + defaultDeviceId;\nvar defaultButton = document.getElementById(defaultButtonId);\n\nif (defaultButton) {\n    defaultButton.style.display = 'none';\n}\n\nvar dynamicVariables = {};\n\n\n\n\n//For Loop for Manging objects on the screen\n\nfor (let i = 0; i < devices.length; i++) {\n    var dynamicVariableName = \"btnEdit-\" + devices[i].id;\n    dynamicVariables[dynamicVariableName] = \"btnEdit-\" + devices[i].id;\n\n    var buttonElement = document.getElementById(dynamicVariableName);\n\n    console.log(\"Dynamic variable name:\", dynamicVariableName);\n    console.log(\"Button element:\", buttonElement);\n\n    if (buttonElement) {\n        // Use a closure to capture the value of i\n        (function (index) {\n            buttonElement.addEventListener(\"click\", function () {\n                console.log(\"Button clicked! \" + dynamicVariables[this.id]);\n\n                // Enable the hidden-input (nickname element)\n                var nicknameElement = document.getElementById(\"nickname-\" + devices[index].id);\n                if (nicknameElement) {\n                    console.log(\"Nickname element found:\", nicknameElement);\n                    nicknameElement.disabled = false;\n                    nicknameElement.classList.add(\"enabled\");\n                } else {\n                    console.log(\"Nickname element not found\");\n                }\n\n                var nicknameButton = document.getElementById(\"nicknameButton-\" + devices[index].id);\n                if (nicknameButton) {\n                    console.log(\"Nickname button found:\", nicknameButton);\n                    nicknameButton.classList.remove(\"hidden\");\n                } else {\n                    console.log(\"Nickname button not found\");\n                }\n\n                var newButton = document.getElementById(\"nicknameSubmit-\" + devices[index].id);\n                if (newButton) {\n                    console.log(\"New button found:\", newButton);\n                    newButton.style.display = 'flex'; // Show the button\n                    newButton.disabled = false; // Enable the button\n                } else {\n                    console.log(\"New button not found\");\n                }\n            });\n\n            // Add event listener for nicknameSubmit-{id} button\n            var submitButtonElement = document.getElementById(\"nicknameSubmit-\" + devices[index].id);\n            if (submitButtonElement) {\n                submitButtonElement.addEventListener(\"click\", function () {\n                    // Get the value from the nickname-{id} input\n                    var nicknameInputElement = document.getElementById(\"nickname-\" + devices[index].id);\n                    var nicknameValue = nicknameInputElement.value;\n\n                    // Set the value of nicknameToSubmit input\n                    var nicknameToSubmitInput = document.getElementById(\"nicknameToSubmit\");\n                    if (nicknameToSubmitInput) {\n                        nicknameToSubmitInput.value = nicknameValue;\n                    }\n\n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the nicknameSubmitBtn button\n                    var nicknameSubmitBtn = document.getElementById(\"nicknameSubmitBtn\");\n                    if (nicknameSubmitBtn) {\n                        nicknameSubmitBtn.click();\n                    }\n\n                    // Re-disable the hidden-input (nickname element)\n                    nicknameInputElement.disabled = true;\n                    nicknameInputElement.classList.remove(\"enabled\");\n\n                    // Hide the nicknameSubmit-{id} button\n                    submitButtonElement.style.display = 'none';\n                });\n            } else {\n                console.log(\"Submit button not found for\", dynamicVariableName);\n            }\n\n            // Add event listener for btnMakeDefault-{id} button\n            var defaultButtonElement = document.getElementById(\"btnMakeDefault-\" + devices[index].id);\n            if (defaultButtonElement) {\n                defaultButtonElement.addEventListener(\"click\", function () {\n\n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the setDefault button\n                    var defaultSubmitBtn = document.getElementById(\"defaultSubmitBtn\");\n                    if (defaultSubmitBtn) {\n                        defaultSubmitBtn.click();\n                    }\n\n                });\n            } else {\n                console.log(\"Submit button not found for\", dynamicVariableName);\n            }\n\n            // Add event listener for btnDelete-{id} button\n            var deleteButtonElement = document.getElementById(\"btnDelete-\" + devices[index].id);\n            var deleteFeedbackElement = document.getElementById(\"deleteFeedback\");\n\n            if (deleteButtonElement) {\n                deleteButtonElement.addEventListener(\"click\", function () {\n                    if (devices.length <= 1) {\n                        console.log(\"Cannot delete. Only one device left.\");\n                        this.disabled = true; // This line disables the button, you can remove it if you don't want to disable\n                        deleteFeedbackElement.textContent = \"Please add a new device before deleting your last remaining device\";\n                        return; // Exit the function to prevent further action\n                    }\n\n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the deleteDevice button\n                    var deleteDeviceBtn = document.getElementById(\"deleteDeviceBtn\");\n                    if (deleteDeviceBtn) {\n                        deleteDeviceBtn.click();\n                    }\n\n                });\n            } else {\n                console.log(\"Delete button not found for\", dynamicVariableName);\n            }\n\n        })(i);\n    } else {\n        console.log(\"Button element not found for\", dynamicVariableName);\n    }\n}\n\n// Add jS to tell the user they can not register another device, the have hit the max.\n\n\nconst size = {{local.x1veihohtu.payload.output.rawResponse.size}};\nconst maxAllowedDevices = {{local.x1veihohtu.payload.output.mfaSettings.pairing.maxAllowedDevices}};\nconsole.log(\"Size (number of active devices): \", size);\nconsole.log(\"maxAllowed: \", maxAllowedDevices);\n\nvar btnCreate = document.getElementById('btnCreate');\nvar dvBtnCreate = document.getElementById('dvBtnCreate');\n\nbtnCreate.addEventListener('click', function () {\n    // Check if 'size' is smaller than 'maxAllowedDevices'\n    if (size < maxAllowedDevices) {\n        console.log(\"eventListener\")\n        console.log(\"Size (number of active devices): \", size);\n        console.log(\"maxAllowed: \", maxAllowedDevices);\n        dvBtnCreate.click();\n    } else {\n        console.log(\"Maxedout\")\n        maxDevicesFeedback.innerText = \"You have reached the max device limit. To register another device, you will have to delete an existing device.\";\n        btnCreate.disabled = true;\n\n    }\n});\n\n"
               },
               "devices": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"devices\",\n        \"data\": \"{{local.13gzhnm7so.payload.output.devices}}\",\n        \"tooltip\": \"{{local.13gzhnm7so.payload.output.devices}}\",\n        \"children\": [\n          {\n            \"text\": \"devices\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -400,7 +399,7 @@
           },
           "position": {
             "x": 1980,
-            "y": 934
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -418,7 +417,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 544,
+            "x": 551,
             "y": 1294
           },
           "group": "nodes",
@@ -471,7 +470,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1050,
+            "x": 1057,
             "y": 634
           },
           "group": "nodes",
@@ -527,7 +526,7 @@
             "type": "action"
           },
           "position": {
-            "x": 630,
+            "x": 637,
             "y": 394
           },
           "group": "nodes",
@@ -577,7 +576,7 @@
             "type": "action"
           },
           "position": {
-            "x": 214,
+            "x": 221,
             "y": 754
           },
           "group": "nodes",
@@ -657,7 +656,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 754,
+            "x": 761,
             "y": 1294
           },
           "group": "nodes",
@@ -705,8 +704,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1324,
-            "y": 934
+            "x": 1320,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -758,8 +757,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 988.6375427891858,
-            "y": 933.7132348564533
+            "x": 990,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -776,8 +775,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1144,
-            "y": 934
+            "x": 1140,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -835,7 +834,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1084,
+            "x": 1091,
             "y": 1294
           },
           "group": "nodes",
@@ -866,7 +865,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 424,
+            "x": 431,
             "y": 1294
           },
           "group": "nodes",
@@ -916,7 +915,7 @@
             "type": "action"
           },
           "position": {
-            "x": 274,
+            "x": 281,
             "y": 1144
           },
           "group": "nodes",
@@ -949,7 +948,7 @@
             "type": "action"
           },
           "position": {
-            "x": 754,
+            "x": 761,
             "y": 1684
           },
           "group": "nodes",
@@ -982,7 +981,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 454,
+            "x": 461,
             "y": 1684
           },
           "group": "nodes",
@@ -1000,7 +999,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 574,
+            "x": 581,
             "y": 1684
           },
           "group": "nodes",
@@ -1050,7 +1049,7 @@
             "type": "action"
           },
           "position": {
-            "x": 274,
+            "x": 281,
             "y": 1534
           },
           "group": "nodes",
@@ -1154,6 +1153,20 @@
                     "name": "testDeviceID",
                     "type": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "companyLogo",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]",
+                    "key": 0.6369317814875126,
+                    "label": "companyLogo (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "companyName",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]",
+                    "key": 0.47494203981503125,
+                    "label": "companyName (string - flowInstance)",
+                    "type": "string"
                   }
                 ]
               }
@@ -1162,7 +1175,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 750,
+            "x": 757,
             "y": 484
           },
           "group": "nodes",
@@ -1191,7 +1204,7 @@
             }
           },
           "position": {
-            "x": 1200,
+            "x": 1207,
             "y": 634
           },
           "group": "nodes",
@@ -1247,7 +1260,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1320,
+            "x": 1327,
             "y": 574
           },
           "group": "nodes",
@@ -1334,7 +1347,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1440,
+            "x": 1447,
             "y": 664
           },
           "group": "nodes",
@@ -1364,7 +1377,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1440,
+            "x": 1447,
             "y": 484
           },
           "group": "nodes",
@@ -1383,8 +1396,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 544,
-            "y": 934
+            "x": 540,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -1414,8 +1427,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 424,
-            "y": 934
+            "x": 420,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -1455,31 +1468,8 @@
             "type": "action"
           },
           "position": {
-            "x": 990,
+            "x": 997,
             "y": 214
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "99w0570i10",
-            "nodeType": "EVAL",
-            "properties": {
-              "by0hrsztbf": {
-                "value": "allTriggersTrue"
-              }
-            }
-          },
-          "position": {
-            "x": 814,
-            "y": 934
           },
           "group": "nodes",
           "removed": false,
@@ -1539,7 +1529,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2344,
+            "x": 2351,
             "y": 934
           },
           "group": "nodes",
@@ -1575,7 +1565,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2687.57451682882,
+            "x": 2694.57451682882,
             "y": 991.4180256416388
           },
           "group": "nodes",
@@ -1594,7 +1584,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2470.7200104184103,
+            "x": 2477.7200104184103,
             "y": 991.4180256416388
           },
           "group": "nodes",
@@ -1624,7 +1614,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2958.6426498418323,
+            "x": 2965.6426498418323,
             "y": 991.4180256416388
           },
           "group": "nodes",
@@ -1643,8 +1633,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1474,
-            "y": 934
+            "x": 1470,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -1688,8 +1678,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1654,
-            "y": 934
+            "x": 1650,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -1714,8 +1704,8 @@
             }
           },
           "position": {
-            "x": 1804,
-            "y": 934
+            "x": 1800,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -1738,7 +1728,7 @@
             }
           },
           "position": {
-            "x": 2134,
+            "x": 2141,
             "y": 934
           },
           "group": "nodes",
@@ -1757,7 +1747,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2524,
+            "x": 2531,
             "y": 1114
           },
           "group": "nodes",
@@ -1793,7 +1783,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2704,
+            "x": 2711,
             "y": 1114
           },
           "group": "nodes",
@@ -1823,7 +1813,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3274,
+            "x": 3281,
             "y": 1114
           },
           "group": "nodes",
@@ -1900,7 +1890,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2974,
+            "x": 2981,
             "y": 1114
           },
           "group": "nodes",
@@ -1918,7 +1908,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2796.001770034025,
+            "x": 2803.001770034025,
             "y": 991.4180256416388
           },
           "group": "nodes",
@@ -1936,7 +1926,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2824,
+            "x": 2831,
             "y": 1114
           },
           "group": "nodes",
@@ -1954,7 +1944,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3124,
+            "x": 3131,
             "y": 1114
           },
           "group": "nodes",
@@ -1987,7 +1977,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2714.6813301301213,
+            "x": 2721.6813301301213,
             "y": 1398.020225161157
           },
           "group": "nodes",
@@ -2017,7 +2007,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3330,
+            "x": 3337,
             "y": 1504
           },
           "group": "nodes",
@@ -2056,7 +2046,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3330,
+            "x": 3337,
             "y": 1260
           },
           "group": "nodes",
@@ -2074,7 +2064,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2497.8268237197117,
+            "x": 2504.8268237197117,
             "y": 1398.020225161157
           },
           "group": "nodes",
@@ -2092,7 +2082,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2490,
+            "x": 2497,
             "y": 1504
           },
           "group": "nodes",
@@ -2169,7 +2159,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3600,
+            "x": 3607,
             "y": 1260
           },
           "group": "nodes",
@@ -2199,7 +2189,7 @@
             "type": "action"
           },
           "position": {
-            "x": 4110,
+            "x": 4117,
             "y": 1260
           },
           "group": "nodes",
@@ -2276,7 +2266,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3030,
+            "x": 3037,
             "y": 1504
           },
           "group": "nodes",
@@ -2299,7 +2289,7 @@
             }
           },
           "position": {
-            "x": 2850,
+            "x": 2857,
             "y": 1504
           },
           "group": "nodes",
@@ -2317,7 +2307,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3180,
+            "x": 3187,
             "y": 1504
           },
           "group": "nodes",
@@ -2373,7 +2363,7 @@
             "type": "action"
           },
           "position": {
-            "x": 874,
+            "x": 881,
             "y": 814
           },
           "group": "nodes",
@@ -2429,7 +2419,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1174,
+            "x": 1181,
             "y": 814
           },
           "group": "nodes",
@@ -2485,7 +2475,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1504,
+            "x": 1511,
             "y": 814
           },
           "group": "nodes",
@@ -2530,7 +2520,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2294,
+            "x": 2301,
             "y": 1354
           },
           "group": "nodes",
@@ -2548,7 +2538,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2134,
+            "x": 2141,
             "y": 1354
           },
           "group": "nodes",
@@ -2604,7 +2594,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1834,
+            "x": 1841,
             "y": 814
           },
           "group": "nodes",
@@ -2660,7 +2650,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2524,
+            "x": 2531,
             "y": 874
           },
           "group": "nodes",
@@ -2708,7 +2698,7 @@
             "type": "action"
           },
           "position": {
-            "x": 3004,
+            "x": 3011,
             "y": 1744
           },
           "group": "nodes",
@@ -2727,7 +2717,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2464,
+            "x": 2471,
             "y": 1744
           },
           "group": "nodes",
@@ -2768,7 +2758,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2734,
+            "x": 2741,
             "y": 1744
           },
           "group": "nodes",
@@ -2786,7 +2776,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2854,
+            "x": 2861,
             "y": 1744
           },
           "group": "nodes",
@@ -2816,7 +2806,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2979.861109036465,
+            "x": 2986.861109036465,
             "y": 1640.0696870536403
           },
           "group": "nodes",
@@ -2835,7 +2825,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 600,
+            "x": 607,
             "y": 484
           },
           "group": "nodes",
@@ -2879,27 +2869,13 @@
                     "label": "p1UserId (string - flowInstance)",
                     "type": "string",
                     "nameDefault": "p1UserId"
-                  },
-                  {
-                    "name": "companyLogo",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]",
-                    "key": 0.11800943902077576,
-                    "label": "companyLogo (string - flowInstance)",
-                    "type": "string"
-                  },
-                  {
-                    "name": "companyName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]",
-                    "key": 0.520831769184017,
-                    "label": "companyName (string - flowInstance)",
-                    "type": "string"
                   }
                 ]
               }
             }
           },
           "position": {
-            "x": 480,
+            "x": 487,
             "y": 484
           },
           "group": "nodes",
@@ -2950,7 +2926,7 @@
             "idUnique": "9vz37l6ce2"
           },
           "position": {
-            "x": 270,
+            "x": 277,
             "y": 334
           },
           "group": "nodes",
@@ -3007,7 +2983,7 @@
             "idUnique": "o2v5xhdcbc"
           },
           "position": {
-            "x": 720,
+            "x": 727,
             "y": 214
           },
           "group": "nodes",
@@ -3079,7 +3055,7 @@
             "idUnique": "4xljppu16x"
           },
           "position": {
-            "x": 1170,
+            "x": 1177,
             "y": 1980
           },
           "group": "nodes",
@@ -3130,7 +3106,7 @@
             "idUnique": "am2nevw0wj"
           },
           "position": {
-            "x": 240,
+            "x": 247,
             "y": 1830
           },
           "group": "nodes",
@@ -3163,7 +3139,7 @@
             }
           },
           "position": {
-            "x": 330,
+            "x": 337,
             "y": 1980
           },
           "group": "nodes",
@@ -3182,7 +3158,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 450,
+            "x": 457,
             "y": 1980
           },
           "group": "nodes",
@@ -3224,7 +3200,7 @@
             }
           },
           "position": {
-            "x": 600,
+            "x": 607,
             "y": 1980
           },
           "group": "nodes",
@@ -3243,7 +3219,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 1290,
+            "x": 1297,
             "y": 1980
           },
           "group": "nodes",
@@ -3269,7 +3245,7 @@
             "properties": {}
           },
           "position": {
-            "x": 1410,
+            "x": 1417,
             "y": 1980
           },
           "group": "nodes",
@@ -3293,7 +3269,7 @@
             }
           },
           "position": {
-            "x": 720,
+            "x": 727,
             "y": 1980
           },
           "group": "nodes",
@@ -3328,7 +3304,7 @@
             }
           },
           "position": {
-            "x": 870,
+            "x": 877,
             "y": 1980
           },
           "group": "nodes",
@@ -3346,7 +3322,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 990,
+            "x": 997,
             "y": 1980
           },
           "group": "nodes",
@@ -3372,7 +3348,7 @@
             "properties": {}
           },
           "position": {
-            "x": 900,
+            "x": 907,
             "y": 2130
           },
           "group": "nodes",
@@ -3402,7 +3378,7 @@
             }
           },
           "position": {
-            "x": 3840,
+            "x": 3847,
             "y": 1260
           },
           "group": "nodes",
@@ -3420,7 +3396,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3960,
+            "x": 3967,
             "y": 1260
           },
           "group": "nodes",
@@ -3453,7 +3429,7 @@
             }
           },
           "position": {
-            "x": 2730,
+            "x": 2737,
             "y": 1260
           },
           "group": "nodes",
@@ -3471,7 +3447,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2537,
+            "x": 2544,
             "y": 1260
           },
           "group": "nodes",
@@ -3489,7 +3465,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3450,
+            "x": 3457,
             "y": 1260
           },
           "group": "nodes",
@@ -3507,7 +3483,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3720,
+            "x": 3727,
             "y": 1260
           },
           "group": "nodes",
@@ -3526,7 +3502,7 @@
             "label": "Evaluator"
           },
           "position": {
-            "x": 2854,
+            "x": 2861,
             "y": 1257.75
           },
           "group": "nodes",
@@ -3576,7 +3552,7 @@
             }
           },
           "position": {
-            "x": 3000,
+            "x": 3007,
             "y": 1260
           },
           "group": "nodes",
@@ -3594,7 +3570,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3165,
+            "x": 3172,
             "y": 1260
           },
           "group": "nodes",
@@ -3608,141 +3584,13 @@
         },
         {
           "data": {
-            "capabilityName": "customHTMLTemplate",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "id": "8etwnshynt",
-            "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "backgroundColor": {
-                "value": "#afd5ffff"
-              },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Done\"\n      }\n    ]\n  }\n]"
-              },
-              "buttonLabel2": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Register another device\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "canChangeAccount": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"false\"\n      }\n    ]\n  }\n]"
-              },
-              "customCSS": {
-                "value": "/* \n  This selector class is required as DV\n  injects a div into any data-skcomponent=\"skbutton\",\n  which alters layout\n*/\nbutton > div:first-child {\n display: contents;\n}  \n\n.borderexample {\n border-width:3px;\n border-style:solid;\n border-color:#FF0000;\n}\n\n.tile {\npadding-left: 0.75rem;\npadding-right:0.75rem;\npadding-top:11px;\npadding-bottom:11px;\ntext-algin: center;\ntext-decoration: none;\nvertical-align: middle;\nuser-select:none;\nborder: 1px solid grey;\nbackground-color: #00000000;\nmax-width: 85%\n}\n\n.btn-makeDefault {\nfont-size: smaller;\n}\n\n.btn-edit {\nalign-self: center;\nmax-width: 15%;\n}\n\n.row-manage {\npadding-left: 12px;\nmargin-top: 10px;\nmargin-bottom: 10px;\n}\n\n.text-display {\nfont-size: smaller;\n}\n\n.text-displaySecondary {\nfont-size: smaller !important;\ncolor: #686f77 !important;\n}\n\n/* .hidden-input {\n  outline: none;\n  border: none;\n  background-color: transparent;\n  color:#4c7637;\n} */\n/* \n.hidden-input,\n.hidden-input::placeholder {\n  outline: none;\n  border: none;\n  background-color: transparent;\n  color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left; \n  text-indent: -10px; \n  padding-left: 10px; \n} */\n\n.hidden-input,\n.hidden-input:enabled,\n.hidden-input:enabled::placeholder {\n  background-color: #fff; /* Add background color for the enabled state */\n  color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left;\n  /* text-indent: -10px;\n  padding-left: 10px; */\n}\n\n.hidden-input::placeholder {\n  /* Adjust the left padding to move the placeholder text to the left */\n  padding-left: 5px; /* Adjust the value as needed */\n}\n\n.hidden-input:disabled {\n  outline: none;\n  border: none;\n  background-color: transparent;\n  color:#267ba5;\n  font-size: 15px;\n  padding: 5px;\n  text-align: left;\n  padding-left: 10px;\n}\n\n.hidden-input:disabled::placeholder {\n color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left;\n  text-indent: -10px;\n  padding-left: 10px;\n}\n\n.hidden-input:disabled::value {\n color: #267ba5;\n  font-size: 12px;\n  padding: 5px;\n  text-align: left;\n  text-indent: -10px;\n  padding-left: 10px;\n}\n\n.hide {\n  display:none;\n}\n\n.btn-check {\n  color:green;\n}\n\n/* .btn-delete {\nalign-self: center;\nmax-width: 8%;\n} */\n\n.transparent-trash{\n  background:transparent;\n  border:none;\n  font-size:20px;\n  color:red;\n}"
-              },
-              "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\" max-width: 480px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n                  {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <p id=\"feedback\" data-id=\"feedback\" class=\"text-danger text-center mb-4\" data-skcomponent=\"skerror\"></p>\n                    <p id=\"maxDevicesFeedback\" data-id=\"feedback\" class=\"text-success text-center\"></p>\n                    <p id=\"deleteFeedback\" data-id=\"feedback\" class=\"text-success text-center\"></p>\n\n                    \n                    <form id=\"deviceManagementForm\" data-id=\"deviceManagementForm\" class=\"form\">\n                        {{#each devices}}\n                        <div class=\"row row-manage\">\n                            <div class=\"flex:6 tile d-flex flex-grow-1 align-items-center gap-4 w-75\"\n                                style=\"color:#4c7637\" type=\"submit\">\n                                <i class=\"mdi {{displayIcon}} text-dark fs-2\" aria-hidden=\"true\"></i>\n                                <div class=\"d-flex flex-column text-start gap-1\">\n                                    <input class=\"hidden-input\" type=\"text\" id=\"nickname-{{id}}\" name=\"nickname-{{id}}\" placeholder=\"{{displayNickname}}\" value=\"{{displayNickname}}\" autocomplete=\"off\" data-id=\"nickname-input\" disabled/>\n                                    <div class=\"text-primary text-displaySecondary\">{{displayType}}</div>\n                                    <div class=\"fs-5 text-displaySecondary\">\n                                        {{displayText}}\n                                    </div>\n                                </div>\n                                <div class=\"d-flex flex-column text-start gap-1\">\n                                    <button id=\"nicknameSubmit-{{id}}\" class=\"btn btn-link\" data-id=\"button\" type=\"button\" role=\"button\" aria-label=\"Save\" style=\"display:none; color:green;\"  disabled>\n                                                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                                                        <path fill=\"currentColor\" d=\"M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59z\"/>\n                                                    </svg>\n                                                </button>\n                                </div>\n                                <div class=\"d-flex flex-column make-default gap-1 ms-auto\">\n                                    <button class=\"btn btn-link btn-makeDefault\" data-id=\"submit-button\" type=\"button\"\n                                        class=\"btn btn-link mb-3\" id=\"btnMakeDefault-{{id}}\">\n                                        Set as Default\n                                    </button>\n                                </div>\n                            </div>\n                            {{#ifEquals type \"MAGIC\"}}\n                            <div class=\"flex:1 btn-edit\">\n                                <button id=\"btnDelete-{{id}}\" data-id=\"delete-button\" type=\"button\" class=\"btn mdi mdi-trash-can-outline transparent-trash text-end\"></button>\n                                <button class=\"btn btn-link btn-make-default text-end\" data-id=\"submit-button\" type=\"submit\" class=\"btn\" id=\"btnEdit-{{id}}\" style=\"display:none\">\n                                    <svg class=\"mdi-icon  css-vzqeze e146bxl90\" display=\"flex\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                                        <path d=\"M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z\"></path>\n                                    </svg>\n                                </button>\n                            </div>\n                            {{else}}\n                            <div class=\"flex:1 btn-edit\">\n                                <button class=\"btn btn-link btn-make-default\" data-id=\"submit-button\" type=\"submit\" class=\"btn\" id=\"btnEdit-{{id}}\">\n                                    <svg class=\"mdi-icon  css-vzqeze e146bxl90\" display=\"flex\" width=\"20\" height=\"20\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                                        <path d=\"M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z\"></path>\n                                    </svg>\n                                </button>\n                                <button id=\"btnDelete-{{id}}\" data-id=\"delete-button\" type=\"button\" class=\"btn mdi mdi-trash-can-outline transparent-trash text-end\"></button>\n                            </div>\n                            {{/ifEquals}}\n                        </div>\n                        <button id=\"nicknameSubmitBtn\" data-id=\"nicknameSubmitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"setNickname\" data-skform=\"deviceManagementForm\" style=\"display:none\" ></button>\n                        <button id=\"defaultSubmitBtn\" data-id=\"defaultSubmitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"setDefault\" data-skform=\"deviceManagementForm\" style=\"display:none\" ></button>\n                        <button id=\"deleteDeviceBtn\" data-id=\"deleteDeviceBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"deleteDevice\" data-skform=\"deviceManagementForm\" style=\"display:none\" ></button>\n\n                        {{/each}}\n                        <input class=\"input\" type=\"text\" id=\"nicknameToSubmit\" name=\"nicknameToSubmit\" autocomplete=\"off\" data-id=\"nickname-submission\" style=\"display:none;\"/>\n                        <input class=\"input\" type=\"text\" id=\"idToSubmit\" name=\"idToSubmit\" autocomplete=\"off\" data-id=\"id-submission\" style=\"display:none;\"/>\n                    </form>\n\n\n                    <!-- <div class=\"d-flex flex-column\">\n                    <button class=\"btn btn-link\" data-id=\"submit-button\" type=\"submit\" class=\"btn btn-link mb-3\"\n                                id=\"btnCreate\">\n                                Register another device\n                        </button>\n                    <button class=\"btn btn-link\" data-id=\"submit-button\" type=\"submit\" class=\"btn btn-link mb-3\"\n                                data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"REGISTER\"\n                                id=\"dvBtnCreate\" style=\"display:none\">\n                        </button>  -->\n                    <!-- {{#if showRegButton}}\n                <div class=\"d-flex flex-column\">\n                    <button id=\"registerBtn\" data-id=\"verifyBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"deviceManagementForm\" data-skbuttonvalue=\"REGISTER\">\n                       {{buttonLabel}}\n                       </button>\n                </div>\n                {{/if}} -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"doneBtn\" data-id=\"doneBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"deviceManagementForm\" data-skbuttonvalue=\"CONTINUE\">\n                       {{buttonLabel}}\n                       </button>\n                    </div>\n                    {{/if}}\n                    {{#if showRegButton}}\n                    <div class=\"d-flex flex-column\">\n                        <button class=\"btn btn-link\" data-id=\"submit-button\" type=\"submit\" class=\"btn btn-link mb-3\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"REGISTER\"\n                       id=\"btnRegister\" data-skform=\"deviceManagementForm\">\n                         {{buttonLabel2}}\n                    </button>\n                    </div>\n                    {{/if}}\n\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
-              },
-              "customScript": {
-                "value": "let devices = {{local.13gzhnm7so.payload.output.devices}};\nvar defaultDeviceId = devices[0].id;\nvar defaultButtonId = \"btnMakeDefault-\" + defaultDeviceId;\nvar defaultButton = document.getElementById(defaultButtonId);\n\nif (defaultButton) {\n    defaultButton.style.display = 'none';\n}\n\nvar dynamicVariables = {};\n\n\n\n\n//For Loop for Manging objects on the screen\n\nfor (let i = 0; i < devices.length; i++) {\n    var dynamicVariableName = \"btnEdit-\" + devices[i].id;\n    dynamicVariables[dynamicVariableName] = \"btnEdit-\" + devices[i].id;\n\n    var buttonElement = document.getElementById(dynamicVariableName);\n\n    console.log(\"Dynamic variable name:\", dynamicVariableName);\n    console.log(\"Button element:\", buttonElement);\n\n    if (buttonElement) {\n        // Use a closure to capture the value of i\n        (function(index) {\n            buttonElement.addEventListener(\"click\", function() {\n                console.log(\"Button clicked! \" + dynamicVariables[this.id]);\n\n                // Enable the hidden-input (nickname element)\n                var nicknameElement = document.getElementById(\"nickname-\" + devices[index].id);\n                if (nicknameElement) {\n                    console.log(\"Nickname element found:\", nicknameElement);\n                    nicknameElement.disabled = false; \n                    nicknameElement.classList.add(\"enabled\");\n                } else {\n                    console.log(\"Nickname element not found\");\n                }\n\n                var nicknameButton = document.getElementById(\"nicknameButton-\" + devices[index].id);\n                if (nicknameButton) {\n                    console.log(\"Nickname button found:\", nicknameButton);\n                    nicknameButton.classList.remove(\"hidden\");\n                } else {\n                    console.log(\"Nickname button not found\");\n                }\n\n                var newButton = document.getElementById(\"nicknameSubmit-\" + devices[index].id);\n                if (newButton) {\n                    console.log(\"New button found:\", newButton);\n                    newButton.style.display = 'flex'; // Show the button\n                    newButton.disabled = false; // Enable the button\n                } else {\n                    console.log(\"New button not found\");\n                }\n            });\n\n            // Add event listener for nicknameSubmit-{id} button\n            var submitButtonElement = document.getElementById(\"nicknameSubmit-\" + devices[index].id);\n            if (submitButtonElement) {\n                submitButtonElement.addEventListener(\"click\", function() {\n                    // Get the value from the nickname-{id} input\n                    var nicknameInputElement = document.getElementById(\"nickname-\" + devices[index].id);\n                    var nicknameValue = nicknameInputElement.value;\n\n                    // Set the value of nicknameToSubmit input\n                    var nicknameToSubmitInput = document.getElementById(\"nicknameToSubmit\");\n                    if (nicknameToSubmitInput) {\n                        nicknameToSubmitInput.value = nicknameValue;\n                    }\n\n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the nicknameSubmitBtn button\n                    var nicknameSubmitBtn = document.getElementById(\"nicknameSubmitBtn\");\n                    if (nicknameSubmitBtn) {\n                        nicknameSubmitBtn.click();\n                    }\n\n                     // Re-disable the hidden-input (nickname element)\n                        nicknameInputElement.disabled = true;\n                        nicknameInputElement.classList.remove(\"enabled\");\n\n                        // Hide the nicknameSubmit-{id} button\n                        submitButtonElement.style.display = 'none';\n                });\n            } else {\n                console.log(\"Submit button not found for\", dynamicVariableName);\n            }\n\n            // Add event listener for btnMakeDefault-{id} button\n            var defaultButtonElement = document.getElementById(\"btnMakeDefault-\" + devices[index].id);\n            if (defaultButtonElement) {\n                defaultButtonElement.addEventListener(\"click\", function() {\n                  \n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the setDefault button\n                    var defaultSubmitBtn = document.getElementById(\"defaultSubmitBtn\");\n                    if (defaultSubmitBtn) {\n                        defaultSubmitBtn.click();\n                    }\n\n                });\n            } else {\n                console.log(\"Submit button not found for\", dynamicVariableName);\n            }\n\n            // Add event listener for btnDelete-{id} button\n            var deleteButtonElement = document.getElementById(\"btnDelete-\" + devices[index].id);\n            var deleteFeedbackElement = document.getElementById(\"deleteFeedback\");\n\n            if (deleteButtonElement) {\n                deleteButtonElement.addEventListener(\"click\", function() {\n                    if (devices.length <= 1) {\n                        console.log(\"Cannot delete. Only one device left.\");\n                        this.disabled = true; // This line disables the button, you can remove it if you don't want to disable\n                        deleteFeedbackElement.textContent = \"Please add a new device before deleting your last remaining device\";\n                        return; // Exit the function to prevent further action\n                    }\n                \n                    //Set the value of device ID\n                    var idValue = devices[index].id;\n\n                    // Set the value of idToSubmit input\n                    var idToSubmitInput = document.getElementById(\"idToSubmit\");\n                    if (idToSubmitInput) {\n                        idToSubmitInput.value = idValue;\n                    }\n\n                    // Click the deleteDevice button\n                    var deleteDeviceBtn = document.getElementById(\"deleteDeviceBtn\");\n                    if (deleteDeviceBtn) {\n                        deleteDeviceBtn.click();\n                    }\n\n                });\n            } else {\n                console.log(\"Delete button not found for\", dynamicVariableName);\n            }\n\n        })(i);\n    } else {\n        console.log(\"Button element not found for\", dynamicVariableName);\n    }\n}\n\n// Add jS to tell the user they can not register another device, the have hit the max.\n\nconsole.log(\"JS begins\");\nconst size = {{local.x1veihohtu.payload.output.rawResponse.size}};\nconst maxAllowedDevices = {{local.x1veihohtu.payload.output.mfaSettings.pairing.maxAllowedDevices}};\nconsole.log(\"Size (number of active devices): \", size);\nconsole.log(\"maxAllowed: \", maxAllowedDevices);\n\n    var btnCreate = document.getElementById('btnCreate');\n    var dvBtnCreate = document.getElementById('dvBtnCreate');\n\n    btnCreate.addEventListener('click', function() {\n        // Check if 'size' is smaller than 'maxAllowedDevices'\n        if (size < maxAllowedDevices) {\n              console.log(\"eventListener\")\n              console.log(\"Size (number of active devices): \", size);\n                console.log(\"maxAllowed: \", maxAllowedDevices);\n            dvBtnCreate.click();\n        } else {\n              console.log(\"Maxedout\")\n            maxDevicesFeedback.innerText = \"You have reached the max device limit. To register another device, you will have to delete an existing device.\";\n            btnCreate.disabled = true;\n\n        }\n    });\n\n"
-              },
-              "devices": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"devices\",\n        \"data\": \"{{local.13gzhnm7so.payload.output.devices}}\",\n        \"tooltip\": \"{{local.13gzhnm7so.payload.output.devices}}\",\n        \"children\": [\n          {\n            \"text\": \"devices\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "formFieldsList": {
-                "value": [
-                  {
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "buttonValue"
-                  },
-                  {
-                    "hashedVisibility": false,
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "nicknameToSubmit",
-                    "value": ""
-                  },
-                  {
-                    "hashedVisibility": false,
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "idToSubmit",
-                    "value": ""
-                  }
-                ]
-              },
-              "inputSchema": {
-                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"showRegButton\": {\n            \"displayName\": \"showRegButton\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"buttonLabel2\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label2\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel2\"\n        },\n        \"devices\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"displayName\": \"id\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"type\": {\n                    \"displayName\": \"type\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"status\": {\n                    \"displayName\": \"status\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                }\n            }\n        }\n    }\n}"
-              },
-              "nodeDescription": {
-                "value": "Show the list of devices the user has registered"
-              },
-              "nodeTitle": {
-                "value": "Show Device List"
-              },
-              "oeNodeCacheExpire": {
-                "value": true
-              },
-              "outputSchema": {
-                "value": "{{local.298pytp7im.payload.output.schema}}"
-              },
-              "pageTitle": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please select an authentication device\"\n      }\n    ]\n  }\n]"
-              },
-              "showRegButton": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"showRegButton\",\n        \"data\": \"{{global.parameters.showRegButton}}\",\n        \"tooltip\": \"{{global.parameters.showRegButton}}\",\n        \"children\": [\n          {\n            \"text\": \"showRegButton\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "sktemplate": {
-                "companyId": "6cQlNujpNKr8Rx50NwxbdnenYSPAW14d",
-                "createdDate": 1640610866080,
-                "customerId": "50a0de8b585e95ff04f40f30f8ffd219",
-                "description": "",
-                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"showRegButton\": {\n            \"displayName\": \"showRegButton\",\n            \"preferedControlType\": \"textField\",\n            \"enableParameters\": true\n        },\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"buttonLabel2\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label2\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel2\"\n        },\n        \"devices\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"displayName\": \"id\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"type\": {\n                    \"displayName\": \"type\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                },\n                \"status\": {\n                    \"displayName\": \"status\",\n                    \"preferedControlType\": \"textField\",\n                    \"enableParameters\": true\n                }\n            }\n        }\n    }\n}",
-                "name": "user devices as buttons - meirav",
-                "outputSchema": {},
-                "script": "",
-                "style": "",
-                "template": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div class=\\\"page\\\">\\n  <div class=\\\"card card--no-padding\\\">\\n    <div class=\\\"card__content\\\">\\n      <div class=\\\"flex-container\\\">\\n        <div class=\\\"branding-template-logo-container\\\">\\n          <div class=\\\"org-logo\\\">\\n            <img\\n              class=\\\"org-logo__image\\\"\\n              src=\\\"https://d3uinntk0mqu3p.cloudfront.net/branding/market/a3d073bc-3108-49ad-b96c-404bea59a1d0.png\\\"\\n              alt=\\\"Company Logo\\\"\\n            />\\n          </div>\\n      </div>\\n      <div class=\\\"branding-template-form-container\\\">\\n        <h1 class=\\\"heading branding-template-heading\\\">Your Authentication Methods</h1>\\n        <div class=\\\"text-block  branding-template-primary-text\\\">\\n            <div class=\\\"text-block--overflow-wrap\\\">\\n               Select the authentication method you want to pair with your account.\\n            </div>\\n         </div>\\n        <div class=\\\"text-block left-text-block\\\">\\n           <div class=\\\"text-block--overflow-wrap\\\">\\n               <div data-id=\\\"mfa-type-list\\\">\\n                  <div class=\\\"tile-selector tile-selector--stacked\\\">\"\n      }\n    ]\n  },\n  {\n    \"children\": [\n      {\n        \"text\": \"<div data-skcomponent=\\\"skerror\\\" class=\\\"feedback branding-template-feedback feedback--error picon-error-triangle\\\" data-skvisibility=\\\"\\\" ></div>\"\n      },\n      {\n        \"text\": \"\\n                     {{#each devices}}\\n                        PLATFORM\\    \\n                           <div class=\\\"tile-button--side-icon tile-button tile-button--stacked-small\\\" id=\\\"mfa-type-list-button-native-\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \">\\n                              <div class=\\\"tile-button__icon-container\\\">\\n                                 <svg viewBox=\\\"0 0 24 24\\\" role=\\\"presentation\\\" style=\\\"width: 32px; height: 32px;\\\">\\n                                    <path d=\\\"M17.81,4.47C17.73,4.47 17.65,4.45 17.58,4.41C15.66,3.42 14,3 12,3C10.03,3 8.15,3.47 6.44,4.41C6.2,4.54 5.9,4.45 5.76,4.21C5.63,3.97 5.72,3.66 5.96,3.53C7.82,2.5 9.86,2 12,2C14.14,2 16,2.47 18.04,3.5C18.29,3.65 18.38,3.95 18.25,4.19C18.16,4.37 18,4.47 17.81,4.47M3.5,9.72C3.4,9.72 3.3,9.69 3.21,9.63C3,9.47 2.93,9.16 3.09,8.93C4.08,7.53 5.34,6.43 6.84,5.66C10,4.04 14,4.03 17.15,5.65C18.65,6.42 19.91,7.5 20.9,8.9C21.06,9.12 21,9.44 20.78,9.6C20.55,9.76 20.24,9.71 20.08,9.5C19.18,8.22 18.04,7.23 16.69,6.54C13.82,5.07 10.15,5.07 7.29,6.55C5.93,7.25 4.79,8.25 3.89,9.5C3.81,9.65 3.66,9.72 3.5,9.72M9.75,21.79C9.62,21.79 9.5,21.74 9.4,21.64C8.53,20.77 8.06,20.21 7.39,19C6.7,17.77 6.34,16.27 6.34,14.66C6.34,11.69 8.88,9.27 12,9.27C15.12,9.27 17.66,11.69 17.66,14.66A0.5,0.5 0 0,1 17.16,15.16A0.5,0.5 0 0,1 16.66,14.66C16.66,12.24 14.57,10.27 12,10.27C9.43,10.27 7.34,12.24 7.34,14.66C7.34,16.1 7.66,17.43 8.27,18.5C8.91,19.66 9.35,20.15 10.12,20.93C10.31,21.13 10.31,21.44 10.12,21.64C10,21.74 9.88,21.79 9.75,21.79M16.92,19.94C15.73,19.94 14.68,19.64 13.82,19.05C12.33,18.04 11.44,16.4 11.44,14.66A0.5,0.5 0 0,1 11.94,14.16A0.5,0.5 0 0,1 12.44,14.66C12.44,16.07 13.16,17.4 14.38,18.22C15.09,18.7 15.92,18.93 16.92,18.93C17.16,18.93 17.56,18.9 17.96,18.83C18.23,18.78 18.5,18.96 18.54,19.24C18.59,19.5 18.41,19.77 18.13,19.82C17.56,19.93 17.06,19.94 16.92,19.94M14.91,22C14.87,22 14.82,22 14.78,22C13.19,21.54 12.15,20.95 11.06,19.88C9.66,18.5 8.89,16.64 8.89,14.66C8.89,13.04 10.27,11.72 11.97,11.72C13.67,11.72 15.05,13.04 15.05,14.66C15.05,15.73 16,16.6 17.13,16.6C18.28,16.6 19.21,15.73 19.21,14.66C19.21,10.89 15.96,7.83 11.96,7.83C9.12,7.83 6.5,9.41 5.35,11.86C4.96,12.67 4.76,13.62 4.76,14.66C4.76,15.44 4.83,16.67 5.43,18.27C5.53,18.53 5.4,18.82 5.14,18.91C4.88,19 4.59,18.87 4.5,18.62C4,17.31 3.77,16 3.77,14.66C3.77,13.46 4,12.37 4.45,11.42C5.78,8.63 8.73,6.82 11.96,6.82C16.5,6.82 20.21,10.33 20.21,14.65C20.21,16.27 18.83,17.59 17.13,17.59C15.43,17.59 14.05,16.27 14.05,14.65C14.05,13.58 13.12,12.71 11.97,12.71C10.82,12.71 9.89,13.58 9.89,14.65C9.89,16.36 10.55,17.96 11.76,19.16C12.71,20.1 13.62,20.62 15.03,21C15.3,21.08 15.45,21.36 15.38,21.62C15.33,21.85 15.12,22 14.91,22Z\\\" style=\\\"fill: rgb(61, 69, 77);\\\"></path>\\n                                 </svg>\\n                              </div>\\n                              <div class=\\\"tile-button__content-container\\\">\\n                                 <div class=\\\"flex-row flex-row--align-stretch flex-row--justify-start flex-row--wrap-nowrap flex-row--flex-direction-column flex-row--column-spacing-sm\\\" data-id=\\\"flex-row\\\">\\n                                    <div class=\\\"tile-button__title\\\">Biometrics</div>\\n                                    <div class=\\\"tile-button__content\\\">Use a fingerprint or facial scan to authenticate.</div>\\n                                 </div>\\n                              </div>\\n                           </div>\\n                        {{/ifEquals}}   \\n                        TOTP\\ \\n                           <div class=\\\"tile-button--side-icon tile-button tile-button--stacked-small\\\" id=\\\"mfa-type-list-button-TOTP_\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\"  data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \">\\n                              <div class=\\\"tile-button__icon-container\\\">\\n                                 <svg viewBox=\\\"0 0 24 24\\\" role=\\\"presentation\\\" style=\\\"width: 32px; height: 32px;\\\">\\n                                    <path d=\\\"M16,18H7V4H16M11.5,22A1.5,1.5 0 0,1 10,20.5A1.5,1.5 0 0,1 11.5,19A1.5,1.5 0 0,1 13,20.5A1.5,1.5 0 0,1 11.5,22M15.5,1H7.5A2.5,2.5 0 0,0 5,3.5V20.5A2.5,2.5 0 0,0 7.5,23H15.5A2.5,2.5 0 0,0 18,20.5V3.5A2.5,2.5 0 0,0 15.5,1Z\\\" style=\\\"fill: rgb(61, 69, 77);\\\"></path>\\n                                 </svg>\\n                              </div>\\n                              <div class=\\\"tile-button__content-container\\\">\\n                                 <div class=\\\"flex-row flex-row--align-stretch flex-row--justify-start flex-row--wrap-nowrap flex-row--flex-direction-column flex-row--column-spacing-sm\\\" data-id=\\\"flex-row\\\">\\n                                    <div class=\\\"tile-button__title\\\">Authenticator App</div>\\n                                    <div class=\\\"tile-button__content\\\">Use an authenticator app (like Google) to authenticate.</div>\\n                                 </div>\\n                              </div>\\n                           </div>\\n                        {{/ifEquals}}   \\n                        SMS\\ \\n                           <div class=\\\"tile-button--side-icon tile-button tile-button--stacked-small\\\" id=\\\"mfa-type-list-button-SMS_\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \">\\n                              <div class=\\\"tile-button__icon-container\\\">\\n                                 <svg viewBox=\\\"0 0 24 24\\\" role=\\\"presentation\\\" style=\\\"width: 32px; height: 32px;\\\">\\n                                    <path d=\\\"M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z\\\" style=\\\"fill: rgb(61, 69, 77);\\\"></path>\\n                                 </svg>\\n                              </div>\\n                              <div class=\\\"tile-button__content-container\\\">\\n                                 <div class=\\\"flex-row flex-row--align-stretch flex-row--justify-start flex-row--wrap-nowrap flex-row--flex-direction-column flex-row--column-spacing-sm\\\" data-id=\\\"flex-row\\\">\\n                                    <div class=\\\"tile-button__title\\\">Text Message</div>\\n                                    <div class=\\\"tile-button__content\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"phone\",\n        \"data\": \"{{phone}}\",\n        \"tooltip\": \"{{phone}}\",\n        \"children\": [\n          {\n            \"text\": \"{{phone}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</div>\\n                                 </div>\\n                              </div>\\n                           </div>\\n                        {{/ifEquals}}   \\n                        VOICE\\ \\n                           <div class=\\\"tile-button--side-icon tile-button tile-button--stacked-small\\\" id=\\\"mfa-type-list-button-VOICE_\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \">\\n                              <div class=\\\"tile-button__icon-container\\\">\\n                                 <svg viewBox=\\\"0 0 24 24\\\" role=\\\"presentation\\\" style=\\\"width: 32px; height: 32px;\\\">\\n                                    <path d=\\\"M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z\\\" style=\\\"fill: rgb(61, 69, 77);\\\"></path>\\n                                 </svg>\\n                              </div>\\n                              <div class=\\\"tile-button__content-container\\\">\\n                                 <div class=\\\"flex-row flex-row--align-stretch flex-row--justify-start flex-row--wrap-nowrap flex-row--flex-direction-column flex-row--column-spacing-sm\\\" data-id=\\\"flex-row\\\">\\n                                    <div class=\\\"tile-button__title\\\">Voice</div>\\n                                    <div class=\\\"tile-button__content\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"phone\",\n        \"data\": \"{{phone}}\",\n        \"tooltip\": \"{{phone}}\",\n        \"children\": [\n          {\n            \"text\": \"{{phone}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</div>\\n                                 </div>\\n                              </div>\\n                           </div>\\n                        {{/ifEquals}}   \\n                        EMAIL\\ \\n                           <div class=\\\"tile-button--side-icon tile-button tile-button--stacked-small\\\" id=\\\"mfa-type-list-button-EMAIL_\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \">\\n                              <div class=\\\"tile-button__icon-container\\\">\\n                                 <svg viewBox=\\\"0 0 24 24\\\" role=\\\"presentation\\\" style=\\\"width: 32px; height: 32px;\\\">\\n                                    <path d=\\\"M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z\\\" style=\\\"fill: rgb(61, 69, 77);\\\"></path>\\n                                 </svg>\\n                              </div>\\n                              <div class=\\\"tile-button__content-container\\\">\\n                                 <div class=\\\"flex-row flex-row--align-stretch flex-row--justify-start flex-row--wrap-nowrap flex-row--flex-direction-column flex-row--column-spacing-sm\\\" data-id=\\\"flex-row\\\">\\n                                    <div class=\\\"tile-button__title\\\">Email</div>\\n                                    <div class=\\\"tile-button__content\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"email\",\n        \"data\": \"{{email}}\",\n        \"tooltip\": \"{{email}}\",\n        \"children\": [\n          {\n            \"text\": \"{{email}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</div>\\n                                 </div>\\n                              </div>\\n                           </div>\\n                        {{/ifEquals}}   \\n                        MOBILE\\ \\n                           <div class=\\\"tile-button--side-icon tile-button tile-button--stacked-small\\\" id=\\\"mfa-type-list-button-PLATFORM_\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \">\\n                              <div class=\\\"tile-button__icon-container\\\">\\n                                 <svg viewBox=\\\"0 0 24 24\\\" role=\\\"presentation\\\" style=\\\"width: 32px; height: 32px;\\\">\\n                                    <path d=\\\"M16,18H7V4H16M11.5,22A1.5,1.5 0 0,1 10,20.5A1.5,1.5 0 0,1 11.5,19A1.5,1.5 0 0,1 13,20.5A1.5,1.5 0 0,1 11.5,22M15.5,1H7.5A2.5,2.5 0 0,0 5,3.5V20.5A2.5,2.5 0 0,0 7.5,23H15.5A2.5,2.5 0 0,0 18,20.5V3.5A2.5,2.5 0 0,0 15.5,1Z\\\" style=\\\"fill: rgb(61, 69, 77);\\\"></path>\\n                                 </svg>\\n                              </div>\\n                              <div class=\\\"tile-button__content-container\\\">\\n                                 <div class=\\\"flex-row flex-row--align-stretch flex-row--justify-start flex-row--wrap-nowrap flex-row--flex-direction-column flex-row--column-spacing-sm\\\" data-id=\\\"flex-row\\\">\\n                                    <div class=\\\"tile-button__title\\\">appName</div>\\n                                    <div class=\\\"tile-button__content\\\">appName</div>\\n                                 </div>\\n                              </div>\\n                           </div>\\n                        {{/ifEquals}}   \\n                        SECURITY_KEY\\ \\n                           <div class=\\\"tile-button--side-icon tile-button tile-button--stacked-small\\\" id=\\\"mfa-type-list-button-SECURITY_KEY_\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"next-event\\\" data-skbuttonvalue=\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"id\",\n        \"data\": \"{{id}}\",\n        \"tooltip\": \"{{id}}\",\n        \"children\": [\n          {\n            \"text\": \"{{id}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \">\\n                              <div class=\\\"tile-button__icon-container\\\">\\n                                 <svg viewBox=\\\"0 0 24 24\\\" role=\\\"presentation\\\" style=\\\"width: 32px; height: 32px;\\\">\\n                                    <path d=\\\"M8 15C8.55 15 9 15.45 9 16C9 16.55 8.55 17 8 17C7.45 17 7 16.55 7 16C7 15.45 7.45 15 8 15M15.07 4.69L16.5 6.1L15.07 7.5L13.66 6.1L15.07 4.69M17.9 7.5L19.31 8.93L17.9 10.34L16.5 8.93L17.9 7.5M8 13C6.34 13 5 14.34 5 16C5 17.66 6.34 19 8 19C9.66 19 11 17.66 11 16C11 14.34 9.66 13 8 13M9.77 4.33L10.5 5.08L14.29 1.29C14.47 1.11 14.72 1 15 1C15.28 1 15.53 1.11 15.71 1.29L22.78 8.36L22.78 8.37C22.92 8.54 23 8.76 23 9C23 9.3 22.87 9.57 22.66 9.76L22.66 9.76L18.93 13.5L19.67 14.23L12.95 20.95C11.68 22.22 9.93 23 8 23C4.13 23 1 19.87 1 16C1 14.07 1.78 12.32 3.05 11.05L9.77 4.33M20.59 9L15 3.41L11.93 6.5L17.5 12.08L20.59 9Z\\\" style=\\\"fill: rgb(61, 69, 77);\\\"></path>\\n                                 </svg>\\n                              </div>\\n                              <div class=\\\"tile-button__content-container\\\">\\n                                 <div class=\\\"flex-row flex-row--align-stretch flex-row--justify-start flex-row--wrap-nowrap flex-row--flex-direction-column flex-row--column-spacing-sm\\\" data-id=\\\"flex-row\\\">\\n                                    <div class=\\\"tile-button__title\\\">Security Key</div>\\n                                    <div class=\\\"tile-button__content\\\"></div>\\n                                 </div>\\n                              </div>\\n                           </div>\\n                        {{/ifEquals}} \\n                     {{/each}}\\n                  </div>\\n               </div>\\n            </div>\\n        </div>\\n          <div class=\\\"text-block branding-template-link-container\\\">\\n              <div class=\\\"text-block--overflow-wrap\\\">\\n                  <a data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"back-to-previous\\\" class=\\\"branding-template-link-text link-text\\\" href=\\\"#\\\" data-skbuttonvalue=\\\"cancel\\\" id=\\\"cancel\\\">Cancel</a>\\n              </div>\\n          </div>\\n      </div>\\n    </div>\\n  </div>\\n</div>\\n    \"\n      }\n    ]\n  }\n]",
-                "uiId": "fUWJkhwkUXoULEwUuNO18Gsdnzt0ND5X",
-                "updatedDate": 1641910063160,
-                "validationRules": [],
-                "value": "fUWJkhwkUXoULEwUuNO18Gsdnzt0ND5X",
-                "version": "1.0",
-                "visibility": "private"
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Your PingOne MFA Active Devices\"\n      }\n    ]\n  }\n]"
-              },
-              "type": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
-              },
-              "undefined": {
-                "value": {}
-              },
-              "validationRules": {
-                "value": []
-              },
-              "webAuthenSupport": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"webAuthenSupport\",\n        \"data\": \"{{local.erbzdoptql.payload.output.webAuthenSupport}}\",\n        \"tooltip\": \"{{local.erbzdoptql.payload.output.webAuthenSupport}}\",\n        \"children\": [\n          {\n            \"text\": \"webAuthenSupport\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "status": "configured",
-            "type": "trigger",
-            "idUnique": "0dxvrtf8n3"
+            "id": "eh4826rk96",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
           },
           "position": {
-            "x": 2007,
-            "y": 1077
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "qh79kbwmc9",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 2175.5,
-            "y": 1005.5
+            "x": 810,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -3755,6 +3603,101 @@
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "bpbssoxyra",
+            "source": "x1veihohtu",
+            "target": "eh4826rk96"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "vkn1c6tzk4",
+            "source": "tmzzjj5o4r",
+            "target": "ku5xxdl5w5"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "uam25pofmt",
+            "source": "buu1auhohv",
+            "target": "tmzzjj5o4r"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "uh6pa6urqk",
+            "source": "xg6s57h9nn",
+            "target": "fwrp54xzta"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ap63a67pgq",
+            "source": "eg3etbxmyg",
+            "target": "xg6s57h9nn"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "co0km452uf",
@@ -3795,13 +3738,14 @@
         },
         {
           "data": {
-            "id": "dtnfq6cwg6",
-            "source": "99w0570i10",
-            "target": "by0hrsztbf"
+            "id": "h0m2gmrylo",
+            "source": "zdy2asz00q",
+            "target": "303koxhuq4",
+            "multiValueSourceId": "dbmg96gk4y"
           },
           "position": {
-            "x": 0,
-            "y": 0
+            "x": 64,
+            "y": 132
           },
           "group": "edges",
           "removed": false,
@@ -4729,9 +4673,9 @@
         },
         {
           "data": {
-            "id": "4cu2zzkerh",
-            "source": "x1veihohtu",
-            "target": "99w0570i10"
+            "id": "7uf43c1130",
+            "source": "303koxhuq4",
+            "target": "7jyfpiajbi"
           },
           "position": {
             "x": 0,
@@ -5036,162 +4980,9 @@
         },
         {
           "data": {
-            "id": "vkn1c6tzk4",
-            "source": "tmzzjj5o4r",
-            "target": "ku5xxdl5w5"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "uam25pofmt",
-            "source": "buu1auhohv",
-            "target": "tmzzjj5o4r"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "h0m2gmrylo",
-            "source": "zdy2asz00q",
-            "target": "303koxhuq4",
-            "multiValueSourceId": "dbmg96gk4y"
-          },
-          "position": {
-            "x": 64,
-            "y": 132
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "7uf43c1130",
-            "source": "303koxhuq4",
-            "target": "7jyfpiajbi"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ap63a67pgq",
-            "source": "eg3etbxmyg",
-            "target": "xg6s57h9nn"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "uh6pa6urqk",
-            "source": "xg6s57h9nn",
-            "target": "fwrp54xzta"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "r3ic6rr43o",
-            "source": "x9j3i8t7hg",
-            "target": "8etwnshynt"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "9c4yrfkjvy",
-            "source": "8etwnshynt",
-            "target": "qh79kbwmc9"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "p0e7lf6i1l",
-            "source": "qh79kbwmc9",
-            "target": "zdy2asz00q"
+            "id": "kcdhf51l3n",
+            "source": "eh4826rk96",
+            "target": "by0hrsztbf"
           },
           "position": {
             "x": 0,
@@ -5256,7 +5047,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1725890624072,
+  "savedDate": 1726486622791,
   "variables": [
     {
       "context": "flowInstance",
