@@ -17,49 +17,61 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            background-color: #ffffff; /* White background */
+            background-color: #555555; /* White background */
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
+        .ii a[href] {
+            color: #555555;
+        }
         .header {
-            background-color: #333333; /* Dark gray background for the header */
-            color: white;
+            background-color: white; /* Dark gray header background */
+            color: #555;
             padding: 20px;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
+        .header img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
         }
 
         .content {
             padding: 20px;
-            color: #333333;
+            color: white;
         }
 
         .content h1 {
-            color: #333333; /* Dark gray for the main header */
+            color: white; /* Dark gray for the main header */
             font-size: 24px;
         }
 
         .content h2 {
-            color: #555555; /* Medium gray for sub-headers */
+            color: white; /* Medium gray for sub-headers */
             font-size: 20px;
-            text-transform: capitalize;
         }
 
         .content p {
             font-size: 16px;
             line-height: 1.5;
-            color: #666666; /* Light gray for paragraph text */
+            color: white; /* Light gray for paragraph text */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #555555; /* Medium gray button background */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
         }
 
         .footer {
             background-color: #f1f1f1;
-            text-align: center;
             padding: 10px;
             font-size: 12px;
             color: #888888; /* Light gray for footer text */

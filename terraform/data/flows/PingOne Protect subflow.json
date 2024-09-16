@@ -16,10 +16,9 @@
     "pingOneMfaConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1726258691595,
-  "currentVersion": 1,
+  "createdDate": 1726492294917,
+  "currentVersion": 8,
   "customerId": "c8701d025a002f27116f02d2f4d957a8",
-  "deployedDate": 1726258692460,
   "description": "Imported on Wed May 22 2024 23:22:16 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -104,7 +103,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 1,
+  "publishedVersion": 8,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "css": "\n\n/* Highlight every other row starting from the second row */\n.table-striped tbody tr:nth-child(2n) {\n    background-color: #f2f2f2; /* Light grey background */\n}\n\n/* Additional highlighting for clarity if desired */\n.highlight {\n    background-color: #e9ecef; /* Slightly darker grey */\n}\n",
@@ -123,9 +122,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1726258692563,
+  "updatedDate": 1726492298025,
   "flowId": "e48aebe444a48c5e25bc36c0bdd6cec0",
-  "versionId": 1,
+  "versionId": 8,
   "graphData": {
     "elements": {
       "nodes": [
@@ -1266,7 +1265,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Verify subflow",
-                  "value": "cbec5f8e0282bbb5d4c62530e360102c"
+                  "value": "fa53f76dbec74a4c40040cf5cd6d5cea"
                 }
               },
               "subFlowVersionId": {
@@ -3750,7 +3749,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
-                  "value": "187fc92a20e68e1cd4fe9862b4d9436c"
+                  "value": "bed472b5706a7d61a781d81e483986a7"
                 }
               },
               "subFlowVersionId": {
@@ -7646,8 +7645,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2275.3134577243836,
-            "y": 669.2098405071717
+            "x": 2280,
+            "y": 720
           },
           "group": "nodes",
           "removed": false,
@@ -8082,6 +8081,9 @@
             "properties": {
               "y6gy2pyeme": {
                 "value": "anyTriggersFalse"
+              },
+              "gyen7nqnsi": {
+                "value": "anyTriggersFalse"
               }
             }
           },
@@ -8431,7 +8433,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Authentication subflow",
-                  "value": "187fc92a20e68e1cd4fe9862b4d9436c"
+                  "value": "bed472b5706a7d61a781d81e483986a7"
                 }
               },
               "subFlowVersionId": {
@@ -14258,6 +14260,25 @@
           "grabbable": true,
           "pannable": true,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "w5903di08m",
+            "source": "e0241fvqhv",
+            "target": "gyen7nqnsi"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
         }
       ]
     },
@@ -14265,8 +14286,8 @@
     "zoomingEnabled": true,
     "userZoomingEnabled": true,
     "zoom": 1,
-    "minZoom": 1e-50,
-    "maxZoom": 1e+50,
+    "minZoom": 1E-50,
+    "maxZoom": 1E+50,
     "panningEnabled": true,
     "userPanningEnabled": true,
     "pan": {
@@ -14351,45 +14372,11 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1726258690731,
+  "savedDate": 1726492293773,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1722286647585,
-      "customerId": "c8701d025a002f27116f02d2f4d957a8",
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "aaebca41-c011-47ba-94fc-d238a23b517c",
-      "type": "property",
-      "visibility": "private",
-      "name": "address##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1724070753324,
-      "customerId": "c8701d025a002f27116f02d2f4d957a8",
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "2252fa32-d739-4a04-ae31-cb9f989d0839",
-      "type": "property",
-      "visibility": "private",
-      "name": "anonymousNetworkDetected##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1719424492143,
+      "createdDate": 1719424523428,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -14397,27 +14384,10 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "f56a7fb9-428a-4da7-a4e3-720db9d81df8",
+      "id": "207ea810-8e33-4281-a78d-58ae62760db4",
       "type": "property",
       "visibility": "private",
-      "name": "birthDate##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1723804435381,
-      "customerId": "c8701d025a002f27116f02d2f4d957a8",
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "0db698e4-7e79-4afb-8f66-e872681212bb",
-      "type": "property",
-      "visibility": "private",
-      "name": "browserVersionResponse##SK##flowInstance",
+      "name": "riskLevel##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -14455,18 +14425,19 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424492145,
+      "createdDate": 1723806462924,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
+        "type": "string",
         "displayName": "",
-        "max": 2000,
-        "min": 0,
         "mutable": true,
-        "type": "string"
+        "min": 0,
+        "max": 2000
       },
-      "id": "4debb231-e575-4b1a-8c96-03617c06d316",
+      "id": "61ef0616-099b-44de-89e7-d8733cde5846",
       "type": "property",
       "visibility": "private",
-      "name": "firstName##SK##flowInstance",
+      "name": "riskSource##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -14488,37 +14459,19 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424492145,
+      "createdDate": 1722906122908,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
+        "type": "string",
         "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "1c829b84-f963-4e16-afee-ad8653d2ffcb",
-      "type": "property",
-      "visibility": "private",
-      "name": "lastName##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "company",
-      "createdDate": 1720459138039,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
-      "fields": {
-        "type": "object",
-        "displayName": "",
-        "value": "{     \"config\": {         \"mf-bool-webauthnBrowserSupport\": true,         \"mf-obj-passwordPolicy\": {             \"length\": {                 \"min\": 8,                 \"max\": 255             },             \"minCharacters\": {                 \"0123456789\": 1,                 \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\": 1,                 \"abcdefghijklmnopqrstuvwxyz\": 1,                 \"~!@#$%^&*()-_=+[]{}|;:,.<>/?\": 1             },             \"minUniqueCharacters\": 5,             \"maxRepeatedCharacters\": 2         },         \"mf-obj-p1MFAPasswordlessAllowedTypes\": [             \"FIDO2\",             \"PLATFORM\",             \"MOBILE\",             \"TOTP\",             \"SECURITY_KEY\"         ],         \"mf-str-availableQuestions\": [             {                 \"question\": \"In what city were you born?\"             },             {                 \"question\": \"What was the model of your first car?\"             },             {                 \"question\": \"What is the name of your first pet?\"             },             {                 \"question\": \"What is the name of your favorite teacher?\"             },             {                 \"question\": \"What is your mother's maiden name?\"             },             {                 \"question\": \"What is the name of the street you grew up on?\"             },             {                 \"question\": \"In which year did you graduate from high school?\"             }         ],         \"mf-str-azureExternalIdPId\": \" \",         \"mf-str-browserVersion\": 129,         \"mf-str-captchaThreshold\": \"0.2\",         \"mf-str-captchaV3SecretKey\": \"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",         \"mf-str-captchaV3SiteKey\": \"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",         \"mf-str-companyLogo\": \"https://avatars.githubusercontent.com/u/93611276?v=4\",         \"mf-str-companyName\": \"Davinci Demo Company\",         \"mf-str-facebookExternalIdPId\": \"\",         \"mf-str-githubExternalIdPId\": \"\",         \"mf-str-googleExternalIdPId\": \"\",         \"mf-str-passwordExpiredDays\": 10,         \"mf-str-fidoDeviceNickname\": \"Passkeys/FIDO2\",         \"mf-str-fidoOrigin\": \"https://auth.pingone.com\",         \"mf-str-fidoRPID\": \"pingone.com\",         \"mf-str-webAuthnSupport\": \"cross-platform\"     },     \"pingone\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowForgotUsername\": true,         \"mf-bool-allowKBAforForgotPassword\": true,         \"mf-bool-allowMagicLinkUserRegistration\": true,         \"mf-bool-allowOTPForgotPassword\": true,         \"mf-bool-allowreCaptcha\": false,         \"mf-bool-displayProfileUpdateQuestion\": true,         \"mf-bool-runAgreement\": true,         \"mf-bool-runAzureLogin\": true,         \"mf-bool-runGoogleLogin\": true,         \"mf-bool-runConsent\": true,         \"mf-bool-runFacebookLogin\": true,         \"mf-bool-runGithubLogin\": true,         \"mf-bool-runMFAOnAccountUnlock\": true,         \"mf-bool-runPasswordExpireCheck\": true,         \"mf-bool-runProgressiveProfileAuthN\": true,         \"mf-bool-runProgressiveProfileRegstration\": true,         \"mf-bool-runTimeBasedProgressiveProfile\": true,         \"mf-bool-showAzureButton\": true,         \"mf-bool-showFacebookButton\": true,         \"mf-bool-showGithubButton\": true,         \"mf-bool-showGoogleButton\": true,         \"mf-string-daysUntilProgressiveProfile\": 30     },     \"p1Authorize\": {         \"mf-bool-runAuthorize\": false     },     \"p1MFA\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowHybridPasswordless\": true,         \"mf-bool-allowRegisterAnotherDevice\": true,         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runAutoEnrollEmail\": true,         \"mf-bool-runDeviceManagement\": true,         \"mf-bool-runInlineMFA\": true,         \"mf-bool-runOnlyPasswordless\": true,         \"mf-bool-runP1MFA\": true,         \"mf-bool-sendEmailConfirmation\": true,         \"mf-bool-sendEmailDeleteDeviceConfirmation\": true     },     \"p1Protect\": {         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runBrowserVersionAuthentication\": true,         \"mf-bool-runBrowserVersionRegistration\": true,         \"mf-bool-runFakeRiskLevel\": true,         \"mf-bool-runMFAOnHigh\": false,         \"mf-bool-runNotificationForNewDevice\": true,         \"mf-bool-runPassiveMode\": false,         \"mf-bool-runProtect\": true,         \"mf-bool-runStopOnHighRiskLevel\": false,         \"mf-bool-showDetailScreenDisplay\": true,         \"mf-bool-showProgressScreenDisplay\": true,         \"mf-bool-userDeleteOnTempEmail\": false,         \"mf-bool-userLockedOnTempEmail\": true,         \"mf-str-fakeRiskLevel\": \"MEDIUM\",         \"mf-str-fakeRiskScore\": 55     },     \"p1Verify\": {         \"mf-bool-allowVerifyUserRegistration\": true,         \"mf-bool-runVerifyFakeSuccess\": false,         \"mf-bool-runVerifyOnHigh\": true     } }",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "b2bd55af-cc37-4b45-9c69-3336e6be655c",
+      "id": "6a07011c-abd9-4ef8-abd4-13e4ec98801a",
       "type": "property",
-      "updatedDate": 1726241990581,
       "visibility": "private",
-      "name": "mf-configObject##SK##company",
+      "name": "riskId##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -14540,7 +14493,7 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1721391197282,
+      "createdDate": 1723374107506,
       "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
         "type": "string",
@@ -14549,10 +14502,46 @@
         "min": 0,
         "max": 2000
       },
-      "id": "6a397613-75d1-4d08-b848-9e3f97386775",
+      "id": "3527ac5e-d1aa-4fdf-bc63-2931d7124a72",
       "type": "property",
       "visibility": "private",
-      "name": "p1Email##SK##flowInstance",
+      "name": "riskStatus##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424523428,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "number",
+        "value": "0"
+      },
+      "id": "f4c310e5-2a34-4509-8b8d-d241570c728f",
+      "type": "property",
+      "visibility": "private",
+      "name": "riskScore##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "company",
+      "createdDate": 1720459138039,
+      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "fields": {
+        "type": "object",
+        "displayName": "",
+        "value": "{     \"config\": {         \"mf-bool-webauthnBrowserSupport\": true,         \"mf-obj-passwordPolicy\": {             \"length\": {                 \"min\": 8,                 \"max\": 255             },             \"minCharacters\": {                 \"0123456789\": 1,                 \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\": 1,                 \"abcdefghijklmnopqrstuvwxyz\": 1,                 \"~!@#$%^&*()-_=+[]{}|;:,.<>/?\": 1             },             \"minUniqueCharacters\": 5,             \"maxRepeatedCharacters\": 2         },         \"mf-obj-p1MFAPasswordlessAllowedTypes\": [             \"FIDO2\",             \"PLATFORM\",             \"MOBILE\",             \"TOTP\",             \"SECURITY_KEY\"         ],         \"mf-str-availableQuestions\": [             {                 \"question\": \"In what city were you born?\"             },             {                 \"question\": \"What was the model of your first car?\"             },             {                 \"question\": \"What is the name of your first pet?\"             },             {                 \"question\": \"What is the name of your favorite teacher?\"             },             {                 \"question\": \"What is your mother's maiden name?\"             },             {                 \"question\": \"What is the name of the street you grew up on?\"             },             {                 \"question\": \"In which year did you graduate from high school?\"             }         ],         \"mf-str-azureExternalIdPId\": \" \",         \"mf-str-browserVersion\": 129,         \"mf-str-captchaThreshold\": \"0.2\",         \"mf-str-captchaV3SecretKey\": \"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",         \"mf-str-captchaV3SiteKey\": \"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",         \"mf-str-companyLogo\": \"https://avatars.githubusercontent.com/u/93611276?v=4\",         \"mf-str-companyName\": \"Davinci Demo Company\",         \"mf-str-facebookExternalIdPId\": \"\",         \"mf-str-githubExternalIdPId\": \"\",         \"mf-str-googleExternalIdPId\": \"\",         \"mf-str-passwordExpiredDays\": 10,         \"mf-str-passwordExpireWarningDays\": 5,         \"mf-str-webAuthnSupport\": \"cross-platform\"     },     \"pingone\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowForgotUsername\": true,         \"mf-bool-allowKBAforForgotPassword\": true,         \"mf-bool-allowMagicLinkUserRegistration\": true,         \"mf-bool-allowOTPForgotPassword\": true,         \"mf-bool-allowreCaptcha\": false,         \"mf-bool-displayProfileUpdateQuestion\": true,         \"mf-bool-sendEmailPasswordChange\": true,         \"mf-bool-sendEmailPasswordRecovery\": true,         \"mf-bool-sendEmailUserProfileUpdate\":true,         \"mf-bool-runReturnToLogin\": false,         \"mf-bool-runAgreement\": true,         \"mf-bool-runAzureLogin\": true,         \"mf-bool-runGoogleLogin\": true,         \"mf-bool-runConsent\": true,         \"mf-bool-runFacebookLogin\": true,         \"mf-bool-runGithubLogin\": true,         \"mf-bool-runMFAOnAccountUnlock\": true,         \"mf-bool-runPasswordExpireCheck\": true,         \"mf-bool-runProgressiveProfileAuthN\": true,         \"mf-bool-runProgressiveProfileRegstration\": true,         \"mf-bool-runTimeBasedProgressiveProfile\": true,         \"mf-bool-showAzureButton\": true,         \"mf-bool-showFacebookButton\": true,         \"mf-bool-showGithubButton\": true,         \"mf-bool-showGoogleButton\": true,         \"mf-string-daysUntilProgressiveProfile\": 30     },     \"p1Authorize\": {         \"mf-bool-runAuthorize\": false     },     \"p1MFA\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowHybridPasswordless\": true,         \"mf-bool-allowRegisterAnotherDevice\": true,         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runAutoEnrollEmail\": true,         \"mf-bool-runDeviceManagement\": true,         \"mf-bool-runInlineMFA\": true,         \"mf-bool-runOnlyPasswordless\": false,         \"mf-bool-runP1MFA\": true,         \"mf-bool-sendEmailConfirmation\": true,         \"mf-bool-sendEmailDeleteDeviceConfirmation\": true,         \"mf-str-fidoDeviceNickname\": \"Passkeys/FIDO2\",         \"mf-str-fidoOrigin\": \"https://auth.pingone.com\",         \"mf-str-fidoRPID\": \"pingone.com\"     },     \"p1Protect\": {         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runBrowserVersionAuthentication\": false,         \"mf-bool-runBrowserVersionRegistration\": true,         \"mf-bool-runFakeRiskLevel\": true,         \"mf-bool-runMFAOnHigh\": false,          \"mf-bool-runNotificationForNewDevice\": true,         \"mf-bool-runPassiveMode\": false,         \"mf-bool-runProtect\": true,         \"mf-bool-runStopOnHighRiskLevel\": false,         \"mf-bool-showDetailScreenDisplay\": true,         \"mf-bool-showProgressScreenDisplay\": true,         \"mf-bool-userDeleteOnTempEmail\": false,         \"mf-bool-userLockedOnTempEmail\": true,         \"mf-str-fakeRiskLevel\": \"MEDIUM\",         \"mf-str-fakeRiskScore\": 55     },     \"p1Verify\": {         \"mf-bool-allowVerifyUserRegistration\": true,         \"mf-bool-runVerifyFakeSuccess\": false,         \"mf-bool-runVerifyOnHigh\": true     } }",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "b2bd55af-cc37-4b45-9c69-3336e6be655c",
+      "type": "property",
+      "updatedDate": 1726398618321,
+      "visibility": "private",
+      "name": "mf-configObject##SK##company",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -14574,7 +14563,7 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1722906122908,
+      "createdDate": 1723804435381,
       "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
         "type": "string",
@@ -14583,48 +14572,15 @@
         "min": 0,
         "max": 2000
       },
-      "id": "6a07011c-abd9-4ef8-abd4-13e4ec98801a",
+      "id": "0db698e4-7e79-4afb-8f66-e872681212bb",
       "type": "property",
       "visibility": "private",
-      "name": "riskId##SK##flowInstance",
+      "name": "browserVersionResponse##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424523428,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "207ea810-8e33-4281-a78d-58ae62760db4",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskLevel##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1719424523428,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "number",
-        "value": "0"
-      },
-      "id": "f4c310e5-2a34-4509-8b8d-d241570c728f",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskScore##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1723806462924,
+      "createdDate": 1721391197282,
       "customerId": "c8701d025a002f27116f02d2f4d957a8",
       "fields": {
         "type": "string",
@@ -14633,27 +14589,10 @@
         "min": 0,
         "max": 2000
       },
-      "id": "61ef0616-099b-44de-89e7-d8733cde5846",
+      "id": "6a397613-75d1-4d08-b848-9e3f97386775",
       "type": "property",
       "visibility": "private",
-      "name": "riskSource##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1723374107506,
-      "customerId": "c8701d025a002f27116f02d2f4d957a8",
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "3527ac5e-d1aa-4fdf-bc63-2931d7124a72",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskStatus##SK##flowInstance",
+      "name": "p1Email##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     },
     {
@@ -14671,7 +14610,88 @@
       "visibility": "private",
       "name": "username##SK##flowInstance",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1724070753324,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "2252fa32-d739-4a04-ae31-cb9f989d0839",
+      "type": "property",
+      "visibility": "private",
+      "name": "anonymousNetworkDetected##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492145,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "1c829b84-f963-4e16-afee-ad8653d2ffcb",
+      "type": "property",
+      "visibility": "private",
+      "name": "lastName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492145,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "4debb231-e575-4b1a-8c96-03617c06d316",
+      "type": "property",
+      "visibility": "private",
+      "name": "firstName##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1719424492143,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "f56a7fb9-428a-4da7-a4e3-720db9d81df8",
+      "type": "property",
+      "visibility": "private",
+      "name": "birthDate##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1722286647585,
+      "customerId": "c8701d025a002f27116f02d2f4d957a8",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "aaebca41-c011-47ba-94fc-d238a23b517c",
+      "type": "property",
+      "visibility": "private",
+      "name": "address##SK##flowInstance",
+      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
     }
-  ],
-  "connections": []
+  ]
 }

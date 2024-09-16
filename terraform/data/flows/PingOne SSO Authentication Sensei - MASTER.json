@@ -13,14 +13,14 @@
     "pingOneAuthenticationConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1726158199850,
-  "currentVersion": 83,
+  "createdDate": 1726491866159,
+  "currentVersion": 89,
   "customerId": "c8701d025a002f27116f02d2f4d957a8",
   "description": "Imported on Wed May 22 2024 23:22:34 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Authentication Sensei - MASTER",
-  "publishedVersion": 83,
+  "publishedVersion": 89,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "  /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
@@ -89,9 +89,9 @@
   "trigger": {
     "type": "AUTHENTICATION"
   },
-  "updatedDate": 1726158203566,
+  "updatedDate": 1726491890325,
   "flowId": "a0dc08a2592e2bcb45b2478c06c1892b",
-  "versionId": 83,
+  "versionId": 89,
   "graphData": {
     "elements": {
       "nodes": [
@@ -260,7 +260,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne SSO User Registration subflow",
-                  "value": "57a87229b049e880c37a5d3fa1f83268"
+                  "value": "c0e0d090b8cfbc7396193b4a343c142b"
                 }
               },
               "subFlowVersionId": {
@@ -871,7 +871,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Protect subflow",
-                  "value": "3a1bf218079b8a6c594c3a4beb29f1fa"
+                  "value": "e48aebe444a48c5e25bc36c0bdd6cec0"
                 }
               },
               "subFlowVersionId": {
@@ -3667,8 +3667,8 @@
               },
               "subFlowId": {
                 "value": {
-                  "label": "PingOne SSO User Registration subflow",
-                  "value": "57a87229b049e880c37a5d3fa1f83268"
+                  "label": "PingOne SSO User Registration subflow - analytics",
+                  "value": "c0e0d090b8cfbc7396193b4a343c142b"
                 }
               },
               "subFlowVersionId": {
@@ -4115,45 +4115,6 @@
           "position": {
             "x": 5567.052332936917,
             "y": 1642.2804382163906
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "goToNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "connectorId": "nodeConnector",
-            "id": "wbqnpqpk5i",
-            "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "nodeInstanceId": {
-                "value": "9ibe2f1hms"
-              },
-              "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.2mboyqryat.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.2mboyqryat.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.xl95hcgblk.payload.output.matchedUser.id}}\",\n        \"tooltip\": \"{{local.xl95hcgblk.payload.output.matchedUser.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "username": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserName\",\n        \"data\": \"{{global.variables.p1UserName}}\",\n        \"tooltip\": \"{{global.variables.p1UserName}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "status": "configured",
-            "type": "action"
-          },
-          "position": {
-            "x": 5539.217071272233,
-            "y": 1475.268868228283
           },
           "group": "nodes",
           "removed": false,
@@ -6339,7 +6300,7 @@
                 "value": "<!-- skRisk HTML -->\n<div data-skcomponent=\"skrisk\" data-skenvironmentid=\"{{global.companyId}}\" data-skcollectBehavioralData=\"true\"\n    data-skpropertyname=\"riskfp\">\n</div>\n\n<div class=\"end-user-nano\">\n    <!-- Main container for the login page -->\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"login-container\">\n            <div class=\"card shadow mb-5\">\n                <main aria-labelledby=\"title\">\n                    <!-- Card body containing the login form -->\n                    <div class=\"card-body p-5 d-flex flex-column\">\n                        <!-- Company logo -->\n                        <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                        <!-- Title Section -->\n                        {{#if title}}\n                        <h1 class=\"text-center mb-4\"><strong>{{title}}</strong></h1>\n                        {{/if}}\n\n                        <!-- Subtitle Sections -->\n                        {{#if textOne}}\n                        <h1 class=\"text-center mb-4\">{{textOne}}</h1>\n                        {{/if}}\n\n                        {{#if textTwo}}\n                        <h3 class=\"text-muted text-center mb-4\">{{textTwo}}</h3>\n                        {{/if}}\n\n                        <!-- Error feedback message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\"\n                            data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                        <div class=\"container-fluid\">\n                            <div class=\"d-flex flex-column\" style=\"margin-top:-15px\">\n                                <!-- Register button -->\n                                <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnRegister\"\n                                    data-skbuttonvalue=\"REGISTER\">\n                                    {{btnRegister}}\n                                </button>\n                            </div>\n\n                            <!-- Login form -->\n                            <form class=\"row\" id=\"usernamePasswordForm\" data-id=\"usernamePasswordForm\">\n                                <div style=\"flex: 6\">\n                                    <!-- Username field -->\n                                    <div class=\"mb-4 form-floating\">\n                                        <input class=\"form-control\" type=\"text\" id=\"username\" name=\"username\" placeholder=\"username\"\n                                            autocomplete=\"off\" value=\"\" data-id=\"usernamelabel\"\n                                            aria-required=\"true\" aria-describedby=\"emailLabel\" required\n                                            data-required-message=\"Enter a valid username\"\n                                            data-type-mismatch-message=\"Enter a valid username\"\n                                            data-email-invalid-message=\"Invalid username. Please correct and try again.\" />\n                                        <label class=\"usernamelabel\" for=\"username\">Username</label>\n                                    </div>\n\n                                    <!-- Password field -->\n                                    <div id=\"passwordContainer\" class=\"mb-4 form-floating\">\n                                        <input class=\"form-control\" type=\"password\" id=\"password\" name=\"password\" placeholder=\"Password\"\n                                            autocomplete=\"off\" value=\"\" data-id=\"password-input\" />\n                                        <label class=\"form-label\" for=\"password\">Password</label>\n                                    </div>\n\n                                    <div class=\"d-flex flex-column\">\n                                        <!-- Remember me checkbox -->\n                                        <!-- <div class=\"mb-4 form-check\">\n                                            <input class=\"form-check-input\" type=\"checkbox\" name=\"rememberMe\" autocomplete=\"off\" data-id=\"rememberMe-input\" id=\"rememberMe\" />\n                                            <label class=\"form-check-label\" for=\"rememberMe\">Remember Me?</label>\n                                        </div> -->\n\n                                        <div class=\"form-check form-switch mb-3\">\n                                            <label> {{buttonLabel2}}</label>\n                                            <input class=\"form-check-input\" type=\"checkbox\" name=\"rememberMe\" autocomplete=\"off\" role=\"switch\" id=\"rememberMe\" data-id=\"rememberMe-input\">\n                                        </div>\n\n                                        <!-- Caps lock warning message -->\n                                        <p class=\"text-danger mdi \" data-id=\"passwordFeedback\" id=\"passwordFeedback\"\n                                            style=\"display:none;\">Warning Caps Lock is On</p>\n\n                                        <!-- Sign in button and passwordless button -->\n                                        {{#if buttonLabel}}\n                                        <div id='passwordSignIn' class=\"d-flex flex-column\">\n                                            <button data-id=\"button\" type=\"button\" class=\"btn btn-primary mb-3 disabled\" data-skcomponent=\"skbutton\"\n                                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnSignIn\"\n                                                data-skbuttonvalue=\"SIGNON\">\n                                                {{buttonLabel}}\n                                            </button>\n                                            <button style='display:none;' data-id=\"submit-button\" type=\"button\" class=\"btn btn-primary mb-3 disabled\" data-skcomponent=\"skbutton\"\n                                                data-skbuttontype=\"form-submit\" data-skbuttonvalue=\"PASSWORDLESS\" id=\"btnPasswordless\" data-skform=\"usernamePasswordForm\">\n                                                <i class=\"mdi mdi-fingerprint text-dark fs-2\" aria-hidden=\"true\"></i>\n                                                {{buttonLabel}}\n                                            </button>\n                                        </div>\n                                        {{/if}}\n\n                                        <div class=\"d-flex flex-column\">\n                                            <!-- Forgot username button -->\n                                            {{#if forgotUsername}}\n                                            <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnForgotUsername\"\n                                                data-skbuttonvalue=\"FORGOTUSERNAME\" style=\"margin-top:-5px\">\n                                                Forgot Username?\n                                            </button>\n                                            {{/if}}\n\n                                            <!-- Forgot password button -->\n                                            {{#if forgotPassword}}\n                                            <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnForgotPassword\"\n                                                data-skbuttonvalue=\"FORGOTPASSWORD\">\n                                                Forgot Password?\n                                            </button>\n                                            {{/if}}\n\n                                            <!-- reCAPTCHA button -->\n                                            {{#if reCaptcha}}\n                                            <button data-id=\"button\" type=\"button\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"reCaptcha\"\n                                                data-skbuttonvalue=\"reCaptcha\">\n                                                reCAPTCHA V3\n                                            </button>\n                                            {{/if}}\n                                        </div>\n\n                                        <!-- Toggle passwordless button -->\n                                        {{#if mobile}}\n                                        <div style=\"flex: 4; border-left:1px solid; border-color:grey\">\n                                            {{/if}}\n                                            <div class=\"d-flex flex-column\">\n                                                {{#if allowPasswordless}}\n                                                <button data-id=\"submit-button\" type=\"button\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                                id=\"btnTogglePasswordless\">\n                                                <i id='toggleIcon' class=\"mdi mdi-fingerprint text-dark fs-2\" aria-hidden=\"true\"></i>\n                                                <span id='toggleText' class=\"btn-link\">Sign in with Passwordless</span>\n                                            </button>\n                                                {{/if}}\n\n                                                <!-- Auth buttons container -->\n                                                <div id=\"authButtonsContainer\">\n                                                    <!-- Buttons will be inserted here -->\n                                                </div>\n                                            </div>\n\n                                            <!-- Social login buttons -->\n                                            <div class=\"d-flex flex-column\">\n                                                {{#if googleLogin}}\n                                                <button id='btngoogleSubmit' style='display:none' data-id=\"button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                                data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                                                data-skbuttonvalue=\"GOOGLE\">\n                                            </button>\n                                                {{/if}}\n                                                {{#if facebookLogin}}\n                                                <button data-id=\"button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\"\n                                                data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\"\n                                                data-skbuttonvalue=\"FACEBOOK\" id=\"btnfacebookSubmit\" style='display:none'>\n                                            </button>\n                                                {{/if}}\n                                                {{#if microsoftLogin}}\n                                                <button data-id=\"submit-button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\" data-skcomponent=\"skbutton\"\n                                                data-skbuttontype=\"next-event\" data-skbuttonvalue=\"AZURE\" id=\"btnazureSubmit\" style='display:none'>\n                                            </button>\n                                                {{/if}}\n                                                {{#if githubLogin}}\n                                                <button data-id=\"submit-button\" type=\"hidden\" class=\"btn btn-outline-primary btn-link btn-outline mb-3\" data-skcomponent=\"skbutton\"\n                                                data-skbuttontype=\"next-event\" data-skbuttonvalue=\"GITHUB\" id=\"btngithubSubmit\" style='display:none'>\n                                            </button>\n                                                {{/if}}\n                                            </div>\n                                        </div>\n                                    </div>\n                            </form>\n                        </div>\n                    </div>\n                </main>\n            </div>\n        </div>\n    </div>\n</div>"
               },
               "customScript": {
-                "value": "const focusOnFirstInputElement = () => {\n    try {\n    \n      document.getElementById(\"username\").focus();\n    } catch (error) {\n      console.error(\"Error focusing on the first input element:\", error);\n    }\n  };\n  \n  // Stop the back button\n  try {\n    window.history.pushState(null, null, window.location.href);\n    window.onpopstate = function () {\n      \n      window.history.go(1);\n    };\n  } catch (error) {\n    console.error(\"Error setting up back button prevention:\", error);\n  }\n  \n  // Shade username as red\n  try {\n    document.getElementById('username').addEventListener('focus', function () {\n     \n      $('#username').css('border', '1px solid red');\n      checkInputsPasswordless();\n    });\n  } catch (error) {\n    console.error(\"Error adding focus event listener to username input:\", error);\n  }\n  \n  // Shade password as red\n  try {\n    document.getElementById('password').addEventListener('focus', function () {\n      \n      $('#password').css('border', '1px solid red');\n      checkInputsPasswordless();\n    });\n  } catch (error) {\n    console.error(\"Error adding focus event listener to password input:\", error);\n  }\n  \n   // Get references to the input fields and the submit button\n   let usernameInput, passwordInput, submitBtn, togglePasswordless, passwordlessSubmit, passwordElement, toggleIcon, toggleText;\n   try {\n     usernameInput = document.getElementById('username');\n     passwordInput = document.getElementById('password');\n     submitBtn = document.getElementById('btnSignIn');\n     togglePasswordless = document.getElementById('btnTogglePasswordless');\n     passwordlessSubmit = document.getElementById('btnPasswordless');\n     passwordElement = document.getElementById('passwordContainer');\n     toggleIcon = document.getElementById('toggleIcon');\n     toggleText = document.getElementById('toggleText');\n   } catch (error) {\n     console.error(\"Error getting references to input fields and buttons:\", error);\n   }\n   \n   let authMethod = 'password';\n   console.log(\"Initial auth method:\", authMethod);\n   \n   // Check if regular Sign in form.\n   if (togglePasswordless) {\n     \n     togglePasswordless.addEventListener('click', function () {\n       try {\n         console.log(\"Toggle passwordless button clicked.\");\n         if (authMethod === 'password') {\n          \n           passwordElement.style.display = 'none';\n           passwordlessSubmit.style.display = 'block';\n           submitBtn.style.display = 'none';\n           toggleText.textContent = 'Sign in With Password';\n           toggleIcon.style.display = 'none';\n           authMethod = 'passwordless';\n           checkInputsPassword();\n         } else {\n          \n           passwordElement.style.display = 'block';\n           passwordlessSubmit.style.display = 'none';\n           submitBtn.style.display = 'block';\n           authMethod = 'password';\n           toggleText.textContent = 'Sign in With Passwordless';\n           toggleIcon.style.display = 'inline';\n           checkInputsPasswordless();\n         }\n         console.log(\"Auth method after toggle:\", authMethod);\n       } catch (error) {\n         console.error(\"Error toggling authentication method:\", error);\n       }\n     });\n   } else {\n     console.log(\"Toggle passwordless button not found.\");\n   }\n   \n   if (authMethod === 'password') {\n     // Add event listeners for input events on both fields\n     try {\n      \n       usernameInput.addEventListener('input', checkInputsPassword);\n       passwordInput.addEventListener('input', checkInputsPassword);\n     } catch (error) {\n       console.error(\"Error adding input event listeners for password authentication:\", error);\n     }\n   } else if (authMethod === 'passwordless') {\n     try {\n       \n       usernameInput.addEventListener('input', checkInputsPasswordless);\n     } catch (error) {\n       console.error(\"Error adding input event listener for passwordless authentication:\", error);\n     }\n   }\n   \n   function checkInputsPassword() {\n     try {\n      \n       if (usernameInput.value && passwordInput.value) {\n         \n         // If both fields have values, remove the disabled class from the submit button\n         submitBtn.classList.remove('disabled');\n         $('#username').css('border', '1px solid #8b9197');\n         $('#password').css('border', '1px solid #8b9197');\n       } else {\n        \n         // Optional: Add the class back if either field is empty \n         if (!submitBtn.classList.contains('disabled')) {\n           submitBtn.classList.add('disabled');\n           $('#username').css('border', '1px solid red');\n           $('#password').css('border', '1px solid red');\n         }\n       }\n     } catch (error) {\n       console.error(\"Error checking inputs for password authentication:\", error);\n     }\n   }\n   \n   function checkInputsPasswordless() {\n     try {\n       \n       if (usernameInput.value) {\n         console.log(\"Username has value.\");\n         // If both fields have values, remove the disabled class from the submit button\n         btnPasswordless.classList.remove('disabled');\n         $('#username').css('border', '1px solid #8b9197');\n       } else {\n         console.log(\"Username is empty.\");\n         // Optional: Add the class back if either field is empty \n         if (!btnPasswordless.classList.contains('disabled')) {\n           btnPasswordless.classList.add('disabled');\n           $('#username').css('border', '1px solid red');\n         }\n       }\n     } catch (error) {\n       console.error(\"Error checking inputs for passwordless authentication:\", error);\n     }\n   }\n   \n   // Control Enter Button Functionality\n   try {\n     var form = document.getElementById('usernamePasswordForm');\n     var pwdSubmitBtn = document.getElementById('btnSignIn');\n     var passwordlessSubmitBtn = document.getElementById('btnPasswordless');\n   \n     form.addEventListener('keydown', function (event) {\n       try {\n       \n         if (event.key === \"Enter\") {\n           console.log(\"Enter key pressed.\");\n           event.preventDefault(); // Prevent the default action\n           if (authMethod === 'password') {\n             console.log(\"Submitting form with password authentication.\");\n             pwdSubmitBtn.click(); // Trigger the button click\n           } else if (authMethod === 'passwordless') {\n             console.log(\"Submitting form with passwordless authentication.\");\n             passwordlessSubmitBtn.click();\n           } else {\n             console.log(\"Unexpected auth method.\");\n           }\n         }\n       } catch (error) {\n         console.error(\"Error handling keydown event in form:\", error);\n       }\n     });\n   } catch (error) {\n     console.error(\"Error setting up Enter button functionality:\", error);\n   }\n   \n   // Get the input field\n   try {\n     var input = document.getElementById(\"password\");\n   } catch (error) {\n     console.error(\"Error getting password input field:\", error);\n   }\n   \n   // Get the warning text\n   try {\n     var text = document.getElementById(\"passwordFeedback\");\n   } catch (error) {\n     console.error(\"Error getting password feedback element:\", error);\n   }\n   \n   // When the user presses any key on the keyboard, run the function\n   try {\n     input.addEventListener(\"keyup\", function (event) {\n       try {\n         console.log(\"Keyup event detected in password input.\");\n         // If \"caps lock\" is pressed, display the warning text\n         if (event.getModifierState(\"CapsLock\")) {\n           console.log(\"CapsLock is on.\");\n           text.style.display = \"block\";\n         } else {\n           console.log(\"CapsLock is off.\");\n           text.style.display = \"none\";\n         }\n       } catch (error) {\n         console.error(\"Error handling keyup event in password input:\", error);\n       }\n     });\n   } catch (error) {\n     console.error(\"Error adding keyup event listener to password input:\", error);\n   }\n  \n  // Define which login options are enabled\n  const loginOptions = {\n    google: { enabled: {{global.variables.displayGoogle}}, backgroundColor: '#F2F2F2', color: '#1F1F1F' },\n    facebook: { enabled: {{global.variables.displayFacebook}}, backgroundColor: '#1877F2', color: '#FFFFFF' },\n    azure: { enabled: {{global.variables.displayAzure}}, backgroundColor: '#2F2F2F', color: '#FFFFFF' },\n    github: { enabled: {{global.variables.displayGithub}}, backgroundColor: '#FFFFFF', color: '#2F2F2F' },\n  };\n  \n  // Function to create button  a button element with color, unique ID, and setup to click another button on click\n  function createButton(loginType, svgContent, backgroundColor, color) {\n    const button = document.createElement('button');\n    button.setAttribute('type', 'button');\n    button.classList.add('btn', 'mb-3');\n    // Create a unique ID for each button based on the loginType\n    button.id = `btn${loginType}`;\n    button.dataset.id = \"button\";\n    button.innerHTML = svgContent;\n    button.style.backgroundColor = backgroundColor;\n    button.style.color = color;\n  \n    if (loginType === 'google') {\n      button.style.border = 'none';\n    } else {\n      button.style.border = '1px solid';\n    }\n  \n    // Add click event listener to the button\n    button.addEventListener('click', function () {\n      console.log(`${loginType} button clicked`);\n      // Target the \"submit\" button related to this button\n      const submitButtonId = `${button.id}Submit`;\n      const submitButton = document.getElementById(submitButtonId);\n      if (submitButton) {\n        submitButton.click(); // Programmatically click the submit button\n      } else {\n        console.log('Submit button not found:', submitButtonId);\n      }\n    });\n  \n    return button;\n\n  }// SVG content for each button\n  const svgs = {\n    google: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_1122_1133)\"><path d=\"M20.3052 10.4902C20.3052 9.8104 20.2501 9.12696 20.1325 8.45821H10.7002V12.309H16.1016C15.8775 13.551 15.1573 14.6496 14.1027 15.3478V17.8464H17.3252C19.2176 16.1047 20.3052 13.5326 20.3052 10.4902Z\" fill=\"#4285F4\" /><path d=\"M10.6999 20.2605C13.397 20.2605 15.6714 19.375 17.3286 17.8464L14.1061 15.3478C13.2096 15.9577 12.0521 16.3031 10.7036 16.3031C8.09474 16.3031 5.88272 14.5431 5.08904 12.1767H1.76367V14.7525C3.46127 18.1293 6.91892 20.2605 10.6999 20.2605Z\" fill=\"#34A853\" /><path d=\"M5.08564 12.1767C4.66676 10.9348 4.66676 9.58993 5.08564 8.34796V5.77218H1.76395C0.345611 8.59783 0.345611 11.9269 1.76395 14.7525L5.08564 12.1767Z\" fill=\"#FBBC04\" /><path d=\"M10.6999 4.21788C12.1256 4.19583 13.5035 4.7323 14.536 5.71705L17.3911 2.86201C15.5833 1.16441 13.1838 0.231105 10.6999 0.260501C6.91892 0.260501 3.46126 2.39168 1.76367 5.77217L5.08537 8.34795C5.87537 5.97794 8.09106 4.21788 10.6999 4.21788Z\" fill=\"#EA4335\" /></g><defs><clipPath id=\"clip0_1122_1133\"><rect width=\"20\" height=\"20\" fill=\"white\" transform=\"translate(0.5 0.259827)\" /></clipPath></defs></svg> Sign in with Google`,\n    facebook: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect x=\"35.5\" y=\"10.3\" width=\"52.8\" height=\"89.7\" style=\"fill: rgb(255, 255, 255);\"></rect><path d=\"M94.5,0h-89C2.5,0,0,2.5,0,5.5v89c0,3,2.5,5.5,5.5,5.5h47.9V61.3h-13V46.2h13V35.1c0-12.9,7.9-19.9,19.4-19.9 c5.5,0,10.3,0.4,11.6,0.6v13.5l-8,0c-6.3,0-7.5,3-7.5,7.3v9.6h14.9L82,61.3H69V100h25.5c3,0,5.5-2.5,5.5-5.5v-89 C100,2.5,97.5,0,94.5,0z\" style=\"fill: rgb(24, 119, 242);\"></path></svg> Sign in with Facebook`,\n    azure: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect width=\"47.37\" height=\"47.37\" style=\"fill: rgb(242, 80, 34);\"></rect><rect y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(0, 164, 239);\"></rect><rect x=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(127, 186, 0);\"></rect><rect x=\"52.63\" y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(255, 185, 0);\"></rect></svg> Sign in with Microsoft`,\n    github: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\"><rect width=\"16\" height=\"16\" fill=\"#FFFFFF\"></rect><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.976 0A7.977 7.977 0 0 0 0 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 0 1 .832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0 0 16 7.976C15.951 3.572 12.38 0 7.976 0z\"/></svg> Sign in with Github`,\n  };\n  \n  try {\n    // Container where buttons will be added\n    const container = document.getElementById('authButtonsContainer');\n    \n    // Check if any login options are enabled\n    const anyLoginEnabled = Object.values(loginOptions).some(option => option.enabled);\n  \n    \n    if (anyLoginEnabled) {\n      \n      // Create an hr element\n      const hrTextDiv = document.createElement('div');\n      hrTextDiv.className = 'hr-text';\n      hrTextDiv.innerHTML = '<span>Or Sign In With</span>';\n    \n      // Insert the hr element above the container\n      container.parentNode.insertBefore(hrTextDiv, container);\n    }\n    \n    let numOfSocials = 0;\n    // Iterate through the login options and create buttons for the enabled ones\n    Object.keys(loginOptions).forEach(key => {\n      if (loginOptions[key].enabled) { // Check if the login option is enabled\n       \n        const option = loginOptions[key];\n        const button = createButton(key, svgs[key], option.backgroundColor, option.color);\n        container.appendChild(button);\n        numOfSocials++;\n      }\n    });\n    \n    container.style = numOfSocials < 2 ? \"display: grid; grid-template-columns: repeat(1,1fr); gap: 10px;\" : \"display: grid; grid-template-columns: repeat(2,1fr); gap: 10px;\";\n    console.log(\"Number of social login buttons created:\", numOfSocials);\n  } catch (error) {\n    console.error(\"Error setting up social login buttons:\", error);\n  }\n  \n  function makePasswordToggle(id) {\n    try {\n      console.log(`Creating password toggle for ${id}.`);\n      var container = document.getElementById(id);\n      var password = container.getElementsByTagName(\"input\")[0];\n      var toggler = document.createElement(\"button\");\n      toggler.setAttribute(\"type\", \"button\");\n      toggler.setAttribute(\"aria-label\", \"Show/Hide Password\");\n      toggler.className = \"btn mdi mdi-eye-off-outline position-absolute end-0 top-50 translate-middle-y\";\n      container.appendChild(toggler);\n    \n      function showHidePassword() {\n        try {\n          if (password.type == \"password\") {\n           \n            password.setAttribute(\"type\", \"text\");\n            toggler.classList.add(\"mdi-eye-outline\");\n            toggler.classList.remove(\"mdi-eye-off-outline\");\n          } else {\n           \n            toggler.classList.add(\"mdi-eye-off-outline\");\n            toggler.classList.remove(\"mdi-eye-outline\");\n            password.setAttribute(\"type\", \"password\");\n          }\n          password.focus();\n        } catch (error) {\n          console.error(\"Error toggling password visibility:\", error);\n        }\n      };\n    \n      toggler.addEventListener(\"click\", showHidePassword);\n    } catch (error) {\n      console.error(\"Error creating password toggle:\", error);\n    }\n  }\n  \n  function start() {\n    try {\n      \n      makePasswordToggle(\"passwordContainer\");\n      focusOnFirstInputElement();\n    } catch (error) {\n      console.error(\"Error starting application:\", error);\n    }\n  }\n  \n  try {\n    if (document.readyState === \"loading\") {\n     \n      // Loading hasn't finished yet\n      document.addEventListener(\"DOMContentLoaded\", start);\n    } else {\n   \n      // `DOMContentLoaded` has already fired\n      start();\n    }\n  } catch (error) {\n    console.error(\"Error setting up document ready state handling:\", error);\n  }"
+                "value": "const focusOnFirstInputElement = () => {\n    try {\n    \n      document.getElementById(\"username\").focus();\n    } catch (error) {\n      console.error(\"Error focusing on the first input element:\", error);\n    }\n  };\n  \n  // Stop the back button\n  try {\n    window.history.pushState(null, null, window.location.href);\n    window.onpopstate = function () {\n      \n      window.history.go(1);\n    };\n  } catch (error) {\n    console.error(\"Error setting up back button prevention:\", error);\n  }\n  \n  // Shade username as red\n  try {\n    document.getElementById('username').addEventListener('focus', function () {\n     \n      $('#username').css('border', '1px solid red');\n      checkInputsPasswordless();\n    });\n  } catch (error) {\n    console.error(\"Error adding focus event listener to username input:\", error);\n  }\n  \n  // Shade password as red\n  try {\n    document.getElementById('password').addEventListener('focus', function () {\n      \n      $('#password').css('border', '1px solid red');\n      checkInputsPasswordless();\n    });\n  } catch (error) {\n    console.error(\"Error adding focus event listener to password input:\", error);\n  }\n  \n   // Get references to the input fields and the submit button\n   let usernameInput, passwordInput, submitBtn, togglePasswordless, passwordlessSubmit, passwordElement, toggleIcon, toggleText;\n   try {\n     usernameInput = document.getElementById('username');\n     passwordInput = document.getElementById('password');\n     submitBtn = document.getElementById('btnSignIn');\n     togglePasswordless = document.getElementById('btnTogglePasswordless');\n     passwordlessSubmit = document.getElementById('btnPasswordless');\n     passwordElement = document.getElementById('passwordContainer');\n     toggleIcon = document.getElementById('toggleIcon');\n     toggleText = document.getElementById('toggleText');\n   } catch (error) {\n     console.error(\"Error getting references to input fields and buttons:\", error);\n   }\n   \n   let authMethod = 'password';\n   console.log(\"Initial auth method:\", authMethod);\n   \n   // Check if regular Sign in form.\n   if (togglePasswordless) {\n     \n     togglePasswordless.addEventListener('click', function () {\n       try {\n         console.log(\"Toggle passwordless button clicked.\");\n         if (authMethod === 'password') {\n          \n           passwordElement.style.display = 'none';\n           passwordlessSubmit.style.display = 'block';\n           submitBtn.style.display = 'none';\n           toggleText.textContent = 'Sign in With Password';\n           toggleIcon.style.display = 'none';\n           authMethod = 'passwordless';\n           checkInputsPassword();\n         } else {\n          \n           passwordElement.style.display = 'block';\n           passwordlessSubmit.style.display = 'none';\n           submitBtn.style.display = 'block';\n           authMethod = 'password';\n           toggleText.textContent = 'Sign in With Passwordless';\n           toggleIcon.style.display = 'inline';\n           checkInputsPasswordless();\n         }\n         console.log(\"Auth method after toggle:\", authMethod);\n       } catch (error) {\n         console.error(\"Error toggling authentication method:\", error);\n       }\n     });\n   } else {\n     console.log(\"Toggle passwordless button not found.\");\n   }\n   \n   if (authMethod === 'password') {\n     // Add event listeners for input events on both fields\n     try {\n      \n       usernameInput.addEventListener('input', checkInputsPassword);\n       passwordInput.addEventListener('input', checkInputsPassword);\n     } catch (error) {\n       console.error(\"Error adding input event listeners for password authentication:\", error);\n     }\n   } else if (authMethod === 'passwordless') {\n     try {\n       \n       usernameInput.addEventListener('input', checkInputsPasswordless);\n     } catch (error) {\n       console.error(\"Error adding input event listener for passwordless authentication:\", error);\n     }\n   }\n   \n   function checkInputsPassword() {\n     try {\n      \n       if (usernameInput.value && passwordInput.value) {\n         \n         // If both fields have values, remove the disabled class from the submit button\n         submitBtn.classList.remove('disabled');\n         $('#username').css('border', '1px solid #8b9197');\n         $('#password').css('border', '1px solid #8b9197');\n       } else {\n        \n         // Optional: Add the class back if either field is empty \n         if (!submitBtn.classList.contains('disabled')) {\n           submitBtn.classList.add('disabled');\n           $('#username').css('border', '1px solid red');\n           $('#password').css('border', '1px solid red');\n         }\n       }\n     } catch (error) {\n       console.error(\"Error checking inputs for password authentication:\", error);\n     }\n   }\n   \n   function checkInputsPasswordless() {\n     try {\n       \n       if (usernameInput.value) {\n    \n         // If both fields have values, remove the disabled class from the submit button\n         btnPasswordless.classList.remove('disabled');\n         $('#username').css('border', '1px solid #8b9197');\n       } else {\n       \n         // Optional: Add the class back if either field is empty \n         if (!btnPasswordless.classList.contains('disabled')) {\n           btnPasswordless.classList.add('disabled');\n           $('#username').css('border', '1px solid red');\n         }\n       }\n     } catch (error) {\n       console.error(\"Error checking inputs for passwordless authentication:\", error);\n     }\n   }\n   \n   // Control Enter Button Functionality\n   try {\n     var form = document.getElementById('usernamePasswordForm');\n     var pwdSubmitBtn = document.getElementById('btnSignIn');\n     var passwordlessSubmitBtn = document.getElementById('btnPasswordless');\n   \n     form.addEventListener('keydown', function (event) {\n       try {\n       \n         if (event.key === \"Enter\") {\n           console.log(\"Enter key pressed.\");\n           event.preventDefault(); // Prevent the default action\n           if (authMethod === 'password') {\n             console.log(\"Submitting form with password authentication.\");\n             pwdSubmitBtn.click(); // Trigger the button click\n           } else if (authMethod === 'passwordless') {\n             console.log(\"Submitting form with passwordless authentication.\");\n             passwordlessSubmitBtn.click();\n           } else {\n             console.log(\"Unexpected auth method.\");\n           }\n         }\n       } catch (error) {\n         console.error(\"Error handling keydown event in form:\", error);\n       }\n     });\n   } catch (error) {\n     console.error(\"Error setting up Enter button functionality:\", error);\n   }\n   \n   // Get the input field\n   try {\n     var input = document.getElementById(\"password\");\n   } catch (error) {\n     console.error(\"Error getting password input field:\", error);\n   }\n   \n   // Get the warning text\n   try {\n     var text = document.getElementById(\"passwordFeedback\");\n   } catch (error) {\n     console.error(\"Error getting password feedback element:\", error);\n   }\n   \n   // When the user presses any key on the keyboard, run the function\ntry {\n  input.addEventListener(\"keyup\", function (event) {\n    try {\n      // If \"caps lock\" is pressed, display the warning text\n      if (event.getModifierState(\"CapsLock\")) {\n        text.style.display = \"block\";\n      } else {\n        text.style.display = \"none\";\n      }\n    } catch (error) {\n      console.error(\"Error handling keyup event in password input:\", error);\n    }\n  });\n} catch (error) {\n  console.error(\"Error adding keyup event listener to password input:\", error);\n}\n  \n  // Define which login options are enabled\n  const loginOptions = {\n    google: { enabled: {{global.variables.displayGoogle}}, backgroundColor: '#F2F2F2', color: '#1F1F1F' },\n    facebook: { enabled: {{global.variables.displayFacebook}}, backgroundColor: '#1877F2', color: '#FFFFFF' },\n    azure: { enabled: {{global.variables.displayAzure}}, backgroundColor: '#2F2F2F', color: '#FFFFFF' },\n    github: { enabled: {{global.variables.displayGithub}}, backgroundColor: '#FFFFFF', color: '#2F2F2F' },\n  };\n  \n  // Function to create button  a button element with color, unique ID, and setup to click another button on click\n  function createButton(loginType, svgContent, backgroundColor, color) {\n    const button = document.createElement('button');\n    button.setAttribute('type', 'button');\n    button.classList.add('btn', 'mb-3');\n    // Create a unique ID for each button based on the loginType\n    button.id = `btn${loginType}`;\n    button.dataset.id = \"button\";\n    button.innerHTML = svgContent;\n    button.style.backgroundColor = backgroundColor;\n    button.style.color = color;\n  \n    if (loginType === 'google') {\n      button.style.border = 'none';\n    } else {\n      button.style.border = '1px solid';\n    }\n  \n    // Add click event listener to the button\n    button.addEventListener('click', function () {\n      console.log(`${loginType} button clicked`);\n      // Target the \"submit\" button related to this button\n      const submitButtonId = `${button.id}Submit`;\n      const submitButton = document.getElementById(submitButtonId);\n      if (submitButton) {\n        submitButton.click(); // Programmatically click the submit button\n      } else {\n        console.log('Submit button not found:', submitButtonId);\n      }\n    });\n  \n    return button;\n\n  }// SVG content for each button\n  const svgs = {\n    google: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0_1122_1133)\"><path d=\"M20.3052 10.4902C20.3052 9.8104 20.2501 9.12696 20.1325 8.45821H10.7002V12.309H16.1016C15.8775 13.551 15.1573 14.6496 14.1027 15.3478V17.8464H17.3252C19.2176 16.1047 20.3052 13.5326 20.3052 10.4902Z\" fill=\"#4285F4\" /><path d=\"M10.6999 20.2605C13.397 20.2605 15.6714 19.375 17.3286 17.8464L14.1061 15.3478C13.2096 15.9577 12.0521 16.3031 10.7036 16.3031C8.09474 16.3031 5.88272 14.5431 5.08904 12.1767H1.76367V14.7525C3.46127 18.1293 6.91892 20.2605 10.6999 20.2605Z\" fill=\"#34A853\" /><path d=\"M5.08564 12.1767C4.66676 10.9348 4.66676 9.58993 5.08564 8.34796V5.77218H1.76395C0.345611 8.59783 0.345611 11.9269 1.76395 14.7525L5.08564 12.1767Z\" fill=\"#FBBC04\" /><path d=\"M10.6999 4.21788C12.1256 4.19583 13.5035 4.7323 14.536 5.71705L17.3911 2.86201C15.5833 1.16441 13.1838 0.231105 10.6999 0.260501C6.91892 0.260501 3.46126 2.39168 1.76367 5.77217L5.08537 8.34795C5.87537 5.97794 8.09106 4.21788 10.6999 4.21788Z\" fill=\"#EA4335\" /></g><defs><clipPath id=\"clip0_1122_1133\"><rect width=\"20\" height=\"20\" fill=\"white\" transform=\"translate(0.5 0.259827)\" /></clipPath></defs></svg> Sign in with Google`,\n    facebook: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect x=\"35.5\" y=\"10.3\" width=\"52.8\" height=\"89.7\" style=\"fill: rgb(255, 255, 255);\"></rect><path d=\"M94.5,0h-89C2.5,0,0,2.5,0,5.5v89c0,3,2.5,5.5,5.5,5.5h47.9V61.3h-13V46.2h13V35.1c0-12.9,7.9-19.9,19.4-19.9 c5.5,0,10.3,0.4,11.6,0.6v13.5l-8,0c-6.3,0-7.5,3-7.5,7.3v9.6h14.9L82,61.3H69V100h25.5c3,0,5.5-2.5,5.5-5.5v-89 C100,2.5,97.5,0,94.5,0z\" style=\"fill: rgb(24, 119, 242);\"></path></svg> Sign in with Facebook`,\n    azure: `<svg x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\" width=\"21\" height=\"21\"><rect width=\"47.37\" height=\"47.37\" style=\"fill: rgb(242, 80, 34);\"></rect><rect y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(0, 164, 239);\"></rect><rect x=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(127, 186, 0);\"></rect><rect x=\"52.63\" y=\"52.63\" width=\"47.37\" height=\"47.37\" style=\"fill: rgb(255, 185, 0);\"></rect></svg> Sign in with Microsoft`,\n    github: `<svg width=\"21\" height=\"21\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\"><rect width=\"16\" height=\"16\" fill=\"#FFFFFF\"></rect><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.976 0A7.977 7.977 0 0 0 0 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 0 1 .832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0 0 16 7.976C15.951 3.572 12.38 0 7.976 0z\"/></svg> Sign in with Github`,\n  };\n  \n  try {\n    // Container where buttons will be added\n    const container = document.getElementById('authButtonsContainer');\n    \n    // Check if any login options are enabled\n    const anyLoginEnabled = Object.values(loginOptions).some(option => option.enabled);\n  \n    \n    if (anyLoginEnabled) {\n      \n      // Create an hr element\n      const hrTextDiv = document.createElement('div');\n      hrTextDiv.className = 'hr-text';\n      hrTextDiv.innerHTML = '<span>Or Sign In With</span>';\n    \n      // Insert the hr element above the container\n      container.parentNode.insertBefore(hrTextDiv, container);\n    }\n    \n    let numOfSocials = 0;\n    // Iterate through the login options and create buttons for the enabled ones\n    Object.keys(loginOptions).forEach(key => {\n      if (loginOptions[key].enabled) { // Check if the login option is enabled\n       \n        const option = loginOptions[key];\n        const button = createButton(key, svgs[key], option.backgroundColor, option.color);\n        container.appendChild(button);\n        numOfSocials++;\n      }\n    });\n    \n    container.style = numOfSocials < 2 ? \"display: grid; grid-template-columns: repeat(1,1fr); gap: 10px;\" : \"display: grid; grid-template-columns: repeat(2,1fr); gap: 10px;\";\n    console.log(\"Number of social login buttons created:\", numOfSocials);\n  } catch (error) {\n    console.error(\"Error setting up social login buttons:\", error);\n  }\n  \n  function makePasswordToggle(id) {\n    try {\n      console.log(`Creating password toggle for ${id}.`);\n      var container = document.getElementById(id);\n      var password = container.getElementsByTagName(\"input\")[0];\n      var toggler = document.createElement(\"button\");\n      toggler.setAttribute(\"type\", \"button\");\n      toggler.setAttribute(\"aria-label\", \"Show/Hide Password\");\n      toggler.className = \"btn mdi mdi-eye-off-outline position-absolute end-0 top-50 translate-middle-y\";\n      container.appendChild(toggler);\n    \n      function showHidePassword() {\n        try {\n          if (password.type == \"password\") {\n           \n            password.setAttribute(\"type\", \"text\");\n            toggler.classList.add(\"mdi-eye-outline\");\n            toggler.classList.remove(\"mdi-eye-off-outline\");\n          } else {\n           \n            toggler.classList.add(\"mdi-eye-off-outline\");\n            toggler.classList.remove(\"mdi-eye-outline\");\n            password.setAttribute(\"type\", \"password\");\n          }\n          password.focus();\n        } catch (error) {\n          console.error(\"Error toggling password visibility:\", error);\n        }\n      };\n    \n      toggler.addEventListener(\"click\", showHidePassword);\n    } catch (error) {\n      console.error(\"Error creating password toggle:\", error);\n    }\n  }\n  \n  function start() {\n    try {\n      \n      makePasswordToggle(\"passwordContainer\");\n      focusOnFirstInputElement();\n    } catch (error) {\n      console.error(\"Error starting application:\", error);\n    }\n  }\n  \n  try {\n    if (document.readyState === \"loading\") {\n     \n      // Loading hasn't finished yet\n      document.addEventListener(\"DOMContentLoaded\", start);\n    } else {\n   \n      // `DOMContentLoaded` has already fired\n      start();\n    }\n  } catch (error) {\n    console.error(\"Error setting up document ready state handling:\", error);\n  }"
               },
               "facebookLogin": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"moustache\",\n        \"data\": \"{{global.variables.displayFacebook}}\",\n        \"name\": \"displayFacebook\",\n        \"children\": [\n          {\n            \"text\": \"\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -12981,9 +12942,236 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "goToNode",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "cpqsmrlk2u",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "nodeInstanceId": {
+                "value": "0onfrdbsfi"
+              },
+              "p1AuthenticationMethods": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"pwd\"\n      }\n    ]\n  }\n]"
+              },
+              "p1UserId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.q58gzphsoq.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.q58gzphsoq.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "userId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.xl95hcgblk.payload.output.matchedUser.id}}\",\n        \"tooltip\": \"{{local.xl95hcgblk.payload.output.matchedUser.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "username": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.q58gzphsoq.payload.output.username}}\",\n        \"tooltip\": \"{{local.q58gzphsoq.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "status": "configured",
+            "type": "action"
+          },
+          "position": {
+            "x": 6420,
+            "y": 1620
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "munl99d40z",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 6270,
+            "y": 1620
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "saveValue",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "id": "7abrdl6r4b",
+            "label": "Variables",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "nodeTitle": {
+                "value": "Save p1UserId"
+              },
+              "saveVariables": {
+                "value": [
+                  {
+                    "key": 0.11426995062794698,
+                    "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "p1UserId",
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.q58gzphsoq.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.q58gzphsoq.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "key": 0.5289840439299438,
+                    "label": "p1AuthenticationMethods (string - flowInstance)",
+                    "name": "p1AuthenticationMethods",
+                    "nameDefault": null,
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"pwd mfa\"\n      }\n    ]\n  }\n]"
+                  }
+                ]
+              }
+            },
+            "status": "configured",
+            "type": "trigger"
+          },
+          "position": {
+            "x": 6150,
+            "y": 1620
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "AEqualsB",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "id": "eixp6lq54t",
+            "label": "Functions",
+            "name": "Functions",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.pingone.mf-bool-runReturnToLogin}}\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "{{global.variables.mf-configObject.pingone.mf-bool-runReturnToLogin}}"
+              },
+              "nodeTitle": {
+                "value": "Return to login or PingOne"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "type": {
+                "value": "boolean"
+              }
+            },
+            "status": "configured",
+            "type": "trigger"
+          },
+          "position": {
+            "x": 5820,
+            "y": 1500
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "td2gum9psv",
+            "nodeType": "EVAL",
+            "properties": {
+              "7abrdl6r4b": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 5970,
+            "y": 1500
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "goToNode",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "ogycc2mmi6",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "nodeInstanceId": {
+                "value": "9ibe2f1hms"
+              },
+              "username": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.q58gzphsoq.payload.output.username}}\",\n        \"tooltip\": \"{{local.q58gzphsoq.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "status": "configured",
+            "type": "action"
+          },
+          "position": {
+            "x": 6210,
+            "y": 1500
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "87d0s0ourt",
+            "source": "7abrdl6r4b",
+            "target": "munl99d40z"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "w572b6y0ki",
@@ -17684,9 +17872,9 @@
         },
         {
           "data": {
-            "id": "q4x0rf803m",
-            "source": "ivfad55hv0",
-            "target": "wbqnpqpk5i"
+            "id": "zj3nvip6wv",
+            "source": "eixp6lq54t",
+            "target": "td2gum9psv"
           },
           "position": {
             "x": 0,
@@ -19079,6 +19267,82 @@
           "grabbable": true,
           "pannable": true,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "f9f91hk1mh",
+            "source": "td2gum9psv",
+            "target": "7abrdl6r4b"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "6qz713uy5t",
+            "source": "td2gum9psv",
+            "target": "ogycc2mmi6"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5jwtqvz55w",
+            "source": "munl99d40z",
+            "target": "cpqsmrlk2u"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "8dqar09ptn",
+            "source": "ivfad55hv0",
+            "target": "eixp6lq54t"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
         }
       ]
     },
@@ -19100,7 +19364,7 @@
     }
   },
   "flowColor": "#ff661c",
-  "savedDate": 1726158198415,
+  "savedDate": 1726491864563,
   "variables": [
     {
       "context": "flowInstance",
@@ -19327,14 +19591,14 @@
       "fields": {
         "type": "object",
         "displayName": "",
-        "value": "{     \"config\": {         \"mf-bool-webauthnBrowserSupport\": true,         \"mf-obj-passwordPolicy\": {             \"length\": {                 \"min\": 8,                 \"max\": 255             },             \"minCharacters\": {                 \"0123456789\": 1,                 \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\": 1,                 \"abcdefghijklmnopqrstuvwxyz\": 1,                 \"~!@#$%^&*()-_=+[]{}|;:,.<>/?\": 1             },             \"minUniqueCharacters\": 5,             \"maxRepeatedCharacters\": 2         },         \"mf-obj-p1MFAPasswordlessAllowedTypes\": [             \"FIDO2\",             \"PLATFORM\",             \"MOBILE\",             \"TOTP\",             \"SECURITY_KEY\"         ],         \"mf-str-availableQuestions\": [             {                 \"question\": \"In what city were you born?\"             },             {                 \"question\": \"What was the model of your first car?\"             },             {                 \"question\": \"What is the name of your first pet?\"             },             {                 \"question\": \"What is the name of your favorite teacher?\"             },             {                 \"question\": \"What is your mother's maiden name?\"             },             {                 \"question\": \"What is the name of the street you grew up on?\"             },             {                 \"question\": \"In which year did you graduate from high school?\"             }         ],         \"mf-str-azureExternalIdPId\": \" \",         \"mf-str-browserVersion\": 129,         \"mf-str-captchaThreshold\": \"0.2\",         \"mf-str-captchaV3SecretKey\": \"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",         \"mf-str-captchaV3SiteKey\": \"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",         \"mf-str-companyLogo\": \"https://avatars.githubusercontent.com/u/93611276?v=4\",         \"mf-str-companyName\": \"Davinci Demo Company\",         \"mf-str-facebookExternalIdPId\": \"\",         \"mf-str-githubExternalIdPId\": \"\",         \"mf-str-googleExternalIdPId\": \"\",         \"mf-str-passwordExpiredDays\": 10,         \"mf-str-fidoDeviceNickname\": \"Passkeys/FIDO2\",         \"mf-str-fidoOrigin\": \"https://auth.pingone.com\",         \"mf-str-fidoRPID\": \"pingone.com\",         \"mf-str-webAuthnSupport\": \"cross-platform\"     },     \"pingone\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowForgotUsername\": true,         \"mf-bool-allowKBAforForgotPassword\": true,         \"mf-bool-allowMagicLinkUserRegistration\": true,         \"mf-bool-allowOTPForgotPassword\": true,         \"mf-bool-allowreCaptcha\": false,         \"mf-bool-displayProfileUpdateQuestion\": true,         \"mf-bool-runAgreement\": true,         \"mf-bool-runAzureLogin\": true,         \"mf-bool-runGoogleLogin\": true,         \"mf-bool-runConsent\": true,         \"mf-bool-runFacebookLogin\": true,         \"mf-bool-runGithubLogin\": true,         \"mf-bool-runMFAOnAccountUnlock\": true,         \"mf-bool-runPasswordExpireCheck\": true,         \"mf-bool-runProgressiveProfileAuthN\": true,         \"mf-bool-runProgressiveProfileRegstration\": true,         \"mf-bool-runTimeBasedProgressiveProfile\": true,         \"mf-bool-showAzureButton\": true,         \"mf-bool-showFacebookButton\": true,         \"mf-bool-showGithubButton\": true,         \"mf-bool-showGoogleButton\": true,         \"mf-string-daysUntilProgressiveProfile\": 30     },     \"p1Authorize\": {         \"mf-bool-runAuthorize\": false     },     \"p1MFA\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowHybridPasswordless\": true,         \"mf-bool-allowRegisterAnotherDevice\": true,         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runAutoEnrollEmail\": true,         \"mf-bool-runDeviceManagement\": true,         \"mf-bool-runInlineMFA\": true,         \"mf-bool-runOnlyPasswordless\": true,         \"mf-bool-runP1MFA\": true,         \"mf-bool-sendEmailConfirmation\": true,         \"mf-bool-sendEmailDeleteDeviceConfirmation\": true     },     \"p1Protect\": {         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runBrowserVersionAuthentication\": true,         \"mf-bool-runBrowserVersionRegistration\": true,         \"mf-bool-runFakeRiskLevel\": true,         \"mf-bool-runMFAOnHigh\": false,         \"mf-bool-runNotificationForNewDevice\": true,         \"mf-bool-runPassiveMode\": false,         \"mf-bool-runProtect\": true,         \"mf-bool-runStopOnHighRiskLevel\": false,         \"mf-bool-showDetailScreenDisplay\": true,         \"mf-bool-showProgressScreenDisplay\": true,         \"mf-bool-userDeleteOnTempEmail\": false,         \"mf-bool-userLockedOnTempEmail\": true,         \"mf-str-fakeRiskLevel\": \"MEDIUM\",         \"mf-str-fakeRiskScore\": 55     },     \"p1Verify\": {         \"mf-bool-allowVerifyUserRegistration\": true,         \"mf-bool-runVerifyFakeSuccess\": false,         \"mf-bool-runVerifyOnHigh\": true     } }",
+        "value": "{     \"config\": {         \"mf-bool-webauthnBrowserSupport\": true,         \"mf-obj-passwordPolicy\": {             \"length\": {                 \"min\": 8,                 \"max\": 255             },             \"minCharacters\": {                 \"0123456789\": 1,                 \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\": 1,                 \"abcdefghijklmnopqrstuvwxyz\": 1,                 \"~!@#$%^&*()-_=+[]{}|;:,.<>/?\": 1             },             \"minUniqueCharacters\": 5,             \"maxRepeatedCharacters\": 2         },         \"mf-obj-p1MFAPasswordlessAllowedTypes\": [             \"FIDO2\",             \"PLATFORM\",             \"MOBILE\",             \"TOTP\",             \"SECURITY_KEY\"         ],         \"mf-str-availableQuestions\": [             {                 \"question\": \"In what city were you born?\"             },             {                 \"question\": \"What was the model of your first car?\"             },             {                 \"question\": \"What is the name of your first pet?\"             },             {                 \"question\": \"What is the name of your favorite teacher?\"             },             {                 \"question\": \"What is your mother's maiden name?\"             },             {                 \"question\": \"What is the name of the street you grew up on?\"             },             {                 \"question\": \"In which year did you graduate from high school?\"             }         ],         \"mf-str-azureExternalIdPId\": \" \",         \"mf-str-browserVersion\": 129,         \"mf-str-captchaThreshold\": \"0.2\",         \"mf-str-captchaV3SecretKey\": \"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",         \"mf-str-captchaV3SiteKey\": \"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",         \"mf-str-companyLogo\": \"https://avatars.githubusercontent.com/u/93611276?v=4\",         \"mf-str-companyName\": \"Davinci Demo Company\",         \"mf-str-facebookExternalIdPId\": \"\",         \"mf-str-githubExternalIdPId\": \"\",         \"mf-str-googleExternalIdPId\": \"\",         \"mf-str-passwordExpiredDays\": 10,         \"mf-str-passwordExpireWarningDays\": 5,         \"mf-str-webAuthnSupport\": \"cross-platform\"     },     \"pingone\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowForgotUsername\": true,         \"mf-bool-allowKBAforForgotPassword\": true,         \"mf-bool-allowMagicLinkUserRegistration\": true,         \"mf-bool-allowOTPForgotPassword\": true,         \"mf-bool-allowreCaptcha\": false,         \"mf-bool-displayProfileUpdateQuestion\": true,         \"mf-bool-sendEmailPasswordChange\": true,         \"mf-bool-sendEmailPasswordRecovery\": true,         \"mf-bool-sendEmailUserProfileUpdate\":true,         \"mf-bool-runReturnToLogin\": false,         \"mf-bool-runAgreement\": true,         \"mf-bool-runAzureLogin\": true,         \"mf-bool-runGoogleLogin\": true,         \"mf-bool-runConsent\": true,         \"mf-bool-runFacebookLogin\": true,         \"mf-bool-runGithubLogin\": true,         \"mf-bool-runMFAOnAccountUnlock\": true,         \"mf-bool-runPasswordExpireCheck\": true,         \"mf-bool-runProgressiveProfileAuthN\": true,         \"mf-bool-runProgressiveProfileRegstration\": true,         \"mf-bool-runTimeBasedProgressiveProfile\": true,         \"mf-bool-showAzureButton\": true,         \"mf-bool-showFacebookButton\": true,         \"mf-bool-showGithubButton\": true,         \"mf-bool-showGoogleButton\": true,         \"mf-string-daysUntilProgressiveProfile\": 30     },     \"p1Authorize\": {         \"mf-bool-runAuthorize\": false     },     \"p1MFA\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowHybridPasswordless\": true,         \"mf-bool-allowRegisterAnotherDevice\": true,         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runAutoEnrollEmail\": true,         \"mf-bool-runDeviceManagement\": true,         \"mf-bool-runInlineMFA\": true,         \"mf-bool-runOnlyPasswordless\": false,         \"mf-bool-runP1MFA\": true,         \"mf-bool-sendEmailConfirmation\": true,         \"mf-bool-sendEmailDeleteDeviceConfirmation\": true,         \"mf-str-fidoDeviceNickname\": \"Passkeys/FIDO2\",         \"mf-str-fidoOrigin\": \"https://auth.pingone.com\",         \"mf-str-fidoRPID\": \"pingone.com\"     },     \"p1Protect\": {         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runBrowserVersionAuthentication\": false,         \"mf-bool-runBrowserVersionRegistration\": true,         \"mf-bool-runFakeRiskLevel\": true,         \"mf-bool-runMFAOnHigh\": false,          \"mf-bool-runNotificationForNewDevice\": true,         \"mf-bool-runPassiveMode\": false,         \"mf-bool-runProtect\": true,         \"mf-bool-runStopOnHighRiskLevel\": false,         \"mf-bool-showDetailScreenDisplay\": true,         \"mf-bool-showProgressScreenDisplay\": true,         \"mf-bool-userDeleteOnTempEmail\": false,         \"mf-bool-userLockedOnTempEmail\": true,         \"mf-str-fakeRiskLevel\": \"MEDIUM\",         \"mf-str-fakeRiskScore\": 55     },     \"p1Verify\": {         \"mf-bool-allowVerifyUserRegistration\": true,         \"mf-bool-runVerifyFakeSuccess\": false,         \"mf-bool-runVerifyOnHigh\": true     } }",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
       "id": "b2bd55af-cc37-4b45-9c69-3336e6be655c",
       "type": "property",
-      "updatedDate": 1726241990581,
+      "updatedDate": 1726398618321,
       "visibility": "private",
       "name": "mf-configObject##SK##company",
       "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
