@@ -4,32 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification Code</title>
+    <title>New Device Registration</title>
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5; /* Light gray background */
+            background-color: #8d918e; /* Light gray background */
         }
 
         .email-container {
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            background-color: #555555; /* Dark gray background */
+            background-color: #555555; /* White background */
+
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
         .ii a[href] {
             color: #555555;
         }
-
         .header {
-            background-color: #e6e8ed; /* Light gray header background */
+            background-color: #e4e6ed; /* white header background */
             color: #555;
             padding: 20px;
         }
@@ -38,27 +37,29 @@
             max-width: 200px;
             height: auto;
             margin-bottom: 10px;
+
         }
 
         .content {
             padding: 20px;
             color: white;
+
         }
 
         .content h1 {
-            color: white; /* White for the main header */
+            color: white; /* Dark gray for the main header */
             font-size: 24px;
         }
 
         .content h2 {
-            color: white; /* White for sub-headers */
+            color: white; /* Medium gray for sub-headers */
             font-size: 20px;
         }
 
         .content p {
             font-size: 16px;
             line-height: 1.5;
-            color: white; /* White for paragraph text */
+            color: white; /* Light gray for paragraph text */
         }
 
         .button {
@@ -66,7 +67,7 @@
             padding: 10px 20px;
             font-size: 16px;
             color: white;
-            background-color: #555555; /* Dark gray button background */
+            background-color: #555555; /* Medium gray button background */
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
@@ -83,7 +84,7 @@
 
 <body>
     <table role="presentation"
-        style="width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif; background-color: #e5e5e5;">
+        style="width: 100%; border-collapse: collapse; border: 0px; border-spacing: 0px; font-family: Arial, Helvetica, sans-serif;">
         <tbody>
             <tr>
                 <td align="center" style="padding: 1rem 2rem; vertical-align: top; width: 100%;">
@@ -94,15 +95,17 @@
                                 <td style="padding: 40px 0px 0px;">
                                     <div class="email-container">
                                         <div class="header">
-                                            <h1>PingOne Master</h1>
+                                       <h1> PingOne Master Flow </h1>
+                                            <h2>Device Registration Confirmation</h2>
                                         </div>
                                         <div class="content">
-                                            <h1>Verification Code</h1>
-                                            <h2>Username: ${user.username}</h2>
-                                            <p>Please use the verification code below to verify your account.</p>
-                                            <p><strong style="font-size: 130%">${code.value}</strong></p>
+                                            <h1>Device Registration</h1>
+                                            <p>The following device was successfully added to your account and can be
+                                                used to authenticate.</p>
+                                            <h2>Device Name: ${device.name}</h2>
                                             <p>If you did not request this email, please contact our support team immediately.</p>
-                                            <p>Thank You<br></p>
+
+                                            <p>Thank You,<br></p>
                                         </div>
                                         <div class="footer">
                                             <p>&copy; Copyright 2024. All rights reserved.</p>

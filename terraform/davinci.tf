@@ -1255,6 +1255,9 @@ resource "davinci_application_flow_policy" "PingOne-SSO-Flow-Policy" {
   }
 }
 
+###################
+#  DaVinci Flows  #
+###################
 
 resource "davinci_flow" "PingOne-SSO-Authentication-Sensei---MASTER" {
 	environment_id = pingone_environment.master_flow_environment.id
@@ -1319,7 +1322,7 @@ resource "davinci_flow" "PingOne-SSO-Authentication-Sensei---MASTER" {
 	subflow_link {
 		id   = davinci_flow.PingOne-SSO-User-Registration-subflow.id
 		name = davinci_flow.PingOne-SSO-User-Registration-subflow.name
-		replace_import_subflow_id = "57a87229b049e880c37a5d3fa1f83268"
+		replace_import_subflow_id = "c0e0d090b8cfbc7396193b4a343c142b"
 	}
 	subflow_link {
 		id   = davinci_flow.PingOne-SSO-Forgot-Username-subflow.id
@@ -2378,6 +2381,12 @@ resource "davinci_flow" "PingOne-SSO-Progressive-Profiling-subflow" {
 		id   = davinci_connection.Flow-Connector.id
 		name = davinci_connection.Flow-Connector.name
 		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
+	}
+
+	subflow_link {
+		id   = davinci_flow.PingOne-Auto-enroll-user-in-mobile-SMS.id
+	  	name = davinci_flow.PingOne-Auto-enroll-user-in-mobile-SMS.name
+		replace_import_subflow_id = "1c982c3650aeca1ce7d4ca7421892f5f"
 	}
 
 	depends_on = [
