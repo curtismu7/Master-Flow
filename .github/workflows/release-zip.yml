@@ -33,7 +33,7 @@ jobs:
       - run: |
           RELEASE="2.0.0"
           RELEASE_TITLE="2.0.0"
-          gh release create $RELEASE --title $RELEASE_TITLE --notes "Official 2.0 Release of the PingOne Master Flow" --prerelease -R curtismu7/Master-Flow
+          gh release edit $RELEASE --title $RELEASE_TITLE --notes "Official 2.0 Release of the PingOne Master Flow" --prerelease -R curtismu7/Master-Flow
           gh release upload $RELEASE ./terraform/tf-release.zip -R curtismu7/Master-Flow
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
