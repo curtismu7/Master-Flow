@@ -1135,14 +1135,14 @@ resource "davinci_variable" "CAPTCHA_THRESHOLD" {
 #   value          = "${var.davinci_variable_gv-agreement}"
 # }
 
-resource "davinci_variable" "mf-str-verifyPolicyId" {
+resource "davinci_variable" "mf-str-p1VerifyPolicyId" {
   context        = "company"
   description    = "PingOne Verify Policy ID"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
   mutable        = "true"
-  name           = "mf-str-verifyPolicyId"
+  name           = "mf-str-p1VerifyPolicyId"
   type           = "string"
   value          = data.pingone_verify_policy.default_policy.id
 }
