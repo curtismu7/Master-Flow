@@ -50,7 +50,7 @@ Keep this environment handy. We will need to get a number of IDs from it later.
 
 ```bash
 mkdir -p ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/curtismu7/Master-Flow/releases/download/2.0.1/tf-release.zip > tf-release.zip
+curl -L https://github.com/curtismu7/Master-Flow/releases/download/2.0.0/tf-release.zip > tf-release.zip
 unzip ./tf-release.zip && rm ./tf-release.zip
 ```
 
