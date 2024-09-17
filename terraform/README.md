@@ -39,9 +39,6 @@ Navigate to Applications -> Applications, select "PingOne Self-Service - MyAccou
 
 Keep this environment handy. We will need to get a number of IDs from it later.
 
-> [!IMPORTANT]  
-> At present, we are unable to provide Identity Data Admin roles to users in the Administrator environment. If you sign in as a user in the Administrator environment, you will likely be able to view the environment that is created in Terraform, but you will not have the ability to view and manage users that are created there. To avoid this, you can sign in as the user you created in the Terraform Administration environment (by using the Conole URL from the Terraform Administration environment). This user will have full permissions for all environments created with the PingOne Master Flow Terraform configuration.
-
 ### Install Terraform
 
 [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) from the linked documentation. Recommendation: Use Homebrew for macOS and Chocolatey for Windows.
