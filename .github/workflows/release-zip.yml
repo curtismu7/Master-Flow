@@ -31,8 +31,8 @@ jobs:
           exclusions: '*.git* *.DS_* /images/* TODO.md .editorconfig'
           directory: 'terraform'
       - run: |
-          RELEASE="2.0.0"
-          RELEASE_TITLE="2.0.0"
+          RELEASE="2.0.1"
+          RELEASE_TITLE="2.0.1"
           gh release create $RELEASE --title $RELEASE_TITLE --notes "Official 2.0 Release of the PingOne Master Flow" --latest -R curtismu7/Master-Flow 
           gh release upload $RELEASE ./terraform/tf-release.zip -R curtismu7/Master-Flow
         env:
