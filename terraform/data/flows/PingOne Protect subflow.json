@@ -16,10 +16,9 @@
     "pingOneMfaConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1726667283398,
-  "currentVersion": 4,
-  "customerId": "7103642ff587ecb4de6b6c332453ca73",
-  "deployedDate": 1726667286376,
+  "createdDate": 1727449419547,
+  "currentVersion": 24,
+  "customerId": "38f1e64332a64e2263c5953d52e846fb",
   "description": "Imported on Wed May 22 2024 23:22:16 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -104,7 +103,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Protect subflow",
-  "publishedVersion": 4,
+  "publishedVersion": 24,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "",
@@ -123,9 +122,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1726667286440,
-  "flowId": "107d17ee3c23efb680f1fd71e96f5141",
-  "versionId": 4,
+  "updatedDate": 1727449422056,
+  "flowId": "ef42003b0fdba64d6adaf786c632b7ca",
+  "versionId": 24,
   "graphData": {
     "elements": {
       "nodes": [
@@ -304,8 +303,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3540,
-            "y": 2370
+            "x": 3810,
+            "y": 2340
           },
           "group": "nodes",
           "removed": false,
@@ -421,7 +420,7 @@
                 "value": "\nhtml {\n  font-family: sans-serif;\n}\n\n\ncaption {\n  padding: 10px;\n}\n/* .companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n  } */\n\n.mainDiv {\n    max-width: 700px; \n    min-width: 700px;\n    width: 100%\n}\n\n/* Break out into individual classes as needed */\n.magicLinkDiv,\n.otpDiv,\n.successDiv,\n.totpDiv,\n.registrationDiv{\n    max-width: 400px; \n    min-width: 400px;\n    width: 100%\n}\n\n.deviceSelectionDiv {\n    max-width: 500px; \n    min-width: 500px;\n    width: 100%\n}\n\n.signInDiv {\n      align-items: center;\n    display: flex;\n    width: fit-content;\n}\n    @media (min-width: 768px) {\n        .custom-container {\n            max-width: 500px; /* Reduced width for larger screens */\n        }\n        .custom-card {\n            padding: 2rem;\n        }\n        .custom-heading {\n            font-size: 2rem;\n        }\n        .custom-subheading {\n            font-size: 1.5rem;\n        }\n    }\n \n .custom-table {\n    width: 80%;\n    border-collapse: collapse;\n    margin: 20px 20px;\n    font-size: 16px;\n    text-align: left;\n    align-self: center;\n}\n\n    .custom-table th, .custom-table td {\n        padding: 12px 15px;\n        border: 1px solid #ddd;\n    }\n\n    .custom-table th {\n        background-color: #f4f4f4;\n        font-weight: bold;\n        color: #333;\n    }\n\n    /* Set different background colors for even and odd rows */\n    .custom-table tbody tr:nth-child(odd) {\n        background-color: #f9f9f9; /* Light gray for odd rows */\n    }\n\n    .custom-table tbody tr:nth-child(even) {\n        background-color: #e9e9e9; /* Slightly darker gray for even rows */\n    }\n\n    .custom-table td {\n        font-weight: bold;\n        color: #444;\n        transition: background-color 0.3s ease;\n    }\n\n    .card {\n        max-width: 600px !important;\n    }\n      .custom-button {\n        width: 200px; /* Set a fixed width for the button */\n    }"
               },
               "customHTML": {
-                "value": "<!-- Main container for centering content -->\n<div class=\"end-user-nano\">\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"container custom-container\" style=\"max-width: 600px; width: 100%;\">\n            <!-- Card for holding the content -->\n            <div class=\"card shadow mb-5 custom-card\">\n                <main aria-labelledby=\"title\">\n                    <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n                        <!-- Company logo (Smaller) -->\n                        <img class=\"companyLogo mb-4 img-fluid\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" alt=\"{{global.variables.companyName}}\" style=\"max-width: 100px; height: auto;\"/> \n\n                        <!-- Conditional title -->\n                        {{#if title}}\n                        <h1 class=\"text-center mb-4 custom-heading\">{{title}}</h1>\n                        {{/if}}\n\n                        <!-- Conditional textOne -->\n                        {{#if textOne}}\n                        <p class=\"text-muted text-center custom-subheading\">{{textOne}}</p>\n                        {{/if}}\n\n                        <!-- Conditional textTwo -->\n                        {{#if textTwo}}\n                        <p class=\"text-muted text-center font-weight-bold\">{{textTwo}}</p>\n                        {{/if}}\n\n                        <!-- Error Message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n\n                        <!-- Risk Level -->\n                        {{#if fakeLevel}}\n                        <h3 class=\"text-center text-success my-3\">Risk Level = {{global.variables.mf-configObject.p1Protect.mf-str-fakeRiskLevel}}</h3>\n                        {{else}}\n                        <p class=\"text-center text-success my-4\">Risk Level = {{global.variables.riskLevel}}</p>\n                        {{/if}}\n\n                        <!-- Risk Source -->\n                        <p class=\"text-center text-danger mb-3\">Risk Source = {{global.variables.riskSource}}</p>\n\n                        <!-- IP address -->\n                        <p class=\"text-center text-primary mb-4\">IP Address = {{global.variables.ipAddress}}</p>\n\n                        <!-- Information table -->\n                        <div class=\"table-responsive\">\n                            <table class=\"table table-striped custom-table\">\n                                <thead>\n                                    <tr>\n                                        <th>Anonymous Network</th>\n                                        <th>Impossible Travel</th>\n                                        <th>IP Address Reputation</th>\n                                    </tr>\n                                </thead>\n                                <tbody>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.anonymousNetworkDetected}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.impossibleTravel}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipRisk.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}</td>\n                                    </tr>\n                                    <tr class=\"highlight\">\n                                        <th>ISP</th>\n                                        <th>IP Velocity by User</th>\n                                        <th>IP Velocity by IP</th>\n                                    </tr>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.ipVelocityByUser.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.userVelocityByIp.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}</td>\n                                    </tr>\n                                    <tr class=\"highlight\">\n                                        <th>User Risk Behavior</th>\n                                        <th>Bot Detection</th>\n                                        <th>Suspicious Device</th>\n                                    </tr>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.userBasedRiskBehavior.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.botDetection.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.suspiciousDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}</td>\n                                    </tr>\n                                    <tr class=\"highlight\">\n                                        <th>New Device</th>\n                                        <th>Device Reason</th>\n                                        <th>Device Status</th>\n                                    </tr>\n                                    <tr>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.level}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.reason}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}</td>\n                                        <td>{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.status}}{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n\n                        <!-- Form with buttons -->\n                        <form class=\"form mt-4 mb-4\" id='riskForm' data-id=\"riskForm\">\n                            <div class=\"text-center\">\n                                <!-- Continue button on top -->\n                                {{#if buttonLabel}}\n                                <button class=\"btn btn-primary mb-3 custom-button\" data-id=\"continueBtn\" type=\"submit\" id=\"continueBtn\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\" data-skbuttonvalue=\"CONTINUE\">\n                                    {{buttonLabel}}\n                                </button>\n                                {{/if}}\n\n                                <!-- Return to Authentication button below -->\n                                {{#if buttonLabel2}}\n                                <button class=\"btn btn-link mb-3 custom-button\" data-id=\"bypassBtn\" type=\"submit\" id=\"skipBtn\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"riskForm\" data-skbuttonvalue=\"RETURN\">\n                                    {{buttonLabel2}}\n                                </button>\n                                {{/if}}\n                            </div>\n                        </form>\n                    </div>\n                </main>\n            </div>\n        </div>\n    </div>\n</div>\n\n"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<!-- Main container for centering content -->\\n<div class=\\\"end-user-nano\\\">\\n    <div class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\\\">\\n        <div class=\\\"container custom-container\\\" style=\\\"max-width: 600px; width: 100%;\\\">\\n            <!-- Card for holding the content -->\\n            <div class=\\\"card shadow mb-5 custom-card\\\">\\n                <main aria-labelledby=\\\"title\\\">\\n                    <div class=\\\"card-body p-5 d-flex flex-column align-items-center\\\">\\n                        <!-- Company logo (Smaller) -->\\n                        <img class=\\\"companyLogo mb-4 img-fluid\\\" src=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyLogo\",\n        \"data\": \"{{global.variables.companyLogo}}\",\n        \"tooltip\": \"{{global.variables.companyLogo}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyLogo}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" alt=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyName\",\n        \"data\": \"{{global.variables.companyName}}\",\n        \"tooltip\": \"{{global.variables.companyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" alt=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyName\",\n        \"data\": \"{{global.variables.companyName}}\",\n        \"tooltip\": \"{{global.variables.companyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" style=\\\"max-width: 100px; height: auto;\\\"/> \\n\\n                        <!-- Conditional title -->\\n                        {{#if title}}\\n                        <h1 class=\\\"text-center mb-4 custom-heading\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"title\",\n        \"data\": \"{{title}}\",\n        \"tooltip\": \"{{title}}\",\n        \"children\": [\n          {\n            \"text\": \"{{title}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</h1>\\n                        {{/if}}\\n\\n                        <!-- Conditional textOne -->\\n                        {{#if textOne}}\\n                        <p class=\\\"text-muted text-center custom-subheading\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"textOne\",\n        \"data\": \"{{textOne}}\",\n        \"tooltip\": \"{{textOne}}\",\n        \"children\": [\n          {\n            \"text\": \"{{textOne}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                        {{/if}}\\n\\n                        <!-- Conditional textTwo -->\\n                        {{#if textTwo}}\\n                        <p class=\\\"text-muted text-center font-weight-bold\\\">\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"textTwo\",\n        \"data\": \"{{textTwo}}\",\n        \"tooltip\": \"{{textTwo}}\",\n        \"children\": [\n          {\n            \"text\": \"{{textTwo}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                        {{/if}}\\n\\n                        <!-- Error Message -->\\n                        <p class=\\\"text-danger mdi mdi-alert-circle text-center\\\" id=\\\"feedbackError\\\" data-id=\\\"feedback\\\" data-skcomponent=\\\"skerror\\\" aria-live=\\\"assertive\\\"></p>\\n\\n                        <!-- Risk Level -->\\n                        {{#if fakeLevel}}\\n                        <h3 class=\\\"text-center text-success my-3\\\">Risk Level = {{global.variables.mf-configObject.p1Protect.mf-str-fakeRiskLevel}}</h3>\\n                        \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"else\",\n        \"data\": \"{{else}}\",\n        \"tooltip\": \"{{else}}\",\n        \"children\": [\n          {\n            \"text\": \"{{else}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n                        <p class=\\\"text-center text-success my-4\\\">Risk Level = \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"riskLevel\",\n        \"data\": \"{{global.variables.riskLevel}}\",\n        \"tooltip\": \"{{global.variables.riskLevel}}\",\n        \"children\": [\n          {\n            \"text\": \"riskLevel\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n                        {{/if}}\\n\\n                        <!-- Risk Source -->\\n                        <p class=\\\"text-center text-danger mb-3\\\">Risk Source = \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"riskSource\",\n        \"data\": \"{{global.variables.riskSource}}\",\n        \"tooltip\": \"{{global.variables.riskSource}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.riskSource}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n\\n                        <!-- IP address -->\\n                        <p class=\\\"text-center text-primary mb-4\\\">IP Address = \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"ipAddress\",\n        \"data\": \"{{global.variables.ipAddress}}\",\n        \"tooltip\": \"{{global.variables.ipAddress}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.ipAddress}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</p>\\n\\n                        <!-- Information table -->\\n                        <div class=\\\"table-responsive\\\">\\n                            <table class=\\\"table table-striped custom-table\\\">\\n                                <thead>\\n                                    <tr>\\n                                        <th>Anonymous Network</th>\\n                                        <th>Impossible Travel</th>\\n                                        <th>IP Address Reputation</th>\\n                                    </tr>\\n                                </thead>\\n                                <tbody>\\n                                    <tr>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"anonymousNetworkDetected\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.anonymousNetworkDetected}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.anonymousNetworkDetected}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.anonymousNetworkDetected}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"anonymousNetworkDetected\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.anonymousNetworkDetected}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"impossibleTravel\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.impossibleTravel}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.impossibleTravel}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.impossibleTravel}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"impossibleTravel\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.impossibleTravel}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipRisk.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipRisk.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipRisk.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipRisk.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                    </tr>\\n                                    <tr class=\\\"highlight\\\">\\n                                        <th>ISP</th>\\n                                        <th>IP Velocity by User</th>\\n                                        <th>IP Velocity by IP</th>\\n                                    </tr>\\n                                    <tr>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"isp\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"isp\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipAddressReputation.domain.isp}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipVelocityByUser.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipVelocityByUser.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.ipVelocityByUser.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.ipVelocityByUser.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.userVelocityByIp.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.userVelocityByIp.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.userVelocityByIp.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.userVelocityByIp.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                    </tr>\\n                                    <tr class=\\\"highlight\\\">\\n                                        <th>User Risk Behavior</th>\\n                                        <th>Bot Detection</th>\\n                                        <th>Suspicious Device</th>\\n                                    </tr>\\n                                    <tr>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.userBasedRiskBehavior.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.botDetection.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.botDetection.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.botDetection.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.botDetection.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.suspiciousDevice.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.suspiciousDevice.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.suspiciousDevice.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.suspiciousDevice.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                    </tr>\\n                                    <tr class=\\\"highlight\\\">\\n                                        <th>New Device</th>\\n                                        <th>Device Reason</th>\\n                                        <th>Device Status</th>\\n                                    </tr>\\n                                    <tr>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"level\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.level}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"reason\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.reason}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.reason}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.reason}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"reason\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.reason}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                        <td>\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:gyen7nqnsi\",\n        \"url\": \"status\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.status}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.status}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.gyen7nqnsi.payload.output.rawResponse.details.newDevice.status}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:7d4rn3u3f3\",\n        \"url\": \"status\",\n        \"data\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}\",\n        \"tooltip\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}\",\n        \"children\": [\n          {\n            \"text\": \"{{local.7d4rn3u3f3.payload.output.rawResponse.details.newDevice.status}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"</td>\\n                                    </tr>\\n                                </tbody>\\n                            </table>\\n                        </div>\\n\\n                        <!-- Form with buttons -->\\n                        <form class=\\\"form mt-4 mb-4\\\" id='riskForm' data-id=\\\"riskForm\\\">\\n                            <div class=\\\"text-center\\\">\\n                                <!-- Continue button on top -->\\n                                {{#if buttonLabel}}\\n                                <button class=\\\"btn btn-primary mb-3 custom-button\\\" data-id=\\\"continueBtn\\\" type=\\\"submit\\\" id=\\\"continueBtn\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\" data-skform=\\\"riskForm\\\" data-skbuttonvalue=\\\"CONTINUE\\\">\\n                                    \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"buttonLabel\",\n        \"data\": \"{{buttonLabel}}\",\n        \"tooltip\": \"{{buttonLabel}}\",\n        \"children\": [\n          {\n            \"text\": \"{{buttonLabel}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n                                </button>\\n                                {{/if}}\\n\\n                                <!-- Return to Authentication button below -->\\n                                {{#if buttonLabel2}}\\n                                <button class=\\\"btn btn-link mb-3 custom-button\\\" data-id=\\\"bypassBtn\\\" type=\\\"submit\\\" id=\\\"skipBtn\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\" data-skform=\\\"riskForm\\\" data-skbuttonvalue=\\\"RETURN\\\">\\n                                    \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"buttonLabel2\",\n        \"data\": \"{{buttonLabel2}}\",\n        \"tooltip\": \"{{buttonLabel2}}\",\n        \"children\": [\n          {\n            \"text\": \"{{buttonLabel2}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\n                                </button>\\n                                {{/if}}\\n                            </div>\\n                        </form>\\n                    </div>\\n                </main>\\n            </div>\\n        </div>\\n    </div>\\n</div>\\n\\n\"\n      }\n    ]\n  }\n]"
               },
               "customScript": {
                 "value": "\n\nconst start = () => {\n\n      const form = document.getElementById('riskForm');\n      const submitButton = document.getElementById('continueBtn');\n\n      if (form && submitButton) {\n        document.addEventListener('keydown', function (e) {\n          if (e.key === 'Enter' && !e.isComposing) {\n            e.preventDefault();  // Prevent the default form submission\n            console.log('Enter key pressed');\n            submitButton.click(); // Programmatically click the submit button\n          }\n        });\n      } else {\n        console.log('Form or submit button not found');\n      }\n}\n\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n    // `DOMContentLoaded` has already fired\n    start();\n}\n\n"
@@ -607,8 +606,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3900,
-            "y": 2490
+            "x": 4290,
+            "y": 2520
           },
           "group": "nodes",
           "removed": false,
@@ -633,8 +632,8 @@
             }
           },
           "position": {
-            "x": 3390,
-            "y": 2550
+            "x": 3780,
+            "y": 2580
           },
           "group": "nodes",
           "removed": false,
@@ -666,8 +665,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3600,
-            "y": 2490
+            "x": 3990,
+            "y": 2520
           },
           "group": "nodes",
           "removed": false,
@@ -684,8 +683,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3750,
-            "y": 2490
+            "x": 4140,
+            "y": 2520
           },
           "group": "nodes",
           "removed": false,
@@ -948,8 +947,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3346.5021280825317,
-            "y": 2290.1188863542056
+            "x": 3630,
+            "y": 2250
           },
           "group": "nodes",
           "removed": false,
@@ -1266,11 +1265,26 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Verify subflow",
-                  "value": "168e0bb6486cd03ae6a4abcf868c795a"
+                  "value": "c793a861762609c744e521ca885cf7ad"
                 }
               },
               "subFlowVersionId": {
                 "value": -1
+              },
+              "givenName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"firstName\",\n        \"data\": \"{{global.variables.firstName}}\",\n        \"tooltip\": \"{{global.variables.firstName}}\",\n        \"children\": [\n          {\n            \"text\": \"firstName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "familyName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"lastName\",\n        \"data\": \"{{global.variables.lastName}}\",\n        \"tooltip\": \"{{global.variables.lastName}}\",\n        \"children\": [\n          {\n            \"text\": \"lastName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "birthDay": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"dob\",\n        \"data\": \"{{global.variables.dob}}\",\n        \"tooltip\": \"{{global.variables.dob}}\",\n        \"children\": [\n          {\n            \"text\": \"dob\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "address": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"address\",\n        \"data\": \"{{global.variables.address}}\",\n        \"tooltip\": \"{{global.variables.address}}\",\n        \"children\": [\n          {\n            \"text\": \"address\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -2632,8 +2646,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3270,
-            "y": 2430
+            "x": 3360,
+            "y": 2340
           },
           "group": "nodes",
           "removed": false,
@@ -2701,8 +2715,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3390,
-            "y": 2400
+            "x": 3480,
+            "y": 2340
           },
           "group": "nodes",
           "removed": false,
@@ -2878,6 +2892,14 @@
                     "nameDefault": "level",
                     "type": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "riskLevel",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"level\",\n        \"data\": \"{{local.gyen7nqnsi.payload.output.rawResponse.result.level}}\",\n        \"tooltip\": \"{{local.gyen7nqnsi.payload.output.rawResponse.result.level}}\",\n        \"children\": [\n          {\n            \"text\": \"level\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.26547920395613245,
+                    "label": "riskLevel (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "level"
                   }
                 ]
               }
@@ -4546,8 +4568,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3570,
-            "y": 2610
+            "x": 3960,
+            "y": 2640
           },
           "group": "nodes",
           "removed": false,
@@ -7319,10 +7341,10 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"passwordlessAuth\",\n        \"data\": \"{{global.parameters.passwordlessAuth}}\",\n        \"tooltip\": \"{{global.parameters.passwordlessAuth}}\",\n        \"children\": [\n          {\n            \"text\": \"passwordlessAuth\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
-                "value": "Check if passwordless is false"
+                "value": "Check if passwordless is true"
               },
               "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"false\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -7347,16 +7369,19 @@
             "nodeType": "EVAL",
             "properties": {
               "1qf9f1rt5e": {
-                "value": "anyTriggersFalse"
+                "value": "allTriggersTrue"
               },
               "3gu5725f2v": {
+                "value": "anyTriggersFalse"
+              },
+              "lx14pbelk1": {
                 "value": "anyTriggersFalse"
               }
             }
           },
           "position": {
             "x": 3030,
-            "y": 2490
+            "y": 2520
           },
           "group": "nodes",
           "removed": false,
@@ -7661,15 +7686,15 @@
                 "value": 0
               },
               "width": {
-                "value": 1700
+                "value": 2400
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 437.2915388281873,
-            "y": 3895.1968440028227
+            "x": 300,
+            "y": 3900
           },
           "group": "nodes",
           "removed": false,
@@ -7698,8 +7723,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 511.72205177091644,
-            "y": 4068.8680408691907
+            "x": 330,
+            "y": 4080
           },
           "group": "nodes",
           "removed": false,
@@ -7740,7 +7765,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1920,
+            "x": 2100,
             "y": 4080
           },
           "group": "nodes",
@@ -7759,7 +7784,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2070,
+            "x": 2250,
             "y": 4080
           },
           "group": "nodes",
@@ -7789,7 +7814,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2490,
+            "x": 2670,
             "y": 4080
           },
           "group": "nodes",
@@ -7864,8 +7889,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1057.5458133509298,
-            "y": 4068.8680408691907
+            "x": 1230,
+            "y": 4080
           },
           "group": "nodes",
           "removed": false,
@@ -7883,8 +7908,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1181.5966682554783,
-            "y": 4068.8680408691907
+            "x": 1350,
+            "y": 4080
           },
           "group": "nodes",
           "removed": false,
@@ -7931,8 +7956,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1330.4576941409366,
-            "y": 4068.8680408691907
+            "x": 1500,
+            "y": 4080
           },
           "group": "nodes",
           "removed": false,
@@ -7977,8 +8002,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1652.9899168927625,
-            "y": 4217.729066754649
+            "x": 1830,
+            "y": 4230
           },
           "group": "nodes",
           "removed": false,
@@ -7995,8 +8020,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1454.508549045485,
-            "y": 4217.729066754649
+            "x": 1620,
+            "y": 4230
           },
           "group": "nodes",
           "removed": false,
@@ -8109,7 +8134,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1620,
+            "x": 1800,
             "y": 4080
           },
           "group": "nodes",
@@ -8127,8 +8152,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1454.508549045485,
-            "y": 4143.29855381192
+            "x": 1620,
+            "y": 4140
           },
           "group": "nodes",
           "removed": false,
@@ -8145,8 +8170,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1479.3187200263947,
-            "y": 4168.10872479283
+            "x": 1650,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -8163,7 +8188,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1740,
+            "x": 1920,
             "y": 4080
           },
           "group": "nodes",
@@ -8208,8 +8233,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 784.6339325609231,
-            "y": 4068.8680408691907
+            "x": 600,
+            "y": 4080
           },
           "group": "nodes",
           "removed": false,
@@ -8226,26 +8251,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 610.9627356945552,
-            "y": 4068.8680408691907
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "w2zsr6434a",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 908.6847874654716,
-            "y": 4068.8680408691907
+            "x": 450,
+            "y": 4080
           },
           "group": "nodes",
           "removed": false,
@@ -8419,8 +8426,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3210,
-            "y": 2580
+            "x": 3630,
+            "y": 2610
           },
           "group": "nodes",
           "removed": false,
@@ -8780,7 +8787,7 @@
           },
           "position": {
             "x": 3060,
-            "y": 2580
+            "y": 2610
           },
           "group": "nodes",
           "removed": false,
@@ -9190,8 +9197,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2397.2950463200536,
-            "y": 3895.1968440028227
+            "x": 2430,
+            "y": 4350
           },
           "group": "nodes",
           "removed": false,
@@ -9591,7 +9598,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2220,
+            "x": 2400,
             "y": 4080
           },
           "group": "nodes",
@@ -9609,7 +9616,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2340,
+            "x": 2520,
             "y": 4080
           },
           "group": "nodes",
@@ -9674,9 +9681,208 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "s43k0ze96b",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 720,
+            "y": 4080
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "q958blczoq",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AGreaterThanB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"chromeVersion\",\n        \"data\": \"{{local.2zq1904782.payload.output.chromeVersion}}\",\n        \"tooltip\": \"{{local.2zq1904782.payload.output.chromeVersion}}\",\n        \"children\": [\n          {\n            \"text\": \"chromeVersion\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-browserVersion}}\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Check Chrome version vs Acceptable Version"
+              },
+              "nodeDescription": {
+                "value": "Acceptable version in JSON config file mf-ConfigObject"
+              }
+            }
+          },
+          "position": {
+            "x": 870,
+            "y": 4080
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "wpxokqsxge",
+            "nodeType": "EVAL",
+            "properties": {
+              "l8jeudu185": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 1050,
+            "y": 4080
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "fxptvouddj",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1Credentials.mf-bool-runCredentials}}\"\n      }\n    ]\n  }\n]"
+              },
+              "caseSensitive": {
+                "value": false
+              },
+              "type": {
+                "value": "boolean"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "{{global.variables.mf-configObject.p1Credentials.mf-bool-runCredentials}}"
+              },
+              "nodeTitle": {
+                "value": "Check if Credentials"
+              }
+            }
+          },
+          "position": {
+            "x": 3270,
+            "y": 2490
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hq655j1s9e",
+            "nodeType": "EVAL",
+            "properties": {
+              "1qf9f1rt5e": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 3390,
+            "y": 2490
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "returnBackToCallingNode",
+            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
+            "connectorId": "nodeConnector",
+            "id": "l8jeudu185",
+            "label": "Teleport",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "outputSchema": {
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"userResponse\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"userResponse\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"userResponse\"\n\t\t}\n\t}\n}"
+              }
+            },
+            "status": "configured",
+            "type": "trigger",
+            "idUnique": "wyggeko8y9"
+          },
+          "position": {
+            "x": 1260,
+            "y": 4200
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "bo9fhx0da4",
+            "source": "fajk47lhsr",
+            "target": "vcg6c73tzp"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "ihi7xrtols",
@@ -9983,9 +10189,9 @@
         },
         {
           "data": {
-            "id": "dketyl0jt6",
-            "source": "w2zsr6434a",
-            "target": "6lod686i3d"
+            "id": "j0trt0jd2z",
+            "source": "xf2qck8hfq",
+            "target": "qy7zbzz8ts"
           },
           "position": {
             "x": 0,
@@ -11962,9 +12168,9 @@
         },
         {
           "data": {
-            "id": "nplci1fj1c",
-            "source": "2zq1904782",
-            "target": "w2zsr6434a"
+            "id": "lt7k2k7gjg",
+            "source": "3tncyngdq5",
+            "target": "zh8tyx62d9"
           },
           "position": {
             "x": 0,
@@ -13967,9 +14173,9 @@
         },
         {
           "data": {
-            "id": "ek7fci7bro",
-            "source": "jx1monsv6u",
-            "target": "1qf9f1rt5e"
+            "id": "xlfh6dzuni",
+            "source": "wpxokqsxge",
+            "target": "6lod686i3d"
           },
           "position": {
             "x": 0,
@@ -14119,9 +14325,9 @@
         },
         {
           "data": {
-            "id": "bo9fhx0da4",
-            "source": "fajk47lhsr",
-            "target": "vcg6c73tzp"
+            "id": "k520tonptl",
+            "source": "2zq1904782",
+            "target": "s43k0ze96b"
           },
           "position": {
             "x": 0,
@@ -14138,9 +14344,9 @@
         },
         {
           "data": {
-            "id": "j0trt0jd2z",
-            "source": "xf2qck8hfq",
-            "target": "qy7zbzz8ts"
+            "id": "1hrdmv2903",
+            "source": "s43k0ze96b",
+            "target": "q958blczoq"
           },
           "position": {
             "x": 0,
@@ -14157,9 +14363,104 @@
         },
         {
           "data": {
-            "id": "lt7k2k7gjg",
-            "source": "3tncyngdq5",
-            "target": "zh8tyx62d9"
+            "id": "mayl15hxnb",
+            "source": "q958blczoq",
+            "target": "wpxokqsxge"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "olv1pneng7",
+            "source": "jx1monsv6u",
+            "target": "fxptvouddj"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hnvxkxsme1",
+            "source": "fxptvouddj",
+            "target": "hq655j1s9e"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ahe0apktim",
+            "source": "hq655j1s9e",
+            "target": "88nxjsmf8u"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xaavpup1xc",
+            "source": "hq655j1s9e",
+            "target": "1qf9f1rt5e"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zskgzon07w",
+            "source": "wpxokqsxge",
+            "target": "l8jeudu185"
           },
           "position": {
             "x": 0,
@@ -14180,8 +14481,8 @@
     "zoomingEnabled": true,
     "userZoomingEnabled": true,
     "zoom": 1,
-    "minZoom": 1e-50,
-    "maxZoom": 1e+50,
+    "minZoom": 1E-50,
+    "maxZoom": 1E+50,
     "panningEnabled": true,
     "userPanningEnabled": true,
     "pan": {
@@ -14266,24 +14567,8 @@
     }
   ],
   "flowColor": "#CACED3",
-  "savedDate": 1726667282514,
+  "savedDate": 1727196131550,
   "variables": [
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504377720,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "072092d5-03e7-4bf8-a0d3-de6eff2e28fc",
-      "type": "property",
-      "visibility": "private",
-      "name": "address##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
     {
       "context": "flowInstance",
       "createdDate": 1726504457834,
@@ -14294,42 +14579,10 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "605cf639-f8d7-46ff-853e-ebc7fb1002b2",
+      "id": "51c90618-c0f9-4da0-80d1-6e6fd8a3a1f3",
       "type": "property",
       "visibility": "private",
-      "name": "anonymousNetworkDetected##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504377724,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "e4b76ab7-9e0e-45f4-b3d1-be42b17bb1b1",
-      "type": "property",
-      "visibility": "private",
-      "name": "birthDate##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504457835,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "dfbc766c-a376-46e0-ad77-236654d6d61f",
-      "type": "property",
-      "visibility": "private",
-      "name": "browserVersionResponse##SK##flowInstance",
+      "name": "riskLevel##SK##flowInstance",
       "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     },
     {
@@ -14366,7 +14619,7 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504371898,
+      "createdDate": 1726504457829,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -14374,10 +14627,10 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "a107bd26-d160-4c9d-90bd-5708b5a142e4",
+      "id": "5a321e9b-17af-43de-98dc-23727f6e8361",
       "type": "property",
       "visibility": "private",
-      "name": "firstName##SK##flowInstance",
+      "name": "riskSource##SK##flowInstance",
       "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     },
     {
@@ -14398,7 +14651,7 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504371899,
+      "createdDate": 1726504457836,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -14406,29 +14659,10 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "f63403e4-e8cb-4990-9d4b-5a7faa0a1458",
+      "id": "bcda0837-a9b8-490a-8d0b-65278d1a1ec9",
       "type": "property",
       "visibility": "private",
-      "name": "lastName##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "company",
-      "createdDate": 1726504352653,
-      "customerId": "7103642ff587ecb4de6b6c332453ca73",
-      "fields": {
-        "type": "object",
-        "displayName": null,
-        "value": "{\"config\":{\"mf-bool-webauthnBrowserSupport\":false,\"mf-obj-p1MFAPasswordlessAllowedTypes\":[\"FIDO2\",\"PLATFORM\",\"MOBILE\",\"TOTP\",\"SECURITY_KEY\"],\"mf-obj-passwordPolicy\":{\"length\":{\"max\":255,\"min\":8},\"maxRepeatedCharacters\":2,\"minCharacters\":{\"0123456789\":1,\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\":1,\"abcdefghijklmnopqrstuvwxyz\":1,\"~!@#$%^&*()-_=+[]{}|;:,.<>/?\":1},\"minUniqueCharacters\":5},\"mf-str-availableQuestions\":[{\"question\":\"In what city were you born?\"},{\"question\":\"What was the model of your first car?\"},{\"question\":\"What is the name of your first pet?\"},{\"question\":\"What is the name of your favorite teacher?\"},{\"question\":\"What is your mother's maiden name?\"},{\"question\":\"What is the name of the street you grew up on?\"},{\"question\":\"In which year did you graduate from high school?\"}],\"mf-str-azureExternalIdPId\":\" \",\"mf-str-browserVersion\":129,\"mf-str-captchaThreshold\":\"0.2\",\"mf-str-captchaV3SecretKey\":\"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",\"mf-str-captchaV3SiteKey\":\"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",\"mf-str-companyLogo\":\"https://avatars.githubusercontent.com/u/93611276?v=4\",\"mf-str-companyName\":\"Davinci Demo Company 2.0 -Self\",\"mf-str-facebookExternalIdPId\":\"\",\"mf-str-githubExternalIdPId\":\"\",\"mf-str-googleExternalIdPId\":\"\",\"mf-str-passwordExpireWarningDays\":5,\"mf-str-passwordExpiredDays\":10,\"mf-str-webAuthnSupport\":\"cross-platform\"},\"p1Authorize\":{\"mf-bool-runAuthorize\":false},\"p1MFA\":{\"mf-bool-allowForgotPassword\":true,\"mf-bool-allowHybridPasswordless\":true,\"mf-bool-allowRegisterAnotherDevice\":true,\"mf-bool-runAfterSocialLogin\":false,\"mf-bool-runAutoEnrollEmail\":true,\"mf-bool-runDeviceManagement\":true,\"mf-bool-runInlineMFA\":true,\"mf-bool-runOnlyPasswordless\":false,\"mf-bool-runP1MFA\":true,\"mf-bool-sendEmailConfirmation\":true,\"mf-bool-sendEmailDeleteDeviceConfirmation\":true,\"mf-str-fidoDeviceNickname\":\"Passkeys/FIDO2\",\"mf-str-fidoOrigin\":\"https://auth.pingone.com\",\"mf-str-fidoRPID\":\"pingone.com\"},\"p1Protect\":{\"mf-bool-runAfterSocialLogin\":false,\"mf-bool-runBrowserVersionAuthentication\":false,\"mf-bool-runBrowserVersionRegistration\":false,\"mf-bool-runFakeRiskLevel\":true,\"mf-bool-runMFAOnHigh\":false,\"mf-bool-runNotificationForNewDevice\":true,\"mf-bool-runPassiveMode\":false,\"mf-bool-runProtect\":true,\"mf-bool-runStopOnHighRiskLevel\":false,\"mf-bool-showDetailScreenDisplay\":true,\"mf-bool-showProgressScreenDisplay\":true,\"mf-bool-userDeleteOnTempEmail\":false,\"mf-bool-userLockedOnTempEmail\":true,\"mf-str-fakeRiskLevel\":\"HIGH\",\"mf-str-fakeRiskScore\":75},\"p1Verify\":{\"mf-bool-allowVerifyUserRegistration\":true,\"mf-bool-runVerifyFakeSuccess\":false,\"mf-bool-runVerifyOnHigh\":true},\"pingone\":{\"mf-bool-allowForgotPassword\":true,\"mf-bool-allowForgotUsername\":true,\"mf-bool-allowKBAforForgotPassword\":true,\"mf-bool-allowMagicLinkUserRegistration\":false,\"mf-bool-allowOTPForgotPassword\":true,\"mf-bool-allowreCaptcha\":false,\"mf-bool-displayProfileUpdateQuestion\":true,\"mf-bool-runAgreement\":true,\"mf-bool-runAzureLogin\":true,\"mf-bool-runConsent\":true,\"mf-bool-runFacebookLogin\":true,\"mf-bool-runGithubLogin\":true,\"mf-bool-runGoogleLogin\":true,\"mf-bool-runMFAOnAccountUnlock\":true,\"mf-bool-runPasswordExpireCheck\":true,\"mf-bool-runProgressiveProfileAuthN\":true,\"mf-bool-runProgressiveProfileRegstration\":true,\"mf-bool-runReturnToLogin\":false,\"mf-bool-runTimeBasedProgressiveProfile\":true,\"mf-bool-sendEmailPasswordChange\":true,\"mf-bool-sendEmailPasswordRecovery\":true,\"mf-bool-sendEmailUserProfileUpdate\":true,\"mf-bool-showAzureButton\":true,\"mf-bool-showFacebookButton\":true,\"mf-bool-showGithubButton\":true,\"mf-bool-showGoogleButton\":true,\"mf-string-daysUntilProgressiveProfile\":30}}",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "888ca6fb-7433-4d2c-85a0-bab097532c7e",
-      "type": "property",
-      "updatedDate": 1726666881776,
-      "visibility": "private",
-      "name": "mf-configObject##SK##company",
+      "name": "riskId##SK##flowInstance",
       "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     },
     {
@@ -14449,6 +14683,54 @@
     },
     {
       "context": "flowInstance",
+      "createdDate": 1726504371898,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "a107bd26-d160-4c9d-90bd-5708b5a142e4",
+      "type": "property",
+      "visibility": "private",
+      "name": "firstName##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1726504371899,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "f63403e4-e8cb-4990-9d4b-5a7faa0a1458",
+      "type": "property",
+      "visibility": "private",
+      "name": "lastName##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1726504400225,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "7d24a53a-0f20-4b82-bc1f-b9c141ce7749",
+      "type": "property",
+      "visibility": "private",
+      "name": "dob##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
       "createdDate": 1726504371895,
       "fields": {
         "displayName": "",
@@ -14465,23 +14747,7 @@
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504371897,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "1491f7f1-d36d-4ab9-9f15-c21b41589d8b",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1UserId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504457836,
+      "createdDate": 1726504377720,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -14489,59 +14755,10 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "bcda0837-a9b8-490a-8d0b-65278d1a1ec9",
+      "id": "072092d5-03e7-4bf8-a0d3-de6eff2e28fc",
       "type": "property",
       "visibility": "private",
-      "name": "riskId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504457834,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "51c90618-c0f9-4da0-80d1-6e6fd8a3a1f3",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskLevel##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504457834,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "number",
-        "value": "0"
-      },
-      "id": "4f4f6a12-45b8-4567-9844-7b27a6767a29",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskScore##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504457829,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "5a321e9b-17af-43de-98dc-23727f6e8361",
-      "type": "property",
-      "visibility": "private",
-      "name": "riskSource##SK##flowInstance",
+      "name": "address##SK##flowInstance",
       "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     },
     {
@@ -14562,6 +14779,74 @@
     },
     {
       "context": "flowInstance",
+      "createdDate": 1726504457834,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "number",
+        "value": "0"
+      },
+      "id": "4f4f6a12-45b8-4567-9844-7b27a6767a29",
+      "type": "property",
+      "visibility": "private",
+      "name": "riskScore##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "company",
+      "createdDate": 1726504352653,
+      "customerId": "7103642ff587ecb4de6b6c332453ca73",
+      "fields": {
+        "type": "object",
+        "displayName": null,
+        "value": "{     \"config\": {         \"mf-bool-webauthnBrowserSupport\": true,         \"mf-obj-p1MFAPasswordlessAllowedTypes\": [             \"FIDO2\",             \"PLATFORM\",             \"MOBILE\",             \"TOTP\",             \"SECURITY_KEY\"         ],         \"mf-obj-passwordPolicy\": {             \"length\": {                 \"max\": 255,                 \"min\": 8             },             \"maxRepeatedCharacters\": 2,             \"minCharacters\": {                 \"0123456789\": 1,                 \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\": 1,                 \"abcdefghijklmnopqrstuvwxyz\": 1,                 \"~!@#$%^&*()-_=+[]{}|;:,.<>/?\": 1             },             \"minUniqueCharacters\": 5         },         \"mf-str-availableQuestions\": [             {                 \"question\": \"In what city were you born?\"             },             {                 \"question\": \"What was the model of your first car?\"             },             {                 \"question\": \"What is the name of your first pet?\"             },             {                 \"question\": \"What is the name of your favorite teacher?\"             },             {                 \"question\": \"What is your mother's maiden name?\"             },             {                 \"question\": \"What is the name of the street you grew up on?\"             },             {                 \"question\": \"In which year did you graduate from high school?\"             }         ],         \"mf-str-azureExternalIdPId\": \" \",         \"mf-str-browserVersion\": 127,         \"mf-str-captchaThreshold\": \"0.2\",         \"mf-str-captchaV3SecretKey\": \"6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF\",         \"mf-str-captchaV3SiteKey\": \"6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr\",         \"mf-str-companyLogo\": \"https://raw.githubusercontent.com/curtismu7/CDN/ed5b713ceeb262420beffbc4be2729f6b701afdf/IDC_LOGO.svg\",         \"mf-str-companyName\": \"IDC Demo\",         \"mf-str-facebookExternalIdPId\": \"\",         \"mf-str-githubExternalIdPId\": \"\",         \"mf-str-googleExternalIdPId\": \"\",         \"mf-str-passwordExpireWarningDays\": 5,         \"mf-str-passwordExpiredDays\": 90,         \"mf-str-webAuthnSupport\": \"cross-platform\"     },     \"p1Authorize\": {         \"mf-bool-runAuthorize\": false     },     \"p1MFA\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowHybridPasswordless\": true,         \"mf-bool-allowRegisterAnotherDevice\": true,         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runAutoEnrollEmail\": true,         \"mf-bool-runDeviceManagement\": true,         \"mf-bool-runInlineMFA\": true,         \"mf-bool-runOnlyPasswordless\": true,         \"mf-bool-runP1MFA\": true,         \"mf-bool-sendEmailConfirmation\": true,         \"mf-bool-sendEmailDeleteDeviceConfirmation\": true,         \"mf-str-fidoDeviceNickname\": \"Passkeys/FIDO2\",         \"mf-str-fidoOrigin\": \"https://auth.pingone.com\",         \"mf-str-fidoRPID\": \"pingone.com\"     },     \"p1Protect\": {         \"mf-bool-runAfterSocialLogin\": false,         \"mf-bool-runBrowserVersionAuthentication\": true,         \"mf-bool-runBrowserVersionRegistration\": true,         \"mf-bool-runFakeRiskLevel\": true,         \"mf-bool-runMFAOnHigh\": true,         \"mf-bool-runNotificationForNewDevice\": true,         \"mf-bool-runPassiveMode\": false,         \"mf-bool-runProtect\": true,         \"mf-bool-runStopOnHighRiskLevel\": false,         \"mf-bool-showDetailScreenDisplay\": false,         \"mf-bool-showProgressScreenDisplay\": true,         \"mf-bool-userDeleteOnTempEmail\": false,         \"mf-bool-userLockedOnTempEmail\": true,         \"mf-str-fakeRiskLevel\": \"MEDIUM\",         \"mf-str-fakeRiskScore\": 50     },     \"p1Verify\": {         \"mf-bool-allowVerifyUserRegistration\": true,         \"mf-bool-runVerifyFakeSuccess\": false,         \"mf-bool-runVerifyOnHigh\": false     },     \"pingone\": {         \"mf-bool-allowForgotPassword\": true,         \"mf-bool-allowForgotUsername\": true,         \"mf-bool-allowKBAforForgotPassword\": true,         \"mf-bool-allowMagicLinkUserRegistration\": false,         \"mf-bool-allowOTPForgotPassword\": true,         \"mf-bool-allowreCaptcha\": false,         \"mf-bool-displayProfileUpdateQuestion\": true,         \"mf-bool-runAgreement\": true,         \"mf-bool-runAzureLogin\": true,         \"mf-bool-runConsent\": true,         \"mf-bool-runFacebookLogin\": true,         \"mf-bool-runGithubLogin\": true,         \"mf-bool-runGoogleLogin\": true,         \"mf-bool-runMFAOnAccountUnlock\": true,         \"mf-bool-runPasswordExpireCheck\": true,         \"mf-bool-runProgressiveProfileAuthN\": true,         \"mf-bool-runProgressiveProfileRegstration\": false,         \"mf-bool-runReturnToLogin\": false,         \"mf-bool-runTimeBasedProgressiveProfile\": true,         \"mf-bool-sendEmailPasswordChange\": true,         \"mf-bool-sendEmailPasswordRecovery\": true,         \"mf-bool-sendEmailUserProfileUpdate\": true,         \"mf-bool-showAzureButton\": true,         \"mf-bool-showFacebookButton\": false,         \"mf-bool-showGithubButton\": false,         \"mf-bool-showGoogleButton\": true,         \"mf-string-daysUntilProgressiveProfile\": 30     },     \"p1Credentials\": {         \"mf-bool-runCredentials\": true     } }",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "888ca6fb-7433-4d2c-85a0-bab097532c7e",
+      "type": "property",
+      "updatedDate": 1727457644379,
+      "visibility": "private",
+      "name": "mf-configObject##SK##company",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1726504371897,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "1491f7f1-d36d-4ab9-9f15-c21b41589d8b",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserId##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1726504457835,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "dfbc766c-a376-46e0-ad77-236654d6d61f",
+      "type": "property",
+      "visibility": "private",
+      "name": "browserVersionResponse##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
       "createdDate": 1726504434013,
       "fields": {
         "displayName": "",
@@ -14575,7 +14860,38 @@
       "visibility": "private",
       "name": "username##SK##flowInstance",
       "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1726504457834,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "605cf639-f8d7-46ff-853e-ebc7fb1002b2",
+      "type": "property",
+      "visibility": "private",
+      "name": "anonymousNetworkDetected##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1726504377724,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "e4b76ab7-9e0e-45f4-b3d1-be42b17bb1b1",
+      "type": "property",
+      "visibility": "private",
+      "name": "birthDate##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     }
-  ],
-  "connections": []
+  ]
 }
