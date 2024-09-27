@@ -1,5 +1,5 @@
 {
-  "companyId": "b864c908-0b69-45b5-935a-17017f58b76f",
+  "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -10,9 +10,9 @@
     "errorConnector",
     "variablesConnector"
   ],
-  "createdDate": 1726230147627,
-  "currentVersion": 94,
-  "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+  "createdDate": 1727262664859,
+  "currentVersion": 3,
+  "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "UI Fixed",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -21,8 +21,8 @@
       "properties": {
         "mf-configObject": {
           "description": "",
-          "preferredDataType": "object",
           "isExpanded": true,
+          "preferredDataType": "object",
           "type": "object",
           "name": "mf-configObject"
         }
@@ -34,24 +34,24 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Forgot Username subflow",
-  "publishedVersion": 94,
+  "publishedVersion": 3,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+    "cssLinks": [],
+    "customErrorScreenBrandLogoUrl": "",
+    "customLogoURLSelection": 2,
+    "defaultErrorScreenBrandLogo": true,
+    "flowTimeoutInSeconds": 3600,
     "intermediateLoadingScreenCSS": "",
     "intermediateLoadingScreenHTML": "",
     "logLevel": 3,
-    "flowTimeoutInSeconds": 3600,
-    "useCustomScript": false,
-    "defaultErrorScreenBrandLogo": true,
-    "customErrorScreenBrandLogoUrl": "",
-    "customLogoURLSelection": 2,
     "useCustomCSS": true,
-    "cssLinks": []
+    "useCustomScript": false
   },
   "timeouts": "null",
-  "updatedDate": 1726230161464,
-  "flowId": "910770704e8721dab55d1bee8d87e2aa",
-  "versionId": 94,
+  "updatedDate": 1727262666109,
+  "flowId": "cecd3dc7143884c211e4acacfcb29e2e",
+  "versionId": 3,
   "graphData": {
     "elements": {
       "nodes": [
@@ -93,8 +93,8 @@
             "type": "action"
           },
           "position": {
-            "x": 214,
-            "y": 338
+            "x": 218,
+            "y": 342
           },
           "group": "nodes",
           "removed": false,
@@ -171,8 +171,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 990,
-            "y": 510
+            "x": 994,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -206,8 +206,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1650,
-            "y": 510
+            "x": 1654,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -227,20 +227,20 @@
               "06v3ur2vhg": {
                 "value": "allTriggersTrue"
               },
+              "658q5uokws": {
+                "value": "anyTriggersFalse"
+              },
               "ry0bjvvhsp": {
                 "value": "anyTriggersFalse"
               },
               "xk6cwqd5tn": {
                 "value": "anyTriggersFalse"
-              },
-              "658q5uokws": {
-                "value": "anyTriggersFalse"
               }
             }
           },
           "position": {
-            "x": 1800,
-            "y": 510
+            "x": 1804,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -312,8 +312,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2100,
-            "y": 510
+            "x": 2104,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -329,20 +329,20 @@
             "id": "92ieifb03h",
             "nodeType": "EVAL",
             "properties": {
+              "9hr3e05kyy": {
+                "value": "anyTriggersFalse"
+              },
               "k07q3cnb9s": {
                 "value": "allTriggersTrue"
               },
               "undefined": {
                 "value": "always"
-              },
-              "9hr3e05kyy": {
-                "value": "anyTriggersFalse"
               }
             }
           },
           "position": {
-            "x": 2220,
-            "y": 510
+            "x": 2224,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -367,24 +367,7 @@
                 "value": "#9dc967ff"
               },
               "claimsNameValuePairs": {
-                "value": [
-                  {
-                    "key": 0.4630016438091049,
-                    "label": "p1UserId (string - flowInstance)",
-                    "name": "p1UserId",
-                    "nameDefault": "id",
-                    "type": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.fi7qajq4i6.payload.output.matchedUser.id}}\",\n        \"tooltip\": \"{{local.fi7qajq4i6.payload.output.matchedUser.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-                  },
-                  {
-                    "name": "username",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.fi7qajq4i6.payload.output.matchedUser.username}}\",\n        \"tooltip\": \"{{local.fi7qajq4i6.payload.output.matchedUser.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.7092759861164053,
-                    "label": "username (string - flowInstance)",
-                    "type": "string",
-                    "nameDefault": "username"
-                  }
-                ]
+                "value": []
               },
               "nodeTitle": {
                 "value": "Return Success"
@@ -397,8 +380,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2850,
-            "y": 510
+            "x": 2854,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -469,8 +452,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2520,
-            "y": 510
+            "x": 2524,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -488,8 +471,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1110,
-            "y": 510
+            "x": 1114,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -533,8 +516,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1290,
-            "y": 510
+            "x": 1294,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -551,8 +534,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1470,
-            "y": 510
+            "x": 1474,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -570,8 +553,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1440,
-            "y": 630
+            "x": 1444,
+            "y": 634
           },
           "group": "nodes",
           "removed": false,
@@ -614,8 +597,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1620,
-            "y": 630
+            "x": 1624,
+            "y": 634
           },
           "group": "nodes",
           "removed": false,
@@ -659,8 +642,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1620,
-            "y": 750
+            "x": 1624,
+            "y": 754
           },
           "group": "nodes",
           "removed": false,
@@ -677,8 +660,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1440,
-            "y": 750
+            "x": 1444,
+            "y": 754
           },
           "group": "nodes",
           "removed": false,
@@ -705,12 +688,12 @@
               "saveVariables": {
                 "value": [
                   {
-                    "name": "mf-configObject",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.7063874929771505,
                     "label": "mf-configObject (object - flowInstance)",
+                    "name": "mf-configObject",
+                    "nameDefault": "mf-configObject",
                     "type": "object",
-                    "nameDefault": "mf-configObject"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
@@ -719,8 +702,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 360,
-            "y": 510
+            "x": 364,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -733,34 +716,34 @@
         },
         {
           "data": {
-            "id": "fcphr83l7r",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "fcphr83l7r",
+            "idUnique": "o2v5xhdcbc",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#ffffffff"
+              "annotation": {
+                "value": "Last Updated: 7/19, 2024"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Last Updated: 7/19, 2024"
+              "backgroundColor": {
+                "value": "#ffffffff"
               },
-              "width": {
-                "value": 240
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": false
@@ -768,16 +751,16 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 240
               }
             },
             "status": "configured",
-            "idUnique": "o2v5xhdcbc"
+            "type": "action"
           },
           "position": {
-            "x": 503,
-            "y": 222
+            "x": 507,
+            "y": 226
           },
           "group": "nodes",
           "removed": false,
@@ -790,44 +773,44 @@
         },
         {
           "data": {
-            "id": "3c6dbpiqww",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "3c6dbpiqww",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#4462edff"
+              "annotation": {
+                "value": "PingOne forgot username"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
               },
-              "annotation": {
-                "value": "PingOne forgot username"
+              "backgroundColor": {
+                "value": "#4462edff"
               },
-              "width": {
-                "value": 1800
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "fontSize": {
-                "value": 16
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 16
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 1800
               }
             },
-            "status": "configured"
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 780,
-            "y": 214
+            "x": 784,
+            "y": 218
           },
           "group": "nodes",
           "removed": false,
@@ -840,15 +823,13 @@
         },
         {
           "data": {
-            "id": "9hr3e05kyy",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "9hr3e05kyy",
             "label": "Error Message",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Email failed to send\"\n      }\n    ]\n  }\n]"
@@ -856,11 +837,13 @@
               "nodeTitle": {
                 "value": "Email failed to send"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 2340,
-            "y": 660
+            "x": 2344,
+            "y": 664
           },
           "group": "nodes",
           "removed": false,
@@ -873,15 +856,13 @@
         },
         {
           "data": {
-            "id": "658q5uokws",
-            "nodeType": "CONNECTION",
+            "capabilityName": "customErrorMessage",
             "connectionId": "53ab83a4a4ab919d9f2cb02d9e111ac8",
             "connectorId": "errorConnector",
-            "name": "Error Message",
+            "id": "658q5uokws",
             "label": "Error Message",
-            "status": "configured",
-            "capabilityName": "customErrorMessage",
-            "type": "action",
+            "name": "Error Message",
+            "nodeType": "CONNECTION",
             "properties": {
               "errorMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"User not found\"\n      }\n    ]\n  }\n]"
@@ -889,11 +870,13 @@
               "nodeTitle": {
                 "value": "User not found"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1920,
-            "y": 630
+            "x": 1924,
+            "y": 634
           },
           "group": "nodes",
           "removed": false,
@@ -910,43 +893,44 @@
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
             "id": "wjogizvs38",
+            "idUnique": "h4szhgsbzc",
             "label": "Variables",
             "name": "Variables",
             "nodeType": "CONNECTION",
             "properties": {
+              "nodeDescription": {
+                "value": "You should have not to touch this, update in the configObject"
+              },
               "nodeTitle": {
                 "value": "Company Variables"
               },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "companyLogo",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]",
                     "key": 0.7048891933522443,
                     "label": "companyLogo (string - flowInstance)",
+                    "name": "companyLogo",
+                    "nameDefault": "mf-companyLogo",
                     "type": "string",
-                    "nameDefault": "mf-companyLogo"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "companyName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]",
                     "key": 0.18386692595844223,
                     "label": "companyName (string - flowInstance)",
-                    "type": "string"
+                    "name": "companyName",
+                    "nameDefault": null,
+                    "type": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeDescription": {
-                "value": "You should have not to touch this, update in the configObject"
               }
             },
             "status": "configured",
-            "type": "trigger",
-            "idUnique": "h4szhgsbzc"
+            "type": "trigger"
           },
           "position": {
-            "x": 660,
-            "y": 510
+            "x": 664,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -963,8 +947,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 510,
-            "y": 510
+            "x": 514,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -981,8 +965,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 840,
-            "y": 510
+            "x": 844,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -999,8 +983,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2670,
-            "y": 510
+            "x": 2674,
+            "y": 514
           },
           "group": "nodes",
           "removed": false,
@@ -1013,37 +997,37 @@
         },
         {
           "data": {
-            "id": "9celmmwvqn",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "9celmmwvqn",
+            "idUnique": "lb31g4gkg6",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#50e3c2ff"
+              "annotation": {
+                "value": "email template: Master Flow Forgot Password"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "email template: Master Flow Forgot Password"
+              "backgroundColor": {
+                "value": "#50e3c2ff"
               },
-              "width": {
-                "value": 240
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
+              "fontSize": {
+                "value": 14
+              },
               "fontStyle": {
                 "value": "normal"
               },
-              "cornerRadius": {
-                "value": 8
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": true
@@ -1051,16 +1035,16 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 240
               }
             },
             "status": "configured",
-            "idUnique": "lb31g4gkg6"
+            "type": "action"
           },
           "position": {
-            "x": 210,
-            "y": 210
+            "x": 214,
+            "y": 214
           },
           "group": "nodes",
           "removed": false,
@@ -1477,20 +1461,20 @@
   },
   "inputSchema": [
     {
-      "propertyName": "mf-configObject",
       "description": "",
-      "preferredDataType": "object",
-      "preferredControlType": "textField",
       "isExpanded": true,
+      "preferredControlType": "textField",
+      "preferredDataType": "object",
+      "propertyName": "mf-configObject",
       "required": false
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726230147456,
+  "savedDate": 1727262664731,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1719424477651,
+      "createdDate": 1726504365510,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -1498,45 +1482,43 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "d2b7a39c-2e47-41db-ad55-6b01182556a6",
+      "id": "e542edb9-9462-4047-b116-a232468a74e1",
       "type": "property",
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424393931,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1726504365513,
       "fields": {
-        "type": "string",
         "displayName": "Internal variable",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "string"
       },
-      "id": "e4cd357f-2114-4ff3-bf50-877f2072ae6c",
+      "id": "5158e728-acef-446b-b0cc-88c6b8e465a0",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1720639754826,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1726504365513,
       "fields": {
-        "type": "object",
         "displayName": "",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "object"
       },
-      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
+      "id": "9ae2c7ed-62a4-4185-8041-83f219be6fbc",
       "type": "property",
       "visibility": "private",
       "name": "mf-configObject##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     }
   ]
 }

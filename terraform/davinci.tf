@@ -16,6 +16,7 @@ data "davinci_connections" "read_connections" {
     "pingOneSSOConnector",
     "pingOneAuthenticationConnector",
     "pingOneMfaConnector",
+	"pingOneCredentialsConnector",
     "notificationsConnector",
     "pingOneRiskConnector",
     "pingOneVerifyConnector",
@@ -245,6 +246,43 @@ resource "davinci_connection" "PingOne-Verify" {
 
   property {
     name  = "region"
+    value = var.davinci_connection_PingOne_region
+  }
+}
+
+resource "davinci_connection" "PingOne-Credentials" {
+  environment_id = var.pingone_environment_id
+
+  connector_id = "pingOneCredentialsConnector"
+  name         = "PingOne Credentials"
+
+  property {
+    name  = "clientId"
+    type  = "string"
+    value = pingone_application.dv_worker_app.oidc_options.client_id
+  }
+
+  property {
+    name  = "clientSecret"
+    type  = "string"
+    value = pingone_application_secret.dv_worker_app.secret
+  }
+
+  property {
+    name  = "digitalWalletApplicationId"
+    type  = "string"
+    value = pingone_digital_wallet_application.pingone_neo_demo_wallet_app.id
+  }
+
+  property {
+    name  = "envId"
+    type  = "string"
+    value = var.pingone_environment_id
+  }
+
+  property {
+    name  = "region"
+    type  = "string"
     value = var.davinci_connection_PingOne_region
   }
 }
@@ -1374,6 +1412,11 @@ resource "davinci_flow" "PingOne-SSO-Authentication-Sensei---MASTER" {
 		name = davinci_flow.PingOne-reCAPTCHA-v3-subflow.name
 		replace_import_subflow_id = "c768a672b7fc67ab842110a8bbaf4e1f"
 	}
+	subflow_link {
+		id   = davinci_flow.PingOne-Neo-Starter-Flow---Verifiable-Credential-Presentation-Request-subflow.id
+		name = davinci_flow.PingOne-Neo-Starter-Flow---Verifiable-Credential-Presentation-Request-subflow.name
+		replace_import_subflow_id = "e180746be3582cfb3e9b8363961ad353"
+	}
 
 	depends_on = [
 		data.davinci_connections.read_connections
@@ -1545,6 +1588,11 @@ resource "davinci_flow" "PingOne-SSO-User-Registration-subflow" {
 		id   = davinci_flow.PingOne-Protect-subflow.id
 		name = davinci_flow.PingOne-Protect-subflow.name
 		replace_import_subflow_id = "3a1bf218079b8a6c594c3a4beb29f1fa"
+	}
+	subflow_link {
+		id   = davinci_flow.PingOne-Pair-a-Digital-Wallet-subflow.id
+		name = davinci_flow.PingOne-Pair-a-Digital-Wallet-subflow.name
+		replace_import_subflow_id = "69e63998defbbd9f7dd3e32fd3cc54c0"
 	}
 
 	depends_on = [
@@ -1812,6 +1860,168 @@ resource "davinci_flow" "PingOne-Authorize-Flow" {
 		id   = davinci_flow.PingOne-MFA-Authentication-subflow.id
 		name = davinci_flow.PingOne-MFA-Authentication-subflow.name
 		replace_import_subflow_id = "bed472b5706a7d61a781d81e483986a7"
+	}
+
+	depends_on = [
+		data.davinci_connections.read_connections
+	]
+}
+
+resource "davinci_flow" "PingOne-Neo-Starter-Flow---Verifiable-Credential-Presentation-Request-subflow" {
+	environment_id = pingone_environment.master_flow_environment.id
+	flow_json = "${file("${path.module}/data/flows/PingOne Neo Starter Flow - Verifiable Credential Presentation Request subflow.json")}"
+
+	connection_link {
+		id   = davinci_connection.Annotation.id
+		name = davinci_connection.Annotation.name
+		replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
+	}
+	connection_link {
+		id   = davinci_connection.Http.id
+		name = davinci_connection.Http.name
+		replace_import_connection_id = "867ed4363b2bc21c860085ad2baa817d"
+	}
+	connection_link {
+		id   = davinci_connection.Functions.id
+		name = davinci_connection.Functions.name
+		replace_import_connection_id = "de650ca45593b82c49064ead10b9fe17"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Connector.id
+		name = davinci_connection.Flow-Connector.name
+		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
+	}
+	connection_link {
+		id   = davinci_connection.Error-Message.id
+		name = davinci_connection.Error-Message.name
+		replace_import_connection_id = "53ab83a4a4ab919d9f2cb02d9e111ac8"
+	}
+	connection_link {
+		id   = davinci_connection.Variables.id
+		name = davinci_connection.Variables.name
+		replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
+	}
+	connection_link {
+		id   = davinci_connection.Node.id
+		name = davinci_connection.Node.name
+		replace_import_connection_id = "3566e86a35c26e575396dcfb89a3dcc0"
+	}
+
+	subflow_link {
+		id   = davinci_flow.PingOne-Validate-a-Verifiable-Credential-Subflow.id
+		name = davinci_flow.PingOne-Validate-a-Verifiable-Credential-Subflow.name
+		replace_import_subflow_id = "6a492f757100ac4eff49f595220f30e1"
+	}
+	subflow_link {
+		id   = davinci_flow.PingOne-Identity-Verification-and-Managed-Credential-Issuance-with-Biometric-Binding-subflow.id
+		name = davinci_flow.PingOne-Identity-Verification-and-Managed-Credential-Issuance-with-Biometric-Binding-subflow.name
+		replace_import_subflow_id = "c9099ef0128af3a279cd33fe5ee8d942"
+	}
+
+	depends_on = [
+		data.davinci_connections.read_connections
+	]
+}
+
+resource "davinci_flow" "PingOne-Validate-a-Verifiable-Credential-Subflow" {
+	environment_id = pingone_environment.master_flow_environment.id
+	flow_json = "${file("${path.module}/data/flows/PingOne Validate a Verifiable Credential Subflow.json")}"
+
+	connection_link {
+		id   = davinci_connection.Http.id
+		name = davinci_connection.Http.name
+		replace_import_connection_id = "867ed4363b2bc21c860085ad2baa817d"
+	}
+	connection_link {
+		id   = davinci_connection.Functions.id
+		name = davinci_connection.Functions.name
+		replace_import_connection_id = "de650ca45593b82c49064ead10b9fe17"
+	}
+	connection_link {
+		id   = davinci_connection.Annotation.id
+		name = davinci_connection.Annotation.name
+		replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
+	}
+	connection_link {
+		id   = davinci_connection.PingOne-Credentials.id
+		name = davinci_connection.PingOne-Credentials.name
+		replace_import_connection_id = "b249494cebd3035d7e9da053c34bc52f"
+	}
+	connection_link {
+		id   = davinci_connection.Device-Policy.id
+		name = davinci_connection.Device-Policy.name
+		replace_import_connection_id = "79a1f68f5a2fc72e92ada3cee8ada8be"
+	}
+	connection_link {
+		id   = davinci_connection.Node.id
+		name = davinci_connection.Node.name
+		replace_import_connection_id = "3566e86a35c26e575396dcfb89a3dcc0"
+	}
+	connection_link {
+		id   = davinci_connection.Variables.id
+		name = davinci_connection.Variables.name
+		replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
+	}
+
+	depends_on = [
+		data.davinci_connections.read_connections
+	]
+}
+
+resource "davinci_flow" "PingOne-Identity-Verification-and-Managed-Credential-Issuance-with-Biometric-Binding-subflow" {
+	environment_id = pingone_environment.master_flow_environment.id
+	flow_json = "${file("${path.module}/data/flows/PingOne Identity Verification and Managed Credential Issuance with Biometric Binding subflow.json")}"
+
+	connection_link {
+		id   = davinci_connection.PingOne-Verify.id
+		name = davinci_connection.PingOne-Verify.name
+		replace_import_connection_id = "aebcad93e7a1090d237676631e96f5ad"
+	}
+	connection_link {
+		id   = davinci_connection.Functions.id
+		name = davinci_connection.Functions.name
+		replace_import_connection_id = "de650ca45593b82c49064ead10b9fe17"
+	}
+	connection_link {
+		id   = davinci_connection.Http.id
+		name = davinci_connection.Http.name
+		replace_import_connection_id = "867ed4363b2bc21c860085ad2baa817d"
+	}
+	connection_link {
+		id   = davinci_connection.PingOne.id
+		name = davinci_connection.PingOne.name
+		replace_import_connection_id = "94141bf2f1b9b59a5f5365ff135e02bb"
+	}
+	connection_link {
+		id   = davinci_connection.Node.id
+		name = davinci_connection.Node.name
+		replace_import_connection_id = "3566e86a35c26e575396dcfb89a3dcc0"
+	}
+	connection_link {
+		id   = davinci_connection.Variables.id
+		name = davinci_connection.Variables.name
+		replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
+	}
+	connection_link {
+		id   = davinci_connection.Annotation.id
+		name = davinci_connection.Annotation.name
+		replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Connector.id
+		name = davinci_connection.Flow-Connector.name
+		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
+	}
+	connection_link {
+		id   = davinci_connection.Error-Message.id
+		name = davinci_connection.Error-Message.name
+		replace_import_connection_id = "53ab83a4a4ab919d9f2cb02d9e111ac8"
+	}
+
+	subflow_link {
+		id   = davinci_flow.PingOne-Pair-a-Digital-Wallet-subflow.id
+		name = davinci_flow.PingOne-Pair-a-Digital-Wallet-subflow.name
+		replace_import_subflow_id = "69e63998defbbd9f7dd3e32fd3cc54c0"
 	}
 
 	depends_on = [
@@ -2293,6 +2503,56 @@ resource "davinci_flow" "PingOne-MFA-Device-Registration-subflow" {
 	]
 }
 
+resource "davinci_flow" "PingOne-Pair-a-Digital-Wallet-subflow" {
+	environment_id = pingone_environment.master_flow_environment.id
+	flow_json = "${file("${path.module}/data/flows/PingOne Pair a Digital Wallet subflow.json")}"
+
+	connection_link {
+		id   = davinci_connection.Annotation.id
+		name = davinci_connection.Annotation.name
+		replace_import_connection_id = "921bfae85c38ed45045e07be703d86b8"
+	}
+	connection_link {
+		id   = davinci_connection.PingOne-Credentials.id
+		name = davinci_connection.PingOne-Credentials.name
+		replace_import_connection_id = "b249494cebd3035d7e9da053c34bc52f"
+	}
+	connection_link {
+		id   = davinci_connection.Node.id
+		name = davinci_connection.Node.name
+		replace_import_connection_id = "3566e86a35c26e575396dcfb89a3dcc0"
+	}
+	connection_link {
+		id   = davinci_connection.Http.id
+		name = davinci_connection.Http.name
+		replace_import_connection_id = "867ed4363b2bc21c860085ad2baa817d"
+	}
+	connection_link {
+		id   = davinci_connection.Functions.id
+		name = davinci_connection.Functions.name
+		replace_import_connection_id = "de650ca45593b82c49064ead10b9fe17"
+	}
+	connection_link {
+		id   = davinci_connection.Device-Policy.id
+		name = davinci_connection.Device-Policy.name
+		replace_import_connection_id = "79a1f68f5a2fc72e92ada3cee8ada8be"
+	}
+	connection_link {
+		id   = davinci_connection.Variables.id
+		name = davinci_connection.Variables.name
+		replace_import_connection_id = "06922a684039827499bdbdd97f49827b"
+	}
+	connection_link {
+		id   = davinci_connection.PingOne-MFA.id
+		name = davinci_connection.PingOne-MFA.name
+		replace_import_connection_id = "b72bd44e6be8180bd5988ac74cd9c949"
+	}
+
+	depends_on = [
+		data.davinci_connections.read_connections
+	]
+}
+
 resource "davinci_flow" "PingOne-SSO-Consent-subflow" {
 	environment_id = pingone_environment.master_flow_environment.id
 	flow_json = "${file("${path.module}/data/flows/PingOne SSO Consent subflow.json")}"
@@ -2381,12 +2641,6 @@ resource "davinci_flow" "PingOne-SSO-Progressive-Profiling-subflow" {
 		id   = davinci_connection.Flow-Connector.id
 		name = davinci_connection.Flow-Connector.name
 		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
-	}
-
-	subflow_link {
-		id   = davinci_flow.PingOne-Auto-enroll-user-in-mobile-SMS.id
-	  	name = davinci_flow.PingOne-Auto-enroll-user-in-mobile-SMS.name
-		replace_import_subflow_id = "1c982c3650aeca1ce7d4ca7421892f5f"
 	}
 
 	depends_on = [
@@ -2482,6 +2736,22 @@ resource "davinci_flow" "PingOne-Verify-subflow" {
 		id   = davinci_connection.Flow-Analytics.id
 		name = davinci_connection.Flow-Analytics.name
 		replace_import_connection_id = "78f6209abfff297bca70010581d074b1"
+	}
+	connection_link {
+		id   = davinci_connection.Flow-Connector.id
+		name = davinci_connection.Flow-Connector.name
+		replace_import_connection_id = "2581eb287bb1d9bd29ae9886d675f89f"
+	}
+	connection_link {
+		id   = davinci_connection.PingOne.id
+		name = davinci_connection.PingOne.name
+		replace_import_connection_id = "94141bf2f1b9b59a5f5365ff135e02bb"
+	}
+
+	subflow_link {
+		id   = davinci_flow.PingOne-Pair-a-Digital-Wallet-subflow.id
+		name = davinci_flow.PingOne-Pair-a-Digital-Wallet-subflow.name
+		replace_import_subflow_id = "69e63998defbbd9f7dd3e32fd3cc54c0"
 	}
 
 	depends_on = [
