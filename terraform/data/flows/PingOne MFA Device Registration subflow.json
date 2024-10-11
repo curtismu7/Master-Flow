@@ -14,8 +14,8 @@
     "notificationsConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1727368868100,
-  "currentVersion": 10,
+  "createdDate": 1727906086010,
+  "currentVersion": 21,
   "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "Imported on Wed May 22 2024 23:21:29 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -59,7 +59,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Registration subflow",
-  "publishedVersion": 10,
+  "publishedVersion": 21,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [],
@@ -80,9 +80,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1727368916387,
+  "updatedDate": 1727906089143,
   "flowId": "8d5b8cb896f806bd256d5874f03f9bb5",
-  "versionId": 10,
+  "versionId": 21,
   "graphData": {
     "elements": {
       "nodes": [
@@ -1205,7 +1205,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"userAgent\",\n        \"data\": \"{{global.userAgent}}\",\n        \"tooltip\": \"{{global.userAgent}}\",\n        \"children\": [\n          {\n            \"text\": \"userAgent\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -1250,10 +1250,10 @@
                 "value": "Activate FIDO2"
               },
               "origin": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-str-fidoOrigin}}\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"origin\",\n        \"data\": \"{{global.variables.origin}}\",\n        \"tooltip\": \"{{global.variables.origin}}\",\n        \"children\": [\n          {\n            \"text\": \"origin\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -1395,7 +1395,7 @@
               },
               "customCSS": {},
               "customHTML": {
-                "value": "<!-- Main container for the end-user interface -->\n<div class=\"end-user-nano\">\n  <!-- Centralized container with a light background, covering the entire screen -->\n  <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <!-- Card container with fixed width and responsive design -->\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%;\">\n      <div class=\"card shadow mb-5\">\n        <main aria-labelledby=\"title\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n\n            <!-- Company logo -->\n            <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n            <!-- Main title -->\n            <h1 class=\"text-center mb-4\">Authenticator App</h1>\n\n            <!-- Icon (cellphone) -->\n            <p class=\"text-center\">\n              <i class=\"mdi mdi-cellphone text-dark display-6\" aria-hidden=\"true\"></i>\n            </p>\n\n            <!-- Instructions -->\n            <p class=\"text-muted text-center\">\n              Scan the QR Code using your authenticator app, or enter the code displayed to finish.\n            </p>\n\n            <!-- QR Code and Secret Key Display -->\n            <div class=\"text-block branding-template-primary-text text-center mb-4\">\n              <div class=\"text-block--overflow-wrap\" style=\"text-align: center;\">\n                <img src=\"{{generatedQr}}\" alt=\"QR Code\"/><br/>\n                Key<br/> {{secret}}\n              </div>\n            </div>\n\n            <!-- Error and Feedback Messages -->\n            <p class=\"text-danger text-left mb-4\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n            <p class=\"text-danger text-left mb-4\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"verifyCode\"></p>\n          <p class=\"text-danger text-left mb-4\" id=\"OTPFeedback\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n            \n\n            <!-- Form for OTP (One-Time Password) Input -->\n            <form id=\"otpForm\" data-id=\"otpForm\">\n              <div class=\"mb-4 form-floating\">\n                <input class=\"form-control\" type=\"text\" name=\"verifyCode\" placeholder=\"Verification Code\" autocomplete=\"off\"\n                       data-id=\"verifyCode\" id=\"verifyCode\" pattern=\"[0-9]*\" />\n                <label class=\"form-label\" for=\"verifyCode\">Verification Code</label>\n              </div>\n\n              <!-- Submit and Cancel Buttons -->\n              <div class=\"d-flex flex-column\">\n                {{#if continueButtonLabel}}\n                <button class=\"btn btn-primary flex-grow-1\"\n                        data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"form-submit\"\n                        data-skform=\"otpForm\"\n                        id=\"submit\"\n                        type=\"submit\"\n                        data-skbuttonvalue=\"VERIFY\">\n                  {{continueButtonLabel}}\n                </button>\n                {{/if}}\n\n                {{#if cancelButtonLabel}}\n                <button type=\"submit\" class=\"btn btn-link\"\n                        data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\"\n                        data-skform=\"otpForm\"\n                        id=\"btnCancel\"\n                        data-skbuttonvalue=\"CANCEL\">\n                  {{cancelButtonLabel}}\n                </button>\n                {{/if}}\n              </div>\n            </form>\n\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
+                "value": "<!-- Main container for the end-user interface -->\n<div class=\"end-user-nano\">\n  <!-- Centralized container with a light background, covering the entire screen -->\n  <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <!-- Card container with fixed width and responsive design -->\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%;\">\n      <div class=\"card shadow mb-5\">\n        <main aria-labelledby=\"title\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n\n            <!-- Company logo -->\n            <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n            <!-- Main title -->\n            <h1 class=\"text-center mb-4\">Authenticator App</h1>\n\n            <!-- Icon (cellphone) -->\n            <p class=\"text-center\">\n              <i class=\"mdi mdi-cellphone text-dark display-6\" aria-hidden=\"true\"></i>\n            </p>\n\n            <!-- Instructions -->\n            <p class=\"text-muted text-center\">\n              Scan the QR Code using your authenticator app, or enter the code displayed to finish.\n            </p>\n\n            <!-- QR Code and Secret Key Display -->\n            <div class=\"text-block branding-template-primary-text text-center mb-4\">\n              <div class=\"text-block--overflow-wrap\" style=\"text-align: center;\">\n                <img src=\"{{generatedQr}}\" alt=\"QR Code\"/><br/>\n                Key<br/> {{secret}}\n              </div>\n            </div>\n\n            <!-- Error and Feedback Messages -->\n            <p class=\"text-danger text-left mb-4\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n            <p class=\"text-danger text-left mb-4\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"verifyCode\"></p>\n          <!-- <p class=\"text-danger text-left mb-4\" id=\"OTPFeedback\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p> -->\n            \n\n            <!-- Form for OTP (One-Time Password) Input -->\n            <form id=\"otpForm\" data-id=\"otpForm\">\n              <div class=\"mb-4 form-floating\">\n                <input class=\"form-control\" type=\"text\" name=\"verifyCode\" placeholder=\"Verification Code\" autocomplete=\"off\"\n                       data-id=\"verifyCode\" id=\"verifyCode\" pattern=\"[0-9]*\" />\n                <label class=\"form-label\" for=\"verifyCode\">Verification Code</label>\n              </div>\n\n              <!-- Submit and Cancel Buttons -->\n              <div class=\"d-flex flex-column\">\n                {{#if continueButtonLabel}}\n                <button class=\"btn btn-primary flex-grow-1\"\n                        data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"form-submit\"\n                        data-skform=\"otpForm\"\n                        id=\"submit\"\n                        type=\"submit\"\n                        data-skbuttonvalue=\"VERIFY\">\n                  {{continueButtonLabel}}\n                </button>\n                {{/if}}\n\n                {{#if cancelButtonLabel}}\n                <button type=\"submit\" class=\"btn btn-link\"\n                        data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\"\n                        data-skform=\"otpForm\"\n                        id=\"btnCancel\"\n                        data-skbuttonvalue=\"CANCEL\">\n                  {{cancelButtonLabel}}\n                </button>\n                {{/if}}\n              </div>\n            </form>\n\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
               },
               "customScript": {
                 "value": "const passcode = document.getElementById(\"verifyCode\");\nverifyCode.addEventListener(\"input\", myFunction);\nfunction myFunction() {  verifyCode.value === \"\" ? verifyCode.parentElement.classList.add(\"placeholder-shown\") : verifyCode.parentElement.classList.remove(\"placeholder-shown\") ;}\n\nconst setFieldFocus = (id) => {\n    const element = document.getElementById(id);\n    if (element) {\n        element.focus();\n    }\n}\n\nconst start = () => {\n           console.log (\"in start\");\n\n        DaVinciFormUtils.addDaVinciFormValidation({\n        formId: 'otpForm', // required\n        formType: 'STANDARD', // required (UPDATE_PASSWORD or STANDARD)\n        delayValidationUntilSubmit: true,\n        invalidFieldBorderColor: 'red',\n        disableSubmitButtonUntilValid: true\n    });\n    masterFlowFormUtils.validateOTPInput({\n                    inputId: 'verifyCode',\n                    feedbackId: 'OTPFeedback',\n                    submitId: 'submit',\n                    highlightInput: true,\n                    autoSubmit: true\n                });\n}\n\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.addEventListener(\"DOMContentLoaded\", start);\n} else {\n    // `DOMContentLoaded` has already fired\n    start();\n}\n\n"
@@ -6473,7 +6473,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2608,
+            "x": 2610,
             "y": 1560
           },
           "group": "nodes",
@@ -9431,8 +9431,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2608,
-            "y": 1710
+            "x": 2610,
+            "y": 1680
           },
           "group": "nodes",
           "removed": false,
@@ -11818,6 +11818,14 @@
                     "nameDefault": "mobilePhone",
                     "type": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"mobilePhone\",\n        \"data\": \"{{local.zrb13pic3c.payload.output.matchedUser.mobilePhone}}\",\n        \"tooltip\": \"{{local.zrb13pic3c.payload.output.matchedUser.mobilePhone}}\",\n        \"children\": [\n          {\n            \"text\": \"mobilePhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "p1UserId",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.zrb13pic3c.payload.output.matchedUser.id}}\",\n        \"tooltip\": \"{{local.zrb13pic3c.payload.output.matchedUser.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8078674299692259,
+                    "label": "p1UserId (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "id"
                   }
                 ]
               }
@@ -12206,7 +12214,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Cancel\"\n      }\n    ]\n  }\n]"
               },
               "customCSS": {
-                "value": "/* For Webkit browsers like Chrome, Safari */\ninput[type=\"number\"]::-webkit-inner-spin-button, \ninput[type=\"number\"]::-webkit-outer-spin-button { \n  -webkit-appearance: none;\n  margin: 0; \n}\n\n/* For Firefox */\ninput[type=\"number\"] {\n  -moz-appearance: textfield;\n}\n\n/* For Internet Explorer 10+ */\ninput[type=\"number\"]::-ms-clear,\ninput[type=\"number\"]::-ms-reveal {\n  display: none;\n}\n\n#countryCode {\n  background: none; \n  color: transparent;\n}\n"
+                "value": "/* For Webkit browsers like Chrome, Safari */\ninput[type=\"number\"]::-webkit-inner-spin-button, \ninput[type=\"number\"]::-webkit-outer-spin-button { \n  -webkit-appearance: none;\n  margin: 0; \n}\n\n/* For Firefox */\ninput[type=\"number\"] {\n  -moz-appearance: textfield;\n}\n\n/* For Internet Explorer 10+ */\ninput[type=\"number\"]::-ms-clear,\ninput[type=\"number\"]::-ms-reveal {\n  display: none;\n}\n\n#countryCode {\n  background: none; \n  color: transparent;\n}\n/* Used on Windows machines */\noption {\n  background-color: var(--bs-white); \n  color: rgba(var(--bs-body-color-rgb), 1) !important;\n}"
               },
               "customHTML": {
                 "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div class=\"mh-100\" style=\"max-width: 400px; width: 100%;\">\n            <div class=\"card shadow mb-5\">\n                <main aria-labelledby=\"title\">\n                    <div class=\"card-body p-5 d-flex flex-column\">\n                        <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\"\n                            alt=\"{{global.variables.companyName}}\" />\n\n                        <h1 id=\"title\" class=\"text-center mb-4\">\n                            {{#ifEquals type \"SMS\"}}\n                            <i class=\"mdi mdi-comment-text-outline text-dark fs-1\" aria-hidden=\"true\"></i>\n                            Text Message\n                            {{/ifEquals}}\n                            {{#ifEquals type \"VOICE\"}}\n                            <i class=\"mdi mdi-phone-outline text-dark fs-1\" aria-hidden=\"true\"></i>\n                            Voice\n                            {{/ifEquals}}\n                        </h1>\n                        \n                        <p class=\"text-muted text-center\">\n                            {{#ifEquals type \"SMS\"}}\n                            Enter your phone number to receive passcodes by text message.\n                            {{/ifEquals}}\n                            {{#ifEquals type \"VOICE\"}}\n                            Enter your phone number to receive passcodes by phone call.\n                            {{/ifEquals}}\n                        </p>\n\n                        <!-- Generic Error Message -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n                        <!-- Field Validation Error Messages -->\n                        <p class=\"text-danger mdi mdi-alert-circle text-center\" data-skerrorid=\"phone\" data-skcomponent=\"skerrormessage\" aria-live=\"assertive\"></p>\n\n                        <form id=\"phone-form\" data-id=\"phone-form\">\n                            <div class=\"row gx-2\">\n                                <div class=\"col-4\">\n                                    <div class=\"position-relative form-floating\">\n                                        <div id=\"countryCodeDisplay\" class=\"form-select\">+1</div>\n                                        <select id=\"countryCode\" class=\"form-select position-absolute top-0 left-0 right-0 bottom-0\" aria-label=\"Country Code\" >\n                                        </select>\n                                        <label class=\"form-label\" for=\"countryCode\">Country</label>\n                                    </div>\n                                </div>\n                                <div class=\"col\">\n                                    <div class=\"form-floating\">\n                                        <input class=\"text-input form-control\" data-id=\"text-input\" id=\"phone\" placeholder=\"Phone Number\"\n                                            type=\"number\" autocomplete=\"tel\" inputmode=\"numeric\" aria-describedby=\"phoneLabel\"></input>\n                                            <label id=\"phoneLabel\" data-id=\"phoneLabel\" class=\"form-label\" for=\"phone\">Phone Number</label>\n                                    </div>\n                                </div>\n                            </div>\n\n                            <div class=\"d-flex flex-column mt-5\">\n                                {{#if buttonLabel}}\n                                <button id=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"form-submit\" data-skform=\"phone-form\" data-skbuttonvalue=\"CONTINUE\">\n                                    {{buttonLabel}}\n                                </button>\n                                {{/if}}\n                                {{#if cancelButtonLabel}}\n                                <button id=\"cancel\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                    data-skbuttontype=\"next-event\" data-skform=\"phone-form\" data-skbuttonvalue=\"CANCEL\">\n                                    {{cancelButtonLabel}}\n                                </button>\n                                {{/if}}\n                            </div>\n                        </form>\n                    </div>\n                </main>\n            </div>\n        </div>\n    </div>\n</div>"
@@ -12304,7 +12312,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2848,
+            "x": 2850,
             "y": 1140
           },
           "group": "nodes",
@@ -12385,7 +12393,7 @@
                 "value": ""
               },
               "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n  <div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n           <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"1\" data-skpollRetries=\"1\"\n            data-skpollChallengeStatus=\"false\"></div>\n\n          <!-- PingOne Protect -->\n          <div data-skcomponent=\"skrisk\" data-skenvironmentid=\"{{global.companyId}}\" data-skcollectBehavioralData=\"true\" data-skpropertyname=\"riskfp\"></div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+                "value": "<div class=\"end-user-nano\">\n  <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%;\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n          <!-- Company logo -->\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n          <!-- Loading Spinner -->\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          <!-- Conditional Title -->\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          <!-- Conditional TextOne -->\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance Polling Component -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"1\" data-skpollChallengeStatus=\"false\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
               },
               "customScript": {
                 "value": ""
@@ -17590,7 +17598,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1727368866740,
+  "savedDate": 1727906084851,
   "variables": [
     {
       "context": "flowInstance",
@@ -17655,6 +17663,22 @@
       "type": "property",
       "visibility": "private",
       "name": "origin##SK##flowInstance",
+      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1726504371897,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "1491f7f1-d36d-4ab9-9f15-c21b41589d8b",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserId##SK##flowInstance",
       "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
     },
     {
