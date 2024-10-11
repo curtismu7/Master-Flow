@@ -297,6 +297,19 @@ resource "pingone_mfa_device_policy" "master_flow_mfa_policy" {
   }
 }
 
+resource "pingone_mfa_settings" "mfa_settings" {
+  environment_id = pingone_environment.master_flow_environment.id
+
+  pairing = {
+    max_allowed_devices = 10
+    pairing_key_format  = "ALPHANUMERIC"
+  }
+
+  users = {
+    mfa_enabled = true
+  }
+}
+
 resource "pingone_mfa_device_policy" "master_flow_passwordless_mfa_policy" {
   environment_id          = pingone_environment.master_flow_environment.id
   name                    = "Master Flow Passwordless Policy"
@@ -1104,6 +1117,34 @@ resource "pingone_notification_template_content" "new_ping_device_paired" {
   ]
 }
 
+resource "pingone_notification_template_content" "verify_id_verification" {
+  environment_id = pingone_environment.master_flow_environment.id
+  template_name  = "general"
+  locale         = "en"
+  variant        = "PingOne Verify ID Verification"
+
+  email = {
+    body          = "${file("${path.module}/data/notification_templates/PingOne Verify ID Verification.html")}"
+    subject       = "PingOne: Finish your PingOne Verify ID verification"
+    content_type  = "text/html"
+    character_set = "UTF-8"
+
+    from = {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+    
+    reply_to = {
+      name    = "PingOne"
+      address = "noreply@pingidentity.com"
+    }
+  }
+
+  depends_on = [
+    pingone_webhook.master_flow_webhook
+  ]
+}
+
 resource "pingone_notification_template_content" "new_device" {
   environment_id = pingone_environment.master_flow_environment.id
   template_name  = "new_device_paired"
@@ -1504,7 +1545,7 @@ resource "pingone_application" "pingone_neo_demo_native_app" {
 
   icon = {
     id   = "c6dbb456-0857-4fab-bfb0-909944233017"
-    href = "https://assets.pingone.com/ux/ui-library/4.18.0/images/logo-pingidentity.png"
+    href = "https://www.pingidentity.com/content/dam/picr/ico/250x250/Ico-IdentityVerification-250x250.svg"
   }
 
   oidc_options = {
@@ -1541,12 +1582,14 @@ resource "pingone_credential_type" "pingone_neo_demo_credential" {
   description      = "User Access"
   card_type        = "UserAccess"
   revoke_on_delete = true
+  management_mode  = "MANAGED" 
 
   card_design_template = <<-EOT
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 480">
 <rect fill="none" width="736" height="476" stroke="#CACED3" stroke-width="3" rx="10" ry="10" x="2" y="2"></rect>
 <rect fill="$${cardColor}" height="476" rx="10" ry="10" width="736" x="2" y="2" opacity="$${bgOpacityPercent}"></rect>
 <image href="$${logoImage}" x="42" y="43" height="90px" width="90px"></image>
+<image href="$${backgroundImage}" opacity="$${bgOpacityPercent}" height="301" rx="10" ry="10" width="589" x="75" y="160"></image>
 <line y2="160" x2="695" y1="160" x1="42.5" stroke="$${textColor}"></line>
 <text fill="$${textColor}" font-weight="450" font-size="30" x="160" y="90">$${cardTitle}</text>
 <text fill="$${textColor}" font-size="25" font-weight="300" x="160" y="130">$${cardSubtitle}</text>
@@ -1556,11 +1599,12 @@ EOT
   metadata = {
     name               = "Company Credentials"
     description        = "PingOne Master Flow Credentials"
-    bg_opacity_percent = 100
+    bg_opacity_percent = 30
 
-    logo_image       = "https://assets.pingone.com/ux/ui-library/4.18.0/images/logo-pingidentity.png"
+    logo_image       = "https://cdn-assets-us.frontify.com/s3/frontify-enterprise-files-us/eyJwYXRoIjoicGluZ2lkZW50aXR5XC9hY2NvdW50c1wvM2FcLzQwMDA5NDdcL3Byb2plY3RzXC8xNVwvYXNzZXRzXC82YlwvMTYzMVwvMWQ1N2U0YTU0MTIxMjIzZmVhOTE3YmE2Y2Q2NjlkMjEtMTY0NDg3NjYxMS5haSJ9:pingidentity:eFdxYWEvOdgfuSU4lqfqMcA4mYTNfww8WwOLnwTo4zk"
+    background_image = "https://cdn-assets-us.frontify.com/s3/frontify-enterprise-files-us/eyJwYXRoIjoicGluZ2lkZW50aXR5XC9maWxlXC9XeXF1akVRdkV5N3BjcFJ5VTRTUy5haSJ9:pingidentity:OBbQxgFuORCSy5aFaYgdu27T4G0Vp_4ymEZHqC2FxMY"
 
-    card_color = "#6884c4"
+    card_color = "#000000"
     text_color = "#f8f8f7"
 
     fields = [
@@ -1598,28 +1642,28 @@ EOT
   }
 }
 
-resource "pingone_credential_issuance_rule" "my_credential_issuance_rule" {
-  environment_id                = pingone_environment.master_flow_environment.id
-  digital_wallet_application_id = pingone_digital_wallet_application.pingone_neo_demo_wallet_app.id
-  credential_type_id            = pingone_credential_type.pingone_neo_demo_credential.id
+# resource "pingone_credential_issuance_rule" "my_credential_issuance_rule" {
+#   environment_id                = pingone_environment.master_flow_environment.id
+#   digital_wallet_application_id = pingone_digital_wallet_application.pingone_neo_demo_wallet_app.id
+#   credential_type_id            = pingone_credential_type.pingone_neo_demo_credential.id
 
-  status = "ACTIVE"
+#   status = "ACTIVE"
 
-  filter = {
-    group_ids = [ "${pingone_group.pingone_admin_group.id}" ]
-  }
+#   filter = {
+#     group_ids = [ "${pingone_group.pingone_admin_group.id}" ]
+#   }
 
-  automation = {
-    issue  = "ON_DEMAND"
-    revoke = "ON_DEMAND"
-    update = "ON_DEMAND"
-  }
+#   automation = {
+#     issue  = "ON_DEMAND"
+#     revoke = "ON_DEMAND"
+#     update = "ON_DEMAND"
+#   }
 
-  notification = {
-    methods = ["EMAIL", "SMS"]
-    template = {
-      locale  = "en"
-      variant = "credential_issued_template_B"
-    }
-  }
-}
+#   notification = {
+#     methods = ["EMAIL", "SMS"]
+#     template = {
+#       locale  = "en"
+#       variant = "credential_issued_template_B"
+#     }
+#   }
+# }

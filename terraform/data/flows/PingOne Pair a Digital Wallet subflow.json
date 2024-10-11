@@ -11,8 +11,8 @@
     "variablesConnector",
     "pingOneMfaConnector"
   ],
-  "createdDate": 1727431313670,
-  "currentVersion": 37,
+  "createdDate": 1728301748771,
+  "currentVersion": 57,
   "customerId": "38f1e64332a64e2263c5953d52e846fb",
   "description": "Imported on Tue Sep 17 2024 18:52:18 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -44,7 +44,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Pair a Digital Wallet subflow",
-  "publishedVersion": 37,
+  "publishedVersion": 57,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": {},
@@ -64,9 +64,9 @@
   },
   "timeouts": "null",
   "trigger": {},
-  "updatedDate": 1727431315060,
+  "updatedDate": 1728301750512,
   "flowId": "69e63998defbbd9f7dd3e32fd3cc54c0",
-  "versionId": 37,
+  "versionId": 57,
   "graphData": {
     "elements": {
       "nodes": [
@@ -156,7 +156,6 @@
               },
               "notificationMethods": {
                 "value": [
-                  "SMS",
                   "EMAIL"
                 ]
               }
@@ -555,6 +554,9 @@
               },
               "nodeTitle": {
                 "value": "Is Wallet ACTIVE?"
+              },
+              "caseSensitive": {
+                "value": false
               }
             }
           },
@@ -661,7 +663,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Scan this QR Code with your mobile phone or digital wallet and follow the instructions.\"\n      }\n    ]\n  }\n]"
               },
               "pollingMessage": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Status: Waiting for \"\n      },\n      {\n        \"text\": \"Digital Wallet\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Status: Waiting for \"\n      },\n      {\n        \"text\": \"Digital Wallet: \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
                 "value": "Display Digital Wallet Pairing QR"
@@ -2291,7 +2293,7 @@
                 "value": {}
               },
               "customCSS": {
-                "value": ""
+                "value": ".css-11k6vsm, .css-17zi2ag, .css-139roxj {\n    width: 30px !important;\n    height: 30px !important;\n    margin: 0 10px !important;\n    border-radius: 0 !important; /* Removes circle */\n    background-color: transparent !important;\n    background-size: cover !important;\n    background-repeat: no-repeat !important;\n    animation: fadeOneAtATime 3s linear infinite;\n    animation-fill-mode: both; \n}\n\n.css-11k6vsm {\n    background-image: url('data:image/png;base64,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') !important; /* Base64 image for the first dot */\n    animation-delay: 0s !important;\n}\n\n.css-17zi2ag {\n    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAD80lEQVRYhcWXX2hWdRjHP8/v/M67DQUl831n/3bj9k6TFRiSCBZUUIYXkljURRcRGVRCMCgwEqxushaGKd5GFGmoSHUXXXUTCi2d2+sQK9d8321tbs5t7znn93Sx7fRue4/v2Rr1vXv+f86/55wD/7MEwMs2Py5qHkxVYSiHxZ7DADbX8pZRusulwmka16+1kfdi2sGhqTtKsXPcAhiRZxD2pivVm8DhGfqDDjkJnPYjuRvDh2kBiMpfANMAcWvcw6IykVwlHQhbagAeQvm8JsBg4wB0MwcgpOECpc7xpBqby49Kjb6q9IelQqdtbN4uKusSE5uuFviN0FaLnW1te05V22btyZ7Wd/ZwIqoxe45EzdvAk4kJ4w13Af1VAUB3ibAnNjdePEAXiwKY0ajDPV81slr/YhASAJZJSjkqXf4WwDY2b1fn1cWxjFFYRoBglV7KjEg+CCZL1eKi8rWI5mbtqORucwki86YQHpg193R3lWsB2FHviHruPs9mPolu8N0CAJHXNNKG2FE/PgIJZ2Dn5V/6gL5aQ+dpG0irceZktZvlm1X+oyqyetaO6hrO7rp2bWIOgM/k++RawqQJim5KHC8cBV2rhvMJCbsF4ktQPzXVDozMOwOyL3EAM3t7ehP+4xNt8rP5F1CGQIY8540kHkEVWYDA2XbM5LupKox187C2ImydtRzuFaB3UQC+dXmJ7D3THbyu8uClKzbX/FDVCqd4ufzKqWLPVadmB6qmMpzJhBcDwKkeMsKaGBNeVyS+Ccdurh6Z8YPN5r8S4VkAVfaHU5NH/Pr64WRuPRYUC6+yruXOjLps2qOtVPl6bw8Q3X4PqP6ohhOx7ciISMesaSPZq+IdXAoA2U2NlC4ULYCI/qEqXQCCDFSk/RpeL3wWW7m2FT5THSyQfqQwmGauqDyFsD0+CICgWGgH2uOsVU3x88r69XV21Dsi8EMAZ6o2jczxYLC7kAbAz7bcARIDGIBMY363n8t3sHFjZkHFsJcR4SVgW5oBi5UFUNXHQPYyZPcDNdfu7XRmwwP3e5HeW+kz7tZPO3p7RxMBUsv4SjQ1AIwlpYiL9qmRlyt9IXVbgJ//PUD/uVsBLOmxS5KpnTJPTU318MiyvcYXB5BrW+FP1k/4uf5Plwtg2b+IRPh++sVU4VP75+IAjKdAhEhEZmWk0dh5hN/TAOzsvnAKOJUWuDrA8JUbQUUshM0A5NpWpG28JABL+Q2y+QV7QJCxoNR9PKmJM+5pP9u6Od1ItyERQNAPqPLnoWgfkAggIh+Dpps/b4AFsIG+F3p6LKnEeDPbsdg54bLNT3ieXAPwNPoyNOZcyslztcYNU/X7+T/W30+dYyfx3QSuAAAAAElFTkSuQmCC') !important; /* Base64 image for the second dot */\n    animation-delay: 1s !important;\n}\n\n.css-139roxj {\n    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAD10lEQVRYhe2VT0wcZRjGf+/M7C4rqNQKxGg0QcsuZpdQ8dDogbRU7P9iYrQ2sfHQNKmJ0cSmiU1MNMY0Rj20KMGDXnrQVKMt4N+0RRMPGjm0LIwsxZpGSqEYJYaFZXdmXg+wsAvstGg8yXN6v/d7vud5vpn5voFVrOL/DlkZvdEKVI3uKzareP3O2MUfV6Jorci/YrwEeL/YtKi0AisLYFXUHMSQQ9cjGqovZpQzsyN92/Cs9vx5T5wLuTpQGflBhYrrSLY7Y8k3LUTWCFQrfIbiFGN7hv6BO2evcqdnOA8UEFRM0LmSXpTyYloiPI5yG+S9Ascz9zFuT/pmrri/bE5gD8ieQlVy/jhjyQN+MoGqiJurC76BnoaGwKXp6VCxhVczGaNtynw4N76U9aby5y2X8azvDpaiIMDI5MzBsJjHipGrrTBv3bIw3jmQmD1Ft95TTujmUNYCKmNVyy4OTvzF8PC0b4AcVDkq4Pc6mhEac4NAScmHkN3iw0ezpc87cPyGAhime3yHbY/2NDQERiYzryFar+g7uwf6uwA6IvEyYSGAqLZ7yFd+AUS975brFwTYlew7Tl7KkcnMCwiHBa6C8UlXPH7HjkTiz8UimWuDp/3Ml0LPIgwtCXAqEnvQRJqDITn2aG9vCvT22aMp/QibNW3cBCwJEKiqeVJV7vX1NPjGGU32AGTHBptzbauQw0MIr2cd5wMgZbnS6lpsQWkEPbrz4oUry6vLMyL4fwPKJNAD8MV98bu2DiWuCKjvVbxtKDH8aTS6KSTBtVWlwV+L8bIl6ceYKvW/1sfDMwCna2J1rqFnuyLxd0kmXim66FRt3XrT89pANngoI6lMujMaazWd9MtLrsvLl9O+5nPoqIlFEfkaxXVN9yQUOQVZ06ywMt45hClFXxKMEdRrUpFDjlVShjKRz7cqI0dA1xeIGHQ7o4Nt8xuKxCPAORE1XMPb2GLbdtEAVlbfQKRcPU4guIpWgfShel6E/Yh+v+hPXo1Qn98QT37J1Z9H62pc1W5ELTA2tdh99rzX8g9LtgKIwXOL+rliY37XuZbcv7wOdNbWr/PU6UawTJWm7cnevoLNFgzc9HteOHyimNiNoCMS3wvEdiUTRzpr69ehzrdAUD2atg8mEov58wHCwUz5tkw4RWYFbnfH18zXZW4K284gNAoc6IjETFVnr6iExHQ37x6we5eTWPgdO+ZvAWcl7osw4z2VhY/SA9Fnw9Gf14rIYVQnXPSRFts+X2yZJZ77JYb1+z93noWh+hPAE3zsnpzc8HS4NBVy4dWWZF/Pv9VexSr+U/wNvLZxbs1ac1UAAAAASUVORK5CYII=') !important; /* Base64 image for the third dot */\n    animation-delay: 2s !important;\n}\n\n@keyframes fadeOneAtATime {\n    0% { opacity: 0; }\n    33% { opacity: 1; }\n    66% { opacity: 0; }\n    100% { opacity: 0; }\n}"
               },
               "validationRules": {
                 "value": []
@@ -2664,6 +2666,14 @@
                     "nameDefault": "mf-configObject",
                     "type": "object",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "name": "p1UserId",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.6826001320313337,
+                    "label": "p1UserId (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "p1UserId"
                   }
                 ]
               }
@@ -2749,14 +2759,6 @@
                     "nameDefault": "birthDay",
                     "type": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"birthDay\",\n        \"data\": \"{{global.parameters.birthDay}}\",\n        \"tooltip\": \"{{global.parameters.birthDay}}\",\n        \"children\": [\n          {\n            \"text\": \"birthDay\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-                  },
-                  {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.p1UserId}}\",\n        \"tooltip\": \"{{global.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"5bf9332c-4f89-43bc-9766-47fc6feeaf08\"\n      }\n    ]\n  }\n]",
-                    "key": 0.3608009106497789,
-                    "label": "p1UserId (string - flowInstance)",
-                    "type": "string",
-                    "nameDefault": "p1UserId"
                   }
                 ]
               }
@@ -3993,7 +3995,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1727431313441,
+  "savedDate": 1728220560206,
   "variables": [
     {
       "context": "flowInstance",

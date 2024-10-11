@@ -14,13 +14,13 @@ admin_group_id          = "" # Administrator Environment
 
 
 #############
-#  PingOne #
+#  PingOne  #
 #############
 
 # Change the name as needed for your P1 environment #
 
-environment_name = "PingOne Master Flow - 2.1"
-environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
+environment_name = "PingOne Master Flow - 2.1.0c"
+environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider. \n\n[pat]"
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = <<EOT
 GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.
@@ -147,21 +147,26 @@ davinci_variable_mf-configObject = {
             }
         ],
         "mf-str-azureExternalIdPId": " ",
-        "mf-str-browserVersion": 127,
+        "mf-str-browserVersion": 130,
         "mf-str-captchaThreshold": "0.2",
         "mf-str-captchaV3SecretKey": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF",
         "mf-str-captchaV3SiteKey": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
-        "mf-str-companyLogo": "https://avatars.githubusercontent.com/u/93611276?v=4",
-        "mf-str-companyName": "Master Flow Demo ",
+        "mf-str-companyLogo": "https://github.com/curtismu7/CDN/blob/main/davinci-logo.jpg?raw=true",
+        "mf-str-companyName": "Davinci Demo",
         "mf-str-facebookExternalIdPId": "",
         "mf-str-githubExternalIdPId": "",
         "mf-str-googleExternalIdPId": "",
         "mf-str-passwordExpireWarningDays": 5,
-        "mf-str-passwordExpiredDays": 2,
+        "mf-str-passwordExpiredDays": 5,
         "mf-str-webAuthnSupport": "cross-platform"
     },
     "p1Authorize": {
-        "mf-bool-runAuthorize": false
+        "mf-bool-runAuthorize": true,
+        "mf-bool-runFakeAuthZ": true,
+        "mf-str-fakeAuthZDecision": "PERMIT"
+    },
+    "p1Credentials": {
+        "mf-bool-runCredentials": false
     },
     "p1MFA": {
         "mf-bool-allowForgotPassword": true,
@@ -182,14 +187,14 @@ davinci_variable_mf-configObject = {
     "p1Protect": {
         "mf-bool-runAfterSocialLogin": false,
         "mf-bool-runBrowserVersionAuthentication": true,
-        "mf-bool-runBrowserVersionRegistration": true,
+        "mf-bool-runBrowserVersionRegistration": false,
         "mf-bool-runFakeRiskLevel": true,
-        "mf-bool-runMFAOnHigh": true,
+        "mf-bool-runMFAOnHigh": false,
         "mf-bool-runNotificationForNewDevice": true,
         "mf-bool-runPassiveMode": false,
         "mf-bool-runProtect": true,
-        "mf-bool-runStopOnHighRiskLevel": false,
-        "mf-bool-showDetailScreenDisplay": false,
+        "mf-bool-runStopOnHighRiskLevel": true,
+        "mf-bool-showDetailScreenDisplay": true,
         "mf-bool-showProgressScreenDisplay": true,
         "mf-bool-userDeleteOnTempEmail": false,
         "mf-bool-userLockedOnTempEmail": true,
@@ -199,21 +204,19 @@ davinci_variable_mf-configObject = {
     "p1Verify": {
         "mf-bool-allowVerifyUserRegistration": false,
         "mf-bool-runVerifyFakeSuccess": false,
-        "mf-bool-runVerifyOnHigh": true
+        "mf-bool-runVerifyOnHigh": false
     },
     "pingone": {
         "mf-bool-allowForgotPassword": true,
         "mf-bool-allowForgotUsername": true,
         "mf-bool-allowKBAforForgotPassword": true,
-        "mf-bool-allowMagicLinkUserRegistration": true,
+        "mf-bool-allowMagicLinkSMS": false,
+        "mf-bool-allowMagicLinkUserRegistration": false,
         "mf-bool-allowOTPForgotPassword": true,
         "mf-bool-allowreCaptcha": false,
+        "mf-bool-blurDOBandID": true,
         "mf-bool-displayProfileUpdateQuestion": true,
         "mf-bool-runAgreement": true,
-        "mf-bool-runAzureLogin": true,
-        "mf-bool-runConsent": true,
-        "mf-bool-runFacebookLogin": true,
-        "mf-bool-runGithubLogin": true,
         "mf-bool-runGoogleLogin": true,
         "mf-bool-runMFAOnAccountUnlock": true,
         "mf-bool-runPasswordExpireCheck": true,
@@ -221,6 +224,7 @@ davinci_variable_mf-configObject = {
         "mf-bool-runProgressiveProfileRegstration": false,
         "mf-bool-runReturnToLogin": false,
         "mf-bool-runTimeBasedProgressiveProfile": true,
+        "mf-bool-runUsernameless": true,
         "mf-bool-sendEmailPasswordChange": true,
         "mf-bool-sendEmailPasswordRecovery": true,
         "mf-bool-sendEmailUserProfileUpdate": true,
@@ -229,8 +233,5 @@ davinci_variable_mf-configObject = {
         "mf-bool-showGithubButton": false,
         "mf-bool-showGoogleButton": true,
         "mf-string-daysUntilProgressiveProfile": 30
-    },
-    "p1Credentials": {
-        "mf-bool-runCredentials": false
     }
 }

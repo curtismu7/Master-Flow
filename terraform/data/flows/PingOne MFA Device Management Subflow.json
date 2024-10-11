@@ -13,8 +13,8 @@
     "notificationsConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1727368679699,
-  "currentVersion": 6,
+  "createdDate": 1727521339908,
+  "currentVersion": 10,
   "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "Imported on Fri Mar 01 2024 21:47:11 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -58,7 +58,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Device Management Subflow",
-  "publishedVersion": 6,
+  "publishedVersion": 10,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "css": ".companyLogo {\n    /* Logo image URL set using Branding Node  */\n    height: 65px;\n}\n.style {\n  float: left !important;\n}",
@@ -87,9 +87,9 @@
     "useCustomScript": true
   },
   "timeouts": "null",
-  "updatedDate": 1727368683211,
+  "updatedDate": 1727521341399,
   "flowId": "78011fa204f29c8a28d7be9cd889f54f",
-  "versionId": 6,
+  "versionId": 10,
   "graphData": {
     "elements": {
       "nodes": [
@@ -247,8 +247,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1080,
-            "y": 484
+            "x": 1440,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -270,8 +270,8 @@
             }
           },
           "position": {
-            "x": 900,
-            "y": 544
+            "x": 1260,
+            "y": 540
           },
           "group": "nodes",
           "removed": false,
@@ -470,8 +470,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1050,
-            "y": 634
+            "x": 1410,
+            "y": 630
           },
           "group": "nodes",
           "removed": false,
@@ -526,8 +526,8 @@
             "type": "action"
           },
           "position": {
-            "x": 630,
-            "y": 394
+            "x": 900,
+            "y": 390
           },
           "group": "nodes",
           "removed": false,
@@ -1182,8 +1182,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 750,
-            "y": 484
+            "x": 1110,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -1211,8 +1211,8 @@
             }
           },
           "position": {
-            "x": 1200,
-            "y": 634
+            "x": 1560,
+            "y": 630
           },
           "group": "nodes",
           "removed": false,
@@ -1267,8 +1267,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1320,
-            "y": 574
+            "x": 1680,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -1354,8 +1354,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1440,
-            "y": 664
+            "x": 1800,
+            "y": 660
           },
           "group": "nodes",
           "removed": false,
@@ -1384,8 +1384,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1440,
-            "y": 484
+            "x": 1800,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -2828,25 +2828,6 @@
         },
         {
           "data": {
-            "id": "tmzzjj5o4r",
-            "label": "Evaluator",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 600,
-            "y": 484
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
             "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
@@ -2883,8 +2864,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 480,
-            "y": 484
+            "x": 420,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -3606,9 +3587,141 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "customHTMLTemplate",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "id": "d8ro6b6fr0",
+            "idUnique": "bawa1ovqn0",
+            "label": "Http",
+            "name": "Http",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "customCSS": {
+                "value": ""
+              },
+              "customHTML": {
+                "value": "<div class=\"end-user-nano\">\n  <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%;\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n          <!-- Company logo -->\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n          <!-- Loading Spinner -->\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          <!-- Conditional Title -->\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          <!-- Conditional TextOne -->\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance Polling Component -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"1\" data-skpollChallengeStatus=\"false\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+              },
+              "customScript": {
+                "value": ""
+              },
+              "formFieldsList": {
+                "value": []
+              },
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        }\n    }\n}"
+              },
+              "nodeDescription": {},
+              "nodeTitle": {
+                "value": "Device Management wait"
+              },
+              "outputSchema": {
+                "value": {}
+              },
+              "sktemplate": {
+                "companyId": "9343c168-20f8-4262-b335-5250b428bd12",
+                "createdDate": 1693913007853,
+                "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                "description": "",
+                "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n\t\t\"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}",
+                "name": "Custom Message",
+                "outputSchema": null,
+                "script": "",
+                "style": "",
+                "template": "",
+                "uiId": "624fbda9a79d412a0e62cc045b410da7",
+                "updatedDate": 1693913396823,
+                "validationRules": [],
+                "value": "624fbda9a79d412a0e62cc045b410da7",
+                "version": "1.0",
+                "visibility": "private"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Please do not refresh the page.\"\n      }\n    ]\n  }\n]"
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Loading your device management experience, please wait...\"\n      }\n    ]\n  }\n]"
+              },
+              "validationRules": {
+                "value": []
+              }
+            },
+            "status": "configured",
+            "type": "trigger"
+          },
+          "position": {
+            "x": 750,
+            "y": 480
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "atcbcsoduc",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 570,
+            "y": 480
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "za1ttp14w7",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 900,
+            "y": 480
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "evsn6w6xeg",
+            "source": "1w5wd0ms73",
+            "target": "xhjfb7svlv"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "bpbssoxyra",
@@ -3630,9 +3743,9 @@
         },
         {
           "data": {
-            "id": "vkn1c6tzk4",
-            "source": "tmzzjj5o4r",
-            "target": "ku5xxdl5w5"
+            "id": "l77wc4dhsk",
+            "source": "xhjfb7svlv",
+            "target": "gjjqddbre3"
           },
           "position": {
             "x": 0,
@@ -3649,9 +3762,9 @@
         },
         {
           "data": {
-            "id": "uam25pofmt",
-            "source": "buu1auhohv",
-            "target": "tmzzjj5o4r"
+            "id": "kcdhf51l3n",
+            "source": "eh4826rk96",
+            "target": "by0hrsztbf"
           },
           "position": {
             "x": 0,
@@ -4948,9 +5061,9 @@
         },
         {
           "data": {
-            "id": "evsn6w6xeg",
-            "source": "1w5wd0ms73",
-            "target": "xhjfb7svlv"
+            "id": "sv72dqgte8",
+            "source": "buu1auhohv",
+            "target": "atcbcsoduc"
           },
           "position": {
             "x": 0,
@@ -4967,9 +5080,9 @@
         },
         {
           "data": {
-            "id": "l77wc4dhsk",
-            "source": "xhjfb7svlv",
-            "target": "gjjqddbre3"
+            "id": "2ghh96g7mw",
+            "source": "atcbcsoduc",
+            "target": "d8ro6b6fr0"
           },
           "position": {
             "x": 0,
@@ -4986,9 +5099,28 @@
         },
         {
           "data": {
-            "id": "kcdhf51l3n",
-            "source": "eh4826rk96",
-            "target": "by0hrsztbf"
+            "id": "erynh000pi",
+            "source": "d8ro6b6fr0",
+            "target": "za1ttp14w7"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "wnfngo9u4k",
+            "source": "za1ttp14w7",
+            "target": "ku5xxdl5w5"
           },
           "position": {
             "x": 0,
@@ -5053,7 +5185,7 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1727368679375,
+  "savedDate": 1727521339653,
   "variables": [
     {
       "context": "flowInstance",
