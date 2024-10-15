@@ -8,6 +8,8 @@
 
 * Davinci Design Studio (Chrome extension to change look and feel): https://library.pingidentity.com/page/davinci-flow-design-studio
 
+* Encore setup ( nice UI to instad of having to deal with Terraform): https://docs.google.com/document/d/1sYlS7aafG5ik1kdjdoMRU1rO4VM_s8QWKzPl9Mm24sM/edit?usp=sharing
+
 
 
 
