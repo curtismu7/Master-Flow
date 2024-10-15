@@ -6,6 +6,8 @@
 
 * Sample Configuration files to get you started: https://docs.google.com/document/d/1-8rlWhzDs7rYky76jMZBibLyqH43XHhyvP9UZXNm5fs/edit?usp=sharing
 
+* Davinci Design Studio (Chrome extension to change look and feel): https://library.pingidentity.com/page/davinci-flow-design-studio
+
 
 
 
