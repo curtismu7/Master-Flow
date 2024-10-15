@@ -3,6 +3,8 @@
 * Documentation:  https://docs.google.com/document/d/19I_y2JPejllTn5xrugpn_CH2h_ig6X2bHt2XuQf2oO4/edit?usp=sharing
 * Presentation Slides:  https://docs.google.com/presentation/d/1D2amCevTLONfaLGETLN1nqb47J_g7dDRvcHW7IcZFik/edit?usp=sharing
 
+* Sample Configuration files to get you started: https://docs.google.com/document/d/1-8rlWhzDs7rYky76jMZBibLyqH43XHhyvP9UZXNm5fs/edit?usp=sharing
+
 
 
 
