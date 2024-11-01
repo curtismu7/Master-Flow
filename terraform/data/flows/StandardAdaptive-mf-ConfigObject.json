@@ -45,13 +45,13 @@
                 "question": "In which year did you graduate from high school?"
             }
         ],
-        "mf-str-azureExternalIdPId": " ",
+        "mf-str-azureExternalIdPId": "",
         "mf-str-browserVersion": 130,
         "mf-str-captchaThreshold": "0.2",
         "mf-str-captchaV3SecretKey": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF",
         "mf-str-captchaV3SiteKey": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
         "mf-str-companyLogo": "https://github.com/curtismu7/CDN/blob/main/davinci-logo.jpg?raw=true",
-        "mf-str-companyName": "Davinci Demo",
+        "mf-str-companyName": "Natera",
         "mf-str-facebookExternalIdPId": "",
         "mf-str-githubExternalIdPId": "",
         "mf-str-googleExternalIdPId": "",
@@ -60,11 +60,16 @@
         "mf-str-webAuthnSupport": "cross-platform"
     },
     "p1Authorize": {
-        "mf-bool-runAuthorize": false
+        "mf-bool-runAuthorize": false,
+        "mf-bool-runFakeAuthZ": false,
+        "mf-str-fakeAuthZDecision": "PERMIT"
+    },
+    "p1Credentials": {
+        "mf-bool-runCredentials": false
     },
     "p1MFA": {
         "mf-bool-allowForgotPassword": true,
-        "mf-bool-allowHybridPasswordless": true,
+        "mf-bool-allowHybridPasswordless": false,
         "mf-bool-allowRegisterAnotherDevice": true,
         "mf-bool-runAfterSocialLogin": false,
         "mf-bool-runAutoEnrollEmail": true,
@@ -87,13 +92,13 @@
         "mf-bool-runNotificationForNewDevice": true,
         "mf-bool-runPassiveMode": false,
         "mf-bool-runProtect": true,
-        "mf-bool-runStopOnHighRiskLevel": true,
+        "mf-bool-runStopOnHighRiskLevel": false,
         "mf-bool-showDetailScreenDisplay": true,
         "mf-bool-showProgressScreenDisplay": true,
         "mf-bool-userDeleteOnTempEmail": false,
         "mf-bool-userLockedOnTempEmail": true,
         "mf-str-fakeRiskLevel": "MEDIUM",
-        "mf-str-fakeRiskScore": 50
+        "mf-str-fakeRiskScore": 52
     },
     "p1Verify": {
         "mf-bool-allowVerifyUserRegistration": false,
@@ -102,33 +107,30 @@
     },
     "pingone": {
         "mf-bool-allowForgotPassword": true,
-        "mf-bool-allowForgotUsername": true,
+        "mf-bool-allowForgotUsername": false,
         "mf-bool-allowKBAforForgotPassword": true,
-        "mf-bool-allowMagicLinkUserRegistration": true,
         "mf-bool-allowMagicLinkSMS": false,
+        "mf-bool-allowMagicLinkUserRegistration": false,
         "mf-bool-allowOTPForgotPassword": true,
         "mf-bool-allowreCaptcha": false,
+        "mf-bool-blurDOBandID": true,
         "mf-bool-displayProfileUpdateQuestion": true,
-        "mf-bool-runAgreement": true,
-        "mf-bool-runUsernameless": false, 
-        "mf-bool-runReturnToLogin": false,
-        "mf-bool-runGoogleLogin": true,
+        "mf-bool-runAgreement": false,
+        "mf-bool-runGoogleLogin": false,
         "mf-bool-runMFAOnAccountUnlock": true,
         "mf-bool-runPasswordExpireCheck": true,
-        "mf-bool-runProgressiveProfileAuthN": true,
-        "mf-bool-runProgressiveProfileRegstration": false,
+        "mf-bool-runProgressiveProfileAuthN": false,
+        "mf-bool-runProgressiveProfileRegistration": true,
+        "mf-bool-runReturnToLogin": false,
         "mf-bool-runTimeBasedProgressiveProfile": true,
+        "mf-bool-runUsernameless": false,
         "mf-bool-sendEmailPasswordChange": true,
         "mf-bool-sendEmailPasswordRecovery": true,
         "mf-bool-sendEmailUserProfileUpdate": true,
-        "mf-bool-showAzureButton": true,
+        "mf-bool-showAzureButton": false,
         "mf-bool-showFacebookButton": false,
         "mf-bool-showGithubButton": false,
-        "mf-bool-showGoogleButton": true,
-        "mf-bool-blurDOBandID": true,
+        "mf-bool-showGoogleButton": false,
         "mf-string-daysUntilProgressiveProfile": 30
-    },
-    "p1Credentials": {
-        "mf-bool-runCredentials": true
     }
 }

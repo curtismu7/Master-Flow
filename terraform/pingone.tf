@@ -343,6 +343,42 @@ resource "pingone_mfa_device_policy" "master_flow_passwordless_mfa_policy" {
   }
 }
 
+###########################
+#  PingOne Verify Policy  #
+###########################
+
+resource "pingone_verify_policy" "liveness_verify_policy" {
+  environment_id = pingone_environment.master_flow_environment.id
+  name           = "Liveness"
+  description    = "Liveness Only"
+
+  facial_comparison = {
+    verify    = "REQUIRED"
+    threshold = "MEDIUM"
+  }
+
+  liveness = {
+    verify    = "REQUIRED"
+    threshold = "MEDIUM"
+  }
+
+  transaction = {
+    timeout = {
+      duration  = "30"
+      time_unit = "MINUTES"
+    }
+
+    data_collection = {
+      timeout = {
+        duration  = "15"
+        time_unit = "MINUTES"
+      }
+    }
+
+    data_collection_only = false
+  }
+}
+
 ############################
 #  Social Login Providers  #
 ############################
@@ -1119,9 +1155,8 @@ resource "pingone_notification_template_content" "new_ping_device_paired" {
 
 resource "pingone_notification_template_content" "verify_id_verification" {
   environment_id = pingone_environment.master_flow_environment.id
-  template_name  = "general"
+  template_name  = "id_verification"
   locale         = "en"
-  variant        = "PingOne Verify ID Verification"
 
   email = {
     body          = "${file("${path.module}/data/notification_templates/PingOne Verify ID Verification.html")}"
@@ -1579,26 +1614,30 @@ resource "pingone_digital_wallet_application" "pingone_neo_demo_wallet_app" {
 resource "pingone_credential_type" "pingone_neo_demo_credential" {
   environment_id = pingone_environment.master_flow_environment.id
   title            = "Company Credential"
-  description      = "User Access"
-  card_type        = "UserAccess"
-  revoke_on_delete = true
+  description      = "Unified Digital ID"
+  card_type        = "Company Credential"
+  revoke_on_delete = false
   management_mode  = "MANAGED" 
 
   card_design_template = <<-EOT
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 480">
-<rect fill="none" width="736" height="476" stroke="#CACED3" stroke-width="3" rx="10" ry="10" x="2" y="2"></rect>
-<rect fill="$${cardColor}" height="476" rx="10" ry="10" width="736" x="2" y="2" opacity="$${bgOpacityPercent}"></rect>
+<rect fill="none" width="736" height="476" stroke="#CACED3" stroke-width="3" rx="10" ry="10" x="2" y="2">
+</rect><rect fill="$${cardColor}" height="476" rx="10" ry="10" width="736" x="2" y="2"></rect>
+<image href="$${backgroundImage}" style="opacity:31%" height="476" rx="10" ry="10" width="736" x="2" y="2"></image>
 <image href="$${logoImage}" x="42" y="43" height="90px" width="90px"></image>
-<image href="$${backgroundImage}" opacity="$${bgOpacityPercent}" height="301" rx="10" ry="10" width="589" x="75" y="160"></image>
 <line y2="160" x2="695" y1="160" x1="42.5" stroke="$${textColor}"></line>
 <text fill="$${textColor}" font-weight="450" font-size="30" x="160" y="90">$${cardTitle}</text>
 <text fill="$${textColor}" font-size="25" font-weight="300" x="160" y="130">$${cardSubtitle}</text>
-</svg>  
+<text fill="$${textColor}" font-weight="600" font-size="30" x="50" y="228">$${fields[0].value} $${fields[3].value}</text>
+<text fill="$${textColor}" font-weight="500" font-size="20" x="50" y="278">$${fields[1].value}</text>
+<text fill="$${textColor}" font-weight="500" font-size="15" x="50" y="450">$${fields[2].title}: $${fields[2].value}</text>
+<image href="data:image/jpeg;base64,$${fields[4].value}" x="590" y="30" height="120px" width="120px"></image>
+</svg>
 EOT
 
   metadata = {
     name               = "Company Credentials"
-    description        = "PingOne Master Flow Credentials"
+    description        = "Unified Digital ID"
     bg_opacity_percent = 30
 
     logo_image       = "https://cdn-assets-us.frontify.com/s3/frontify-enterprise-files-us/eyJwYXRoIjoicGluZ2lkZW50aXR5XC9hY2NvdW50c1wvM2FcLzQwMDA5NDdcL3Byb2plY3RzXC8xNVwvYXNzZXRzXC82YlwvMTYzMVwvMWQ1N2U0YTU0MTIxMjIzZmVhOTE3YmE2Y2Q2NjlkMjEtMTY0NDg3NjYxMS5haSJ9:pingidentity:eFdxYWEvOdgfuSU4lqfqMcA4mYTNfww8WwOLnwTo4zk"
@@ -1610,33 +1649,37 @@ EOT
     fields = [
       {
         type       = "Directory Attribute"
-        title      = "Account Status"
-        attribute  = "status"
-        is_visible = true
-      },
-      {
-        type       = "Directory Attribute"
-        title      = "User ID"
-        attribute  = "id"
-        is_visible = true
-      },
-      {
-        type       = "Directory Attribute"
-        title      = "givenName"
+        title      = "Given"
         attribute  = "name.given"
         is_visible = true
       },
       {
         type       = "Directory Attribute"
-        title      = "surname"
-        attribute  = "name.family"
+        title      = "Email"
+        attribute  = "email"
+        is_visible = true
+      },
+      {
+        type       = "Issued Timestamp"
+        title      = "Issued"
         is_visible = true
       },
       {
         type       = "Directory Attribute"
-        title      = "Street Address"
-        attribute  = "address.streetAddress"
+        title      = "Family"
+        attribute  = "name.family"
         is_visible = true
+      },
+      {
+        type       = "Alphanumeric Text"
+        title      = "selfie"
+        is_visible = true
+      },
+      {
+        type       = "Directory Attribute"
+        title      = "unique_identifier"
+        attribute  = "id"
+        is_visible = false
       }
     ]
   }

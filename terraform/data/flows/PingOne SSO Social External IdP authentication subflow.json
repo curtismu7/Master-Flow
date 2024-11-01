@@ -1,5 +1,5 @@
 {
-  "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432",
+  "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -8,12 +8,13 @@
     "nodeConnector",
     "httpConnector",
     "errorConnector",
-    "pingOneMfaConnector",
+    "variablesConnector",
     "flowConnector",
-    "variablesConnector"
+    "pingOneMfaConnector",
+    "analyticsConnector"
   ],
-  "createdDate": 1727873393850,
-  "currentVersion": 140,
+  "createdDate": 1729785143294,
+  "currentVersion": 10,
   "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "Imported on Tue Apr 30 2024 20:48:07 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -37,8 +38,8 @@
         },
         "email": {
           "description": "",
-          "preferredDataType": "string",
           "isExpanded": true,
+          "preferredDataType": "string",
           "type": "string",
           "name": "email"
         }
@@ -50,26 +51,26 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Social External IdP authentication subflow",
-  "publishedVersion": 140,
+  "publishedVersion": 10,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "  /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            \n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
     "intermediateLoadingScreenHTML": "<div class=\"message\">\n    Preparing your amazing journey, please hold on...\n</div>",
-    "css": ".companyLogo {\n    /* Ping Logo  */\n    /* content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\"); */\n    height: 70px;\n}\n\n\n\n  .companyLogo {\n    /* Ping Logo  */\n    /* content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\"); */\n    height: 70px;\n}\n\n\n  :root {\n    /********************************************************\n    * COMPANY LOGO\n    *********************************************************/\n\n    --company-logo-max-height: 65px;\n\n    /********************************************************\n    * PAGE BACKGROUND \n    *********************************************************/\n    /* --background-image-url: url(\"https://github.com/curtismu7/CDN/blob/main/idc%20background.png?raw=true\"); */\n\n    /********************************************************\n    * CARD BODY\n    *********************************************************/\n    --card-background-color: rgb(242, 242, 242);\n    --card-shadow-color: rgba(0, 8, 15, .35);\n\n    /********************************************************\n    * BODY\n    *********************************************************/\n    --body-font-family: 'Arial', 'sans-serif';\n    --body-font-size: 1rem;\n\n    /********************************************************\n    * TEXT FONT COLORS\n    *********************************************************/\n\n    /*  PRIMARY FONT COLOR (RGB) */\n    --text-color-primary: 61, 69, 77;\n\n    /* HEADING FONT COLR (RBG) */\n    --heading-text-color: 61, 69, 77;\n    \n    /*  MUTED TEXT ALPHA  */\n    --text-color-muted-apha: 0.75;\n\n    /*  ERROR FONT COLOR  */\n    --text-color-error: rgb(185, 35, 32);\n\n    /********************************************************\n    * BUTTON ATTRIBUTES\n    *********************************************************/\n\n    /*  BUTTON FONT COLOR  */\n    --button-primary-text-color: rgb(255, 255, 255);\n\n    /*  BUTTON BACKGROUND COLOR (RGB)  */\n    --button-primary-background-color: 229, 111, 32;\n    \n    /* LINK BUTTON FONT COLOR (RGB)  */\n    --link-button-primary-color: 3, 1, 14;\n\n    /* BUTTON BORDER RADIUS */\n    --button-primary-border-radius: 3px;\n\n    /*  BUTTON HOVER ALPHA  */\n    --button-hover-alpha: 0.70;\n\n    /*  BUTTON ACTIVE ALPHA  */\n    --button-active-alpha: 0.80;\n\n    /*  BUTTON DISABLED ALPHA  */\n    --button-disabled-alpha: 0.65;\n\n    /********************************************************\n     * FORM CONTROLS\n     *********************************************************/\n    --form-control-border-radius: 2px;\n    --card-body-border-radius: 25px;\n    --focus-highlight-color: 39, 123, 165;\n\n    /********************************************************\n    * ACTIVITY INDICATOR & BUTTON SPINNER COLOR\n    *********************************************************/\n\n    --activity-indicator-color: rgb(68, 98, 237);\n\n    --polling-indicator-color: rgb(68, 98, 237);\n\n    /********************************************************\n    * APPLYING TEXT COLOR - DO NOT CHANGE\n    *********************************************************/\n    /* H1,H2, H3, Body text color */\n    --bs-body-color: rgb(var(--text-color-main)) !important;\n    --bs-danger-rgb: var(--text-color-error);\n  }\n\n  \n  \n/********************************************************\n* CLASSES BELOW ARE DERIVED FROM VALUES ABOVE\n* DO NOT CHANGE UNLESS YOU HAVE CSS 'SKILLZ' :)\n*********************************************************/\n\n/*  COMPANY LOGO  */\n.card-body.p-5.d-flex.flex-column > img:first-child,\n.companyLogo {\n  content: var(--company-logo-img-url) !important;\n  height: var(--company-logo-max-height) !important;\n  width: auto !important;\n}\n\n/*  BACKGROUND IMAGE  */\ndiv.bg-light {\n  background-image:       var(--background-image-url);\n  background-size:        cover;\n  background-repeat:      no-repeat;\n}\n\n/*  HEADING TEXT  */\nh1, h2, h3, h4 {\n  color: rgb(var(--heading-text-color)) !important;\n}\n\n/*  BODY FONT & COLOR  */\n.card-body {\n  /*  font family */\n  font-family: var(--body-font-family) !important;\n  /*  font size */\n  font-size: var(--body-font-size) !important;\n  /*  font color */\n  color: rgb(var(--text-color-primary)) !important;\n  /*  background color */\n  background-color: var(--card-background-color) !important;\n}\n\n/*  MUTED PARAGRAPH  */\np.text-muted {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  ERROR MESSAGE PARAGRAPH  */\n.card .text-danger {\n  color: var(--text-color-error) !important;\n}\n\n/*  FORM CONTROL FONT COLOR  */\n.form-control,\n.form-control:focus {\n  color: var(--text-color-primary) !important;\n  border-radius: var(--form-control-border-radius) !important;\n}\n\n/*  FORM CONTROL PLACEHOLDER FONT COLOR  */\n.form-floating input+label {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  FORM CONTROL HIGHLIGHT  */\n.form-control:focus {\n  border-color: rgba(var(--focus-highlight-color), .5) !important;\n  box-shadow: 0 0 0 0.25rem rgba(var(--focus-highlight-color), 0.25) !important;\n}\n\n/*  PRIMARY BUTTON  */\n.btn-primary {\n  /*  font color  */\n  --bs-btn-color: var(--button-primary-text-color) !important;\n  /*  font color when hovering  */\n  --bs-btn-hover-color: var(--button-primary-text-color) !important;\n  /*  border color  */\n  --bs-btn-border-color: var(--button-primary-background-color) !important;\n  /*  background color  */\n  --bs-btn-bg: rgb(var(--button-primary-background-color)) !important;\n  /*  background color when hovering  */\n  --bs-btn-hover-bg: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  /*  background color when active  */\n  --bs-btn-active-bg: rgba(var(--button-primary-background-color), var(--button-active-alpha)) !important;\n  /*  background color when disabled  */\n  --bs-btn-disabled-bg: rgba(var(--button-primary-background-color), var(--button-disabled-alpha)) !important;\n  background-color: rgb(var(--button-primary-background-color)) !important;\n  border-color: rgb(var(--button-primary-background-color)) !important;\n  color: var(--button-primary-text-color) !important;\n  border-radius: var(--button-primary-border-radius);\n}\n\n\n.btn-primary:hover {\n  background-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  border-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  color: var(--button-primary-text-color) !important;\n}\n\n/*  LINK BUTTON  */\n.btn-link {\n  /*  button font color  */\n  --bs-btn-color: rgb(var(--link-button-primary-color)) !important;\n  /*  button font color when active  */\n  --bs-btn-active-color: rgba(var(--link-button-primary-color), var(--button-active-alpha)) !important;\n  /*  button font color when hovering  */\n  --bs-btn-hover-color: rgba(var(--link-button-primary-color), var(--button-hover-alpha)) !important;\n  /*  button font color when disabled  */\n  --bs-btn-disabled-color: rgba(var(--link-button-primary-color), var(--button-disabled-alpha)) !important;\n  color: rgb(var(--link-button-primary-color)) !important;\n}\n\n/*  POLLING INDICATORS  */\n.css-11k6vsm,\n.css-17zi2ag,\n.css-139roxj {\n  /* width: 20px; */\n  /* height: 20px; */\n  /* animation-duration: 0.75s; */\n  /*  circle background color  */\n  background-color: var(--polling-indicator-color) !important;\n}\n\n/*  BUTTON ACTIVITY INDICATOR, PROGRESS SPINNER  */\n.css-sw2ho0 {\n  /*  spinning circle color  */\n  --primary-color: var(--activity-indicator-color) !important;\n}\n\n/* PROGRESS SPINNER */\n.spinner-color {\n  color: var(--polling-indicator-color) !important;\n}\n\n.card-body.p-5.d-flex.flex-column {\n  border-radius: var(--card-body-border-radius);\n}\n\n.card.shadow.mb-5 {\n  border-radius: var(--card-body-border-radius);\n  box-shadow: 1px 1px 3px 1px var(--card-shadow-color) !important;\n}\n\n \n \n  \n  \n\n  ",
+    "css": "\n  :root {\n    /********************************************************\n    * COMPANY LOGO\n    *********************************************************/\n\n    --company-logo-max-height: 95px;\n\n    /********************************************************\n    * PAGE BACKGROUND \n    *********************************************************/\n    --background-image-url: url(\"\");\n\n    /********************************************************\n    * CARD BODY\n    *********************************************************/\n    --card-background-color: rgb(242, 221, 184);\n    --card-shadow-color: rgba(146, 55, 25, .35);\n\n    /********************************************************\n    * BODY\n    *********************************************************/\n    --body-font-family: Helvetica;\n    --body-font-size: .8rem;\n\n    /********************************************************\n    * TEXT FONT COLORS\n    *********************************************************/\n\n    /*  PRIMARY FONT COLOR (RGB) */\n    --text-color-primary: 181, 119, 87;\n\n    /* HEADING FONT COLR (RBG) */\n    --heading-text-color: 61, 69, 77;\n    \n    /*  MUTED TEXT ALPHA  */\n    --text-color-muted-apha: 0.75;\n\n    /*  ERROR FONT COLOR  */\n    --text-color-error: rgb(185, 35, 32);\n\n    /********************************************************\n    * BUTTON ATTRIBUTES\n    *********************************************************/\n\n    /*  BUTTON FONT COLOR  */\n    --button-primary-text-color: rgb(255, 255, 255);\n\n    /*  BUTTON BACKGROUND COLOR (RGB)  */\n    --button-primary-background-color: 146, 57, 23;\n    \n    /* LINK BUTTON FONT COLOR (RGB)  */\n    --link-button-primary-color: 146, 23, 48;\n\n    /* BUTTON BORDER RADIUS */\n    --button-primary-border-radius: 20px;\n\n    /*  BUTTON HOVER ALPHA  */\n    --button-hover-alpha: 0.70;\n\n    /*  BUTTON ACTIVE ALPHA  */\n    --button-active-alpha: 0.80;\n\n    /*  BUTTON DISABLED ALPHA  */\n    --button-disabled-alpha: 0.65;\n\n    /********************************************************\n     * FORM CONTROLS\n     *********************************************************/\n    --form-control-border-radius: 20px;\n    --card-body-border-radius: 25px;\n    --focus-highlight-color: 105, 242, 121;\n\n    /********************************************************\n    * ACTIVITY INDICATOR & BUTTON SPINNER COLOR\n    *********************************************************/\n\n    --activity-indicator-color: rgb(207, 173, 126);\n\n    --polling-indicator-color: rgb(237, 69, 69);\n\n    /********************************************************\n    * APPLYING TEXT COLOR - DO NOT CHANGE\n    *********************************************************/\n    /* H1,H2, H3, Body text color */\n    --bs-body-color: rgb(var(--text-color-main)) !important;\n    --bs-danger-rgb: var(--text-color-error);\n  }\n\n  \n  \n/********************************************************\n* CLASSES BELOW ARE DERIVED FROM VALUES ABOVE\n* DO NOT CHANGE UNLESS YOU HAVE CSS 'SKILLZ' :)\n*********************************************************/\n\n/*  COMPANY LOGO  */\n.card-body.p-5.d-flex.flex-column > img:first-child,\n.companyLogo {\n  content: var(--company-logo-img-url) !important;\n  height: var(--company-logo-max-height) !important;\n  width: auto !important;\n}\n\n/*  BACKGROUND IMAGE  */\ndiv.bg-light {\n  background-image:       var(--background-image-url);\n  background-size:        cover;\n  background-repeat:      no-repeat;\n}\n\n/*  HEADING TEXT  */\nh1, h2, h3, h4 {\n  color: rgb(var(--heading-text-color)) !important;\n}\n\n/*  BODY FONT & COLOR  */\n.card-body {\n  /*  font family */\n  font-family: var(--body-font-family) !important;\n  /*  font size */\n  font-size: var(--body-font-size) !important;\n  /*  font color */\n  color: rgb(var(--text-color-primary)) !important;\n  /*  background color */\n  background-color: var(--card-background-color) !important;\n}\n\n/*  MUTED PARAGRAPH  */\np.text-muted {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  ERROR MESSAGE PARAGRAPH  */\n.card .text-danger {\n  color: var(--text-color-error) !important;\n}\n\n/*  FORM CONTROL FONT COLOR  */\n.form-control,\n.form-control:focus {\n  color: var(--text-color-primary) !important;\n  border-radius: var(--form-control-border-radius) !important;\n}\n\n/*  FORM CONTROL PLACEHOLDER FONT COLOR  */\n.form-floating input+label {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  FORM CONTROL HIGHLIGHT  */\n.form-control:focus {\n  border-color: rgba(var(--focus-highlight-color), .5) !important;\n  box-shadow: 0 0 0 0.25rem rgba(var(--focus-highlight-color), 0.25) !important;\n}\n\n/*  PRIMARY BUTTON  */\n.btn-primary {\n  /*  font color  */\n  --bs-btn-color: var(--button-primary-text-color) !important;\n  /*  font color when hovering  */\n  --bs-btn-hover-color: var(--button-primary-text-color) !important;\n  /*  border color  */\n  --bs-btn-border-color: var(--button-primary-background-color) !important;\n  /*  background color  */\n  --bs-btn-bg: rgb(var(--button-primary-background-color)) !important;\n  /*  background color when hovering  */\n  --bs-btn-hover-bg: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  /*  background color when active  */\n  --bs-btn-active-bg: rgba(var(--button-primary-background-color), var(--button-active-alpha)) !important;\n  /*  background color when disabled  */\n  --bs-btn-disabled-bg: rgba(var(--button-primary-background-color), var(--button-disabled-alpha)) !important;\n  background-color: rgb(var(--button-primary-background-color)) !important;\n  border-color: rgb(var(--button-primary-background-color)) !important;\n  color: var(--button-primary-text-color) !important;\n  border-radius: var(--button-primary-border-radius);\n}\n\n\n.btn-primary:hover {\n  background-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  border-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  color: var(--button-primary-text-color) !important;\n}\n\n/*  LINK BUTTON  */\n.btn-link {\n  /*  button font color  */\n  --bs-btn-color: rgb(var(--link-button-primary-color)) !important;\n  /*  button font color when active  */\n  --bs-btn-active-color: rgba(var(--link-button-primary-color), var(--button-active-alpha)) !important;\n  /*  button font color when hovering  */\n  --bs-btn-hover-color: rgba(var(--link-button-primary-color), var(--button-hover-alpha)) !important;\n  /*  button font color when disabled  */\n  --bs-btn-disabled-color: rgba(var(--link-button-primary-color), var(--button-disabled-alpha)) !important;\n  color: rgb(var(--link-button-primary-color)) !important;\n}\n\n/*  POLLING INDICATORS  */\n.css-11k6vsm,\n.css-17zi2ag,\n.css-139roxj {\n  /* width: 20px; */\n  /* height: 20px; */\n  /* animation-duration: 0.75s; */\n  /*  circle background color  */\n  background-color: var(--polling-indicator-color) !important;\n}\n\n/*  BUTTON ACTIVITY INDICATOR, PROGRESS SPINNER  */\n.css-sw2ho0 {\n  /*  spinning circle color  */\n  --primary-color: var(--activity-indicator-color) !important;\n}\n\n/* PROGRESS SPINNER */\n.spinner-color {\n  color: var(--polling-indicator-color) !important;\n}\n\n.card-body.p-5.d-flex.flex-column {\n  border-radius: var(--card-body-border-radius);\n}\n\n.card.shadow.mb-5 {\n  border-radius: var(--card-body-border-radius);\n  box-shadow: 1px 1px 3px 1px var(--card-shadow-color) !important;\n}",
     "cssLinks": [
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.6/icons.css",
-      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css"
+      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.9/end-user-nano.css",
+      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css"
     ],
     "flowTimeoutInSeconds": 3600,
     "logLevel": 3,
     "pingOneFlow": false,
-    "useCustomCSS": true,
-    "useIntermediateLoadingScreen": true
+    "useCustomCSS": false,
+    "useIntermediateLoadingScreen": false
   },
   "timeouts": "null",
-  "updatedDate": 1727873394937,
-  "flowId": "f1d524eadb2e5c52d742b47ed01cd26d",
-  "versionId": 140,
+  "updatedDate": 1729785144550,
+  "flowId": "d83d4d8c05c4ee6609029d13df9775aa",
+  "versionId": 10,
   "graphData": {
     "elements": {
       "nodes": [
@@ -142,14 +143,14 @@
               "linkWithP1User": {
                 "value": true
               },
+              "loginHint": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeTitle": {
                 "value": "Google Auth"
               },
               "population": {
                 "value": "f7073607-95e2-49ea-8c52-2fd9a3923dfa"
-              },
-              "loginHint": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -274,14 +275,14 @@
               "identityProviderId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-facebookExternalIdPId}}\"\n      }\n    ]\n  }\n]"
               },
+              "loginHint": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeTitle": {
                 "value": "Facebook Auth"
               },
               "population": {
                 "value": "f7073607-95e2-49ea-8c52-2fd9a3923dfa"
-              },
-              "loginHint": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -319,14 +320,14 @@
               "linkWithP1User": {
                 "value": true
               },
+              "loginHint": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeTitle": {
                 "value": "Azure Auth"
               },
               "population": {
                 "value": "f7073607-95e2-49ea-8c52-2fd9a3923dfa"
-              },
-              "loginHint": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -401,14 +402,14 @@
               "linkWithP1User": {
                 "value": true
               },
+              "loginHint": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeTitle": {
                 "value": "GitHub Auth"
               },
               "population": {
                 "value": "f7073607-95e2-49ea-8c52-2fd9a3923dfa"
-              },
-              "loginHint": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -465,8 +466,8 @@
             "type": "action"
           },
           "position": {
-            "x": 510,
-            "y": 2340
+            "x": 540,
+            "y": 1740
           },
           "group": "nodes",
           "removed": false,
@@ -498,8 +499,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 630,
-            "y": 2490
+            "x": 660,
+            "y": 1890
           },
           "group": "nodes",
           "removed": false,
@@ -527,8 +528,8 @@
                 "value": [
                   {
                     "key": 0.3530163097355081,
-                    "label": "userid (string - flowInstance)",
-                    "name": "userid",
+                    "label": "userId (string - flowInstance)",
+                    "name": "userId",
                     "nameDefault": "p1UserId",
                     "type": "string",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -559,8 +560,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1290,
-            "y": 2490
+            "x": 1530,
+            "y": 1890
           },
           "group": "nodes",
           "removed": false,
@@ -678,8 +679,8 @@
             "type": "action"
           },
           "position": {
-            "x": 480,
-            "y": 2400
+            "x": 510,
+            "y": 1800
           },
           "group": "nodes",
           "removed": false,
@@ -696,8 +697,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1050,
-            "y": 2790
+            "x": 1080,
+            "y": 2190
           },
           "group": "nodes",
           "removed": false,
@@ -746,8 +747,8 @@
             "type": "action"
           },
           "position": {
-            "x": 510,
-            "y": 2640
+            "x": 540,
+            "y": 2040
           },
           "group": "nodes",
           "removed": false,
@@ -782,8 +783,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1200,
-            "y": 2790
+            "x": 1230,
+            "y": 2190
           },
           "group": "nodes",
           "removed": false,
@@ -838,8 +839,8 @@
             "type": "action"
           },
           "position": {
-            "x": 510,
-            "y": 2700
+            "x": 540,
+            "y": 2100
           },
           "group": "nodes",
           "removed": false,
@@ -949,8 +950,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 870,
-            "y": 2790
+            "x": 900,
+            "y": 2190
           },
           "group": "nodes",
           "removed": false,
@@ -967,8 +968,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 720,
-            "y": 2790
+            "x": 750,
+            "y": 2190
           },
           "group": "nodes",
           "removed": false,
@@ -1033,8 +1034,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 630,
-            "y": 2790
+            "x": 660,
+            "y": 2190
           },
           "group": "nodes",
           "removed": false,
@@ -1055,6 +1056,9 @@
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeInstanceId": {
                 "value": "5c6hxo8f1r"
               },
@@ -1063,9 +1067,6 @@
               },
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserName\",\n        \"data\": \"{{global.variables.p1UserName}}\",\n        \"tooltip\": \"{{global.variables.p1UserName}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -1077,296 +1078,6 @@
           "position": {
             "x": 2100,
             "y": 480
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "updateAnnotationProperties",
-            "connectionId": "921bfae85c38ed45045e07be703d86b8",
-            "connectorId": "annotationConnector",
-            "id": "0309sg2ip4",
-            "name": "Annotation",
-            "nodeType": "ANNOTATION",
-            "properties": {
-              "annotation": {
-                "value": "Silent register email"
-              },
-              "annotationTextColor": {
-                "value": "#ffffffff"
-              },
-              "backgroundColor": {
-                "value": "#5D00D6ff"
-              },
-              "cornerRadius": {
-                "value": 8
-              },
-              "fontFamily": {
-                "value": "sans-serif"
-              },
-              "fontSize": {
-                "value": 14
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "width": {
-                "value": 2000
-              }
-            },
-            "status": "configured",
-            "type": "action"
-          },
-          "position": {
-            "x": 278.9046596463111,
-            "y": 1418.724861875204
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "startNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "connectorId": "nodeConnector",
-            "id": "dobb44pr1b",
-            "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"p1UserId\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1UserId\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1UserId\"\n\t\t},\n\t\t\"p1Email\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"p1Email\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"p1Email\"\n\t\t},\n\t\t\"username\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"username\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"username\"\n\t\t},\n\t\t\"callingFlow\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"callingFlow\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"callingFlow\"\n\t\t}\n\t}\n}"
-              },
-              "nodeTitle": {
-                "value": "Register email"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
-          },
-          "position": {
-            "x": 278.9046596463111,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "createDevice",
-            "connectionId": "b72bd44e6be8180bd5988ac74cd9c949",
-            "connectorId": "pingOneMfaConnector",
-            "id": "r5nxv12ks8",
-            "idUnique": "rxslfm6xnm",
-            "label": "PingOne MFA",
-            "name": "PingOne MFA",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "customDeviceType": {
-                "value": "{}"
-              },
-              "customNotificationPolicyId": {
-                "value": "{}"
-              },
-              "customTemplateVariant": {
-                "value": "{}"
-              },
-              "deviceType": {
-                "value": "EMAIL"
-              },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "status": {
-                "value": "ACTIVE"
-              },
-              "userId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "notificationPolicyId": {
-                "value": "6eeda260-a85d-40eb-a7b0-3ca7b387818c"
-              },
-              "templateVariant": {
-                "value": "Master Flow Device Pairing"
-              },
-              "templateVariables": {
-                "value": [
-                  {
-                    "name": "companyLogo",
-                    "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]"
-                  },
-                  {
-                    "name": "companyName",
-                    "preferredDataType": "string",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]"
-                  }
-                ]
-              },
-              "phone": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "rpId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Auto Generated email from ext IDP\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "status": "configured",
-            "type": "action"
-          },
-          "position": {
-            "x": 900,
-            "y": 1530
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "agdocjhico",
-            "label": "Evaluator",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 412.74662774774544,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "AEqualsB",
-            "connectionId": "de650ca45593b82c49064ead10b9fe17",
-            "connectorId": "functionsConnector",
-            "id": "5iur7e6rvo",
-            "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-bool-runAutoEnrollEmail}}\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeDescription": {
-                "value": "{{global.variables.mf-configObject.p1MFA.mf-bool-runAutoEnrollEmail}}"
-              },
-              "nodeTitle": {
-                "value": "Check if we should call register email subflow"
-              },
-              "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
-              },
-              "type": {
-                "value": "boolean"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
-          },
-          "position": {
-            "x": 573.3569894694667,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "dvsh65keh1",
-            "nodeType": "EVAL",
-            "properties": {
-              "5pbibkp4wg": {
-                "value": "anyTriggersFalse"
-              },
-              "u16539esmq": {
-                "value": "anyTriggersFalse"
-              },
-              "po4slgvmm6": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 733.9673511911878,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "goToNode",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "connectorId": "nodeConnector",
-            "id": "hidp6h8zde",
-            "label": "Teleport",
-            "name": "Teleport",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "nodeInstanceId": {
-                "value": "7ae8xropgy"
-              },
-              "p1Email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.p1Email}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "username": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.dobb44pr1b.payload.output.username}}\",\n        \"tooltip\": \"{{local.dobb44pr1b.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "status": "configured",
-            "type": "action"
-          },
-          "position": {
-            "x": 1965.3134577243839,
-            "y": 1606.103617217212
           },
           "group": "nodes",
           "removed": false,
@@ -1500,10 +1211,14 @@
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "mvxk5mlw4d",
+            "idUnique": "pilyhbrms7",
             "label": "Teleport",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeInstanceId": {
                 "value": "5c6hxo8f1r"
               },
@@ -1513,16 +1228,12 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserName\",\n        \"data\": \"{{global.variables.p1UserName}}\",\n        \"tooltip\": \"{{global.variables.p1UserName}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
-            "type": "action",
-            "idUnique": "pilyhbrms7"
+            "type": "action"
           },
           "position": {
             "x": 2130,
@@ -1596,209 +1307,6 @@
         },
         {
           "data": {
-            "id": "dbtdo5zctf",
-            "nodeType": "EVAL",
-            "properties": {
-              "hjey2v135x": {
-                "value": "anyTriggersFalse"
-              },
-              "y5gl6yoml3": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 1020,
-            "y": 1530
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "AEqualsB",
-            "connectionId": "de650ca45593b82c49064ead10b9fe17",
-            "connectorId": "functionsConnector",
-            "id": "po4slgvmm6",
-            "label": "Functions",
-            "name": "Functions",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "caseSensitive": {
-                "value": false
-              },
-              "leftValueA": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.pingone.mf-bool-runConsent}}\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeDescription": {
-                "value": "{{global.variables.mf-configObject.pingone.mf-bool-runConsent}}"
-              },
-              "nodeTitle": {
-                "value": "Check if call PingOne Agreements (consent)"
-              },
-              "rightValueB": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
-              },
-              "type": {
-                "value": "boolean"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
-          },
-          "position": {
-            "x": 1269.335223596925,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "0gl87lafvz",
-            "label": "Evaluator",
-            "nodeType": "EVAL",
-            "properties": {
-              "1laaplms8w": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 1403.1771916983596,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "startUiSubFlow",
-            "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
-            "connectorId": "flowConnector",
-            "id": "lixp1hnhk1",
-            "idUnique": "4tk6jmkngs",
-            "label": "Flow Connector",
-            "name": "Flow Connector",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "action": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"agree\"\n      }\n    ]\n  }\n]"
-              },
-              "mf-configObject": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.variables.mf-configObject}}\",\n        \"tooltip\": \"{{global.variables.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeTitle": {
-                "value": "PingOne SSO agreements subflow"
-              },
-              "p1PopulationId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"gv-p1PopulationId\",\n        \"data\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"tooltip\": \"{{global.company.variables.gv-p1PopulationId}}\",\n        \"children\": [\n          {\n            \"text\": \"gv-p1PopulationId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "subFlowId": {
-                "value": {
-                  "label": "PingOne SSO Consent subflow",
-                  "value": "f205ac5eba9b4eee821d37f7dd2ed453"
-                }
-              },
-              "subFlowVersionId": {
-                "value": -1
-              },
-              "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
-          },
-          "position": {
-            "x": 1590.5559470403675,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "leo3dljqqx",
-            "nodeType": "EVAL",
-            "properties": {
-              "e8bnxqy2er": {
-                "value": "anyTriggersFalse"
-              }
-            }
-          },
-          "position": {
-            "x": 1751.1663087620889,
-            "y": 1606.103617217212
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "createErrorResponse",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "id": "e8bnxqy2er",
-            "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
-              },
-              "nodeTitle": {
-                "value": "Error on agreement subflow"
-              }
-            },
-            "status": "configured",
-            "type": "action"
-          },
-          "position": {
-            "x": 1938.5450641040968,
-            "y": 1847.019159799794
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
             "capabilityName": "customHTMLTemplate",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
@@ -1808,9 +1316,7 @@
             "name": "Http",
             "nodeType": "CONNECTION",
             "properties": {
-              "customCSS": {
-                "value": ".companyLogo {\n    /* Ping Logo  */\n    /* content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\"); */\n    height: 70px;\n}\n\n\n\n  .companyLogo {\n    /* Ping Logo  */\n    /* content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\"); */\n    height: 70px;\n}\n\n\n  :root {\n    /********************************************************\n    * COMPANY LOGO\n    *********************************************************/\n\n    --company-logo-max-height: 65px;\n\n    /********************************************************\n    * PAGE BACKGROUND \n    *********************************************************/\n    /* --background-image-url: url(\"https://github.com/curtismu7/CDN/blob/main/idc%20background.png?raw=true\"); */\n\n    /********************************************************\n    * CARD BODY\n    *********************************************************/\n    --card-background-color: rgb(242, 242, 242);\n    --card-shadow-color: rgba(0, 8, 15, .35);\n\n    /********************************************************\n    * BODY\n    *********************************************************/\n    --body-font-family: 'Arial', 'sans-serif';\n    --body-font-size: 1rem;\n\n    /********************************************************\n    * TEXT FONT COLORS\n    *********************************************************/\n\n    /*  PRIMARY FONT COLOR (RGB) */\n    --text-color-primary: 61, 69, 77;\n\n    /* HEADING FONT COLR (RBG) */\n    --heading-text-color: 61, 69, 77;\n    \n    /*  MUTED TEXT ALPHA  */\n    --text-color-muted-apha: 0.75;\n\n    /*  ERROR FONT COLOR  */\n    --text-color-error: rgb(185, 35, 32);\n\n    /********************************************************\n    * BUTTON ATTRIBUTES\n    *********************************************************/\n\n    /*  BUTTON FONT COLOR  */\n    --button-primary-text-color: rgb(255, 255, 255);\n\n    /*  BUTTON BACKGROUND COLOR (RGB)  */\n    --button-primary-background-color: 229, 111, 32;\n    \n    /* LINK BUTTON FONT COLOR (RGB)  */\n    --link-button-primary-color: 3, 1, 14;\n\n    /* BUTTON BORDER RADIUS */\n    --button-primary-border-radius: 3px;\n\n    /*  BUTTON HOVER ALPHA  */\n    --button-hover-alpha: 0.70;\n\n    /*  BUTTON ACTIVE ALPHA  */\n    --button-active-alpha: 0.80;\n\n    /*  BUTTON DISABLED ALPHA  */\n    --button-disabled-alpha: 0.65;\n\n    /********************************************************\n     * FORM CONTROLS\n     *********************************************************/\n    --form-control-border-radius: 2px;\n    --card-body-border-radius: 25px;\n    --focus-highlight-color: 39, 123, 165;\n\n    /********************************************************\n    * ACTIVITY INDICATOR & BUTTON SPINNER COLOR\n    *********************************************************/\n\n    --activity-indicator-color: rgb(68, 98, 237);\n\n    --polling-indicator-color: rgb(68, 98, 237);\n\n    /********************************************************\n    * APPLYING TEXT COLOR - DO NOT CHANGE\n    *********************************************************/\n    /* H1,H2, H3, Body text color */\n    --bs-body-color: rgb(var(--text-color-main)) !important;\n    --bs-danger-rgb: var(--text-color-error);\n  }\n\n  \n  \n/********************************************************\n* CLASSES BELOW ARE DERIVED FROM VALUES ABOVE\n* DO NOT CHANGE UNLESS YOU HAVE CSS 'SKILLZ' :)\n*********************************************************/\n\n/*  COMPANY LOGO  */\n.card-body.p-5.d-flex.flex-column > img:first-child,\n.companyLogo {\n  content: var(--company-logo-img-url) !important;\n  height: var(--company-logo-max-height) !important;\n  width: auto !important;\n}\n\n/*  BACKGROUND IMAGE  */\ndiv.bg-light {\n  background-image:       var(--background-image-url);\n  background-size:        cover;\n  background-repeat:      no-repeat;\n}\n\n/*  HEADING TEXT  */\nh1, h2, h3, h4 {\n  color: rgb(var(--heading-text-color)) !important;\n}\n\n/*  BODY FONT & COLOR  */\n.card-body {\n  /*  font family */\n  font-family: var(--body-font-family) !important;\n  /*  font size */\n  font-size: var(--body-font-size) !important;\n  /*  font color */\n  color: rgb(var(--text-color-primary)) !important;\n  /*  background color */\n  background-color: var(--card-background-color) !important;\n}\n\n/*  MUTED PARAGRAPH  */\np.text-muted {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  ERROR MESSAGE PARAGRAPH  */\n.card .text-danger {\n  color: var(--text-color-error) !important;\n}\n\n/*  FORM CONTROL FONT COLOR  */\n.form-control,\n.form-control:focus {\n  color: var(--text-color-primary) !important;\n  border-radius: var(--form-control-border-radius) !important;\n}\n\n/*  FORM CONTROL PLACEHOLDER FONT COLOR  */\n.form-floating input+label {\n  color: rgba(var(--text-color-primary), var(--text-color-muted-apha)) !important;\n}\n\n/*  FORM CONTROL HIGHLIGHT  */\n.form-control:focus {\n  border-color: rgba(var(--focus-highlight-color), .5) !important;\n  box-shadow: 0 0 0 0.25rem rgba(var(--focus-highlight-color), 0.25) !important;\n}\n\n/*  PRIMARY BUTTON  */\n.btn-primary {\n  /*  font color  */\n  --bs-btn-color: var(--button-primary-text-color) !important;\n  /*  font color when hovering  */\n  --bs-btn-hover-color: var(--button-primary-text-color) !important;\n  /*  border color  */\n  --bs-btn-border-color: var(--button-primary-background-color) !important;\n  /*  background color  */\n  --bs-btn-bg: rgb(var(--button-primary-background-color)) !important;\n  /*  background color when hovering  */\n  --bs-btn-hover-bg: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  /*  background color when active  */\n  --bs-btn-active-bg: rgba(var(--button-primary-background-color), var(--button-active-alpha)) !important;\n  /*  background color when disabled  */\n  --bs-btn-disabled-bg: rgba(var(--button-primary-background-color), var(--button-disabled-alpha)) !important;\n  background-color: rgb(var(--button-primary-background-color)) !important;\n  border-color: rgb(var(--button-primary-background-color)) !important;\n  color: var(--button-primary-text-color) !important;\n  border-radius: var(--button-primary-border-radius);\n}\n\n\n.btn-primary:hover {\n  background-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  border-color: rgba(var(--button-primary-background-color), var(--button-hover-alpha)) !important;\n  color: var(--button-primary-text-color) !important;\n}\n\n/*  LINK BUTTON  */\n.btn-link {\n  /*  button font color  */\n  --bs-btn-color: rgb(var(--link-button-primary-color)) !important;\n  /*  button font color when active  */\n  --bs-btn-active-color: rgba(var(--link-button-primary-color), var(--button-active-alpha)) !important;\n  /*  button font color when hovering  */\n  --bs-btn-hover-color: rgba(var(--link-button-primary-color), var(--button-hover-alpha)) !important;\n  /*  button font color when disabled  */\n  --bs-btn-disabled-color: rgba(var(--link-button-primary-color), var(--button-disabled-alpha)) !important;\n  color: rgb(var(--link-button-primary-color)) !important;\n}\n\n/*  POLLING INDICATORS  */\n.css-11k6vsm,\n.css-17zi2ag,\n.css-139roxj {\n  /* width: 20px; */\n  /* height: 20px; */\n  /* animation-duration: 0.75s; */\n  /*  circle background color  */\n  background-color: var(--polling-indicator-color) !important;\n}\n\n/*  BUTTON ACTIVITY INDICATOR, PROGRESS SPINNER  */\n.css-sw2ho0 {\n  /*  spinning circle color  */\n  --primary-color: var(--activity-indicator-color) !important;\n}\n\n/* PROGRESS SPINNER */\n.spinner-color {\n  color: var(--polling-indicator-color) !important;\n}\n\n.card-body.p-5.d-flex.flex-column {\n  border-radius: var(--card-body-border-radius);\n}\n\n.card.shadow.mb-5 {\n  border-radius: var(--card-body-border-radius);\n  box-shadow: 1px 1px 3px 1px var(--card-shadow-color) !important;\n}\n\n \n \n  \n  \n\n  "
-              },
+              "customCSS": {},
               "customHTML": {
                 "value": "<div class=\"end-user-nano\">\n  <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%;\">\n      <div class=\"card shadow mb-5\">\n        <div class=\"card-body p-5 d-flex flex-column align-items-center\">\n          <!-- Company logo -->\n          <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n          <!-- Loading Spinner -->\n          <div class=\"d-flex justify-content-center w-100 mb-4\">\n            <div class=\"spinner-border text-primary\" role=\"status\" style=\"width: 3rem; height: 3rem;\">\n              <span class=\"visually-hidden\">Loading...</span>\n            </div>\n          </div>\n\n          <!-- Conditional Title -->\n          {{#if title}}\n          <h3 class=\"text-center mb-4\">{{title}}</h3>\n          {{/if}}\n\n          <!-- Conditional TextOne -->\n          {{#if textOne}}\n          <p class=\"text-muted text-center\">{{textOne}}</p>\n          {{/if}}\n\n          <!-- Auto Advance Polling Component -->\n          <div class=\"d-none\" data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"1\" data-skpollChallengeStatus=\"false\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
               },
@@ -1876,25 +1382,6 @@
         },
         {
           "data": {
-            "id": "tm5etu5ijw",
-            "label": "Evaluator",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 694,
-            "y": 510
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
             "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
@@ -1917,20 +1404,20 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "socialProvider",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"socialProvider\",\n        \"data\": \"{{global.parameters.socialProvider}}\",\n        \"tooltip\": \"{{global.parameters.socialProvider}}\",\n        \"children\": [\n          {\n            \"text\": \"socialProvider\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.16507972539700067,
                     "label": "socialProvider (string - flowInstance)",
+                    "name": "socialProvider",
+                    "nameDefault": "socialProvider",
                     "type": "string",
-                    "nameDefault": "socialProvider"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"socialProvider\",\n        \"data\": \"{{global.parameters.socialProvider}}\",\n        \"tooltip\": \"{{global.parameters.socialProvider}}\",\n        \"children\": [\n          {\n            \"text\": \"socialProvider\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1Email",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.401578742067062,
                     "label": "p1Email (string - flowInstance)",
+                    "name": "p1Email",
+                    "nameDefault": "email",
                     "type": "string",
-                    "nameDefault": "email"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{global.parameters.email}}\",\n        \"tooltip\": \"{{global.parameters.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
@@ -1939,7 +1426,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 544,
+            "x": 300,
             "y": 510
           },
           "group": "nodes",
@@ -2061,48 +1548,48 @@
         },
         {
           "data": {
-            "id": "a1n7e0o8c7",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "a1n7e0o8c7",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Save IDP data"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "p1Email",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.6267951831613197,
                     "label": "p1Email (string - flowInstance)",
+                    "name": "p1Email",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.7223123775191158,
                     "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "id",
                     "type": "string",
-                    "nameDefault": "id"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.7999951561686618,
                     "label": "p1UserName (string - flowInstance)",
+                    "name": "p1UserName",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.ttyxmkzlcy.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Save IDP data"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1824.6839362028686,
@@ -2160,49 +1647,49 @@
         },
         {
           "data": {
-            "id": "kczks2h8si",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "kczks2h8si",
+            "idUnique": "d2x9uky2ib",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Save IDP data"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "p1Email",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.6267951831613197,
                     "label": "p1Email (string - flowInstance)",
+                    "name": "p1Email",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.c29bv0zg1a.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.c29bv0zg1a.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.03700171765658644,
                     "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "id",
                     "type": "string",
-                    "nameDefault": "id"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.c29bv0zg1a.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.c29bv0zg1a.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.05839147209997719,
                     "label": "p1UserName (string - flowInstance)",
+                    "name": "p1UserName",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.c29bv0zg1a.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Save IDP data"
               }
             },
-            "idUnique": "d2x9uky2ib"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1884.6839362028686,
@@ -2237,49 +1724,49 @@
         },
         {
           "data": {
-            "id": "e9rsd93qdg",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "e9rsd93qdg",
+            "idUnique": "ylr6dgth1x",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Save IDP data"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "p1Email",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.6267951831613197,
                     "label": "p1Email (string - flowInstance)",
+                    "name": "p1Email",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.wb2tu6evi5.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.wb2tu6evi5.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.23301086246824254,
                     "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "id",
                     "type": "string",
-                    "nameDefault": "id"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.wb2tu6evi5.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.wb2tu6evi5.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.5576323016993234,
                     "label": "p1UserName (string - flowInstance)",
+                    "name": "p1UserName",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.wb2tu6evi5.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Save IDP data"
               }
             },
-            "idUnique": "ylr6dgth1x"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1884.6839362028686,
@@ -2314,49 +1801,49 @@
         },
         {
           "data": {
-            "id": "sphx4u5726",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "sphx4u5726",
+            "idUnique": "jwopdew5k9",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Save IDP data"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "p1Email",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.6267951831613197,
                     "label": "p1Email (string - flowInstance)",
+                    "name": "p1Email",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.gqv9v1pyyd.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.gqv9v1pyyd.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.332200518475986,
                     "label": "p1UserId (string - flowInstance)",
+                    "name": "p1UserId",
+                    "nameDefault": "id",
                     "type": "string",
-                    "nameDefault": "id"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.gqv9v1pyyd.payload.output.user.id}}\",\n        \"tooltip\": \"{{local.gqv9v1pyyd.payload.output.user.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1UserName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.8376361342732324,
                     "label": "p1UserName (string - flowInstance)",
+                    "name": "p1UserName",
+                    "nameDefault": "username",
                     "type": "string",
-                    "nameDefault": "username"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"tooltip\": \"{{local.gqv9v1pyyd.payload.output.user.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Save IDP data"
               }
             },
-            "idUnique": "jwopdew5k9"
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1854.6839362028686,
@@ -2379,144 +1866,6 @@
           "position": {
             "x": 2004.6839362028686,
             "y": 1110
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "y5gl6yoml3",
-            "nodeType": "CONNECTION",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "name": "Http",
-            "label": "Http",
-            "status": "configured",
-            "capabilityName": "customHTMLTemplate",
-            "type": "trigger",
-            "properties": {
-              "customHTML": {
-                "value": "<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"xmark\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 52 52\">\n                            <circle class=\"xmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"xmarkX\" fill=\"none\" d=\"M16,16 L36,36 M36,16 L16,36\" />\n                        </svg>\n                    </div>\n\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\" >\n                        {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
-              },
-              "formFieldsList": {
-                "value": [
-                  {
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "username",
-                    "displayName": "Username",
-                    "hashedVisibility": false,
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-                  },
-                  {
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "buttonValue"
-                  },
-                  {
-                    "propertyName": "password",
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "value": "",
-                    "hashedVisibility": true,
-                    "displayName": "Password"
-                  }
-                ]
-              },
-              "nodeTitle": {
-                "value": "Animated Error"
-              },
-              "customCSS": {
-                "value": ":root {\n    --failure-animation-dimension: 120px;\n    --failure-animation-start-color: #e63946; \n    --failure-animation-midway-color: #d90429; \n    --failure-animation-finish-color: #ba000d; \n}\n\n.xmark {\n    width: var(--failure-animation-dimension);\n    height: var(--failure-animation-dimension);\n    display: block;\n    stroke-width: 5;\n    stroke: #ffffff;\n    stroke-miterlimit: 10;\n    border-radius: 50%;\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;\n}\n\n.xmarkCircle {\n    stroke-dasharray: 166;\n    stroke-dashoffset: 166;\n    stroke-width: 5;\n    stroke: var(--failure-animation-finish-color);\n    fill: none;\n    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;\n}\n\n.xmarkX {\n    stroke-dasharray: 56;\n    stroke-dashoffset: 56;\n    stroke-width: 5;\n    stroke: var(--failure-animation-start-color);\n    animation: strokeX 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards, colorChangeX 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes stroke {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes strokeX {\n    to {\n        stroke-dashoffset: 0;\n    }\n}\n\n@keyframes colorChangeX {\n    0% {\n        stroke: var(--failure-animation-start-color);\n    }\n    50% {\n        stroke: var(--failure-animation-midway-color);\n    }\n    100% {\n        stroke: var(--failure-animation-finish-color);\n    }\n}\n\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n\n/* Ensure scale and fill animations are correctly applied */\n"
-              },
-              "validationRules": {
-                "value": []
-              },
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
-              },
-              "customScript": {},
-              "inputSchema": {
-                "value": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"title\": {\n      \"type\": \"string\",\n      \"displayName\": \"Title\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"title\"\n    },\n    \"textOne\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text One\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textOne\"\n    },\n    \"textTwo\": {\n      \"type\": \"string\",\n      \"displayName\": \"Text Two\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"textTwo\"\n    },\n    \"buttonLabel\": {\n      \"type\": \"string\",\n      \"displayName\": \"Button Label\",\n      \"preferredControlType\": \"textField\",\n      \"enableParameters\": true,\n      \"propertyName\": \"buttonLabel\"\n    }\n  }\n}"
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Error\"\n      }\n    ]\n  }\n]"
-              },
-              "nodeDescription": {
-                "value": "Error message with animated X"
-              },
-              "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"message\",\n        \"data\": \"{{local.r5nxv12ks8.payload.error.message}}\",\n        \"tooltip\": \"{{local.r5nxv12ks8.payload.error.message}}\",\n        \"children\": [\n          {\n            \"text\": \"message\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "textThree": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "buttonLabel": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
-              },
-              "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Auto Register Email failed for Social Ext IDP\"\n      }\n    ]\n  }\n]"
-              }
-            },
-            "idUnique": "eqn5ledc0s"
-          },
-          "position": {
-            "x": 900,
-            "y": 1770
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "j0vdftx36t",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1084.6676117984625,
-            "y": 1688.051808608606
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "1laaplms8w",
-            "nodeType": "CONNECTION",
-            "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
-            "connectorId": "nodeConnector",
-            "name": "Teleport",
-            "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
-            "properties": {
-              "nodeInstanceId": {
-                "value": "7ae8xropgy"
-              }
-            }
-          },
-          "position": {
-            "x": 1585,
-            "y": 1723.5
           },
           "group": "nodes",
           "removed": false,
@@ -2565,8 +1914,8 @@
             "type": "action"
           },
           "position": {
-            "x": 630,
-            "y": 2040
+            "x": 660,
+            "y": 1440
           },
           "group": "nodes",
           "removed": false,
@@ -2598,8 +1947,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 720,
-            "y": 2220
+            "x": 750,
+            "y": 1620
           },
           "group": "nodes",
           "removed": false,
@@ -2616,39 +1965,39 @@
             "connectionId": "2581eb287bb1d9bd29ae9886d675f89f",
             "connectorId": "flowConnector",
             "id": "xfi0ar58h2",
+            "idUnique": "yun7imsloo",
             "label": "Flow Connector",
             "name": "Flow Connector",
             "nodeType": "CONNECTION",
             "properties": {
-              "subFlowId": {
-                "value": {
-                  "label": "PingOne Auto enroll user in email",
-                  "value": "b871202c0a4efe087fe2a7fbdf81d91a"
-                }
-              },
-              "subFlowVersionId": {
-                "value": -1
-              },
-              "p1UserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.5c6hxo8f1r.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.5c6hxo8f1r.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "p1Email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"tooltip\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "mf-configObject": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.variables.mf-configObject}}\",\n        \"tooltip\": \"{{global.variables.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "nodeTitle": {
                 "value": "PingOne Auto enroll user in email"
+              },
+              "p1Email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"tooltip\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "p1UserId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{local.5c6hxo8f1r.payload.output.p1UserId}}\",\n        \"tooltip\": \"{{local.5c6hxo8f1r.payload.output.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "subFlowId": {
+                "value": {
+                  "label": "PingOne Auto enroll user in email",
+                  "value": "50ce4842453050f309b5614053d55d5a"
+                }
+              },
+              "subFlowVersionId": {
+                "value": -1
               }
             },
             "status": "configured",
-            "type": "trigger",
-            "idUnique": "yun7imsloo"
+            "type": "trigger"
           },
           "position": {
-            "x": 1050,
-            "y": 2220
+            "x": 1080,
+            "y": 1620
           },
           "group": "nodes",
           "removed": false,
@@ -2703,8 +2052,8 @@
             "type": "action"
           },
           "position": {
-            "x": 540,
-            "y": 2130
+            "x": 570,
+            "y": 1530
           },
           "group": "nodes",
           "removed": false,
@@ -2722,8 +2071,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 870,
-            "y": 2220
+            "x": 900,
+            "y": 1620
           },
           "group": "nodes",
           "removed": false,
@@ -2737,12 +2086,12 @@
         {
           "data": {
             "id": "x4l5kny4bs",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 1200,
-            "y": 2220
+            "x": 1230,
+            "y": 1620
           },
           "group": "nodes",
           "removed": false,
@@ -2755,16 +2104,17 @@
         },
         {
           "data": {
-            "id": "b4qca8tdb5",
-            "nodeType": "CONNECTION",
+            "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
-            "name": "Teleport",
+            "id": "b4qca8tdb5",
             "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"tooltip\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeInstanceId": {
                 "value": "7ae8xropgy"
               },
@@ -2773,15 +2123,14 @@
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.5c6hxo8f1r.payload.output.username}}\",\n        \"tooltip\": \"{{local.5c6hxo8f1r.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"tooltip\": \"{{local.5c6hxo8f1r.payload.output.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 1350,
-            "y": 2220
+            "x": 1380,
+            "y": 1620
           },
           "group": "nodes",
           "removed": false,
@@ -2795,12 +2144,12 @@
         {
           "data": {
             "id": "3td1leaq2h",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
-            "x": 750,
-            "y": 2490
+            "x": 780,
+            "y": 1890
           },
           "group": "nodes",
           "removed": false,
@@ -2813,43 +2162,25 @@
         },
         {
           "data": {
-            "id": "mr2opnjqzr",
-            "nodeType": "CONNECTION",
+            "capabilityName": "updateUserMFAEnabled",
             "connectionId": "b72bd44e6be8180bd5988ac74cd9c949",
             "connectorId": "pingOneMfaConnector",
-            "name": "PingOne MFA",
-            "label": "PingOne MFA",
-            "status": "configured",
+            "id": "mr2opnjqzr",
             "idUnique": "3zpu1bu7nx",
-            "capabilityName": "updateUserMFAEnabled",
-            "type": "action",
+            "label": "PingOne MFA",
+            "name": "PingOne MFA",
+            "nodeType": "CONNECTION",
             "properties": {
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
-            "x": 930,
-            "y": 2490
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ztxepxv1hw",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1080,
-            "y": 2490
+            "x": 960,
+            "y": 1890
           },
           "group": "nodes",
           "removed": false,
@@ -2866,10 +2197,14 @@
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "6k7w7cgaq9",
+            "idUnique": "v9thej3u01",
             "label": "Teleport",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeInstanceId": {
                 "value": "5c6hxo8f1r"
               },
@@ -2879,16 +2214,12 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserName\",\n        \"data\": \"{{global.variables.p1UserName}}\",\n        \"tooltip\": \"{{global.variables.p1UserName}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
-            "type": "action",
-            "idUnique": "v9thej3u01"
+            "type": "action"
           },
           "position": {
             "x": 2190,
@@ -2909,10 +2240,14 @@
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
             "id": "2klgj6m1hf",
+            "idUnique": "o7d3xlg0au",
             "label": "Teleport",
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
+              "email": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "nodeInstanceId": {
                 "value": "5c6hxo8f1r"
               },
@@ -2922,20 +2257,180 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
-              "email": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Email\",\n        \"data\": \"{{global.variables.p1Email}}\",\n        \"tooltip\": \"{{global.variables.p1Email}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserName\",\n        \"data\": \"{{global.variables.p1UserName}}\",\n        \"tooltip\": \"{{global.variables.p1UserName}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
-            "type": "action",
-            "idUnique": "o7d3xlg0au"
+            "type": "action"
           },
           "position": {
             "x": 2160,
             "y": 1110
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "glw1bbhmm5",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Start Social Login"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Start Social Login\"\n      }\n    ]\n  }\n]"
+              },
+              "outcomeStatusDetail": {
+                "value": "Start Social Login"
+              }
+            },
+            "idUnique": "uf9qf917xe"
+          },
+          "position": {
+            "x": 600,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2miirucu2q",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 435,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "rfbhvyugb",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 722,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5m5wxbrjnr",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Finish Social Login"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Finish  Social Login\"\n      }\n    ]\n  }\n]"
+              },
+              "outcomeStatusDetail": {
+                "value": "Finish  Social Login"
+              }
+            },
+            "idUnique": "nqzuk823a2"
+          },
+          "position": {
+            "x": 1230,
+            "y": 1890
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "g29fipz8rn",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1095,
+            "y": 1890
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r62nizx5ib",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1380,
+            "y": 1890
           },
           "group": "nodes",
           "removed": false,
@@ -2950,9 +2445,333 @@
       "edges": [
         {
           "data": {
-            "id": "8g6kyuc0ot",
-            "source": "mr2opnjqzr",
-            "target": "ztxepxv1hw"
+            "id": "tdgqehq3jz",
+            "source": "glw1bbhmm5",
+            "target": "rfbhvyugb"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "reyzvdmn2b",
+            "source": "ttyxmkzlcy",
+            "target": "jylmttjie1"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l8qt2xf61h",
+            "source": "gffx0cmqq1",
+            "target": "6k7w7cgaq9"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "f11h3tiky4",
+            "source": "5c6hxo8f1r",
+            "target": "hvlkisggyb"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "021ugkpsyy",
+            "source": "jylmttjie1",
+            "target": "a1n7e0o8c7"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "pqkzo521nh",
+            "source": "77igchrtxr",
+            "target": "4nd9u8th2t"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mgw6zt28ld",
+            "source": "ndzkrlk0er",
+            "target": "c29bv0zg1a"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "n8gwpl7zlf",
+            "source": "77igchrtxr",
+            "target": "kczks2h8si"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dyhowb52qo",
+            "multiValueSourceId": "7e24azuyrr",
+            "source": "ahexh5cl7k",
+            "target": "ndzkrlk0er"
+          },
+          "position": {
+            "x": 64,
+            "y": 92
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "oqu1g6wi8g",
+            "source": "cxkn7wrk0v",
+            "target": "mvxk5mlw4d"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "cqx7i4k31l",
+            "source": "orsl8vvxsz",
+            "target": "e9rsd93qdg"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "1esjryc5sx",
+            "source": "jylmttjie1",
+            "target": "cidwrlhli5"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "855msggzl0",
+            "source": "orsl8vvxsz",
+            "target": "7egu3n3bgs"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "w3c9zcf8y8",
+            "source": "wb2tu6evi5",
+            "target": "orsl8vvxsz"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "et2ehtcbpv",
+            "source": "kczks2h8si",
+            "target": "cxkn7wrk0v"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "12csa3x1qp",
+            "source": "rfbhvyugb",
+            "target": "l7bxb7j5ov"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "6j8euiopyz",
+            "source": "sphx4u5726",
+            "target": "38wdjk7055"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xm3e65c60o",
+            "source": "cwm0gv2mqb",
+            "target": "w8zi7ax1oa"
           },
           "position": {
             "x": 0,
@@ -3007,9 +2826,9 @@
         },
         {
           "data": {
-            "id": "409zgop8cw",
-            "source": "5iur7e6rvo",
-            "target": "dvsh65keh1"
+            "id": "1bt2fqjgea",
+            "source": "e9rsd93qdg",
+            "target": "gffx0cmqq1"
           },
           "position": {
             "x": 0,
@@ -3026,13 +2845,14 @@
         },
         {
           "data": {
-            "id": "jtzo07dctm",
-            "source": "dvsh65keh1",
-            "target": "po4slgvmm6"
+            "id": "enih6b7f52",
+            "multiValueSourceId": "-1",
+            "source": "ahexh5cl7k",
+            "target": "eaqs56a8dx"
           },
           "position": {
-            "x": 0,
-            "y": 0
+            "x": 64,
+            "y": 212
           },
           "group": "edges",
           "removed": false,
@@ -3064,9 +2884,9 @@
         },
         {
           "data": {
-            "id": "yecfg1outo",
-            "source": "pfpviqoj3w",
-            "target": "tm5etu5ijw"
+            "id": "nxcg99649j",
+            "source": "x4l5kny4bs",
+            "target": "b4qca8tdb5"
           },
           "position": {
             "x": 0,
@@ -3159,9 +2979,9 @@
         },
         {
           "data": {
-            "id": "xg8z39ehx6",
-            "source": "tm5etu5ijw",
-            "target": "l7bxb7j5ov"
+            "id": "np6vsw9ayq",
+            "source": "l7bxb7j5ov",
+            "target": "3rj4aviki7"
           },
           "position": {
             "x": 0,
@@ -3447,654 +3267,6 @@
         },
         {
           "data": {
-            "id": "11s2a02f5x",
-            "source": "dobb44pr1b",
-            "target": "agdocjhico"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "reyzvdmn2b",
-            "source": "ttyxmkzlcy",
-            "target": "jylmttjie1"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "nxcg99649j",
-            "source": "x4l5kny4bs",
-            "target": "b4qca8tdb5"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "np6vsw9ayq",
-            "source": "l7bxb7j5ov",
-            "target": "3rj4aviki7"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "xm3e65c60o",
-            "source": "cwm0gv2mqb",
-            "target": "w8zi7ax1oa"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "uiin6q6uew",
-            "source": "po4slgvmm6",
-            "target": "0gl87lafvz"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "l0no5a0wqo",
-            "source": "dbtdo5zctf",
-            "target": "po4slgvmm6"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "021ugkpsyy",
-            "source": "jylmttjie1",
-            "target": "a1n7e0o8c7"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "et2ehtcbpv",
-            "source": "kczks2h8si",
-            "target": "cxkn7wrk0v"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "w3c9zcf8y8",
-            "source": "wb2tu6evi5",
-            "target": "orsl8vvxsz"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "3kfolxpfxg",
-            "source": "r5nxv12ks8",
-            "target": "dbtdo5zctf"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "855msggzl0",
-            "source": "orsl8vvxsz",
-            "target": "7egu3n3bgs"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "pqkzo521nh",
-            "source": "77igchrtxr",
-            "target": "4nd9u8th2t"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "1esjryc5sx",
-            "source": "jylmttjie1",
-            "target": "cidwrlhli5"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "dyhowb52qo",
-            "multiValueSourceId": "7e24azuyrr",
-            "source": "ahexh5cl7k",
-            "target": "ndzkrlk0er"
-          },
-          "position": {
-            "x": 64,
-            "y": 92
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "rhv9ee82b5",
-            "source": "agdocjhico",
-            "target": "5iur7e6rvo"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "5f19heapvm",
-            "source": "dvsh65keh1",
-            "target": "r5nxv12ks8"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "6j8euiopyz",
-            "source": "sphx4u5726",
-            "target": "38wdjk7055"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "21mwgnoy97",
-            "source": "leo3dljqqx",
-            "target": "hidp6h8zde"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "oqu1g6wi8g",
-            "source": "cxkn7wrk0v",
-            "target": "mvxk5mlw4d"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "p4sbn1tggw",
-            "source": "ztxepxv1hw",
-            "target": "vujr5lokcp"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "eo5e0b2gc9",
-            "source": "leo3dljqqx",
-            "target": "e8bnxqy2er"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "et15orpse6",
-            "source": "0gl87lafvz",
-            "target": "lixp1hnhk1"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "cqx7i4k31l",
-            "source": "orsl8vvxsz",
-            "target": "e9rsd93qdg"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "n8gwpl7zlf",
-            "source": "77igchrtxr",
-            "target": "kczks2h8si"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "enih6b7f52",
-            "multiValueSourceId": "-1",
-            "source": "ahexh5cl7k",
-            "target": "eaqs56a8dx"
-          },
-          "position": {
-            "x": 64,
-            "y": 212
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "mgw6zt28ld",
-            "source": "ndzkrlk0er",
-            "target": "c29bv0zg1a"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "1bt2fqjgea",
-            "source": "e9rsd93qdg",
-            "target": "gffx0cmqq1"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "busyevfv1t",
-            "source": "lixp1hnhk1",
-            "target": "leo3dljqqx"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "lz52g5718x",
-            "source": "dbtdo5zctf",
-            "target": "y5gl6yoml3"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "twc5scxgpy",
-            "source": "y5gl6yoml3",
-            "target": "j0vdftx36t"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "vo8fgac62w",
-            "source": "j0vdftx36t",
-            "target": "po4slgvmm6"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "2yv8oqlh4v",
-            "source": "0gl87lafvz",
-            "target": "1laaplms8w"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "f11h3tiky4",
-            "source": "5c6hxo8f1r",
-            "target": "hvlkisggyb"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
             "id": "ujiyoiteeh",
             "source": "38wdjk7055",
             "target": "2klgj6m1hf"
@@ -4114,9 +3286,104 @@
         },
         {
           "data": {
-            "id": "l8qt2xf61h",
-            "source": "gffx0cmqq1",
-            "target": "6k7w7cgaq9"
+            "id": "kju5p3nz4c",
+            "source": "pfpviqoj3w",
+            "target": "2miirucu2q"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xep6pe8oy8",
+            "source": "2miirucu2q",
+            "target": "glw1bbhmm5"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dw7alqnggi",
+            "source": "mr2opnjqzr",
+            "target": "g29fipz8rn"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "y0r5u18rp9",
+            "source": "g29fipz8rn",
+            "target": "5m5wxbrjnr"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4kvx1ei4jx",
+            "source": "5m5wxbrjnr",
+            "target": "r62nizx5ib"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "q4eghb2zz9",
+            "source": "r62nizx5ib",
+            "target": "vujr5lokcp"
           },
           "position": {
             "x": 0,
@@ -4166,19 +3433,19 @@
       "propertyName": "mf-configObject"
     },
     {
-      "propertyName": "email",
       "description": "",
-      "preferredDataType": "string",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "string",
+      "propertyName": "email"
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1727873393243,
+  "savedDate": 1729785143082,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1726504371897,
+      "createdDate": 1729617697667,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -4186,15 +3453,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "1491f7f1-d36d-4ab9-9f15-c21b41589d8b",
+      "id": "2d3aa253-1ac1-48b0-875b-33afa3ef42f0",
       "type": "property",
       "visibility": "private",
       "name": "p1UserId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504371901,
+      "createdDate": 1729617712361,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -4202,15 +3469,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "90c171c4-f048-4318-b696-d9bdad896a81",
+      "id": "29fc9e0f-fca0-4ca6-8e49-f07c53769f91",
       "type": "property",
       "visibility": "private",
       "name": "p1UserName##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504371895,
+      "createdDate": 1729617697669,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -4218,15 +3485,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "452b2a7a-577a-48a5-a795-772437a36599",
+      "id": "27cd5df0-24dd-4bc4-9f9d-04a88740d068",
       "type": "property",
       "visibility": "private",
       "name": "p1Email##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365510,
+      "createdDate": 1729617691821,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -4234,15 +3501,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "e542edb9-9462-4047-b116-a232468a74e1",
+      "id": "15869bd2-a03d-4d23-9e6d-b41caf012029",
       "type": "property",
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365513,
+      "createdDate": 1729617691822,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -4250,31 +3517,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "5158e728-acef-446b-b0cc-88c6b8e465a0",
+      "id": "288db8a8-fde1-4499-bfe9-34f389edc926",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504400222,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "71ffeb76-21cf-461a-afef-c22cbcf9eedf",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1Phone##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504365513,
+      "createdDate": 1729617691823,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -4282,11 +3533,11 @@
         "mutable": true,
         "type": "object"
       },
-      "id": "9ae2c7ed-62a4-4185-8041-83f219be6fbc",
+      "id": "7850e826-245c-4766-acad-ee2fc372bd33",
       "type": "property",
       "visibility": "private",
       "name": "mf-configObject##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     }
   ]
 }

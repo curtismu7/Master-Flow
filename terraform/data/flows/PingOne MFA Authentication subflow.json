@@ -1,5 +1,5 @@
 {
-  "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432",
+  "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf",
   "authTokenExpireIds": [],
   "connectorIds": [
     "pingOneMfaConnector",
@@ -13,9 +13,10 @@
     "analyticsConnector",
     "pingOneSSOConnector"
   ],
-  "createdDate": 1727952242018,
-  "currentVersion": 37,
+  "createdDate": 1730392345958,
+  "currentVersion": 24,
   "customerId": "7103642ff587ecb4de6b6c332453ca73",
+  "deployedDate": 1730392349981,
   "description": "Imported on Wed Jul 24 2024 12:43:12 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -65,16 +66,13 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne MFA Authentication subflow",
-  "publishedVersion": 37,
+  "publishedVersion": 24,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "intermediateLoadingScreenCSS": "  /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
     "intermediateLoadingScreenHTML": "        <div class=\"message\">\n         Getting your Devices, Please wait...\n    </div>",
     "css": "/* Used on Windows machines */\noption {\n  background-color: var(--bs-white); \n  color: rgba(var(--bs-body-color-rgb), 1) !important;\n}",
-    "cssLinks": [
-      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css",
-      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.9/end-user-nano.css"
-    ],
+    "cssLinks": [],
     "flowHttpTimeoutInSeconds": 60,
     "flowTimeoutInSeconds": 7600,
     "jsLinks": [
@@ -104,9 +102,9 @@
     "useIntermediateLoadingScreen": true
   },
   "timeouts": "null",
-  "updatedDate": 1728412400505,
-  "flowId": "67dba5637baf0989845b21cf23fe0b12",
-  "versionId": 37,
+  "updatedDate": 1730392350265,
+  "flowId": "7c644cd45b6271a1bc5a5e548005435e",
+  "versionId": 24,
   "graphData": {
     "elements": {
       "nodes": [
@@ -342,6 +340,9 @@
               "isDeviceManagement": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-bool-runDeviceManagement}}\"\n      }\n    ]\n  }\n]"
               },
+              "mf-configObject": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.variables.mf-configObject}}\",\n        \"tooltip\": \"{{global.variables.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "mfaNewDevice": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
@@ -366,7 +367,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Device Registration subflow",
-                  "value": "8d5b8cb896f806bd256d5874f03f9bb5"
+                  "value": "7fc6f71c9d96ea625d90f5e2675520e4"
                 }
               },
               "subFlowVersionId": {
@@ -380,16 +381,13 @@
               },
               "webAuthnSupport": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{foo.bar}}\"\n      }\n    ]\n  }\n]"
-              },
-              "mf-configObject": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.variables.mf-configObject}}\",\n        \"tooltip\": \"{{global.variables.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
             "type": "trigger"
           },
           "position": {
-            "x": 2557,
+            "x": 2550,
             "y": 1230
           },
           "group": "nodes",
@@ -469,7 +467,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2857,
+            "x": 3180,
             "y": 1230
           },
           "group": "nodes",
@@ -492,7 +490,7 @@
             }
           },
           "position": {
-            "x": 2677,
+            "x": 2670,
             "y": 1230
           },
           "group": "nodes",
@@ -532,6 +530,9 @@
               "nodeTitle": {
                 "value": "Initiate Device Authentication"
               },
+              "notificationPolicyId": {
+                "value": "6eeda260-a85d-40eb-a7b0-3ca7b387818c"
+              },
               "templateVariables": {
                 "value": [
                   {
@@ -546,9 +547,6 @@
               },
               "userId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "notificationPolicyId": {
-                "value": "6eeda260-a85d-40eb-a7b0-3ca7b387818c"
               }
             },
             "status": "configured",
@@ -1724,8 +1722,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3068.2916918518426,
-            "y": 3024.8284790924163
+            "x": 2910,
+            "y": 3090
           },
           "group": "nodes",
           "removed": false,
@@ -2724,7 +2722,7 @@
                 "value": "<div class=\"end-user-nano\">\n   <div\n      class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n      <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n         <div class=\"card shadow mb-5\">\n            <main aria-labelledby=\"title\">\n               <div class=\"card-body p-5 d-flex flex-column\">\n                  <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                  <div class=\"text-block branding-template-primary-text text-block--Large\">\n                     <div class=\"d-flex flex-column\">\n                        <div class=\"text-block--overflow-wrap text-center\" style=\"margin-bottom:25px\">\n                           <strong> FIDO Authentication <!--with {{deviceName}} -->  </strong> <br>\n                  {{#ifEquals type \"FIDO2\"}}\n\n              Complete authentication using Touch ID.\n               {{/ifEquals}}\n               {{#ifEquals type \"SECURITY_KEY\"}}\n\n               Use your security key to authenticate.\n               {{/ifEquals}}\n                        </div>\n                     </div>\n                     {{#ifEquals type \"FIDO2\"}}\n                     <!-- <div class=\"branding-template-primary-text text-block--small\">\n                  <div class=\"text-block--overflow-wrap center-text\">\n                     <img src=\"https://authenticator.pingone.com/registration/images/multiple-devices/add-device/icon-touchid.png\" height=\"86px\">\n                  </div>\n               </div> -->\n                     {{/ifEquals}}\n                     {{#ifEquals type \"SECURITY_KEY\"}}\n                     <!-- <div class=\"branding-template-primary-text text-block--small\">\n                  <div class=\"text-block--overflow-wrap center-text\">\n                     <img src=\"https://authenticator.pingone.com/registration/images/multiple-devices/add-device/webauthn-pairing.jpg\" height=\"86px\">\n                  </div>\n               </div> -->\n                     {{/ifEquals}}\n                     {{#if canChangeDevice}}\n                     <form class=\"form\" id=\"changeDeviceForm\" style=\"text-align:right\">\n                        <div class=\"dropdown\" style=\"margin-bottom:-15px;text-align:right\">\n                           <button class=\"btn btn-light dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"margin-top:-8px;\">\n                     MFA Options\n                     </button>\n                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                              {{#each devices}}\n                              <button class=\"btn btn-outline-light flex-grow-1 d-flex align-items-center gap-4 w-100\" style=\"color:#4c7637;justify-content:center;\"\n                  type=\"submit\" id=\"btnDevice-{{id}}\" data-skbuttontype=\"form-submit\" data-skcomponent=\"skbutton\"\n                  data-skbuttonvalue=\"{{id}}\" id=\"btnDevice-{{id}}\" data-skform=\"changeDeviceForm\">\n            <i class=\"mdi {{displayIcon}} text-dark fs-2\" aria-hidden=\"true\"></i>\n            <div class=\"d-flex flex-column text-start gap-1\">\n                <div class=\"fw-semibold text-primary text-center\" style=\"color:#4c7637\">{{displayType}}</div>\n                <div class=\"fs-5 text-secondary text-center\">\n                    {{displayText}}\n                </div>\n            </div>\n          </button>\n                              {{/each}}\n                           </div>\n                        </div>\n                     </form>\n                     {{/if}}\n                     <div class=\"form\">\n                        <div data-skcomponent=\"skerror\"\n                           class=\"feedback branding-template-feedback feedback--error picon-error-triangle\"\n                           data-skvisibility=\"\"></div>\n                        <p id=\"feedback\" data-id=\"feedback\" class=\"text-success \">\n                           {{local.6hjlwfaudb.payload.output.AuthNMessage}} </p>\n                        <form id=\"securityKeyForm\" method=\"post\">\n                           <div class=\"float-label placeholder-shown\">\n                              <input type=\"hidden\" name=\"assertionValue\" id=\"assertionValue\" />\n                              <button data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" class=\"hidden-button\"  data-skbuttonvalue=\"SUBMIT\" data-skform=\"securityKeyForm\" id=\"assertionButton\" style=\"margin-bottom:10px\">Continue</button>\n                           </div>\n\n                           <div class=\"buttons-group\">\n                              <div class=\"d-flex flex-column\">\n                                 <button class=\"btn btn-link  mb-3\" id=\"fidoButton\" data-skbuttonvalue=\"SUBMIT\">Try Passkey again</button>\n                                 <div class=\"d-flex flex-column\">\n                                    {{#if canChangeDevice}}\n                                    <div class=\"btn btn-link mb-3\" data-skcomponent=\"skbutton\"\n                                       data-skbuttontype=\"next-event\" id=\"change\" href=\"#\" data-skbuttonvalue=\"CHANGE\"\n                                       style=\"margin-bottom:-15px\">Choose a\n                                       different device\n                                    </div>\n                                    {{/if}}\n                                    {{#if showRegButton}}\n                                    <button class=\"btn btn-link mb-3\" data-id=\"submit-button\" type=\"submit\" data-skcomponent=\"skbutton\"  data-skbuttontype=\"next-event\"  data-skbuttonvalue=\"REGISTER\" id=\"btnRegister\">Register another device</button>\n                                    {{/if}}\n                                 </div>\n\n                              </div>\n                        </form>\n                     </div>\n                  </div>\n               </div>\n            </main>\n         </div>\n      </div>\n   </div>\n</div>"
               },
               "customScript": {
-                "value": "var authAbortController = window.PublicKeyCredential ? new AbortController() : null;\nvar authAbortSignal = window.PublicKeyCredential ? authAbortController.signal : null;\n\nwindow.abortWebAuthnSignal = function abortWebAuthnSignal()\n{\n    authAbortController.abort();\n    authAbortController = new AbortController();\n    authAbortSignal = authAbortController.signal;\n}\nconsole.log(\"In JS FIDO\")\nwindow.IsWebAuthnSupported = function IsWebAuthnSupported()\n{\n    if (!window.PublicKeyCredential)\n    {\n            console.log(\"Web Authentication API is not supported on this browser.\");\n            return false;\n    }\n    return true;\n}\n\nwindow.isWebAuthnPlatformAuthenticatorAvailable = function isWebAuthnPlatformAuthenticatorAvailable() {\n    var timer;\n    var p1 = new Promise(function(resolve) {\n            timer = setTimeout(function() {\n                    resolve(false);\n            }, 1000);\n    });\n    var p2 = new Promise(function(resolve) {\n            if (IsWebAuthnSupported() && window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable) {\n                    resolve(\n                            window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable().catch(function(err) {\n                                    console.log(err);\n                                    return false;\n                            }));\n            }\n            else {\n                    resolve(false);\n            }\n    });\n    return Promise.race([p1, p2]).then(function (res) {\n            clearTimeout(timer);\n            return res;\n    });\n}\nwindow.WebAuthnPlatformAuthentication = function WebAuthnPlatformAuthentication(publicKeyCredentialRequestOptions) {\n    return new Promise(function(resolve, reject) {\n            isWebAuthnPlatformAuthenticatorAvailable().then(function (result) {\n                    if (result) {\n                            resolve(Authenticate(publicKeyCredentialRequestOptions));\n                    }\n                    reject(Error(\"UnSupportedBrowserError\"));\n            });\n    });\n}\nfunction Authenticate(publicKeyCredentialRequestOptions) {\n    return new Promise(function(resolve, reject) {\n            var options = JSON.parse(publicKeyCredentialRequestOptions);\n            var publicKeyCredential = {};\n            publicKeyCredential.challenge = new Uint8Array(options.challenge);\n            if ('allowCredentials' in options) {\n                    publicKeyCredential.allowCredentials = credentialListConversion(options.allowCredentials);\n            }\n            if ('rpId' in options) {\n                    publicKeyCredential.rpId = options.rpId;\n            }\n            if ('timeout' in options) {\n                    publicKeyCredential.timeout = options.timeout;\n            }\n            if ('userVerification' in options) {\n                    publicKeyCredential.userVerification = options.userVerification;\n            }\n            navigator.credentials.get({\"publicKey\": publicKeyCredential})\n                    .then(function (assertion) {\n                            // Send new credential info to server for verification and registration.\n                            var publicKeyCredential = {};\n                            if ('id' in assertion) {\n                                    publicKeyCredential.id = assertion.id;\n                            }\n                            if ('rawId' in assertion) {\n                                    publicKeyCredential.rawId = toBase64Str(assertion.rawId);\n                            }\n                            if ('type' in assertion) {\n                                    publicKeyCredential.type = assertion.type;\n                            }\n                            var response = {};\n                            response.clientDataJSON = toBase64Str(assertion.response.clientDataJSON);\n                            response.authenticatorData = toBase64Str(assertion.response.authenticatorData);\n                            response.signature = toBase64Str(assertion.response.signature);\n                            response.userHandle = toBase64Str(assertion.response.userHandle);\n                            publicKeyCredential.response = response;\n                            resolve(JSON.stringify(publicKeyCredential));\n                            document.getElementById(\"assertionValue\").value = JSON.stringify(publicKeyCredential);\n                        //     createCredentialsOptions.authenticatorSelection.authenticatorAttachment = '';\n                            \n                            document.getElementById('assertionButton').click();\n                    }).catch(function (err) {\n                            // No acceptable authenticator or user refused consent. Cancel authentication\n                            // if this is the only device so we don't loop\n                            console.log(\"No acceptable authenticator or user refused consent\");\n\n            });\n    });\n}\nfunction credentialListConversion(list) {\n    var credList = [];\n    for (var i=0; i < list.length; i++) {\n            var cred = {\n                    type: list[i].type,\n                    id: new Uint8Array(list[i].id)\n            };\n            if (list[i].transports) {\n                    cred.transports = list[i].transports;\n            }\n            credList.push(cred);\n    }\n    return credList;\n}\nfunction toBase64Str(bin){\n    return btoa(String.fromCharCode.apply(null, new Uint8Array(bin)));\n}\n\nconst fidoButton = document.getElementById(\"fidoButton\");\nfidoButton.addEventListener(\"click\", startFido);\nfunction startFido() {  \n    Authenticate('{{{skjson publicKeyCredentialCreationOptions}}}');\n}\nfidoButton.click();\n\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.onreadystatechange = () => {\n        if (document.readyState === \"complete\") {\n            const selectedDeviceId = '{{global.variables.selectedDeviceId}}';\n            console.log(selectedDeviceId);\n            const hideButtonElementId = \"btnDevice-\" + selectedDeviceId;\n            console.log(hideButtonElementId);\n            const dropdownButton = document.getElementById('dropdownMenuButton');\n            const hideButtonElement = document.getElementById(hideButtonElementId);\n            console.log(hideButtonElement);\n\n            if (dropdownButton && hideButtonElement) {\n                dropdownButton.addEventListener('click', function() {\n                    hideButtonElement.style.setProperty('display', 'none', 'important');\n                    console.log('hidingButton' + hideButtonElementId);\n                });\n            }\n        }\n    };\n} else {\n    // `DOMContentLoaded` has already fired\n        const selectedDeviceId = '{{global.variables.selectedDeviceId}}';\n            console.log(selectedDeviceId);\n            const hideButtonElementId = \"btnDevice-\" + selectedDeviceId;\n            console.log(hideButtonElementId);\n            const dropdownButton = document.getElementById('dropdownMenuButton');\n            const hideButtonElement = document.getElementById(hideButtonElementId);\n            console.log(hideButtonElement);\n\n            if (dropdownButton && hideButtonElement) {\n                dropdownButton.addEventListener('click', function() {\n                    hideButtonElement.style.setProperty('display', 'none', 'important');\n                    console.log('hidingButton' + hideButtonElementId);\n                });\n            }\n}"
+                "value": "var authAbortController = window.PublicKeyCredential ? new AbortController() : null;\nvar authAbortSignal = window.PublicKeyCredential ? authAbortController.signal : null;\n\nwindow.abortWebAuthnSignal = function abortWebAuthnSignal()\n{\n    authAbortController.abort();\n    authAbortController = new AbortController();\n    authAbortSignal = authAbortController.signal;\n}\n\nwindow.IsWebAuthnSupported = function IsWebAuthnSupported()\n{\n    if (!window.PublicKeyCredential)\n    {\n            console.log(\"Web Authentication API is not supported on this browser.\");\n            return false;\n    }\n    return true;\n}\n\nwindow.isWebAuthnPlatformAuthenticatorAvailable = function isWebAuthnPlatformAuthenticatorAvailable() {\n    var timer;\n    var p1 = new Promise(function(resolve) {\n            timer = setTimeout(function() {\n                    resolve(false);\n            }, 1000);\n    });\n    var p2 = new Promise(function(resolve) {\n            if (IsWebAuthnSupported() && window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable) {\n                    resolve(\n                            window.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable().catch(function(err) {\n                                    console.log(err);\n                                    return false;\n                            }));\n            }\n            else {\n                    resolve(false);\n            }\n    });\n    return Promise.race([p1, p2]).then(function (res) {\n            clearTimeout(timer);\n            return res;\n    });\n}\nwindow.WebAuthnPlatformAuthentication = function WebAuthnPlatformAuthentication(publicKeyCredentialRequestOptions) {\n    return new Promise(function(resolve, reject) {\n            isWebAuthnPlatformAuthenticatorAvailable().then(function (result) {\n                    if (result) {\n                            resolve(Authenticate(publicKeyCredentialRequestOptions));\n                    }\n                    reject(Error(\"UnSupportedBrowserError\"));\n            });\n    });\n}\nfunction Authenticate(publicKeyCredentialRequestOptions) {\n    return new Promise(function(resolve, reject) {\n            var options = JSON.parse(publicKeyCredentialRequestOptions);\n            var publicKeyCredential = {};\n            publicKeyCredential.challenge = new Uint8Array(options.challenge);\n            if ('allowCredentials' in options) {\n                    publicKeyCredential.allowCredentials = credentialListConversion(options.allowCredentials);\n            }\n            if ('rpId' in options) {\n                    publicKeyCredential.rpId = options.rpId;\n            }\n            if ('timeout' in options) {\n                    publicKeyCredential.timeout = options.timeout;\n            }\n            if ('userVerification' in options) {\n                    publicKeyCredential.userVerification = options.userVerification;\n            }\n            navigator.credentials.get({\"publicKey\": publicKeyCredential})\n                    .then(function (assertion) {\n                            // Send new credential info to server for verification and registration.\n                            var publicKeyCredential = {};\n                            if ('id' in assertion) {\n                                    publicKeyCredential.id = assertion.id;\n                            }\n                            if ('rawId' in assertion) {\n                                    publicKeyCredential.rawId = toBase64Str(assertion.rawId);\n                            }\n                            if ('type' in assertion) {\n                                    publicKeyCredential.type = assertion.type;\n                            }\n                            var response = {};\n                            response.clientDataJSON = toBase64Str(assertion.response.clientDataJSON);\n                            response.authenticatorData = toBase64Str(assertion.response.authenticatorData);\n                            response.signature = toBase64Str(assertion.response.signature);\n                            response.userHandle = toBase64Str(assertion.response.userHandle);\n                            publicKeyCredential.response = response;\n                            resolve(JSON.stringify(publicKeyCredential));\n                            document.getElementById(\"assertionValue\").value = JSON.stringify(publicKeyCredential);\n                        //     createCredentialsOptions.authenticatorSelection.authenticatorAttachment = '';\n                            \n                            document.getElementById('assertionButton').click();\n                    }).catch(function (err) {\n                            // No acceptable authenticator or user refused consent. Cancel authentication\n                            // if this is the only device so we don't loop\n                            console.log(\"No acceptable authenticator or user refused consent\");\n\n            });\n    });\n}\nfunction credentialListConversion(list) {\n    var credList = [];\n    for (var i=0; i < list.length; i++) {\n            var cred = {\n                    type: list[i].type,\n                    id: new Uint8Array(list[i].id)\n            };\n            if (list[i].transports) {\n                    cred.transports = list[i].transports;\n            }\n            credList.push(cred);\n    }\n    return credList;\n}\nfunction toBase64Str(bin){\n    return btoa(String.fromCharCode.apply(null, new Uint8Array(bin)));\n}\n\nconst fidoButton = document.getElementById(\"fidoButton\");\nfidoButton.addEventListener(\"click\", startFido);\nfunction startFido() {  \n    Authenticate('{{{skjson publicKeyCredentialCreationOptions}}}');\n}\nfidoButton.click();\n\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.onreadystatechange = () => {\n        if (document.readyState === \"complete\") {\n            const selectedDeviceId = '{{global.variables.selectedDeviceId}}';\n            console.log(selectedDeviceId);\n            const hideButtonElementId = \"btnDevice-\" + selectedDeviceId;\n            console.log(hideButtonElementId);\n            const dropdownButton = document.getElementById('dropdownMenuButton');\n            const hideButtonElement = document.getElementById(hideButtonElementId);\n            console.log(hideButtonElement);\n\n            if (dropdownButton && hideButtonElement) {\n                dropdownButton.addEventListener('click', function() {\n                    hideButtonElement.style.setProperty('display', 'none', 'important');\n                    console.log('hidingButton' + hideButtonElementId);\n                });\n            }\n        }\n    };\n} else {\n    // `DOMContentLoaded` has already fired\n        const selectedDeviceId = '{{global.variables.selectedDeviceId}}';\n        //     console.log(selectedDeviceId);\n            const hideButtonElementId = \"btnDevice-\" + selectedDeviceId;\n        //     console.log(hideButtonElementId);\n            const dropdownButton = document.getElementById('dropdownMenuButton');\n            const hideButtonElement = document.getElementById(hideButtonElementId);\n        //     console.log(hideButtonElement);\n\n            if (dropdownButton && hideButtonElement) {\n                dropdownButton.addEventListener('click', function() {\n                    hideButtonElement.style.setProperty('display', 'none', 'important');\n                    console.log('hidingButton' + hideButtonElementId);\n                });\n            }\n}"
               },
               "deviceName": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"selectedDeviceName\",\n        \"data\": \"{{local.skccvd6xx0.payload.output.selectedDeviceName}}\",\n        \"tooltip\": \"{{local.skccvd6xx0.payload.output.selectedDeviceName}}\",\n        \"children\": [\n          {\n            \"text\": \"selectedDeviceName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -3633,8 +3631,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2213,
-            "y": 600
+            "x": 2220,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -3720,8 +3718,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2333,
-            "y": 690
+            "x": 2340,
+            "y": 660
           },
           "group": "nodes",
           "removed": false,
@@ -4903,7 +4901,7 @@
             }
           },
           "position": {
-            "x": 1717,
+            "x": 1710,
             "y": 6240
           },
           "group": "nodes",
@@ -5117,8 +5115,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 593.3699742173244,
-            "y": 5995.461675138286
+            "x": 600,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -5177,8 +5175,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 921.2289561694514,
-            "y": 5995.461675138286
+            "x": 930,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -5244,26 +5242,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1897,
+            "x": 2280,
             "y": 6240
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "gdwau3ig2k",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 1436.435927808508,
-            "y": 6416.994651933878
           },
           "group": "nodes",
           "removed": false,
@@ -5379,91 +5359,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1647.2024162063042,
-            "y": 6416.994651933878
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "capabilityName": "customHTMLTemplate",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "id": "e72e4uhqrv",
-            "label": "Http",
-            "name": "Http",
-            "nodeType": "CONNECTION",
-            "properties": {
-              "backgroundColor": {
-                "value": "#9dc967ff"
-              },
-              "customCSS": {
-                "value": ":root {\n  --animation-dimension: 120px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
-              },
-              "customHTML": {
-                "value": "<!-- Main container with a flexbox layout for centering content -->\n<div class=\"align-self-center\">\n    <!-- Polling component with custom attributes -->\n    <div data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"50\" data-skpollChallengeStatus=\"false\"></div>\n\n    <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <!-- Company logo -->\n                    <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    <!-- Conditional title rendering -->\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <!-- Checkmark icon -->\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                            <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                        </svg>\n                    </div>\n\n                    <!-- Conditional first text block rendering -->\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    <!-- Conditional second text block rendering -->\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <!-- Error message placeholder -->\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n\n                    <!-- Conditional button rendering -->\n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\">\n                        {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}}\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
-              },
-              "customScript": {},
-              "formFieldsList": {
-                "value": [
-                  {
-                    "displayName": "Username",
-                    "hashedVisibility": false,
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "username",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-                  },
-                  {
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "buttonValue"
-                  },
-                  {
-                    "displayName": "Password",
-                    "hashedVisibility": true,
-                    "preferredControlType": "textField",
-                    "preferredDataType": "string",
-                    "propertyName": "password",
-                    "value": ""
-                  }
-                ]
-              },
-              "inputSchema": {
-                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}"
-              },
-              "nodeDescription": {
-                "value": "Success message with animated checkmark"
-              },
-              "nodeTitle": {
-                "value": "PingOne MFA Success"
-              },
-              "textOne": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "textTwo": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Flow will continue automatically\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "title": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne MFA Success\"\n      }\n    ]\n  }\n]"
-              },
-              "validationRules": {
-                "value": []
-              }
-            },
-            "status": "configured",
-            "type": "trigger"
-          },
-          "position": {
-            "x": 1295.9249355433108,
-            "y": 6416.994651933878
+            "x": 1650,
+            "y": 6420
           },
           "group": "nodes",
           "removed": false,
@@ -6081,14 +5978,8 @@
             "name": "Teleport",
             "nodeType": "CONNECTION",
             "properties": {
-              "nodeInstanceId": {
-                "value": "qm28c3sxlx"
-              },
-              "pingOneUserId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "origin": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-str-fidoOrigin}}\"\n      }\n    ]\n  }\n]"
+              "canChangeDevice": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
               "deviceAuthId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"id\",\n        \"data\": \"{{local.ibnjuq69x4.payload.output.rawResponse.selectedDevice.id}}\",\n        \"tooltip\": \"{{local.ibnjuq69x4.payload.output.rawResponse.selectedDevice.id}}\",\n        \"children\": [\n          {\n            \"text\": \"id\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -6096,17 +5987,23 @@
               "maskedUsableDevices": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"false\"\n      }\n    ]\n  }\n]"
               },
-              "usableDevices": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"devices\",\n        \"data\": \"{{local.8gjomaba7h.payload.output.devices}}\",\n        \"tooltip\": \"{{local.8gjomaba7h.payload.output.devices}}\",\n        \"children\": [\n          {\n            \"text\": \"devices\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "nodeInstanceId": {
+                "value": "qm28c3sxlx"
               },
-              "canChangeDevice": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              "origin": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.p1MFA.mf-str-fidoOrigin}}\"\n      }\n    ]\n  }\n]"
+              },
+              "pingOneUserId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.variables.p1UserId}}\",\n        \"tooltip\": \"{{global.variables.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "success": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
               },
               "type": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Mobile App\"\n      }\n    ]\n  }\n]"
+              },
+              "usableDevices": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"devices\",\n        \"data\": \"{{local.8gjomaba7h.payload.output.devices}}\",\n        \"tooltip\": \"{{local.8gjomaba7h.payload.output.devices}}\",\n        \"children\": [\n          {\n            \"text\": \"devices\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -6811,8 +6708,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 733.8809664825217,
-            "y": 5995.461675138286
+            "x": 720,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -6833,12 +6730,15 @@
               },
               "e72e4uhqrv": {
                 "value": "anyTriggersFalse"
+              },
+              "2ehv3wv8ok": {
+                "value": "anyTriggersFalse"
               }
             }
           },
           "position": {
-            "x": 1061.7399484346488,
-            "y": 5995.461675138286
+            "x": 1050,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -7693,7 +7593,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1237,
+            "x": 1230,
             "y": 6000
           },
           "group": "nodes",
@@ -7720,8 +7620,8 @@
             }
           },
           "position": {
-            "x": 1389.5989303867757,
-            "y": 5995.461675138286
+            "x": 1380,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -7760,7 +7660,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Device Management Subflow",
-                  "value": "78011fa204f29c8a28d7be9cd889f54f"
+                  "value": "b400cbc76cb1773ceb2e330af46350f7"
                 }
               },
               "subFlowVersionId": {
@@ -7774,8 +7674,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1623.783917495438,
-            "y": 5995.461675138286
+            "x": 1620,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -7849,8 +7749,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1928.2244007366987,
-            "y": 5995.461675138286
+            "x": 2280,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -7875,8 +7775,8 @@
             }
           },
           "position": {
-            "x": 1740.8764110497689,
-            "y": 5995.461675138286
+            "x": 1740,
+            "y": 6000
           },
           "group": "nodes",
           "removed": false,
@@ -8812,8 +8712,8 @@
             "type": "action"
           },
           "position": {
-            "x": 429.44048324126084,
-            "y": 5925.206179005688
+            "x": 420,
+            "y": 5940
           },
           "group": "nodes",
           "removed": false,
@@ -8843,8 +8743,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 665,
-            "y": 5494
+            "x": 660,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -9057,8 +8957,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2209.2463852670935,
-            "y": 6112.554168692618
+            "x": 2220,
+            "y": 6120
           },
           "group": "nodes",
           "removed": false,
@@ -9099,8 +8999,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1928.2244007366987,
-            "y": 6112.554168692618
+            "x": 1920,
+            "y": 6120
           },
           "group": "nodes",
           "removed": false,
@@ -9117,8 +9017,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2068.735393001896,
-            "y": 6112.554168692618
+            "x": 2070,
+            "y": 6120
           },
           "group": "nodes",
           "removed": false,
@@ -9304,8 +9204,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 785,
-            "y": 5494
+            "x": 780,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -9432,10 +9332,13 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
+              "phone": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "subFlowId": {
                 "value": {
                   "label": "PingOne Davinci Custom Magic Link Subflow",
-                  "value": "fcbd26073cfa9c93cf290f5e2b0d5512"
+                  "value": "2cd35fe46a2f26c8485cbef6c2335040"
                 }
               },
               "subFlowVersionId": {
@@ -9443,9 +9346,6 @@
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.variables.username}}\",\n        \"tooltip\": \"{{global.variables.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "phone": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -10563,8 +10463,8 @@
             "type": "action"
           },
           "position": {
-            "x": 733.8809664825217,
-            "y": 5878.369181583956
+            "x": 720,
+            "y": 5880
           },
           "group": "nodes",
           "removed": false,
@@ -10675,8 +10575,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1202.250940699846,
-            "y": 6323.320657090414
+            "x": 1200,
+            "y": 6330
           },
           "group": "nodes",
           "removed": false,
@@ -10731,8 +10631,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1506.691423941107,
-            "y": 5878.369181583956
+            "x": 1500,
+            "y": 5880
           },
           "group": "nodes",
           "removed": false,
@@ -10787,8 +10687,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1506.691423941107,
-            "y": 6135.972667403484
+            "x": 1500,
+            "y": 6150
           },
           "group": "nodes",
           "removed": false,
@@ -11158,8 +11058,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2525,
-            "y": 1474
+            "x": 2220,
+            "y": 1500
           },
           "group": "nodes",
           "removed": false,
@@ -11177,8 +11077,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2255,
-            "y": 1474
+            "x": 2370,
+            "y": 1500
           },
           "group": "nodes",
           "removed": false,
@@ -11221,8 +11121,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2825,
-            "y": 1474
+            "x": 2550,
+            "y": 1500
           },
           "group": "nodes",
           "removed": false,
@@ -11278,8 +11178,8 @@
             "type": "action"
           },
           "position": {
-            "x": 4406.711372866186,
-            "y": 3399.585989776432
+            "x": 4440,
+            "y": 3390
           },
           "group": "nodes",
           "removed": false,
@@ -11511,8 +11411,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 995,
-            "y": 5494
+            "x": 990,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -11537,8 +11437,8 @@
             }
           },
           "position": {
-            "x": 1145,
-            "y": 5494
+            "x": 1140,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -11567,8 +11467,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1807,
-            "y": 5580
+            "x": 1830,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -11591,8 +11491,8 @@
             }
           },
           "position": {
-            "x": 1445,
-            "y": 5614
+            "x": 1440,
+            "y": 5610
           },
           "group": "nodes",
           "removed": false,
@@ -11630,8 +11530,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1595,
-            "y": 5734
+            "x": 1590,
+            "y": 5730
           },
           "group": "nodes",
           "removed": false,
@@ -11667,17 +11567,17 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
+              "phone": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "subFlowId": {
                 "value": {
                   "label": "PingOne Davinci Custom Magic Link Subflow",
-                  "value": "fcbd26073cfa9c93cf290f5e2b0d5512"
+                  "value": "2cd35fe46a2f26c8485cbef6c2335040"
                 }
               },
               "subFlowVersionId": {
                 "value": -1
-              },
-              "phone": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1UserName\",\n        \"data\": \"{{global.variables.p1UserName}}\",\n        \"tooltip\": \"{{global.variables.p1UserName}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -11687,7 +11587,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1297,
+            "x": 1290,
             "y": 5610
           },
           "group": "nodes",
@@ -11720,8 +11620,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1595,
-            "y": 5614
+            "x": 1590,
+            "y": 5610
           },
           "group": "nodes",
           "removed": false,
@@ -11952,8 +11852,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2795,
-            "y": 4174
+            "x": 2790,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -11971,8 +11871,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 2945,
-            "y": 4174
+            "x": 2940,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -12008,10 +11908,13 @@
               "p1UserId": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
+              "phone": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
               "subFlowId": {
                 "value": {
                   "label": "PingOne Davinci Custom Magic Link Subflow",
-                  "value": "fcbd26073cfa9c93cf290f5e2b0d5512"
+                  "value": "2cd35fe46a2f26c8485cbef6c2335040"
                 }
               },
               "subFlowVersionId": {
@@ -12019,17 +11922,14 @@
               },
               "username": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.variables.username}}\",\n        \"tooltip\": \"{{global.variables.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
-              },
-              "phone": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"p1Phone\",\n        \"data\": \"{{global.variables.p1Phone}}\",\n        \"tooltip\": \"{{global.variables.p1Phone}}\",\n        \"children\": [\n          {\n            \"text\": \"p1Phone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
             "type": "trigger"
           },
           "position": {
-            "x": 3125,
-            "y": 4174
+            "x": 3120,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -12061,8 +11961,8 @@
             "type": "action"
           },
           "position": {
-            "x": 3755,
-            "y": 4174
+            "x": 4110,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -12088,8 +11988,8 @@
             }
           },
           "position": {
-            "x": 3245,
-            "y": 4174
+            "x": 3240,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -12168,8 +12068,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 3425,
-            "y": 4174
+            "x": 3780,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -13294,8 +13194,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1565,
-            "y": 5494
+            "x": 1560,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -13312,8 +13212,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1415,
-            "y": 5494
+            "x": 1410,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -13330,8 +13230,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1685,
-            "y": 5494
+            "x": 1680,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -13424,8 +13324,8 @@
             "type": "action"
           },
           "position": {
-            "x": 4406.711372866186,
-            "y": 3265.744021674998
+            "x": 4440,
+            "y": 3270
           },
           "group": "nodes",
           "removed": false,
@@ -13609,8 +13509,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1295,
-            "y": 5494
+            "x": 1290,
+            "y": 5490
           },
           "group": "nodes",
           "removed": false,
@@ -13627,8 +13527,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 3590,
-            "y": 4174
+            "x": 3960,
+            "y": 4170
           },
           "group": "nodes",
           "removed": false,
@@ -13910,7 +13810,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne MFA Device Registration subflow",
-                  "value": "8d5b8cb896f806bd256d5874f03f9bb5"
+                  "value": "7fc6f71c9d96ea625d90f5e2675520e4"
                 }
               },
               "subFlowVersionId": {
@@ -13927,7 +13827,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1567,
+            "x": 1560,
             "y": 6240
           },
           "group": "nodes",
@@ -14124,8 +14024,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1932.2371432053667,
-            "y": 6345.428209904459
+            "x": 1920,
+            "y": 6360
           },
           "group": "nodes",
           "removed": false,
@@ -14456,13 +14356,19 @@
                 "value": "success"
               },
               "outcomeStatusDetail": {
-                "value": "Running Protect"
+                "value": "Running MFA Authentication"
               },
               "outcomeType": {
                 "value": "login"
               },
               "shouldContinueOnError": {
                 "value": true
+              },
+              "nodeTitle": {
+                "value": "MFA Authentication"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Start\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
@@ -14501,15 +14407,13 @@
         },
         {
           "data": {
-            "id": "ql469ong9d",
-            "nodeType": "CONNECTION",
+            "capabilityName": "userLookup",
             "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
             "connectorId": "pingOneSSOConnector",
-            "name": "PingOne",
+            "id": "ql469ong9d",
             "label": "PingOne",
-            "status": "configured",
-            "capabilityName": "userLookup",
-            "type": "action",
+            "name": "PingOne",
+            "nodeType": "CONNECTION",
             "properties": {
               "matchAttributes": {
                 "value": [
@@ -14519,7 +14423,9 @@
               "userIdentifierForFindUser": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"p1UserId\",\n        \"data\": \"{{global.parameters.p1UserId}}\",\n        \"tooltip\": \"{{global.parameters.p1UserId}}\",\n        \"children\": [\n          {\n            \"text\": \"p1UserId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1904.1184196768138,
@@ -14537,8 +14443,8 @@
         {
           "data": {
             "id": "6xzlc8he1h",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 2009.9027763255258,
@@ -14555,40 +14461,40 @@
         },
         {
           "data": {
-            "id": "e7g9doqic3",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "e7g9doqic3",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Save User data"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "p1Phone",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"mobilePhone\",\n        \"data\": \"{{local.ql469ong9d.payload.output.matchedUser.mobilePhone}}\",\n        \"tooltip\": \"{{local.ql469ong9d.payload.output.matchedUser.mobilePhone}}\",\n        \"children\": [\n          {\n            \"text\": \"mobilePhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.9321187378762996,
                     "label": "p1Phone (string - flowInstance)",
+                    "name": "p1Phone",
+                    "nameDefault": "mobilePhone",
                     "type": "string",
-                    "nameDefault": "mobilePhone"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"mobilePhone\",\n        \"data\": \"{{local.ql469ong9d.payload.output.matchedUser.mobilePhone}}\",\n        \"tooltip\": \"{{local.ql469ong9d.payload.output.matchedUser.mobilePhone}}\",\n        \"children\": [\n          {\n            \"text\": \"mobilePhone\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "p1Email",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.ql469ong9d.payload.output.matchedUser.email}}\",\n        \"tooltip\": \"{{local.ql469ong9d.payload.output.matchedUser.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.01740045920038913,
                     "label": "p1Email (string - flowInstance)",
+                    "name": "p1Email",
+                    "nameDefault": "email",
                     "type": "string",
-                    "nameDefault": "email"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"email\",\n        \"data\": \"{{local.ql469ong9d.payload.output.matchedUser.email}}\",\n        \"tooltip\": \"{{local.ql469ong9d.payload.output.matchedUser.email}}\",\n        \"children\": [\n          {\n            \"text\": \"email\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Save User data"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 2168.5793112985934,
@@ -14624,8 +14530,8 @@
         {
           "data": {
             "id": "eub6c2a4z5",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 1771.8879738659239,
@@ -14642,20 +14548,20 @@
         },
         {
           "data": {
-            "id": "x3uzvqrafm",
-            "nodeType": "CONNECTION",
+            "capabilityName": "startNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
-            "name": "Teleport",
+            "id": "x3uzvqrafm",
             "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "startNode",
-            "type": "trigger",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeTitle": {
                 "value": "MagicLink"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 1639.6575280550342,
@@ -14672,20 +14578,20 @@
         },
         {
           "data": {
-            "id": "pf53j78yzi",
-            "nodeType": "CONNECTION",
+            "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
             "connectorId": "nodeConnector",
-            "name": "Teleport",
+            "id": "pf53j78yzi",
             "label": "Teleport",
-            "status": "configured",
-            "capabilityName": "goToNode",
-            "type": "action",
+            "name": "Teleport",
+            "nodeType": "CONNECTION",
             "properties": {
               "nodeInstanceId": {
                 "value": "x3uzvqrafm"
               }
-            }
+            },
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 2485.932381244729,
@@ -14706,6 +14612,7 @@
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
             "id": "5dbpgnu5yg",
+            "idUnique": "4giltapx47",
             "name": "Annotation",
             "nodeType": "ANNOTATION",
             "properties": {
@@ -14735,8 +14642,7 @@
               }
             },
             "status": "configured",
-            "type": "action",
-            "idUnique": "4giltapx47"
+            "type": "action"
           },
           "position": {
             "x": 1639.6575280550342,
@@ -14750,9 +14656,452 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "47ujtamzqc",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Complete Device Reg"
+              },
+              "outcomeStatusDetail": {
+                "value": "MFA Device Registration"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Done with MFA Registration during MFA Authentication\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 2910,
+            "y": 1230
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l6bl7fm6k5",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 3030,
+            "y": 1230
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2l2dcna0rz",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Complete Magic Link Reg"
+              },
+              "outcomeStatusDetail": {
+                "value": "Magic Link registration"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Complete Magic Link reg in MFA Authentication\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 3480,
+            "y": 4170
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "1qczc9g6pl",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 3600,
+            "y": 4170
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9eoy3141ts",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Complete MFA device Management"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Complete MFA device Management\"\n      }\n    ]\n  }\n]"
+              },
+              "outcomeStatusDetail": {
+                "value": "MFA Device Management"
+              }
+            }
+          },
+          "position": {
+            "x": 1967,
+            "y": 6000.5
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mcha06cms5",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2123.5,
+            "y": 6000.25
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "iz8oymzbj6",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Complete MFA device Registration"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Complete MFA device Registration\"\n      }\n    ]\n  }\n]"
+              },
+              "outcomeStatusDetail": {
+                "value": null
+              }
+            },
+            "idUnique": "fzqehne1s2"
+          },
+          "position": {
+            "x": 1950,
+            "y": 6240
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "8vky3qa9he",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2115,
+            "y": 6240
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2ehv3wv8ok",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "MFA Authentication Success"
+              },
+              "outcomeStatusDetail": {
+                "value": "MFA Authentication Success"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"MFA Authentication Success flow complete\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 990,
+            "y": 6420
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "as8or7rr91",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "customHTML": {
+                "value": "<!-- Polling component with custom attributes -->\n<div data-skcomponent=\"skpolling\" data-skpollInterval=\"10\" data-skpollRetries=\"50\" data-skpollChallengeStatus=\"false\"></div>\n\n<div class=\"end-user-nano\">\n    <div\n        class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n        <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n            <div class=\"card shadow mb-5\">\n                <div class=\"card-body p-5 d-flex flex-column\">\n                    <img class=\"companyLogo align-self-center mb-5\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n                    {{#if title}}\n                    <h1 class=\"text-center mb-4\">{{title}}</h1>\n                    {{/if}}\n\n                    <div class=\"mx-auto mt-3 mb-4\">\n                        <svg class=\"checkmark\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 52 52\">\n                            <circle class=\"checkmarkCircle\" cx=\"26\" cy=\"26\" r=\"25\" fill=\"none\" />\n                            <path class=\"checkmarkCheck\" fill=\"none\" d=\"M14.1 27.2l7.1 7.2 16.7-16.8\" />\n                        </svg>\n                    </div>\n\n                    {{#if textOne}}\n                    <p class=\"text-muted text-center\">{{textOne}}</p>\n                    {{/if}}\n\n                    {{#if textTwo}}\n                    <p class=\"text-muted text-center\">{{textTwo}}</p>\n                    {{/if}}\n\n                    <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n<!-- \n                    {{#if buttonLabel}}\n                    <div class=\"d-flex flex-column\">\n                        <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\"\n                        data-skbuttontype=\"next-event\" data-skbuttonvalue=\"NEXT\" >\n                        {{buttonLabel}}\n                        </button>\n                    </div>\n                    {{/if}} -->\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+              },
+              "formFieldsList": {
+                "value": [
+                  {
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "buttonValue"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Animated Success Node"
+              },
+              "customCSS": {
+                "value": ":root {\n  --animation-dimension: 100px;\n  --animation-start-color: #71e171;\n  --animation-midway-color: #67d067;\n  --animation-finish-color: #59b259;\n}\n\n.checkmark {\n  width: var(--animation-dimension);\n  height: var(--animation-dimension);\n  border-radius: 50%;\n  display: block;\n  stroke-width: 5;\n  stroke: #ffffff;\n  stroke-miterlimit: 10;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n  animation: fill 0.4s ease-in-out 0.4s forwards,\n    scale 0.3s ease-in-out 0.9s both;\n}\n\n.checkmarkCircle {\n  stroke-dasharray: 166;\n  stroke-dashoffset: 166;\n  stroke-width: 5;\n  stroke-miterlimit: 10;\n  stroke: var(--animation-finish-color);\n  fill: none;\n  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,\n    colorChange 1.2s ease-in-out forwards;\n}\n\n.checkmarkCheck {\n  transform-origin: 50% 50%;\n  stroke-dasharray: 48;\n  stroke-dashoffset: 48;\n  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards,\n    colorChange 0.6s ease-in-out 0.8s forwards;\n}\n\n@keyframes colorChange {\n  0% {\n    stroke: var(--animation-start-color);\n  }\n  50% {\n    stroke: var(--animation-midway-color);\n  } \n  100% {\n    stroke: var(--animation-finish-color);\n  }\n}\n\n@keyframes stroke {\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n@keyframes scale {\n  0%,\n  100% {\n    transform: none;\n  }\n  50% {\n    transform: scale3d(1.1, 1.1, 1);\n  }\n  70% {\n    transform: scale3d(0.98, 0.98, 1);\n  }\n  85% {\n    transform: scale3d(1.02, 1.02, 1);\n  }\n}\n@keyframes fill {\n  100% {\n    box-shadow: inset 0px 0px 0px 0px var(--animation-finish-color);\n  }\n}"
+              },
+              "validationRules": {
+                "value": []
+              },
+              "backgroundColor": {
+                "value": "#afd5ffff"
+              },
+              "customScript": {},
+              "inputSchema": {
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n\t\"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        }\n    }\n}"
+              },
+              "title": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Success!\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "Success message with animated checkmark"
+              },
+              "buttonLabel": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              },
+              "textOne": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \" MFA Success\"\n      }\n    ]\n  }\n]"
+              },
+              "textTwo": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"Flow will continue automatically\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "p3z6662uwb"
+          },
+          "position": {
+            "x": 1320,
+            "y": 6420
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ui27ejjvuk",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1140,
+            "y": 6420
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ohz6bx5hvi",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1485,
+            "y": 6420
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "58gvi7a60j",
+            "source": "ohz6bx5hvi",
+            "target": "6hjjcpo330"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4ftvcq450o",
+            "source": "0h84yilhpy",
+            "target": "iz8oymzbj6"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "dm3rf9cdwt",
@@ -15401,9 +15750,9 @@
         },
         {
           "data": {
-            "id": "0j4vk2vqww",
-            "source": "xcii640q84",
-            "target": "qlltnea4ae"
+            "id": "0xlsla47uq",
+            "source": "l6bl7fm6k5",
+            "target": "ox0geu7cof"
           },
           "position": {
             "x": 0,
@@ -17588,9 +17937,9 @@
         },
         {
           "data": {
-            "id": "anhwmhbfc4",
-            "source": "3haw8cvb9o",
-            "target": "e72e4uhqrv"
+            "id": "x1ux57gj96",
+            "source": "8vky3qa9he",
+            "target": "8hkucy7fu0"
           },
           "position": {
             "x": 0,
@@ -18107,9 +18456,9 @@
         },
         {
           "data": {
-            "id": "fu13unfzqo",
-            "source": "t06kyizum6",
-            "target": "g1ecffsppg"
+            "id": "tkyxmoriat",
+            "source": "1qczc9g6pl",
+            "target": "qlltnea4ae"
           },
           "position": {
             "x": 0,
@@ -19316,9 +19665,9 @@
         },
         {
           "data": {
-            "id": "uji3atwjar",
-            "source": "e72e4uhqrv",
-            "target": "gdwau3ig2k"
+            "id": "o8htaiusxo",
+            "source": "iz8oymzbj6",
+            "target": "8vky3qa9he"
           },
           "position": {
             "x": 0,
@@ -19354,9 +19703,9 @@
         },
         {
           "data": {
-            "id": "brryrtrgpj",
-            "source": "qqsscg29a6",
-            "target": "ox0geu7cof"
+            "id": "k2ygrji38t",
+            "source": "g7nt4djozy",
+            "target": "pf53j78yzi"
           },
           "position": {
             "x": 0,
@@ -19392,9 +19741,9 @@
         },
         {
           "data": {
-            "id": "hsrrzysd5b",
-            "source": "gdwau3ig2k",
-            "target": "6hjjcpo330"
+            "id": "tu9kfitu2i",
+            "source": "3haw8cvb9o",
+            "target": "2ehv3wv8ok"
           },
           "position": {
             "x": 0,
@@ -19869,9 +20218,9 @@
         },
         {
           "data": {
-            "id": "ytg2uxm8bp",
-            "source": "0h84yilhpy",
-            "target": "8hkucy7fu0"
+            "id": "ut46yo6wla",
+            "source": "mcha06cms5",
+            "target": "g1ecffsppg"
           },
           "position": {
             "x": 0,
@@ -20992,9 +21341,161 @@
         },
         {
           "data": {
-            "id": "k2ygrji38t",
-            "source": "g7nt4djozy",
-            "target": "pf53j78yzi"
+            "id": "dkkmnkinwm",
+            "source": "qqsscg29a6",
+            "target": "47ujtamzqc"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "s87eugrmee",
+            "source": "47ujtamzqc",
+            "target": "l6bl7fm6k5"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0obkymlzyc",
+            "source": "xcii640q84",
+            "target": "2l2dcna0rz"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "guvxuh0qu7",
+            "source": "2l2dcna0rz",
+            "target": "1qczc9g6pl"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0ie4kzqwcw",
+            "source": "t06kyizum6",
+            "target": "9eoy3141ts"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "x5ywt662jh",
+            "source": "9eoy3141ts",
+            "target": "mcha06cms5"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0vl3bz8ixe",
+            "source": "2ehv3wv8ok",
+            "target": "ui27ejjvuk"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mr38dwdkjd",
+            "source": "ui27ejjvuk",
+            "target": "as8or7rr91"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lhwa4zflvd",
+            "source": "as8or7rr91",
+            "target": "ohz6bx5hvi"
           },
           "position": {
             "x": 0,
@@ -21015,8 +21516,8 @@
     "zoomingEnabled": true,
     "userZoomingEnabled": true,
     "zoom": 1,
-    "minZoom": 1E-50,
-    "maxZoom": 1E+50,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
     "panningEnabled": true,
     "userPanningEnabled": true,
     "pan": {
@@ -21067,43 +21568,11 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1727952240030,
+  "savedDate": 1730392343679,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1726504371897,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "1491f7f1-d36d-4ab9-9f15-c21b41589d8b",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1UserId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504365513,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "object"
-      },
-      "id": "9ae2c7ed-62a4-4185-8041-83f219be6fbc",
-      "type": "property",
-      "visibility": "private",
-      "name": "mf-configObject##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434001,
+      "createdDate": 1729617765520,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -21111,63 +21580,31 @@
         "mutable": true,
         "type": "boolean"
       },
-      "id": "f290b39a-34dd-42fc-8bde-e001c4cde9f0",
+      "id": "31f773b0-9614-4016-bdbb-4fd4e9f9b97c",
       "type": "property",
       "visibility": "private",
-      "name": "gotoLogin##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "name": "CodeSentMsg##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504375857,
+      "createdDate": 1729617765521,
       "fields": {
-        "displayName": "Relying Party ID",
+        "displayName": "Internal variable",
         "max": 2000,
         "min": 0,
         "mutable": true,
-        "type": "string"
+        "type": "boolean"
       },
-      "id": "fedc1989-4488-45cd-a0b0-e23e23a0c61e",
+      "id": "22af5203-9c48-46d6-9da7-02da91d33242",
       "type": "property",
       "visibility": "private",
-      "name": "rpid##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "name": "IsActionReg##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504375854,
-      "fields": {
-        "displayName": "local device ID variable to manage the most current user device being used",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "d241fa9a-879e-43b4-b6e1-02de3aefe4e3",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1DeviceId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434003,
-      "fields": {
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string",
-        "displayName": null
-      },
-      "id": "ac8f2a4f-a06a-48c9-bc31-f488944122ca",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1DeviceAuthenticationId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434012,
+      "createdDate": 1729617765521,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -21175,15 +21612,31 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "8b21850f-5123-4f89-bec7-9cbf1092ecc4",
+      "id": "f5b31e4d-f447-4a67-b337-69fe5c10b30a",
+      "type": "property",
+      "visibility": "private",
+      "name": "adminMessage##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617765523,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "7d90f372-7a13-44d0-a19f-2832126ea180",
       "type": "property",
       "visibility": "private",
       "name": "buttonValueDeviceId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504375858,
+      "createdDate": 1729617700537,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -21191,15 +21644,15 @@
         "mutable": true,
         "type": "boolean"
       },
-      "id": "1eb35bb8-e2a3-435f-b2fe-e55785de802e",
+      "id": "353fb8fa-0657-4bd7-b749-888e2a17eb20",
       "type": "property",
       "visibility": "private",
       "name": "canChangeDevice##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365510,
+      "createdDate": 1729617691821,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -21207,15 +21660,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "e542edb9-9462-4047-b116-a232468a74e1",
+      "id": "15869bd2-a03d-4d23-9e6d-b41caf012029",
       "type": "property",
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365513,
+      "createdDate": 1729617691822,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -21223,31 +21676,31 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "5158e728-acef-446b-b0cc-88c6b8e465a0",
+      "id": "288db8a8-fde1-4499-bfe9-34f389edc926",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504434013,
+      "createdDate": 1729617765520,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
         "min": 0,
         "mutable": true,
-        "type": "string"
+        "type": "number"
       },
-      "id": "152aebf5-5c30-4fec-a9df-e56edfddd70f",
+      "id": "b023e649-1022-4abc-8ac7-9f7f855b759e",
       "type": "property",
       "visibility": "private",
-      "name": "selectedDeviceId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "name": "deviceCount##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504434005,
+      "createdDate": 1729617765518,
       "fields": {
         "max": 2000,
         "min": 0,
@@ -21256,15 +21709,194 @@
         "value": "false",
         "displayName": null
       },
-      "id": "d85709ef-841d-45c7-b294-7527c4f7cf5a",
+      "id": "60ea1083-9a23-42cd-9142-062c55bf8f1a",
       "type": "property",
       "visibility": "private",
       "name": "disableButton##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504434012,
+      "createdDate": 1729617765519,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "boolean"
+      },
+      "id": "f458d1e0-1883-4bb8-94ca-cd247f72f17f",
+      "type": "property",
+      "visibility": "private",
+      "name": "gotoLogin##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617691823,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "object"
+      },
+      "id": "7850e826-245c-4766-acad-ee2fc372bd33",
+      "type": "property",
+      "visibility": "private",
+      "name": "mf-configObject##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617698874,
+      "fields": {
+        "displayName": "FIDO2 origin",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string",
+        "value": "https://auth.pingone.com"
+      },
+      "id": "4e2caf0f-d564-458a-913b-ac3367639cb2",
+      "type": "property",
+      "visibility": "private",
+      "name": "origin##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617765518,
+      "fields": {
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string",
+        "displayName": null
+      },
+      "id": "9b319ff8-4e6f-41b2-9762-3acefe280ed0",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1DeviceAuthenticationId##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617697669,
+      "fields": {
+        "displayName": "local device ID variable to manage the most current user device being used",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "71c7e0bb-e2d0-4bf1-9011-1ba1cb9e78d1",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1DeviceId##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617697669,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "27cd5df0-24dd-4bc4-9f9d-04a88740d068",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1Email##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617722683,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "14cf734b-d5a3-4d29-bc26-c203e5fd5664",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1Phone##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617697667,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "2d3aa253-1ac1-48b0-875b-33afa3ef42f0",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserId##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617712361,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "29fc9e0f-fca0-4ca6-8e49-f07c53769f91",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserName##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617765520,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "6c90fa50-a702-4b05-bc1a-a3fe3daf051b",
+      "type": "property",
+      "visibility": "private",
+      "name": "pingIdCopyrightFooter##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617650936,
+      "customerId": "7103642ff587ecb4de6b6c332453ca73",
+      "fields": {
+        "type": "string",
+        "displayName": "PingOne Population Id",
+        "value": "3d7ea158-80fd-4c76-868d-686e3476f9c4",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "e8c571bd-0b36-49ef-98bd-46508f84c566",
+      "type": "property",
+      "visibility": "private",
+      "name": "populationId##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617765524,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -21272,15 +21904,95 @@
         "mutable": true,
         "type": "object"
       },
-      "id": "237998bb-140f-4d80-8e53-7be14b1aa9cd",
+      "id": "6adb8602-feca-4822-9562-2c71d0bda32f",
       "type": "property",
       "visibility": "private",
       "name": "preppedDevices##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504350495,
+      "createdDate": 1729617700539,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "134e42d8-3899-4566-ba3c-fc8bc93d31aa",
+      "type": "property",
+      "visibility": "private",
+      "name": "publicKeyCredentialRequestOptions##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617698874,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "108840a2-daff-4db3-9b8d-711a6e17f698",
+      "type": "property",
+      "visibility": "private",
+      "name": "relyingParty##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617698873,
+      "fields": {
+        "displayName": "Relying Party ID",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "ac3120a0-8cad-4bae-a6ee-b06bdee90ec8",
+      "type": "property",
+      "visibility": "private",
+      "name": "rpid##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617765522,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "2a13394e-bf1a-492f-8386-b377dcd6e5ed",
+      "type": "property",
+      "visibility": "private",
+      "name": "selectedDeviceId##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617765521,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "boolean"
+      },
+      "id": "bd4d05d5-bbd5-4eba-bf8b-2a232bf35ca1",
+      "type": "property",
+      "visibility": "private",
+      "name": "showCodeSentMsg##SK##flowInstance",
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1729617638211,
       "customerId": "7103642ff587ecb4de6b6c332453ca73",
       "fields": {
         "type": "boolean",
@@ -21290,15 +22002,15 @@
         "min": 0,
         "max": 2000
       },
-      "id": "d01e21da-2aae-439d-9bf6-586e12d2e4a0",
+      "id": "8db8bdb2-d93d-4a02-a6ad-caf8734bad7b",
       "type": "property",
       "visibility": "private",
       "name": "showRegButton##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504434004,
+      "createdDate": 1729617765521,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -21306,114 +22018,15 @@
         "mutable": true,
         "type": "boolean"
       },
-      "id": "833fd768-f4d9-448a-baa2-3caf8f294ed5",
+      "id": "570cb470-359e-4c93-868e-06bcd041a148",
       "type": "property",
       "visibility": "private",
       "name": "showSettings##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504434009,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "54dcaeaa-7c04-4fc5-9a90-0eb2c2831f0a",
-      "type": "property",
-      "visibility": "private",
-      "name": "adminMessage##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1727971166536,
-      "fields": {
-        "type": "string",
-        "displayName": "",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "8e88353d-ced9-4c12-9095-a2a2c785b00c",
-      "type": "property",
-      "visibility": "private",
-      "name": "pingIdCopyrightFooter##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504375861,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "610d3b4f-010e-450c-9dd1-83febbd70de1",
-      "type": "property",
-      "visibility": "private",
-      "name": "publicKeyCredentialRequestOptions##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504362471,
-      "customerId": "7103642ff587ecb4de6b6c332453ca73",
-      "fields": {
-        "type": "string",
-        "displayName": "PingOne Population Id",
-        "value": "f7073607-95e2-49ea-8c52-2fd9a3923dfa",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "e797be36-90a1-46b9-94c0-e3fbaf3c5810",
-      "type": "property",
-      "visibility": "private",
-      "name": "populationId##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504375857,
-      "fields": {
-        "displayName": "FIDO2 origin",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string",
-        "value": "https://auth.pingone.com"
-      },
-      "id": "a89fe81b-9cd8-49e7-a8bf-4af157702258",
-      "type": "property",
-      "visibility": "private",
-      "name": "origin##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434013,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "boolean"
-      },
-      "id": "62e38b84-efe5-4c71-8ab9-233cac411393",
-      "type": "property",
-      "visibility": "private",
-      "name": "IsActionReg##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434013,
+      "createdDate": 1729617765522,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -21421,123 +22034,12 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "3036af76-e285-4b37-8850-43bcdb5f6da6",
+      "id": "916a45e3-319d-4cb1-9cc9-3db1bf71e935",
       "type": "property",
       "visibility": "private",
       "name": "username##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504400222,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "71ffeb76-21cf-461a-afef-c22cbcf9eedf",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1Phone##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504371901,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "90c171c4-f048-4318-b696-d9bdad896a81",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1UserName##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504375861,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "def557c7-277b-4f5e-b411-fd7b4875733b",
-      "type": "property",
-      "visibility": "private",
-      "name": "relyingParty##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434009,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "number"
-      },
-      "id": "20182b47-bd90-4ce8-bdc0-64da0f65a9c6",
-      "type": "property",
-      "visibility": "private",
-      "name": "deviceCount##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434009,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "boolean"
-      },
-      "id": "e8a89602-2f0d-4370-b042-5df13f9332ed",
-      "type": "property",
-      "visibility": "private",
-      "name": "CodeSentMsg##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504434014,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "boolean"
-      },
-      "id": "0802c6a5-fbaf-4ba6-ab40-467bf587b86e",
-      "type": "property",
-      "visibility": "private",
-      "name": "showCodeSentMsg##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1726504371895,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "452b2a7a-577a-48a5-a795-772437a36599",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1Email##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     }
-  ]
+  ],
+  "connections": []
 }
