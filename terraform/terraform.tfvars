@@ -1,26 +1,26 @@
-region                  = "NorthAmerica"     
+region                  = "NorthAmerica"
 region_code             = "NA"
 pingone_environment_id  = "" # Terraform Administration Environment
 admin_user_id           = "" # Terraform Administration Environment
 license_id              = "" # Terraform Administration Environment
-worker_id               = ""
-worker_secret           = ""
+worker_id               = "" # Terraform Administration Environment
+worker_secret           = "" # Terraform Administration Environment
 admin_username          = "" # Terraform Administration Environment
 admin_password          = "" # Terraform Administration Environment
-organization_id         = ""
+organization_id         = "" # Either Administrator or Terraform Adminstration Environment
 
-admin_environment_id    = ""
-admin_group_id          = ""
+admin_environment_id    = "" # Administrator Environment
+admin_group_id          = "" # Administrator Environment
 
 
 #############
-#  PingOne #
+#  PingOne  #
 #############
 
 # Change the name as needed for your P1 environment #
 
-environment_name = "PingOne Master Flow - 2.0"
-environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
+environment_name = "Chris A - PingOne Master Flow - 2.1.0 Final"
+environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider. \n\n[chris]"
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = <<EOT
 GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.
@@ -100,134 +100,130 @@ davinci_connection_PingOne_region = "NA"
 davinci_variable_relyingParty = "auth.pingone.com"
 
 davinci_variable_mf-configObject = {
-    "config": {
-        "mf-bool-webauthnBrowserSupport": true,
-        "mf-obj-passwordPolicy": {
-            "length": {
-                "min": 8,
-                "max": 255
-            },
-            "minCharacters": {
-                "0123456789": 1,
-                "ABCDEFGHIJKLMNOPQRSTUVWXYZ": 1,
-                "abcdefghijklmnopqrstuvwxyz": 1,
-                "~!@#$%^&*()-_=+[]{}|;:,.<>/?": 1
-            },
-            "minUniqueCharacters": 5,
-            "maxRepeatedCharacters": 2
-        },
-        "mf-obj-p1MFAPasswordlessAllowedTypes": [
-            "FIDO2",
-            "PLATFORM",
-            "MOBILE",
-            "TOTP",
-            "SECURITY_KEY"
-        ],
-        "mf-str-availableQuestions": [
-            {
-                "question": "In what city were you born?"
-            },
-            {
-                "question": "What was the model of your first car?"
-            },
-            {
-                "question": "What is the name of your first pet?"
-            },
-            {
-                "question": "What is the name of your favorite teacher?"
-            },
-            {
-                "question": "What is your mother's maiden name?"
-            },
-            {
-                "question": "What is the name of the street you grew up on?"
-            },
-            {
-                "question": "In which year did you graduate from high school?"
-            }
-        ],
-        "mf-str-azureExternalIdPId": " ",
-        "mf-str-browserVersion": 129,
-        "mf-str-captchaThreshold": "0.2",
-        "mf-str-captchaV3SecretKey": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF",
-        "mf-str-captchaV3SiteKey": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
-        "mf-str-companyLogo": "https://avatars.githubusercontent.com/u/93611276?v=4",
-        "mf-str-companyName": "Davinci Demo Company",
-        "mf-str-facebookExternalIdPId": "",
-        "mf-str-githubExternalIdPId": "",
-        "mf-str-googleExternalIdPId": "",
-        "mf-str-passwordExpiredDays": 10,
-        "mf-str-passwordExpireWarningDays": 5,
-        "mf-str-webAuthnSupport": "cross-platform"
+  "config": {
+    "mf-bool-webauthnBrowserSupport": true,
+    "mf-obj-passwordPolicy": {
+      "length": {
+        "max": 255,
+        "min": 8
+      },
+      "maxRepeatedCharacters": 2,
+      "minCharacters": {
+        "0123456789": 1,
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ": 1,
+        "abcdefghijklmnopqrstuvwxyz": 1,
+        "~!@#$%^&*()-_=+[]{}|;:,.<>/?": 1
+      },
+      "minUniqueCharacters": 5
     },
-    "pingone": {
-        "mf-bool-allowForgotPassword": true,
-        "mf-bool-allowForgotUsername": true,
-        "mf-bool-allowKBAforForgotPassword": true,
-        "mf-bool-allowMagicLinkUserRegistration": true,
-        "mf-bool-allowOTPForgotPassword": true,
-        "mf-bool-allowreCaptcha": false,
-        "mf-bool-displayProfileUpdateQuestion": true,
-        "mf-bool-sendEmailPasswordChange": true,
-        "mf-bool-sendEmailPasswordRecovery": true,
-        "mf-bool-sendEmailUserProfileUpdate":true,
-        "mf-bool-runReturnToLogin": false,
-        "mf-bool-runAgreement": true,
-        "mf-bool-runAzureLogin": true,
-        "mf-bool-runGoogleLogin": true,
-        "mf-bool-runConsent": true,
-        "mf-bool-runFacebookLogin": true,
-        "mf-bool-runGithubLogin": true,
-        "mf-bool-runMFAOnAccountUnlock": true,
-        "mf-bool-runPasswordExpireCheck": true,
-        "mf-bool-runProgressiveProfileAuthN": true,
-        "mf-bool-runProgressiveProfileRegstration": true,
-        "mf-bool-runTimeBasedProgressiveProfile": true,
-        "mf-bool-showAzureButton": true,
-        "mf-bool-showFacebookButton": true,
-        "mf-bool-showGithubButton": true,
-        "mf-bool-showGoogleButton": true,
-        "mf-string-daysUntilProgressiveProfile": 30
-    },
-    "p1Authorize": {
-        "mf-bool-runAuthorize": false
-    },
-    "p1MFA": {
-        "mf-bool-allowForgotPassword": true,
-        "mf-bool-allowHybridPasswordless": true,
-        "mf-bool-allowRegisterAnotherDevice": true,
-        "mf-bool-runAfterSocialLogin": false,
-        "mf-bool-runAutoEnrollEmail": true,
-        "mf-bool-runDeviceManagement": true,
-        "mf-bool-runInlineMFA": true,
-        "mf-bool-runOnlyPasswordless": false,
-        "mf-bool-runP1MFA": true,
-        "mf-bool-sendEmailConfirmation": true,
-        "mf-bool-sendEmailDeleteDeviceConfirmation": true,
-        "mf-str-fidoDeviceNickname": "Passkeys/FIDO2",
-        "mf-str-fidoOrigin": "https://auth.pingone.com",
-        "mf-str-fidoRPID": "pingone.com"
-    },
-    "p1Protect": {
-        "mf-bool-runAfterSocialLogin": false,
-        "mf-bool-runBrowserVersionAuthentication": false,
-        "mf-bool-runBrowserVersionRegistration": true,
-        "mf-bool-runFakeRiskLevel": true,
-        "mf-bool-runMFAOnHigh": false, 
-        "mf-bool-runNotificationForNewDevice": true,
-        "mf-bool-runPassiveMode": false,
-        "mf-bool-runProtect": true,
-        "mf-bool-runStopOnHighRiskLevel": false,
-        "mf-bool-showDetailScreenDisplay": true,
-        "mf-bool-showProgressScreenDisplay": true,
-        "mf-bool-userDeleteOnTempEmail": false,
-        "mf-bool-userLockedOnTempEmail": true,
-        "mf-str-fakeRiskLevel": "MEDIUM",
-        "mf-str-fakeRiskScore": 55
-    },
-    "p1Verify": {
-        "mf-bool-allowVerifyUserRegistration": true,
-        "mf-bool-runVerifyFakeSuccess": false,
-        "mf-bool-runVerifyOnHigh": true
-    }
+    "mf-str-availableQuestions": [
+      {
+        "question": "In what city were you born?"
+      },
+      {
+        "question": "What was the model of your first car?"
+      },
+      {
+        "question": "What is the name of your first pet?"
+      },
+      {
+        "question": "What is the name of your favorite teacher?"
+      },
+      {
+        "question": "What is your mother's maiden name?"
+      },
+      {
+        "question": "What is the name of the street you grew up on?"
+      },
+      {
+        "question": "In which year did you graduate from high school?"
+      }
+    ],
+    "mf-str-azureExternalIdPId": " ",
+    "mf-str-browserVersion": 130,
+    "mf-str-captchaThreshold": "0.2",
+    "mf-str-captchaV3SecretKey": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF",
+    "mf-str-captchaV3SiteKey": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
+    "mf-str-companyLogo": "https://github.com/curtismu7/CDN/blob/main/davinci-logo.jpg?raw=true",
+    "mf-str-companyName": "PingOne Master Flow 2.1.0",
+    "mf-str-facebookExternalIdPId": "",
+    "mf-str-githubExternalIdPId": "",
+    "mf-str-googleExternalIdPId": "",
+    "mf-str-passwordExpireWarningDays": 5,
+    "mf-str-passwordExpiredDays": 5,
+    "mf-str-webAuthnSupport": "cross-platform"
+  },
+  "p1Authorize": {
+    "mf-bool-runAuthorize": false,
+    "mf-bool-runFakeAuthZ": false,
+    "mf-str-fakeAuthZDecision": "PERMIT"
+  },
+  "p1Credentials": {
+    "mf-bool-runCredentials": false
+  },
+  "p1MFA": {
+    "mf-bool-allowForgotPassword": true,
+    "mf-bool-allowHybridPasswordless": true,
+    "mf-bool-allowRegisterAnotherDevice": true,
+    "mf-bool-runAutoEnrollEmail": true,
+    "mf-bool-runDeviceManagement": true,
+    "mf-bool-runInlineMFA": true,
+    "mf-bool-runOnlyPasswordless": false,
+    "mf-bool-runP1MFA": true,
+    "mf-bool-sendEmailConfirmation": true,
+    "mf-bool-sendEmailDeleteDeviceConfirmation": true,
+    "mf-str-fidoDeviceNickname": "Passkeys/FIDO2",
+    "mf-str-fidoOrigin": "https://auth.pingone.com",
+    "mf-str-fidoRPID": "pingone.com"
+  },
+  "p1Verify": {
+    "mf-bool-allowVerifyUserRegistration": false,
+    "mf-bool-runVerifyFakeSuccess": false,
+    "mf-bool-runVerifyOnHigh": false
+  },
+  "pingone": {
+    "mf-bool-allowForgotPassword": true,
+    "mf-bool-allowForgotUsername": true,
+    "mf-bool-allowKBAforForgotPassword": true,
+    "mf-bool-allowMagicLinkSMS": false,
+    "mf-bool-allowMagicLinkUserRegistration": true,
+    "mf-bool-allowOTPForgotPassword": true,
+    "mf-bool-allowreCaptcha": false,
+    "mf-bool-blurDOBandID": false,
+    "mf-bool-displayProfileUpdateQuestion": true,
+    "mf-bool-runAgreement": true,
+    "mf-bool-runGoogleLogin": true,
+    "mf-bool-runMFAOnAccountUnlock": true,
+    "mf-bool-runPasswordExpireCheck": true,
+    "mf-bool-runProgressiveProfileAuthN": true,
+    "mf-bool-runProgressiveProfileRegistration": false,
+    "mf-bool-runReturnToLogin": false,
+    "mf-bool-runTimeBasedProgressiveProfile": true,
+    "mf-bool-runUsernameless": false,
+    "mf-bool-sendEmailPasswordChange": true,
+    "mf-bool-sendEmailPasswordRecovery": true,
+    "mf-bool-sendEmailUserProfileUpdate": true,
+    "mf-bool-showAzureButton": false,
+    "mf-bool-showFacebookButton": true,
+    "mf-bool-showGithubButton": false,
+    "mf-bool-showGoogleButton": true,
+    "mf-string-daysUntilProgressiveProfile": 30
+  },
+  "p1Protect": {
+    "mf-bool-runAfterSocialLogin": false,
+    "mf-bool-runBrowserVersionAuthentication": true,
+    "mf-bool-runBrowserVersionRegistration": false,
+    "mf-bool-runFakeRiskLevel": true,
+    "mf-bool-runMFAOnHigh": false,
+    "mf-bool-runNotificationForNewDevice": true,
+    "mf-bool-runPassiveMode": false,
+    "mf-bool-runProtect": true,
+    "mf-bool-runStopOnHighRiskLevel": true,
+    "mf-bool-showDetailScreenDisplay": true,
+    "mf-bool-showProgressScreenDisplay": true,
+    "mf-bool-userDeleteOnTempEmail": false,
+    "mf-bool-userLockedOnTempEmail": true,
+    "mf-str-fakeRiskLevel": "MEDIUM",
+    "mf-str-fakeRiskScore": 50
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "companyId": "b864c908-0b69-45b5-935a-17017f58b76f",
+  "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -8,11 +8,12 @@
     "httpConnector",
     "nodeConnector",
     "functionsConnector",
-    "variablesConnector"
+    "variablesConnector",
+    "analyticsConnector"
   ],
-  "createdDate": 1726230746841,
-  "currentVersion": 80,
-  "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+  "createdDate": 1729786421736,
+  "currentVersion": 7,
+  "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "Imported on Tue Apr 30 2024 20:46:33 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -35,8 +36,8 @@
         },
         "mf-configObject": {
           "description": "",
-          "preferredDataType": "object",
           "isExpanded": true,
+          "preferredDataType": "object",
           "type": "object",
           "name": "mf-configObject"
         }
@@ -48,21 +49,22 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Account Verification subflow",
-  "publishedVersion": 80,
+  "publishedVersion": 7,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
-    "logLevel": 3,
-    "flowTimeoutInSeconds": 3600,
-    "defaultErrorScreenBrandLogo": false,
     "customErrorScreenBrandLogoUrl": "{{global.variables.mf-configObject.config.mf-str-companyLogo}}",
-    "customLogoURLSelection": 3
+    "customLogoURLSelection": 3,
+    "defaultErrorScreenBrandLogo": false,
+    "flowTimeoutInSeconds": 3600,
+    "intermediateLoadingScreenCSS": "  /* Basic CSS for centering the message */\n        body, html {\n            height: 100%;\n            margin: 0;\n            font-family: Arial, sans-serif;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            background-color: #f2f2f2;\n        }\n\n        .message {\n            text-align: center;\n            font-size: 24px;\n            color: #333;\n        }",
+    "intermediateLoadingScreenHTML": "<body>\n    <div class=\"message\">\n        Preparing your amazing journey, please hold on...\n    </div>\n</body>\n</html>",
+    "logLevel": 3,
+    "useIntermediateLoadingScreen": false
   },
   "timeouts": "null",
-  "updatedDate": 1726230749103,
-  "flowId": "a1e8104de5adce520631bae3ce4cbd79",
-  "versionId": 80,
+  "updatedDate": 1729786422390,
+  "flowId": "2681981474ba3b57760b9c1540748e8f",
+  "versionId": 7,
   "graphData": {
     "elements": {
       "nodes": [
@@ -110,8 +112,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1437,
-            "y": 728
+            "x": 1740,
+            "y": 690
           },
           "group": "nodes",
           "removed": false,
@@ -128,8 +130,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1377,
-            "y": 998
+            "x": 1650,
+            "y": 810
           },
           "group": "nodes",
           "removed": false,
@@ -184,8 +186,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2367,
-            "y": 488
+            "x": 2670,
+            "y": 480
           },
           "group": "nodes",
           "removed": false,
@@ -202,8 +204,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1047,
-            "y": 578
+            "x": 1350,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -241,8 +243,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1587,
-            "y": 578
+            "x": 1890,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -286,26 +288,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1949.2958076201617,
-            "y": 709.756578456005
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "vmxt50f7v4",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 2457,
-            "y": 578
+            "x": 2280,
+            "y": 720
           },
           "group": "nodes",
           "removed": false,
@@ -337,8 +321,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2607,
-            "y": 578
+            "x": 3180,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -466,8 +450,8 @@
             }
           },
           "position": {
-            "x": 1737,
-            "y": 578
+            "x": 2040,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -522,8 +506,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1818.6001449431237,
-            "y": 631.3391808497822
+            "x": 2130,
+            "y": 630
           },
           "group": "nodes",
           "removed": false,
@@ -559,16 +543,16 @@
               "resendMessage": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"One Time Passcode Resent\"\n      }\n    ]\n  }\n]"
               },
-              "userid": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"userid\",\n        \"data\": \"{{local.6xm2tm1vye.payload.output.userid}}\",\n        \"tooltip\": \"{{local.6xm2tm1vye.payload.output.userid}}\",\n        \"children\": [\n          {\n            \"text\": \"userid\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              "userId": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"userId\",\n        \"data\": \"{{local.6xm2tm1vye.payload.output.userId}}\",\n        \"tooltip\": \"{{local.6xm2tm1vye.payload.output.userId}}\",\n        \"children\": [\n          {\n            \"text\": \"userId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
             "type": "action"
           },
           "position": {
-            "x": 1818.6001449431237,
-            "y": 814.3131085976353
+            "x": 2130,
+            "y": 780
           },
           "group": "nodes",
           "removed": false,
@@ -589,6 +573,9 @@
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
+              "caseSensitive": {
+                "value": false
+              },
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.uiz42qua49.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.uiz42qua49.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
@@ -607,16 +594,23 @@
                   {
                     "id": "8982ybbt5z",
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"RESEND\"\n      }\n    ]\n  }\n]"
+                  },
+                  {
+                    "id": "vlux8s4vx6",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]"
                   }
                 ]
+              },
+              "type": {
+                "value": "string"
               }
             },
             "status": "configured",
             "type": "trigger"
           },
           "position": {
-            "x": 1227,
-            "y": 578
+            "x": 1530,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -671,8 +665,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1467,
-            "y": 908
+            "x": 1770,
+            "y": 930
           },
           "group": "nodes",
           "removed": false,
@@ -689,8 +683,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1377,
-            "y": 578
+            "x": 1680,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -717,9 +711,15 @@
               "buttonLabel2": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"  Resend Verification Code\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
+              "cancelBtn": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Cancel\"\n      }\n    ]\n  }\n]"
+              },
+              "continueBtn": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Continue\"\n      }\n    ]\n  }\n]"
+              },
               "customCSS": {},
               "customHTML": {
-                "value": "<!-- Main container for centering content -->\n<div class=\"end-user-nano\">\n  <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <!-- Container with fixed width for the card -->\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <!-- Card for holding the content -->\n      <div class=\"card shadow mb-5\">\n        <!-- Main content area -->\n        <main aria-labelledby=\"title\">\n          <!-- Card body with padding and column layout -->\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <!-- Company logo -->\n            <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\"  alt=\"{{global.variables.companyName}}\" />\n\n            <!-- Conditional title -->\n            {{#if title}}\n            <h1 class=\"text-center mb-4\">{{title}}</h1>\n            {{/if}}\n\n            <!-- Conditional textOne -->\n            {{#if textOne}}\n            <p class=\"text-muted text-center\">{{textOne}}</p>\n            {{/if}}\n\n            <!-- Conditional textTwo -->\n            {{#if textTwo}}\n            <p class=\"text-muted text-center\">{{textTwo}}</p>\n            {{/if}}\n\n            <!-- Generic Error Message -->\n            <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n            <p id=\"feedback\" data-id=\"feedback\" class=\"text-success text-center\">{{local.bj3k1cfiwl.payload.output.resendMessage}}</p>\n\n            <!-- Verification Code Error Message -->\n            <p id=\"OTPFeedback\" data-id=\"OTPFeedback\" class=\"text-danger\" data-skerrorid=\"verificationCode\" data-skcomponent=\"skerrormessage\"></p>\n\n            <!-- OTP Form -->\n            <form id=\"otpForm\" data-id=\"otpForm\">\n              <!-- Verification Code Input -->\n              <div class=\"mb-4 form-floating\">\n                <input id=\"verificationCode\" data-id=\"verificationCode\" class=\"form-control\" type=\"text\" name=\"verificationCode\" placeholder=\"Verification Code\" autocomplete=\"off\" required aria-required=\"true\" aria-describedby=\"verificationCodeLabel\" data-required-message=\"Verification code is required\" />\n                <label id=\"verificationCodeLabel\" data-id=\"verificationCodeLabel\" class=\"form-label\" for=\"verificationCode\">Verification Code</label>\n              </div>\n\n              <!-- Conditional Verify Button -->\n              {{#if buttonLabel}}\n              <div class=\"d-flex flex-column\">\n                <button id=\"submit\" type=\"submit\"  class=\"btn btn-primary mb-3\" type=\"submit\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"otpForm\" data-skbuttonvalue=\"VERIFY\">\n                  {{buttonLabel}}\n                </button>\n              </div>\n              {{/if}}\n\n              <!-- Conditional Resend Button -->\n              {{#if buttonLabel2}}\n              <div class=\"d-flex flex-column\">\n                <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"otpForm\" data-skbuttonvalue=\"RESEND\">\n                  {{buttonLabel2}}\n                </button>\n              </div>\n              {{/if}}\n            </form>\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
+                "value": "<!-- Main container for centering content -->\n<div class=\"end-user-nano\">\n  <div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <!-- Container with fixed width for the card -->\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n      <!-- Card for holding the content -->\n      <div class=\"card shadow mb-5\">\n        <!-- Main content area -->\n        <main aria-labelledby=\"title\">\n          <!-- Card body with padding and column layout -->\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <!-- Company logo -->\n            <img class=\"companyLogo align-self-center mb-4\" src=\"{{global.variables.companyLogo}}\" alt=\"{{global.variables.companyName}}\" />\n\n            <!-- Company name from the provided selection -->\n            <h2 class=\"text-center mb-4\">{{global.variables.mf-configObject.config.mf-str-companyName}}</h2>\n\n            <!-- Conditional title -->\n            {{#if title}}\n            <h1 class=\"text-center mb-4\">{{title}}</h1>\n            {{/if}}\n\n            <!-- Conditional textOne -->\n            {{#if textOne}}\n            <p class=\"text-muted text-center\">{{textOne}}</p>\n            {{/if}}\n\n            <!-- Conditional textTwo -->\n            {{#if textTwo}}\n            <p class=\"text-muted text-center\">{{textTwo}}</p>\n            {{/if}}\n\n            <!-- Generic Error Message -->\n            <p class=\"text-danger mdi mdi-alert-circle text-center\" id=\"feedbackError\" data-id=\"feedback\" data-skcomponent=\"skerror\" aria-live=\"assertive\"></p>\n            <p id=\"feedback\" data-id=\"feedback\" class=\"text-success text-center\">{{local.bj3k1cfiwl.payload.output.resendMessage}}</p>\n\n            <!-- Verification Code Error Message -->\n            <p id=\"OTPFeedback\" data-id=\"OTPFeedback\" class=\"text-danger\" data-skerrorid=\"verificationCode\" data-skcomponent=\"skerrormessage\"></p>\n\n            <!-- OTP Form -->\n            <form id=\"otpForm\" data-id=\"otpForm\">\n              <!-- Verification Code Input -->\n              <div class=\"mb-4 form-floating\">\n                <input id=\"verificationCode\" data-id=\"verificationCode\" class=\"form-control\" type=\"text\" name=\"verificationCode\" placeholder=\"Verification Code\" autocomplete=\"off\" required aria-required=\"true\" aria-describedby=\"verificationCodeLabel\" data-required-message=\"Verification code is required\" />\n                <label id=\"verificationCodeLabel\" data-id=\"verificationCodeLabel\" class=\"form-label\" for=\"verificationCode\">Verification Code</label>\n              </div>\n\n              <!-- Conditional Verify Button -->\n              {{#if continueBtn}}\n              <div class=\"d-flex flex-column\">\n                <button id=\"continueBtn\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"otpForm\" data-skbuttonvalue=\"VERIFY\">\n                  {{continueBtn}}\n                </button>\n              </div>\n              {{/if}}\n\n              <!-- Conditional Resend Button -->\n              {{#if resendBtn}}\n              <div class=\"d-flex flex-column\">\n                <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"otpForm\" data-skbuttonvalue=\"RESEND\" id=\"resendBtn\">\n                  {{resendBtn}}\n                </button>\n              </div>\n              {{/if}}\n\n              <!-- Conditional Cancel Button -->\n              {{#if cancelBtn}}\n              <div class=\"d-flex flex-column\">\n                <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\" data-skbuttontype=\"next-event\" data-skform=\"otpForm\" data-skbuttonvalue=\"CANCEL\" id=\"cancelBtn\">\n                  {{cancelBtn}}\n                </button>\n              </div>\n              {{/if}}\n            </form>\n          </div>\n        </main>\n      </div>\n    </div>\n  </div>\n</div>"
               },
               "customScript": {
                 "value": "const start = () => {\r\n    try {\r\n        // Initialize form validation\r\n        DaVinciFormUtils.addDaVinciFormValidation({\r\n            formId: 'otpForm', // required\r\n            formType: 'STANDARD', // required (UPDATE_PASSWORD or STANDARD)\r\n            delayValidationUntilSubmit: true,\r\n            invalidFieldBorderColor: \"red\",\r\n            disableSubmitButtonUntilValid: true\r\n        });\r\n\r\n        // Validate OTP Input with custom validation logic\r\n        masterFlowFormUtils.validateOTPInput({\r\n            inputId: 'verificationCode',\r\n            feedbackId: 'OTPFeedback',\r\n            submitId: 'submit',\r\n            highlightInput: true,\r\n            autoSubmit: true,\r\n            customValidation: checkInputValid // Add custom validation function\r\n        });\r\n\r\n    } catch (error) {\r\n        console.error(\"Error initializing form validation:\", error);\r\n    }\r\n}\r\n\r\n// Example function to check if input is valid\r\nfunction checkInputValid(input) {\r\n    try {\r\n        // Validation logic: Allow any combination of 8 letters (a-z, A-Z) or numbers (0-9)\r\n        return input.length === 8 && /^[a-zA-Z0-9]+$/.test(input);\r\n    } catch (error) {\r\n        console.error(\"Error validating input:\", error);\r\n        return false; // Assume invalid input if there's an error\r\n    }\r\n}\r\n\r\n// Attach the validation on DOMContentLoaded\r\nif (document.readyState === \"loading\") {\r\n    // Loading hasn't finished yet\r\n    document.addEventListener(\"DOMContentLoaded\", start);\r\n} else {\r\n    // `DOMContentLoaded` has already fired\r\n    start();\r\n}"
@@ -744,7 +744,10 @@
                 ]
               },
               "inputSchema": {
-                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"maxLength\": {\n            \"type\": \"string\",\n            \"displayName\": \"maxLength\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"maxLength\"\n        },\n    \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n    \"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"buttonLabel\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel\"\n        },\n        \"buttonLabel2\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Label2\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonLabel2\"\n        }\n    }\n}"
+                "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n        \"maxLength\": {\n            \"type\": \"string\",\n            \"displayName\": \"maxLength\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"maxLength\"\n        },\n        \"textOne\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text One\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textOne\"\n        },\n        \"textTwo\": {\n            \"type\": \"string\",\n            \"displayName\": \"Text Two\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"textTwo\"\n        },\n        \"continueBtn\": {\n            \"type\": \"string\",\n            \"displayName\": \"Continue Button\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"continueBtn\"\n        },\n        \"resendBtn\": {\n            \"type\": \"string\",\n            \"displayName\": \"Resend Button\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"resendBtn\"\n        },\n        \"cancelBtn\": {\n            \"type\": \"string\",\n            \"displayName\": \"Cancel Button\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"cancelBtn\"\n        }\n    }\n}"
+              },
+              "maxLength": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"8\"\n      }\n    ]\n  }\n]"
               },
               "nodeDescription": {
                 "value": "Displays a form for the user to enter the verification code"
@@ -754,6 +757,9 @@
               },
               "oeInteractionCacheExpire": {
                 "value": false
+              },
+              "resendBtn": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Resend Verification Code\"\n      }\n    ]\n  }\n]"
               },
               "textOne": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"We’ve sent a verification code to your email address. Please verify your email to finish setting up your account\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
@@ -766,16 +772,13 @@
               },
               "validationRules": {
                 "value": []
-              },
-              "maxLength": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"8\"\n      }\n    ]\n  }\n]"
               }
             },
             "status": "configured",
             "type": "trigger"
           },
           "position": {
-            "x": 937,
+            "x": 1230,
             "y": 570
           },
           "group": "nodes",
@@ -797,6 +800,9 @@
             "name": "Functions",
             "nodeType": "CONNECTION",
             "properties": {
+              "caseSensitive": {
+                "value": false
+              },
               "leftValueA": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"pingIdentity.svg\",\n        \"url\": \"status\",\n        \"data\": \"{{local.r1lguztxty.payload.output.user.account.status}}\",\n        \"tooltip\": \"{{local.r1lguztxty.payload.output.user.account.status}}\",\n        \"children\": [\n          {\n            \"text\": \"status\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
@@ -805,17 +811,14 @@
               },
               "rightValueB": {
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"OK\"\n      }\n    ]\n  }\n]"
-              },
-              "caseSensitive": {
-                "value": false
               }
             },
             "status": "configured",
             "type": "trigger"
           },
           "position": {
-            "x": 1947,
-            "y": 578
+            "x": 2250,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -840,8 +843,8 @@
             }
           },
           "position": {
-            "x": 2097,
-            "y": 578
+            "x": 2400,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -921,26 +924,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2315.243663115868,
-            "y": 735.8957109914126
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "n939p5i1wn",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 2445.939325792906,
-            "y": 735.8957109914126
+            "x": 2610,
+            "y": 720
           },
           "group": "nodes",
           "removed": false,
@@ -1022,8 +1007,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2307,
-            "y": 578
+            "x": 2610,
+            "y": 570
           },
           "group": "nodes",
           "removed": false,
@@ -1055,8 +1040,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2628.913253540759,
-            "y": 735.8957109914126
+            "x": 3180,
+            "y": 720
           },
           "group": "nodes",
           "removed": false,
@@ -1076,8 +1061,6 @@
             "label": "Variables",
             "name": "Variables",
             "nodeType": "CONNECTION",
-            "status": "configured",
-            "type": "trigger",
             "properties": {
               "nodeTitle": {
                 "value": "Start"
@@ -1085,20 +1068,22 @@
               "saveVariables": {
                 "value": [
                   {
-                    "name": "mf-configObject",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.7547069370906472,
                     "label": "mf-configObject (object - flowInstance)",
+                    "name": "mf-configObject",
+                    "nameDefault": "mf-configObject",
                     "type": "object",
-                    "nameDefault": "mf-configObject"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
-            "x": 277,
-            "y": 570
+            "x": 270,
+            "y": 600
           },
           "group": "nodes",
           "removed": false,
@@ -1116,8 +1101,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 739,
-            "y": 514
+            "x": 1020,
+            "y": 540
           },
           "group": "nodes",
           "removed": false,
@@ -1149,8 +1134,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 559,
-            "y": 484
+            "x": 840,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -1194,8 +1179,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1587,
-            "y": 998
+            "x": 1890,
+            "y": 1020
           },
           "group": "nodes",
           "removed": false,
@@ -1274,8 +1259,8 @@
             "type": "action"
           },
           "position": {
-            "x": 1557.2088195890478,
-            "y": 814.3131085976353
+            "x": 1860,
+            "y": 780
           },
           "group": "nodes",
           "removed": false,
@@ -1292,8 +1277,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1392.104409794524,
-            "y": 814.3131085976353
+            "x": 1650,
+            "y": 690
           },
           "group": "nodes",
           "removed": false,
@@ -1310,8 +1295,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1687.9044822660858,
-            "y": 814.3131085976353
+            "x": 1980,
+            "y": 780
           },
           "group": "nodes",
           "removed": false,
@@ -1324,34 +1309,34 @@
         },
         {
           "data": {
-            "id": "cx5a3zw06k",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "cx5a3zw06k",
+            "idUnique": "o2v5xhdcbc",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#ffffffff"
+              "annotation": {
+                "value": "Last Updated: 7/10, 2024"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Last Updated: 7/10, 2024"
+              "backgroundColor": {
+                "value": "#ffffffff"
               },
-              "width": {
-                "value": 240
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": false
@@ -1359,12 +1344,12 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 240
               }
             },
             "status": "configured",
-            "idUnique": "o2v5xhdcbc"
+            "type": "action"
           },
           "position": {
             "x": 221,
@@ -1385,6 +1370,7 @@
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
             "id": "03wz9wcc5o",
+            "idUnique": "y5xcj22lu8",
             "label": "Variables",
             "name": "Variables",
             "nodeType": "CONNECTION",
@@ -1403,56 +1389,38 @@
                     "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-p1PopulationId}}\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "companyLogo",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]",
                     "key": 0.005195900091913508,
                     "label": "companyLogo (string - flowInstance)",
+                    "name": "companyLogo",
+                    "nameDefault": "companyLogo",
                     "type": "string",
-                    "nameDefault": "companyLogo"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "companyName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]",
                     "key": 0.2547090631914197,
                     "label": "companyName (string - flowInstance)",
+                    "name": "companyName",
+                    "nameDefault": "companyName",
                     "type": "string",
-                    "nameDefault": "companyName"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyName}}\"\n      }\n    ]\n  }\n]"
                   },
                   {
-                    "name": "passwordPolicy",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-obj-passwordPolicy}}\"\n      }\n    ]\n  }\n]",
                     "key": 0.13482705816632312,
                     "label": "passwordPolicy (object - flowInstance)",
-                    "type": "object"
+                    "name": "passwordPolicy",
+                    "nameDefault": null,
+                    "type": "object",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-obj-passwordPolicy}}\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
             },
             "status": "configured",
-            "type": "trigger",
-            "idUnique": "y5xcj22lu8"
+            "type": "trigger"
           },
           "position": {
-            "x": 547,
-            "y": 570
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ee9g8rdvur",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 397,
-            "y": 570
+            "x": 840,
+            "y": 600
           },
           "group": "nodes",
           "removed": false,
@@ -1469,8 +1437,8 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 690,
-            "y": 570
+            "x": 990,
+            "y": 600
           },
           "group": "nodes",
           "removed": false,
@@ -1483,37 +1451,37 @@
         },
         {
           "data": {
-            "id": "iu9k3nl09q",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "iu9k3nl09q",
+            "idUnique": "lb31g4gkg6",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#50e3c2ff"
+              "annotation": {
+                "value": "Email Template:  Verification Code"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Email Template:  Verification Code"
+              "backgroundColor": {
+                "value": "#50e3c2ff"
               },
-              "width": {
-                "value": 240
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
+              "fontSize": {
+                "value": 14
+              },
               "fontStyle": {
                 "value": "normal"
               },
-              "cornerRadius": {
-                "value": 8
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": true
@@ -1521,12 +1489,12 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 240
               }
             },
             "status": "configured",
-            "idUnique": "lb31g4gkg6"
+            "type": "action"
           },
           "position": {
             "x": 247,
@@ -1540,9 +1508,364 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "lkybg3ey7b",
+            "label": "Evaluator",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1650,
+            "y": 750
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "createErrorResponse",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "id": "q9nrp8lqqf",
+            "label": "Http",
+            "name": "Http",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "nodeTitle": {
+                "value": "Return to calling flow"
+              }
+            },
+            "status": "configured",
+            "type": "action"
+          },
+          "position": {
+            "x": 1860,
+            "y": 870
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "leu2rygodh",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 390,
+            "y": 600
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zwzi8mu6zm",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "enrollment"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Account Verification"
+              },
+              "outcomeStatusDetail": {
+                "value": "Account Verification"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Account Verification\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 540,
+            "y": 600
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "99k3mgn7m5",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 690,
+            "y": 600
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "u7acq9et9k",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "enrollment"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Finish Account Verification"
+              },
+              "outcomeStatusDetail": {
+                "value": "Account Verification"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Finish Account Verification\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "ehu09krbmj"
+          },
+          "position": {
+            "x": 2880,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "um5b5jajid",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "enrollment"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Finish Account Verification"
+              },
+              "outcomeStatusDetail": {
+                "value": "Account Verification"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Finish Account Verification\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "ehu09krbmj"
+          },
+          "position": {
+            "x": 2910,
+            "y": 720
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dy9zn8gqot",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2736,
+            "y": 569
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "v8ba1wtahq",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 3030,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "nbyo2g57qd",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2760,
+            "y": 720
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "jcfu0p7f9x",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 3030,
+            "y": 720
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         }
       ],
       "edges": [
+        {
+          "data": {
+            "id": "t242vw8v57",
+            "source": "leu2rygodh",
+            "target": "zwzi8mu6zm"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "omlymkalme",
+            "source": "uiz42qua49",
+            "target": "o33i23s1a9"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l06rijnfa",
+            "source": "m3hivxn12o",
+            "target": "uiz42qua49"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
         {
           "data": {
             "id": "yw4bojikgj",
@@ -1564,13 +1887,14 @@
         },
         {
           "data": {
-            "id": "tezeo7ik6",
-            "source": "jelhuauyq8",
-            "target": "ee9g8rdvur"
+            "id": "1lk9kn2b9w",
+            "multiValueSourceId": "vlux8s4vx6",
+            "source": "kxs2pkrqr1",
+            "target": "lkybg3ey7b"
           },
           "position": {
-            "x": 0,
-            "y": 0
+            "x": 64,
+            "y": 132
           },
           "group": "edges",
           "removed": false,
@@ -1583,9 +1907,9 @@
         },
         {
           "data": {
-            "id": "3lsuvd5kss",
-            "source": "ee9g8rdvur",
-            "target": "03wz9wcc5o"
+            "id": "cj3pcjwd1x",
+            "source": "lkybg3ey7b",
+            "target": "q9nrp8lqqf"
           },
           "position": {
             "x": 0,
@@ -1704,7 +2028,7 @@
           },
           "position": {
             "x": 64,
-            "y": 132
+            "y": 172
           },
           "group": "edges",
           "removed": false,
@@ -1717,13 +2041,14 @@
         },
         {
           "data": {
-            "id": "jx07w7s7dd",
-            "source": "n939p5i1wn",
-            "target": "h3cgkxz7yp"
+            "id": "fg99jmoaz1",
+            "multiValueSourceId": "8982ybbt5z",
+            "source": "kxs2pkrqr1",
+            "target": "11kamu7u2h"
           },
           "position": {
-            "x": 0,
-            "y": 0
+            "x": 64,
+            "y": 92
           },
           "group": "edges",
           "removed": false,
@@ -1793,9 +2118,9 @@
         },
         {
           "data": {
-            "id": "z4p0nmebtb",
-            "source": "gcpkvcqby0",
-            "target": "n939p5i1wn"
+            "id": "l393lzzbnz",
+            "source": "jelhuauyq8",
+            "target": "leu2rygodh"
           },
           "position": {
             "x": 0,
@@ -1850,9 +2175,9 @@
         },
         {
           "data": {
-            "id": "99num5nfsw",
-            "source": "vmxt50f7v4",
-            "target": "wl9z5u01ka"
+            "id": "qlidqkub5n",
+            "source": "zwzi8mu6zm",
+            "target": "99k3mgn7m5"
           },
           "position": {
             "x": 0,
@@ -1907,9 +2232,9 @@
         },
         {
           "data": {
-            "id": "lmjadzki98",
-            "source": "2161yf0ziu",
-            "target": "vmxt50f7v4"
+            "id": "duccysoxga",
+            "source": "99k3mgn7m5",
+            "target": "03wz9wcc5o"
           },
           "position": {
             "x": 0,
@@ -1984,9 +2309,9 @@
         },
         {
           "data": {
-            "id": "omlymkalme",
-            "source": "uiz42qua49",
-            "target": "o33i23s1a9"
+            "id": "59iz4hm2p4",
+            "source": "2161yf0ziu",
+            "target": "dy9zn8gqot"
           },
           "position": {
             "x": 0,
@@ -2003,14 +2328,13 @@
         },
         {
           "data": {
-            "id": "fg99jmoaz1",
-            "multiValueSourceId": "8982ybbt5z",
-            "source": "kxs2pkrqr1",
-            "target": "11kamu7u2h"
+            "id": "3l4304pzy9",
+            "source": "dy9zn8gqot",
+            "target": "u7acq9et9k"
           },
           "position": {
-            "x": 64,
-            "y": 92
+            "x": 0,
+            "y": 0
           },
           "group": "edges",
           "removed": false,
@@ -2023,9 +2347,104 @@
         },
         {
           "data": {
-            "id": "l06rijnfa",
-            "source": "m3hivxn12o",
-            "target": "uiz42qua49"
+            "id": "rq0b7s238b",
+            "source": "u7acq9et9k",
+            "target": "v8ba1wtahq"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ffh08q5sk5",
+            "source": "v8ba1wtahq",
+            "target": "wl9z5u01ka"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xgvf3mz8ob",
+            "source": "gcpkvcqby0",
+            "target": "nbyo2g57qd"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "q8ec8rfqdh",
+            "source": "nbyo2g57qd",
+            "target": "um5b5jajid"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xooxdoeaj3",
+            "source": "um5b5jajid",
+            "target": "jcfu0p7f9x"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9odf1xbhfk",
+            "source": "jcfu0p7f9x",
+            "target": "h3cgkxz7yp"
           },
           "position": {
             "x": 0,
@@ -2075,19 +2494,19 @@
       "propertyName": "accountState"
     },
     {
-      "propertyName": "mf-configObject",
       "description": "",
-      "preferredDataType": "object",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "object",
+      "propertyName": "mf-configObject"
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726230746571,
+  "savedDate": 1729786421557,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1719424477651,
+      "createdDate": 1729617691821,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -2095,79 +2514,77 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "d2b7a39c-2e47-41db-ad55-6b01182556a6",
+      "id": "15869bd2-a03d-4d23-9e6d-b41caf012029",
       "type": "property",
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424393931,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1729617691822,
       "fields": {
-        "type": "string",
         "displayName": "Internal variable",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "string"
       },
-      "id": "e4cd357f-2114-4ff3-bf50-877f2072ae6c",
+      "id": "288db8a8-fde1-4499-bfe9-34f389edc926",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1720639754826,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1729617691823,
       "fields": {
-        "type": "object",
         "displayName": "",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "object"
       },
-      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
+      "id": "7850e826-245c-4766-acad-ee2fc372bd33",
       "type": "property",
       "visibility": "private",
       "name": "mf-configObject##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424417188,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1729617650936,
+      "customerId": "7103642ff587ecb4de6b6c332453ca73",
       "fields": {
         "type": "string",
         "displayName": "PingOne Population Id",
-        "value": "11d371ea-73cc-43ba-a676-3da148429ffd",
+        "value": "3d7ea158-80fd-4c76-868d-686e3476f9c4",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "6fcbdf4e-6958-4afc-bdaf-5ee199d0caaa",
+      "id": "e8c571bd-0b36-49ef-98bd-46508f84c566",
       "type": "property",
       "visibility": "private",
       "name": "populationId##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1721185209721,
+      "createdDate": 1729617695681,
       "fields": {
-        "type": "object",
         "displayName": "Password policy used for validation",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "object"
       },
-      "id": "877ae96f-84c0-4139-b849-3c8e99c3679e",
+      "id": "af12ba90-59fe-42c1-8e22-26a9ae1dce9d",
       "type": "property",
       "visibility": "private",
       "name": "passwordPolicy##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     }
   ]
 }
