@@ -70,8 +70,8 @@ master_flow_user_lifecycle_suppress_verification_code = true
 #  The flow will return a Redirect URI to add to the sevice provider.                         #
 #  https://pingidentity.atlassian.net/wiki/spaces/ASA/pages/407765131/Set+Up+Social+Logins+for+PingOne  #
 davinci_variable_gv-googleLogin = "true"
-google_client_id="820425897162-qhbcsvghvbf4k247ath688q4smkvogrv.apps.googleusercontent.com"
-google_client_secret="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"
+google_client_id=""
+google_client_secret=""
 
 davinci_variable_gv-facebookLogin = "true"
 facebook_app_id=""
