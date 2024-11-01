@@ -1,5 +1,5 @@
 {
-  "companyId": "b864c908-0b69-45b5-935a-17017f58b76f",
+  "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf",
   "authTokenExpireIds": [],
   "connectorIds": [
     "httpConnector",
@@ -10,9 +10,9 @@
     "annotationConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1726144866840,
-  "currentVersion": 59,
-  "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+  "createdDate": 1729786592267,
+  "currentVersion": 5,
+  "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "Imported on Tue Apr 30 2024 20:47:03 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -28,8 +28,8 @@
         },
         "mf-configObject": {
           "description": "",
-          "preferredDataType": "object",
           "isExpanded": true,
+          "preferredDataType": "object",
           "type": "object",
           "name": "mf-configObject"
         }
@@ -43,24 +43,24 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Custom Security Question and Answer Registration subflow",
-  "publishedVersion": 59,
+  "publishedVersion": 5,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
-    "intermediateLoadingScreenCSS": "",
-    "intermediateLoadingScreenHTML": "",
     "cssLinks": [
       "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.11/icons.css",
       "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css"
     ],
-    "logLevel": 3,
-    "useCustomCSS": true,
+    "customFaviconLink": "https://console.pingone.com/favicon.ico",
     "flowTimeoutInSeconds": 3600,
-    "customFaviconLink": "https://console.pingone.com/favicon.ico"
+    "intermediateLoadingScreenCSS": "",
+    "intermediateLoadingScreenHTML": "",
+    "logLevel": 3,
+    "useCustomCSS": true
   },
   "timeouts": "null",
-  "updatedDate": 1726144868925,
-  "flowId": "e7c4eca065591220b37b78c530459858",
-  "versionId": 59,
+  "updatedDate": 1729786594232,
+  "flowId": "3b287d1398c9fb41dd0153dc56f5cdd7",
+  "versionId": 5,
   "graphData": {
     "elements": {
       "nodes": [
@@ -201,12 +201,12 @@
               "saveVariables": {
                 "value": [
                   {
-                    "name": "mf-configObject",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.3741352687998927,
                     "label": "mf-configObject (object - flowInstance)",
+                    "name": "mf-configObject",
+                    "nameDefault": "mf-configObject",
                     "type": "object",
-                    "nameDefault": "mf-configObject"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"mf-configObject\",\n        \"data\": \"{{global.parameters.mf-configObject}}\",\n        \"tooltip\": \"{{global.parameters.mf-configObject}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-configObject\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                   }
                 ]
               }
@@ -436,7 +436,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2640,
+            "x": 2940,
             "y": 540
           },
           "group": "nodes",
@@ -890,40 +890,40 @@
         },
         {
           "data": {
-            "id": "ctzjy1qgsg",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "ctzjy1qgsg",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#5D00D6ff"
+              "annotation": {
+                "value": "Register KBA questions & Answers"
               },
               "annotationTextColor": {
                 "value": "#ffffffff"
               },
-              "annotation": {
-                "value": "Register KBA questions & Answers"
+              "backgroundColor": {
+                "value": "#5D00D6ff"
               },
-              "width": {
-                "value": 2500
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "width": {
+                "value": 2500
               }
             },
-            "status": "configured"
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 364,
@@ -940,34 +940,34 @@
         },
         {
           "data": {
-            "id": "d591ng371y",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
+            "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
             "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
+            "id": "d591ng371y",
+            "idUnique": "o2v5xhdcbc",
+            "name": "Annotation",
+            "nodeType": "ANNOTATION",
             "properties": {
-              "backgroundColor": {
-                "value": "#ffffffff"
+              "annotation": {
+                "value": "Last Updated: 7/10, 2024"
               },
               "annotationTextColor": {
                 "value": "#000000"
               },
-              "annotation": {
-                "value": "Last Updated: 7/10, 2024"
+              "backgroundColor": {
+                "value": "#ffffffff"
               },
-              "width": {
-                "value": 240
-              },
-              "fontSize": {
-                "value": 14
+              "cornerRadius": {
+                "value": 8
               },
               "fontFamily": {
                 "value": "sans-serif"
               },
-              "cornerRadius": {
-                "value": 8
+              "fontSize": {
+                "value": 14
+              },
+              "strokeColor": {
+                "value": "#181818ff"
               },
               "strokeEnabled": {
                 "value": false
@@ -975,12 +975,12 @@
               "strokeWidth": {
                 "value": 1
               },
-              "strokeColor": {
-                "value": "#181818ff"
+              "width": {
+                "value": 240
               }
             },
             "status": "configured",
-            "idUnique": "o2v5xhdcbc"
+            "type": "action"
           },
           "position": {
             "x": 523,
@@ -998,8 +998,8 @@
         {
           "data": {
             "id": "m91req3vl9",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
+            "label": "Evaluator",
+            "nodeType": "EVAL"
           },
           "position": {
             "x": 574,
@@ -1016,32 +1016,32 @@
         },
         {
           "data": {
-            "id": "vutqa51q7c",
-            "nodeType": "CONNECTION",
+            "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
             "connectorId": "variablesConnector",
-            "name": "Variables",
+            "id": "vutqa51q7c",
             "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
+            "name": "Variables",
+            "nodeType": "CONNECTION",
             "properties": {
+              "nodeTitle": {
+                "value": "Company Variables"
+              },
               "saveVariables": {
                 "value": [
                   {
-                    "name": "companyLogo",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]",
                     "key": 0.24525851653144048,
                     "label": "companyLogo (string - flowInstance)",
+                    "name": "companyLogo",
+                    "nameDefault": "mf-configObject",
                     "type": "string",
-                    "nameDefault": "mf-configObject"
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{{global.variables.mf-configObject.config.mf-str-companyLogo}}\"\n      }\n    ]\n  }\n]"
                   }
                 ]
-              },
-              "nodeTitle": {
-                "value": "Company Variables"
               }
-            }
+            },
+            "status": "configured",
+            "type": "trigger"
           },
           "position": {
             "x": 754,
@@ -1058,30 +1058,36 @@
         },
         {
           "data": {
-            "id": "em0wazy4ft",
-            "nodeType": "CONNECTION",
-            "connectionId": "78f6209abfff297bca70010581d074b1",
-            "connectorId": "analyticsConnector",
-            "name": "Flow Analytics",
-            "label": "Flow Analytics",
-            "status": "configured",
             "capabilityName": "logOutcome",
-            "type": "action",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "id": "em0wazy4ft",
+            "idUnique": "vp8mvklpzw",
+            "label": "Flow Analytics",
+            "name": "Flow Analytics",
+            "nodeType": "CONNECTION",
             "properties": {
-              "outcomeType": {
-                "value": "enrollment"
-              },
               "outcomeStatus": {
                 "value": "approved"
+              },
+              "outcomeStatusDetail": {
+                "value": "Running KBA registration"
+              },
+              "outcomeType": {
+                "value": "enrollment"
               },
               "shouldContinueOnError": {
                 "value": true
               },
-              "outcomeStatusDetail": {
-                "value": "Running KBA registration"
+              "nodeTitle": {
+                "value": "Q&A"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"KBA\"\n      }\n    ]\n  }\n]"
               }
             },
-            "idUnique": "vp8mvklpzw"
+            "status": "configured",
+            "type": "action"
           },
           "position": {
             "x": 1050,
@@ -1121,6 +1127,70 @@
           },
           "position": {
             "x": 1200,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "capabilityName": "logOutcome",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "id": "9ek1ikg24w",
+            "idUnique": "z6elc47fzv",
+            "label": "Flow Analytics",
+            "name": "Flow Analytics",
+            "nodeType": "CONNECTION",
+            "properties": {
+              "outcomeStatus": {
+                "value": "approved"
+              },
+              "outcomeStatusDetail": {
+                "value": "Running KBA registration"
+              },
+              "outcomeType": {
+                "value": "enrollment"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Finish Q&A"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Finish KBA\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "status": "configured",
+            "type": "action"
+          },
+          "position": {
+            "x": 2670,
+            "y": 540
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "x9159j5mbf",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2805,
             "y": 540
           },
           "group": "nodes",
@@ -1348,25 +1418,6 @@
         },
         {
           "data": {
-            "id": "olx7gn4amv",
-            "source": "3kjyoxlkmd",
-            "target": "tqlfgvxe0k"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "edges",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": true,
-          "classes": ""
-        },
-        {
-          "data": {
             "id": "29za60kckn",
             "source": "pyd1kocw2k",
             "target": "kb1wr4lym9"
@@ -1497,6 +1548,63 @@
           "grabbable": true,
           "pannable": true,
           "classes": ""
+        },
+        {
+          "data": {
+            "id": "ydsr8vbkku",
+            "source": "3kjyoxlkmd",
+            "target": "9ek1ikg24w"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "k63ne3ling",
+            "source": "9ek1ikg24w",
+            "target": "x9159j5mbf"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5i4j9cj5u0",
+            "source": "x9159j5mbf",
+            "target": "tqlfgvxe0k"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
         }
       ]
     },
@@ -1527,19 +1635,19 @@
       "required": true
     },
     {
-      "propertyName": "mf-configObject",
       "description": "",
-      "preferredDataType": "object",
+      "isExpanded": true,
       "preferredControlType": "textField",
-      "isExpanded": true
+      "preferredDataType": "object",
+      "propertyName": "mf-configObject"
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1726144866674,
+  "savedDate": 1729786592157,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1719424477651,
+      "createdDate": 1729617691821,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -1547,45 +1655,43 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "d2b7a39c-2e47-41db-ad55-6b01182556a6",
+      "id": "15869bd2-a03d-4d23-9e6d-b41caf012029",
       "type": "property",
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1719424393931,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1729617691822,
       "fields": {
-        "type": "string",
         "displayName": "Internal variable",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "string"
       },
-      "id": "e4cd357f-2114-4ff3-bf50-877f2072ae6c",
+      "id": "288db8a8-fde1-4499-bfe9-34f389edc926",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1720639754826,
-      "customerId": "6bcc9e79d00b961d0cea84f12fa77356",
+      "createdDate": 1729617691823,
       "fields": {
-        "type": "object",
         "displayName": "",
-        "mutable": true,
+        "max": 2000,
         "min": 0,
-        "max": 2000
+        "mutable": true,
+        "type": "object"
       },
-      "id": "af72ef52-d8bf-4339-b8f8-f26d2c6ccff7",
+      "id": "7850e826-245c-4766-acad-ee2fc372bd33",
       "type": "property",
       "visibility": "private",
       "name": "mf-configObject##SK##flowInstance",
-      "companyId": "b864c908-0b69-45b5-935a-17017f58b76f"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     }
   ]
 }
