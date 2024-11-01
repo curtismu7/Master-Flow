@@ -1,5 +1,5 @@
 {
-  "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432",
+  "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -8,10 +8,11 @@
     "notificationsConnector",
     "functionsConnector",
     "errorConnector",
-    "variablesConnector"
+    "variablesConnector",
+    "analyticsConnector"
   ],
-  "createdDate": 1727262664859,
-  "currentVersion": 3,
+  "createdDate": 1729786280341,
+  "currentVersion": 7,
   "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "UI Fixed",
   "flowStatus": "enabled",
@@ -34,7 +35,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne SSO Forgot Username subflow",
-  "publishedVersion": 3,
+  "publishedVersion": 7,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "cssLinks": [],
@@ -49,9 +50,9 @@
     "useCustomScript": false
   },
   "timeouts": "null",
-  "updatedDate": 1727262666109,
-  "flowId": "cecd3dc7143884c211e4acacfcb29e2e",
-  "versionId": 3,
+  "updatedDate": 1729786282890,
+  "flowId": "fb35b5e8ef8e31dd63ee38323f97ed1f",
+  "versionId": 7,
   "graphData": {
     "elements": {
       "nodes": [
@@ -93,7 +94,7 @@
             "type": "action"
           },
           "position": {
-            "x": 218,
+            "x": 315,
             "y": 342
           },
           "group": "nodes",
@@ -171,7 +172,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 994,
+            "x": 1091,
             "y": 514
           },
           "group": "nodes",
@@ -206,7 +207,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1654,
+            "x": 1751,
             "y": 514
           },
           "group": "nodes",
@@ -239,7 +240,7 @@
             }
           },
           "position": {
-            "x": 1804,
+            "x": 1901,
             "y": 514
           },
           "group": "nodes",
@@ -312,7 +313,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2104,
+            "x": 2201,
             "y": 514
           },
           "group": "nodes",
@@ -341,7 +342,7 @@
             }
           },
           "position": {
-            "x": 2224,
+            "x": 2321,
             "y": 514
           },
           "group": "nodes",
@@ -380,8 +381,8 @@
             "type": "action"
           },
           "position": {
-            "x": 2854,
-            "y": 514
+            "x": 3127,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -452,8 +453,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 2524,
-            "y": 514
+            "x": 2557,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -471,7 +472,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1114,
+            "x": 1211,
             "y": 514
           },
           "group": "nodes",
@@ -516,7 +517,7 @@
             "type": "trigger"
           },
           "position": {
-            "x": 1294,
+            "x": 1391,
             "y": 514
           },
           "group": "nodes",
@@ -534,7 +535,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1474,
+            "x": 1571,
             "y": 514
           },
           "group": "nodes",
@@ -553,7 +554,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1444,
+            "x": 1541,
             "y": 634
           },
           "group": "nodes",
@@ -597,7 +598,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1624,
+            "x": 1721,
             "y": 634
           },
           "group": "nodes",
@@ -642,7 +643,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1624,
+            "x": 1721,
             "y": 754
           },
           "group": "nodes",
@@ -660,7 +661,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 1444,
+            "x": 1541,
             "y": 754
           },
           "group": "nodes",
@@ -702,8 +703,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 364,
-            "y": 514
+            "x": 277,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -759,7 +760,7 @@
             "type": "action"
           },
           "position": {
-            "x": 507,
+            "x": 604,
             "y": 226
           },
           "group": "nodes",
@@ -809,7 +810,7 @@
             "type": "action"
           },
           "position": {
-            "x": 784,
+            "x": 881,
             "y": 218
           },
           "group": "nodes",
@@ -842,7 +843,7 @@
             "type": "action"
           },
           "position": {
-            "x": 2344,
+            "x": 2441,
             "y": 664
           },
           "group": "nodes",
@@ -875,7 +876,7 @@
             "type": "action"
           },
           "position": {
-            "x": 1924,
+            "x": 2021,
             "y": 634
           },
           "group": "nodes",
@@ -929,26 +930,8 @@
             "type": "trigger"
           },
           "position": {
-            "x": 664,
-            "y": 514
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "4simymourj",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 514,
-            "y": 514
+            "x": 817,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -965,25 +948,7 @@
             "nodeType": "EVAL"
           },
           "position": {
-            "x": 844,
-            "y": 514
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ttmw0wwgol",
-            "nodeType": "EVAL"
-          },
-          "position": {
-            "x": 2674,
+            "x": 941,
             "y": 514
           },
           "group": "nodes",
@@ -1043,8 +1008,172 @@
             "type": "action"
           },
           "position": {
-            "x": 214,
+            "x": 311,
             "y": 214
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ldeh8v5t4u",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "accountRecovery"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Start Forgot Username"
+              },
+              "outcomeStatusDetail": {
+                "value": "Start Forgot Username"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Start Forgot Username\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "9gnpe0e86f"
+          },
+          "position": {
+            "x": 547,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l3d8acr1in",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 397,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "a9krywk6m2",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 667,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lr6ineniuy",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "accountRecovery"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Finish Forgot Username"
+              },
+              "outcomeStatusDetail": {
+                "value": "Finish Forgot Username"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"StFinish Forgot Username\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "ldqzen4wu1"
+          },
+          "position": {
+            "x": 2857,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "tfo3eck6mz",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2707,
+            "y": 510
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ecg95qn61i",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 2977,
+            "y": 510
           },
           "group": "nodes",
           "removed": false,
@@ -1059,9 +1188,9 @@
       "edges": [
         {
           "data": {
-            "id": "bls69ipgrf",
-            "source": "k07q3cnb9s",
-            "target": "ttmw0wwgol"
+            "id": "h5zmv0ha4w",
+            "source": "l3d8acr1in",
+            "target": "ldeh8v5t4u"
           },
           "position": {
             "x": 0,
@@ -1078,9 +1207,9 @@
         },
         {
           "data": {
-            "id": "9pstkirbbk",
-            "source": "g00jsk6x5e",
-            "target": "4simymourj"
+            "id": "anu2aqebnf",
+            "source": "72bolawa1h",
+            "target": "rrts2ohm4j"
           },
           "position": {
             "x": 0,
@@ -1097,8 +1226,47 @@
         },
         {
           "data": {
-            "id": "v1bdk4r9ur",
-            "source": "4simymourj",
+            "id": "saib6sfm13",
+            "source": "ldeh8v5t4u",
+            "target": "a9krywk6m2"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "gvfv13yul7",
+            "multiValueSourceId": "-1",
+            "source": "dpqmtpzuz9",
+            "target": "fthf7j6qfs"
+          },
+          "position": {
+            "x": 64,
+            "y": 132
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "sxzfyj9t6u",
+            "source": "a9krywk6m2",
             "target": "wjogizvs38"
           },
           "position": {
@@ -1384,9 +1552,9 @@
         },
         {
           "data": {
-            "id": "anu2aqebnf",
-            "source": "72bolawa1h",
-            "target": "rrts2ohm4j"
+            "id": "ao811bcdbu",
+            "source": "g00jsk6x5e",
+            "target": "l3d8acr1in"
           },
           "position": {
             "x": 0,
@@ -1403,14 +1571,13 @@
         },
         {
           "data": {
-            "id": "gvfv13yul7",
-            "multiValueSourceId": "-1",
-            "source": "dpqmtpzuz9",
-            "target": "fthf7j6qfs"
+            "id": "2ftlde9n1n",
+            "source": "k07q3cnb9s",
+            "target": "tfo3eck6mz"
           },
           "position": {
-            "x": 64,
-            "y": 132
+            "x": 0,
+            "y": 0
           },
           "group": "edges",
           "removed": false,
@@ -1423,8 +1590,46 @@
         },
         {
           "data": {
-            "id": "2dv3pvm3zs",
-            "source": "ttmw0wwgol",
+            "id": "8litu3xx0t",
+            "source": "tfo3eck6mz",
+            "target": "lr6ineniuy"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "nt8ggjlw53",
+            "source": "lr6ineniuy",
+            "target": "ecg95qn61i"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0ffmx4y4ma",
+            "source": "ecg95qn61i",
             "target": "23ohgci4y0"
           },
           "position": {
@@ -1470,11 +1675,11 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1727262664731,
+  "savedDate": 1729786280159,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1726504365510,
+      "createdDate": 1729617691821,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -1482,15 +1687,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "e542edb9-9462-4047-b116-a232468a74e1",
+      "id": "15869bd2-a03d-4d23-9e6d-b41caf012029",
       "type": "property",
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365513,
+      "createdDate": 1729617691822,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -1498,15 +1703,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "5158e728-acef-446b-b0cc-88c6b8e465a0",
+      "id": "288db8a8-fde1-4499-bfe9-34f389edc926",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365513,
+      "createdDate": 1729617691823,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -1514,11 +1719,11 @@
         "mutable": true,
         "type": "object"
       },
-      "id": "9ae2c7ed-62a4-4185-8041-83f219be6fbc",
+      "id": "7850e826-245c-4766-acad-ee2fc372bd33",
       "type": "property",
       "visibility": "private",
       "name": "mf-configObject##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     }
   ]
 }

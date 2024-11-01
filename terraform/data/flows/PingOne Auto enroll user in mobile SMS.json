@@ -1,5 +1,5 @@
 {
-  "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432",
+  "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf",
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
@@ -7,10 +7,11 @@
     "pingOneMfaConnector",
     "httpConnector",
     "functionsConnector",
-    "nodeConnector"
+    "nodeConnector",
+    "analyticsConnector"
   ],
-  "createdDate": 1726504380236,
-  "currentVersion": 2,
+  "createdDate": 1729786090455,
+  "currentVersion": 4,
   "customerId": "7103642ff587ecb4de6b6c332453ca73",
   "description": "Cloned on Thu Sep 05 2024 10:58:58 GMT+0000 (Coordinated Universal Time). \nImported on Tue Apr 30 2024 20:46:29 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
@@ -47,7 +48,7 @@
   "isInputSchemaSaved": true,
   "isOutputSchemaSaved": false,
   "name": "PingOne Auto enroll user in mobile SMS",
-  "publishedVersion": 2,
+  "publishedVersion": 4,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
     "customLogoURLSelection": 2,
@@ -58,359 +59,13 @@
     "logLevel": 3
   },
   "timeouts": "null",
-  "updatedDate": 1726504381700,
-  "flowId": "a07aa5793fbfb20bbeccaf9978b20cec",
-  "versionId": 2,
+  "updatedDate": 1729786091575,
+  "flowId": "909dbc489f44fb7d12ac673936ceb4ed",
+  "versionId": 4,
   "graphData": {
-    "boxSelectionEnabled": true,
     "elements": {
-      "edges": [
-        {
-          "classes": "",
-          "data": {
-            "id": "e4tw91o4im",
-            "source": "iwnt55umhd",
-            "target": "096mxrnf0h"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "4eqwxmmyj4",
-            "source": "n0quwyscsi",
-            "target": "y2g6mnx0bh"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "gl8bj0xgor",
-            "source": "muahcq7bwo",
-            "target": "brsc2k7uj4"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "do0dtf6n8n",
-            "source": "bpkvxton27",
-            "target": "sy5ji6r90v"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "mq5ag6l6tr",
-            "source": "ic158vw0c0",
-            "target": "l8brhyefwk"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "8llh4pzxrv",
-            "source": "mm221k8mtu",
-            "target": "81w4xznzc9"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "ulp0m7atfu",
-            "source": "sy5ji6r90v",
-            "target": "qibog9r3as"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "lbnoequqbj",
-            "source": "gn1zfrbhfn",
-            "target": "ic158vw0c0"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "ed7ho0tvsz",
-            "source": "l8brhyefwk",
-            "target": "mm221k8mtu"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "n6f186dru0",
-            "source": "sy5ji6r90v",
-            "target": "gn1zfrbhfn"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "3p0o9pu2tl",
-            "source": "mm221k8mtu",
-            "target": "hrnf7vf4v0"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "lplay58w2e",
-            "source": "096mxrnf0h",
-            "target": "bpkvxton27"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "lykt574vkn",
-            "source": "brsc2k7uj4",
-            "target": "2q8o7ctrmj"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "c50857t76e",
-            "source": "n0quwyscsi",
-            "target": "zy9zqsq8ow"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "aoolsxyauo",
-            "source": "2q8o7ctrmj",
-            "target": "n0quwyscsi"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "cjn90rnsln",
-            "source": "ic158vw0c0",
-            "target": "mnjtf03g2b"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "dmz8orlph3",
-            "source": "4nwm10m3zr",
-            "target": "0kj6dw314p"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "bzo4tnhwac",
-            "source": "0kj6dw314p",
-            "target": "iwnt55umhd"
-          },
-          "grabbable": true,
-          "group": "edges",
-          "locked": false,
-          "pannable": true,
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        }
-      ],
       "nodes": [
         {
-          "classes": "",
           "data": {
             "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -448,20 +103,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 274,
             "y": 394
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
@@ -491,20 +146,20 @@
             "status": "configured",
             "type": "trigger"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 390,
+            "x": 180,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "createDevice",
             "connectionId": "b72bd44e6be8180bd5988ac74cd9c949",
@@ -572,20 +227,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 1110,
             "y": 990
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "id": "n0quwyscsi",
             "label": "Evaluator",
@@ -596,20 +251,20 @@
               }
             }
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 1230,
             "y": 990
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
@@ -630,20 +285,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1440,
+            "x": 1830,
             "y": 990
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "id": "brsc2k7uj4",
             "nodeType": "EVAL",
@@ -653,20 +308,20 @@
               }
             }
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 930,
             "y": 990
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -703,20 +358,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 484,
             "y": 214
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
@@ -748,20 +403,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 1440,
             "y": 1140
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "readAllDevices",
             "connectionId": "b72bd44e6be8180bd5988ac74cd9c949",
@@ -778,20 +433,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1020,
+            "x": 1110,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "id": "sy5ji6r90v",
             "label": "Evaluator",
@@ -802,20 +457,20 @@
               }
             }
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1140,
+            "x": 1230,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "customFunction",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
@@ -847,20 +502,20 @@
             "status": "configured",
             "type": "trigger"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1320,
+            "x": 1410,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "id": "ic158vw0c0",
             "label": "Evaluator",
@@ -871,20 +526,20 @@
               }
             }
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1470,
+            "x": 1560,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "AEqualsB",
             "connectionId": "de650ca45593b82c49064ead10b9fe17",
@@ -911,20 +566,20 @@
             "status": "configured",
             "type": "trigger"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1620,
+            "x": 1710,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
@@ -955,20 +610,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1320,
+            "x": 1410,
             "y": 720
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "createErrorResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
@@ -999,20 +654,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1650,
+            "x": 1740,
             "y": 690
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "id": "mm221k8mtu",
             "label": "Evaluator",
@@ -1029,20 +684,20 @@
               }
             }
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1770,
+            "x": 1860,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "startNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
@@ -1059,20 +714,20 @@
             "status": "configured",
             "type": "trigger"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 810,
             "y": 990
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "goToNode",
             "connectionId": "3566e86a35c26e575396dcfb89a3dcc0",
@@ -1089,20 +744,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1950,
+            "x": 2040,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "createSuccessResponse",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
@@ -1123,20 +778,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 1980,
+            "x": 2070,
             "y": 720
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -1180,20 +835,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 214,
             "y": 214
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "updateAnnotationProperties",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -1231,20 +886,20 @@
             "status": "configured",
             "type": "action"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
             "x": 720,
             "y": 870
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "capabilityName": "saveValue",
             "connectionId": "06922a684039827499bdbdd97f49827b",
@@ -1282,70 +937,621 @@
             "status": "configured",
             "type": "trigger"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 690,
+            "x": 780,
             "y": 570
           },
-          "removed": false,
-          "selectable": true,
-          "selected": false
-        },
-        {
-          "classes": "",
-          "data": {
-            "id": "0kj6dw314p",
-            "nodeType": "EVAL"
-          },
-          "grabbable": true,
           "group": "nodes",
-          "locked": false,
-          "pannable": false,
-          "position": {
-            "x": 540,
-            "y": 570
-          },
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
         },
         {
-          "classes": "",
           "data": {
             "id": "096mxrnf0h",
             "nodeType": "EVAL"
           },
-          "grabbable": true,
-          "group": "nodes",
-          "locked": false,
-          "pannable": false,
           "position": {
-            "x": 840,
+            "x": 930,
             "y": 570
           },
+          "group": "nodes",
           "removed": false,
+          "selected": false,
           "selectable": true,
-          "selected": false
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "3jh2rhsych",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Start Auto Enroll Mobile SMS"
+              },
+              "outcomeStatusDetail": {
+                "value": "Start Auto Enroll Mobile SMS"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Start Auto Enroll Mobile SMS\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "ldqzen4wu1"
+          },
+          "position": {
+            "x": 450,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2129i67tgd",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 300,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ywukg7murs",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 570,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dfdyn8gozd",
+            "nodeType": "CONNECTION",
+            "connectionId": "c4b2032a1b63d370c5fbdd205522f1c5",
+            "connectorId": "analyticsConnector",
+            "name": "Flow Analytics",
+            "label": "Flow Analytics",
+            "status": "configured",
+            "capabilityName": "logOutcome",
+            "type": "action",
+            "properties": {
+              "outcomeType": {
+                "value": "login"
+              },
+              "outcomeStatus": {
+                "value": "success"
+              },
+              "shouldContinueOnError": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Finish Auto Enroll Mobile SMS"
+              },
+              "outcomeStatusDetail": {
+                "value": "Finish Auto Enroll Mobile SMS"
+              },
+              "outcomeDescription": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Finish Auto Enroll Mobile SMS\"\n      }\n    ]\n  }\n]"
+              }
+            },
+            "idUnique": "ddjvkbbrpa"
+          },
+          "position": {
+            "x": 1470,
+            "y": 990
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dklucnqp6e",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1650,
+            "y": 990
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
+        {
+          "data": {
+            "id": "cjn90rnsln",
+            "source": "ic158vw0c0",
+            "target": "mnjtf03g2b"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "e4tw91o4im",
+            "source": "iwnt55umhd",
+            "target": "096mxrnf0h"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4eqwxmmyj4",
+            "source": "n0quwyscsi",
+            "target": "y2g6mnx0bh"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "gl8bj0xgor",
+            "source": "muahcq7bwo",
+            "target": "brsc2k7uj4"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "do0dtf6n8n",
+            "source": "bpkvxton27",
+            "target": "sy5ji6r90v"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mq5ag6l6tr",
+            "source": "ic158vw0c0",
+            "target": "l8brhyefwk"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "8llh4pzxrv",
+            "source": "mm221k8mtu",
+            "target": "81w4xznzc9"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ulp0m7atfu",
+            "source": "sy5ji6r90v",
+            "target": "qibog9r3as"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lbnoequqbj",
+            "source": "gn1zfrbhfn",
+            "target": "ic158vw0c0"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ed7ho0tvsz",
+            "source": "l8brhyefwk",
+            "target": "mm221k8mtu"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "n6f186dru0",
+            "source": "sy5ji6r90v",
+            "target": "gn1zfrbhfn"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "3p0o9pu2tl",
+            "source": "mm221k8mtu",
+            "target": "hrnf7vf4v0"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lplay58w2e",
+            "source": "096mxrnf0h",
+            "target": "bpkvxton27"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lykt574vkn",
+            "source": "brsc2k7uj4",
+            "target": "2q8o7ctrmj"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "t19nwvxi1r",
+            "source": "ywukg7murs",
+            "target": "iwnt55umhd"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "aoolsxyauo",
+            "source": "2q8o7ctrmj",
+            "target": "n0quwyscsi"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "12wmf1r8an",
+            "source": "4nwm10m3zr",
+            "target": "2129i67tgd"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r9b3yo12yi",
+            "source": "2129i67tgd",
+            "target": "3jh2rhsych"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "57xu9b1wxh",
+            "source": "3jh2rhsych",
+            "target": "ywukg7murs"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9zx4qsvzjy",
+            "source": "n0quwyscsi",
+            "target": "dfdyn8gozd"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "enm7vqtf9x",
+            "source": "dfdyn8gozd",
+            "target": "dklucnqp6e"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "8093dunc14",
+            "source": "dklucnqp6e",
+            "target": "zy9zqsq8ow"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
         }
       ]
     },
-    "maxZoom": 1E+50,
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
     "minZoom": 1E-50,
+    "maxZoom": 1E+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
     "pan": {
       "x": 0,
       "y": 0
     },
-    "panningEnabled": true,
+    "boxSelectionEnabled": true,
     "renderer": {
       "name": "null"
-    },
-    "userPanningEnabled": true,
-    "userZoomingEnabled": true,
-    "zoom": 1,
-    "zoomingEnabled": true
+    }
   },
   "inputSchema": [
     {
@@ -1371,11 +1577,11 @@
     }
   ],
   "flowColor": "#ff661c",
-  "savedDate": 1726504380016,
+  "savedDate": 1729786090324,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1726504365510,
+      "createdDate": 1729617691821,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -1383,15 +1589,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "e542edb9-9462-4047-b116-a232468a74e1",
+      "id": "15869bd2-a03d-4d23-9e6d-b41caf012029",
       "type": "property",
       "visibility": "private",
       "name": "companyLogo##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365513,
+      "createdDate": 1729617691822,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -1399,15 +1605,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "5158e728-acef-446b-b0cc-88c6b8e465a0",
+      "id": "288db8a8-fde1-4499-bfe9-34f389edc926",
       "type": "property",
       "visibility": "private",
       "name": "companyName##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1726504365513,
+      "createdDate": 1729617691823,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -1415,11 +1621,11 @@
         "mutable": true,
         "type": "object"
       },
-      "id": "9ae2c7ed-62a4-4185-8041-83f219be6fbc",
+      "id": "7850e826-245c-4766-acad-ee2fc372bd33",
       "type": "property",
       "visibility": "private",
       "name": "mf-configObject##SK##flowInstance",
-      "companyId": "80ee135e-9d4e-4084-8b96-c3131c04c432"
+      "companyId": "5e4b5c7b-636d-492e-ad93-f736f905c9cf"
     }
   ]
 }
