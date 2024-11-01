@@ -19,8 +19,8 @@ admin_group_id          = "" # Administrator Environment
 
 # Change the name as needed for your P1 environment #
 
-environment_name = "Chris A - PingOne Master Flow - 2.1.0 Final"
-environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider. \n\n[chris]"
+environment_name = "PingOne Master Flow - 2.1.0"
+environment_description = "This environment is based on the PingOne Master Flow. https://github.com/curtismu7/Master-Flow/releases/tag/master \n\n\n This environment is created and maintained utilizing the PingOne Terraform provider."
 environment_type = "SANDBOX"
 pingone_agreement_localization_revision_master_flow_agreement_en_now_text = <<EOT
 GDPR requires that organizations have a lawful basis for processing data. One such basis is consent, which according to the GDPR has to be explicit and freely given. This means that the mechanism for acquiring consent must be unambiguous and involve a clear affirmative action.
@@ -145,7 +145,7 @@ davinci_variable_mf-configObject = {
     "mf-str-captchaV3SecretKey": "6LfdK6QpAAAAAMsuy-7ezPCyLIAAQoP8eDBoSclF",
     "mf-str-captchaV3SiteKey": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
     "mf-str-companyLogo": "https://github.com/curtismu7/CDN/blob/main/davinci-logo.jpg?raw=true",
-    "mf-str-companyName": "PingOne Master Flow 2.1.0",
+    "mf-str-companyName": "PingOne Master Flow - 2.1.0",
     "mf-str-facebookExternalIdPId": "",
     "mf-str-githubExternalIdPId": "",
     "mf-str-googleExternalIdPId": "",
