@@ -559,16 +559,16 @@ resource "davinci_variable" "mf-str-p1VerifyPolicyId" {
   value          = data.pingone_verify_policy.default_policy.id
 }
 
-resource "davinci_variable" "mf-str-p1MFAPolicyId" {
+resource "davinci_variable" "mf-str-p1NotificationPolicyId" {
   context        = "company"
-  description    = "PingOne MFA Policy ID"
+  description    = "PingOne Notification Policy ID"
   environment_id = pingone_environment.master_flow_environment.id
   max            = "2000"
   min            = "0"
   mutable        = "true"
-  name           = "mf-str-p1MFAPolicyId"
+  name           = "mf-str-p1NotificationPolicyId"
   type           = "string"
-  value          = pingone_mfa_device_policy.master_flow_mfa_policy.id
+  value          = pingone_notification_policy.master_flow_notification_policy.id
 }
 
 #########################
