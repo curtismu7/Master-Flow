@@ -1,5 +1,5 @@
 {
-  "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0",
+  "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333",
   "authTokenExpireIds": [],
   "connectorIds": [
     "pingOneMfaConnector",
@@ -14,10 +14,10 @@
     "notificationsConnector",
     "analyticsConnector"
   ],
-  "createdDate": 1730470733590,
+  "createdDate": 1730737574180,
   "currentVersion": 3,
   "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
-  "deployedDate": 1730470738285,
+  "deployedDate": 1730737576529,
   "description": "Imported on Wed May 22 2024 23:21:29 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
   "inputSchemaCompiled": {
@@ -83,8 +83,8 @@
     "useIntermediateLoadingScreen": false
   },
   "timeouts": "null",
-  "updatedDate": 1730470738354,
-  "flowId": "3a383cc23d8b18ce24963ed039796a9b",
+  "updatedDate": 1730737576604,
+  "flowId": "69d729ed305070c471c3e9dc619149df",
   "versionId": 3,
   "graphData": {
     "elements": {
@@ -324,7 +324,7 @@
                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"deviceType\",\n        \"data\": \"{{global.variables.deviceType}}\",\n        \"tooltip\": \"{{global.variables.deviceType}}\",\n        \"children\": [\n          {\n            \"text\": \"deviceType\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "customNotificationPolicyId": {
-                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-str-p1MFAPolicyId\",\n        \"data\": \"{{global.company.variables.mf-str-p1MFAPolicyId}}\",\n        \"tooltip\": \"{{global.company.variables.mf-str-p1MFAPolicyId}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-str-p1MFAPolicyId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"mf-str-p1NotificationPolicyId\",\n        \"data\": \"{{global.company.variables.mf-str-p1NotificationPolicyId}}\",\n        \"tooltip\": \"{{global.company.variables.mf-str-p1NotificationPolicyId}}\",\n        \"children\": [\n          {\n            \"text\": \"mf-str-p1NotificationPolicyId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
               },
               "customTemplateVariant": {
                 "value": "{}"
@@ -9488,7 +9488,7 @@
               "subFlowId": {
                 "value": {
                   "label": "PingOne Davinci Custom Magic Link registration subflow",
-                  "value": "e2b0b18fa07d00d5056d8179478ef2d1"
+                  "value": "f734c418ad3c89909a970620afdd155f"
                 }
               },
               "subFlowVersionId": {
@@ -17890,94 +17890,11 @@
     }
   ],
   "flowColor": "#E3F0FF",
-  "savedDate": 1730470732546,
+  "savedDate": 1730737573252,
   "variables": [
     {
       "context": "flowInstance",
-      "createdDate": 1730470396624,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "2b4ce28c-f4f2-42fd-a03d-c065fe12e144",
-      "type": "property",
-      "visibility": "private",
-      "name": "deviceType##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "company",
-      "createdDate": 1730470292876,
-      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
-      "fields": {
-        "type": "string",
-        "displayName": "PingOne MFA Policy ID",
-        "value": "e22acf15-09a9-4ff3-8b2a-3bcd41038c12",
-        "mutable": true,
-        "min": 0,
-        "max": 2000
-      },
-      "id": "78a817a7-952a-41cc-91e1-c8b61b525cce",
-      "type": "property",
-      "visibility": "private",
-      "name": "mf-str-p1MFAPolicyId##SK##company",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470396623,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "e0b18014-968f-4b1e-941b-f786d235737f",
-      "type": "property",
-      "visibility": "private",
-      "name": "deviceName##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470361395,
-      "fields": {
-        "displayName": "local device ID variable to manage the most current user device being used",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "d7e721b6-b8f1-4cfa-ae09-ab1a73eb8955",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1DeviceId##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470396622,
-      "fields": {
-        "displayName": "FIDO2 origin",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string",
-        "value": "https://auth.pingone.com"
-      },
-      "id": "2d0e88e8-e609-45ae-8108-86bbe34f24c9",
-      "type": "property",
-      "visibility": "private",
-      "name": "origin##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470359046,
+      "createdDate": 1730737281804,
       "fields": {
         "displayName": "Internal variable",
         "max": 2000,
@@ -17985,47 +17902,15 @@
         "mutable": true,
         "type": "string"
       },
-      "id": "23889523-1934-431c-a525-cf1e8283f1cb",
+      "id": "92dd5904-4988-4936-aa8c-dffa9d35bf9c",
       "type": "property",
       "visibility": "private",
-      "name": "p1UserId##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "name": "buttonValueDeviceId##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1730470354093,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "4113fc28-7d2d-4be9-b86b-20b86db8eef5",
-      "type": "property",
-      "visibility": "private",
-      "name": "companyLogo##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470354094,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "1d02dc62-3c2a-4501-b89f-fb1e03a368bf",
-      "type": "property",
-      "visibility": "private",
-      "name": "companyName##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470288866,
+      "createdDate": 1730737176186,
       "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
       "fields": {
         "type": "boolean",
@@ -18035,15 +17920,95 @@
         "min": 0,
         "max": 2000
       },
-      "id": "1bb03e32-2ec7-4fff-82b1-70cd4b31141c",
+      "id": "164329ef-a733-4ad2-82a2-a7b601eae0e1",
       "type": "property",
       "visibility": "private",
       "name": "cancelReturn##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1730470354095,
+      "createdDate": 1730737243413,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "6f76e78e-bfcc-46a7-b7d7-c486f613497b",
+      "type": "property",
+      "visibility": "private",
+      "name": "companyLogo##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737243414,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "d066ba26-64de-4fb4-8b28-7aa688ff5f43",
+      "type": "property",
+      "visibility": "private",
+      "name": "companyName##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737281804,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "d9ae06dd-22d9-4872-9dc1-dea0aa8eb8c4",
+      "type": "property",
+      "visibility": "private",
+      "name": "deviceName##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737281802,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "5f5929c7-0688-428d-ac19-589920ce7e60",
+      "type": "property",
+      "visibility": "private",
+      "name": "deviceType##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737281804,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "boolean"
+      },
+      "id": "4c1d8e2d-b5ca-47c8-826d-ab83ca1add93",
+      "type": "property",
+      "visibility": "private",
+      "name": "isDeviceManagement##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737244307,
       "fields": {
         "displayName": "",
         "max": 2000,
@@ -18051,49 +18016,33 @@
         "mutable": true,
         "type": "object"
       },
-      "id": "c7368920-fc78-43a6-96c7-bad0c62531bf",
+      "id": "2e24afa2-2d7d-4961-be48-2bbb75000fa1",
       "type": "property",
       "visibility": "private",
       "name": "mf-configObject##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     },
     {
-      "context": "flowInstance",
-      "createdDate": 1730470396623,
-      "fields": {
-        "displayName": "Relying Party ID",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "88a53ed0-3090-485d-b2c4-92275dd13b22",
-      "type": "property",
-      "visibility": "private",
-      "name": "rpid##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470295577,
+      "context": "company",
+      "createdDate": 1730737174070,
       "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
       "fields": {
         "type": "string",
-        "displayName": "PingOne Population Id",
-        "value": "e8119599-9cab-4ab9-82ae-bef52dee5b70",
+        "displayName": "PingOne Notification Policy ID",
+        "value": "ea50918e-5be2-4a68-b818-77bb5495b419",
         "mutable": true,
         "min": 0,
         "max": 2000
       },
-      "id": "71ac3190-5028-4c26-b3df-b23ba3fbf986",
+      "id": "fabb231a-274d-4ca7-aed4-9121ae1c395c",
       "type": "property",
       "visibility": "private",
-      "name": "populationId##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "name": "mf-str-p1NotificationPolicyId##SK##company",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     },
     {
       "context": "company",
-      "createdDate": 1730470282752,
+      "createdDate": 1730737174814,
       "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
       "fields": {
         "type": "string",
@@ -18103,15 +18052,114 @@
         "min": 0,
         "max": 2000
       },
-      "id": "d40042f8-ab80-4a52-9cd2-a1d28249ff56",
+      "id": "81a50dd8-6c96-43c3-a8ef-14501536a50d",
       "type": "property",
       "visibility": "private",
       "name": "origin##SK##company",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737281803,
+      "fields": {
+        "displayName": "FIDO2 origin",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string",
+        "value": "https://auth.pingone.com"
+      },
+      "id": "df6a088d-eb5c-4dbf-be1e-7db529217459",
+      "type": "property",
+      "visibility": "private",
+      "name": "origin##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737249568,
+      "fields": {
+        "displayName": "local device ID variable to manage the most current user device being used",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "6b941516-3a1f-4e1a-8b21-e8e82d666fc9",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1DeviceId##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737249569,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "aa90391e-82a6-4779-9e91-f37b181d9b81",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1Email##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737250727,
+      "fields": {
+        "displayName": "",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "7fd245d2-fd92-44e5-8825-0d83d28f981b",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1Phone##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737248452,
+      "fields": {
+        "displayName": "Internal variable",
+        "max": 2000,
+        "min": 0,
+        "mutable": true,
+        "type": "string"
+      },
+      "id": "7d30602d-480a-4aad-ba70-37baeb732980",
+      "type": "property",
+      "visibility": "private",
+      "name": "p1UserId##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1730737190657,
+      "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
+      "fields": {
+        "type": "string",
+        "displayName": "PingOne Population Id",
+        "value": "51e65738-6551-41bc-86f2-15f0b958a10b",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "id": "c538fbe6-cf89-430f-a3e7-7ef06523a2d5",
+      "type": "property",
+      "visibility": "private",
+      "name": "populationId##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     },
     {
       "context": "company",
-      "createdDate": 1730470289087,
+      "createdDate": 1730737172869,
       "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
       "fields": {
         "type": "string",
@@ -18121,31 +18169,31 @@
         "min": 0,
         "max": 2000
       },
-      "id": "0a74c026-7233-414d-b356-df6194267068",
+      "id": "f76fe9fd-18de-4401-8d45-6b67cbda9d0e",
       "type": "property",
       "visibility": "private",
       "name": "rpid##SK##company",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1730470359047,
+      "createdDate": 1730737281803,
       "fields": {
-        "displayName": "",
+        "displayName": "Relying Party ID",
         "max": 2000,
         "min": 0,
         "mutable": true,
         "type": "string"
       },
-      "id": "e18f17af-8845-4d08-8e46-766255628512",
+      "id": "e3696518-8f33-424b-8a8c-0ddf47b68ba8",
       "type": "property",
       "visibility": "private",
-      "name": "p1Email##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "name": "rpid##SK##flowInstance",
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     },
     {
       "context": "flowInstance",
-      "createdDate": 1730470292284,
+      "createdDate": 1730737182588,
       "customerId": "dd390cdcc5ccc44b4232e8ac2e5f908c",
       "fields": {
         "type": "string",
@@ -18155,59 +18203,11 @@
         "min": 0,
         "max": 2000
       },
-      "id": "4ffe08bc-51e0-4243-965e-a3a79d26ca01",
+      "id": "4d90386e-d673-4da7-af49-e5e50cbd43e4",
       "type": "property",
       "visibility": "private",
       "name": "stopSign##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470396621,
-      "fields": {
-        "displayName": "Internal variable",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "d97a58c7-0d44-4de3-a93b-4501117d3259",
-      "type": "property",
-      "visibility": "private",
-      "name": "buttonValueDeviceId##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470396623,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "boolean"
-      },
-      "id": "20e4be22-a0c5-4a02-bc3d-dc7f2d84cae5",
-      "type": "property",
-      "visibility": "private",
-      "name": "isDeviceManagement##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
-    },
-    {
-      "context": "flowInstance",
-      "createdDate": 1730470362586,
-      "fields": {
-        "displayName": "",
-        "max": 2000,
-        "min": 0,
-        "mutable": true,
-        "type": "string"
-      },
-      "id": "1cccb0b3-9f0c-4d97-a826-5442cff80703",
-      "type": "property",
-      "visibility": "private",
-      "name": "p1Phone##SK##flowInstance",
-      "companyId": "848a324f-cca9-4181-a662-50d9aa031bd0"
+      "companyId": "3b72a80c-e063-4c9a-8a37-bac0eb159333"
     }
   ],
   "connections": []
