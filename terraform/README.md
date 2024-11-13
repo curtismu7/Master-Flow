@@ -47,7 +47,7 @@ Keep this environment handy. We will need to get a number of IDs from it later.
 
 ```bash
 mkdir -p ~/Terraform/master-flow && cd ~/Terraform/master-flow
-curl -L https://github.com/curtismu7/Master-Flow/releases/download//tf-release.zip > tf-release.zip
+curl -L https://github.com/curtismu7/Master-Flow/releases/download/2.1.0/tf-release.zip > tf-release.zip
 unzip ./tf-release.zip && rm ./tf-release.zip
 ```
 
@@ -68,68 +68,6 @@ Variables from the *Terraform Administration* environment: \
 Variables from the *Administrators* \
 `admin_environment_id`  - The environment ID of the **Administrators** environment. \
 `admin_group_id`          - The group ID of the group you created in the **Administrators** environment. \
-
-<details>
-<summary>Additional variables</summary>
-
-| Variable Name | Type | Description |
-| --- | --- | --- |
-| worker_id | STRING | Required: **TRUE** Default: |
-| worker_secret | STRING | Required: **TRUE** Default: |
-| pingone_environment_id | STRING | Required: **TRUE** Default: |
-| region | STRING | Required: **TRUE** Default: |
-| license_name | STRING | Required: **TRUE** Default: |
-| admin_user_id | STRING | Required: **TRUE** Default: |
-| admin_username | STRING | Required: **TRUE** Default: |
-| admin_password | STRING | Required: **TRUE** Default: |
-| organization_id | STRING | Required: **TRUE** Default: |
-| pingone_agreement_localization_revision_master_flow_agreement_en_now_text | STRING | Default: |
-| davinci_variable_origin_value | STRING | Default: |
-| davinci_variable_gv-deviceManagement_value | STRING | Default: |
-| davinci_variable_gv-azureLogin_value | STRING | Default: |
-| davinci_variable_gv-mfa-on_value | STRING | Default: |
-| davinci_variable_gv-runPasswordExpire_value | STRING | Default: |
-| davinci_variable_gv-webAuthnSupport_value | STRING | Default: |
-| davinci_variable_gv-forgotPasswordDisplay_value | STRING | Default: |
-| davinci_variable_gv-standardForgotPassword_value | STRING | Default: |
-| davinci_variable_gv-facebookLogin_value | STRING | Default: |
-| davinci_variable_showRegButton_value | STRING | Default: |
-| davinci_variable_gv-runVerifyforHighRisk_value | STRING | Default: |
-| davinci_variable_gv-allowPasswordless_value | STRING | Default: |
-| davinci_variable_maxMessage_value | STRING | Default: |
-| davinci_variable_gv-forcePasswordless_value | STRING | Default: |
-| davinci_variable_disableReg_value | STRING | Default: |
-| davinci_variable_mobile_value | STRING | Default: |
-| davinci_variable_gv-p1PasswordPolicy_value | STRING | Default: |
-| davinci_variable_gv-runMFAforLogin_value | STRING | Default: |
-| davinci_variable_gv-googleLogin_value | STRING | Default: |
-| davinci_variable_gv-consent_value | STRING | Default: |
-| davinci_variable_userAuthenticated_value | STRING | Default: |
-| davinci_variable_gv-inlineMFAOn_value | STRING | Default: |
-| davinci_variable_gv-companyName_value | STRING | Default: |
-| davinci_variable_stopSign_value | STRING | Default: |
-| davinci_variable_rpid_value | STRING | Default: |
-| davinci_variable_gv-runMFAforForgot_value | STRING | Default: |
-| davinci_variable_gv-passwordlessAllowedTypes_value | STRING | Default: |
-| davinci_variable_relyingParty_value | STRING | Default: |
-| davinci_variable_availableQuestions_2_value | STRING | Default: |
-| davinci_variable_gv-runProtect_value | STRING | Default: |
-| davinci_variable_gv-runMFAforSocial_value | STRING | Default: |
-| davinci_variable_disableButton_value | STRING | Default: |
-| davinci_variable_forgotUsername_value | STRING | Default: |
-| davinci_variable_regAuthN_value | STRING | Default: |
-| davinci_variable_gv-QA-On_value | STRING | Default: |
-| davinci_variable_gv-progressiveProfiling_value | STRING | Default: |
-| davinci_variable_mustAuthN_value | STRING | Default: |
-| davinci_variable_cancelReturn_value | STRING | Default: |
-| davinci_variable_gv-riskLevel_value | STRING | Default: |
-| davinci_variable_gv-forgotUsernameDisplay_value | STRING | Default: |
-| davinci_variable_origin_2_value | STRING | Default: |
-| davinci_variable_gv-companyLogo_value | STRING | Default: |
-| davinci_variable_gv-githubLogin_value | STRING | Default: |
-| davinci_connection_PingOne_region | STRING | Default: |
-
-</details>
 
 ### Apply the Terraform Configuration
 
