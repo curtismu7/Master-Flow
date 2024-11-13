@@ -38,7 +38,7 @@ jobs:
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
-          sed -i -E "s/\/download\/(.*?)\/tf-release.zip/\/download\/${{ steps.version.outputs.version }}\/tf-release.zip/" ./terraform/README.md
+          sed -i -E "s/\/download\/(.*?)\/tf-release.zip/\/download\/$RELEASE\/tf-release.zip/" ./terraform/README.md
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Automated with Github Actions (Create Release Zip)
