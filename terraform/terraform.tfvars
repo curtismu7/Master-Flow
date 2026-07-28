@@ -142,7 +142,7 @@ davinci_variable_mf-configObject = {
     "mf-str-azureExternalIdPId": " ",
     "mf-str-browserVersion": 130,
     "mf-str-captchaThreshold": "0.2",
-    "mf-str-captchaV3SecretKey": "***REMOVED-RECAPTCHA-SECRET***",
+    "mf-str-captchaV3SecretKey": "YOUR_RECAPTCHA_V3_SECRET_KEY",
     "mf-str-captchaV3SiteKey": "6LfdK6QpAAAAALcGPNmzzyK4Baigr2UWjnL57ZIr",
     "mf-str-companyLogo": "https://github.com/curtismu7/CDN/blob/main/davinci-logo.jpg?raw=true",
     "mf-str-companyName": "PingOne Master Flow - 2.1.0",
